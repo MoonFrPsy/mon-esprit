@@ -241,6 +241,7 @@ h1, h2, h3 {
   font-weight: 700;
   font-size: 0.98rem;
   font-family: 'Fraunces', serif;
+  overflow-wrap: anywhere;
 }
 
 .search-result-meta {
@@ -250,6 +251,7 @@ h1, h2, h3 {
   margin-top: 0.15rem;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
 }
 
 .search-result-snippet {
@@ -258,6 +260,7 @@ h1, h2, h3 {
   margin-top: 0.35rem;
   line-height: 1.5;
   overflow: hidden;
+  overflow-wrap: anywhere;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -563,6 +566,14 @@ h1, h2, h3 {
   .site-header { padding: 1.5rem 0 1rem; }
   .site-title { font-size: 1.25rem; }
   .site-nav { gap: 1rem; font-size: 0.88rem; align-items: center; }
+
+  .site-search input { padding: 0.7rem 0.9rem; font-size: 0.92rem; }
+  .search-results { padding: 0.35rem; max-height: 70vh; }
+  .search-result-item { gap: 0.6rem; padding: 0.65rem 0.7rem; }
+  .search-result-icon { font-size: 1.1rem; }
+  .search-result-title { font-size: 0.9rem; }
+  .search-result-meta { font-size: 0.72rem; }
+  .search-result-snippet { font-size: 0.8rem; -webkit-line-clamp: 2; }
 
   .hero { padding: 2.5rem 0 2rem; }
   .hero p { font-size: 1.02rem; }
