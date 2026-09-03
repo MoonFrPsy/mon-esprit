@@ -539,16 +539,21 @@ function googleTranslateElementInit() {
 
   function render(results, query) {
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       return;
     }
     box.innerHTML = results.map(function (item) {
       var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
-      return '<a class="search-result-item" href="../' + item.url + '">' +
-        '<span class="search-result-title">' + item.icon + ' ' + escapeHtml(item.title) + '</span>' +
-        (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
-        '</a>';
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
     }).join('');
     box.hidden = false;
   }
