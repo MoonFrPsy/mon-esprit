@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Histoires vraies de psychologie — Mon Esprit</title>
+<meta name="description" content="Des histoires réelles, documentées et analysées pour mieux comprendre la psychologie humaine.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main>
+  <section class="hero container hero-sub">
+    <span class="category">📖 Histoires vraies de psychologie</span>
+    <h1>Histoires vraies de psychologie</h1>
+    <p>Des histoires réelles, documentées et analysées pour mieux comprendre la psychologie humaine.</p>
+  </section>
+  <section class="container">
+    
+    <div class="cat-banner" style="--accent:var(--acc-histoires)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg>
+    </div>
+    <div class="chapter-list">
+      
+      <a class="chapter-item" href="../chapitre/histoires-une-histoire-qui-a-change-la-psychologie.html">
+        <h2>Une histoire qui a changé la psychologie</h2>
+        <span class="read-more">Lire →</span>
+      </a>
+      <a class="chapter-item" href="../chapitre/histoires-quand-le-cerveau-et-la-psychologie-se-rencontrent.html">
+        <h2>Quand le cerveau et la psychologie se rencontrent</h2>
+        <span class="read-more">Lire →</span>
+      </a>
+      <a class="chapter-item" href="../chapitre/histoires-quand-tout-semble-impossible.html">
+        <h2>Quand tout semble impossible</h2>
+        <span class="read-more">Lire →</span>
+      </a>
+      <a class="chapter-item" href="../chapitre/histoires-un-cerveau-qui-n-avait-pas-dit-son-dernier-mot.html">
+        <h2>Un cerveau qui n'avait pas dit son dernier mot</h2>
+        <span class="read-more">Lire →</span>
+      </a>
+    </div>
+    <a class="back-link" href="../index.html">← Retour aux catégories</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés.</p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+(function () {
+  // Bascule FR/EN via le widget Google Translate (traduction automatique).
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+  var isEnglish = false;
+  btn.addEventListener('click', function () {
+    var select = document.querySelector('.goog-te-combo');
+    if (!select) {
+      alert('La traduction est encore en train de charger, réessaie dans 1-2 secondes.');
+      return;
+    }
+    isEnglish = !isEnglish;
+    select.value = isEnglish ? 'en' : 'fr';
+    select.dispatchEvent(new Event('change'));
+    btn.textContent = isEnglish ? 'FR' : 'EN';
+  });
+})();
+</script>
+<script>
+(function () {
+  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
+  // seul (tactile, pas de curseur). Désactivé si la personne préfère
+  // moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var root = document.documentElement;
+  var isTouch = window.matchMedia('(pointer: coarse)').matches;
+  var mouseX = window.innerWidth / 2;
+  var mouseY = window.innerHeight / 3;
+  var haloX = mouseX;
+  var haloY = mouseY;
+
+  if (isTouch) {
+    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
+    var start = performance.now();
+    function driftTick(now) {
+      var t = (now - start) / 1000;
+      var w = window.innerWidth, h = window.innerHeight;
+      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
+      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
+      root.style.setProperty('--mx', haloX + 'px');
+      root.style.setProperty('--my', haloY + 'px');
+      requestAnimationFrame(driftTick);
+    }
+    requestAnimationFrame(driftTick);
+    return;
+  }
+
+  window.addEventListener('mousemove', function (e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  }, { passive: true });
+
+  function tick() {
+    haloX += (mouseX - haloX) * 0.16;
+    haloY += (mouseY - haloY) * 0.16;
+    root.style.setProperty('--mx', haloX + 'px');
+    root.style.setProperty('--my', haloY + 'px');
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

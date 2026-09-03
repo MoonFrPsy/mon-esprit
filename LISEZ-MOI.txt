@@ -1,0 +1,73 @@
+========================================
+GUIDE — TON SITE "MON ESPRIT"
+========================================
+
+9 catégories, 120 chapitres, illustrations par thème (aussi sur les
+pages de chapitre maintenant), fond sombre.
+
+CE QUI EST FAIT :
+- Site renommé "Mon Esprit" partout, avec un léger effet de
+  scintillement animé sur le nom dans l'en-tête
+- Site responsive : lisible et agréable sur téléphone (mise en page,
+  tailles de texte et bannières adaptées)
+- Frein tactile ajouté sur mobile (équivalent du clic droit) en plus
+  du clic droit + Ctrl+C déjà bloqués sur ordinateur
+- Curseur qui suit la souris de façon plus réactive ; sur mobile
+  (pas de souris), un mouvement doux et automatique le remplace
+- Bouton "EN" en haut à droite qui traduit tout le site en anglais
+  au clic (voir la note importante ci-dessous)
+- Formulaire de contact sur la page d'accueil (voir la note
+  ci-dessous pour l'activer)
+- Mention légale étendue en bas de chaque page (voir note)
+- Le bouton "Catégories" dans le menu ramène maintenant bien au bon
+  endroit sur la page d'accueil
+
+----------------------------------------
+CE QU'IL RESTE À FAIRE DE TON CÔTÉ
+----------------------------------------
+
+1) FORMULAIRE DE CONTACT — à activer
+   J'ai utilisé un service gratuit appelé Formspree pour que le
+   formulaire t'envoie un vrai email. Il faut :
+   - Aller sur https://formspree.io, créer un compte gratuit avec
+     TON adresse email
+   - Créer un nouveau formulaire, il te donnera un lien du type
+     https://formspree.io/f/abcd1234
+   - M'envoyer ce lien (ou juste le code après le /f/), je
+     l'intègre au site à ta place
+   Tant que ce n'est pas fait, le formulaire ne fonctionnera pas
+   (il pointe vers "VOTRE_ID_FORMSPREE", un espace réservé).
+
+2) TRADUCTION ANGLAISE — c'est une traduction AUTOMATIQUE
+   Le bouton "EN" traduit tout le site à la volée avec la
+   technologie gratuite de Google Traduction. Ça fonctionne sur les
+   120 chapitres immédiatement, mais c'est une traduction machine
+   (pas aussi soignée qu'une vraie traduction humaine, quelques
+   tournures maladroites sont possibles). Elle ne s'affichera bien
+   qu'une fois le site réellement en ligne (elle peut ne pas
+   fonctionner correctement si tu ouvres juste le fichier
+   index.html sur ton ordinateur).
+
+3) MENTION LÉGALE — je ne suis pas juriste
+   J'ai ajouté un texte de bon sens (usage informatif, pas de
+   responsabilité en cas de mauvais usage, site non commercial). Ça
+   couvre les bases habituelles, mais ce n'est pas un document
+   rédigé par un avocat. Si le site grandit ou génère un jour de
+   l'argent, ce serait plus sûr de faire relire ça par un vrai
+   professionnel du droit.
+
+4) IMAGES "RÉELLES" — pourquoi j'ai gardé les illustrations
+   Je n'ai pas intégré de photos trouvées sur internet : une fois
+   ton site publié, utiliser une photo sans connaître ses droits
+   d'usage peut poser un problème de droit d'auteur pour TOI (pas
+   pour moi). Les illustrations sur mesure évitent complètement ce
+   risque. Si tu veux quand même de vraies photos, le plus sûr est
+   d'aller sur un site de photos gratuites de droits comme
+   unsplash.com ou pexels.com, choisir toi-même les images qui te
+   plaisent, et me les envoyer ici : je les intègre directement.
+
+----------------------------------------
+METTRE EN LIGNE / METTRE À JOUR
+----------------------------------------
+Reporte-toi aux étapes détaillées données dans le chat pour GitHub
+Pages ou Netlify. Le lien ne change jamais lors d'une mise à jour.
