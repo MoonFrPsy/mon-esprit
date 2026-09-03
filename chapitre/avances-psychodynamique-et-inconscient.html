@@ -16,6 +16,10 @@
       <a href="../index.html#a-propos">À propos</a>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
   </div>
 </header>
 <div id="google_translate_element" style="display:none;"></div>
@@ -614,6 +618,157 @@ function googleTranslateElementInit() {
       });
     }
   }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      return '<a class="search-result-item" href="../' + item.url + '">' +
+        '<span class="search-result-title">' + item.icon + ' ' + escapeHtml(item.title) + '</span>' +
+        (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+        '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
 })();
 </script>
 <script>
