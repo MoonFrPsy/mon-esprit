@@ -320,6 +320,18 @@ h1, h2, h3 {
 
 /* Le réseau de nœuds pulse doucement plutôt que de se déplacer,
    pour ne jamais se détacher visuellement des traits qui le relient */
+/* Le réseau tourne lentement en bloc (traits + points ensemble, donc
+   jamais décroché), pendant que chaque point pulse individuellement */
+.hero-network {
+  transform-box: view-box;
+  transform-origin: 220px 190px;
+  animation: network-spin 90s linear infinite;
+}
+
+@keyframes network-spin {
+  to { transform: rotate(360deg); }
+}
+
 .hero-illustration circle {
   transform-box: fill-box;
   transform-origin: center;
