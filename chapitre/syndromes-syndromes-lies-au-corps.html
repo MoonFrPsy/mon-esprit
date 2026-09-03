@@ -22,10 +22,18 @@
 
 <main class="container">
   <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Syndromes liés au corps',
+        category: 'Syndromes psychologiques',
+        icon: '🧬'
+      };
+    </script>
     <div class="article-header">
       <span class="category"><a href="../categorie/syndromes.html">🧬 Syndromes psychologiques</a></span>
       <h1>Syndromes liés au corps</h1>
     </div>
+    <div id="resume-banner"></div>
     
     <div class="cat-banner chapter-banner" style="--accent:var(--acc-syndromes)">
       <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
@@ -80,7 +88,7 @@ des interventions neurochirurgicales.</p>
 <p>Le syndrome de la main étrangère est principalement <strong>neurologique</strong>. Il ne signifie pas qu'une personne possède réellement une main indépendante ou une seconde conscience.</p>
 <h1 id="82-trouble-de-lintegrite-de-lidentite-corporelle-biid" class="entry-title hc-2">🧍 8.2  Trouble de l'intégrité de l'identité corporelle (BIID)</h1>
 <h2 id="definition_1">🔎 Définition</h2>
-<p>Le <strong>trouble de l'intégrité de l'identité corporelle</strong>, souvent appelé <strong>BIID</strong> (<em>Body Integrity Identity Disorder</em>), désigne une expérience rare dans laquelle une personne ressent de manière persistante qu'une partie de son corps ne devrait pas faire partie de son identité corporelle.</p>
+<p>Le <strong>trouble de l'intégrité de l'identité corporelle</strong>, souvent appelé <strong><a class="gloss-link" href="#82-trouble-de-lintegrite-de-lidentite-corporelle-biid" title="Voir la définition de BIID">BIID</a></strong> (<em>Body Integrity Identity Disorder</em>), désigne une expérience rare dans laquelle une personne ressent de manière persistante qu'une partie de son corps ne devrait pas faire partie de son identité corporelle.</p>
 <p>Certaines personnes peuvent ressentir un désir intense d'avoir une différence physique particulière, par exemple une paralysie ou l'absence d'un membre.</p>
 <h2 id="manifestations_1">🧠 Manifestations</h2>
 <p>Les expériences peuvent inclure :</p>
@@ -344,21 +352,160 @@ function googleTranslateElementInit() {
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>
 (function () {
-  // Bascule FR/EN via le widget Google Translate (traduction automatique).
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
   var btn = document.getElementById('lang-toggle');
   if (!btn) return;
-  var isEnglish = false;
-  btn.addEventListener('click', function () {
-    var select = document.querySelector('.goog-te-combo');
-    if (!select) {
-      alert('La traduction est encore en train de charger, réessaie dans 1-2 secondes.');
-      return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
     }
-    isEnglish = !isEnglish;
-    select.value = isEnglish ? 'en' : 'fr';
-    select.dispatchEvent(new Event('change'));
-    btn.textContent = isEnglish ? 'FR' : 'EN';
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
   });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
 })();
 </script>
 <script>

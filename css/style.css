@@ -241,6 +241,25 @@ h1, h2, h3 {
   color: var(--accent);
 }
 
+.cat-card-soon {
+  opacity: 0.6;
+}
+
+.cat-card-soon:hover {
+  transform: none;
+  border-color: var(--line);
+  background: var(--bg-raised);
+}
+
+.cat-card-soon .cat-count {
+  color: var(--ink-soft);
+}
+
+.cat-icon-emoji {
+  font-size: 1.9rem;
+  display: inline-block;
+}
+
 .hero-sub {
   padding-bottom: 2rem;
 }
@@ -624,3 +643,88 @@ body { top: 0 !important; }
 }
 
 .contact-form button:hover { background: var(--clay); }
+
+/* ---------- Bannière "reprendre ici" (page de chapitre) ---------- */
+
+.resume-callout {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--link);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.resume-callout strong { color: var(--title); }
+.resume-callout a { font-weight: 700; margin-left: 0.3em; }
+
+/* ---------- Historique de lecture (accueil) ---------- */
+
+.reading-history {
+  padding: 1.5rem 0 0.5rem;
+}
+
+.reading-history h2 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.history-item:hover { border-color: var(--link); }
+
+.history-icon { font-size: 1.3rem; flex-shrink: 0; }
+
+.history-title {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.history-cat {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  margin-top: 0.1rem;
+}
+
+.history-more {
+  margin-top: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.history-more:hover { border-color: var(--clay); color: var(--clay); }
+
+/* ---------- Liens vers définitions (glossaire automatique) ---------- */
+
+.gloss-link {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
