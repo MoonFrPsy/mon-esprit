@@ -64,15 +64,20 @@ body {
   position: relative;
 }
 
-/* Nuage discret qui suit le curseur, sans particules */
+/* Halo façon aurore : plusieurs lueurs colorées superposées qui
+   suivent le curseur ensemble, plutôt qu'un seul rond plat */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(260px circle at var(--mx) var(--my),
-              rgba(122, 167, 255, 0.09), transparent 75%);
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(480px circle at var(--mx) var(--my), rgba(93, 210, 255, 0.11), transparent 62%),
+    radial-gradient(340px circle at calc(var(--mx) + 70px) calc(var(--my) - 50px), rgba(201, 166, 255, 0.09), transparent 65%),
+    radial-gradient(300px circle at calc(var(--mx) - 60px) calc(var(--my) + 60px), rgba(255, 122, 147, 0.08), transparent 65%),
+    radial-gradient(260px circle at calc(var(--mx) - 40px) calc(var(--my) - 70px), rgba(94, 234, 192, 0.07), transparent 65%);
 }
 
 .site-header {
