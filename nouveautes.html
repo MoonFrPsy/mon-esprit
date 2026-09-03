@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Partie 20 — Autres troubles et notions psychologiques — Mon Esprit</title>
-<meta name="description" content="Partie 20 — Autres troubles et notions psychologiques, dans la catégorie Troubles psychologiques de l'encyclopédie Mon Esprit.">
-<link rel="stylesheet" href="../css/style.css">
+<title>Nouveautés — Mon Esprit</title>
+<meta name="description" content="Journal des mises à jour et nouveautés du site Mon Esprit.">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="container">
-    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <a href="index.html" class="site-title">Mon Esprit</a>
     <nav class="site-nav">
-      <a href="../index.html#categories">Catégories</a>
-      <a href="../index.html#a-propos">À propos</a>
+      <a href="index.html#categories">Catégories</a>
+      <a href="index.html#a-propos">À propos</a>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
@@ -26,40 +26,37 @@
 
 <main class="container">
   <div class="prose prose-wide">
-    <script>
-      window.__chapterMeta = {
-        title: 'Partie 20 — Autres troubles et notions psychologiques',
-        category: 'Troubles psychologiques',
-        icon: '🩺'
-      };
-    </script>
     <div class="article-header">
-      <span class="category"><a href="../categorie/troubles.html">🩺 Troubles psychologiques</a></span>
-      <h1>Partie 20 — Autres troubles et notions psychologiques</h1>
+      <span class="category">📋 Journal du site</span>
+      <h1>Nouveautés</h1>
+      <p class="article-meta">Ce qui a été ajouté ou amélioré sur Mon Esprit, au fil du temps.</p>
     </div>
-    <div id="resume-banner"></div>
-    
-    <div class="cat-banner chapter-banner" style="--accent:var(--acc-troubles)">
-      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
-                 C26 95 42 101 53 96 C59 103 71 103 77 96
-                 C90 99 101 87 98 75 C108 67 106 51 96 45
-                 C97 29 82 15 60 16 Z"/>
-        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
-    </svg>
-    </div>
-    
     <div class="article-body">
-      
+
+<h2>3 septembre 2026</h2>
+
+<ul>
+<li><strong>Recherche sur tout le site</strong> : une barre de recherche en haut de chaque page, qui couvre l'intégralité du contenu (chapitres et entrées individuelles), avec extrait et lien direct.</li>
+<li><strong>Historique de lecture</strong> : les chapitres déjà consultés apparaissent sur l'accueil, avec une reprise automatique au bon endroit sur une page déjà visitée.</li>
+<li><strong>Traduction automatique en anglais</strong> : un bouton EN/FR en haut du site.</li>
+<li><strong>Formulaire de contact</strong> pour écrire directement depuis le site.</li>
+<li><strong>Liens automatiques vers les définitions</strong> : les abréviations comme TAG, TOC, TSPT deviennent cliquables dans le texte.</li>
+<li><strong>Contenu enrichi</strong> : le chapitre sur les troubles anxieux inclut désormais des conseils concrets pour comprendre et accompagner un proche concerné, en plus des définitions.</li>
+<li><strong>Deux nouvelles catégories à venir</strong> : Psychologie/Justice/Criminologie, et Expériences célèbres de psychologie.</li>
+<li>Illustrations personnalisées pour chaque catégorie, mise en page pensée pour mobile, et quelques animations discrètes.</li>
+</ul>
+
+<p style="color:var(--ink-soft); font-size:0.92rem; margin-top:2rem;">D'autres mises à jour suivront au fil de l'enrichissement du contenu.</p>
+
     </div>
-    <a class="back-link" href="../categorie/troubles.html">← Retour à « Troubles psychologiques »</a>
+    <a class="back-link" href="index.html">← Retour à l'accueil</a>
   </div>
 </main>
 
 <footer class="site-footer">
   <div class="container">
     <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
-    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
   </div>
 </footer>
 <script>
@@ -244,7 +241,7 @@ function googleTranslateElementInit() {
 
   function loadIndex() {
     if (!indexPromise) {
-      indexPromise = fetch('../search-index.json')
+      indexPromise = fetch('search-index.json')
         .then(function (r) { return r.json(); })
         .then(function (data) { index = data; })
         .catch(function () { index = []; });
@@ -291,7 +288,7 @@ function googleTranslateElementInit() {
     box.innerHTML = results.map(function (item) {
       var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
       var accent = item.accent || 'var(--clay)';
-      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
         '<span class="search-result-icon">' + item.icon + '</span>' +
         '<span class="search-result-body">' +
           '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +

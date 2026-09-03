@@ -778,6 +778,15 @@ body {
   font-size: 0.9rem;
 }
 
+.footer-changelog-link {
+  color: var(--ink-soft);
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+  font-size: 0.85rem;
+}
+
+.footer-changelog-link:hover { color: var(--clay); }
+
 .footer-disclaimer {
   max-width: 640px;
   font-size: 0.85rem;
