@@ -643,6 +643,17 @@ body { top: 0 !important; }
 }
 
 .contact-form button:hover { background: var(--clay); }
+.contact-form button:disabled { opacity: 0.6; cursor: default; }
+
+.form-status {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.form-status-ok { color: var(--hc-4); }
+.form-status-error { color: var(--hc-5); }
+.form-status-wait { color: var(--ink-soft); }
 
 /* ---------- Bannière "reprendre ici" (page de chapitre) ---------- */
 
