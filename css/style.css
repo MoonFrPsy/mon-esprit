@@ -75,7 +75,12 @@ body::before {
               rgba(122, 167, 255, 0.09), transparent 75%);
 }
 
-.site-header, main, .site-footer {
+.site-header {
+  position: relative;
+  z-index: 20;
+}
+
+main, .site-footer {
   position: relative;
   z-index: 1;
 }
