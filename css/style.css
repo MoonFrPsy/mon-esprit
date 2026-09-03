@@ -318,6 +318,35 @@ h1, h2, h3 {
   .hero-illustration { max-width: 280px; order: -1; }
 }
 
+/* Le réseau de nœuds pulse doucement plutôt que de se déplacer,
+   pour ne jamais se détacher visuellement des traits qui le relient */
+.hero-illustration circle {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hero-illustration circle:nth-of-type(-n+3) {
+  animation: node-glow-breathe 6s ease-in-out infinite;
+}
+
+.hero-illustration circle:nth-of-type(n+4) {
+  animation: node-pulse 3.6s ease-in-out infinite;
+}
+
+.hero-illustration circle:nth-of-type(3n+4) { animation-delay: -0.2s; animation-duration: 3s; }
+.hero-illustration circle:nth-of-type(3n+5) { animation-delay: -1.4s; animation-duration: 4.2s; }
+.hero-illustration circle:nth-of-type(3n+6) { animation-delay: -2.3s; animation-duration: 3.6s; }
+
+@keyframes node-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.22); }
+}
+
+@keyframes node-glow-breathe {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.24; }
+}
+
 /* ---------- Category grid (homepage) ---------- */
 
 .cat-grid {
@@ -442,7 +471,18 @@ h1, h2, h3 {
   width: 92px;
   height: 92px;
   color: var(--accent);
-  filter: drop-shadow(0 0 18px color-mix(in srgb, var(--accent) 40%, transparent));
+  animation: banner-icon-breathe 3.4s ease-in-out infinite;
+}
+
+@keyframes banner-icon-breathe {
+  0%, 100% {
+    filter: drop-shadow(0 0 16px color-mix(in srgb, var(--accent) 35%, transparent));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 30px color-mix(in srgb, var(--accent) 65%, transparent));
+    transform: scale(1.04);
+  }
 }
 
 /* ---------- Chapter list (category page) ---------- */
@@ -829,6 +869,19 @@ body { top: 0 !important; }
 .form-status-ok { color: var(--hc-4); }
 .form-status-error { color: var(--hc-5); }
 .form-status-wait { color: var(--ink-soft); }
+
+/* ---------- Apparition en fondu au défilement ---------- */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ---------- Bannière "reprendre ici" (page de chapitre) ---------- */
 
