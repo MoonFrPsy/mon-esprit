@@ -41,6 +41,45 @@
   --my: 30%;
 }
 
+/* ---------- Thème clair (activé via data-theme="light" sur <html>) ---------- */
+html[data-theme="light"] {
+  --bg: #F7F7F5;
+  --bg-raised: #FFFFFF;
+  --bg-raised-2: #EFEFEC;
+  --ink: #24282A;
+  --ink-soft: #5C645D;
+  --title: #14171A;
+  --link: #2A56D6;
+  --clay: #C56A1F;
+  --line: #DDE0DB;
+
+  --hc-1: #0E86AD;
+  --hc-2: #7A4FE0;
+  --hc-3: #A6740A;
+  --hc-4: #159C78;
+  --hc-5: #D6336C;
+
+  --acc-avances: #B84F8C;
+  --acc-histoires: #96702E;
+  --acc-justice: #A83530;
+  --acc-experiences: #4A63E8;
+}
+
+html[data-theme="light"] #fluid-cursor { mix-blend-mode: multiply; }
+html[data-theme="light"] body::before { display: none; }
+
+/* ---------- Police adaptée dyslexie (activée via .dyslexia-font sur <html>) --- */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+html.dyslexia-font,
+html.dyslexia-font .site-title,
+html.dyslexia-font h1,
+html.dyslexia-font h2,
+html.dyslexia-font h3 {
+  font-family: 'Comic Neue', 'Comic Sans MS', sans-serif !important;
+  letter-spacing: 0.02em;
+}
+html.dyslexia-font body { line-height: 1.85; }
+
 * { box-sizing: border-box; }
 
 /* Frein tactile équivalent au clic droit (menu "Copier" au appui long) */
@@ -257,8 +296,6 @@ h1, h2, h3 {
   border-radius: 3px;
 }
 .search-results::-webkit-scrollbar-thumb:hover { background: var(--ink-soft); }
-  padding: 0.5rem;
-}
 
 .search-result-item {
   display: flex;
@@ -609,7 +646,64 @@ h1, h2, h3 {
 
 .article-header {
   padding: 3.5rem 0 2rem;
+  position: relative;
 }
+
+.favorite-btn {
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-btn:hover { border-color: var(--clay); color: var(--clay); }
+.favorite-btn.is-favorite { color: var(--clay); border-color: var(--clay); }
+
+.similar-block {
+  margin: 3rem 0 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.similar-block h2 {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin-bottom: 1rem;
+}
+
+.similar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.similar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease;
+}
+
+.similar-item:hover { border-color: var(--clay); color: var(--clay); }
+.similar-icon { font-size: 1.15rem; flex-shrink: 0; }
 
 .article-header .category {
   color: var(--clay);
@@ -1016,6 +1110,26 @@ body {
 }
 
 .lang-toggle:hover { border-color: var(--clay); color: var(--clay); }
+
+.icon-toggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.icon-toggle:hover { border-color: var(--clay); color: var(--clay); }
+.icon-toggle.active { border-color: var(--link); color: var(--link); }
 
 /* Neutralise l'habillage par défaut de Google Translate pour qu'il ne
    casse pas la mise en page (bandeau du haut, surlignage, etc.) */
