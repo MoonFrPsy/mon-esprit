@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#71-quest-ce-que-la-joie">😄 7.1 Qu'est-ce que la joie ?</a></li><li><a href="#72-la-fonction-de-la-joie">✨ 7.2 La fonction de la joie</a></li><li><a href="#73-le-plaisir">😊 7.3 Le plaisir</a></li><li><a href="#74-la-recompense">🎯 7.4 La récompense</a></li><li><a href="#75-le-systeme-de-recompense">🧠 7.5 Le système de récompense</a></li><li><a href="#76-la-dopamine">🧬 7.6 La dopamine</a></li><li><a href="#77-lanticipation-de-la-recompense">🔮 7.7 L'anticipation de la récompense</a></li><li><a href="#78-la-recompense-obtenue">🎁 7.8 La récompense obtenue</a></li><li><a href="#79-lerreur-de-prediction-de-recompense">📈 7.9 L'erreur de prédiction de récompense</a></li><li><a href="#710-lapprentissage-par-recompense">🔄 7.10 L'apprentissage par récompense</a></li><li><a href="#711-le-renforcement-positif">🧠 7.11 Le renforcement positif</a></li><li><a href="#712-la-motivation">🎯 7.12 La motivation</a></li><li><a href="#713-la-motivation-intrinseque">🔥 7.13 La motivation intrinsèque</a></li><li><a href="#714-la-motivation-extrinseque">🎁 7.14 La motivation extrinsèque</a></li><li><a href="#715-plaisir-et-motivation">⚖️ 7.15 Plaisir et motivation</a></li><li><a href="#716-le-desir">🧠 7.16 Le désir</a></li><li><a href="#717-vouloir-et-aimer">🍫 7.17 Vouloir et aimer</a></li><li><a href="#718-lanticipation-du-plaisir">🔮 7.18 L'anticipation du plaisir</a></li><li><a href="#719-les-attentes-concernant-le-plaisir">🧠 7.19 Les attentes concernant le plaisir</a></li><li><a href="#720-lecart-entre-plaisir-attendu-et-plaisir-reel">📊 7.20 L'écart entre plaisir attendu et plaisir réel</a></li><li><a href="#721-lhabituation">🔄 7.21 L'habituation</a></li><li><a href="#722-ladaptation-hedonique">🔥 7.22 L'adaptation hédonique</a></li><li><a href="#723-la-joie-et-les-emotions-positives">😊 7.23 La joie et les émotions positives</a></li><li><a href="#724-la-satisfaction">🧠 7.24 La satisfaction</a></li><li><a href="#725-la-fierte">🏆 7.25 La fierté</a></li><li><a href="#726-la-gratitude">💕 7.26 La gratitude</a></li><li><a href="#727-le-rire-et-lamusement">😆 7.27 Le rire et l'amusement</a></li><li><a href="#728-la-joie-partagee">🧑‍🤝‍🧑 7.28 La joie partagée</a></li><li><a href="#729-la-communication-de-la-joie">🗣️ 7.29 La communication de la joie</a></li><li><a href="#730-la-contagion-emotionnelle-positive">🔄 7.30 La contagion émotionnelle positive</a></li><li><a href="#731-la-joie-et-lattention">🧠 7.31 La joie et l'attention</a></li><li><a href="#732-la-joie-et-la-pensee">💭 7.32 La joie et la pensée</a></li><li><a href="#733-la-joie-et-la-memoire">🧠 7.33 La joie et la mémoire</a></li><li><a href="#734-la-joie-et-les-objectifs">🎯 7.34 La joie et les objectifs</a></li><li><a href="#735-la-recompense-et-le-comportement">🏃 7.35 La récompense et le comportement</a></li><li><a href="#736-les-recompenses-repetees">🔁 7.36 Les récompenses répétées</a></li><li><a href="#737-la-recompense-variable">🎲 7.37 La récompense variable</a></li><li><a href="#738-les-differences-individuelles">🧠 7.38 Les différences individuelles</a></li><li><a href="#739-joie-plaisir-et-comportement">⚖️ 7.39 Joie, plaisir et comportement</a></li><li><a href="#740-pourquoi-etudier-la-joie-le-plaisir-et-la-recompense">🔬 7.40 Pourquoi étudier la joie, le plaisir et la récompense ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#71-quest-ce-que-la-joie">😄 7.1 Qu'est-ce que la joie ?</a></li><li><a href="#72-la-fonction-de-la-joie">✨ 7.2 La fonction de la joie</a></li><li><a href="#73-le-plaisir">😊 7.3 Le plaisir</a></li><li><a href="#74-la-recompense">🎯 7.4 La récompense</a></li><li><a href="#75-le-systeme-de-recompense">🧠 7.5 Le système de récompense</a></li><li><a href="#76-la-dopamine">🧬 7.6 La dopamine</a></li><li><a href="#77-lanticipation-de-la-recompense">🔮 7.7 L'anticipation de la récompense</a></li><li><a href="#78-la-recompense-obtenue">🎁 7.8 La récompense obtenue</a></li><li><a href="#79-lerreur-de-prediction-de-recompense">📈 7.9 L'erreur de prédiction de récompense</a></li><li><a href="#710-lapprentissage-par-recompense">🔄 7.10 L'apprentissage par récompense</a></li><li><a href="#711-le-renforcement-positif">🧠 7.11 Le renforcement positif</a></li><li><a href="#712-la-motivation">🎯 7.12 La motivation</a></li><li><a href="#713-la-motivation-intrinseque">🔥 7.13 La motivation intrinsèque</a></li><li><a href="#714-la-motivation-extrinseque">🎁 7.14 La motivation extrinsèque</a></li><li><a href="#715-plaisir-et-motivation">⚖️ 7.15 Plaisir et motivation</a></li><li><a href="#716-le-desir">🧠 7.16 Le désir</a></li><li><a href="#717-vouloir-et-aimer">🍫 7.17 Vouloir et aimer</a></li><li><a href="#718-lanticipation-du-plaisir">🔮 7.18 L'anticipation du plaisir</a></li><li><a href="#719-les-attentes-concernant-le-plaisir">🧠 7.19 Les attentes concernant le plaisir</a></li><li><a href="#720-lecart-entre-plaisir-attendu-et-plaisir-reel">📊 7.20 L'écart entre plaisir attendu et plaisir réel</a></li><li><a href="#721-lhabituation">🔄 7.21 L'habituation</a></li><li><a href="#722-ladaptation-hedonique">🔥 7.22 L'adaptation hédonique</a></li><li><a href="#723-la-joie-et-les-emotions-positives">😊 7.23 La joie et les émotions positives</a></li><li><a href="#724-la-satisfaction">🧠 7.24 La satisfaction</a></li><li><a href="#725-la-fierte">🏆 7.25 La fierté</a></li><li><a href="#726-la-gratitude">💕 7.26 La gratitude</a></li><li><a href="#727-le-rire-et-lamusement">😆 7.27 Le rire et l'amusement</a></li><li><a href="#728-la-joie-partagee">🧑‍🤝‍🧑 7.28 La joie partagée</a></li><li><a href="#729-la-communication-de-la-joie">🗣️ 7.29 La communication de la joie</a></li><li><a href="#730-la-contagion-emotionnelle-positive">🔄 7.30 La contagion émotionnelle positive</a></li><li><a href="#731-la-joie-et-lattention">🧠 7.31 La joie et l'attention</a></li><li><a href="#732-la-joie-et-la-pensee">💭 7.32 La joie et la pensée</a></li><li><a href="#733-la-joie-et-la-memoire">🧠 7.33 La joie et la mémoire</a></li><li><a href="#734-la-joie-et-les-objectifs">🎯 7.34 La joie et les objectifs</a></li><li><a href="#735-la-recompense-et-le-comportement">🏃 7.35 La récompense et le comportement</a></li><li><a href="#736-les-recompenses-repetees">🔁 7.36 Les récompenses répétées</a></li><li><a href="#737-la-recompense-variable">🎲 7.37 La récompense variable</a></li><li><a href="#738-les-differences-individuelles">🧠 7.38 Les différences individuelles</a></li><li><a href="#739-joie-plaisir-et-comportement">⚖️ 7.39 Joie, plaisir et comportement</a></li><li><a href="#740-pourquoi-etudier-la-joie-le-plaisir-et-la-recompense">🔬 7.40 Pourquoi étudier la joie, le plaisir et la récompense ?</a></li></ul></nav>
     <div class="article-body">
       <p>La joie est une émotion généralement associée à une expérience agréable, à l'accomplissement d'un objectif, à une interaction positive ou à la présence d'un événement considéré comme favorable.</p>
 <p>Elle est étroitement liée au plaisir, à la motivation et aux systèmes de récompense, mais ces notions ne sont pas identiques.</p>
@@ -380,6 +390,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -561,47 +591,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

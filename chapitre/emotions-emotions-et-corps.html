@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#31-les-emotions-et-les-sensations-corporelles">🫀 3.1 Les émotions et les sensations corporelles</a></li><li><a href="#32-lactivation-physiologique">⚡ 3.2 L'activation physiologique</a></li><li><a href="#33-le-systeme-nerveux-autonome">🧠 3.3 Le système nerveux autonome</a></li><li><a href="#34-la-reponse-sympathique">⚡ 3.4 La réponse sympathique</a></li><li><a href="#35-la-reponse-parasympathique">🌿 3.5 La réponse parasympathique</a></li><li><a href="#36-les-emotions-et-le-rythme-cardiaque">❤️ 3.6 Les émotions et le rythme cardiaque</a></li><li><a href="#37-les-emotions-et-la-respiration">🫁 3.7 Les émotions et la respiration</a></li><li><a href="#38-les-emotions-et-les-muscles">💪 3.8 Les émotions et les muscles</a></li><li><a href="#39-les-emotions-et-la-temperature-corporelle">🌡️ 3.9 Les émotions et la température corporelle</a></li><li><a href="#310-les-emotions-et-la-transpiration">💧 3.10 Les émotions et la transpiration</a></li><li><a href="#311-les-frissons-emotionnels">🧊 3.11 Les frissons émotionnels</a></li><li><a href="#312-les-sensations-abdominales">🦋 3.12 Les sensations abdominales</a></li><li><a href="#313-laxe-intestin-cerveau">🧠 3.13 L'axe intestin cerveau</a></li><li><a href="#314-linteroception">🧠 3.14 L'interoception</a></li><li><a href="#315-lattention-portee-au-corps">👁️ 3.15 L'attention portée au corps</a></li><li><a href="#316-le-cycle-sensation-interpretation">🔄 3.16 Le cycle sensation interprétation</a></li><li><a href="#317-les-sensations-corporelles-liees-a-la-peur">😨 3.17 Les sensations corporelles liées à la peur</a></li><li><a href="#318-les-sensations-corporelles-liees-a-la-colere">😡 3.18 Les sensations corporelles liées à la colère</a></li><li><a href="#319-les-sensations-corporelles-liees-a-la-tristesse">😢 3.19 Les sensations corporelles liées à la tristesse</a></li><li><a href="#320-les-sensations-corporelles-liees-a-la-joie">😄 3.20 Les sensations corporelles liées à la joie</a></li><li><a href="#321-la-honte-et-les-reactions-corporelles">😳 3.21 La honte et les réactions corporelles</a></li><li><a href="#322-les-emotions-et-la-pression-arterielle">🫀 3.22 Les émotions et la pression artérielle</a></li><li><a href="#323-les-hormones-et-les-emotions">🧪 3.23 Les hormones et les émotions</a></li><li><a href="#324-le-cortisol">🧪 3.24 Le cortisol</a></li><li><a href="#325-ladrenaline">⚡ 3.25 L'adrénaline</a></li><li><a href="#326-les-emotions-et-le-systeme-immunitaire">🧠 3.26 Les émotions et le système immunitaire</a></li><li><a href="#327-les-emotions-et-le-sommeil">😴 3.27 Les émotions et le sommeil</a></li><li><a href="#328-les-emotions-et-lalimentation">🍽️ 3.28 Les émotions et l'alimentation</a></li><li><a href="#329-les-emotions-et-la-douleur">🧠 3.29 Les émotions et la douleur</a></li><li><a href="#330-la-sensibilisation">🔥 3.30 La sensibilisation</a></li><li><a href="#331-le-cerveau-comme-interprete-des-sensations">🧠 3.31 Le cerveau comme interprète des sensations</a></li><li><a href="#332-les-emotions-influencent-les-sensations">🔄 3.32 Les émotions influencent les sensations</a></li><li><a href="#333-les-sensations-influencent-les-emotions">🔄 3.33 Les sensations influencent les émotions</a></li><li><a href="#334-linteraction-cerveau-corps">🧠 3.34 L'interaction cerveau corps</a></li><li><a href="#335-les-differences-individuelles">🧩 3.35 Les différences individuelles</a></li><li><a href="#336-linfluence-du-contexte">🌍 3.36 L'influence du contexte</a></li><li><a href="#337-linterpretation-des-sensations-corporelles">🧠 3.37 L'interprétation des sensations corporelles</a></li><li><a href="#338-corps-et-emotions-ne-fonctionnent-pas-separement">⚖️ 3.38 Corps et émotions ne fonctionnent pas séparément</a></li><li><a href="#339-une-sensation-corporelle-nest-pas-forcement-psychologique">🚫 3.39 Une sensation corporelle n'est pas forcément psychologique</a></li><li><a href="#340-pourquoi-etudier-les-emotions-et-le-corps">🔬 3.40 Pourquoi étudier les émotions et le corps ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#31-les-emotions-et-les-sensations-corporelles">🫀 3.1 Les émotions et les sensations corporelles</a></li><li><a href="#32-lactivation-physiologique">⚡ 3.2 L'activation physiologique</a></li><li><a href="#33-le-systeme-nerveux-autonome">🧠 3.3 Le système nerveux autonome</a></li><li><a href="#34-la-reponse-sympathique">⚡ 3.4 La réponse sympathique</a></li><li><a href="#35-la-reponse-parasympathique">🌿 3.5 La réponse parasympathique</a></li><li><a href="#36-les-emotions-et-le-rythme-cardiaque">❤️ 3.6 Les émotions et le rythme cardiaque</a></li><li><a href="#37-les-emotions-et-la-respiration">🫁 3.7 Les émotions et la respiration</a></li><li><a href="#38-les-emotions-et-les-muscles">💪 3.8 Les émotions et les muscles</a></li><li><a href="#39-les-emotions-et-la-temperature-corporelle">🌡️ 3.9 Les émotions et la température corporelle</a></li><li><a href="#310-les-emotions-et-la-transpiration">💧 3.10 Les émotions et la transpiration</a></li><li><a href="#311-les-frissons-emotionnels">🧊 3.11 Les frissons émotionnels</a></li><li><a href="#312-les-sensations-abdominales">🦋 3.12 Les sensations abdominales</a></li><li><a href="#313-laxe-intestin-cerveau">🧠 3.13 L'axe intestin cerveau</a></li><li><a href="#314-linteroception">🧠 3.14 L'interoception</a></li><li><a href="#315-lattention-portee-au-corps">👁️ 3.15 L'attention portée au corps</a></li><li><a href="#316-le-cycle-sensation-interpretation">🔄 3.16 Le cycle sensation interprétation</a></li><li><a href="#317-les-sensations-corporelles-liees-a-la-peur">😨 3.17 Les sensations corporelles liées à la peur</a></li><li><a href="#318-les-sensations-corporelles-liees-a-la-colere">😡 3.18 Les sensations corporelles liées à la colère</a></li><li><a href="#319-les-sensations-corporelles-liees-a-la-tristesse">😢 3.19 Les sensations corporelles liées à la tristesse</a></li><li><a href="#320-les-sensations-corporelles-liees-a-la-joie">😄 3.20 Les sensations corporelles liées à la joie</a></li><li><a href="#321-la-honte-et-les-reactions-corporelles">😳 3.21 La honte et les réactions corporelles</a></li><li><a href="#322-les-emotions-et-la-pression-arterielle">🫀 3.22 Les émotions et la pression artérielle</a></li><li><a href="#323-les-hormones-et-les-emotions">🧪 3.23 Les hormones et les émotions</a></li><li><a href="#324-le-cortisol">🧪 3.24 Le cortisol</a></li><li><a href="#325-ladrenaline">⚡ 3.25 L'adrénaline</a></li><li><a href="#326-les-emotions-et-le-systeme-immunitaire">🧠 3.26 Les émotions et le système immunitaire</a></li><li><a href="#327-les-emotions-et-le-sommeil">😴 3.27 Les émotions et le sommeil</a></li><li><a href="#328-les-emotions-et-lalimentation">🍽️ 3.28 Les émotions et l'alimentation</a></li><li><a href="#329-les-emotions-et-la-douleur">🧠 3.29 Les émotions et la douleur</a></li><li><a href="#330-la-sensibilisation">🔥 3.30 La sensibilisation</a></li><li><a href="#331-le-cerveau-comme-interprete-des-sensations">🧠 3.31 Le cerveau comme interprète des sensations</a></li><li><a href="#332-les-emotions-influencent-les-sensations">🔄 3.32 Les émotions influencent les sensations</a></li><li><a href="#333-les-sensations-influencent-les-emotions">🔄 3.33 Les sensations influencent les émotions</a></li><li><a href="#334-linteraction-cerveau-corps">🧠 3.34 L'interaction cerveau corps</a></li><li><a href="#335-les-differences-individuelles">🧩 3.35 Les différences individuelles</a></li><li><a href="#336-linfluence-du-contexte">🌍 3.36 L'influence du contexte</a></li><li><a href="#337-linterpretation-des-sensations-corporelles">🧠 3.37 L'interprétation des sensations corporelles</a></li><li><a href="#338-corps-et-emotions-ne-fonctionnent-pas-separement">⚖️ 3.38 Corps et émotions ne fonctionnent pas séparément</a></li><li><a href="#339-une-sensation-corporelle-nest-pas-forcement-psychologique">🚫 3.39 Une sensation corporelle n'est pas forcément psychologique</a></li><li><a href="#340-pourquoi-etudier-les-emotions-et-le-corps">🔬 3.40 Pourquoi étudier les émotions et le corps ?</a></li></ul></nav>
     <div class="article-body">
       <p>Les émotions ne sont pas uniquement des expériences psychologiques. Elles s'accompagnent souvent de modifications corporelles qui peuvent être rapides et parfois très intenses.</p>
 <p>Le cerveau, le système nerveux, les hormones, le cœur, la respiration, les muscles et le système digestif participent tous, à différents niveaux, aux réponses associées aux émotions.</p>
@@ -456,6 +466,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -637,47 +667,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

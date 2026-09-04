@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#151-le-comportement">🔎 15.1 Le comportement</a></li><li><a href="#152-lhabitude">🔁 15.2 L'habitude</a></li><li><a href="#153-lautomatisation-comportementale">🧠 15.3 L'automatisation comportementale</a></li><li><a href="#154-le-comportement-oriente-vers-un-objectif">🎯 15.4 Le comportement orienté vers un objectif</a></li><li><a href="#155-le-renforcement">🎁 15.5 Le renforcement</a></li><li><a href="#156-la-punition">🚫 15.6 La punition</a></li><li><a href="#157-le-conditionnement-operant">🔄 15.7 Le conditionnement opérant</a></li><li><a href="#158-le-conditionnement-classique">🔔 15.8 Le conditionnement classique</a></li><li><a href="#159-lapprentissage-comportemental">🧩 15.9 L'apprentissage comportemental</a></li><li><a href="#1510-lapprentissage-par-observation">👀 15.10 L'apprentissage par observation</a></li><li><a href="#1511-limitation">🪞 15.11 L'imitation</a></li><li><a href="#1512-limpulsivite-comportementale">⚡ 15.12 L'impulsivité comportementale</a></li><li><a href="#1513-linhibition-comportementale">🛑 15.13 L'inhibition comportementale</a></li><li><a href="#1514-le-delai-avant-laction">⏳ 15.14 Le délai avant l'action</a></li><li><a href="#1515-le-conflit-comportemental">🔀 15.15 Le conflit comportemental</a></li><li><a href="#1516-lapproche-et-levitement">🧲 15.16 L'approche et l'évitement</a></li><li><a href="#1517-le-comportement-devitement">🏃 15.17 Le comportement d'évitement</a></li><li><a href="#1518-le-comportement-de-securite">🔁 15.18 Le comportement de sécurité</a></li><li><a href="#1519-le-comportement-repetitif">🧠 15.19 Le comportement répétitif</a></li><li><a href="#1520-les-comportements-ritualises">🔄 15.20 Les comportements ritualisés</a></li><li><a href="#1521-la-perseveration-comportementale">🌀 15.21 La persévération comportementale</a></li><li><a href="#1522-la-flexibilite-comportementale">🧩 15.22 La flexibilité comportementale</a></li><li><a href="#1523-la-rigidite-comportementale">🔒 15.23 La rigidité comportementale</a></li><li><a href="#1524-le-controle-comportemental">🧠 15.24 Le contrôle comportemental</a></li><li><a href="#1525-lautocontrole">🎯 15.25 L'autocontrôle</a></li><li><a href="#1526-la-gratification-immediate">🍫 15.26 La gratification immédiate</a></li><li><a href="#1527-la-gratification-differee">⏳ 15.27 La gratification différée</a></li><li><a href="#1528-la-motivation-comportementale">🧠 15.28 La motivation comportementale</a></li><li><a href="#1529-lactivation-comportementale">🔥 15.29 L'activation comportementale</a></li><li><a href="#1530-le-retrait-comportemental">💤 15.30 Le retrait comportemental</a></li><li><a href="#1531-le-comportement-dapproche-sociale">🧍 15.31 Le comportement d'approche sociale</a></li><li><a href="#1532-le-retrait-social">🚪 15.32 Le retrait social</a></li><li><a href="#1533-le-comportement-prosocial">🤝 15.33 Le comportement prosocial</a></li><li><a href="#1534-le-comportement-agressif">⚔️ 15.34 Le comportement agressif</a></li><li><a href="#1535-le-comportement-cooperatif">🕊️ 15.35 Le comportement coopératif</a></li><li><a href="#1536-le-comportement-competitif">🏆 15.36 Le comportement compétitif</a></li><li><a href="#1537-le-comportement-reciproque">🔁 15.37 Le comportement réciproque</a></li><li><a href="#1538-la-gestion-comportementale-de-limpression">🎭 15.38 La gestion comportementale de l'impression</a></li><li><a href="#1539-le-changement-comportemental">🌱 15.39 Le changement comportemental</a></li><li><a href="#1540-pourquoi-etudier-les-phenomenes-comportementaux">🔬 15.40 Pourquoi étudier les phénomènes comportementaux ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -49,7 +60,6 @@
         <line x1="116" y1="60" x2="105" y2="60"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#151-le-comportement">🔎 15.1 Le comportement</a></li><li><a href="#152-lhabitude">🔁 15.2 L'habitude</a></li><li><a href="#153-lautomatisation-comportementale">🧠 15.3 L'automatisation comportementale</a></li><li><a href="#154-le-comportement-oriente-vers-un-objectif">🎯 15.4 Le comportement orienté vers un objectif</a></li><li><a href="#155-le-renforcement">🎁 15.5 Le renforcement</a></li><li><a href="#156-la-punition">🚫 15.6 La punition</a></li><li><a href="#157-le-conditionnement-operant">🔄 15.7 Le conditionnement opérant</a></li><li><a href="#158-le-conditionnement-classique">🔔 15.8 Le conditionnement classique</a></li><li><a href="#159-lapprentissage-comportemental">🧩 15.9 L'apprentissage comportemental</a></li><li><a href="#1510-lapprentissage-par-observation">👀 15.10 L'apprentissage par observation</a></li><li><a href="#1511-limitation">🪞 15.11 L'imitation</a></li><li><a href="#1512-limpulsivite-comportementale">⚡ 15.12 L'impulsivité comportementale</a></li><li><a href="#1513-linhibition-comportementale">🛑 15.13 L'inhibition comportementale</a></li><li><a href="#1514-le-delai-avant-laction">⏳ 15.14 Le délai avant l'action</a></li><li><a href="#1515-le-conflit-comportemental">🔀 15.15 Le conflit comportemental</a></li><li><a href="#1516-lapproche-et-levitement">🧲 15.16 L'approche et l'évitement</a></li><li><a href="#1517-le-comportement-devitement">🏃 15.17 Le comportement d'évitement</a></li><li><a href="#1518-le-comportement-de-securite">🔁 15.18 Le comportement de sécurité</a></li><li><a href="#1519-le-comportement-repetitif">🧠 15.19 Le comportement répétitif</a></li><li><a href="#1520-les-comportements-ritualises">🔄 15.20 Les comportements ritualisés</a></li><li><a href="#1521-la-perseveration-comportementale">🌀 15.21 La persévération comportementale</a></li><li><a href="#1522-la-flexibilite-comportementale">🧩 15.22 La flexibilité comportementale</a></li><li><a href="#1523-la-rigidite-comportementale">🔒 15.23 La rigidité comportementale</a></li><li><a href="#1524-le-controle-comportemental">🧠 15.24 Le contrôle comportemental</a></li><li><a href="#1525-lautocontrole">🎯 15.25 L'autocontrôle</a></li><li><a href="#1526-la-gratification-immediate">🍫 15.26 La gratification immédiate</a></li><li><a href="#1527-la-gratification-differee">⏳ 15.27 La gratification différée</a></li><li><a href="#1528-la-motivation-comportementale">🧠 15.28 La motivation comportementale</a></li><li><a href="#1529-lactivation-comportementale">🔥 15.29 L'activation comportementale</a></li><li><a href="#1530-le-retrait-comportemental">💤 15.30 Le retrait comportemental</a></li><li><a href="#1531-le-comportement-dapproche-sociale">🧍 15.31 Le comportement d'approche sociale</a></li><li><a href="#1532-le-retrait-social">🚪 15.32 Le retrait social</a></li><li><a href="#1533-le-comportement-prosocial">🤝 15.33 Le comportement prosocial</a></li><li><a href="#1534-le-comportement-agressif">⚔️ 15.34 Le comportement agressif</a></li><li><a href="#1535-le-comportement-cooperatif">🕊️ 15.35 Le comportement coopératif</a></li><li><a href="#1536-le-comportement-competitif">🏆 15.36 Le comportement compétitif</a></li><li><a href="#1537-le-comportement-reciproque">🔁 15.37 Le comportement réciproque</a></li><li><a href="#1538-la-gestion-comportementale-de-limpression">🎭 15.38 La gestion comportementale de l'impression</a></li><li><a href="#1539-le-changement-comportemental">🌱 15.39 Le changement comportemental</a></li><li><a href="#1540-pourquoi-etudier-les-phenomenes-comportementaux">🔬 15.40 Pourquoi étudier les phénomènes comportementaux ?</a></li></ul></nav>
     <div class="article-body">
       <p>Les phénomènes comportementaux correspondent aux différentes manières dont les comportements apparaissent, se modifient et s'organisent sous l'influence des pensées, des émotions, de l'environnement, des habitudes et des interactions sociales.</p>
 <p>Certains sont très courants dans la vie quotidienne, tandis que d'autres sont étudiés principalement en psychologie expérimentale, en psychologie clinique ou dans les sciences du comportement.</p>
@@ -446,6 +456,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -627,47 +657,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

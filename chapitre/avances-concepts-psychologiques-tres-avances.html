@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#201-le-fonctionnement-psychologique-comme-systeme-complexe">🧠 20.1 Le fonctionnement psychologique comme système complexe</a></li><li><a href="#202-la-causalite-circulaire">🔄 20.2 La causalité circulaire</a></li><li><a href="#203-les-boucles-de-retroaction-positives">🔁 20.3 Les boucles de rétroaction positives</a></li><li><a href="#204-les-boucles-de-retroaction-negatives">🧱 20.4 Les boucles de rétroaction négatives</a></li><li><a href="#205-les-etats-attracteurs">🧠 20.5 Les états attracteurs</a></li><li><a href="#206-la-stabilite-dynamique">🔄 20.6 La stabilité dynamique</a></li><li><a href="#207-les-transitions-non-lineaires">🌪️ 20.7 Les transitions non linéaires</a></li><li><a href="#208-lemergence">🧬 20.8 L'émergence</a></li><li><a href="#209-le-reductionnisme">🔬 20.9 Le réductionnisme</a></li><li><a href="#2010-les-niveaux-danalyse">🧩 20.10 Les niveaux d'analyse</a><ul class="sidebar-sublist"><li><a href="#niveau-biologique">Niveau biologique</a></li><li><a href="#niveau-cognitif">Niveau cognitif</a></li><li><a href="#niveau-emotionnel">Niveau émotionnel</a></li><li><a href="#niveau-comportemental">Niveau comportemental</a></li><li><a href="#niveau-social">Niveau social</a></li></ul></li><li><a href="#2011-la-cognition-incarnee">🧠 20.11 La cognition incarnée</a></li><li><a href="#2012-linteroception-avancee">🫀 20.12 L'interoception avancée</a></li><li><a href="#2013-lallostasie">🧠 20.13 L'allostasie</a></li><li><a href="#2014-la-charge-allostatique">⚡ 20.14 La charge allostatique</a></li><li><a href="#2015-le-cerveau-predictif">🔮 20.15 Le cerveau prédictif</a></li><li><a href="#2016-lerreur-de-prediction">⚠️ 20.16 L'erreur de prédiction</a></li><li><a href="#2017-lapprentissage-bayesien">🧠 20.17 L'apprentissage bayésien</a></li><li><a href="#2018-le-traitement-top-down">👁️ 20.18 Le traitement top-down</a></li><li><a href="#2019-le-traitement-bottom-up">👁️ 20.19 Le traitement bottom-up</a></li><li><a href="#2020-linference-perceptive">🧠 20.20 L'inférence perceptive</a></li><li><a href="#2021-la-metacognition">🧩 20.21 La métacognition</a></li><li><a href="#2022-le-monitoring-metacognitif">🎯 20.22 Le monitoring métacognitif</a></li><li><a href="#2023-la-calibration-metacognitive">📊 20.23 La calibration métacognitive</a></li><li><a href="#2024-la-conscience-dacces">🧠 20.24 La conscience d'accès</a></li><li><a href="#2025-lexperience-subjective">🌌 20.25 L'expérience subjective</a></li><li><a href="#2026-le-probleme-difficile-de-la-conscience">🧠 20.26 Le problème difficile de la conscience</a></li><li><a href="#2027-le-sentiment-detre-soi">🪞 20.27 Le sentiment d'être soi</a></li><li><a href="#2028-le-sentiment-dagentivite">🧍 20.28 Le sentiment d'agentivité</a></li><li><a href="#2029-le-sentiment-de-propriete-corporelle">🫱 20.29 Le sentiment de propriété corporelle</a></li><li><a href="#2030-lintegration-multisensorielle">🧠 20.30 L'intégration multisensorielle</a></li><li><a href="#2031-la-construction-du-soi">🪞 20.31 La construction du soi</a></li><li><a href="#2032-lidentite-narrative">📖 20.32 L'identité narrative</a></li><li><a href="#2033-le-soi-passe-et-le-soi-futur">⏳ 20.33 Le soi passé et le soi futur</a></li><li><a href="#2034-la-projection-mentale-dans-le-futur">🧠 20.34 La projection mentale dans le futur</a></li><li><a href="#2035-la-simulation-mentale">🔄 20.35 La simulation mentale</a></li><li><a href="#2036-la-pensee-contrefactuelle">🧠 20.36 La pensée contrefactuelle</a></li><li><a href="#2037-lambivalence-psychologique">🔀 20.37 L'ambivalence psychologique</a></li><li><a href="#2038-le-conflit-entre-systemes-motivationnels">⚔️ 20.38 Le conflit entre systèmes motivationnels</a></li><li><a href="#2039-le-controle-cognitif">🧠 20.39 Le contrôle cognitif</a></li><li><a href="#2040-le-compromis-entre-automatisation-et-controle">⚡ 20.40 Le compromis entre automatisation et contrôle</a></li><li><a href="#2041-la-charge-cognitive">🧠 20.41 La charge cognitive</a></li><li><a href="#2042-la-competition-cognitive">🧠 20.42 La compétition cognitive</a></li><li><a href="#2043-la-regulation-emotionnelle-comme-systeme-dynamique">❤️ 20.43 La régulation émotionnelle comme système dynamique</a></li><li><a href="#2044-la-regulation-interpersonnelle">🔄 20.44 La régulation interpersonnelle</a></li><li><a href="#2045-la-theorie-de-lesprit-avancee">🧠 20.45 La théorie de l'esprit avancée</a></li><li><a href="#2046-la-mentalisation">🧩 20.46 La mentalisation</a></li><li><a href="#2047-la-cognition-sociale-recursive">👥 20.47 La cognition sociale récursive</a></li><li><a href="#2048-la-prediction-sociale">🧠 20.48 La prédiction sociale</a></li><li><a href="#2049-les-boucles-interpersonnelles">🔄 20.49 Les boucles interpersonnelles</a></li><li><a href="#2050-les-propheties-autorealisatrices-complexes">🪞 20.50 Les prophéties autoréalisatrices complexes</a></li><li><a href="#2051-les-mecanismes-transdiagnostiques">🧩 20.51 Les mécanismes transdiagnostiques</a></li><li><a href="#2052-lheterogeneite-clinique">🧠 20.52 L'hétérogénéité clinique</a></li><li><a href="#2053-la-multifinalite">🧬 20.53 La multifinalité</a></li><li><a href="#2054-lequifinalite">🔀 20.54 L'équifinalité</a></li><li><a href="#2055-la-plasticite-psychologique">🧠 20.55 La plasticité psychologique</a></li><li><a href="#2056-linteraction-genes-environnement">🧬 20.56 L'interaction gènes environnement</a></li><li><a href="#2057-linteraction-personne-environnement">🧠 20.57 L'interaction personne environnement</a></li><li><a href="#2058-le-contexte-comme-composante-du-fonctionnement-psychologique">🌍 20.58 Le contexte comme composante du fonctionnement psychologique</a></li><li><a href="#2059-le-modele-biopsychosocial-integre">🔬 20.59 Le modèle biopsychosocial intégré</a></li><li><a href="#2060-la-psychologie-comme-science-des-systemes-complexes">🌌 20.60 La psychologie comme science des systèmes complexes</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -54,7 +65,6 @@
         <line x1="35" y1="98" x2="85" y2="98"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#201-le-fonctionnement-psychologique-comme-systeme-complexe">🧠 20.1 Le fonctionnement psychologique comme système complexe</a></li><li><a href="#202-la-causalite-circulaire">🔄 20.2 La causalité circulaire</a></li><li><a href="#203-les-boucles-de-retroaction-positives">🔁 20.3 Les boucles de rétroaction positives</a></li><li><a href="#204-les-boucles-de-retroaction-negatives">🧱 20.4 Les boucles de rétroaction négatives</a></li><li><a href="#205-les-etats-attracteurs">🧠 20.5 Les états attracteurs</a></li><li><a href="#206-la-stabilite-dynamique">🔄 20.6 La stabilité dynamique</a></li><li><a href="#207-les-transitions-non-lineaires">🌪️ 20.7 Les transitions non linéaires</a></li><li><a href="#208-lemergence">🧬 20.8 L'émergence</a></li><li><a href="#209-le-reductionnisme">🔬 20.9 Le réductionnisme</a></li><li><a href="#2010-les-niveaux-danalyse">🧩 20.10 Les niveaux d'analyse</a></li><li><a href="#2011-la-cognition-incarnee">🧠 20.11 La cognition incarnée</a></li><li><a href="#2012-linteroception-avancee">🫀 20.12 L'interoception avancée</a></li><li><a href="#2013-lallostasie">🧠 20.13 L'allostasie</a></li><li><a href="#2014-la-charge-allostatique">⚡ 20.14 La charge allostatique</a></li><li><a href="#2015-le-cerveau-predictif">🔮 20.15 Le cerveau prédictif</a></li><li><a href="#2016-lerreur-de-prediction">⚠️ 20.16 L'erreur de prédiction</a></li><li><a href="#2017-lapprentissage-bayesien">🧠 20.17 L'apprentissage bayésien</a></li><li><a href="#2018-le-traitement-top-down">👁️ 20.18 Le traitement top-down</a></li><li><a href="#2019-le-traitement-bottom-up">👁️ 20.19 Le traitement bottom-up</a></li><li><a href="#2020-linference-perceptive">🧠 20.20 L'inférence perceptive</a></li><li><a href="#2021-la-metacognition">🧩 20.21 La métacognition</a></li><li><a href="#2022-le-monitoring-metacognitif">🎯 20.22 Le monitoring métacognitif</a></li><li><a href="#2023-la-calibration-metacognitive">📊 20.23 La calibration métacognitive</a></li><li><a href="#2024-la-conscience-dacces">🧠 20.24 La conscience d'accès</a></li><li><a href="#2025-lexperience-subjective">🌌 20.25 L'expérience subjective</a></li><li><a href="#2026-le-probleme-difficile-de-la-conscience">🧠 20.26 Le problème difficile de la conscience</a></li><li><a href="#2027-le-sentiment-detre-soi">🪞 20.27 Le sentiment d'être soi</a></li><li><a href="#2028-le-sentiment-dagentivite">🧍 20.28 Le sentiment d'agentivité</a></li><li><a href="#2029-le-sentiment-de-propriete-corporelle">🫱 20.29 Le sentiment de propriété corporelle</a></li><li><a href="#2030-lintegration-multisensorielle">🧠 20.30 L'intégration multisensorielle</a></li><li><a href="#2031-la-construction-du-soi">🪞 20.31 La construction du soi</a></li><li><a href="#2032-lidentite-narrative">📖 20.32 L'identité narrative</a></li><li><a href="#2033-le-soi-passe-et-le-soi-futur">⏳ 20.33 Le soi passé et le soi futur</a></li><li><a href="#2034-la-projection-mentale-dans-le-futur">🧠 20.34 La projection mentale dans le futur</a></li><li><a href="#2035-la-simulation-mentale">🔄 20.35 La simulation mentale</a></li><li><a href="#2036-la-pensee-contrefactuelle">🧠 20.36 La pensée contrefactuelle</a></li><li><a href="#2037-lambivalence-psychologique">🔀 20.37 L'ambivalence psychologique</a></li><li><a href="#2038-le-conflit-entre-systemes-motivationnels">⚔️ 20.38 Le conflit entre systèmes motivationnels</a></li><li><a href="#2039-le-controle-cognitif">🧠 20.39 Le contrôle cognitif</a></li><li><a href="#2040-le-compromis-entre-automatisation-et-controle">⚡ 20.40 Le compromis entre automatisation et contrôle</a></li><li><a href="#2041-la-charge-cognitive">🧠 20.41 La charge cognitive</a></li><li><a href="#2042-la-competition-cognitive">🧠 20.42 La compétition cognitive</a></li><li><a href="#2043-la-regulation-emotionnelle-comme-systeme-dynamique">❤️ 20.43 La régulation émotionnelle comme système dynamique</a></li><li><a href="#2044-la-regulation-interpersonnelle">🔄 20.44 La régulation interpersonnelle</a></li><li><a href="#2045-la-theorie-de-lesprit-avancee">🧠 20.45 La théorie de l'esprit avancée</a></li><li><a href="#2046-la-mentalisation">🧩 20.46 La mentalisation</a></li><li><a href="#2047-la-cognition-sociale-recursive">👥 20.47 La cognition sociale récursive</a></li><li><a href="#2048-la-prediction-sociale">🧠 20.48 La prédiction sociale</a></li><li><a href="#2049-les-boucles-interpersonnelles">🔄 20.49 Les boucles interpersonnelles</a></li><li><a href="#2050-les-propheties-autorealisatrices-complexes">🪞 20.50 Les prophéties autoréalisatrices complexes</a></li><li><a href="#2051-les-mecanismes-transdiagnostiques">🧩 20.51 Les mécanismes transdiagnostiques</a></li><li><a href="#2052-lheterogeneite-clinique">🧠 20.52 L'hétérogénéité clinique</a></li><li><a href="#2053-la-multifinalite">🧬 20.53 La multifinalité</a></li><li><a href="#2054-lequifinalite">🔀 20.54 L'équifinalité</a></li><li><a href="#2055-la-plasticite-psychologique">🧠 20.55 La plasticité psychologique</a></li><li><a href="#2056-linteraction-genes-environnement">🧬 20.56 L'interaction gènes environnement</a></li><li><a href="#2057-linteraction-personne-environnement">🧠 20.57 L'interaction personne environnement</a></li><li><a href="#2058-le-contexte-comme-composante-du-fonctionnement-psychologique">🌍 20.58 Le contexte comme composante du fonctionnement psychologique</a></li><li><a href="#2059-le-modele-biopsychosocial-integre">🔬 20.59 Le modèle biopsychosocial intégré</a></li><li><a href="#2060-la-psychologie-comme-science-des-systemes-complexes">🌌 20.60 La psychologie comme science des systèmes complexes</a></li></ul></nav>
     <div class="article-body">
       <p>Cette dernière partie constitue l'un des niveaux les plus complexes de cette catégorie.</p>
 <p>Les concepts présentés ici ne correspondent plus simplement à des définitions isolées. Ils cherchent à expliquer <strong>comment plusieurs processus psychologiques peuvent fonctionner ensemble</strong>, comment ils se modifient mutuellement et pourquoi le fonctionnement humain ne peut généralement pas être réduit à une seule cause.</p>
@@ -1066,6 +1076,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -1247,47 +1277,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

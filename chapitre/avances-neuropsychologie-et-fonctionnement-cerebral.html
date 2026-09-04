@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#141-quest-ce-que-la-neuropsychologie">🧬 14.1 Qu'est-ce que la neuropsychologie ?</a></li><li><a href="#142-le-cerveau-comme-systeme">🧠 14.2 Le cerveau comme système</a></li><li><a href="#143-les-reseaux-cerebraux">🔗 14.3 Les réseaux cérébraux</a></li><li><a href="#144-la-specialisation-fonctionnelle">🧠 14.4 La spécialisation fonctionnelle</a></li><li><a href="#145-la-communication-entre-les-regions-cerebrales">🔄 14.5 La communication entre les régions cérébrales</a></li><li><a href="#146-les-neurones">⚡ 14.6 Les neurones</a></li><li><a href="#147-les-neurotransmetteurs">🧪 14.7 Les neurotransmetteurs</a></li><li><a href="#148-la-dopamine">🧠 14.8 La dopamine</a></li><li><a href="#149-la-serotonine">❤️ 14.9 La sérotonine</a></li><li><a href="#1410-la-noradrenaline">⚡ 14.10 La noradrénaline</a></li><li><a href="#1411-le-cortex-prefrontal">🧠 14.11 Le cortex préfrontal</a></li><li><a href="#1412-les-fonctions-executives-et-les-reseaux-frontaux">🧩 14.12 Les fonctions exécutives et les réseaux frontaux</a></li><li><a href="#1413-lhippocampe">🧠 14.13 L'hippocampe</a></li><li><a href="#1414-lamygdale">❤️ 14.14 L'amygdale</a></li><li><a href="#1415-le-systeme-limbique">🧠 14.15 Le système limbique</a></li><li><a href="#1416-les-systemes-sensoriels">👁️ 14.16 Les systèmes sensoriels</a></li><li><a href="#1417-la-perception-comme-construction-cerebrale">🧠 14.17 La perception comme construction cérébrale</a></li><li><a href="#1418-lattention">🧠 14.18 L'attention</a></li><li><a href="#1419-la-memoire">🔄 14.19 La mémoire</a></li><li><a href="#1420-le-langage">🗣️ 14.20 Le langage</a></li><li><a href="#1421-les-aphasies">🧠 14.21 Les aphasies</a></li><li><a href="#1422-la-prosopagnosie">👁️ 14.22 La prosopagnosie</a></li><li><a href="#1423-la-negligence-spatiale">🧭 14.23 La négligence spatiale</a></li><li><a href="#1424-le-syndrome-de-la-main-etrangere">✋ 14.24 Le syndrome de la main étrangère</a></li><li><a href="#1425-le-sentiment-dagentivite">🧠 14.25 Le sentiment d'agentivité</a></li><li><a href="#1426-le-sentiment-de-propriete-corporelle">🧍 14.26 Le sentiment de propriété corporelle</a></li><li><a href="#1427-la-conscience">🌌 14.27 La conscience</a></li><li><a href="#1428-le-soi-et-le-cerveau">🪞 14.28 Le soi et le cerveau</a></li><li><a href="#1429-le-cerveau-et-les-emotions">❤️ 14.29 Le cerveau et les émotions</a></li><li><a href="#1430-le-cerveau-et-le-corps">🫀 14.30 Le cerveau et le corps</a></li><li><a href="#1431-linteroception">🧠 14.31 L'interoception</a></li><li><a href="#1432-la-plasticite-cerebrale">🔄 14.32 La plasticité cérébrale</a></li><li><a href="#1433-la-plasticite-et-lapprentissage">🧠 14.33 La plasticité et l'apprentissage</a></li><li><a href="#1434-les-lesions-cerebrales">🩺 14.34 Les lésions cérébrales</a></li><li><a href="#1435-le-syndrome-de-korsakoff">🧠 14.35 Le syndrome de Korsakoff</a></li><li><a href="#1436-la-recuperation-apres-une-lesion">🧩 14.36 La récupération après une lésion</a></li><li><a href="#1437-comment-etudier-le-cerveau">🔬 14.37 Comment étudier le cerveau ?</a></li><li><a href="#1438-pourquoi-une-correlation-cerebrale-ne-prouve-pas-une-cause">🧠 14.38 Pourquoi une corrélation cérébrale ne prouve pas une cause ?</a></li><li><a href="#1439-le-cerveau-la-psychologie-et-lenvironnement">🧬 14.39 Le cerveau, la psychologie et l'environnement</a></li><li><a href="#1440-pourquoi-etudier-la-neuropsychologie-et-le-fonctionnement-cerebral">🌌 14.40 Pourquoi étudier la neuropsychologie et le fonctionnement cérébral ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -54,7 +65,6 @@
         <line x1="35" y1="98" x2="85" y2="98"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#141-quest-ce-que-la-neuropsychologie">🧬 14.1 Qu'est-ce que la neuropsychologie ?</a></li><li><a href="#142-le-cerveau-comme-systeme">🧠 14.2 Le cerveau comme système</a></li><li><a href="#143-les-reseaux-cerebraux">🔗 14.3 Les réseaux cérébraux</a></li><li><a href="#144-la-specialisation-fonctionnelle">🧠 14.4 La spécialisation fonctionnelle</a></li><li><a href="#145-la-communication-entre-les-regions-cerebrales">🔄 14.5 La communication entre les régions cérébrales</a></li><li><a href="#146-les-neurones">⚡ 14.6 Les neurones</a></li><li><a href="#147-les-neurotransmetteurs">🧪 14.7 Les neurotransmetteurs</a></li><li><a href="#148-la-dopamine">🧠 14.8 La dopamine</a></li><li><a href="#149-la-serotonine">❤️ 14.9 La sérotonine</a></li><li><a href="#1410-la-noradrenaline">⚡ 14.10 La noradrénaline</a></li><li><a href="#1411-le-cortex-prefrontal">🧠 14.11 Le cortex préfrontal</a></li><li><a href="#1412-les-fonctions-executives-et-les-reseaux-frontaux">🧩 14.12 Les fonctions exécutives et les réseaux frontaux</a></li><li><a href="#1413-lhippocampe">🧠 14.13 L'hippocampe</a></li><li><a href="#1414-lamygdale">❤️ 14.14 L'amygdale</a></li><li><a href="#1415-le-systeme-limbique">🧠 14.15 Le système limbique</a></li><li><a href="#1416-les-systemes-sensoriels">👁️ 14.16 Les systèmes sensoriels</a></li><li><a href="#1417-la-perception-comme-construction-cerebrale">🧠 14.17 La perception comme construction cérébrale</a></li><li><a href="#1418-lattention">🧠 14.18 L'attention</a></li><li><a href="#1419-la-memoire">🔄 14.19 La mémoire</a></li><li><a href="#1420-le-langage">🗣️ 14.20 Le langage</a></li><li><a href="#1421-les-aphasies">🧠 14.21 Les aphasies</a></li><li><a href="#1422-la-prosopagnosie">👁️ 14.22 La prosopagnosie</a></li><li><a href="#1423-la-negligence-spatiale">🧭 14.23 La négligence spatiale</a></li><li><a href="#1424-le-syndrome-de-la-main-etrangere">✋ 14.24 Le syndrome de la main étrangère</a></li><li><a href="#1425-le-sentiment-dagentivite">🧠 14.25 Le sentiment d'agentivité</a></li><li><a href="#1426-le-sentiment-de-propriete-corporelle">🧍 14.26 Le sentiment de propriété corporelle</a></li><li><a href="#1427-la-conscience">🌌 14.27 La conscience</a></li><li><a href="#1428-le-soi-et-le-cerveau">🪞 14.28 Le soi et le cerveau</a></li><li><a href="#1429-le-cerveau-et-les-emotions">❤️ 14.29 Le cerveau et les émotions</a></li><li><a href="#1430-le-cerveau-et-le-corps">🫀 14.30 Le cerveau et le corps</a></li><li><a href="#1431-linteroception">🧠 14.31 L'interoception</a></li><li><a href="#1432-la-plasticite-cerebrale">🔄 14.32 La plasticité cérébrale</a></li><li><a href="#1433-la-plasticite-et-lapprentissage">🧠 14.33 La plasticité et l'apprentissage</a></li><li><a href="#1434-les-lesions-cerebrales">🩺 14.34 Les lésions cérébrales</a></li><li><a href="#1435-le-syndrome-de-korsakoff">🧠 14.35 Le syndrome de Korsakoff</a></li><li><a href="#1436-la-recuperation-apres-une-lesion">🧩 14.36 La récupération après une lésion</a></li><li><a href="#1437-comment-etudier-le-cerveau">🔬 14.37 Comment étudier le cerveau ?</a></li><li><a href="#1438-pourquoi-une-correlation-cerebrale-ne-prouve-pas-une-cause">🧠 14.38 Pourquoi une corrélation cérébrale ne prouve pas une cause ?</a></li><li><a href="#1439-le-cerveau-la-psychologie-et-lenvironnement">🧬 14.39 Le cerveau, la psychologie et l'environnement</a></li><li><a href="#1440-pourquoi-etudier-la-neuropsychologie-et-le-fonctionnement-cerebral">🌌 14.40 Pourquoi étudier la neuropsychologie et le fonctionnement cérébral ?</a></li></ul></nav>
     <div class="article-body">
       <p>La neuropsychologie étudie les relations entre le fonctionnement du cerveau et les fonctions psychologiques.</p>
 <p>Elle cherche notamment à comprendre comment les systèmes cérébraux participent à :</p>
@@ -709,6 +719,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -890,47 +920,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#31-une-histoire-differente-des-precedentes">🧠 3.1 Une histoire différente des précédentes</a></li><li><a href="#32-tout-commence-pendant-lenfance">🧒 3.2 Tout commence pendant l'enfance</a></li><li><a href="#33-le-souvenir-ne-disparait-pas-forcement">🧠 3.3 Le souvenir ne disparaît pas forcément</a></li><li><a href="#34-quand-le-passe-continue-a-influencer-le-present">🌪️ 3.4 Quand le passé continue à influencer le présent</a></li><li><a href="#35-le-cas-etudie-par-les-chercheurs">🔎 3.5 Le cas étudié par les chercheurs</a></li><li><a href="#36-pourquoi-travailler-sur-un-evenement-vieux-de-plusieurs-decennies">🧩 3.6 Pourquoi travailler sur un événement vieux de plusieurs décennies ?</a></li><li><a href="#37-la-memoire-traumatique-nest-pas-une-video">🧠 3.7 La mémoire traumatique n'est pas une vidéo</a></li><li><a href="#38-le-role-des-emotions">❤️ 3.8 Le rôle des émotions</a></li><li><a href="#39-hypervigilance">👁️ 3.9 Hypervigilance</a></li><li><a href="#310-le-cerveau-apprend-a-se-proteger">🧠 3.10 Le cerveau apprend à se protéger</a></li><li><a href="#311-levitement">🔄 3.11 L'évitement</a></li><li><a href="#312-pourquoi-levitement-peut-maintenir-la-peur">🧩 3.12 Pourquoi l'évitement peut maintenir la peur</a></li><li><a href="#313-la-concentration-peut-elle-aussi-etre-affectee">🧠 3.13 La concentration peut elle aussi être affectée</a></li><li><a href="#314-quand-le-systeme-dalerte-devient-couteux">🌪️ 3.14 Quand le système d'alerte devient coûteux</a></li><li><a href="#315-le-debut-du-travail-therapeutique">🧠 3.15 Le début du travail thérapeutique</a></li><li><a href="#316-lemdr">👁️ 3.16 L'EMDR</a></li><li><a href="#317-se-souvenir-sans-etre-replonge-dans-le-danger">🧩 3.17 Se souvenir sans être replongé dans le danger</a></li><li><a href="#318-le-role-du-retraitement">🔄 3.18 Le rôle du retraitement</a></li><li><a href="#319-une-histoire-qui-montre-que-le-cerveau-nest-pas-fige">🧠 3.19 Une histoire qui montre que le cerveau n'est pas figé</a></li><li><a href="#320-le-changement-nest-pas-un-effacement">🌱 3.20 Le changement n'est pas un effacement</a></li><li><a href="#321-le-cas-etudie-rapporte-des-changements-importants">🧠 3.21 Le cas étudié rapporte des changements importants</a></li><li><a href="#322-une-etude-de-cas-nest-pas-une-preuve-universelle">⚠️ 3.22 Une étude de cas n'est pas une preuve universelle</a></li><li><a href="#323-pourquoi-les-etudes-de-cas-restent-importantes">🔬 3.23 Pourquoi les études de cas restent importantes</a></li><li><a href="#324-le-traumatisme-nexplique-jamais-tout">🧩 3.24 Le traumatisme n'explique jamais tout</a></li><li><a href="#325-le-modele-biopsychosocial">🧠 3.25 Le modèle biopsychosocial</a><ul class="sidebar-sublist"><li><a href="#dimension-biologique">🧬 Dimension biologique</a></li><li><a href="#dimension-psychologique">🧠 Dimension psychologique</a></li><li><a href="#dimension-sociale">👥 Dimension sociale</a></li></ul></li><li><a href="#326-le-passe-influence-le-present-mais-le-present-influence-aussi-le-passe-psychologique">🔄 3.26 Le passé influence le présent, mais le présent influence aussi le passé psychologique</a></li><li><a href="#327-une-nouvelle-relation-avec-le-souvenir">🪞 3.27 Une nouvelle relation avec le souvenir</a></li><li><a href="#328-pourquoi-cette-histoire-est-importante">🌱 3.28 Pourquoi cette histoire est importante</a></li><li><a href="#329-le-cerveau-apprend-dans-les-deux-sens">🧠 3.29 Le cerveau apprend dans les deux sens</a></li><li><a href="#330-le-concept-dextinction">🔬 3.30 Le concept d'extinction</a></li><li><a href="#331-la-recuperation-nest-pas-toujours-lineaire">🧠 3.31 La récupération n'est pas toujours linéaire</a></li><li><a href="#332-pourquoi-certaines-personnes-recuperent-differemment">🌊 3.32 Pourquoi certaines personnes récupèrent différemment</a></li><li><a href="#333-la-resilience">🧩 3.33 La résilience</a></li><li><a href="#334-se-reconstruire-ne-signifie-pas-devenir-la-personne-davant">❤️ 3.34 Se reconstruire ne signifie pas devenir la personne d'avant</a></li><li><a href="#335-le-role-de-lidentite">🧠 3.35 Le rôle de l'identité</a></li><li><a href="#336-lhistoire-personnelle-comme-recit">🪞 3.36 L'histoire personnelle comme récit</a></li><li><a href="#337-une-histoire-ne-doit-pas-devenir-une-identite-entiere">🌱 3.37 Une histoire ne doit pas devenir une identité entière</a></li><li><a href="#338-ce-que-cette-histoire-montre-sur-la-psychotherapie">🔬 3.38 Ce que cette histoire montre sur la psychothérapie</a></li><li><a href="#339-ce-que-lon-peut-reellement-conclure">🧠 3.39 Ce que l'on peut réellement conclure</a></li><li><a href="#340-pourquoi-cette-histoire-est-importante-pour-la-psychologie">🌌 3.40 Pourquoi cette histoire est importante pour la psychologie</a></li><li><a href="#341-une-difference-fondamentale-avec-loubli">🔄 3.41 Une différence fondamentale avec l'oubli</a></li><li><a href="#342-le-cerveau-peut-apprendre-la-securite">🧠 3.42 Le cerveau peut apprendre la sécurité</a></li><li><a href="#343-le-changement-psychologique-peut-etre-progressif">🌱 3.43 Le changement psychologique peut être progressif</a></li><li><a href="#344-ce-que-cette-histoire-ne-promet-pas">❤️ 3.44 Ce que cette histoire ne promet pas</a></li><li><a href="#345-ce-que-lhistoire-montre-reellement">🧠 3.45 Ce que l'histoire montre réellement</a></li><li><a href="#346-une-derniere-reflexion">🌌 3.46 Une dernière réflexion</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#31-une-histoire-differente-des-precedentes">🧠 3.1 Une histoire différente des précédentes</a></li><li><a href="#32-tout-commence-pendant-lenfance">🧒 3.2 Tout commence pendant l'enfance</a></li><li><a href="#33-le-souvenir-ne-disparait-pas-forcement">🧠 3.3 Le souvenir ne disparaît pas forcément</a></li><li><a href="#34-quand-le-passe-continue-a-influencer-le-present">🌪️ 3.4 Quand le passé continue à influencer le présent</a></li><li><a href="#35-le-cas-etudie-par-les-chercheurs">🔎 3.5 Le cas étudié par les chercheurs</a></li><li><a href="#36-pourquoi-travailler-sur-un-evenement-vieux-de-plusieurs-decennies">🧩 3.6 Pourquoi travailler sur un événement vieux de plusieurs décennies ?</a></li><li><a href="#37-la-memoire-traumatique-nest-pas-une-video">🧠 3.7 La mémoire traumatique n'est pas une vidéo</a></li><li><a href="#38-le-role-des-emotions">❤️ 3.8 Le rôle des émotions</a></li><li><a href="#39-hypervigilance">👁️ 3.9 Hypervigilance</a></li><li><a href="#310-le-cerveau-apprend-a-se-proteger">🧠 3.10 Le cerveau apprend à se protéger</a></li><li><a href="#311-levitement">🔄 3.11 L'évitement</a></li><li><a href="#312-pourquoi-levitement-peut-maintenir-la-peur">🧩 3.12 Pourquoi l'évitement peut maintenir la peur</a></li><li><a href="#313-la-concentration-peut-elle-aussi-etre-affectee">🧠 3.13 La concentration peut elle aussi être affectée</a></li><li><a href="#314-quand-le-systeme-dalerte-devient-couteux">🌪️ 3.14 Quand le système d'alerte devient coûteux</a></li><li><a href="#315-le-debut-du-travail-therapeutique">🧠 3.15 Le début du travail thérapeutique</a></li><li><a href="#316-lemdr">👁️ 3.16 L'EMDR</a></li><li><a href="#317-se-souvenir-sans-etre-replonge-dans-le-danger">🧩 3.17 Se souvenir sans être replongé dans le danger</a></li><li><a href="#318-le-role-du-retraitement">🔄 3.18 Le rôle du retraitement</a></li><li><a href="#319-une-histoire-qui-montre-que-le-cerveau-nest-pas-fige">🧠 3.19 Une histoire qui montre que le cerveau n'est pas figé</a></li><li><a href="#320-le-changement-nest-pas-un-effacement">🌱 3.20 Le changement n'est pas un effacement</a></li><li><a href="#321-le-cas-etudie-rapporte-des-changements-importants">🧠 3.21 Le cas étudié rapporte des changements importants</a></li><li><a href="#322-une-etude-de-cas-nest-pas-une-preuve-universelle">⚠️ 3.22 Une étude de cas n'est pas une preuve universelle</a></li><li><a href="#323-pourquoi-les-etudes-de-cas-restent-importantes">🔬 3.23 Pourquoi les études de cas restent importantes</a></li><li><a href="#324-le-traumatisme-nexplique-jamais-tout">🧩 3.24 Le traumatisme n'explique jamais tout</a></li><li><a href="#325-le-modele-biopsychosocial">🧠 3.25 Le modèle biopsychosocial</a></li><li><a href="#326-le-passe-influence-le-present-mais-le-present-influence-aussi-le-passe-psychologique">🔄 3.26 Le passé influence le présent, mais le présent influence aussi le passé psychologique</a></li><li><a href="#327-une-nouvelle-relation-avec-le-souvenir">🪞 3.27 Une nouvelle relation avec le souvenir</a></li><li><a href="#328-pourquoi-cette-histoire-est-importante">🌱 3.28 Pourquoi cette histoire est importante</a></li><li><a href="#329-le-cerveau-apprend-dans-les-deux-sens">🧠 3.29 Le cerveau apprend dans les deux sens</a></li><li><a href="#330-le-concept-dextinction">🔬 3.30 Le concept d'extinction</a></li><li><a href="#331-la-recuperation-nest-pas-toujours-lineaire">🧠 3.31 La récupération n'est pas toujours linéaire</a></li><li><a href="#332-pourquoi-certaines-personnes-recuperent-differemment">🌊 3.32 Pourquoi certaines personnes récupèrent différemment</a></li><li><a href="#333-la-resilience">🧩 3.33 La résilience</a></li><li><a href="#334-se-reconstruire-ne-signifie-pas-devenir-la-personne-davant">❤️ 3.34 Se reconstruire ne signifie pas devenir la personne d'avant</a></li><li><a href="#335-le-role-de-lidentite">🧠 3.35 Le rôle de l'identité</a></li><li><a href="#336-lhistoire-personnelle-comme-recit">🪞 3.36 L'histoire personnelle comme récit</a></li><li><a href="#337-une-histoire-ne-doit-pas-devenir-une-identite-entiere">🌱 3.37 Une histoire ne doit pas devenir une identité entière</a></li><li><a href="#338-ce-que-cette-histoire-montre-sur-la-psychotherapie">🔬 3.38 Ce que cette histoire montre sur la psychothérapie</a></li><li><a href="#339-ce-que-lon-peut-reellement-conclure">🧠 3.39 Ce que l'on peut réellement conclure</a></li><li><a href="#340-pourquoi-cette-histoire-est-importante-pour-la-psychologie">🌌 3.40 Pourquoi cette histoire est importante pour la psychologie</a></li><li><a href="#341-une-difference-fondamentale-avec-loubli">🔄 3.41 Une différence fondamentale avec l'oubli</a></li><li><a href="#342-le-cerveau-peut-apprendre-la-securite">🧠 3.42 Le cerveau peut apprendre la sécurité</a></li><li><a href="#343-le-changement-psychologique-peut-etre-progressif">🌱 3.43 Le changement psychologique peut être progressif</a></li><li><a href="#344-ce-que-cette-histoire-ne-promet-pas">❤️ 3.44 Ce que cette histoire ne promet pas</a></li><li><a href="#345-ce-que-lhistoire-montre-reellement">🧠 3.45 Ce que l'histoire montre réellement</a></li><li><a href="#346-une-derniere-reflexion">🌌 3.46 Une dernière réflexion</a></li></ul></nav>
     <div class="article-body">
       <p>Une histoire vraie de traumatisme, de mémoire et de reconstruction psychologique</p>
 <blockquote>
@@ -854,6 +864,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -1035,47 +1065,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

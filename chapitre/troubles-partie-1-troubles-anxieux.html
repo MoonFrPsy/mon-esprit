@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#1-le-trouble-anxieux-generalise-tag">🧠 1. Le trouble anxieux généralisé (TAG)</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#comprendre-le-tag">🔎 Comprendre le TAG</a></li><li><a href="#manifestations-psychologiques">🧠 Manifestations psychologiques</a></li><li><a href="#manifestations-physiques">⚡ Manifestations physiques</a></li><li><a href="#manifestations-comportementales">🎯 Manifestations comportementales</a></li><li><a href="#des-degres-differents">🌗 Des degrés différents</a></li><li><a href="#causes-et-facteurs-de-risque">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-qui-vit-avec-un-tag">🤝 Comment aider un proche qui vit avec un TAG</a></li><li><a href="#techniques-et-prise-en-charge">🛠️ Techniques et prise en charge</a></li><li><a href="#idees-recues">❌ Idées reçues</a></li><li><a href="#exemple-fictif-illustratif">📝 Exemple fictif (illustratif)</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#12-le-trouble-panique">🧠 1.2 Le trouble panique</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#quest-ce-quune-attaque-de-panique">⚡ Qu'est-ce qu'une attaque de panique ?</a></li><li><a href="#manifestations-psychologiques_1">🧠 Manifestations psychologiques</a></li><li><a href="#manifestations-physiques_1">❤️ Manifestations physiques</a></li><li><a href="#le-mecanisme-de-la-panique">🔄 Le mécanisme de la panique</a></li><li><a href="#peur-davoir-peur">😰 Peur d'avoir peur</a></li><li><a href="#changements-comportementaux">🚪 Changements comportementaux</a></li><li><a href="#relation-avec-lagoraphobie">🔗 Relation avec l'agoraphobie</a></li><li><a href="#causes-et-facteurs-de-risque_1">🧬 Causes et facteurs de risque</a></li><li><a href="#declencheurs-possibles">🧪 Déclencheurs possibles</a></li><li><a href="#evolution_1">📈 Évolution</a></li><li><a href="#consequences-sur-la-vie-quotidienne">🌍 Conséquences sur la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes_1">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#que-faire-pendant-une-attaque-de-panique">🆘 Que faire pendant une attaque de panique</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#comment-aider-un-proche-pendant-ou-apres-une-attaque">🤝 Comment aider un proche pendant ou après une attaque</a></li><li><a href="#idees-recues_1">❌ Idées reçues</a></li><li><a href="#exemple-fictif">📝 Exemple fictif</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#13-lagoraphobie">🧠 1.3 L'agoraphobie</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations-psychologiques_2">Manifestations psychologiques</a></li><li><a href="#manifestations-physiques_2">Manifestations physiques</a></li><li><a href="#evitement">Évitement</a></li><li><a href="#causes-et-facteurs-de-risque_2">Causes et facteurs de risque</a></li><li><a href="#evolution_2">Évolution</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#comment-aider-un-proche-agoraphobe">🤝 Comment aider un proche agoraphobe</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#14-le-trouble-danxiete-sociale">🧠 1.4 Le trouble d'anxiété sociale</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#situations-concernees">Situations concernées</a></li><li><a href="#manifestations-psychologiques_3">Manifestations psychologiques</a></li><li><a href="#manifestations-physiques_3">Manifestations physiques</a></li><li><a href="#comportements-devitement">Comportements d'évitement</a></li><li><a href="#causes-et-facteurs-de-risque_3">Causes et facteurs de risque</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#comment-aider-un-proche-anxieux-socialement">🤝 Comment aider un proche anxieux socialement</a></li><li><a href="#idees-recues_2">Idées reçues</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#15-les-phobies-specifiques">🧠 1.5 Les phobies spécifiques</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#reaction-phobique">Réaction phobique</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#developpement">Développement</a></li><li><a href="#evitement_1">Évitement</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#comment-aider-un-proche-phobique">🤝 Comment aider un proche phobique</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#16-le-trouble-danxiete-de-separation">🧠 1.6 Le trouble d’anxiété de séparation</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations-psychologiques_4">Manifestations psychologiques</a></li><li><a href="#manifestations-comportementales_1">Manifestations comportementales</a></li><li><a href="#manifestations-physiques_4">Manifestations physiques</a></li><li><a href="#causes-et-facteurs-de-risque_4">Causes et facteurs de risque</a></li><li><a href="#evolution_3">Évolution</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#comment-aider-un-proche-notamment-un-enfant-avec-ce-trouble">🤝 Comment aider un proche (notamment un enfant) avec ce trouble</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#17-le-mutisme-selectif">🧠 1.7 Le mutisme sélectif</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#manifestations-emotionnelles">Manifestations émotionnelles</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#causes">Causes</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#comment-aider-un-enfant-avec-un-mutisme-selectif">🤝 Comment aider un enfant avec un mutisme sélectif</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#18-les-troubles-anxieux-induits-par-une-substance-ou-un-medicament">🧠 1.8 Les troubles anxieux induits par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#substances-et-medicaments">Substances et médicaments</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#evolution_4">Évolution</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#19-le-trouble-anxieux-du-a-une-autre-affection-medicale">🧠 1.9 Le trouble anxieux dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#importance-du-diagnostic-differentiel">Importance du diagnostic différentiel</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#110-le-trouble-anxieux-specifie">🧠 1.10 Le trouble anxieux spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#pourquoi-cette-categorie-existe-t-elle">Pourquoi cette catégorie existe-t-elle ?</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#diagnostic_6">Diagnostic</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#111-le-trouble-anxieux-non-specifie">🧠 1.11 Le trouble anxieux non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#difference-avec-le-trouble-anxieux-specifie">Différence avec le trouble anxieux spécifié</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#diagnostic_7">Diagnostic</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#112-lanxiete-liee-a-des-situations-particulieres">🧠 1.12 L'anxiété liée à des situations particulières</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#reaction-normale-ou-trouble">Réaction normale ou trouble ?</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#113-les-attaques-de-panique-comme-phenomene-associe">🧠 1.13 Les attaques de panique comme phénomène associé</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#declencheur">Déclencheur</a></li><li><a href="#apres-lattaque">Après l'attaque</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#114-lanxiete-anticipatoire">🧠 1.14 L'anxiété anticipatoire</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#role-de-lanticipation">Rôle de l'anticipation</a></li><li><a href="#reduire-lanxiete-anticipatoire">🛠️ Réduire l'anxiété anticipatoire</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#115-lanxiete-et-levitement">🧠 1.15 L'anxiété et l'évitement</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#pourquoi-levitement-apparait-il">Pourquoi l'évitement apparaît-il ?</a></li><li><a href="#differentes-formes-devitement">Différentes formes d'évitement</a></li><li><a href="#consequences_2">Conséquences</a></li><li><a href="#prise-en-charge_9">Prise en charge</a></li><li><a href="#reduire-levitement-un-pas-a-la-fois">🛠️ Réduire l'évitement, un pas à la fois</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -48,7 +59,6 @@
         <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#1-le-trouble-anxieux-generalise-tag">🧠 1. Le trouble anxieux généralisé (TAG)</a></li><li><a href="#12-le-trouble-panique">🧠 1.2 Le trouble panique</a></li><li><a href="#13-lagoraphobie">🧠 1.3 L'agoraphobie</a></li><li><a href="#14-le-trouble-danxiete-sociale">🧠 1.4 Le trouble d'anxiété sociale</a></li><li><a href="#15-les-phobies-specifiques">🧠 1.5 Les phobies spécifiques</a></li><li><a href="#16-le-trouble-danxiete-de-separation">🧠 1.6 Le trouble d’anxiété de séparation</a></li><li><a href="#17-le-mutisme-selectif">🧠 1.7 Le mutisme sélectif</a></li><li><a href="#18-les-troubles-anxieux-induits-par-une-substance-ou-un-medicament">🧠 1.8 Les troubles anxieux induits par une substance ou un médicament</a></li><li><a href="#19-le-trouble-anxieux-du-a-une-autre-affection-medicale">🧠 1.9 Le trouble anxieux dû à une autre affection médicale</a></li><li><a href="#110-le-trouble-anxieux-specifie">🧠 1.10 Le trouble anxieux spécifié</a></li><li><a href="#111-le-trouble-anxieux-non-specifie">🧠 1.11 Le trouble anxieux non spécifié</a></li><li><a href="#112-lanxiete-liee-a-des-situations-particulieres">🧠 1.12 L'anxiété liée à des situations particulières</a></li><li><a href="#113-les-attaques-de-panique-comme-phenomene-associe">🧠 1.13 Les attaques de panique comme phénomène associé</a></li><li><a href="#114-lanxiete-anticipatoire">🧠 1.14 L'anxiété anticipatoire</a></li><li><a href="#115-lanxiete-et-levitement">🧠 1.15 L'anxiété et l'évitement</a></li></ul></nav>
     <div class="article-body">
       <h1 id="1-le-trouble-anxieux-generalise-tag" class="entry-title hc-1">🧠 1. Le trouble anxieux généralisé (TAG)</h1>
 <h2 id="definition">Définition</h2>
@@ -1162,6 +1172,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -1343,47 +1373,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

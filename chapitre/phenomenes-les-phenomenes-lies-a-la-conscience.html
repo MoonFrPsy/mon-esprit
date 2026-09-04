@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#61-la-conscience">🔎 6.1 La conscience</a></li><li><a href="#62-letat-de-conscience">🌅 6.2 L'état de conscience</a></li><li><a href="#63-leveil">⚡ 6.3 L'éveil</a></li><li><a href="#64-la-conscience-de-soi">🧠 6.4 La conscience de soi</a></li><li><a href="#65-lintrospection">🪞 6.5 L'introspection</a></li><li><a href="#66-la-metaconscience">🔍 6.6 La métaconscience</a></li><li><a href="#67-la-conscience-des-pensees">💭 6.7 La conscience des pensées</a></li><li><a href="#68-le-flux-de-conscience">🌊 6.8 Le flux de conscience</a></li><li><a href="#69-le-traitement-conscient">🧩 6.9 Le traitement conscient</a></li><li><a href="#610-le-traitement-inconscient">⚙️ 6.10 Le traitement inconscient</a></li><li><a href="#611-lacces-conscient">🚪 6.11 L'accès conscient</a></li><li><a href="#612-la-conscience-perceptive">👁️ 6.12 La conscience perceptive</a></li><li><a href="#613-la-perception-subliminale">🧠 6.13 La perception subliminale</a></li><li><a href="#614-lexperience-subjective">🌫️ 6.14 L'expérience subjective</a></li><li><a href="#615-le-sentiment-dexister">🧍 6.15 Le sentiment d'exister</a></li><li><a href="#616-le-sentiment-detre-soi">🪞 6.16 Le sentiment d'être soi</a></li><li><a href="#617-la-continuite-de-la-conscience">🧠 6.17 La continuité de la conscience</a></li><li><a href="#618-la-conscience-du-temps">⏳ 6.18 La conscience du temps</a></li><li><a href="#619-les-changements-de-conscience-lies-au-sommeil">😴 6.19 Les changements de conscience liés au sommeil</a></li><li><a href="#620-la-conscience-pendant-les-reves">🌙 6.20 La conscience pendant les rêves</a></li><li><a href="#621-le-reve-lucide">✨ 6.21 Le rêve lucide</a></li><li><a href="#622-les-etats-modifies-de-conscience">🧘 6.22 Les états modifiés de conscience</a></li><li><a href="#623-lhypnose">🌀 6.23 L'hypnose</a></li><li><a href="#624-la-meditation-et-la-conscience">🌿 6.24 La méditation et la conscience</a></li><li><a href="#625-la-dissociation">🧩 6.25 La dissociation</a></li><li><a href="#626-la-depersonnalisation">🌫️ 6.26 La dépersonnalisation</a></li><li><a href="#627-la-derealisation">🌍 6.27 La déréalisation</a></li><li><a href="#628-la-conscience-peripherique">👁️ 6.28 La conscience périphérique</a></li><li><a href="#629-le-projecteur-de-la-conscience">🎯 6.29 Le projecteur de la conscience</a></li><li><a href="#630-les-changements-spontanes-du-contenu-conscient">🔄 6.30 Les changements spontanés du contenu conscient</a></li><li><a href="#631-lerrance-mentale-consciente">💭 6.31 L'errance mentale consciente</a></li><li><a href="#632-la-conscience-reflexive">🧠 6.32 La conscience réflexive</a></li><li><a href="#633-le-niveau-de-conscience">🔬 6.33 Le niveau de conscience</a></li><li><a href="#634-la-conscience-et-la-memoire">🧠 6.34 La conscience et la mémoire</a></li><li><a href="#635-la-conscience-et-les-emotions">❤️ 6.35 La conscience et les émotions</a></li><li><a href="#636-la-conscience-et-lattention">🧩 6.36 La conscience et l'attention</a></li><li><a href="#637-la-conscience-corporelle">🪞 6.37 La conscience corporelle</a></li><li><a href="#638-la-conscience-et-lidentite">🧠 6.38 La conscience et l'identité</a></li><li><a href="#639-pourquoi-la-conscience-est-elle-difficile-a-etudier">🔬 6.39 Pourquoi la conscience est-elle difficile à étudier ?</a></li><li><a href="#640-pourquoi-etudier-les-phenomenes-de-conscience">📚 6.40 Pourquoi étudier les phénomènes de conscience ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -49,7 +60,6 @@
         <line x1="116" y1="60" x2="105" y2="60"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#61-la-conscience">🔎 6.1 La conscience</a></li><li><a href="#62-letat-de-conscience">🌅 6.2 L'état de conscience</a></li><li><a href="#63-leveil">⚡ 6.3 L'éveil</a></li><li><a href="#64-la-conscience-de-soi">🧠 6.4 La conscience de soi</a></li><li><a href="#65-lintrospection">🪞 6.5 L'introspection</a></li><li><a href="#66-la-metaconscience">🔍 6.6 La métaconscience</a></li><li><a href="#67-la-conscience-des-pensees">💭 6.7 La conscience des pensées</a></li><li><a href="#68-le-flux-de-conscience">🌊 6.8 Le flux de conscience</a></li><li><a href="#69-le-traitement-conscient">🧩 6.9 Le traitement conscient</a></li><li><a href="#610-le-traitement-inconscient">⚙️ 6.10 Le traitement inconscient</a></li><li><a href="#611-lacces-conscient">🚪 6.11 L'accès conscient</a></li><li><a href="#612-la-conscience-perceptive">👁️ 6.12 La conscience perceptive</a></li><li><a href="#613-la-perception-subliminale">🧠 6.13 La perception subliminale</a></li><li><a href="#614-lexperience-subjective">🌫️ 6.14 L'expérience subjective</a></li><li><a href="#615-le-sentiment-dexister">🧍 6.15 Le sentiment d'exister</a></li><li><a href="#616-le-sentiment-detre-soi">🪞 6.16 Le sentiment d'être soi</a></li><li><a href="#617-la-continuite-de-la-conscience">🧠 6.17 La continuité de la conscience</a></li><li><a href="#618-la-conscience-du-temps">⏳ 6.18 La conscience du temps</a></li><li><a href="#619-les-changements-de-conscience-lies-au-sommeil">😴 6.19 Les changements de conscience liés au sommeil</a></li><li><a href="#620-la-conscience-pendant-les-reves">🌙 6.20 La conscience pendant les rêves</a></li><li><a href="#621-le-reve-lucide">✨ 6.21 Le rêve lucide</a></li><li><a href="#622-les-etats-modifies-de-conscience">🧘 6.22 Les états modifiés de conscience</a></li><li><a href="#623-lhypnose">🌀 6.23 L'hypnose</a></li><li><a href="#624-la-meditation-et-la-conscience">🌿 6.24 La méditation et la conscience</a></li><li><a href="#625-la-dissociation">🧩 6.25 La dissociation</a></li><li><a href="#626-la-depersonnalisation">🌫️ 6.26 La dépersonnalisation</a></li><li><a href="#627-la-derealisation">🌍 6.27 La déréalisation</a></li><li><a href="#628-la-conscience-peripherique">👁️ 6.28 La conscience périphérique</a></li><li><a href="#629-le-projecteur-de-la-conscience">🎯 6.29 Le projecteur de la conscience</a></li><li><a href="#630-les-changements-spontanes-du-contenu-conscient">🔄 6.30 Les changements spontanés du contenu conscient</a></li><li><a href="#631-lerrance-mentale-consciente">💭 6.31 L'errance mentale consciente</a></li><li><a href="#632-la-conscience-reflexive">🧠 6.32 La conscience réflexive</a></li><li><a href="#633-le-niveau-de-conscience">🔬 6.33 Le niveau de conscience</a></li><li><a href="#634-la-conscience-et-la-memoire">🧠 6.34 La conscience et la mémoire</a></li><li><a href="#635-la-conscience-et-les-emotions">❤️ 6.35 La conscience et les émotions</a></li><li><a href="#636-la-conscience-et-lattention">🧩 6.36 La conscience et l'attention</a></li><li><a href="#637-la-conscience-corporelle">🪞 6.37 La conscience corporelle</a></li><li><a href="#638-la-conscience-et-lidentite">🧠 6.38 La conscience et l'identité</a></li><li><a href="#639-pourquoi-la-conscience-est-elle-difficile-a-etudier">🔬 6.39 Pourquoi la conscience est-elle difficile à étudier ?</a></li><li><a href="#640-pourquoi-etudier-les-phenomenes-de-conscience">📚 6.40 Pourquoi étudier les phénomènes de conscience ?</a></li></ul></nav>
     <div class="article-body">
       <blockquote>
 <p>La conscience désigne l’ensemble des phénomènes permettant d’avoir une expérience subjective, de percevoir son environnement, de ressentir son propre état interne et, dans certaines situations, de réfléchir à ses propres pensées.</p>
@@ -572,6 +582,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -753,47 +783,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

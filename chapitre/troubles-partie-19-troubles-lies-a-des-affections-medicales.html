@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#191-quest-ce-quun-trouble-mental-du-a-une-affection-medicale">🧠 19.1 Qu'est-ce qu'un trouble mental dû à une affection médicale ?</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#192-le-lien-entre-cerveau-et-corps">🧠 19.2 Le lien entre cerveau et corps</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#193-les-symptomes-psychiatriques-secondaires">🧠 19.3 Les symptômes psychiatriques secondaires</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#194-le-trouble-neurocognitif-du-a-une-affection-medicale">🧠 19.4 Le trouble neurocognitif dû à une affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#fonctions-pouvant-etre-touchees">Fonctions pouvant être touchées</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#195-les-maladies-neurologiques">🧠 19.5 Les maladies neurologiques</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#exemples_1">Exemples</a></li></ul></li><li><a href="#196-les-traumatismes-cerebraux">🧠 19.6 Les traumatismes cérébraux</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#consequences-possibles">Conséquences possibles</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#197-laccident-vasculaire-cerebral">🧠 19.7 L'accident vasculaire cérébral</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#consequences-psychologiques-possibles">Conséquences psychologiques possibles</a></li></ul></li><li><a href="#198-lepilepsie-et-la-psychologie">🧠 19.8 L'épilepsie et la psychologie</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#consequences-possibles_1">Conséquences possibles</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#199-la-maladie-de-parkinson">🧠 19.9 La maladie de Parkinson</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations-psychologiques-possibles">Manifestations psychologiques possibles</a></li></ul></li><li><a href="#1910-la-sclerose-en-plaques">🧠 19.10 La sclérose en plaques</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#consequences-psychologiques-possibles_1">Conséquences psychologiques possibles</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#1911-les-maladies-endocriniennes">🧠 19.11 Les maladies endocriniennes</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#exemples_2">Exemples</a></li><li><a href="#consequences-psychologiques-possibles_2">Conséquences psychologiques possibles</a></li></ul></li><li><a href="#1912-les-troubles-de-la-thyroide">🧠 19.12 Les troubles de la thyroïde</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#consequences-possibles_2">Conséquences possibles</a></li></ul></li><li><a href="#1913-les-maladies-auto-immunes">🧠 19.13 Les maladies auto-immunes</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#consequences-psychologiques-possibles_3">Conséquences psychologiques possibles</a></li></ul></li><li><a href="#1914-les-maladies-chroniques">🧠 19.14 Les maladies chroniques</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#impact-psychologique">Impact psychologique</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#1915-la-douleur-chronique">🧠 19.15 La douleur chronique</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#consequences-psychologiques-possibles_4">Conséquences psychologiques possibles</a></li></ul></li><li><a href="#1916-les-maladies-cardiovasculaires">🧠 19.16 Les maladies cardiovasculaires</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#consequences-psychologiques-possibles_5">Conséquences psychologiques possibles</a></li></ul></li><li><a href="#1917-les-maladies-respiratoires">🧠 19.17 Les maladies respiratoires</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li></ul></li><li><a href="#1918-les-maladies-metaboliques">🧠 19.18 Les maladies métaboliques</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#consequences-possibles_3">Conséquences possibles</a></li></ul></li><li><a href="#1919-le-diabete-et-la-sante-mentale">🧠 19.19 Le diabète et la santé mentale</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#consequences-psychologiques-possibles_6">Conséquences psychologiques possibles</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1920-les-maladies-infectieuses">🧠 19.20 Les maladies infectieuses</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#manifestations-possibles_2">Manifestations possibles</a></li></ul></li><li><a href="#1921-les-infections-touchant-le-cerveau">🧠 19.21 Les infections touchant le cerveau</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#consequences-possibles_4">Conséquences possibles</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1922-les-troubles-hormonaux-et-lhumeur">🧠 19.22 Les troubles hormonaux et l'humeur</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations-possibles_3">Manifestations possibles</a></li></ul></li><li><a href="#1923-les-troubles-neurologiques-et-la-personnalite">🧠 19.23 Les troubles neurologiques et la personnalité</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1924-les-changements-de-comportement-dus-a-une-affection-medicale">🧠 19.24 Les changements de comportement dus à une affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#exemples_3">Exemples</a></li></ul></li><li><a href="#1925-lapathie">🧠 19.25 L'apathie</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1926-la-desinhibition">🧠 19.26 La désinhibition</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#manifestations-possibles_4">Manifestations possibles</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1927-les-troubles-de-lhumeur-secondaires">🧠 19.27 Les troubles de l'humeur secondaires</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1928-les-symptomes-depressifs-secondaires">🧠 19.28 Les symptômes dépressifs secondaires</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1929-les-symptomes-anxieux-secondaires">🧠 19.29 Les symptômes anxieux secondaires</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li></ul></li><li><a href="#1930-les-symptomes-psychotiques-secondaires">🧠 19.30 Les symptômes psychotiques secondaires</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#manifestations-possibles_5">Manifestations possibles</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1931-les-hallucinations-dues-a-une-affection-medicale">🧠 19.31 Les hallucinations dues à une affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_30">Définition</a></li><li><a href="#causes-medicales-possibles">Causes médicales possibles</a></li></ul></li><li><a href="#1932-les-troubles-de-la-conscience">🧠 19.32 Les troubles de la conscience</a><ul class="sidebar-sublist"><li><a href="#definition_31">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li></ul></li><li><a href="#1933-le-delirium">🧠 19.33 Le délirium</a><ul class="sidebar-sublist"><li><a href="#definition_32">Définition</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1934-les-troubles-du-sommeil-lies-aux-maladies">🧠 19.34 Les troubles du sommeil liés aux maladies</a><ul class="sidebar-sublist"><li><a href="#definition_33">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1935-la-fatigue-liee-aux-affections-medicales">🧠 19.35 La fatigue liée aux affections médicales</a><ul class="sidebar-sublist"><li><a href="#definition_34">Définition</a></li><li><a href="#consequences">Conséquences</a></li></ul></li><li><a href="#1936-les-medicaments-et-les-symptomes-psychologiques">🧠 19.36 Les médicaments et les symptômes psychologiques</a><ul class="sidebar-sublist"><li><a href="#definition_35">Définition</a></li><li><a href="#manifestations-possibles_6">Manifestations possibles</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1937-les-effets-secondaires-neurologiques">🧠 19.37 Les effets secondaires neurologiques</a><ul class="sidebar-sublist"><li><a href="#definition_36">Définition</a></li><li><a href="#consequences-possibles_5">Conséquences possibles</a></li></ul></li><li><a href="#1938-leffet-des-substances-sur-le-fonctionnement-psychologique">🧠 19.38 L'effet des substances sur le fonctionnement psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_37">Définition</a></li><li><a href="#consequences-possibles_6">Conséquences possibles</a></li></ul></li><li><a href="#1939-le-diagnostic">🧠 19.39 Le diagnostic</a><ul class="sidebar-sublist"><li><a href="#definition_38">Définition</a></li><li><a href="#elements-etudies">Éléments étudiés</a></li></ul></li><li><a href="#1940-le-diagnostic-differentiel">🧠 19.40 Le diagnostic différentiel</a><ul class="sidebar-sublist"><li><a href="#definition_39">Définition</a></li><li><a href="#causes-pouvant-etre-etudiees">Causes pouvant être étudiées</a></li></ul></li><li><a href="#1941-limportance-de-la-chronologie">🧠 19.41 L'importance de la chronologie</a><ul class="sidebar-sublist"><li><a href="#definition_40">Définition</a></li><li><a href="#exemple">Exemple</a></li></ul></li><li><a href="#1942-les-examens-medicaux">🧠 19.42 Les examens médicaux</a><ul class="sidebar-sublist"><li><a href="#definition_41">Définition</a></li><li><a href="#exemples_4">Exemples</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1943-levaluation-neuropsychologique">🧠 19.43 L'évaluation neuropsychologique</a><ul class="sidebar-sublist"><li><a href="#definition_42">Définition</a></li><li><a href="#fonctions-etudiees">Fonctions étudiées</a></li></ul></li><li><a href="#1944-la-prise-en-charge">🧠 19.44 La prise en charge</a><ul class="sidebar-sublist"><li><a href="#definition_43">Définition</a></li><li><a href="#approches-possibles">Approches possibles</a></li></ul></li><li><a href="#1945-la-reeducation-cognitive">🧠 19.45 La rééducation cognitive</a><ul class="sidebar-sublist"><li><a href="#definition_44">Définition</a></li><li><a href="#objectifs">Objectifs</a></li></ul></li><li><a href="#1946-la-psychotherapie">🧠 19.46 La psychothérapie</a><ul class="sidebar-sublist"><li><a href="#definition_45">Définition</a></li><li><a href="#objectifs_1">Objectifs</a></li></ul></li><li><a href="#1947-laccompagnement-familial">🧠 19.47 L'accompagnement familial</a><ul class="sidebar-sublist"><li><a href="#definition_46">Définition</a></li><li><a href="#objectifs_2">Objectifs</a></li></ul></li><li><a href="#1948-ladaptation-psychologique-a-la-maladie">🧠 19.48 L'adaptation psychologique à la maladie</a><ul class="sidebar-sublist"><li><a href="#definition_47">Définition</a></li><li><a href="#reactions-possibles">Réactions possibles</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1949-quand-consulter">🧠 19.49 Quand consulter ?</a><ul class="sidebar-sublist"><li><a href="#une-consultation-peut-etre-necessaire-lorsquapparaissent">Une consultation peut être nécessaire lorsqu'apparaissent :</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1950-comprendre-le-lien-entre-maladie-et-psychologie">🧠 19.50 Comprendre le lien entre maladie et psychologie</a><ul class="sidebar-sublist"><li><a href="#definition_48">Définition</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -48,7 +59,6 @@
         <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#191-quest-ce-quun-trouble-mental-du-a-une-affection-medicale">🧠 19.1 Qu'est-ce qu'un trouble mental dû à une affection médicale ?</a></li><li><a href="#192-le-lien-entre-cerveau-et-corps">🧠 19.2 Le lien entre cerveau et corps</a></li><li><a href="#193-les-symptomes-psychiatriques-secondaires">🧠 19.3 Les symptômes psychiatriques secondaires</a></li><li><a href="#194-le-trouble-neurocognitif-du-a-une-affection-medicale">🧠 19.4 Le trouble neurocognitif dû à une affection médicale</a></li><li><a href="#195-les-maladies-neurologiques">🧠 19.5 Les maladies neurologiques</a></li><li><a href="#196-les-traumatismes-cerebraux">🧠 19.6 Les traumatismes cérébraux</a></li><li><a href="#197-laccident-vasculaire-cerebral">🧠 19.7 L'accident vasculaire cérébral</a></li><li><a href="#198-lepilepsie-et-la-psychologie">🧠 19.8 L'épilepsie et la psychologie</a></li><li><a href="#199-la-maladie-de-parkinson">🧠 19.9 La maladie de Parkinson</a></li><li><a href="#1910-la-sclerose-en-plaques">🧠 19.10 La sclérose en plaques</a></li><li><a href="#1911-les-maladies-endocriniennes">🧠 19.11 Les maladies endocriniennes</a></li><li><a href="#1912-les-troubles-de-la-thyroide">🧠 19.12 Les troubles de la thyroïde</a></li><li><a href="#1913-les-maladies-auto-immunes">🧠 19.13 Les maladies auto-immunes</a></li><li><a href="#1914-les-maladies-chroniques">🧠 19.14 Les maladies chroniques</a></li><li><a href="#1915-la-douleur-chronique">🧠 19.15 La douleur chronique</a></li><li><a href="#1916-les-maladies-cardiovasculaires">🧠 19.16 Les maladies cardiovasculaires</a></li><li><a href="#1917-les-maladies-respiratoires">🧠 19.17 Les maladies respiratoires</a></li><li><a href="#1918-les-maladies-metaboliques">🧠 19.18 Les maladies métaboliques</a></li><li><a href="#1919-le-diabete-et-la-sante-mentale">🧠 19.19 Le diabète et la santé mentale</a></li><li><a href="#1920-les-maladies-infectieuses">🧠 19.20 Les maladies infectieuses</a></li><li><a href="#1921-les-infections-touchant-le-cerveau">🧠 19.21 Les infections touchant le cerveau</a></li><li><a href="#1922-les-troubles-hormonaux-et-lhumeur">🧠 19.22 Les troubles hormonaux et l'humeur</a></li><li><a href="#1923-les-troubles-neurologiques-et-la-personnalite">🧠 19.23 Les troubles neurologiques et la personnalité</a></li><li><a href="#1924-les-changements-de-comportement-dus-a-une-affection-medicale">🧠 19.24 Les changements de comportement dus à une affection médicale</a></li><li><a href="#1925-lapathie">🧠 19.25 L'apathie</a></li><li><a href="#1926-la-desinhibition">🧠 19.26 La désinhibition</a></li><li><a href="#1927-les-troubles-de-lhumeur-secondaires">🧠 19.27 Les troubles de l'humeur secondaires</a></li><li><a href="#1928-les-symptomes-depressifs-secondaires">🧠 19.28 Les symptômes dépressifs secondaires</a></li><li><a href="#1929-les-symptomes-anxieux-secondaires">🧠 19.29 Les symptômes anxieux secondaires</a></li><li><a href="#1930-les-symptomes-psychotiques-secondaires">🧠 19.30 Les symptômes psychotiques secondaires</a></li><li><a href="#1931-les-hallucinations-dues-a-une-affection-medicale">🧠 19.31 Les hallucinations dues à une affection médicale</a></li><li><a href="#1932-les-troubles-de-la-conscience">🧠 19.32 Les troubles de la conscience</a></li><li><a href="#1933-le-delirium">🧠 19.33 Le délirium</a></li><li><a href="#1934-les-troubles-du-sommeil-lies-aux-maladies">🧠 19.34 Les troubles du sommeil liés aux maladies</a></li><li><a href="#1935-la-fatigue-liee-aux-affections-medicales">🧠 19.35 La fatigue liée aux affections médicales</a></li><li><a href="#1936-les-medicaments-et-les-symptomes-psychologiques">🧠 19.36 Les médicaments et les symptômes psychologiques</a></li><li><a href="#1937-les-effets-secondaires-neurologiques">🧠 19.37 Les effets secondaires neurologiques</a></li><li><a href="#1938-leffet-des-substances-sur-le-fonctionnement-psychologique">🧠 19.38 L'effet des substances sur le fonctionnement psychologique</a></li><li><a href="#1939-le-diagnostic">🧠 19.39 Le diagnostic</a></li><li><a href="#1940-le-diagnostic-differentiel">🧠 19.40 Le diagnostic différentiel</a></li><li><a href="#1941-limportance-de-la-chronologie">🧠 19.41 L'importance de la chronologie</a></li><li><a href="#1942-les-examens-medicaux">🧠 19.42 Les examens médicaux</a></li><li><a href="#1943-levaluation-neuropsychologique">🧠 19.43 L'évaluation neuropsychologique</a></li><li><a href="#1944-la-prise-en-charge">🧠 19.44 La prise en charge</a></li><li><a href="#1945-la-reeducation-cognitive">🧠 19.45 La rééducation cognitive</a></li><li><a href="#1946-la-psychotherapie">🧠 19.46 La psychothérapie</a></li><li><a href="#1947-laccompagnement-familial">🧠 19.47 L'accompagnement familial</a></li><li><a href="#1948-ladaptation-psychologique-a-la-maladie">🧠 19.48 L'adaptation psychologique à la maladie</a></li><li><a href="#1949-quand-consulter">🧠 19.49 Quand consulter ?</a></li><li><a href="#1950-comprendre-le-lien-entre-maladie-et-psychologie">🧠 19.50 Comprendre le lien entre maladie et psychologie</a></li></ul></nav>
     <div class="article-body">
       <h1 id="191-quest-ce-quun-trouble-mental-du-a-une-affection-medicale" class="entry-title hc-1">🧠 19.1 Qu'est-ce qu'un trouble mental dû à une affection médicale ?</h1>
 <h2 id="definition">Définition</h2>
@@ -876,6 +886,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -1057,47 +1087,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

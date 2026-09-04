@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#121-quest-ce-que-la-regulation-emotionnelle">🧠 12.1 Qu'est-ce que la régulation émotionnelle ?</a></li><li><a href="#122-pourquoi-reguler-ses-emotions">🎯 12.2 Pourquoi réguler ses émotions ?</a></li><li><a href="#123-reguler-une-emotion-ou-la-supprimer">🔄 12.3 Réguler une émotion ou la supprimer ?</a></li><li><a href="#124-lattention-comme-moyen-de-regulation">👀 12.4 L'attention comme moyen de régulation</a></li><li><a href="#125-la-reevaluation-cognitive">🧠 12.5 La réévaluation cognitive</a></li><li><a href="#126-la-modification-des-pensees">💭 12.6 La modification des pensées</a></li><li><a href="#127-lacceptation-emotionnelle">🧩 12.7 L'acceptation émotionnelle</a></li><li><a href="#128-la-suppression-emotionnelle">🫥 12.8 La suppression émotionnelle</a></li><li><a href="#129-le-delai-avant-la-reaction">⏳ 12.9 Le délai avant la réaction</a></li><li><a href="#1210-le-controle-inhibiteur">🛑 12.10 Le contrôle inhibiteur</a></li><li><a href="#1211-limpulsivite-emotionnelle">⚡ 12.11 L'impulsivité émotionnelle</a></li><li><a href="#1212-levitement-emotionnel">🏃 12.12 L'évitement émotionnel</a></li><li><a href="#1213-le-renforcement-de-levitement">🔄 12.13 Le renforcement de l'évitement</a></li><li><a href="#1214-les-comportements-de-securite">🛡️ 12.14 Les comportements de sécurité</a></li><li><a href="#1215-lexposition-aux-emotions">🧠 12.15 L'exposition aux émotions</a></li><li><a href="#1216-lhabituation-emotionnelle">🌡️ 12.16 L'habituation émotionnelle</a></li><li><a href="#1217-le-conditionnement-emotionnel">🔁 12.17 Le conditionnement émotionnel</a></li><li><a href="#1218-lapprentissage-de-la-regulation-emotionnelle">🧠 12.18 L'apprentissage de la régulation émotionnelle</a></li><li><a href="#1219-la-regulation-emotionnelle-au-cours-du-developpement">👶 12.19 La régulation émotionnelle au cours du développement</a></li><li><a href="#1220-la-regulation-emotionnelle-interpersonnelle">🫂 12.20 La régulation émotionnelle interpersonnelle</a></li><li><a href="#1221-la-co-regulation-emotionnelle">🧑‍🤝‍🧑 12.21 La co-régulation émotionnelle</a></li><li><a href="#1222-parler-de-ses-emotions">🗣️ 12.22 Parler de ses émotions</a></li><li><a href="#1223-letiquetage-emotionnel">🏷️ 12.23 L'étiquetage émotionnel</a></li><li><a href="#1224-la-metacognition-emotionnelle">🧠 12.24 La métacognition émotionnelle</a></li><li><a href="#1225-lidentification-des-declencheurs">🔍 12.25 L'identification des déclencheurs</a></li><li><a href="#1226-le-cycle-emotion-comportement">🔄 12.26 Le cycle émotion comportement</a></li><li><a href="#1227-le-comportement-oriente-vers-un-objectif">🏆 12.27 Le comportement orienté vers un objectif</a></li><li><a href="#1228-la-regulation-par-laction">🎯 12.28 La régulation par l'action</a></li><li><a href="#1229-lactivation-comportementale">🧠 12.29 L'activation comportementale</a></li><li><a href="#1230-le-retrait-comportemental">🚪 12.30 Le retrait comportemental</a></li><li><a href="#1231-la-colere-et-la-regulation-comportementale">😡 12.31 La colère et la régulation comportementale</a></li><li><a href="#1232-la-peur-et-la-regulation-comportementale">😨 12.32 La peur et la régulation comportementale</a></li><li><a href="#1233-la-tristesse-et-le-comportement">😢 12.33 La tristesse et le comportement</a></li><li><a href="#1234-les-emotions-positives-et-le-comportement">😄 12.34 Les émotions positives et le comportement</a></li><li><a href="#1235-la-flexibilite-emotionnelle">⚖️ 12.35 La flexibilité émotionnelle</a></li><li><a href="#1236-la-rigidite-emotionnelle">🔒 12.36 La rigidité émotionnelle</a></li><li><a href="#1237-les-strategies-de-regulation">🧩 12.37 Les stratégies de régulation</a></li><li><a href="#1238-ladaptation-des-strategies">🔄 12.38 L'adaptation des stratégies</a></li><li><a href="#1239-quand-la-regulation-devient-problematique">⚠️ 12.39 Quand la régulation devient problématique</a></li><li><a href="#1240-pourquoi-etudier-la-regulation-des-emotions-et-des-comportements">🔬 12.40 Pourquoi étudier la régulation des émotions et des comportements ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#121-quest-ce-que-la-regulation-emotionnelle">🧠 12.1 Qu'est-ce que la régulation émotionnelle ?</a></li><li><a href="#122-pourquoi-reguler-ses-emotions">🎯 12.2 Pourquoi réguler ses émotions ?</a></li><li><a href="#123-reguler-une-emotion-ou-la-supprimer">🔄 12.3 Réguler une émotion ou la supprimer ?</a></li><li><a href="#124-lattention-comme-moyen-de-regulation">👀 12.4 L'attention comme moyen de régulation</a></li><li><a href="#125-la-reevaluation-cognitive">🧠 12.5 La réévaluation cognitive</a></li><li><a href="#126-la-modification-des-pensees">💭 12.6 La modification des pensées</a></li><li><a href="#127-lacceptation-emotionnelle">🧩 12.7 L'acceptation émotionnelle</a></li><li><a href="#128-la-suppression-emotionnelle">🫥 12.8 La suppression émotionnelle</a></li><li><a href="#129-le-delai-avant-la-reaction">⏳ 12.9 Le délai avant la réaction</a></li><li><a href="#1210-le-controle-inhibiteur">🛑 12.10 Le contrôle inhibiteur</a></li><li><a href="#1211-limpulsivite-emotionnelle">⚡ 12.11 L'impulsivité émotionnelle</a></li><li><a href="#1212-levitement-emotionnel">🏃 12.12 L'évitement émotionnel</a></li><li><a href="#1213-le-renforcement-de-levitement">🔄 12.13 Le renforcement de l'évitement</a></li><li><a href="#1214-les-comportements-de-securite">🛡️ 12.14 Les comportements de sécurité</a></li><li><a href="#1215-lexposition-aux-emotions">🧠 12.15 L'exposition aux émotions</a></li><li><a href="#1216-lhabituation-emotionnelle">🌡️ 12.16 L'habituation émotionnelle</a></li><li><a href="#1217-le-conditionnement-emotionnel">🔁 12.17 Le conditionnement émotionnel</a></li><li><a href="#1218-lapprentissage-de-la-regulation-emotionnelle">🧠 12.18 L'apprentissage de la régulation émotionnelle</a></li><li><a href="#1219-la-regulation-emotionnelle-au-cours-du-developpement">👶 12.19 La régulation émotionnelle au cours du développement</a></li><li><a href="#1220-la-regulation-emotionnelle-interpersonnelle">🫂 12.20 La régulation émotionnelle interpersonnelle</a></li><li><a href="#1221-la-co-regulation-emotionnelle">🧑‍🤝‍🧑 12.21 La co-régulation émotionnelle</a></li><li><a href="#1222-parler-de-ses-emotions">🗣️ 12.22 Parler de ses émotions</a></li><li><a href="#1223-letiquetage-emotionnel">🏷️ 12.23 L'étiquetage émotionnel</a></li><li><a href="#1224-la-metacognition-emotionnelle">🧠 12.24 La métacognition émotionnelle</a></li><li><a href="#1225-lidentification-des-declencheurs">🔍 12.25 L'identification des déclencheurs</a></li><li><a href="#1226-le-cycle-emotion-comportement">🔄 12.26 Le cycle émotion comportement</a></li><li><a href="#1227-le-comportement-oriente-vers-un-objectif">🏆 12.27 Le comportement orienté vers un objectif</a></li><li><a href="#1228-la-regulation-par-laction">🎯 12.28 La régulation par l'action</a></li><li><a href="#1229-lactivation-comportementale">🧠 12.29 L'activation comportementale</a></li><li><a href="#1230-le-retrait-comportemental">🚪 12.30 Le retrait comportemental</a></li><li><a href="#1231-la-colere-et-la-regulation-comportementale">😡 12.31 La colère et la régulation comportementale</a></li><li><a href="#1232-la-peur-et-la-regulation-comportementale">😨 12.32 La peur et la régulation comportementale</a></li><li><a href="#1233-la-tristesse-et-le-comportement">😢 12.33 La tristesse et le comportement</a></li><li><a href="#1234-les-emotions-positives-et-le-comportement">😄 12.34 Les émotions positives et le comportement</a></li><li><a href="#1235-la-flexibilite-emotionnelle">⚖️ 12.35 La flexibilité émotionnelle</a></li><li><a href="#1236-la-rigidite-emotionnelle">🔒 12.36 La rigidité émotionnelle</a></li><li><a href="#1237-les-strategies-de-regulation">🧩 12.37 Les stratégies de régulation</a></li><li><a href="#1238-ladaptation-des-strategies">🔄 12.38 L'adaptation des stratégies</a></li><li><a href="#1239-quand-la-regulation-devient-problematique">⚠️ 12.39 Quand la régulation devient problématique</a></li><li><a href="#1240-pourquoi-etudier-la-regulation-des-emotions-et-des-comportements">🔬 12.40 Pourquoi étudier la régulation des émotions et des comportements ?</a></li></ul></nav>
     <div class="article-body">
       <p>La régulation émotionnelle désigne l'ensemble des processus qui permettent de modifier, maintenir ou adapter l'intensité, la durée ou l'expression d'une émotion.</p>
 <p>Elle est étroitement liée aux comportements, car les émotions peuvent influencer les actions, tandis que les comportements peuvent à leur tour modifier les émotions.</p>
@@ -369,6 +379,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -550,47 +580,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

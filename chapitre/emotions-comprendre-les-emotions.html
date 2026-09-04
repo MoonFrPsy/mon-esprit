@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#11-quest-ce-quune-emotion">❤️ 1.1 Qu'est-ce qu'une émotion ?</a></li><li><a href="#12-les-differentes-composantes-dune-emotion">🧠 1.2 Les différentes composantes d'une émotion</a></li><li><a href="#13-lexperience-subjective">💭 1.3 L'expérience subjective</a></li><li><a href="#14-la-composante-physiologique">🫀 1.4 La composante physiologique</a></li><li><a href="#15-la-composante-cognitive">🧠 1.5 La composante cognitive</a></li><li><a href="#16-la-tendance-a-laction">🏃 1.6 La tendance à l'action</a></li><li><a href="#17-lexpression-emotionnelle">🎭 1.7 L'expression émotionnelle</a></li><li><a href="#18-la-reconnaissance-des-emotions">👀 1.8 La reconnaissance des émotions</a></li><li><a href="#19-la-conscience-emotionnelle">🧠 1.9 La conscience émotionnelle</a></li><li><a href="#110-letiquetage-emotionnel">🏷️ 1.10 L'étiquetage émotionnel</a></li><li><a href="#111-la-granularite-emotionnelle">🎨 1.11 La granularité émotionnelle</a></li><li><a href="#112-lintensite-emotionnelle">🌡️ 1.12 L'intensité émotionnelle</a></li><li><a href="#113-la-reactivite-emotionnelle">⚡ 1.13 La réactivité émotionnelle</a></li><li><a href="#114-la-duree-dune-emotion">🔄 1.14 La durée d'une émotion</a></li><li><a href="#115-la-fluctuation-emotionnelle">🌊 1.15 La fluctuation émotionnelle</a></li><li><a href="#116-lambivalence-emotionnelle">🔀 1.16 L'ambivalence émotionnelle</a></li><li><a href="#117-le-melange-emotionnel">🧩 1.17 Le mélange émotionnel</a></li><li><a href="#118-lactivation-emotionnelle">🔥 1.18 L'activation émotionnelle</a></li><li><a href="#119-le-retour-a-letat-emotionnel-de-base">🧘 1.19 Le retour à l'état émotionnel de base</a></li><li><a href="#120-la-regulation-emotionnelle">🧠 1.20 La régulation émotionnelle</a></li><li><a href="#121-la-generation-des-emotions">🔄 1.21 La génération des émotions</a></li><li><a href="#122-le-role-de-lattention">👁️ 1.22 Le rôle de l'attention</a></li><li><a href="#123-le-role-des-pensees">💭 1.23 Le rôle des pensées</a></li><li><a href="#124-le-role-des-souvenirs">🧠 1.24 Le rôle des souvenirs</a></li><li><a href="#125-le-role-des-anticipations">⏳ 1.25 Le rôle des anticipations</a></li><li><a href="#126-les-sensations-corporelles-et-les-emotions">🫀 1.26 Les sensations corporelles et les émotions</a></li><li><a href="#127-linteroception-emotionnelle">🧠 1.27 L'interoception émotionnelle</a></li><li><a href="#128-le-role-du-contexte">🌍 1.28 Le rôle du contexte</a></li><li><a href="#129-les-differences-individuelles">🧬 1.29 Les différences individuelles</a></li><li><a href="#130-le-role-de-la-culture">🌍 1.30 Le rôle de la culture</a></li><li><a href="#131-les-emotions-au-cours-du-developpement">👶 1.31 Les émotions au cours du développement</a></li><li><a href="#132-les-emotions-de-base">🧠 1.32 Les émotions de base</a></li><li><a href="#133-les-emotions-complexes">🌈 1.33 Les émotions complexes</a></li><li><a href="#134-les-emotions-positives-et-negatives">🔥 1.34 Les émotions positives et négatives</a></li><li><a href="#135-la-valence-emotionnelle">⚖️ 1.35 La valence émotionnelle</a></li><li><a href="#136-lexcitation-emotionnelle">⚡ 1.36 L'excitation émotionnelle</a></li><li><a href="#137-lhabituation-emotionnelle">🔄 1.37 L'habituation émotionnelle</a></li><li><a href="#138-le-conditionnement-emotionnel">🧠 1.38 Le conditionnement émotionnel</a></li><li><a href="#139-les-emotions-et-les-comportements">🧩 1.39 Les émotions et les comportements</a></li><li><a href="#140-pourquoi-etudier-les-emotions">🔬 1.40 Pourquoi étudier les émotions ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#11-quest-ce-quune-emotion">❤️ 1.1 Qu'est-ce qu'une émotion ?</a></li><li><a href="#12-les-differentes-composantes-dune-emotion">🧠 1.2 Les différentes composantes d'une émotion</a></li><li><a href="#13-lexperience-subjective">💭 1.3 L'expérience subjective</a></li><li><a href="#14-la-composante-physiologique">🫀 1.4 La composante physiologique</a></li><li><a href="#15-la-composante-cognitive">🧠 1.5 La composante cognitive</a></li><li><a href="#16-la-tendance-a-laction">🏃 1.6 La tendance à l'action</a></li><li><a href="#17-lexpression-emotionnelle">🎭 1.7 L'expression émotionnelle</a></li><li><a href="#18-la-reconnaissance-des-emotions">👀 1.8 La reconnaissance des émotions</a></li><li><a href="#19-la-conscience-emotionnelle">🧠 1.9 La conscience émotionnelle</a></li><li><a href="#110-letiquetage-emotionnel">🏷️ 1.10 L'étiquetage émotionnel</a></li><li><a href="#111-la-granularite-emotionnelle">🎨 1.11 La granularité émotionnelle</a></li><li><a href="#112-lintensite-emotionnelle">🌡️ 1.12 L'intensité émotionnelle</a></li><li><a href="#113-la-reactivite-emotionnelle">⚡ 1.13 La réactivité émotionnelle</a></li><li><a href="#114-la-duree-dune-emotion">🔄 1.14 La durée d'une émotion</a></li><li><a href="#115-la-fluctuation-emotionnelle">🌊 1.15 La fluctuation émotionnelle</a></li><li><a href="#116-lambivalence-emotionnelle">🔀 1.16 L'ambivalence émotionnelle</a></li><li><a href="#117-le-melange-emotionnel">🧩 1.17 Le mélange émotionnel</a></li><li><a href="#118-lactivation-emotionnelle">🔥 1.18 L'activation émotionnelle</a></li><li><a href="#119-le-retour-a-letat-emotionnel-de-base">🧘 1.19 Le retour à l'état émotionnel de base</a></li><li><a href="#120-la-regulation-emotionnelle">🧠 1.20 La régulation émotionnelle</a></li><li><a href="#121-la-generation-des-emotions">🔄 1.21 La génération des émotions</a></li><li><a href="#122-le-role-de-lattention">👁️ 1.22 Le rôle de l'attention</a></li><li><a href="#123-le-role-des-pensees">💭 1.23 Le rôle des pensées</a></li><li><a href="#124-le-role-des-souvenirs">🧠 1.24 Le rôle des souvenirs</a></li><li><a href="#125-le-role-des-anticipations">⏳ 1.25 Le rôle des anticipations</a></li><li><a href="#126-les-sensations-corporelles-et-les-emotions">🫀 1.26 Les sensations corporelles et les émotions</a></li><li><a href="#127-linteroception-emotionnelle">🧠 1.27 L'interoception émotionnelle</a></li><li><a href="#128-le-role-du-contexte">🌍 1.28 Le rôle du contexte</a></li><li><a href="#129-les-differences-individuelles">🧬 1.29 Les différences individuelles</a></li><li><a href="#130-le-role-de-la-culture">🌍 1.30 Le rôle de la culture</a></li><li><a href="#131-les-emotions-au-cours-du-developpement">👶 1.31 Les émotions au cours du développement</a></li><li><a href="#132-les-emotions-de-base">🧠 1.32 Les émotions de base</a></li><li><a href="#133-les-emotions-complexes">🌈 1.33 Les émotions complexes</a></li><li><a href="#134-les-emotions-positives-et-negatives">🔥 1.34 Les émotions positives et négatives</a></li><li><a href="#135-la-valence-emotionnelle">⚖️ 1.35 La valence émotionnelle</a></li><li><a href="#136-lexcitation-emotionnelle">⚡ 1.36 L'excitation émotionnelle</a></li><li><a href="#137-lhabituation-emotionnelle">🔄 1.37 L'habituation émotionnelle</a></li><li><a href="#138-le-conditionnement-emotionnel">🧠 1.38 Le conditionnement émotionnel</a></li><li><a href="#139-les-emotions-et-les-comportements">🧩 1.39 Les émotions et les comportements</a></li><li><a href="#140-pourquoi-etudier-les-emotions">🔬 1.40 Pourquoi étudier les émotions ?</a></li></ul></nav>
     <div class="article-body">
       <p>Les émotions sont des phénomènes psychologiques complexes qui permettent notamment de réagir aux événements, d'orienter l'attention, de préparer certaines actions et de donner une signification aux expériences vécues.</p>
 <p>Elles impliquent généralement plusieurs dimensions : une expérience subjective, des réactions corporelles, des changements dans les pensées et certaines tendances comportementales.</p>
@@ -451,6 +461,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -632,47 +662,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

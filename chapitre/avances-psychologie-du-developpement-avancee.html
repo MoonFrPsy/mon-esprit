@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#51-quest-ce-que-le-developpement-psychologique">🌱 5.1 Qu'est-ce que le développement psychologique ?</a></li><li><a href="#52-maturation-et-developpement">🧬 5.2 Maturation et développement</a></li><li><a href="#53-developpement-cognitif">🧠 5.3 Développement cognitif</a></li><li><a href="#54-le-developpement-precoce">👶 5.4 Le développement précoce</a></li><li><a href="#55-la-plasticite-cerebrale">🧠 5.5 La plasticité cérébrale</a></li><li><a href="#56-le-developpement-du-langage">🗣️ 5.6 Le développement du langage</a></li><li><a href="#57-le-developpement-de-la-memoire">🧠 5.7 Le développement de la mémoire</a></li><li><a href="#58-le-developpement-des-fonctions-executives">🎯 5.8 Le développement des fonctions exécutives</a></li><li><a href="#59-le-controle-inhibiteur">🧠 5.9 Le contrôle inhibiteur</a></li><li><a href="#510-la-flexibilite-cognitive">🔄 5.10 La flexibilité cognitive</a></li><li><a href="#511-le-developpement-emotionnel">❤️ 5.11 Le développement émotionnel</a></li><li><a href="#512-la-regulation-emotionnelle-au-cours-du-developpement">🌊 5.12 La régulation émotionnelle au cours du développement</a></li><li><a href="#513-la-regulation-interpersonnelle">🧑‍🤝‍🧑 5.13 La régulation interpersonnelle</a></li><li><a href="#514-lattachement">🧸 5.14 L'attachement</a></li><li><a href="#515-les-modeles-internes-operants">🧠 5.15 Les modèles internes opérants</a></li><li><a href="#516-le-developpement-du-soi">🪞 5.16 Le développement du soi</a></li><li><a href="#517-le-developpement-de-lidentite">👤 5.17 Le développement de l'identité</a></li><li><a href="#518-la-construction-narrative-de-lidentite">🧩 5.18 La construction narrative de l'identité</a></li><li><a href="#519-la-memoire-autobiographique-et-le-developpement">🧠 5.19 La mémoire autobiographique et le développement</a></li><li><a href="#520-ladolescence-comme-periode-de-transformation">🧑‍🎓 5.20 L'adolescence comme période de transformation</a></li><li><a href="#521-le-developpement-du-raisonnement">🧠 5.21 Le développement du raisonnement</a></li><li><a href="#522-le-developpement-de-la-prise-de-decision">🎯 5.22 Le développement de la prise de décision</a></li><li><a href="#523-le-developpement-de-la-cognition-sociale">👁️ 5.23 Le développement de la cognition sociale</a></li><li><a href="#524-la-theorie-de-lesprit">🧠 5.24 La théorie de l'esprit</a></li><li><a href="#525-la-comprehension-des-emotions-des-autres">🪞 5.25 La compréhension des émotions des autres</a></li><li><a href="#526-le-developpement-de-la-personnalite">🧩 5.26 Le développement de la personnalité</a></li><li><a href="#527-temperament-et-personnalite">🧬 5.27 Tempérament et personnalité</a></li><li><a href="#528-le-role-de-lenvironnement">🌍 5.28 Le rôle de l'environnement</a></li><li><a href="#529-interaction-entre-biologie-et-environnement">🧬 5.29 Interaction entre biologie et environnement</a></li><li><a href="#530-les-differences-individuelles">🧠 5.30 Les différences individuelles</a></li><li><a href="#531-les-periodes-sensibles">🔄 5.31 Les périodes sensibles</a></li><li><a href="#532-continuite-et-changement">🧠 5.32 Continuité et changement</a></li><li><a href="#533-developpement-et-evenements-de-vie">🌱 5.33 Développement et événements de vie</a></li><li><a href="#534-le-developpement-a-lage-adulte">🧠 5.34 Le développement à l'âge adulte</a></li><li><a href="#535-le-vieillissement-psychologique">👴 5.35 Le vieillissement psychologique</a></li><li><a href="#536-le-vieillissement-cognitif">🧠 5.36 Le vieillissement cognitif</a></li><li><a href="#537-le-developpement-emotionnel-au-cours-de-la-vie">❤️ 5.37 Le développement émotionnel au cours de la vie</a></li><li><a href="#538-le-developpement-comme-systeme-dynamique">🧩 5.38 Le développement comme système dynamique</a></li><li><a href="#539-peut-on-predire-le-developpement-psychologique">🔬 5.39 Peut-on prédire le développement psychologique ?</a></li><li><a href="#540-pourquoi-etudier-la-psychologie-du-developpement-avancee">🌌 5.40 Pourquoi étudier la psychologie du développement avancée ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -54,7 +65,6 @@
         <line x1="35" y1="98" x2="85" y2="98"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#51-quest-ce-que-le-developpement-psychologique">🌱 5.1 Qu'est-ce que le développement psychologique ?</a></li><li><a href="#52-maturation-et-developpement">🧬 5.2 Maturation et développement</a></li><li><a href="#53-developpement-cognitif">🧠 5.3 Développement cognitif</a></li><li><a href="#54-le-developpement-precoce">👶 5.4 Le développement précoce</a></li><li><a href="#55-la-plasticite-cerebrale">🧠 5.5 La plasticité cérébrale</a></li><li><a href="#56-le-developpement-du-langage">🗣️ 5.6 Le développement du langage</a></li><li><a href="#57-le-developpement-de-la-memoire">🧠 5.7 Le développement de la mémoire</a></li><li><a href="#58-le-developpement-des-fonctions-executives">🎯 5.8 Le développement des fonctions exécutives</a></li><li><a href="#59-le-controle-inhibiteur">🧠 5.9 Le contrôle inhibiteur</a></li><li><a href="#510-la-flexibilite-cognitive">🔄 5.10 La flexibilité cognitive</a></li><li><a href="#511-le-developpement-emotionnel">❤️ 5.11 Le développement émotionnel</a></li><li><a href="#512-la-regulation-emotionnelle-au-cours-du-developpement">🌊 5.12 La régulation émotionnelle au cours du développement</a></li><li><a href="#513-la-regulation-interpersonnelle">🧑‍🤝‍🧑 5.13 La régulation interpersonnelle</a></li><li><a href="#514-lattachement">🧸 5.14 L'attachement</a></li><li><a href="#515-les-modeles-internes-operants">🧠 5.15 Les modèles internes opérants</a></li><li><a href="#516-le-developpement-du-soi">🪞 5.16 Le développement du soi</a></li><li><a href="#517-le-developpement-de-lidentite">👤 5.17 Le développement de l'identité</a></li><li><a href="#518-la-construction-narrative-de-lidentite">🧩 5.18 La construction narrative de l'identité</a></li><li><a href="#519-la-memoire-autobiographique-et-le-developpement">🧠 5.19 La mémoire autobiographique et le développement</a></li><li><a href="#520-ladolescence-comme-periode-de-transformation">🧑‍🎓 5.20 L'adolescence comme période de transformation</a></li><li><a href="#521-le-developpement-du-raisonnement">🧠 5.21 Le développement du raisonnement</a></li><li><a href="#522-le-developpement-de-la-prise-de-decision">🎯 5.22 Le développement de la prise de décision</a></li><li><a href="#523-le-developpement-de-la-cognition-sociale">👁️ 5.23 Le développement de la cognition sociale</a></li><li><a href="#524-la-theorie-de-lesprit">🧠 5.24 La théorie de l'esprit</a></li><li><a href="#525-la-comprehension-des-emotions-des-autres">🪞 5.25 La compréhension des émotions des autres</a></li><li><a href="#526-le-developpement-de-la-personnalite">🧩 5.26 Le développement de la personnalité</a></li><li><a href="#527-temperament-et-personnalite">🧬 5.27 Tempérament et personnalité</a></li><li><a href="#528-le-role-de-lenvironnement">🌍 5.28 Le rôle de l'environnement</a></li><li><a href="#529-interaction-entre-biologie-et-environnement">🧬 5.29 Interaction entre biologie et environnement</a></li><li><a href="#530-les-differences-individuelles">🧠 5.30 Les différences individuelles</a></li><li><a href="#531-les-periodes-sensibles">🔄 5.31 Les périodes sensibles</a></li><li><a href="#532-continuite-et-changement">🧠 5.32 Continuité et changement</a></li><li><a href="#533-developpement-et-evenements-de-vie">🌱 5.33 Développement et événements de vie</a></li><li><a href="#534-le-developpement-a-lage-adulte">🧠 5.34 Le développement à l'âge adulte</a></li><li><a href="#535-le-vieillissement-psychologique">👴 5.35 Le vieillissement psychologique</a></li><li><a href="#536-le-vieillissement-cognitif">🧠 5.36 Le vieillissement cognitif</a></li><li><a href="#537-le-developpement-emotionnel-au-cours-de-la-vie">❤️ 5.37 Le développement émotionnel au cours de la vie</a></li><li><a href="#538-le-developpement-comme-systeme-dynamique">🧩 5.38 Le développement comme système dynamique</a></li><li><a href="#539-peut-on-predire-le-developpement-psychologique">🔬 5.39 Peut-on prédire le développement psychologique ?</a></li><li><a href="#540-pourquoi-etudier-la-psychologie-du-developpement-avancee">🌌 5.40 Pourquoi étudier la psychologie du développement avancée ?</a></li></ul></nav>
     <div class="article-body">
       <p>La psychologie du développement étudie les transformations psychologiques qui se produisent tout au long de la vie.</p>
 <p>Elle ne concerne donc pas uniquement l'enfance. Le développement peut être étudié avant la naissance, pendant l'enfance, l'adolescence, l'âge adulte et le vieillissement.</p>
@@ -650,6 +660,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -831,47 +861,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

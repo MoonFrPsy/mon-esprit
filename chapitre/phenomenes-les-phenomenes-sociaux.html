@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#81-linfluence-sociale">👥 8.1 L'influence sociale</a></li><li><a href="#82-la-conformite-sociale">🧑‍🤝‍🧑 8.2 La conformité sociale</a></li><li><a href="#83-lobeissance">📢 8.3 L'obéissance</a></li><li><a href="#84-la-pression-sociale">👥 8.4 La pression sociale</a></li><li><a href="#85-la-norme-sociale">🧠 8.5 La norme sociale</a></li><li><a href="#86-le-regard-des-autres">👀 8.6 Le regard des autres</a></li><li><a href="#87-la-presentation-de-soi">🎭 8.7 La présentation de soi</a></li><li><a href="#88-la-gestion-des-impressions">🌟 8.8 La gestion des impressions</a></li><li><a href="#89-leffet-de-spectateur">👁️ 8.9 L'effet de spectateur</a></li><li><a href="#810-la-diffusion-de-la-responsabilite">🧩 8.10 La diffusion de la responsabilité</a></li><li><a href="#811-la-facilitation-sociale">👥 8.11 La facilitation sociale</a></li><li><a href="#812-linhibition-sociale">🧠 8.12 L'inhibition sociale</a></li><li><a href="#813-la-paresse-sociale">👥 8.13 La paresse sociale</a></li><li><a href="#814-la-polarisation-de-groupe">🧠 8.14 La polarisation de groupe</a></li><li><a href="#815-la-pensee-de-groupe">🔄 8.15 La pensée de groupe</a></li><li><a href="#816-le-consensus-social">🧑‍🤝‍🧑 8.16 Le consensus social</a></li><li><a href="#817-lidentification-sociale">🪞 8.17 L'identification sociale</a></li><li><a href="#818-la-categorisation-sociale">🏷️ 8.18 La catégorisation sociale</a></li><li><a href="#819-le-stereotype">⚖️ 8.19 Le stéréotype</a></li><li><a href="#820-le-prejuge">⚠️ 8.20 Le préjugé</a></li><li><a href="#821-la-discrimination">🚫 8.21 La discrimination</a></li><li><a href="#822-le-biais-intergroupe">🧠 8.22 Le biais intergroupe</a></li><li><a href="#823-le-favoritisme-endogroupe">❤️ 8.23 Le favoritisme endogroupe</a></li><li><a href="#824-lhomogeneite-de-lexogroupe">👥 8.24 L'homogénéité de l'exogroupe</a></li><li><a href="#825-lerreur-ultime-dattribution">🧠 8.25 L'erreur ultime d'attribution</a></li><li><a href="#826-la-comparaison-sociale">🪞 8.26 La comparaison sociale</a></li><li><a href="#827-la-comparaison-ascendante">⬆️ 8.27 La comparaison ascendante</a></li><li><a href="#828-la-comparaison-descendante">⬇️ 8.28 La comparaison descendante</a></li><li><a href="#829-la-persuasion">🗣️ 8.29 La persuasion</a></li><li><a href="#830-linfluence-minoritaire">📣 8.30 L'influence minoritaire</a></li><li><a href="#831-linfluence-de-la-majorite">👥 8.31 L'influence de la majorité</a></li><li><a href="#832-la-contagion-emotionnelle">🧠 8.32 La contagion émotionnelle</a></li><li><a href="#833-le-mimetisme-social">🪞 8.33 Le mimétisme social</a></li><li><a href="#834-la-reciprocite">🤝 8.34 La réciprocité</a></li><li><a href="#835-la-dissonance-cognitive-en-contexte-social">🧠 8.35 La dissonance cognitive en contexte social</a></li><li><a href="#836-la-cooperation">🧑‍🤝‍🧑 8.36 La coopération</a></li><li><a href="#837-la-competition-sociale">⚔️ 8.37 La compétition sociale</a></li><li><a href="#838-le-conflit-interpersonnel">⚡ 8.38 Le conflit interpersonnel</a></li><li><a href="#839-lanonymat-social">🌐 8.39 L'anonymat social</a></li><li><a href="#840-pourquoi-etudier-les-phenomenes-sociaux">🔬 8.40 Pourquoi étudier les phénomènes sociaux ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -49,7 +60,6 @@
         <line x1="116" y1="60" x2="105" y2="60"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#81-linfluence-sociale">👥 8.1 L'influence sociale</a></li><li><a href="#82-la-conformite-sociale">🧑‍🤝‍🧑 8.2 La conformité sociale</a></li><li><a href="#83-lobeissance">📢 8.3 L'obéissance</a></li><li><a href="#84-la-pression-sociale">👥 8.4 La pression sociale</a></li><li><a href="#85-la-norme-sociale">🧠 8.5 La norme sociale</a></li><li><a href="#86-le-regard-des-autres">👀 8.6 Le regard des autres</a></li><li><a href="#87-la-presentation-de-soi">🎭 8.7 La présentation de soi</a></li><li><a href="#88-la-gestion-des-impressions">🌟 8.8 La gestion des impressions</a></li><li><a href="#89-leffet-de-spectateur">👁️ 8.9 L'effet de spectateur</a></li><li><a href="#810-la-diffusion-de-la-responsabilite">🧩 8.10 La diffusion de la responsabilité</a></li><li><a href="#811-la-facilitation-sociale">👥 8.11 La facilitation sociale</a></li><li><a href="#812-linhibition-sociale">🧠 8.12 L'inhibition sociale</a></li><li><a href="#813-la-paresse-sociale">👥 8.13 La paresse sociale</a></li><li><a href="#814-la-polarisation-de-groupe">🧠 8.14 La polarisation de groupe</a></li><li><a href="#815-la-pensee-de-groupe">🔄 8.15 La pensée de groupe</a></li><li><a href="#816-le-consensus-social">🧑‍🤝‍🧑 8.16 Le consensus social</a></li><li><a href="#817-lidentification-sociale">🪞 8.17 L'identification sociale</a></li><li><a href="#818-la-categorisation-sociale">🏷️ 8.18 La catégorisation sociale</a></li><li><a href="#819-le-stereotype">⚖️ 8.19 Le stéréotype</a></li><li><a href="#820-le-prejuge">⚠️ 8.20 Le préjugé</a></li><li><a href="#821-la-discrimination">🚫 8.21 La discrimination</a></li><li><a href="#822-le-biais-intergroupe">🧠 8.22 Le biais intergroupe</a></li><li><a href="#823-le-favoritisme-endogroupe">❤️ 8.23 Le favoritisme endogroupe</a></li><li><a href="#824-lhomogeneite-de-lexogroupe">👥 8.24 L'homogénéité de l'exogroupe</a></li><li><a href="#825-lerreur-ultime-dattribution">🧠 8.25 L'erreur ultime d'attribution</a></li><li><a href="#826-la-comparaison-sociale">🪞 8.26 La comparaison sociale</a></li><li><a href="#827-la-comparaison-ascendante">⬆️ 8.27 La comparaison ascendante</a></li><li><a href="#828-la-comparaison-descendante">⬇️ 8.28 La comparaison descendante</a></li><li><a href="#829-la-persuasion">🗣️ 8.29 La persuasion</a></li><li><a href="#830-linfluence-minoritaire">📣 8.30 L'influence minoritaire</a></li><li><a href="#831-linfluence-de-la-majorite">👥 8.31 L'influence de la majorité</a></li><li><a href="#832-la-contagion-emotionnelle">🧠 8.32 La contagion émotionnelle</a></li><li><a href="#833-le-mimetisme-social">🪞 8.33 Le mimétisme social</a></li><li><a href="#834-la-reciprocite">🤝 8.34 La réciprocité</a></li><li><a href="#835-la-dissonance-cognitive-en-contexte-social">🧠 8.35 La dissonance cognitive en contexte social</a></li><li><a href="#836-la-cooperation">🧑‍🤝‍🧑 8.36 La coopération</a></li><li><a href="#837-la-competition-sociale">⚔️ 8.37 La compétition sociale</a></li><li><a href="#838-le-conflit-interpersonnel">⚡ 8.38 Le conflit interpersonnel</a></li><li><a href="#839-lanonymat-social">🌐 8.39 L'anonymat social</a></li><li><a href="#840-pourquoi-etudier-les-phenomenes-sociaux">🔬 8.40 Pourquoi étudier les phénomènes sociaux ?</a></li></ul></nav>
     <div class="article-body">
       <blockquote>
 <p>Les phénomènes sociaux correspondent aux processus psychologiques qui apparaissent ou se modifient lorsque les individus sont en présence d'autres personnes ou appartiennent à un groupe.</p>
@@ -470,6 +480,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -651,47 +681,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

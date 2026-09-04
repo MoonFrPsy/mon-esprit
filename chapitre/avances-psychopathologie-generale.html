@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#91-quest-ce-que-la-psychopathologie">🩺 9.1 Qu'est-ce que la psychopathologie ?</a></li><li><a href="#92-symptome-signe-syndrome-et-trouble">🔎 9.2 Symptôme, signe, syndrome et trouble</a></li><li><a href="#93-la-souffrance-psychologique">🧠 9.3 La souffrance psychologique</a></li><li><a href="#94-lalteration-du-fonctionnement">⚙️ 9.4 L'altération du fonctionnement</a></li><li><a href="#95-normalite-et-psychopathologie">📏 9.5 Normalité et psychopathologie</a></li><li><a href="#96-limportance-du-contexte">🌍 9.6 L'importance du contexte</a></li><li><a href="#97-les-facteurs-biologiques">🧬 9.7 Les facteurs biologiques</a></li><li><a href="#98-les-facteurs-cognitifs">🧠 9.8 Les facteurs cognitifs</a></li><li><a href="#99-les-facteurs-emotionnels">❤️ 9.9 Les facteurs émotionnels</a></li><li><a href="#910-les-facteurs-comportementaux">🧩 9.10 Les facteurs comportementaux</a></li><li><a href="#911-les-facteurs-de-maintien">🔄 9.11 Les facteurs de maintien</a></li><li><a href="#912-les-facteurs-de-vulnerabilite">🌱 9.12 Les facteurs de vulnérabilité</a></li><li><a href="#913-les-facteurs-precipitants">⚡ 9.13 Les facteurs précipitants</a></li><li><a href="#914-les-facteurs-de-protection">🛡️ 9.14 Les facteurs de protection</a></li><li><a href="#915-le-modele-vulnerabilite-stress">🧠 9.15 Le modèle vulnérabilité stress</a></li><li><a href="#916-le-modele-biopsychosocial">🧬 9.16 Le modèle biopsychosocial</a><ul class="sidebar-sublist"><li><a href="#biologique">🧬 Biologique</a></li><li><a href="#psychologique">🧠 Psychologique</a></li><li><a href="#social">🧑‍🤝‍🧑 Social</a></li></ul></li><li><a href="#917-les-modeles-transdiagnostiques">🔄 9.17 Les modèles transdiagnostiques</a></li><li><a href="#918-les-modeles-categoriels">📦 9.18 Les modèles catégoriels</a></li><li><a href="#919-les-modeles-dimensionnels">📊 9.19 Les modèles dimensionnels</a></li><li><a href="#920-categories-et-dimensions">🧩 9.20 Catégories et dimensions</a></li><li><a href="#921-la-comorbidite">🧠 9.21 La comorbidité</a></li><li><a href="#922-le-diagnostic-differentiel">🔀 9.22 Le diagnostic différentiel</a></li><li><a href="#923-le-role-de-levaluation-clinique">🩺 9.23 Le rôle de l'évaluation clinique</a></li><li><a href="#924-levolution-dans-le-temps">🕰️ 9.24 L'évolution dans le temps</a></li><li><a href="#925-la-trajectoire-psychopathologique">📈 9.25 La trajectoire psychopathologique</a></li><li><a href="#926-les-interactions-entre-symptomes">🔄 9.26 Les interactions entre symptômes</a></li><li><a href="#927-les-symptomes-transdiagnostiques">🧠 9.27 Les symptômes transdiagnostiques</a></li><li><a href="#928-le-role-de-la-personnalite">🪞 9.28 Le rôle de la personnalité</a></li><li><a href="#929-le-role-des-mecanismes-de-defense">🧠 9.29 Le rôle des mécanismes de défense</a></li><li><a href="#930-le-role-des-strategies-dadaptation">🧩 9.30 Le rôle des stratégies d'adaptation</a></li><li><a href="#931-la-deregulation-emotionnelle">🧠 9.31 La dérégulation émotionnelle</a></li><li><a href="#932-les-cycles-psychopathologiques">🔄 9.32 Les cycles psychopathologiques</a></li><li><a href="#933-les-interactions-entre-symptomes-et-environnement">🧠 9.33 Les interactions entre symptômes et environnement</a></li><li><a href="#934-les-facteurs-genetiques-et-environnementaux">🧬 9.34 Les facteurs génétiques et environnementaux</a></li><li><a href="#935-la-plasticite-et-la-psychopathologie">🧠 9.35 La plasticité et la psychopathologie</a></li><li><a href="#936-la-culture-et-la-psychopathologie">🌍 9.36 La culture et la psychopathologie</a></li><li><a href="#937-psychopathologie-et-cerveau">🧠 9.37 Psychopathologie et cerveau</a></li><li><a href="#938-psychopathologie-et-diagnostic">⚖️ 9.38 Psychopathologie et diagnostic</a></li><li><a href="#939-les-limites-de-la-psychopathologie">🔬 9.39 Les limites de la psychopathologie</a></li><li><a href="#940-pourquoi-etudier-la-psychopathologie-generale">🌌 9.40 Pourquoi étudier la psychopathologie générale ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -54,7 +65,6 @@
         <line x1="35" y1="98" x2="85" y2="98"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#91-quest-ce-que-la-psychopathologie">🩺 9.1 Qu'est-ce que la psychopathologie ?</a></li><li><a href="#92-symptome-signe-syndrome-et-trouble">🔎 9.2 Symptôme, signe, syndrome et trouble</a></li><li><a href="#93-la-souffrance-psychologique">🧠 9.3 La souffrance psychologique</a></li><li><a href="#94-lalteration-du-fonctionnement">⚙️ 9.4 L'altération du fonctionnement</a></li><li><a href="#95-normalite-et-psychopathologie">📏 9.5 Normalité et psychopathologie</a></li><li><a href="#96-limportance-du-contexte">🌍 9.6 L'importance du contexte</a></li><li><a href="#97-les-facteurs-biologiques">🧬 9.7 Les facteurs biologiques</a></li><li><a href="#98-les-facteurs-cognitifs">🧠 9.8 Les facteurs cognitifs</a></li><li><a href="#99-les-facteurs-emotionnels">❤️ 9.9 Les facteurs émotionnels</a></li><li><a href="#910-les-facteurs-comportementaux">🧩 9.10 Les facteurs comportementaux</a></li><li><a href="#911-les-facteurs-de-maintien">🔄 9.11 Les facteurs de maintien</a></li><li><a href="#912-les-facteurs-de-vulnerabilite">🌱 9.12 Les facteurs de vulnérabilité</a></li><li><a href="#913-les-facteurs-precipitants">⚡ 9.13 Les facteurs précipitants</a></li><li><a href="#914-les-facteurs-de-protection">🛡️ 9.14 Les facteurs de protection</a></li><li><a href="#915-le-modele-vulnerabilite-stress">🧠 9.15 Le modèle vulnérabilité stress</a></li><li><a href="#916-le-modele-biopsychosocial">🧬 9.16 Le modèle biopsychosocial</a></li><li><a href="#917-les-modeles-transdiagnostiques">🔄 9.17 Les modèles transdiagnostiques</a></li><li><a href="#918-les-modeles-categoriels">📦 9.18 Les modèles catégoriels</a></li><li><a href="#919-les-modeles-dimensionnels">📊 9.19 Les modèles dimensionnels</a></li><li><a href="#920-categories-et-dimensions">🧩 9.20 Catégories et dimensions</a></li><li><a href="#921-la-comorbidite">🧠 9.21 La comorbidité</a></li><li><a href="#922-le-diagnostic-differentiel">🔀 9.22 Le diagnostic différentiel</a></li><li><a href="#923-le-role-de-levaluation-clinique">🩺 9.23 Le rôle de l'évaluation clinique</a></li><li><a href="#924-levolution-dans-le-temps">🕰️ 9.24 L'évolution dans le temps</a></li><li><a href="#925-la-trajectoire-psychopathologique">📈 9.25 La trajectoire psychopathologique</a></li><li><a href="#926-les-interactions-entre-symptomes">🔄 9.26 Les interactions entre symptômes</a></li><li><a href="#927-les-symptomes-transdiagnostiques">🧠 9.27 Les symptômes transdiagnostiques</a></li><li><a href="#928-le-role-de-la-personnalite">🪞 9.28 Le rôle de la personnalité</a></li><li><a href="#929-le-role-des-mecanismes-de-defense">🧠 9.29 Le rôle des mécanismes de défense</a></li><li><a href="#930-le-role-des-strategies-dadaptation">🧩 9.30 Le rôle des stratégies d'adaptation</a></li><li><a href="#931-la-deregulation-emotionnelle">🧠 9.31 La dérégulation émotionnelle</a></li><li><a href="#932-les-cycles-psychopathologiques">🔄 9.32 Les cycles psychopathologiques</a></li><li><a href="#933-les-interactions-entre-symptomes-et-environnement">🧠 9.33 Les interactions entre symptômes et environnement</a></li><li><a href="#934-les-facteurs-genetiques-et-environnementaux">🧬 9.34 Les facteurs génétiques et environnementaux</a></li><li><a href="#935-la-plasticite-et-la-psychopathologie">🧠 9.35 La plasticité et la psychopathologie</a></li><li><a href="#936-la-culture-et-la-psychopathologie">🌍 9.36 La culture et la psychopathologie</a></li><li><a href="#937-psychopathologie-et-cerveau">🧠 9.37 Psychopathologie et cerveau</a></li><li><a href="#938-psychopathologie-et-diagnostic">⚖️ 9.38 Psychopathologie et diagnostic</a></li><li><a href="#939-les-limites-de-la-psychopathologie">🔬 9.39 Les limites de la psychopathologie</a></li><li><a href="#940-pourquoi-etudier-la-psychopathologie-generale">🌌 9.40 Pourquoi étudier la psychopathologie générale ?</a></li></ul></nav>
     <div class="article-body">
       <p>La psychopathologie est l'étude des <strong>manifestations psychologiques problématiques</strong>, de leur organisation, de leur évolution et des mécanismes susceptibles de les expliquer.</p>
 <p>Elle s'intéresse notamment aux :</p>
@@ -738,6 +748,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -919,47 +949,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

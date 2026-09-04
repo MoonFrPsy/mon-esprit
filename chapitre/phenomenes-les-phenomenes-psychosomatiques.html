@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#141-la-psychosomatique">🧠 14.1 La psychosomatique</a></li><li><a href="#142-linteraction-corps-esprit">🔄 14.2 L'interaction corps esprit</a></li><li><a href="#143-le-stress-physiologique">⚡ 14.3 Le stress physiologique</a></li><li><a href="#144-les-sensations-corporelles-liees-aux-emotions">❤️ 14.4 Les sensations corporelles liées aux émotions</a></li><li><a href="#145-le-cur-et-les-emotions">🫀 14.5 Le cœur et les émotions</a></li><li><a href="#146-la-respiration-et-les-emotions">🫁 14.6 La respiration et les émotions</a></li><li><a href="#147-la-tension-musculaire">💪 14.7 La tension musculaire</a></li><li><a href="#148-le-stress-et-la-digestion">🍽️ 14.8 Le stress et la digestion</a></li><li><a href="#149-laxe-intestin-cerveau">🧠 14.9 L'axe intestin cerveau</a></li><li><a href="#1410-linteroception">👁️ 14.10 L'interoception</a></li><li><a href="#1411-lattention-portee-au-corps">🔍 14.11 L'attention portée au corps</a></li><li><a href="#1412-le-cycle-sensation-interpretation">🔄 14.12 Le cycle sensation interprétation</a></li><li><a href="#1413-lanxiete-liee-aux-sensations-corporelles">😨 14.13 L'anxiété liée aux sensations corporelles</a></li><li><a href="#1414-leffet-nocebo">🧠 14.14 L'effet nocebo</a></li><li><a href="#1415-leffet-placebo">💊 14.15 L'effet placebo</a></li><li><a href="#1416-les-attentes-et-les-symptomes">🧠 14.16 Les attentes et les symptômes</a></li><li><a href="#1417-la-douleur-et-les-emotions">🔥 14.17 La douleur et les émotions</a></li><li><a href="#1418-la-douleur-chronique">🔁 14.18 La douleur chronique</a></li><li><a href="#1419-la-sensibilisation">🧠 14.19 La sensibilisation</a></li><li><a href="#1420-la-perception-de-la-temperature">🌡️ 14.20 La perception de la température</a></li><li><a href="#1421-le-stress-et-le-sommeil">💤 14.21 Le stress et le sommeil</a></li><li><a href="#1422-le-stress-et-limmunite">🧠 14.22 Le stress et l'immunité</a></li><li><a href="#1423-le-stress-et-les-hormones">🧬 14.23 Le stress et les hormones</a></li><li><a href="#1424-le-systeme-nerveux-autonome">🧠 14.24 Le système nerveux autonome</a></li><li><a href="#1425-la-regulation-physiologique-par-les-interactions-sociales">🫂 14.25 La régulation physiologique par les interactions sociales</a></li><li><a href="#1426-la-somatisation">🧠 14.26 La somatisation</a></li><li><a href="#1427-le-trouble-a-symptomatologie-somatique">🩺 14.27 Le trouble à symptomatologie somatique</a></li><li><a href="#1428-les-symptomes-fonctionnels">🧠 14.28 Les symptômes fonctionnels</a></li><li><a href="#1429-le-role-du-contexte">🔄 14.29 Le rôle du contexte</a></li><li><a href="#1430-le-cerveau-comme-interprete-des-sensations">🧠 14.30 Le cerveau comme interprète des sensations</a></li><li><a href="#1431-les-emotions-et-le-systeme-cardiovasculaire">❤️ 14.31 Les émotions et le système cardiovasculaire</a></li><li><a href="#1432-les-emotions-et-le-systeme-digestif">🧠 14.32 Les émotions et le système digestif</a></li><li><a href="#1433-le-corps-pendant-les-emotions-intenses">💤 14.33 Le corps pendant les émotions intenses</a></li><li><a href="#1434-la-psychoneuroimmunologie">🔬 14.34 La psychoneuroimmunologie</a></li><li><a href="#1435-la-psychophysiologie">🧬 14.35 La psychophysiologie</a></li><li><a href="#1436-le-biofeedback">🔄 14.36 Le biofeedback</a></li><li><a href="#1437-la-dissociation-entre-sensation-et-interpretation">🧠 14.37 La dissociation entre sensation et interprétation</a></li><li><a href="#1438-corps-et-psychologie-ne-signifie-pas-tout-est-psychologique">⚠️ 14.38 Corps et psychologie ne signifie pas « tout est psychologique »</a></li><li><a href="#1439-pourquoi-les-phenomenes-psychosomatiques-sont-ils-complexes">🧩 14.39 Pourquoi les phénomènes psychosomatiques sont-ils complexes ?</a></li><li><a href="#1440-pourquoi-etudier-les-phenomenes-psychosomatiques">🔬 14.40 Pourquoi étudier les phénomènes psychosomatiques ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -49,7 +60,6 @@
         <line x1="116" y1="60" x2="105" y2="60"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#141-la-psychosomatique">🧠 14.1 La psychosomatique</a></li><li><a href="#142-linteraction-corps-esprit">🔄 14.2 L'interaction corps esprit</a></li><li><a href="#143-le-stress-physiologique">⚡ 14.3 Le stress physiologique</a></li><li><a href="#144-les-sensations-corporelles-liees-aux-emotions">❤️ 14.4 Les sensations corporelles liées aux émotions</a></li><li><a href="#145-le-cur-et-les-emotions">🫀 14.5 Le cœur et les émotions</a></li><li><a href="#146-la-respiration-et-les-emotions">🫁 14.6 La respiration et les émotions</a></li><li><a href="#147-la-tension-musculaire">💪 14.7 La tension musculaire</a></li><li><a href="#148-le-stress-et-la-digestion">🍽️ 14.8 Le stress et la digestion</a></li><li><a href="#149-laxe-intestin-cerveau">🧠 14.9 L'axe intestin cerveau</a></li><li><a href="#1410-linteroception">👁️ 14.10 L'interoception</a></li><li><a href="#1411-lattention-portee-au-corps">🔍 14.11 L'attention portée au corps</a></li><li><a href="#1412-le-cycle-sensation-interpretation">🔄 14.12 Le cycle sensation interprétation</a></li><li><a href="#1413-lanxiete-liee-aux-sensations-corporelles">😨 14.13 L'anxiété liée aux sensations corporelles</a></li><li><a href="#1414-leffet-nocebo">🧠 14.14 L'effet nocebo</a></li><li><a href="#1415-leffet-placebo">💊 14.15 L'effet placebo</a></li><li><a href="#1416-les-attentes-et-les-symptomes">🧠 14.16 Les attentes et les symptômes</a></li><li><a href="#1417-la-douleur-et-les-emotions">🔥 14.17 La douleur et les émotions</a></li><li><a href="#1418-la-douleur-chronique">🔁 14.18 La douleur chronique</a></li><li><a href="#1419-la-sensibilisation">🧠 14.19 La sensibilisation</a></li><li><a href="#1420-la-perception-de-la-temperature">🌡️ 14.20 La perception de la température</a></li><li><a href="#1421-le-stress-et-le-sommeil">💤 14.21 Le stress et le sommeil</a></li><li><a href="#1422-le-stress-et-limmunite">🧠 14.22 Le stress et l'immunité</a></li><li><a href="#1423-le-stress-et-les-hormones">🧬 14.23 Le stress et les hormones</a></li><li><a href="#1424-le-systeme-nerveux-autonome">🧠 14.24 Le système nerveux autonome</a></li><li><a href="#1425-la-regulation-physiologique-par-les-interactions-sociales">🫂 14.25 La régulation physiologique par les interactions sociales</a></li><li><a href="#1426-la-somatisation">🧠 14.26 La somatisation</a></li><li><a href="#1427-le-trouble-a-symptomatologie-somatique">🩺 14.27 Le trouble à symptomatologie somatique</a></li><li><a href="#1428-les-symptomes-fonctionnels">🧠 14.28 Les symptômes fonctionnels</a></li><li><a href="#1429-le-role-du-contexte">🔄 14.29 Le rôle du contexte</a></li><li><a href="#1430-le-cerveau-comme-interprete-des-sensations">🧠 14.30 Le cerveau comme interprète des sensations</a></li><li><a href="#1431-les-emotions-et-le-systeme-cardiovasculaire">❤️ 14.31 Les émotions et le système cardiovasculaire</a></li><li><a href="#1432-les-emotions-et-le-systeme-digestif">🧠 14.32 Les émotions et le système digestif</a></li><li><a href="#1433-le-corps-pendant-les-emotions-intenses">💤 14.33 Le corps pendant les émotions intenses</a></li><li><a href="#1434-la-psychoneuroimmunologie">🔬 14.34 La psychoneuroimmunologie</a></li><li><a href="#1435-la-psychophysiologie">🧬 14.35 La psychophysiologie</a></li><li><a href="#1436-le-biofeedback">🔄 14.36 Le biofeedback</a></li><li><a href="#1437-la-dissociation-entre-sensation-et-interpretation">🧠 14.37 La dissociation entre sensation et interprétation</a></li><li><a href="#1438-corps-et-psychologie-ne-signifie-pas-tout-est-psychologique">⚠️ 14.38 Corps et psychologie ne signifie pas « tout est psychologique »</a></li><li><a href="#1439-pourquoi-les-phenomenes-psychosomatiques-sont-ils-complexes">🧩 14.39 Pourquoi les phénomènes psychosomatiques sont-ils complexes ?</a></li><li><a href="#1440-pourquoi-etudier-les-phenomenes-psychosomatiques">🔬 14.40 Pourquoi étudier les phénomènes psychosomatiques ?</a></li></ul></nav>
     <div class="article-body">
       <p>Les phénomènes psychosomatiques correspondent aux interactions entre les processus psychologiques et le fonctionnement du corps.</p>
 <p>Les émotions, le stress, les pensées et certains états psychologiques peuvent influencer des fonctions corporelles. Cela ne signifie pas qu'un symptôme physique est « imaginaire » ou qu'il est forcément provoqué par la psychologie.</p>
@@ -500,6 +510,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -681,47 +711,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

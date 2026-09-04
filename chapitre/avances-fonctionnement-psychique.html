@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#21-quest-ce-que-le-fonctionnement-psychique">🧠 2.1 Qu'est-ce que le fonctionnement psychique ?</a></li><li><a href="#22-le-fonctionnement-psychique-comme-systeme">🧩 2.2 Le fonctionnement psychique comme système</a></li><li><a href="#23-les-processus-conscients">🧠 2.3 Les processus conscients</a></li><li><a href="#24-les-processus-non-conscients">🌑 2.4 Les processus non conscients</a></li><li><a href="#25-les-representations-mentales">🪞 2.5 Les représentations mentales</a></li><li><a href="#26-la-perception-et-linterpretation">🧠 2.6 La perception et l'interprétation</a></li><li><a href="#27-lattention-dans-le-fonctionnement-psychique">👁️ 2.7 L'attention dans le fonctionnement psychique</a></li><li><a href="#28-le-role-de-la-memoire">💾 2.8 Le rôle de la mémoire</a></li><li><a href="#29-les-pensees">💭 2.9 Les pensées</a></li><li><a href="#210-les-pensees-automatiques">🔄 2.10 Les pensées automatiques</a></li><li><a href="#211-les-emotions-dans-le-fonctionnement-psychique">❤️ 2.11 Les émotions dans le fonctionnement psychique</a></li><li><a href="#212-la-motivation">🎯 2.12 La motivation</a></li><li><a href="#213-les-objectifs-psychologiques">🧠 2.13 Les objectifs psychologiques</a></li><li><a href="#214-le-conflit-psychique">⚔️ 2.14 Le conflit psychique</a></li><li><a href="#215-lambivalence-psychologique">🔀 2.15 L'ambivalence psychologique</a></li><li><a href="#216-limage-de-soi">🪞 2.16 L'image de soi</a></li><li><a href="#217-le-concept-de-soi">🧩 2.17 Le concept de soi</a></li><li><a href="#218-la-metacognition">🧠 2.18 La métacognition</a></li><li><a href="#219-lintrospection">🪞 2.19 L'introspection</a></li><li><a href="#220-la-regulation-cognitive">🧠 2.20 La régulation cognitive</a></li><li><a href="#221-la-regulation-emotionnelle">❤️ 2.21 La régulation émotionnelle</a></li><li><a href="#222-les-mecanismes-de-defense">🛡️ 2.22 Les mécanismes de défense</a></li><li><a href="#223-les-strategies-dadaptation">🧩 2.23 Les stratégies d'adaptation</a></li><li><a href="#224-les-habitudes-psychologiques">🔄 2.24 Les habitudes psychologiques</a></li><li><a href="#225-les-automatismes">🧠 2.25 Les automatismes</a></li><li><a href="#226-linhibition">🚦 2.26 L'inhibition</a></li><li><a href="#227-la-flexibilite-psychologique">🔄 2.27 La flexibilité psychologique</a></li><li><a href="#228-la-rigidite-psychologique">🧱 2.28 La rigidité psychologique</a></li><li><a href="#229-ladaptation-psychologique">🧠 2.29 L'adaptation psychologique</a></li><li><a href="#230-linfluence-de-lenvironnement">🌍 2.30 L'influence de l'environnement</a></li><li><a href="#231-les-interactions-sociales">🧑‍🤝‍🧑 2.31 Les interactions sociales</a></li><li><a href="#232-la-cognition-sociale">🧠 2.32 La cognition sociale</a></li><li><a href="#233-les-representations-de-soi-et-des-autres">🪞 2.33 Les représentations de soi et des autres</a></li><li><a href="#234-les-boucles-de-retroaction">🔁 2.34 Les boucles de rétroaction</a></li><li><a href="#235-les-interactions-entre-cognition-et-emotion">🧠 2.35 Les interactions entre cognition et émotion</a></li><li><a href="#236-les-interactions-entre-cerveau-et-corps">🫀 2.36 Les interactions entre cerveau et corps</a></li><li><a href="#237-les-differences-individuelles">🧩 2.37 Les différences individuelles</a></li><li><a href="#238-le-fonctionnement-psychique-evolue-t-il">🔄 2.38 Le fonctionnement psychique évolue-t-il ?</a></li><li><a href="#239-peut-on-comprendre-completement-le-fonctionnement-psychique">🧠 2.39 Peut-on comprendre complètement le fonctionnement psychique ?</a></li><li><a href="#240-pourquoi-etudier-le-fonctionnement-psychique">🌌 2.40 Pourquoi étudier le fonctionnement psychique ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -54,7 +65,6 @@
         <line x1="35" y1="98" x2="85" y2="98"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#21-quest-ce-que-le-fonctionnement-psychique">🧠 2.1 Qu'est-ce que le fonctionnement psychique ?</a></li><li><a href="#22-le-fonctionnement-psychique-comme-systeme">🧩 2.2 Le fonctionnement psychique comme système</a></li><li><a href="#23-les-processus-conscients">🧠 2.3 Les processus conscients</a></li><li><a href="#24-les-processus-non-conscients">🌑 2.4 Les processus non conscients</a></li><li><a href="#25-les-representations-mentales">🪞 2.5 Les représentations mentales</a></li><li><a href="#26-la-perception-et-linterpretation">🧠 2.6 La perception et l'interprétation</a></li><li><a href="#27-lattention-dans-le-fonctionnement-psychique">👁️ 2.7 L'attention dans le fonctionnement psychique</a></li><li><a href="#28-le-role-de-la-memoire">💾 2.8 Le rôle de la mémoire</a></li><li><a href="#29-les-pensees">💭 2.9 Les pensées</a></li><li><a href="#210-les-pensees-automatiques">🔄 2.10 Les pensées automatiques</a></li><li><a href="#211-les-emotions-dans-le-fonctionnement-psychique">❤️ 2.11 Les émotions dans le fonctionnement psychique</a></li><li><a href="#212-la-motivation">🎯 2.12 La motivation</a></li><li><a href="#213-les-objectifs-psychologiques">🧠 2.13 Les objectifs psychologiques</a></li><li><a href="#214-le-conflit-psychique">⚔️ 2.14 Le conflit psychique</a></li><li><a href="#215-lambivalence-psychologique">🔀 2.15 L'ambivalence psychologique</a></li><li><a href="#216-limage-de-soi">🪞 2.16 L'image de soi</a></li><li><a href="#217-le-concept-de-soi">🧩 2.17 Le concept de soi</a></li><li><a href="#218-la-metacognition">🧠 2.18 La métacognition</a></li><li><a href="#219-lintrospection">🪞 2.19 L'introspection</a></li><li><a href="#220-la-regulation-cognitive">🧠 2.20 La régulation cognitive</a></li><li><a href="#221-la-regulation-emotionnelle">❤️ 2.21 La régulation émotionnelle</a></li><li><a href="#222-les-mecanismes-de-defense">🛡️ 2.22 Les mécanismes de défense</a></li><li><a href="#223-les-strategies-dadaptation">🧩 2.23 Les stratégies d'adaptation</a></li><li><a href="#224-les-habitudes-psychologiques">🔄 2.24 Les habitudes psychologiques</a></li><li><a href="#225-les-automatismes">🧠 2.25 Les automatismes</a></li><li><a href="#226-linhibition">🚦 2.26 L'inhibition</a></li><li><a href="#227-la-flexibilite-psychologique">🔄 2.27 La flexibilité psychologique</a></li><li><a href="#228-la-rigidite-psychologique">🧱 2.28 La rigidité psychologique</a></li><li><a href="#229-ladaptation-psychologique">🧠 2.29 L'adaptation psychologique</a></li><li><a href="#230-linfluence-de-lenvironnement">🌍 2.30 L'influence de l'environnement</a></li><li><a href="#231-les-interactions-sociales">🧑‍🤝‍🧑 2.31 Les interactions sociales</a></li><li><a href="#232-la-cognition-sociale">🧠 2.32 La cognition sociale</a></li><li><a href="#233-les-representations-de-soi-et-des-autres">🪞 2.33 Les représentations de soi et des autres</a></li><li><a href="#234-les-boucles-de-retroaction">🔁 2.34 Les boucles de rétroaction</a></li><li><a href="#235-les-interactions-entre-cognition-et-emotion">🧠 2.35 Les interactions entre cognition et émotion</a></li><li><a href="#236-les-interactions-entre-cerveau-et-corps">🫀 2.36 Les interactions entre cerveau et corps</a></li><li><a href="#237-les-differences-individuelles">🧩 2.37 Les différences individuelles</a></li><li><a href="#238-le-fonctionnement-psychique-evolue-t-il">🔄 2.38 Le fonctionnement psychique évolue-t-il ?</a></li><li><a href="#239-peut-on-comprendre-completement-le-fonctionnement-psychique">🧠 2.39 Peut-on comprendre complètement le fonctionnement psychique ?</a></li><li><a href="#240-pourquoi-etudier-le-fonctionnement-psychique">🌌 2.40 Pourquoi étudier le fonctionnement psychique ?</a></li></ul></nav>
     <div class="article-body">
       <p>Le fonctionnement psychique désigne l'ensemble des processus par lesquels une personne perçoit son environnement, traite les informations, ressent des émotions, forme des représentations, construit des pensées, prend des décisions et adapte son comportement.</p>
 <p>Il ne correspond pas à une seule fonction du cerveau ou à un mécanisme unique. Il résulte de l'interaction permanente entre de nombreux processus.</p>
@@ -651,6 +661,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -832,47 +862,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

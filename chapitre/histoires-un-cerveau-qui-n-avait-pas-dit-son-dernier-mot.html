@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#41-une-histoire-presque-impossible-a-imaginer">🧠 4.1 Une histoire presque impossible à imaginer</a></li><li><a href="#42-lavc">🧠 4.2 L'AVC</a></li><li><a href="#43-une-lesion-importante-ne-signifie-pas-necessairement-une-absence-totale-de-recuperation">🧩 4.3 Une lésion importante ne signifie pas nécessairement une absence totale de récupération</a></li><li><a href="#44-pendant-longtemps-la-recuperation-semblait-terminee">🧠 4.4 Pendant longtemps, la récupération semblait terminée</a></li><li><a href="#45-le-changement-commence-avec-une-activite-inattendue">🏊 4.5 Le changement commence avec une activité inattendue</a></li><li><a href="#46-une-main-consideree-comme-presque-inutilisable">🧠 4.6 Une main considérée comme presque inutilisable</a></li><li><a href="#47-la-reeducation-commence">🔄 4.7 La rééducation commence</a></li><li><a href="#48-pourquoi-repeter-un-mouvement">🧠 4.8 Pourquoi répéter un mouvement ?</a></li><li><a href="#49-le-cerveau-ne-fonctionne-pas-comme-une-carte-rigide">🧩 4.9 Le cerveau ne fonctionne pas comme une carte rigide</a></li><li><a href="#410-le-concept-de-reorganisation-fonctionnelle">🧠 4.10 Le concept de réorganisation fonctionnelle</a></li><li><a href="#411-le-role-de-lautre-hemisphere">🧠 4.11 Le rôle de l'autre hémisphère</a></li><li><a href="#412-comment-les-chercheurs-ont-ils-observe-ces-changements">🔬 4.12 Comment les chercheurs ont-ils observé ces changements ?</a></li><li><a href="#413-le-cerveau-change-avec-le-comportement">🧠 4.13 Le cerveau change avec le comportement</a></li><li><a href="#414-une-boucle-dapprentissage">🔄 4.14 Une boucle d'apprentissage</a></li><li><a href="#415-la-recuperation-na-pas-ete-magique">🧠 4.15 La récupération n'a pas été magique</a></li><li><a href="#416-limportance-de-lintensite">🏋️ 4.16 L'importance de l'intensité</a></li><li><a href="#417-la-plasticite-nest-pas-toujours-positive">🧠 4.17 La plasticité n'est pas toujours positive</a></li><li><a href="#418-le-cerveau-sadapte-a-ce-qui-est-repete">🧩 4.18 Le cerveau s'adapte à ce qui est répété</a></li><li><a href="#419-la-recuperation-peut-donc-etre-consideree-comme-un-nouvel-apprentissage">🧠 4.19 La récupération peut donc être considérée comme un nouvel apprentissage</a></li><li><a href="#420-la-main-commence-progressivement-a-fonctionner">🧠 4.20 La main commence progressivement à fonctionner</a></li><li><a href="#421-le-test-qui-symbolise-la-recuperation">🪙 4.21 Le test qui symbolise la récupération</a></li><li><a href="#422-les-examens-cerebraux-racontent-une-deuxieme-histoire">🧠 4.22 Les examens cérébraux racontent une deuxième histoire</a></li><li><a href="#423-une-recuperation-observee-presque-deux-decennies-plus-tard">🔬 4.23 Une récupération observée presque deux décennies plus tard</a></li><li><a href="#424-une-autre-etude-va-encore-plus-loin">🧠 4.24 Une autre étude va encore plus loin</a></li><li><a href="#425-pourquoi-cette-histoire-bouleverse-certaines-idees">🌌 4.25 Pourquoi cette histoire bouleverse certaines idées</a></li><li><a href="#426-mais-attention-au-mot-reparer">🧠 4.26 Mais attention au mot « réparer »</a></li><li><a href="#427-le-cerveau-travaille-en-reseau">🧠 4.27 Le cerveau travaille en réseau</a></li><li><a href="#428-une-region-peut-perdre-une-partie-de-son-role">🧩 4.28 Une région peut perdre une partie de son rôle</a></li><li><a href="#429-lindividualite-du-cerveau">🧠 4.29 L'individualité du cerveau</a></li><li><a href="#430-pourquoi-certaines-personnes-recuperent-davantage">🌱 4.30 Pourquoi certaines personnes récupèrent davantage</a></li><li><a href="#431-la-motivation-et-le-cerveau">🧠 4.31 La motivation et le cerveau</a></li><li><a href="#432-une-boucle-entre-cerveau-et-comportement">🔄 4.32 Une boucle entre cerveau et comportement</a></li><li><a href="#433-la-plasticite-peut-continuer-tres-longtemps">🧠 4.33 La plasticité peut continuer très longtemps</a></li><li><a href="#434-une-decouverte-importante-pour-la-recherche">🔬 4.34 Une découverte importante pour la recherche</a></li><li><a href="#435-la-difference-entre-possibilite-et-garantie">🧠 4.35 La différence entre possibilité et garantie</a></li><li><a href="#436-les-limites-de-la-neuroplasticite">⚠️ 4.36 Les limites de la neuroplasticité</a></li><li><a href="#437-pourquoi-les-premieres-semaines-restent-importantes">🧠 4.37 Pourquoi les premières semaines restent importantes</a></li><li><a href="#438-le-cerveau-nest-pas-une-machine-figee">🧩 4.38 Le cerveau n'est pas une machine figée</a></li><li><a href="#439-ce-que-cette-histoire-nous-apprend-sur-lapprentissage">🌱 4.39 Ce que cette histoire nous apprend sur l'apprentissage</a></li><li><a href="#440-le-cerveau-garde-une-histoire">🧠 4.40 Le cerveau garde une histoire</a></li><li><a href="#441-une-recuperation-nest-jamais-simplement-cerebrale">🌌 4.41 Une récupération n'est jamais simplement cérébrale</a></li><li><a href="#442-la-psychologie-intervient-aussi">🧠 4.42 La psychologie intervient aussi</a></li><li><a href="#443-le-cerveau-et-lenvironnement-forment-un-systeme">🔄 4.43 Le cerveau et l'environnement forment un système</a></li><li><a href="#444-pourquoi-cette-histoire-est-particulierement-importante">🧠 4.44 Pourquoi cette histoire est particulièrement importante</a></li><li><a href="#445-dautres-cas-confirment-le-principe">🔬 4.45 D'autres cas confirment le principe</a></li><li><a href="#446-mais-chaque-histoire-reste-unique">🧠 4.46 Mais chaque histoire reste unique</a></li><li><a href="#447-pourquoi-les-scientifiques-etudient-ces-cas">🧩 4.47 Pourquoi les scientifiques étudient ces cas</a></li><li><a href="#448-la-notion-de-potentiel">🧠 4.48 La notion de potentiel</a></li><li><a href="#449-le-cerveau-peut-changer-sans-redevenir-identique">🌱 4.49 Le cerveau peut changer sans redevenir identique</a></li><li><a href="#450-la-plasticite-comme-principe-fondamental">🧠 4.50 La plasticité comme principe fondamental</a></li><li><a href="#451-une-histoire-qui-change-la-maniere-de-voir-le-cerveau">🌌 4.51 Une histoire qui change la manière de voir le cerveau</a></li><li><a href="#452-ce-que-cette-histoire-dit-finalement-de-letre-humain">❤️ 4.52 Ce que cette histoire dit finalement de l'être humain</a></li><li><a href="#453-la-phrase-a-retenir">🧠 4.53 La phrase à retenir</a></li><li><a href="#454-une-derniere-reflexion">🌌 4.54 Une dernière réflexion</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#41-une-histoire-presque-impossible-a-imaginer">🧠 4.1 Une histoire presque impossible à imaginer</a></li><li><a href="#42-lavc">🧠 4.2 L'AVC</a></li><li><a href="#43-une-lesion-importante-ne-signifie-pas-necessairement-une-absence-totale-de-recuperation">🧩 4.3 Une lésion importante ne signifie pas nécessairement une absence totale de récupération</a></li><li><a href="#44-pendant-longtemps-la-recuperation-semblait-terminee">🧠 4.4 Pendant longtemps, la récupération semblait terminée</a></li><li><a href="#45-le-changement-commence-avec-une-activite-inattendue">🏊 4.5 Le changement commence avec une activité inattendue</a></li><li><a href="#46-une-main-consideree-comme-presque-inutilisable">🧠 4.6 Une main considérée comme presque inutilisable</a></li><li><a href="#47-la-reeducation-commence">🔄 4.7 La rééducation commence</a></li><li><a href="#48-pourquoi-repeter-un-mouvement">🧠 4.8 Pourquoi répéter un mouvement ?</a></li><li><a href="#49-le-cerveau-ne-fonctionne-pas-comme-une-carte-rigide">🧩 4.9 Le cerveau ne fonctionne pas comme une carte rigide</a></li><li><a href="#410-le-concept-de-reorganisation-fonctionnelle">🧠 4.10 Le concept de réorganisation fonctionnelle</a></li><li><a href="#411-le-role-de-lautre-hemisphere">🧠 4.11 Le rôle de l'autre hémisphère</a></li><li><a href="#412-comment-les-chercheurs-ont-ils-observe-ces-changements">🔬 4.12 Comment les chercheurs ont-ils observé ces changements ?</a></li><li><a href="#413-le-cerveau-change-avec-le-comportement">🧠 4.13 Le cerveau change avec le comportement</a></li><li><a href="#414-une-boucle-dapprentissage">🔄 4.14 Une boucle d'apprentissage</a></li><li><a href="#415-la-recuperation-na-pas-ete-magique">🧠 4.15 La récupération n'a pas été magique</a></li><li><a href="#416-limportance-de-lintensite">🏋️ 4.16 L'importance de l'intensité</a></li><li><a href="#417-la-plasticite-nest-pas-toujours-positive">🧠 4.17 La plasticité n'est pas toujours positive</a></li><li><a href="#418-le-cerveau-sadapte-a-ce-qui-est-repete">🧩 4.18 Le cerveau s'adapte à ce qui est répété</a></li><li><a href="#419-la-recuperation-peut-donc-etre-consideree-comme-un-nouvel-apprentissage">🧠 4.19 La récupération peut donc être considérée comme un nouvel apprentissage</a></li><li><a href="#420-la-main-commence-progressivement-a-fonctionner">🧠 4.20 La main commence progressivement à fonctionner</a></li><li><a href="#421-le-test-qui-symbolise-la-recuperation">🪙 4.21 Le test qui symbolise la récupération</a></li><li><a href="#422-les-examens-cerebraux-racontent-une-deuxieme-histoire">🧠 4.22 Les examens cérébraux racontent une deuxième histoire</a></li><li><a href="#423-une-recuperation-observee-presque-deux-decennies-plus-tard">🔬 4.23 Une récupération observée presque deux décennies plus tard</a></li><li><a href="#424-une-autre-etude-va-encore-plus-loin">🧠 4.24 Une autre étude va encore plus loin</a></li><li><a href="#425-pourquoi-cette-histoire-bouleverse-certaines-idees">🌌 4.25 Pourquoi cette histoire bouleverse certaines idées</a></li><li><a href="#426-mais-attention-au-mot-reparer">🧠 4.26 Mais attention au mot « réparer »</a></li><li><a href="#427-le-cerveau-travaille-en-reseau">🧠 4.27 Le cerveau travaille en réseau</a></li><li><a href="#428-une-region-peut-perdre-une-partie-de-son-role">🧩 4.28 Une région peut perdre une partie de son rôle</a></li><li><a href="#429-lindividualite-du-cerveau">🧠 4.29 L'individualité du cerveau</a></li><li><a href="#430-pourquoi-certaines-personnes-recuperent-davantage">🌱 4.30 Pourquoi certaines personnes récupèrent davantage</a></li><li><a href="#431-la-motivation-et-le-cerveau">🧠 4.31 La motivation et le cerveau</a></li><li><a href="#432-une-boucle-entre-cerveau-et-comportement">🔄 4.32 Une boucle entre cerveau et comportement</a></li><li><a href="#433-la-plasticite-peut-continuer-tres-longtemps">🧠 4.33 La plasticité peut continuer très longtemps</a></li><li><a href="#434-une-decouverte-importante-pour-la-recherche">🔬 4.34 Une découverte importante pour la recherche</a></li><li><a href="#435-la-difference-entre-possibilite-et-garantie">🧠 4.35 La différence entre possibilité et garantie</a></li><li><a href="#436-les-limites-de-la-neuroplasticite">⚠️ 4.36 Les limites de la neuroplasticité</a></li><li><a href="#437-pourquoi-les-premieres-semaines-restent-importantes">🧠 4.37 Pourquoi les premières semaines restent importantes</a></li><li><a href="#438-le-cerveau-nest-pas-une-machine-figee">🧩 4.38 Le cerveau n'est pas une machine figée</a></li><li><a href="#439-ce-que-cette-histoire-nous-apprend-sur-lapprentissage">🌱 4.39 Ce que cette histoire nous apprend sur l'apprentissage</a></li><li><a href="#440-le-cerveau-garde-une-histoire">🧠 4.40 Le cerveau garde une histoire</a></li><li><a href="#441-une-recuperation-nest-jamais-simplement-cerebrale">🌌 4.41 Une récupération n'est jamais simplement cérébrale</a></li><li><a href="#442-la-psychologie-intervient-aussi">🧠 4.42 La psychologie intervient aussi</a></li><li><a href="#443-le-cerveau-et-lenvironnement-forment-un-systeme">🔄 4.43 Le cerveau et l'environnement forment un système</a></li><li><a href="#444-pourquoi-cette-histoire-est-particulierement-importante">🧠 4.44 Pourquoi cette histoire est particulièrement importante</a></li><li><a href="#445-dautres-cas-confirment-le-principe">🔬 4.45 D'autres cas confirment le principe</a></li><li><a href="#446-mais-chaque-histoire-reste-unique">🧠 4.46 Mais chaque histoire reste unique</a></li><li><a href="#447-pourquoi-les-scientifiques-etudient-ces-cas">🧩 4.47 Pourquoi les scientifiques étudient ces cas</a></li><li><a href="#448-la-notion-de-potentiel">🧠 4.48 La notion de potentiel</a></li><li><a href="#449-le-cerveau-peut-changer-sans-redevenir-identique">🌱 4.49 Le cerveau peut changer sans redevenir identique</a></li><li><a href="#450-la-plasticite-comme-principe-fondamental">🧠 4.50 La plasticité comme principe fondamental</a></li><li><a href="#451-une-histoire-qui-change-la-maniere-de-voir-le-cerveau">🌌 4.51 Une histoire qui change la manière de voir le cerveau</a></li><li><a href="#452-ce-que-cette-histoire-dit-finalement-de-letre-humain">❤️ 4.52 Ce que cette histoire dit finalement de l'être humain</a></li><li><a href="#453-la-phrase-a-retenir">🧠 4.53 La phrase à retenir</a></li><li><a href="#454-une-derniere-reflexion">🌌 4.54 Une dernière réflexion</a></li></ul></nav>
     <div class="article-body">
       <p>Une histoire vraie de récupération exceptionnelle, de neuroplasticité et de changement cérébral</p>
 <hr />
@@ -871,6 +881,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -1052,47 +1082,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

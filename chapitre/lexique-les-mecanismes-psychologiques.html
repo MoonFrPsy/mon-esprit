@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#51-le-mecanisme-de-defense">🛡️ 5.1 Le mécanisme de défense</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#exemple">💭 Exemple</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#52-le-deni">🚫 5.2 Le déni</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#exemple_1">💭 Exemple</a></li><li><a href="#a-distinguer">⚠️ À distinguer</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#53-la-projection">🪞 5.3 La projection</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#exemple_2">💭 Exemple</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#54-la-rationalisation">🧠 5.4 La rationalisation</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#exemple_3">💭 Exemple</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#55-le-deplacement">↔️ 5.5 Le déplacement</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#exemple_4">💭 Exemple</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#56-la-regression">👶 5.6 La régression</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#exemple_5">💭 Exemple</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#57-lintellectualisation">🧩 5.7 L'intellectualisation</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#exemple_6">💭 Exemple</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#58-lisolation-de-laffect">🧊 5.8 L'isolation de l'affect</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#exemple_7">💭 Exemple</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#59-la-sublimation">🎨 5.9 La sublimation</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#exemple_8">💭 Exemple</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#510-la-formation-reactionnelle">🔄 5.10 La formation réactionnelle</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#exemple_9">💭 Exemple</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#511-lidentification">🧍 5.11 L'identification</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#exemple_10">💭 Exemple</a></li><li><a href="#a-retenir_10">📌 À retenir</a></li></ul></li><li><a href="#512-lintrojection">🧬 5.12 L'introjection</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#exemple_11">💭 Exemple</a></li><li><a href="#a-retenir_11">📌 À retenir</a></li></ul></li><li><a href="#513-la-dissociation">🌫️ 5.13 La dissociation</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#manifestations-possibles">💭 Manifestations possibles</a></li><li><a href="#important">⚠️ Important</a></li><li><a href="#a-retenir_12">📌 À retenir</a></li></ul></li><li><a href="#514-levitement">🚪 5.14 L'évitement</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#exemple_12">💭 Exemple</a></li><li><a href="#cercle-possible">🔄 Cercle possible</a></li><li><a href="#a-retenir_13">📌 À retenir</a></li></ul></li><li><a href="#515-le-refoulement">🧠 5.15 Le refoulement</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#exemple_13">💭 Exemple</a></li><li><a href="#a-distinguer_1">⚠️ À distinguer</a></li><li><a href="#a-retenir_14">📌 À retenir</a></li></ul></li><li><a href="#516-le-clivage">⚫⚪ 5.16 Le clivage</a><ul class="sidebar-sublist"><li><a href="#definition_15">🔎 Définition</a></li><li><a href="#exemple_14">💭 Exemple</a></li><li><a href="#a-retenir_15">📌 À retenir</a></li></ul></li><li><a href="#517-lacting-out-passage-a-lacte">⚡ 5.17 L'acting out / passage à l'acte</a><ul class="sidebar-sublist"><li><a href="#definition_16">🔎 Définition</a></li><li><a href="#exemple_15">💭 Exemple</a></li><li><a href="#a-retenir_16">📌 À retenir</a></li></ul></li><li><a href="#518-la-compensation">⚖️ 5.18 La compensation</a><ul class="sidebar-sublist"><li><a href="#definition_17">🔎 Définition</a></li><li><a href="#exemple_16">💭 Exemple</a></li><li><a href="#a-retenir_17">📌 À retenir</a></li></ul></li><li><a href="#519-lhumour-comme-mecanisme-de-defense">😂 5.19 L'humour comme mécanisme de défense</a><ul class="sidebar-sublist"><li><a href="#definition_18">🔎 Définition</a></li><li><a href="#exemple_17">💭 Exemple</a></li><li><a href="#a-retenir_18">📌 À retenir</a></li></ul></li><li><a href="#520-lannulation-retroactive">🔄 5.20 L'annulation rétroactive</a><ul class="sidebar-sublist"><li><a href="#definition_19">🔎 Définition</a></li><li><a href="#exemple_18">💭 Exemple</a></li><li><a href="#a-retenir_19">📌 À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -47,7 +58,6 @@
                  a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#51-le-mecanisme-de-defense">🛡️ 5.1 Le mécanisme de défense</a></li><li><a href="#52-le-deni">🚫 5.2 Le déni</a></li><li><a href="#53-la-projection">🪞 5.3 La projection</a></li><li><a href="#54-la-rationalisation">🧠 5.4 La rationalisation</a></li><li><a href="#55-le-deplacement">↔️ 5.5 Le déplacement</a></li><li><a href="#56-la-regression">👶 5.6 La régression</a></li><li><a href="#57-lintellectualisation">🧩 5.7 L'intellectualisation</a></li><li><a href="#58-lisolation-de-laffect">🧊 5.8 L'isolation de l'affect</a></li><li><a href="#59-la-sublimation">🎨 5.9 La sublimation</a></li><li><a href="#510-la-formation-reactionnelle">🔄 5.10 La formation réactionnelle</a></li><li><a href="#511-lidentification">🧍 5.11 L'identification</a></li><li><a href="#512-lintrojection">🧬 5.12 L'introjection</a></li><li><a href="#513-la-dissociation">🌫️ 5.13 La dissociation</a></li><li><a href="#514-levitement">🚪 5.14 L'évitement</a></li><li><a href="#515-le-refoulement">🧠 5.15 Le refoulement</a></li><li><a href="#516-le-clivage">⚫⚪ 5.16 Le clivage</a></li><li><a href="#517-lacting-out-passage-a-lacte">⚡ 5.17 L'acting out / passage à l'acte</a></li><li><a href="#518-la-compensation">⚖️ 5.18 La compensation</a></li><li><a href="#519-lhumour-comme-mecanisme-de-defense">😂 5.19 L'humour comme mécanisme de défense</a></li><li><a href="#520-lannulation-retroactive">🔄 5.20 L'annulation rétroactive</a></li></ul></nav>
     <div class="article-body">
       <p>🧠 Les mécanismes psychologiques désignent différents processus par lesquels une personne peut gérer ses émotions, ses pensées, ses conflits internes ou les situations difficiles.</p>
 <blockquote>
@@ -427,6 +437,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -608,47 +638,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

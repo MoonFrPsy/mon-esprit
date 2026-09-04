@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#151-le-trouble-oppositionnel-avec-provocation">🧠 15.1 Le trouble oppositionnel avec provocation</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#152-le-trouble-des-conduites">🧠 15.2 Le trouble des conduites</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#153-le-trouble-explosif-intermittent">🧠 15.3 Le trouble explosif intermittent</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#154-la-dysregulation-emotionnelle">🧠 15.4 La dysrégulation émotionnelle</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#155-limpulsivite">🧠 15.5 L'impulsivité</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#156-le-comportement-agressif">🧠 15.6 Le comportement agressif</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#formes">Formes</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#157-lagressivite-verbale">🧠 15.7 L'agressivité verbale</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#158-lagressivite-physique">🧠 15.8 L'agressivité physique</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#159-la-kleptomanie">🧠 15.9 La kleptomanie</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#particularite_1">Particularité</a></li></ul></li><li><a href="#1510-la-pyromanie">🧠 15.10 La pyromanie</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1511-le-trouble-du-comportement-sexuel-compulsif">🧠 15.11 Le trouble du comportement sexuel compulsif</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#classification">Classification</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1512-les-comportements-transgressifs">🧠 15.12 Les comportements transgressifs</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1513-le-mensonge-pathologique">🧠 15.13 Le mensonge pathologique</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1514-le-comportement-antisocial">🧠 15.14 Le comportement antisocial</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1515-le-trouble-de-la-personnalite-antisociale">🧠 15.15 Le trouble de la personnalité antisociale</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations-possibles_2">Manifestations possibles</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1516-la-provocation">🧠 15.16 La provocation</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1517-la-colere">🧠 15.17 La colère</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#manifestations_11">Manifestations</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1518-lirritabilite">🧠 15.18 L'irritabilité</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#manifestations_12">Manifestations</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1519-la-frustration-et-le-controle-comportemental">🧠 15.19 La frustration et le contrôle comportemental</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#difficultes-possibles">Difficultés possibles</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1520-les-comportements-a-risque">🧠 15.20 Les comportements à risque</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#exemples_1">Exemples</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1521-la-recherche-de-sensations">🧠 15.21 La recherche de sensations</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#manifestations_13">Manifestations</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1522-le-controle-des-impulsions">🧠 15.22 Le contrôle des impulsions</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#difficultes">Difficultés</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1523-limpulsivite-agressive">🧠 15.23 L'impulsivité agressive</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations_14">Manifestations</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1524-lagressivite-instrumentale">🧠 15.24 L'agressivité instrumentale</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#exemples_2">Exemples</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1525-les-comportements-repetitifs-problematiques">🧠 15.25 Les comportements répétitifs problématiques</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#exemples_3">Exemples</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1526-les-consequences-scolaires">🧠 15.26 Les conséquences scolaires</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#manifestations_15">Manifestations</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1527-les-consequences-familiales">🧠 15.27 Les conséquences familiales</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#manifestations_16">Manifestations</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1528-les-consequences-sociales">🧠 15.28 Les conséquences sociales</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#consequences-possibles">Conséquences possibles</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1529-les-facteurs-de-risque">🧠 15.29 Les facteurs de risque</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#facteurs-possibles">Facteurs possibles</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1530-la-comorbidite">🧠 15.30 La comorbidité</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#associations-possibles">Associations possibles</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1531-les-troubles-disruptifs-chez-lenfant">🧠 15.31 Les troubles disruptifs chez l'enfant</a><ul class="sidebar-sublist"><li><a href="#definition_30">Définition</a></li><li><a href="#evaluation">Évaluation</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li><li><a href="#1532-les-troubles-disruptifs-chez-ladolescent">🧠 15.32 Les troubles disruptifs chez l'adolescent</a><ul class="sidebar-sublist"><li><a href="#definition_31">Définition</a></li><li><a href="#particularites">Particularités</a></li><li><a href="#a-retenir_30">À retenir</a></li></ul></li><li><a href="#1533-les-troubles-disruptifs-a-lage-adulte">🧠 15.33 Les troubles disruptifs à l'âge adulte</a><ul class="sidebar-sublist"><li><a href="#definition_32">Définition</a></li><li><a href="#manifestations-possibles_3">Manifestations possibles</a></li><li><a href="#a-retenir_31">À retenir</a></li></ul></li><li><a href="#1534-le-diagnostic-differentiel">🧠 15.34 Le diagnostic différentiel</a><ul class="sidebar-sublist"><li><a href="#definition_33">Définition</a></li><li><a href="#possibilites">Possibilités</a></li><li><a href="#a-retenir_32">À retenir</a></li></ul></li><li><a href="#1535-la-prise-en-charge">🧠 15.35 La prise en charge</a><ul class="sidebar-sublist"><li><a href="#definition_34">Définition</a></li><li><a href="#approches-possibles">Approches possibles</a></li><li><a href="#a-retenir_33">À retenir</a></li></ul></li><li><a href="#1536-la-regulation-de-la-colere">🧠 15.36 La régulation de la colère</a><ul class="sidebar-sublist"><li><a href="#definition_35">Définition</a></li><li><a href="#strategies-possibles">Stratégies possibles</a></li><li><a href="#a-retenir_34">À retenir</a></li></ul></li><li><a href="#1537-la-prevention-des-comportements-problematiques">🧠 15.37 La prévention des comportements problématiques</a><ul class="sidebar-sublist"><li><a href="#definition_36">Définition</a></li><li><a href="#moyens-possibles">Moyens possibles</a></li><li><a href="#a-retenir_35">À retenir</a></li></ul></li><li><a href="#1538-levolution-des-troubles-disruptifs">🧠 15.38 L'évolution des troubles disruptifs</a><ul class="sidebar-sublist"><li><a href="#definition_37">Définition</a></li><li><a href="#facteurs-influencant-levolution">Facteurs influençant l'évolution</a></li><li><a href="#a-retenir_36">À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -48,7 +59,6 @@
         <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#151-le-trouble-oppositionnel-avec-provocation">🧠 15.1 Le trouble oppositionnel avec provocation</a></li><li><a href="#152-le-trouble-des-conduites">🧠 15.2 Le trouble des conduites</a></li><li><a href="#153-le-trouble-explosif-intermittent">🧠 15.3 Le trouble explosif intermittent</a></li><li><a href="#154-la-dysregulation-emotionnelle">🧠 15.4 La dysrégulation émotionnelle</a></li><li><a href="#155-limpulsivite">🧠 15.5 L'impulsivité</a></li><li><a href="#156-le-comportement-agressif">🧠 15.6 Le comportement agressif</a></li><li><a href="#157-lagressivite-verbale">🧠 15.7 L'agressivité verbale</a></li><li><a href="#158-lagressivite-physique">🧠 15.8 L'agressivité physique</a></li><li><a href="#159-la-kleptomanie">🧠 15.9 La kleptomanie</a></li><li><a href="#1510-la-pyromanie">🧠 15.10 La pyromanie</a></li><li><a href="#1511-le-trouble-du-comportement-sexuel-compulsif">🧠 15.11 Le trouble du comportement sexuel compulsif</a></li><li><a href="#1512-les-comportements-transgressifs">🧠 15.12 Les comportements transgressifs</a></li><li><a href="#1513-le-mensonge-pathologique">🧠 15.13 Le mensonge pathologique</a></li><li><a href="#1514-le-comportement-antisocial">🧠 15.14 Le comportement antisocial</a></li><li><a href="#1515-le-trouble-de-la-personnalite-antisociale">🧠 15.15 Le trouble de la personnalité antisociale</a></li><li><a href="#1516-la-provocation">🧠 15.16 La provocation</a></li><li><a href="#1517-la-colere">🧠 15.17 La colère</a></li><li><a href="#1518-lirritabilite">🧠 15.18 L'irritabilité</a></li><li><a href="#1519-la-frustration-et-le-controle-comportemental">🧠 15.19 La frustration et le contrôle comportemental</a></li><li><a href="#1520-les-comportements-a-risque">🧠 15.20 Les comportements à risque</a></li><li><a href="#1521-la-recherche-de-sensations">🧠 15.21 La recherche de sensations</a></li><li><a href="#1522-le-controle-des-impulsions">🧠 15.22 Le contrôle des impulsions</a></li><li><a href="#1523-limpulsivite-agressive">🧠 15.23 L'impulsivité agressive</a></li><li><a href="#1524-lagressivite-instrumentale">🧠 15.24 L'agressivité instrumentale</a></li><li><a href="#1525-les-comportements-repetitifs-problematiques">🧠 15.25 Les comportements répétitifs problématiques</a></li><li><a href="#1526-les-consequences-scolaires">🧠 15.26 Les conséquences scolaires</a></li><li><a href="#1527-les-consequences-familiales">🧠 15.27 Les conséquences familiales</a></li><li><a href="#1528-les-consequences-sociales">🧠 15.28 Les conséquences sociales</a></li><li><a href="#1529-les-facteurs-de-risque">🧠 15.29 Les facteurs de risque</a></li><li><a href="#1530-la-comorbidite">🧠 15.30 La comorbidité</a></li><li><a href="#1531-les-troubles-disruptifs-chez-lenfant">🧠 15.31 Les troubles disruptifs chez l'enfant</a></li><li><a href="#1532-les-troubles-disruptifs-chez-ladolescent">🧠 15.32 Les troubles disruptifs chez l'adolescent</a></li><li><a href="#1533-les-troubles-disruptifs-a-lage-adulte">🧠 15.33 Les troubles disruptifs à l'âge adulte</a></li><li><a href="#1534-le-diagnostic-differentiel">🧠 15.34 Le diagnostic différentiel</a></li><li><a href="#1535-la-prise-en-charge">🧠 15.35 La prise en charge</a></li><li><a href="#1536-la-regulation-de-la-colere">🧠 15.36 La régulation de la colère</a></li><li><a href="#1537-la-prevention-des-comportements-problematiques">🧠 15.37 La prévention des comportements problématiques</a></li><li><a href="#1538-levolution-des-troubles-disruptifs">🧠 15.38 L'évolution des troubles disruptifs</a></li></ul></nav>
     <div class="article-body">
       <h1 id="151-le-trouble-oppositionnel-avec-provocation" class="entry-title hc-1">🧠 15.1 Le trouble oppositionnel avec provocation</h1>
 <h2 id="definition">Définition</h2>
@@ -802,6 +812,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -983,47 +1013,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

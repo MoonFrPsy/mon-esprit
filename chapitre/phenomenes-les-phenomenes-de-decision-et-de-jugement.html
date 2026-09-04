@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#101-la-prise-de-decision">🧩 10.1 La prise de décision</a></li><li><a href="#102-le-jugement">⚖️ 10.2 Le jugement</a></li><li><a href="#103-le-raisonnement">🧠 10.3 Le raisonnement</a></li><li><a href="#104-le-raisonnement-deductif">🔍 10.4 Le raisonnement déductif</a></li><li><a href="#105-le-raisonnement-inductif">🌱 10.5 Le raisonnement inductif</a></li><li><a href="#106-le-raisonnement-heuristique">🔄 10.6 Le raisonnement heuristique</a></li><li><a href="#107-la-decision-intuitive">⚡ 10.7 La décision intuitive</a></li><li><a href="#108-la-decision-deliberee">🐢 10.8 La décision délibérée</a></li><li><a href="#109-le-biais-dancrage">⚓ 10.9 Le biais d'ancrage</a></li><li><a href="#1010-le-biais-de-confirmation">🧠 10.10 Le biais de confirmation</a></li><li><a href="#1011-le-biais-retrospectif">🪞 10.11 Le biais rétrospectif</a></li><li><a href="#1012-le-biais-de-disponibilite">📊 10.12 Le biais de disponibilité</a></li><li><a href="#1013-leffet-de-halo">👑 10.13 L'effet de halo</a></li><li><a href="#1014-leffet-de-cadrage">🎯 10.14 L'effet de cadrage</a></li><li><a href="#1015-laversion-aux-pertes">💰 10.15 L'aversion aux pertes</a></li><li><a href="#1016-la-perception-du-risque">🎲 10.16 La perception du risque</a></li><li><a href="#1017-la-perception-de-la-probabilite">📈 10.17 La perception de la probabilité</a></li><li><a href="#1018-lestimation-subjective">🔮 10.18 L'estimation subjective</a></li><li><a href="#1019-le-calcul-mental-approximatif">🧮 10.19 Le calcul mental approximatif</a></li><li><a href="#1020-leffet-de-cout-irrecuperable">🪤 10.20 L'effet de coût irrécupérable</a></li><li><a href="#1021-le-statu-quo">🔁 10.21 Le statu quo</a></li><li><a href="#1022-le-biais-domission">🚪 10.22 Le biais d'omission</a></li><li><a href="#1023-limpulsivite-decisionnelle">⚡ 10.23 L'impulsivité décisionnelle</a></li><li><a href="#1024-la-gratification-differee">🧠 10.24 La gratification différée</a></li><li><a href="#1025-lescompte-temporel">⏳ 10.25 L'escompte temporel</a></li><li><a href="#1026-la-recherche-de-recompense">🏆 10.26 La recherche de récompense</a></li><li><a href="#1027-la-recherche-de-sensations">⚠️ 10.27 La recherche de sensations</a></li><li><a href="#1028-linfluence-des-emotions-sur-la-decision">🎭 10.28 L'influence des émotions sur la décision</a></li><li><a href="#1029-linfluence-de-la-memoire-sur-les-decisions">🧠 10.29 L'influence de la mémoire sur les décisions</a></li><li><a href="#1030-la-decision-collective">👥 10.30 La décision collective</a></li><li><a href="#1031-la-polarisation-de-groupe">🧩 10.31 La polarisation de groupe</a></li><li><a href="#1032-la-pensee-de-groupe">🧠 10.32 La pensée de groupe</a></li><li><a href="#1033-leffet-de-cadrage-social">👀 10.33 L'effet de cadrage social</a></li><li><a href="#1034-la-confiance-excessive">🔐 10.34 La confiance excessive</a></li><li><a href="#1035-leffet-dunning-kruger">🎯 10.35 L'effet Dunning-Kruger</a></li><li><a href="#1036-la-dissonance-cognitive-dans-la-decision">🔄 10.36 La dissonance cognitive dans la décision</a></li><li><a href="#1037-le-regret-decisionnel">🧠 10.37 Le regret décisionnel</a></li><li><a href="#1038-la-pensee-contrefactuelle">🔮 10.38 La pensée contrefactuelle</a></li><li><a href="#1039-la-paralysie-decisionnelle">🛑 10.39 La paralysie décisionnelle</a></li><li><a href="#1040-pourquoi-etudier-les-phenomenes-de-decision-et-de-jugement">🔬 10.40 Pourquoi étudier les phénomènes de décision et de jugement ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -49,7 +60,6 @@
         <line x1="116" y1="60" x2="105" y2="60"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#101-la-prise-de-decision">🧩 10.1 La prise de décision</a></li><li><a href="#102-le-jugement">⚖️ 10.2 Le jugement</a></li><li><a href="#103-le-raisonnement">🧠 10.3 Le raisonnement</a></li><li><a href="#104-le-raisonnement-deductif">🔍 10.4 Le raisonnement déductif</a></li><li><a href="#105-le-raisonnement-inductif">🌱 10.5 Le raisonnement inductif</a></li><li><a href="#106-le-raisonnement-heuristique">🔄 10.6 Le raisonnement heuristique</a></li><li><a href="#107-la-decision-intuitive">⚡ 10.7 La décision intuitive</a></li><li><a href="#108-la-decision-deliberee">🐢 10.8 La décision délibérée</a></li><li><a href="#109-le-biais-dancrage">⚓ 10.9 Le biais d'ancrage</a></li><li><a href="#1010-le-biais-de-confirmation">🧠 10.10 Le biais de confirmation</a></li><li><a href="#1011-le-biais-retrospectif">🪞 10.11 Le biais rétrospectif</a></li><li><a href="#1012-le-biais-de-disponibilite">📊 10.12 Le biais de disponibilité</a></li><li><a href="#1013-leffet-de-halo">👑 10.13 L'effet de halo</a></li><li><a href="#1014-leffet-de-cadrage">🎯 10.14 L'effet de cadrage</a></li><li><a href="#1015-laversion-aux-pertes">💰 10.15 L'aversion aux pertes</a></li><li><a href="#1016-la-perception-du-risque">🎲 10.16 La perception du risque</a></li><li><a href="#1017-la-perception-de-la-probabilite">📈 10.17 La perception de la probabilité</a></li><li><a href="#1018-lestimation-subjective">🔮 10.18 L'estimation subjective</a></li><li><a href="#1019-le-calcul-mental-approximatif">🧮 10.19 Le calcul mental approximatif</a></li><li><a href="#1020-leffet-de-cout-irrecuperable">🪤 10.20 L'effet de coût irrécupérable</a></li><li><a href="#1021-le-statu-quo">🔁 10.21 Le statu quo</a></li><li><a href="#1022-le-biais-domission">🚪 10.22 Le biais d'omission</a></li><li><a href="#1023-limpulsivite-decisionnelle">⚡ 10.23 L'impulsivité décisionnelle</a></li><li><a href="#1024-la-gratification-differee">🧠 10.24 La gratification différée</a></li><li><a href="#1025-lescompte-temporel">⏳ 10.25 L'escompte temporel</a></li><li><a href="#1026-la-recherche-de-recompense">🏆 10.26 La recherche de récompense</a></li><li><a href="#1027-la-recherche-de-sensations">⚠️ 10.27 La recherche de sensations</a></li><li><a href="#1028-linfluence-des-emotions-sur-la-decision">🎭 10.28 L'influence des émotions sur la décision</a></li><li><a href="#1029-linfluence-de-la-memoire-sur-les-decisions">🧠 10.29 L'influence de la mémoire sur les décisions</a></li><li><a href="#1030-la-decision-collective">👥 10.30 La décision collective</a></li><li><a href="#1031-la-polarisation-de-groupe">🧩 10.31 La polarisation de groupe</a></li><li><a href="#1032-la-pensee-de-groupe">🧠 10.32 La pensée de groupe</a></li><li><a href="#1033-leffet-de-cadrage-social">👀 10.33 L'effet de cadrage social</a></li><li><a href="#1034-la-confiance-excessive">🔐 10.34 La confiance excessive</a></li><li><a href="#1035-leffet-dunning-kruger">🎯 10.35 L'effet Dunning-Kruger</a></li><li><a href="#1036-la-dissonance-cognitive-dans-la-decision">🔄 10.36 La dissonance cognitive dans la décision</a></li><li><a href="#1037-le-regret-decisionnel">🧠 10.37 Le regret décisionnel</a></li><li><a href="#1038-la-pensee-contrefactuelle">🔮 10.38 La pensée contrefactuelle</a></li><li><a href="#1039-la-paralysie-decisionnelle">🛑 10.39 La paralysie décisionnelle</a></li><li><a href="#1040-pourquoi-etudier-les-phenomenes-de-decision-et-de-jugement">🔬 10.40 Pourquoi étudier les phénomènes de décision et de jugement ?</a></li></ul></nav>
     <div class="article-body">
       <blockquote>
 <p>Les phénomènes de décision et de jugement regroupent les processus psychologiques qui interviennent lorsque le cerveau évalue une situation, interprète des informations, compare différentes possibilités ou choisit une action.</p>
@@ -448,6 +458,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -629,47 +659,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

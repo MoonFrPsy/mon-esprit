@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#171-quest-ce-quun-trouble-sexuel">🧠 17.1 Qu'est-ce qu'un trouble sexuel ?</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#domaines-concernes">Domaines concernés</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#172-le-desir-sexuel">🧠 17.2 Le désir sexuel</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#variations">Variations</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#173-le-trouble-du-desir-sexuel">🧠 17.3 Le trouble du désir sexuel</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#174-le-trouble-de-linteret-et-de-lexcitation-sexuels">🧠 17.4 Le trouble de l'intérêt et de l'excitation sexuels</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#175-le-trouble-de-lexcitation-sexuelle-chez-lhomme">🧠 17.5 Le trouble de l'excitation sexuelle chez l'homme</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#176-le-trouble-erectile">🧠 17.6 Le trouble érectile</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#facteurs-possibles">Facteurs possibles</a></li></ul></li><li><a href="#177-lejaculation-precoce">🧠 17.7 L'éjaculation précoce</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#facteurs-possibles_1">Facteurs possibles</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#178-le-trouble-orgasmique-feminin">🧠 17.8 Le trouble orgasmique féminin</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#179-le-trouble-orgasmique-masculin">🧠 17.9 Le trouble orgasmique masculin</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li></ul></li><li><a href="#1710-lejaculation-retardee">🧠 17.10 L'éjaculation retardée</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#facteurs-possibles_2">Facteurs possibles</a></li></ul></li><li><a href="#1711-les-troubles-de-la-douleur-sexuelle">🧠 17.11 Les troubles de la douleur sexuelle</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#1712-la-douleur-genito-pelvienne-trouble-de-la-penetration">🧠 17.12 La douleur génito-pelvienne / trouble de la pénétration</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1713-le-vaginisme">🧠 17.13 Le vaginisme</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#facteurs-associes">Facteurs associés</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1714-la-dyspareunie">🧠 17.14 La dyspareunie</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1715-la-secheresse-genitale">🧠 17.15 La sécheresse génitale</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#causes-possibles_3">Causes possibles</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1716-le-trouble-sexuel-induit-par-une-substance-ou-un-medicament">🧠 17.16 Le trouble sexuel induit par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#exemples-de-manifestations">Exemples de manifestations</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1717-le-trouble-sexuel-du-a-une-affection-medicale">🧠 17.17 Le trouble sexuel dû à une affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1718-les-facteurs-psychologiques-des-troubles-sexuels">🧠 17.18 Les facteurs psychologiques des troubles sexuels</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#facteurs-possibles_3">Facteurs possibles</a></li></ul></li><li><a href="#1719-lanxiete-de-performance-sexuelle">🧠 17.19 L'anxiété de performance sexuelle</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1720-le-cercle-anxiete-performance">🧠 17.20 Le cercle anxiété-performance</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1721-les-troubles-paraphiliques">🧠 17.21 Les troubles paraphiliques</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1722-le-voyeurisme">🧠 17.22 Le voyeurisme</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1723-lexhibitionnisme">🧠 17.23 L'exhibitionnisme</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1724-le-frotteurisme">🧠 17.24 Le frotteurisme</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1725-le-trouble-pedophilique">🧠 17.25 Le trouble pédophilique</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1726-le-trouble-masochiste-sexuel">🧠 17.26 Le trouble masochiste sexuel</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1727-le-trouble-sadique-sexuel">🧠 17.27 Le trouble sadique sexuel</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1728-le-trouble-fetichiste">🧠 17.28 Le trouble fétichiste</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1729-le-trouble-transvestique">🧠 17.29 Le trouble transvestique</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1730-consentement-et-sexualite">🧠 17.30 Consentement et sexualité</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#principes">Principes</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1731-sexualite-et-traumatisme">🧠 17.31 Sexualité et traumatisme</a><ul class="sidebar-sublist"><li><a href="#definition_30">Définition</a></li><li><a href="#manifestations-possibles_2">Manifestations possibles</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1732-sexualite-et-depression">🧠 17.32 Sexualité et dépression</a><ul class="sidebar-sublist"><li><a href="#definition_31">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1733-sexualite-et-anxiete">🧠 17.33 Sexualité et anxiété</a><ul class="sidebar-sublist"><li><a href="#definition_32">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1734-sexualite-et-estime-de-soi">🧠 17.34 Sexualité et estime de soi</a><ul class="sidebar-sublist"><li><a href="#definition_33">Définition</a></li><li><a href="#manifestations-possibles_3">Manifestations possibles</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li><li><a href="#1735-image-corporelle-et-sexualite">🧠 17.35 Image corporelle et sexualité</a><ul class="sidebar-sublist"><li><a href="#definition_34">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li></ul></li><li><a href="#1736-sexualite-et-relations-de-couple">🧠 17.36 Sexualité et relations de couple</a><ul class="sidebar-sublist"><li><a href="#definition_35">Définition</a></li><li><a href="#facteurs-possibles_4">Facteurs possibles</a></li><li><a href="#a-retenir_30">À retenir</a></li></ul></li><li><a href="#1737-les-differences-de-desir-dans-un-couple">🧠 17.37 Les différences de désir dans un couple</a><ul class="sidebar-sublist"><li><a href="#definition_36">Définition</a></li><li><a href="#a-retenir_31">À retenir</a></li></ul></li><li><a href="#1738-la-compulsion-sexuelle">🧠 17.38 La compulsion sexuelle</a><ul class="sidebar-sublist"><li><a href="#definition_37">Définition</a></li><li><a href="#manifestations-possibles_4">Manifestations possibles</a></li><li><a href="#a-retenir_32">À retenir</a></li></ul></li><li><a href="#1739-le-trouble-du-comportement-sexuel-compulsif">🧠 17.39 Le trouble du comportement sexuel compulsif</a><ul class="sidebar-sublist"><li><a href="#definition_38">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_33">À retenir</a></li></ul></li><li><a href="#1740-les-consequences-des-troubles-sexuels">🧠 17.40 Les conséquences des troubles sexuels</a><ul class="sidebar-sublist"><li><a href="#definition_39">Définition</a></li><li><a href="#consequences-possibles">Conséquences possibles</a></li></ul></li><li><a href="#1741-le-diagnostic-des-troubles-sexuels">🧠 17.41 Le diagnostic des troubles sexuels</a><ul class="sidebar-sublist"><li><a href="#definition_40">Définition</a></li><li><a href="#elements-etudies">Éléments étudiés</a></li><li><a href="#a-retenir_34">À retenir</a></li></ul></li><li><a href="#1742-le-diagnostic-differentiel">🧠 17.42 Le diagnostic différentiel</a><ul class="sidebar-sublist"><li><a href="#definition_41">Définition</a></li><li><a href="#causes-possibles_4">Causes possibles</a></li></ul></li><li><a href="#1743-la-prise-en-charge">🧠 17.43 La prise en charge</a><ul class="sidebar-sublist"><li><a href="#definition_42">Définition</a></li><li><a href="#approches-possibles">Approches possibles</a></li><li><a href="#a-retenir_35">À retenir</a></li></ul></li><li><a href="#1744-la-therapie-cognitivo-comportementale">🧠 17.44 La thérapie cognitivo-comportementale</a><ul class="sidebar-sublist"><li><a href="#definition_43">Définition</a></li><li><a href="#objectifs-possibles">Objectifs possibles</a></li></ul></li><li><a href="#1745-la-therapie-de-couple">🧠 17.45 La thérapie de couple</a><ul class="sidebar-sublist"><li><a href="#definition_44">Définition</a></li><li><a href="#objectifs">Objectifs</a></li></ul></li><li><a href="#1746-les-traitements-medicaux">🧠 17.46 Les traitements médicaux</a><ul class="sidebar-sublist"><li><a href="#definition_45">Définition</a></li><li><a href="#exemples_1">Exemples</a></li><li><a href="#a-retenir_36">À retenir</a></li></ul></li><li><a href="#1747-limportance-de-la-communication">🧠 17.47 L'importance de la communication</a><ul class="sidebar-sublist"><li><a href="#definition_46">Définition</a></li><li><a href="#elements-importants">Éléments importants</a></li></ul></li><li><a href="#1748-sexualite-et-consentement">🧠 17.48 Sexualité et consentement</a><ul class="sidebar-sublist"><li><a href="#definition_47">Définition</a></li><li><a href="#principes_1">Principes</a></li><li><a href="#a-retenir_37">À retenir</a></li></ul></li><li><a href="#1749-sexualite-et-societe">🧠 17.49 Sexualité et société</a><ul class="sidebar-sublist"><li><a href="#definition_48">Définition</a></li><li><a href="#facteurs-possibles_5">Facteurs possibles</a></li><li><a href="#a-retenir_38">À retenir</a></li></ul></li><li><a href="#1750-normalite-et-sexualite">🧠 17.50 Normalité et sexualité</a><ul class="sidebar-sublist"><li><a href="#definition_49">Définition</a></li><li><a href="#principe">Principe</a></li><li><a href="#a-retenir_39">À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -48,7 +59,6 @@
         <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#171-quest-ce-quun-trouble-sexuel">🧠 17.1 Qu'est-ce qu'un trouble sexuel ?</a></li><li><a href="#172-le-desir-sexuel">🧠 17.2 Le désir sexuel</a></li><li><a href="#173-le-trouble-du-desir-sexuel">🧠 17.3 Le trouble du désir sexuel</a></li><li><a href="#174-le-trouble-de-linteret-et-de-lexcitation-sexuels">🧠 17.4 Le trouble de l'intérêt et de l'excitation sexuels</a></li><li><a href="#175-le-trouble-de-lexcitation-sexuelle-chez-lhomme">🧠 17.5 Le trouble de l'excitation sexuelle chez l'homme</a></li><li><a href="#176-le-trouble-erectile">🧠 17.6 Le trouble érectile</a></li><li><a href="#177-lejaculation-precoce">🧠 17.7 L'éjaculation précoce</a></li><li><a href="#178-le-trouble-orgasmique-feminin">🧠 17.8 Le trouble orgasmique féminin</a></li><li><a href="#179-le-trouble-orgasmique-masculin">🧠 17.9 Le trouble orgasmique masculin</a></li><li><a href="#1710-lejaculation-retardee">🧠 17.10 L'éjaculation retardée</a></li><li><a href="#1711-les-troubles-de-la-douleur-sexuelle">🧠 17.11 Les troubles de la douleur sexuelle</a></li><li><a href="#1712-la-douleur-genito-pelvienne-trouble-de-la-penetration">🧠 17.12 La douleur génito-pelvienne / trouble de la pénétration</a></li><li><a href="#1713-le-vaginisme">🧠 17.13 Le vaginisme</a></li><li><a href="#1714-la-dyspareunie">🧠 17.14 La dyspareunie</a></li><li><a href="#1715-la-secheresse-genitale">🧠 17.15 La sécheresse génitale</a></li><li><a href="#1716-le-trouble-sexuel-induit-par-une-substance-ou-un-medicament">🧠 17.16 Le trouble sexuel induit par une substance ou un médicament</a></li><li><a href="#1717-le-trouble-sexuel-du-a-une-affection-medicale">🧠 17.17 Le trouble sexuel dû à une affection médicale</a></li><li><a href="#1718-les-facteurs-psychologiques-des-troubles-sexuels">🧠 17.18 Les facteurs psychologiques des troubles sexuels</a></li><li><a href="#1719-lanxiete-de-performance-sexuelle">🧠 17.19 L'anxiété de performance sexuelle</a></li><li><a href="#1720-le-cercle-anxiete-performance">🧠 17.20 Le cercle anxiété-performance</a></li><li><a href="#1721-les-troubles-paraphiliques">🧠 17.21 Les troubles paraphiliques</a></li><li><a href="#1722-le-voyeurisme">🧠 17.22 Le voyeurisme</a></li><li><a href="#1723-lexhibitionnisme">🧠 17.23 L'exhibitionnisme</a></li><li><a href="#1724-le-frotteurisme">🧠 17.24 Le frotteurisme</a></li><li><a href="#1725-le-trouble-pedophilique">🧠 17.25 Le trouble pédophilique</a></li><li><a href="#1726-le-trouble-masochiste-sexuel">🧠 17.26 Le trouble masochiste sexuel</a></li><li><a href="#1727-le-trouble-sadique-sexuel">🧠 17.27 Le trouble sadique sexuel</a></li><li><a href="#1728-le-trouble-fetichiste">🧠 17.28 Le trouble fétichiste</a></li><li><a href="#1729-le-trouble-transvestique">🧠 17.29 Le trouble transvestique</a></li><li><a href="#1730-consentement-et-sexualite">🧠 17.30 Consentement et sexualité</a></li><li><a href="#1731-sexualite-et-traumatisme">🧠 17.31 Sexualité et traumatisme</a></li><li><a href="#1732-sexualite-et-depression">🧠 17.32 Sexualité et dépression</a></li><li><a href="#1733-sexualite-et-anxiete">🧠 17.33 Sexualité et anxiété</a></li><li><a href="#1734-sexualite-et-estime-de-soi">🧠 17.34 Sexualité et estime de soi</a></li><li><a href="#1735-image-corporelle-et-sexualite">🧠 17.35 Image corporelle et sexualité</a></li><li><a href="#1736-sexualite-et-relations-de-couple">🧠 17.36 Sexualité et relations de couple</a></li><li><a href="#1737-les-differences-de-desir-dans-un-couple">🧠 17.37 Les différences de désir dans un couple</a></li><li><a href="#1738-la-compulsion-sexuelle">🧠 17.38 La compulsion sexuelle</a></li><li><a href="#1739-le-trouble-du-comportement-sexuel-compulsif">🧠 17.39 Le trouble du comportement sexuel compulsif</a></li><li><a href="#1740-les-consequences-des-troubles-sexuels">🧠 17.40 Les conséquences des troubles sexuels</a></li><li><a href="#1741-le-diagnostic-des-troubles-sexuels">🧠 17.41 Le diagnostic des troubles sexuels</a></li><li><a href="#1742-le-diagnostic-differentiel">🧠 17.42 Le diagnostic différentiel</a></li><li><a href="#1743-la-prise-en-charge">🧠 17.43 La prise en charge</a></li><li><a href="#1744-la-therapie-cognitivo-comportementale">🧠 17.44 La thérapie cognitivo-comportementale</a></li><li><a href="#1745-la-therapie-de-couple">🧠 17.45 La thérapie de couple</a></li><li><a href="#1746-les-traitements-medicaux">🧠 17.46 Les traitements médicaux</a></li><li><a href="#1747-limportance-de-la-communication">🧠 17.47 L'importance de la communication</a></li><li><a href="#1748-sexualite-et-consentement">🧠 17.48 Sexualité et consentement</a></li><li><a href="#1749-sexualite-et-societe">🧠 17.49 Sexualité et société</a></li><li><a href="#1750-normalite-et-sexualite">🧠 17.50 Normalité et sexualité</a></li></ul></nav>
     <div class="article-body">
       <h1 id="171-quest-ce-quun-trouble-sexuel" class="entry-title hc-1">🧠 17.1 Qu'est-ce qu'un trouble sexuel ?</h1>
 <h2 id="definition">Définition</h2>
@@ -809,6 +819,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -990,47 +1020,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

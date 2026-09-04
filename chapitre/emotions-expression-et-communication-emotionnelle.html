@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#111-quest-ce-que-lexpression-emotionnelle">🗣️ 11.1 Qu'est-ce que l'expression émotionnelle ?</a></li><li><a href="#112-les-expressions-faciales">👁️ 11.2 Les expressions faciales</a></li><li><a href="#113-la-voix-et-les-emotions">🔊 11.3 La voix et les émotions</a></li><li><a href="#114-la-posture-emotionnelle">🧍 11.4 La posture émotionnelle</a></li><li><a href="#115-les-gestes">🤲 11.5 Les gestes</a></li><li><a href="#116-le-langage-emotionnel">🗣️ 11.6 Le langage émotionnel</a></li><li><a href="#117-letiquetage-emotionnel">🏷️ 11.7 L'étiquetage émotionnel</a></li><li><a href="#118-la-conscience-emotionnelle">🧠 11.8 La conscience émotionnelle</a></li><li><a href="#119-la-reconnaissance-des-emotions-dautrui">👀 11.9 La reconnaissance des émotions d'autrui</a></li><li><a href="#1110-le-role-du-contexte">🧩 11.10 Le rôle du contexte</a></li><li><a href="#1111-linterpretation-des-signaux-emotionnels">🧠 11.11 L'interprétation des signaux émotionnels</a></li><li><a href="#1112-les-malentendus-emotionnels">🔄 11.12 Les malentendus émotionnels</a></li><li><a href="#1113-la-dissimulation-emotionnelle">🫥 11.13 La dissimulation émotionnelle</a></li><li><a href="#1114-la-simulation-emotionnelle">🎭 11.14 La simulation émotionnelle</a></li><li><a href="#1115-la-suppression-de-lexpression-emotionnelle">🤐 11.15 La suppression de l'expression émotionnelle</a></li><li><a href="#1116-expression-et-experience-emotionnelle">🧠 11.16 Expression et expérience émotionnelle</a></li><li><a href="#1117-lintensite-de-lexpression">🌡️ 11.17 L'intensité de l'expression</a></li><li><a href="#1118-les-differences-culturelles">🌍 11.18 Les différences culturelles</a></li><li><a href="#1119-lexpression-emotionnelle-au-cours-du-developpement">👶 11.19 L'expression émotionnelle au cours du développement</a></li><li><a href="#1120-lexpression-emotionnelle-dans-les-relations">🧑‍🤝‍🧑 11.20 L'expression émotionnelle dans les relations</a></li><li><a href="#1121-lexpression-de-laffection">❤️ 11.21 L'expression de l'affection</a></li><li><a href="#1122-lexpression-de-la-tristesse">😔 11.22 L'expression de la tristesse</a></li><li><a href="#1123-lexpression-de-la-colere">😡 11.23 L'expression de la colère</a></li><li><a href="#1124-lexpression-de-la-peur">😨 11.24 L'expression de la peur</a></li><li><a href="#1125-lexpression-de-la-joie">😄 11.25 L'expression de la joie</a></li><li><a href="#1126-la-contagion-emotionnelle">🧑‍🤝‍🧑 11.26 La contagion émotionnelle</a></li><li><a href="#1127-le-mimetisme-emotionnel">🪞 11.27 Le mimétisme émotionnel</a></li><li><a href="#1128-la-regulation-emotionnelle-interpersonnelle">🔄 11.28 La régulation émotionnelle interpersonnelle</a></li><li><a href="#1129-le-soutien-emotionnel">🫂 11.29 Le soutien émotionnel</a></li><li><a href="#1130-lempathie-dans-la-communication">🧠 11.30 L'empathie dans la communication</a></li><li><a href="#1131-lecoute-emotionnelle">👂 11.31 L'écoute émotionnelle</a></li><li><a href="#1132-la-validation-emotionnelle">💬 11.32 La validation émotionnelle</a></li><li><a href="#1133-lescalade-emotionnelle">⚡ 11.33 L'escalade émotionnelle</a></li><li><a href="#1134-le-retrait-emotionnel">🧊 11.34 Le retrait émotionnel</a></li><li><a href="#1135-la-confidentialite-emotionnelle">🔐 11.35 La confidentialité émotionnelle</a></li><li><a href="#1136-les-emotions-implicites">🧠 11.36 Les émotions implicites</a></li><li><a href="#1137-la-communication-emotionnelle-numerique">📱 11.37 La communication émotionnelle numérique</a></li><li><a href="#1138-les-erreurs-dinterpretation-en-ligne">👀 11.38 Les erreurs d'interprétation en ligne</a></li><li><a href="#1139-les-differences-individuelles-dans-lexpression-emotionnelle">🧩 11.39 Les différences individuelles dans l'expression émotionnelle</a></li><li><a href="#1140-pourquoi-etudier-lexpression-et-la-communication-emotionnelle">🔬 11.40 Pourquoi étudier l'expression et la communication émotionnelle ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#111-quest-ce-que-lexpression-emotionnelle">🗣️ 11.1 Qu'est-ce que l'expression émotionnelle ?</a></li><li><a href="#112-les-expressions-faciales">👁️ 11.2 Les expressions faciales</a></li><li><a href="#113-la-voix-et-les-emotions">🔊 11.3 La voix et les émotions</a></li><li><a href="#114-la-posture-emotionnelle">🧍 11.4 La posture émotionnelle</a></li><li><a href="#115-les-gestes">🤲 11.5 Les gestes</a></li><li><a href="#116-le-langage-emotionnel">🗣️ 11.6 Le langage émotionnel</a></li><li><a href="#117-letiquetage-emotionnel">🏷️ 11.7 L'étiquetage émotionnel</a></li><li><a href="#118-la-conscience-emotionnelle">🧠 11.8 La conscience émotionnelle</a></li><li><a href="#119-la-reconnaissance-des-emotions-dautrui">👀 11.9 La reconnaissance des émotions d'autrui</a></li><li><a href="#1110-le-role-du-contexte">🧩 11.10 Le rôle du contexte</a></li><li><a href="#1111-linterpretation-des-signaux-emotionnels">🧠 11.11 L'interprétation des signaux émotionnels</a></li><li><a href="#1112-les-malentendus-emotionnels">🔄 11.12 Les malentendus émotionnels</a></li><li><a href="#1113-la-dissimulation-emotionnelle">🫥 11.13 La dissimulation émotionnelle</a></li><li><a href="#1114-la-simulation-emotionnelle">🎭 11.14 La simulation émotionnelle</a></li><li><a href="#1115-la-suppression-de-lexpression-emotionnelle">🤐 11.15 La suppression de l'expression émotionnelle</a></li><li><a href="#1116-expression-et-experience-emotionnelle">🧠 11.16 Expression et expérience émotionnelle</a></li><li><a href="#1117-lintensite-de-lexpression">🌡️ 11.17 L'intensité de l'expression</a></li><li><a href="#1118-les-differences-culturelles">🌍 11.18 Les différences culturelles</a></li><li><a href="#1119-lexpression-emotionnelle-au-cours-du-developpement">👶 11.19 L'expression émotionnelle au cours du développement</a></li><li><a href="#1120-lexpression-emotionnelle-dans-les-relations">🧑‍🤝‍🧑 11.20 L'expression émotionnelle dans les relations</a></li><li><a href="#1121-lexpression-de-laffection">❤️ 11.21 L'expression de l'affection</a></li><li><a href="#1122-lexpression-de-la-tristesse">😔 11.22 L'expression de la tristesse</a></li><li><a href="#1123-lexpression-de-la-colere">😡 11.23 L'expression de la colère</a></li><li><a href="#1124-lexpression-de-la-peur">😨 11.24 L'expression de la peur</a></li><li><a href="#1125-lexpression-de-la-joie">😄 11.25 L'expression de la joie</a></li><li><a href="#1126-la-contagion-emotionnelle">🧑‍🤝‍🧑 11.26 La contagion émotionnelle</a></li><li><a href="#1127-le-mimetisme-emotionnel">🪞 11.27 Le mimétisme émotionnel</a></li><li><a href="#1128-la-regulation-emotionnelle-interpersonnelle">🔄 11.28 La régulation émotionnelle interpersonnelle</a></li><li><a href="#1129-le-soutien-emotionnel">🫂 11.29 Le soutien émotionnel</a></li><li><a href="#1130-lempathie-dans-la-communication">🧠 11.30 L'empathie dans la communication</a></li><li><a href="#1131-lecoute-emotionnelle">👂 11.31 L'écoute émotionnelle</a></li><li><a href="#1132-la-validation-emotionnelle">💬 11.32 La validation émotionnelle</a></li><li><a href="#1133-lescalade-emotionnelle">⚡ 11.33 L'escalade émotionnelle</a></li><li><a href="#1134-le-retrait-emotionnel">🧊 11.34 Le retrait émotionnel</a></li><li><a href="#1135-la-confidentialite-emotionnelle">🔐 11.35 La confidentialité émotionnelle</a></li><li><a href="#1136-les-emotions-implicites">🧠 11.36 Les émotions implicites</a></li><li><a href="#1137-la-communication-emotionnelle-numerique">📱 11.37 La communication émotionnelle numérique</a></li><li><a href="#1138-les-erreurs-dinterpretation-en-ligne">👀 11.38 Les erreurs d'interprétation en ligne</a></li><li><a href="#1139-les-differences-individuelles-dans-lexpression-emotionnelle">🧩 11.39 Les différences individuelles dans l'expression émotionnelle</a></li><li><a href="#1140-pourquoi-etudier-lexpression-et-la-communication-emotionnelle">🔬 11.40 Pourquoi étudier l'expression et la communication émotionnelle ?</a></li></ul></nav>
     <div class="article-body">
       <p>Les émotions ne sont pas uniquement ressenties intérieurement. Elles peuvent également être exprimées, communiquées et interprétées par d'autres personnes.</p>
 <p>La communication émotionnelle repose sur plusieurs éléments : les paroles, la voix, les expressions du visage, les gestes, la posture et le comportement.</p>
@@ -357,6 +367,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -538,47 +568,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

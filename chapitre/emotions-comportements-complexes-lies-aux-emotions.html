@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#191-quest-ce-quun-comportement-complexe">🧩 19.1 Qu'est-ce qu'un comportement complexe ?</a></li><li><a href="#192-les-emotions-comme-declencheurs-comportementaux">❤️ 19.2 Les émotions comme déclencheurs comportementaux</a></li><li><a href="#193-le-comportement-influence-les-emotions">🔄 19.3 Le comportement influence les émotions</a></li><li><a href="#194-la-boucle-emotion-comportement">🧠 19.4 La boucle émotion comportement</a></li><li><a href="#195-les-comportements-orientes-vers-un-objectif">🎯 19.5 Les comportements orientés vers un objectif</a></li><li><a href="#196-les-comportements-de-protection">🛡️ 19.6 Les comportements de protection</a></li><li><a href="#197-levitement-emotionnel">🚪 19.7 L'évitement émotionnel</a></li><li><a href="#198-le-comportement-de-securite">🔁 19.8 Le comportement de sécurité</a></li><li><a href="#199-la-recherche-de-reassurance">🧠 19.9 La recherche de réassurance</a></li><li><a href="#1910-la-recherche-de-proximite">🧑‍🤝‍🧑 19.10 La recherche de proximité</a></li><li><a href="#1911-la-communication-emotionnelle">🗣️ 19.11 La communication émotionnelle</a></li><li><a href="#1912-lexpression-non-verbale">👀 19.12 L'expression non verbale</a></li><li><a href="#1913-la-regulation-comportementale-des-emotions">🧠 19.13 La régulation comportementale des émotions</a></li><li><a href="#1914-limpulsivite-emotionnelle">⚡ 19.14 L'impulsivité émotionnelle</a></li><li><a href="#1915-linhibition-comportementale">🛑 19.15 L'inhibition comportementale</a></li><li><a href="#1916-le-conflit-entre-emotion-et-objectif">⚖️ 19.16 Le conflit entre émotion et objectif</a></li><li><a href="#1917-le-conflit-entre-emotions">🔥 19.17 Le conflit entre émotions</a></li><li><a href="#1918-lambivalence-comportementale">🧩 19.18 L'ambivalence comportementale</a></li><li><a href="#1919-lapproche-et-levitement">🔄 19.19 L'approche et l'évitement</a></li><li><a href="#1920-le-comportement-automatique">🧠 19.20 Le comportement automatique</a></li><li><a href="#1921-les-habitudes-emotionnelles">🔁 19.21 Les habitudes émotionnelles</a></li><li><a href="#1922-le-conditionnement-emotionnel">🧠 19.22 Le conditionnement émotionnel</a></li><li><a href="#1923-lapprentissage-comportemental">🛠️ 19.23 L'apprentissage comportemental</a></li><li><a href="#1924-la-recompense-et-le-comportement">🏆 19.24 La récompense et le comportement</a></li><li><a href="#1925-le-soulagement-comme-consequence">⚠️ 19.25 Le soulagement comme conséquence</a></li><li><a href="#1926-le-renforcement-negatif">🔄 19.26 Le renforcement négatif</a></li><li><a href="#1927-les-comportements-repetitifs">🧠 19.27 Les comportements répétitifs</a></li><li><a href="#1928-les-comportements-orientes-vers-la-recompense">🎯 19.28 Les comportements orientés vers la récompense</a></li><li><a href="#1929-les-recompenses-numeriques">📱 19.29 Les récompenses numériques</a></li><li><a href="#1930-les-comportements-influences-par-autrui">👥 19.30 Les comportements influencés par autrui</a></li><li><a href="#1931-la-contagion-emotionnelle">❤️ 19.31 La contagion émotionnelle</a></li><li><a href="#1932-le-conflit-interpersonnel">🗣️ 19.32 Le conflit interpersonnel</a></li><li><a href="#1933-lescalade-comportementale">🔥 19.33 L'escalade comportementale</a></li><li><a href="#1934-la-reparation-relationnelle">🤝 19.34 La réparation relationnelle</a></li><li><a href="#1935-les-comportements-de-compensation">🧠 19.35 Les comportements de compensation</a></li><li><a href="#1936-la-compensation-emotionnelle">🔄 19.36 La compensation émotionnelle</a></li><li><a href="#1937-les-differences-individuelles">🧠 19.37 Les différences individuelles</a></li><li><a href="#1938-linfluence-du-contexte">🌍 19.38 L'influence du contexte</a></li><li><a href="#1939-quand-les-comportements-emotionnels-deviennent-problematiques">⚠️ 19.39 Quand les comportements émotionnels deviennent problématiques</a></li><li><a href="#1940-pourquoi-etudier-les-comportements-complexes-lies-aux-emotions">🔬 19.40 Pourquoi étudier les comportements complexes liés aux émotions ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#191-quest-ce-quun-comportement-complexe">🧩 19.1 Qu'est-ce qu'un comportement complexe ?</a></li><li><a href="#192-les-emotions-comme-declencheurs-comportementaux">❤️ 19.2 Les émotions comme déclencheurs comportementaux</a></li><li><a href="#193-le-comportement-influence-les-emotions">🔄 19.3 Le comportement influence les émotions</a></li><li><a href="#194-la-boucle-emotion-comportement">🧠 19.4 La boucle émotion comportement</a></li><li><a href="#195-les-comportements-orientes-vers-un-objectif">🎯 19.5 Les comportements orientés vers un objectif</a></li><li><a href="#196-les-comportements-de-protection">🛡️ 19.6 Les comportements de protection</a></li><li><a href="#197-levitement-emotionnel">🚪 19.7 L'évitement émotionnel</a></li><li><a href="#198-le-comportement-de-securite">🔁 19.8 Le comportement de sécurité</a></li><li><a href="#199-la-recherche-de-reassurance">🧠 19.9 La recherche de réassurance</a></li><li><a href="#1910-la-recherche-de-proximite">🧑‍🤝‍🧑 19.10 La recherche de proximité</a></li><li><a href="#1911-la-communication-emotionnelle">🗣️ 19.11 La communication émotionnelle</a></li><li><a href="#1912-lexpression-non-verbale">👀 19.12 L'expression non verbale</a></li><li><a href="#1913-la-regulation-comportementale-des-emotions">🧠 19.13 La régulation comportementale des émotions</a></li><li><a href="#1914-limpulsivite-emotionnelle">⚡ 19.14 L'impulsivité émotionnelle</a></li><li><a href="#1915-linhibition-comportementale">🛑 19.15 L'inhibition comportementale</a></li><li><a href="#1916-le-conflit-entre-emotion-et-objectif">⚖️ 19.16 Le conflit entre émotion et objectif</a></li><li><a href="#1917-le-conflit-entre-emotions">🔥 19.17 Le conflit entre émotions</a></li><li><a href="#1918-lambivalence-comportementale">🧩 19.18 L'ambivalence comportementale</a></li><li><a href="#1919-lapproche-et-levitement">🔄 19.19 L'approche et l'évitement</a></li><li><a href="#1920-le-comportement-automatique">🧠 19.20 Le comportement automatique</a></li><li><a href="#1921-les-habitudes-emotionnelles">🔁 19.21 Les habitudes émotionnelles</a></li><li><a href="#1922-le-conditionnement-emotionnel">🧠 19.22 Le conditionnement émotionnel</a></li><li><a href="#1923-lapprentissage-comportemental">🛠️ 19.23 L'apprentissage comportemental</a></li><li><a href="#1924-la-recompense-et-le-comportement">🏆 19.24 La récompense et le comportement</a></li><li><a href="#1925-le-soulagement-comme-consequence">⚠️ 19.25 Le soulagement comme conséquence</a></li><li><a href="#1926-le-renforcement-negatif">🔄 19.26 Le renforcement négatif</a></li><li><a href="#1927-les-comportements-repetitifs">🧠 19.27 Les comportements répétitifs</a></li><li><a href="#1928-les-comportements-orientes-vers-la-recompense">🎯 19.28 Les comportements orientés vers la récompense</a></li><li><a href="#1929-les-recompenses-numeriques">📱 19.29 Les récompenses numériques</a></li><li><a href="#1930-les-comportements-influences-par-autrui">👥 19.30 Les comportements influencés par autrui</a></li><li><a href="#1931-la-contagion-emotionnelle">❤️ 19.31 La contagion émotionnelle</a></li><li><a href="#1932-le-conflit-interpersonnel">🗣️ 19.32 Le conflit interpersonnel</a></li><li><a href="#1933-lescalade-comportementale">🔥 19.33 L'escalade comportementale</a></li><li><a href="#1934-la-reparation-relationnelle">🤝 19.34 La réparation relationnelle</a></li><li><a href="#1935-les-comportements-de-compensation">🧠 19.35 Les comportements de compensation</a></li><li><a href="#1936-la-compensation-emotionnelle">🔄 19.36 La compensation émotionnelle</a></li><li><a href="#1937-les-differences-individuelles">🧠 19.37 Les différences individuelles</a></li><li><a href="#1938-linfluence-du-contexte">🌍 19.38 L'influence du contexte</a></li><li><a href="#1939-quand-les-comportements-emotionnels-deviennent-problematiques">⚠️ 19.39 Quand les comportements émotionnels deviennent problématiques</a></li><li><a href="#1940-pourquoi-etudier-les-comportements-complexes-lies-aux-emotions">🔬 19.40 Pourquoi étudier les comportements complexes liés aux émotions ?</a></li></ul></nav>
     <div class="article-body">
       <p>Les comportements humains ne sont généralement pas produits par une seule émotion. Une même action peut résulter de plusieurs émotions, pensées, objectifs, habitudes et influences sociales.</p>
 <p>Les émotions peuvent déclencher un comportement, mais le comportement peut également modifier l'émotion ressentie. Cette interaction crée parfois des boucles complexes dans lesquelles émotions, pensées et comportements s'influencent continuellement.</p>
@@ -359,6 +369,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -540,47 +570,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

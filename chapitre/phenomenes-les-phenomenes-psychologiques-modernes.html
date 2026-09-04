@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#191-la-presence-numerique">📱 19.1 La présence numérique</a></li><li><a href="#192-la-fatigue-des-notifications">🔔 19.2 La fatigue des notifications</a></li><li><a href="#193-la-verification-compulsive-du-telephone">📲 19.3 La vérification compulsive du téléphone</a></li><li><a href="#194-le-telephone-fantome">👻 19.4 Le téléphone fantôme</a></li><li><a href="#195-la-nomophobie">📳 19.5 La nomophobie</a></li><li><a href="#196-lanxiete-de-deconnexion">😰 19.6 L'anxiété de déconnexion</a></li><li><a href="#197-le-fomo">👀 19.7 Le FOMO</a></li><li><a href="#198-le-jomo">📱 19.8 Le JOMO</a></li><li><a href="#199-la-surcharge-informationnelle">🧠 19.9 La surcharge informationnelle</a></li><li><a href="#1910-le-doomscrolling">🌪️ 19.10 Le doomscrolling</a></li><li><a href="#1911-le-defilement-automatique">🔄 19.11 Le défilement automatique</a></li><li><a href="#1912-la-recompense-variable-numerique">🧲 19.12 La récompense variable numérique</a></li><li><a href="#1913-la-comparaison-sociale-numerique">❤️ 19.13 La comparaison sociale numérique</a></li><li><a href="#1914-la-comparaison-ascendante-numerique">🪞 19.14 La comparaison ascendante numérique</a></li><li><a href="#1915-la-presentation-de-soi-numerique">📸 19.15 La présentation de soi numérique</a></li><li><a href="#1916-la-gestion-de-limage-en-ligne">🎭 19.16 La gestion de l'image en ligne</a></li><li><a href="#1917-la-validation-sociale-numerique">❤️ 19.17 La validation sociale numérique</a></li><li><a href="#1918-leffet-des-metriques-sociales">🔢 19.18 L'effet des métriques sociales</a></li><li><a href="#1919-la-communication-asynchrone">💬 19.19 La communication asynchrone</a></li><li><a href="#1920-lanxiete-liee-au-temps-de-reponse">⏱️ 19.20 L'anxiété liée au temps de réponse</a></li><li><a href="#1921-la-surveillance-du-statut-en-ligne">👁️ 19.21 La surveillance du statut en ligne</a></li><li><a href="#1922-la-lecture-sans-reponse">💬 19.22 La lecture sans réponse</a></li><li><a href="#1923-la-surcharge-cognitive-numerique">🧠 19.23 La surcharge cognitive numérique</a></li><li><a href="#1924-le-multitache-numerique">🔀 19.24 Le multitâche numérique</a></li><li><a href="#1925-le-cout-du-changement-numerique">🔄 19.25 Le coût du changement numérique</a></li><li><a href="#1926-linterruption-numerique">🧠 19.26 L'interruption numérique</a></li><li><a href="#1927-limmersion-numerique">🎮 19.27 L'immersion numérique</a></li><li><a href="#1928-la-presence-virtuelle">🥽 19.28 La présence virtuelle</a></li><li><a href="#1929-lavatar-et-le-sentiment-de-soi">🪞 19.29 L'avatar et le sentiment de soi</a></li><li><a href="#1930-leffet-proteus">🎭 19.30 L'effet Proteus</a></li><li><a href="#1931-lidentite-numerique">👤 19.31 L'identité numérique</a></li><li><a href="#1932-la-desinhibition-en-ligne">🌐 19.32 La désinhibition en ligne</a></li><li><a href="#1933-lanonymat-numerique">🕶️ 19.33 L'anonymat numérique</a></li><li><a href="#1934-la-contagion-emotionnelle-numerique">👥 19.34 La contagion émotionnelle numérique</a></li><li><a href="#1935-la-propagation-emotionnelle-des-contenus">📰 19.35 La propagation émotionnelle des contenus</a></li><li><a href="#1936-la-memoire-numerique">🧠 19.36 La mémoire numérique</a></li><li><a href="#1937-la-memoire-externalisee">📸 19.37 La mémoire externalisée</a></li><li><a href="#1938-leffet-google">🔍 19.38 L'effet Google</a></li><li><a href="#1939-la-fatigue-numerique">📱 19.39 La fatigue numérique</a></li><li><a href="#1940-pourquoi-etudier-les-phenomenes-psychologiques-modernes">🔬 19.40 Pourquoi étudier les phénomènes psychologiques modernes ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -49,7 +60,6 @@
         <line x1="116" y1="60" x2="105" y2="60"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#191-la-presence-numerique">📱 19.1 La présence numérique</a></li><li><a href="#192-la-fatigue-des-notifications">🔔 19.2 La fatigue des notifications</a></li><li><a href="#193-la-verification-compulsive-du-telephone">📲 19.3 La vérification compulsive du téléphone</a></li><li><a href="#194-le-telephone-fantome">👻 19.4 Le téléphone fantôme</a></li><li><a href="#195-la-nomophobie">📳 19.5 La nomophobie</a></li><li><a href="#196-lanxiete-de-deconnexion">😰 19.6 L'anxiété de déconnexion</a></li><li><a href="#197-le-fomo">👀 19.7 Le FOMO</a></li><li><a href="#198-le-jomo">📱 19.8 Le JOMO</a></li><li><a href="#199-la-surcharge-informationnelle">🧠 19.9 La surcharge informationnelle</a></li><li><a href="#1910-le-doomscrolling">🌪️ 19.10 Le doomscrolling</a></li><li><a href="#1911-le-defilement-automatique">🔄 19.11 Le défilement automatique</a></li><li><a href="#1912-la-recompense-variable-numerique">🧲 19.12 La récompense variable numérique</a></li><li><a href="#1913-la-comparaison-sociale-numerique">❤️ 19.13 La comparaison sociale numérique</a></li><li><a href="#1914-la-comparaison-ascendante-numerique">🪞 19.14 La comparaison ascendante numérique</a></li><li><a href="#1915-la-presentation-de-soi-numerique">📸 19.15 La présentation de soi numérique</a></li><li><a href="#1916-la-gestion-de-limage-en-ligne">🎭 19.16 La gestion de l'image en ligne</a></li><li><a href="#1917-la-validation-sociale-numerique">❤️ 19.17 La validation sociale numérique</a></li><li><a href="#1918-leffet-des-metriques-sociales">🔢 19.18 L'effet des métriques sociales</a></li><li><a href="#1919-la-communication-asynchrone">💬 19.19 La communication asynchrone</a></li><li><a href="#1920-lanxiete-liee-au-temps-de-reponse">⏱️ 19.20 L'anxiété liée au temps de réponse</a></li><li><a href="#1921-la-surveillance-du-statut-en-ligne">👁️ 19.21 La surveillance du statut en ligne</a></li><li><a href="#1922-la-lecture-sans-reponse">💬 19.22 La lecture sans réponse</a></li><li><a href="#1923-la-surcharge-cognitive-numerique">🧠 19.23 La surcharge cognitive numérique</a></li><li><a href="#1924-le-multitache-numerique">🔀 19.24 Le multitâche numérique</a></li><li><a href="#1925-le-cout-du-changement-numerique">🔄 19.25 Le coût du changement numérique</a></li><li><a href="#1926-linterruption-numerique">🧠 19.26 L'interruption numérique</a></li><li><a href="#1927-limmersion-numerique">🎮 19.27 L'immersion numérique</a></li><li><a href="#1928-la-presence-virtuelle">🥽 19.28 La présence virtuelle</a></li><li><a href="#1929-lavatar-et-le-sentiment-de-soi">🪞 19.29 L'avatar et le sentiment de soi</a></li><li><a href="#1930-leffet-proteus">🎭 19.30 L'effet Proteus</a></li><li><a href="#1931-lidentite-numerique">👤 19.31 L'identité numérique</a></li><li><a href="#1932-la-desinhibition-en-ligne">🌐 19.32 La désinhibition en ligne</a></li><li><a href="#1933-lanonymat-numerique">🕶️ 19.33 L'anonymat numérique</a></li><li><a href="#1934-la-contagion-emotionnelle-numerique">👥 19.34 La contagion émotionnelle numérique</a></li><li><a href="#1935-la-propagation-emotionnelle-des-contenus">📰 19.35 La propagation émotionnelle des contenus</a></li><li><a href="#1936-la-memoire-numerique">🧠 19.36 La mémoire numérique</a></li><li><a href="#1937-la-memoire-externalisee">📸 19.37 La mémoire externalisée</a></li><li><a href="#1938-leffet-google">🔍 19.38 L'effet Google</a></li><li><a href="#1939-la-fatigue-numerique">📱 19.39 La fatigue numérique</a></li><li><a href="#1940-pourquoi-etudier-les-phenomenes-psychologiques-modernes">🔬 19.40 Pourquoi étudier les phénomènes psychologiques modernes ?</a></li></ul></nav>
     <div class="article-body">
       <p>Les phénomènes psychologiques modernes regroupent des expériences et comportements étudiés en lien avec les nouvelles technologies, Internet, les réseaux sociaux, les smartphones, la circulation massive de l'information et l'évolution des habitudes numériques.</p>
 <p>Certains de ces phénomènes sont déjà largement étudiés scientifiquement. D'autres sont des termes récents ou descriptifs qui permettent de nommer des expériences contemporaines sans constituer pour autant des diagnostics médicaux ou psychiatriques.</p>
@@ -386,6 +396,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -567,47 +597,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

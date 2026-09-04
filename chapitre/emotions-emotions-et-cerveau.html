@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#21-le-cerveau-emotionnel">🧠 2.1 Le cerveau émotionnel</a></li><li><a href="#22-les-reseaux-cerebraux-des-emotions">🧩 2.2 Les réseaux cérébraux des émotions</a></li><li><a href="#23-lamygdale-cerebrale">⚡ 2.3 L'amygdale cérébrale</a></li><li><a href="#24-le-role-de-lhippocampe">🧠 2.4 Le rôle de l'hippocampe</a></li><li><a href="#25-le-cortex-prefrontal">🎯 2.5 Le cortex préfrontal</a></li><li><a href="#26-le-cortex-orbitofrontal">🧠 2.6 Le cortex orbitofrontal</a></li><li><a href="#27-le-cortex-cingulaire-anterieur">⚖️ 2.7 Le cortex cingulaire antérieur</a></li><li><a href="#28-lhypothalamus">🫀 2.8 L'hypothalamus</a></li><li><a href="#29-le-systeme-nerveux-autonome">🧬 2.9 Le système nerveux autonome</a></li><li><a href="#210-le-systeme-sympathique">⚡ 2.10 Le système sympathique</a></li><li><a href="#211-le-systeme-parasympathique">🌿 2.11 Le système parasympathique</a></li><li><a href="#212-le-role-des-neurotransmetteurs">🧠 2.12 Le rôle des neurotransmetteurs</a></li><li><a href="#213-la-dopamine">🧪 2.13 La dopamine</a></li><li><a href="#214-la-serotonine">🧪 2.14 La sérotonine</a></li><li><a href="#215-la-noradrenaline">🧪 2.15 La noradrénaline</a></li><li><a href="#216-le-cortisol">🧪 2.16 Le cortisol</a></li><li><a href="#217-ladrenaline">⚡ 2.17 L'adrénaline</a></li><li><a href="#218-le-circuit-de-la-recompense">🧠 2.18 Le circuit de la récompense</a></li><li><a href="#219-lanticipation-de-la-recompense">🎁 2.19 L'anticipation de la récompense</a></li><li><a href="#220-lapprentissage-par-recompense">🔄 2.20 L'apprentissage par récompense</a></li><li><a href="#221-le-conditionnement-emotionnel">🧠 2.21 Le conditionnement émotionnel</a></li><li><a href="#222-la-memoire-emotionnelle">🧠 2.22 La mémoire émotionnelle</a></li><li><a href="#223-les-emotions-et-lattention">🎯 2.23 Les émotions et l'attention</a></li><li><a href="#224-les-emotions-et-la-perception">👁️ 2.24 Les émotions et la perception</a></li><li><a href="#225-les-emotions-et-la-pensee">💭 2.25 Les émotions et la pensée</a></li><li><a href="#226-les-emotions-et-la-prise-de-decision">⚖️ 2.26 Les émotions et la prise de décision</a></li><li><a href="#227-le-controle-inhibiteur">🛑 2.27 Le contrôle inhibiteur</a></li><li><a href="#228-la-regulation-emotionnelle-cerebrale">🧠 2.28 La régulation émotionnelle cérébrale</a></li><li><a href="#229-la-reevaluation-cognitive">🔄 2.29 La réévaluation cognitive</a></li><li><a href="#230-le-role-de-la-conscience">🧠 2.30 Le rôle de la conscience</a></li><li><a href="#231-les-reactions-emotionnelles-rapides">⚡ 2.31 Les réactions émotionnelles rapides</a></li><li><a href="#232-les-evaluations-emotionnelles-plus-lentes">🐢 2.32 Les évaluations émotionnelles plus lentes</a></li><li><a href="#233-le-role-des-interactions-entre-regions-cerebrales">🧩 2.33 Le rôle des interactions entre régions cérébrales</a></li><li><a href="#234-la-plasticite-cerebrale">🧬 2.34 La plasticité cérébrale</a></li><li><a href="#235-les-emotions-et-lapprentissage">🌱 2.35 Les émotions et l'apprentissage</a></li><li><a href="#236-les-emotions-et-les-habitudes">🧠 2.36 Les émotions et les habitudes</a></li><li><a href="#237-le-cerveau-et-les-comportements-sociaux">🧠 2.37 Le cerveau et les comportements sociaux</a></li><li><a href="#238-le-cerveau-et-lempathie">❤️ 2.38 Le cerveau et l'empathie</a></li><li><a href="#239-peut-on-localiser-une-emotion-dans-une-seule-zone-du-cerveau">🔬 2.39 Peut-on localiser une émotion dans une seule zone du cerveau ?</a></li><li><a href="#240-pourquoi-etudier-les-emotions-dans-le-cerveau">🧠 2.40 Pourquoi étudier les émotions dans le cerveau ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#21-le-cerveau-emotionnel">🧠 2.1 Le cerveau émotionnel</a></li><li><a href="#22-les-reseaux-cerebraux-des-emotions">🧩 2.2 Les réseaux cérébraux des émotions</a></li><li><a href="#23-lamygdale-cerebrale">⚡ 2.3 L'amygdale cérébrale</a></li><li><a href="#24-le-role-de-lhippocampe">🧠 2.4 Le rôle de l'hippocampe</a></li><li><a href="#25-le-cortex-prefrontal">🎯 2.5 Le cortex préfrontal</a></li><li><a href="#26-le-cortex-orbitofrontal">🧠 2.6 Le cortex orbitofrontal</a></li><li><a href="#27-le-cortex-cingulaire-anterieur">⚖️ 2.7 Le cortex cingulaire antérieur</a></li><li><a href="#28-lhypothalamus">🫀 2.8 L'hypothalamus</a></li><li><a href="#29-le-systeme-nerveux-autonome">🧬 2.9 Le système nerveux autonome</a></li><li><a href="#210-le-systeme-sympathique">⚡ 2.10 Le système sympathique</a></li><li><a href="#211-le-systeme-parasympathique">🌿 2.11 Le système parasympathique</a></li><li><a href="#212-le-role-des-neurotransmetteurs">🧠 2.12 Le rôle des neurotransmetteurs</a></li><li><a href="#213-la-dopamine">🧪 2.13 La dopamine</a></li><li><a href="#214-la-serotonine">🧪 2.14 La sérotonine</a></li><li><a href="#215-la-noradrenaline">🧪 2.15 La noradrénaline</a></li><li><a href="#216-le-cortisol">🧪 2.16 Le cortisol</a></li><li><a href="#217-ladrenaline">⚡ 2.17 L'adrénaline</a></li><li><a href="#218-le-circuit-de-la-recompense">🧠 2.18 Le circuit de la récompense</a></li><li><a href="#219-lanticipation-de-la-recompense">🎁 2.19 L'anticipation de la récompense</a></li><li><a href="#220-lapprentissage-par-recompense">🔄 2.20 L'apprentissage par récompense</a></li><li><a href="#221-le-conditionnement-emotionnel">🧠 2.21 Le conditionnement émotionnel</a></li><li><a href="#222-la-memoire-emotionnelle">🧠 2.22 La mémoire émotionnelle</a></li><li><a href="#223-les-emotions-et-lattention">🎯 2.23 Les émotions et l'attention</a></li><li><a href="#224-les-emotions-et-la-perception">👁️ 2.24 Les émotions et la perception</a></li><li><a href="#225-les-emotions-et-la-pensee">💭 2.25 Les émotions et la pensée</a></li><li><a href="#226-les-emotions-et-la-prise-de-decision">⚖️ 2.26 Les émotions et la prise de décision</a></li><li><a href="#227-le-controle-inhibiteur">🛑 2.27 Le contrôle inhibiteur</a></li><li><a href="#228-la-regulation-emotionnelle-cerebrale">🧠 2.28 La régulation émotionnelle cérébrale</a></li><li><a href="#229-la-reevaluation-cognitive">🔄 2.29 La réévaluation cognitive</a></li><li><a href="#230-le-role-de-la-conscience">🧠 2.30 Le rôle de la conscience</a></li><li><a href="#231-les-reactions-emotionnelles-rapides">⚡ 2.31 Les réactions émotionnelles rapides</a></li><li><a href="#232-les-evaluations-emotionnelles-plus-lentes">🐢 2.32 Les évaluations émotionnelles plus lentes</a></li><li><a href="#233-le-role-des-interactions-entre-regions-cerebrales">🧩 2.33 Le rôle des interactions entre régions cérébrales</a></li><li><a href="#234-la-plasticite-cerebrale">🧬 2.34 La plasticité cérébrale</a></li><li><a href="#235-les-emotions-et-lapprentissage">🌱 2.35 Les émotions et l'apprentissage</a></li><li><a href="#236-les-emotions-et-les-habitudes">🧠 2.36 Les émotions et les habitudes</a></li><li><a href="#237-le-cerveau-et-les-comportements-sociaux">🧠 2.37 Le cerveau et les comportements sociaux</a></li><li><a href="#238-le-cerveau-et-lempathie">❤️ 2.38 Le cerveau et l'empathie</a></li><li><a href="#239-peut-on-localiser-une-emotion-dans-une-seule-zone-du-cerveau">🔬 2.39 Peut-on localiser une émotion dans une seule zone du cerveau ?</a></li><li><a href="#240-pourquoi-etudier-les-emotions-dans-le-cerveau">🧠 2.40 Pourquoi étudier les émotions dans le cerveau ?</a></li></ul></nav>
     <div class="article-body">
       <p>Les émotions reposent sur l'interaction de nombreux systèmes cérébraux. Elles ne sont pas produites par une seule zone du cerveau : plusieurs régions communiquent entre elles pour analyser une situation, détecter sa signification, produire des réactions corporelles et orienter le comportement.</p>
 <p>Le fonctionnement émotionnel implique notamment les circuits de la récompense, de la menace, de la mémoire, de l'attention et de la régulation.</p>
@@ -468,6 +478,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -649,47 +679,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#81-le-clivage">🧩 8.1 Le clivage</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#exemple">💭 Exemple</a></li><li><a href="#fonction">🧠 Fonction</a></li></ul></li><li><a href="#82-lidealisation">🌟 8.2 L'idéalisation</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#exemple_1">💭 Exemple</a></li><li><a href="#fonction_1">🧠 Fonction</a></li><li><a href="#limite">⚠️ Limite</a></li></ul></li><li><a href="#83-la-devalorisation">🔽 8.3 La dévalorisation</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#exemple_2">💭 Exemple</a></li><li><a href="#fonction_2">🧠 Fonction</a></li></ul></li><li><a href="#84-lalternance-idealisationdevalorisation">🔄 8.4 L'alternance idéalisation–dévalorisation</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#exemple_3">💭 Exemple</a></li><li><a href="#fonction-possible">🧠 Fonction possible</a></li></ul></li><li><a href="#85-lidentification-projective">🪞 8.5 L'identification projective</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#exemple-simplifie">💭 Exemple simplifié</a></li><li><a href="#important">⚠️ Important</a></li></ul></li><li><a href="#86-la-projection">🪞 8.6 La projection</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#exemple_4">💭 Exemple</a></li><li><a href="#fonction_3">🧠 Fonction</a></li></ul></li><li><a href="#87-lomnipotence">👑 8.7 L'omnipotence</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#exemple_5">💭 Exemple</a></li><li><a href="#fonction_4">🧠 Fonction</a></li></ul></li><li><a href="#88-le-controle-omnipotent">🛡️ 8.8 Le contrôle omnipotent</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#exemple_6">💭 Exemple</a></li><li><a href="#fonction_5">🧠 Fonction</a></li></ul></li><li><a href="#89-le-deni-psychotique">🧱 8.9 Le déni psychotique</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#important_1">⚠️ Important</a></li></ul></li><li><a href="#810-la-dissociation">🌫️ 8.10 La dissociation</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#exemple_7">💭 Exemple</a></li><li><a href="#important_2">⚠️ Important</a></li></ul></li><li><a href="#811-la-compartimentation">🧠 8.11 La compartimentation</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#exemple_8">💭 Exemple</a></li><li><a href="#fonction_6">🧠 Fonction</a></li></ul></li><li><a href="#812-la-formation-reactionnelle">🎭 8.12 La formation réactionnelle</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#exemple_9">💭 Exemple</a></li><li><a href="#fonction_7">🧠 Fonction</a></li></ul></li><li><a href="#813-lannulation-retroactive">🔄 8.13 L'annulation rétroactive</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#exemple_10">💭 Exemple</a></li><li><a href="#fonction_8">🧠 Fonction</a></li></ul></li><li><a href="#814-lintrojection">🪞 8.14 L'introjection</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#exemple_11">💭 Exemple</a></li><li><a href="#fonction_9">🧠 Fonction</a></li></ul></li><li><a href="#815-lidentification">👤 8.15 L'identification</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#exemple_12">💭 Exemple</a></li><li><a href="#fonction_10">🧠 Fonction</a></li></ul></li><li><a href="#816-lidentification-a-lagresseur">🧩 8.16 L'identification à l'agresseur</a><ul class="sidebar-sublist"><li><a href="#definition_15">🔎 Définition</a></li><li><a href="#exemple_13">💭 Exemple</a></li><li><a href="#fonction-possible_1">🧠 Fonction possible</a></li></ul></li><li><a href="#817-le-retrait-narcissique">🧊 8.17 Le retrait narcissique</a><ul class="sidebar-sublist"><li><a href="#definition_16">🔎 Définition</a></li><li><a href="#exemple_14">💭 Exemple</a></li><li><a href="#fonction_11">🧠 Fonction</a></li></ul></li><li><a href="#818-le-faux-self">🪞 8.18 Le faux self</a><ul class="sidebar-sublist"><li><a href="#definition_17">🔎 Définition</a></li><li><a href="#exemple_15">💭 Exemple</a></li><li><a href="#important_3">⚠️ Important</a></li></ul></li><li><a href="#819-la-suradaptation">🧱 8.19 La suradaptation</a><ul class="sidebar-sublist"><li><a href="#definition_18">🔎 Définition</a></li><li><a href="#exemple_16">💭 Exemple</a></li><li><a href="#fonction_12">🧠 Fonction</a></li></ul></li><li><a href="#820-le-passage-a-lacte">🧠 8.20 Le passage à l'acte</a><ul class="sidebar-sublist"><li><a href="#definition_19">🔎 Définition</a></li><li><a href="#exemple_17">💭 Exemple</a></li><li><a href="#important_4">⚠️ Important</a></li></ul></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -45,7 +56,6 @@
         <path d="M45 59 L55 69 L76 46"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#81-le-clivage">🧩 8.1 Le clivage</a></li><li><a href="#82-lidealisation">🌟 8.2 L'idéalisation</a></li><li><a href="#83-la-devalorisation">🔽 8.3 La dévalorisation</a></li><li><a href="#84-lalternance-idealisationdevalorisation">🔄 8.4 L'alternance idéalisation–dévalorisation</a></li><li><a href="#85-lidentification-projective">🪞 8.5 L'identification projective</a></li><li><a href="#86-la-projection">🪞 8.6 La projection</a></li><li><a href="#87-lomnipotence">👑 8.7 L'omnipotence</a></li><li><a href="#88-le-controle-omnipotent">🛡️ 8.8 Le contrôle omnipotent</a></li><li><a href="#89-le-deni-psychotique">🧱 8.9 Le déni psychotique</a></li><li><a href="#810-la-dissociation">🌫️ 8.10 La dissociation</a></li><li><a href="#811-la-compartimentation">🧠 8.11 La compartimentation</a></li><li><a href="#812-la-formation-reactionnelle">🎭 8.12 La formation réactionnelle</a></li><li><a href="#813-lannulation-retroactive">🔄 8.13 L'annulation rétroactive</a></li><li><a href="#814-lintrojection">🪞 8.14 L'introjection</a></li><li><a href="#815-lidentification">👤 8.15 L'identification</a></li><li><a href="#816-lidentification-a-lagresseur">🧩 8.16 L'identification à l'agresseur</a></li><li><a href="#817-le-retrait-narcissique">🧊 8.17 Le retrait narcissique</a></li><li><a href="#818-le-faux-self">🪞 8.18 Le faux self</a></li><li><a href="#819-la-suradaptation">🧱 8.19 La suradaptation</a></li><li><a href="#820-le-passage-a-lacte">🧠 8.20 Le passage à l'acte</a></li></ul></nav>
     <div class="article-body">
       <blockquote>
 <p>🧠 Cette partie présente des mécanismes psychologiques plus complexes, principalement issus des théories psychodynamiques.</p>
@@ -573,6 +583,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -754,47 +784,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

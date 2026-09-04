@@ -64,20 +64,53 @@ body {
   position: relative;
 }
 
-/* Halo façon aurore : plusieurs lueurs colorées superposées qui
-   suivent le curseur ensemble, plutôt qu'un seul rond plat */
-body::before {
-  content: "";
+/* Traînée fluide colorée en Canvas (voir le script en bas de page) */
+#fluid-cursor {
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
   mix-blend-mode: screen;
-  background:
-    radial-gradient(480px circle at var(--mx) var(--my), rgba(93, 210, 255, 0.11), transparent 62%),
-    radial-gradient(340px circle at calc(var(--mx) + 70px) calc(var(--my) - 50px), rgba(201, 166, 255, 0.09), transparent 65%),
-    radial-gradient(300px circle at calc(var(--mx) - 60px) calc(var(--my) + 60px), rgba(255, 122, 147, 0.08), transparent 65%),
-    radial-gradient(260px circle at calc(var(--mx) - 40px) calc(var(--my) - 70px), rgba(94, 234, 192, 0.07), transparent 65%);
+}
+
+/* ---------- Boutons flottants Accueil / Retour ---------- */
+
+.floating-nav {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.floating-nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.floating-nav-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--clay);
+  color: var(--clay);
+}
+
+@media (max-width: 640px) {
+  .floating-nav { right: 0.85rem; bottom: 0.85rem; }
+  .floating-nav-btn { width: 40px; height: 40px; font-size: 1.05rem; }
 }
 
 .site-header {
@@ -211,6 +244,17 @@ h1, h2, h3 {
   margin-top: 0.5rem;
   z-index: 30;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.search-results::-webkit-scrollbar { width: 6px; }
+.search-results::-webkit-scrollbar-track { background: transparent; }
+.search-results::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 3px;
+}
+.search-results::-webkit-scrollbar-thumb:hover { background: var(--ink-soft); }
   padding: 0.5rem;
 }
 
@@ -661,6 +705,127 @@ h1, h2, h3 {
 }
 
 /* ---------- Long-form chapter content ---------- */
+
+/* ---------- Sommaire latéral (pages de chapitre) ---------- */
+
+.chapter-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.chapter-sidebar {
+  flex: 0 0 230px;
+  position: sticky;
+  top: 1.5rem;
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+  transition: left 0.2s ease;
+}
+
+.chapter-sidebar::-webkit-scrollbar { width: 6px; }
+.chapter-sidebar::-webkit-scrollbar-track { background: transparent; }
+.chapter-sidebar::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 3px;
+}
+.chapter-sidebar::-webkit-scrollbar-thumb:hover { background: var(--ink-soft); }
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  font-weight: 700;
+  color: var(--clay);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.5rem;
+  padding: 0.55rem 0.75rem;
+  cursor: pointer;
+  list-style: none;
+  background: var(--bg-raised-2);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  user-select: none;
+}
+
+.sidebar-title:hover { border-color: var(--clay); }
+
+.sidebar-title::-webkit-details-marker { display: none; }
+
+.sidebar-title::after {
+  content: '−';
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-raised);
+  border-radius: 4px;
+}
+
+.chapter-sidebar details:not([open]) .sidebar-title { margin-bottom: 0; }
+.chapter-sidebar details:not([open]) .sidebar-title::after { content: '+'; }
+
+.sidebar-list, .sidebar-sublist { list-style: none; margin: 0; padding: 0; }
+
+.sidebar-list { margin-top: 0.9rem; }
+
+.sidebar-list > li { margin-bottom: 0.55rem; }
+
+.sidebar-list > li > a {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.89rem;
+  text-decoration: none;
+  display: block;
+  line-height: 1.35;
+}
+
+.sidebar-list > li > a:hover { color: var(--clay); }
+
+.sidebar-sublist {
+  margin: 0.35rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--line);
+}
+
+.sidebar-sublist li { margin-bottom: 0.3rem; }
+
+.sidebar-sublist a {
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.sidebar-sublist a:hover { color: var(--clay); }
+
+/* La barre reste sagement collée au texte à toutes les tailles
+   d'écran (repliable partout via le clic sur "Dans ce chapitre") */
+
+/* Mobile : repliable, pour ne pas pousser l'article vers le bas */
+@media (max-width: 900px) {
+  .chapter-layout { flex-direction: column; }
+  .chapter-sidebar {
+    position: static;
+    max-height: none;
+    width: 100%;
+    flex: none;
+  }
+}
 
 .prose-wide {
   max-width: 740px;

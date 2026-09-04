@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#51-lattention">👁️ 5.1 L'attention</a></li><li><a href="#52-lattention-selective">🎯 5.2 L'attention sélective</a></li><li><a href="#53-lattention-divisee">🔀 5.3 L'attention divisée</a></li><li><a href="#54-le-multitache">🔄 5.4 Le multitâche</a></li><li><a href="#55-le-cout-du-changement-de-tache">🔁 5.5 Le coût du changement de tâche</a></li><li><a href="#56-lattention-soutenue">🎯 5.6 L'attention soutenue</a></li><li><a href="#57-la-vigilance">👀 5.7 La vigilance</a></li><li><a href="#58-la-cecite-attentionnelle">🕳️ 5.8 La cécité attentionnelle</a></li><li><a href="#59-la-cecite-au-changement">🔄 5.9 La cécité au changement</a></li><li><a href="#510-le-clignement-attentionnel">🧠 5.10 Le clignement attentionnel</a></li><li><a href="#511-leffet-de-clignement">👁️ 5.11 L'effet de clignement</a></li><li><a href="#512-leffet-cocktail-party">🍸 5.12 L'effet cocktail party</a></li><li><a href="#513-lattention-auditive-selective">🔊 5.13 L'attention auditive sélective</a></li><li><a href="#514-la-capture-attentionnelle">🧲 5.14 La capture attentionnelle</a></li><li><a href="#515-lattention-orientee-vers-la-menace">⚠️ 5.15 L'attention orientée vers la menace</a></li><li><a href="#516-le-biais-attentionnel">🧠 5.16 Le biais attentionnel</a></li><li><a href="#517-la-recherche-visuelle">🔎 5.17 La recherche visuelle</a></li><li><a href="#518-la-recherche-en-parallele">🌟 5.18 La recherche en parallèle</a></li><li><a href="#519-la-recherche-serielle">🧩 5.19 La recherche sérielle</a></li><li><a href="#520-le-modele-du-projecteur-attentionnel">🔦 5.20 Le modèle du projecteur attentionnel</a></li><li><a href="#521-lattention-spatiale">🔍 5.21 L'attention spatiale</a></li><li><a href="#522-lattention-ouverte-et-lattention-cachee">👁️ 5.22 L'attention ouverte et l'attention cachée</a></li><li><a href="#523-lorientation-volontaire-de-lattention">🧠 5.23 L'orientation volontaire de l'attention</a></li><li><a href="#524-lorientation-automatique-de-lattention">⚡ 5.24 L'orientation automatique de l'attention</a></li><li><a href="#525-linhibition-de-retour">🔄 5.25 L'inhibition de retour</a></li><li><a href="#526-lattention-endogene">🧠 5.26 L'attention endogène</a></li><li><a href="#527-lattention-exogene">⚡ 5.27 L'attention exogène</a></li><li><a href="#528-lamorcage-attentionnel">🧩 5.28 L'amorçage attentionnel</a></li><li><a href="#529-leffet-de-preparation">🧠 5.29 L'effet de préparation</a></li><li><a href="#530-leffet-de-la-fatigue-sur-lattention">😴 5.30 L'effet de la fatigue sur l'attention</a></li><li><a href="#531-les-interruptions-attentionnelles">📱 5.31 Les interruptions attentionnelles</a></li><li><a href="#532-la-fatigue-attentionnelle">🔔 5.32 La fatigue attentionnelle</a></li><li><a href="#533-lattention-et-la-memoire-de-travail">🧠 5.33 L'attention et la mémoire de travail</a></li><li><a href="#534-lattention-et-la-perception">🧩 5.34 L'attention et la perception</a></li><li><a href="#535-lattention-et-les-emotions">🧠 5.35 L'attention et les émotions</a></li><li><a href="#536-lattention-et-les-objectifs">🎯 5.36 L'attention et les objectifs</a></li><li><a href="#537-la-distraction">🌫️ 5.37 La distraction</a></li><li><a href="#538-la-distraction-interne">💭 5.38 La distraction interne</a></li><li><a href="#539-lerrance-mentale">🌐 5.39 L'errance mentale</a></li><li><a href="#540-lattention-et-la-conscience">🧠 5.40 L'attention et la conscience</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -49,7 +60,6 @@
         <line x1="116" y1="60" x2="105" y2="60"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#51-lattention">👁️ 5.1 L'attention</a></li><li><a href="#52-lattention-selective">🎯 5.2 L'attention sélective</a></li><li><a href="#53-lattention-divisee">🔀 5.3 L'attention divisée</a></li><li><a href="#54-le-multitache">🔄 5.4 Le multitâche</a></li><li><a href="#55-le-cout-du-changement-de-tache">🔁 5.5 Le coût du changement de tâche</a></li><li><a href="#56-lattention-soutenue">🎯 5.6 L'attention soutenue</a></li><li><a href="#57-la-vigilance">👀 5.7 La vigilance</a></li><li><a href="#58-la-cecite-attentionnelle">🕳️ 5.8 La cécité attentionnelle</a></li><li><a href="#59-la-cecite-au-changement">🔄 5.9 La cécité au changement</a></li><li><a href="#510-le-clignement-attentionnel">🧠 5.10 Le clignement attentionnel</a></li><li><a href="#511-leffet-de-clignement">👁️ 5.11 L'effet de clignement</a></li><li><a href="#512-leffet-cocktail-party">🍸 5.12 L'effet cocktail party</a></li><li><a href="#513-lattention-auditive-selective">🔊 5.13 L'attention auditive sélective</a></li><li><a href="#514-la-capture-attentionnelle">🧲 5.14 La capture attentionnelle</a></li><li><a href="#515-lattention-orientee-vers-la-menace">⚠️ 5.15 L'attention orientée vers la menace</a></li><li><a href="#516-le-biais-attentionnel">🧠 5.16 Le biais attentionnel</a></li><li><a href="#517-la-recherche-visuelle">🔎 5.17 La recherche visuelle</a></li><li><a href="#518-la-recherche-en-parallele">🌟 5.18 La recherche en parallèle</a></li><li><a href="#519-la-recherche-serielle">🧩 5.19 La recherche sérielle</a></li><li><a href="#520-le-modele-du-projecteur-attentionnel">🔦 5.20 Le modèle du projecteur attentionnel</a></li><li><a href="#521-lattention-spatiale">🔍 5.21 L'attention spatiale</a></li><li><a href="#522-lattention-ouverte-et-lattention-cachee">👁️ 5.22 L'attention ouverte et l'attention cachée</a></li><li><a href="#523-lorientation-volontaire-de-lattention">🧠 5.23 L'orientation volontaire de l'attention</a></li><li><a href="#524-lorientation-automatique-de-lattention">⚡ 5.24 L'orientation automatique de l'attention</a></li><li><a href="#525-linhibition-de-retour">🔄 5.25 L'inhibition de retour</a></li><li><a href="#526-lattention-endogene">🧠 5.26 L'attention endogène</a></li><li><a href="#527-lattention-exogene">⚡ 5.27 L'attention exogène</a></li><li><a href="#528-lamorcage-attentionnel">🧩 5.28 L'amorçage attentionnel</a></li><li><a href="#529-leffet-de-preparation">🧠 5.29 L'effet de préparation</a></li><li><a href="#530-leffet-de-la-fatigue-sur-lattention">😴 5.30 L'effet de la fatigue sur l'attention</a></li><li><a href="#531-les-interruptions-attentionnelles">📱 5.31 Les interruptions attentionnelles</a></li><li><a href="#532-la-fatigue-attentionnelle">🔔 5.32 La fatigue attentionnelle</a></li><li><a href="#533-lattention-et-la-memoire-de-travail">🧠 5.33 L'attention et la mémoire de travail</a></li><li><a href="#534-lattention-et-la-perception">🧩 5.34 L'attention et la perception</a></li><li><a href="#535-lattention-et-les-emotions">🧠 5.35 L'attention et les émotions</a></li><li><a href="#536-lattention-et-les-objectifs">🎯 5.36 L'attention et les objectifs</a></li><li><a href="#537-la-distraction">🌫️ 5.37 La distraction</a></li><li><a href="#538-la-distraction-interne">💭 5.38 La distraction interne</a></li><li><a href="#539-lerrance-mentale">🌐 5.39 L'errance mentale</a></li><li><a href="#540-lattention-et-la-conscience">🧠 5.40 L'attention et la conscience</a></li></ul></nav>
     <div class="article-body">
       <p>L'attention permet de sélectionner certaines informations parmi l'immense quantité de stimuli présents dans l'environnement.</p>
 <p>Elle intervient dans la perception, la mémoire, l'apprentissage, la prise de décision et de nombreuses activités quotidiennes.</p>
@@ -475,6 +485,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -656,47 +686,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

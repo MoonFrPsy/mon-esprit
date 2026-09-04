@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#22-une-enfance-marquee-par-les-crises">🧒 2.2 Une enfance marquée par les crises</a></li><li><a href="#23-une-operation-experimentale">🩺 2.3 Une opération expérimentale</a></li><li><a href="#24-henry-ne-peut-plus-former-de-nouveaux-souvenirs">🧠 2.4 Henry ne peut plus former de nouveaux souvenirs</a></li><li><a href="#25-un-present-presque-permanent">⏳ 2.5 Un présent presque permanent</a></li><li><a href="#26-pourtant-tout-navait-pas-disparu">🧩 2.6 Pourtant, tout n'avait pas disparu</a></li><li><a href="#27-larrivee-de-brenda-milner">🔬 2.7 L'arrivée de Brenda Milner</a></li><li><a href="#28-lexperience-qui-va-tout-changer">🧠 2.8 L'expérience qui va tout changer</a></li><li><a href="#29-comment-pouvait-il-apprendre-sans-se-souvenir">🧩 2.9 Comment pouvait-il apprendre sans se souvenir ?</a><ul class="sidebar-sublist"><li><a href="#memoire-declarative">📚 Mémoire déclarative</a></li><li><a href="#memoire-procedurale">🧠 Mémoire procédurale</a></li></ul></li><li><a href="#210-le-mystere-de-lhippocampe">🧠 2.10 Le mystère de l'hippocampe</a></li><li><a href="#211-pourquoi-henry-se-souvenait-il-de-son-enfance">🧠 2.11 Pourquoi Henry se souvenait-il de son enfance ?</a></li><li><a href="#212-henry-pouvait-donc-se-souvenir-de-son-passe">🧩 2.12 Henry pouvait donc se souvenir de son passé...</a></li><li><a href="#213-les-consequences-humaines">❤️ 2.13 Les conséquences humaines</a></li><li><a href="#214-la-memoire-construit-elle-une-partie-de-notre-identite">🪞 2.14 La mémoire construit-elle une partie de notre identité ?</a></li><li><a href="#215-le-paradoxe-de-henry">🧠 2.15 Le paradoxe de Henry</a></li><li><a href="#216-une-personne-qui-devient-un-cas-scientifique-majeur">🔬 2.16 Une personne qui devient un cas scientifique majeur</a></li><li><a href="#217-une-dissociation-extraordinaire">🧩 2.17 Une dissociation extraordinaire</a></li><li><a href="#218-lhippocampe-nest-pas-la-memoire">🧠 2.18 L'hippocampe n'est pas « la mémoire »</a></li><li><a href="#219-les-chercheurs-ont-continue-a-etudier-henry">🔬 2.19 Les chercheurs ont continué à étudier Henry</a></li><li><a href="#220-une-etrange-forme-de-continuite">🧠 2.20 Une étrange forme de continuité</a></li><li><a href="#221-une-vie-etudiee-pendant-plus-de-cinquante-ans">🕰️ 2.21 Une vie étudiée pendant plus de cinquante ans</a></li><li><a href="#222-une-decouverte-qui-depasse-largement-henry">🧠 2.22 Une découverte qui dépasse largement Henry</a></li><li><a href="#223-le-cerveau-apprend-parfois-sans-que-nous-le-sachions">🧩 2.23 Le cerveau apprend parfois sans que nous le sachions</a></li><li><a href="#224-ce-que-henry-nous-apprend-sur-les-habitudes">🧠 2.24 Ce que Henry nous apprend sur les habitudes</a></li><li><a href="#225-une-decouverte-fondamentale-pour-la-neuropsychologie">🔬 2.25 Une découverte fondamentale pour la neuropsychologie</a></li><li><a href="#226-henry-apres-des-decennies">🧠 2.26 Henry après des décennies</a></li><li><a href="#227-la-relation-avec-les-chercheurs">❤️ 2.27 La relation avec les chercheurs</a></li><li><a href="#228-henry-netait-pas-seulement-sa-maladie">🧠 2.28 Henry n'était pas seulement sa maladie</a></li><li><a href="#229-une-histoire-qui-a-change-la-science">🔬 2.29 Une histoire qui a changé la science</a></li><li><a href="#230-la-mort-de-henry">🧩 2.30 La mort de Henry</a></li><li><a href="#231-pourquoi-son-histoire-est-extraordinaire">🧠 2.31 Pourquoi son histoire est extraordinaire</a></li><li><a href="#232-ce-que-lon-sait-aujourdhui">🔬 2.32 Ce que l'on sait aujourd'hui</a></li><li><a href="#233-ce-quil-faut-nuancer">⚠️ 2.33 Ce qu'il faut nuancer</a></li><li><a href="#234-une-autre-idee-importante">🧠 2.34 Une autre idée importante</a></li><li><a href="#235-ce-que-cette-histoire-nous-apprend">🌱 2.35 Ce que cette histoire nous apprend</a></li><li><a href="#236-une-derniere-reflexion">❤️ 2.36 Une dernière réflexion</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -46,7 +57,6 @@
         <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#22-une-enfance-marquee-par-les-crises">🧒 2.2 Une enfance marquée par les crises</a></li><li><a href="#23-une-operation-experimentale">🩺 2.3 Une opération expérimentale</a></li><li><a href="#24-henry-ne-peut-plus-former-de-nouveaux-souvenirs">🧠 2.4 Henry ne peut plus former de nouveaux souvenirs</a></li><li><a href="#25-un-present-presque-permanent">⏳ 2.5 Un présent presque permanent</a></li><li><a href="#26-pourtant-tout-navait-pas-disparu">🧩 2.6 Pourtant, tout n'avait pas disparu</a></li><li><a href="#27-larrivee-de-brenda-milner">🔬 2.7 L'arrivée de Brenda Milner</a></li><li><a href="#28-lexperience-qui-va-tout-changer">🧠 2.8 L'expérience qui va tout changer</a></li><li><a href="#29-comment-pouvait-il-apprendre-sans-se-souvenir">🧩 2.9 Comment pouvait-il apprendre sans se souvenir ?</a></li><li><a href="#210-le-mystere-de-lhippocampe">🧠 2.10 Le mystère de l'hippocampe</a></li><li><a href="#211-pourquoi-henry-se-souvenait-il-de-son-enfance">🧠 2.11 Pourquoi Henry se souvenait-il de son enfance ?</a></li><li><a href="#212-henry-pouvait-donc-se-souvenir-de-son-passe">🧩 2.12 Henry pouvait donc se souvenir de son passé...</a></li><li><a href="#213-les-consequences-humaines">❤️ 2.13 Les conséquences humaines</a></li><li><a href="#214-la-memoire-construit-elle-une-partie-de-notre-identite">🪞 2.14 La mémoire construit-elle une partie de notre identité ?</a></li><li><a href="#215-le-paradoxe-de-henry">🧠 2.15 Le paradoxe de Henry</a></li><li><a href="#216-une-personne-qui-devient-un-cas-scientifique-majeur">🔬 2.16 Une personne qui devient un cas scientifique majeur</a></li><li><a href="#217-une-dissociation-extraordinaire">🧩 2.17 Une dissociation extraordinaire</a></li><li><a href="#218-lhippocampe-nest-pas-la-memoire">🧠 2.18 L'hippocampe n'est pas « la mémoire »</a></li><li><a href="#219-les-chercheurs-ont-continue-a-etudier-henry">🔬 2.19 Les chercheurs ont continué à étudier Henry</a></li><li><a href="#220-une-etrange-forme-de-continuite">🧠 2.20 Une étrange forme de continuité</a></li><li><a href="#221-une-vie-etudiee-pendant-plus-de-cinquante-ans">🕰️ 2.21 Une vie étudiée pendant plus de cinquante ans</a></li><li><a href="#222-une-decouverte-qui-depasse-largement-henry">🧠 2.22 Une découverte qui dépasse largement Henry</a></li><li><a href="#223-le-cerveau-apprend-parfois-sans-que-nous-le-sachions">🧩 2.23 Le cerveau apprend parfois sans que nous le sachions</a></li><li><a href="#224-ce-que-henry-nous-apprend-sur-les-habitudes">🧠 2.24 Ce que Henry nous apprend sur les habitudes</a></li><li><a href="#225-une-decouverte-fondamentale-pour-la-neuropsychologie">🔬 2.25 Une découverte fondamentale pour la neuropsychologie</a></li><li><a href="#226-henry-apres-des-decennies">🧠 2.26 Henry après des décennies</a></li><li><a href="#227-la-relation-avec-les-chercheurs">❤️ 2.27 La relation avec les chercheurs</a></li><li><a href="#228-henry-netait-pas-seulement-sa-maladie">🧠 2.28 Henry n'était pas seulement sa maladie</a></li><li><a href="#229-une-histoire-qui-a-change-la-science">🔬 2.29 Une histoire qui a changé la science</a></li><li><a href="#230-la-mort-de-henry">🧩 2.30 La mort de Henry</a></li><li><a href="#231-pourquoi-son-histoire-est-extraordinaire">🧠 2.31 Pourquoi son histoire est extraordinaire</a></li><li><a href="#232-ce-que-lon-sait-aujourdhui">🔬 2.32 Ce que l'on sait aujourd'hui</a></li><li><a href="#233-ce-quil-faut-nuancer">⚠️ 2.33 Ce qu'il faut nuancer</a></li><li><a href="#234-une-autre-idee-importante">🧠 2.34 Une autre idée importante</a></li><li><a href="#235-ce-que-cette-histoire-nous-apprend">🌱 2.35 Ce que cette histoire nous apprend</a></li><li><a href="#236-une-derniere-reflexion">❤️ 2.36 Une dernière réflexion</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></nav>
     <div class="article-body">
       <p><mark>Henry Molaison : l'homme condamné à vivre dans un présent sans cesse renouvelé</mark></p>
 <hr />
@@ -684,6 +694,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -865,47 +895,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)

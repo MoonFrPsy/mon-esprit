@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
 <header class="site-header">
   <div class="container">
     <a href="../index.html" class="site-title">Mon Esprit</a>
@@ -24,7 +29,13 @@
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main class="container">
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#121-le-sommeil">😴 12.1 Le sommeil</a></li><li><a href="#122-le-cycle-veille-sommeil">🕰️ 12.2 Le cycle veille-sommeil</a></li><li><a href="#123-lhorloge-biologique">🌙 12.3 L'horloge biologique</a></li><li><a href="#124-le-rythme-circadien">🌅 12.4 Le rythme circadien</a></li><li><a href="#125-la-pression-de-sommeil">💤 12.5 La pression de sommeil</a></li><li><a href="#126-lendormissement">🛌 12.6 L'endormissement</a></li><li><a href="#127-les-micro-reveils">👁️ 12.7 Les micro-réveils</a></li><li><a href="#128-les-differents-stades-du-sommeil">🧠 12.8 Les différents stades du sommeil</a></li><li><a href="#129-le-sommeil-lent">🌌 12.9 Le sommeil lent</a></li><li><a href="#1210-le-sommeil-paradoxal">⚡ 12.10 Le sommeil paradoxal</a></li><li><a href="#1211-les-reves">🌙 12.11 Les rêves</a></li><li><a href="#1212-le-contenu-des-reves">🧠 12.12 Le contenu des rêves</a></li><li><a href="#1213-les-reves-recurrents">🔁 12.13 Les rêves récurrents</a></li><li><a href="#1214-les-cauchemars">😨 12.14 Les cauchemars</a></li><li><a href="#1215-les-terreurs-nocturnes">😱 12.15 Les terreurs nocturnes</a></li><li><a href="#1216-la-paralysie-du-sommeil">🛑 12.16 La paralysie du sommeil</a></li><li><a href="#1217-les-hallucinations-hypnagogiques">👻 12.17 Les hallucinations hypnagogiques</a></li><li><a href="#1218-les-hallucinations-hypnopompiques">🌅 12.18 Les hallucinations hypnopompiques</a></li><li><a href="#1219-les-reves-lucides">💡 12.19 Les rêves lucides</a></li><li><a href="#1220-le-somnambulisme">🚶 12.20 Le somnambulisme</a></li><li><a href="#1221-la-somniloquie">🗣️ 12.21 La somniloquie</a></li><li><a href="#1222-le-bruxisme-du-sommeil">😬 12.22 Le bruxisme du sommeil</a></li><li><a href="#1223-le-reveil-confusionnel">🌙 12.23 Le réveil confusionnel</a></li><li><a href="#1224-le-faux-eveil">🪞 12.24 Le faux éveil</a></li><li><a href="#1225-le-deja-reve">🔄 12.25 Le déjà-rêvé</a></li><li><a href="#1226-lincorporation-de-stimuli-externes">🔊 12.26 L'incorporation de stimuli externes</a></li><li><a href="#1227-la-memoire-des-reves">🧠 12.27 La mémoire des rêves</a></li><li><a href="#1228-loubli-des-reves">🌫️ 12.28 L'oubli des rêves</a></li><li><a href="#1229-le-sommeil-et-la-consolidation-de-la-memoire">🧠 12.29 Le sommeil et la consolidation de la mémoire</a></li><li><a href="#1230-le-sommeil-et-les-emotions">❤️ 12.30 Le sommeil et les émotions</a></li><li><a href="#1231-le-manque-de-sommeil-et-lattention">🎯 12.31 Le manque de sommeil et l'attention</a></li><li><a href="#1232-le-manque-de-sommeil-et-la-memoire">🧠 12.32 Le manque de sommeil et la mémoire</a></li><li><a href="#1233-la-dette-de-sommeil">📉 12.33 La dette de sommeil</a></li><li><a href="#1234-le-decalage-horaire">✈️ 12.34 Le décalage horaire</a></li><li><a href="#1235-le-travail-de-nuit">🌃 12.35 Le travail de nuit</a></li><li><a href="#1236-la-sieste">😴 12.36 La sieste</a></li><li><a href="#1237-le-reve-et-la-memoire">🧠 12.37 Le rêve et la mémoire</a></li><li><a href="#1238-le-reve-et-le-traitement-emotionnel">❤️ 12.38 Le rêve et le traitement émotionnel</a></li><li><a href="#1239-les-differences-individuelles-dans-les-reves">👤 12.39 Les différences individuelles dans les rêves</a></li><li><a href="#1240-pourquoi-etudier-le-sommeil-et-les-reves">🔬 12.40 Pourquoi étudier le sommeil et les rêves ?</a></li></ul>
+    </details>
+  </aside>
   <div class="prose prose-wide">
     <script>
       window.__chapterMeta = {
@@ -49,7 +60,6 @@
         <line x1="116" y1="60" x2="105" y2="60"/>
     </svg>
     </div>
-    <nav class="chapter-toc"><p>Dans ce chapitre :</p><ul><li><a href="#121-le-sommeil">😴 12.1 Le sommeil</a></li><li><a href="#122-le-cycle-veille-sommeil">🕰️ 12.2 Le cycle veille-sommeil</a></li><li><a href="#123-lhorloge-biologique">🌙 12.3 L'horloge biologique</a></li><li><a href="#124-le-rythme-circadien">🌅 12.4 Le rythme circadien</a></li><li><a href="#125-la-pression-de-sommeil">💤 12.5 La pression de sommeil</a></li><li><a href="#126-lendormissement">🛌 12.6 L'endormissement</a></li><li><a href="#127-les-micro-reveils">👁️ 12.7 Les micro-réveils</a></li><li><a href="#128-les-differents-stades-du-sommeil">🧠 12.8 Les différents stades du sommeil</a></li><li><a href="#129-le-sommeil-lent">🌌 12.9 Le sommeil lent</a></li><li><a href="#1210-le-sommeil-paradoxal">⚡ 12.10 Le sommeil paradoxal</a></li><li><a href="#1211-les-reves">🌙 12.11 Les rêves</a></li><li><a href="#1212-le-contenu-des-reves">🧠 12.12 Le contenu des rêves</a></li><li><a href="#1213-les-reves-recurrents">🔁 12.13 Les rêves récurrents</a></li><li><a href="#1214-les-cauchemars">😨 12.14 Les cauchemars</a></li><li><a href="#1215-les-terreurs-nocturnes">😱 12.15 Les terreurs nocturnes</a></li><li><a href="#1216-la-paralysie-du-sommeil">🛑 12.16 La paralysie du sommeil</a></li><li><a href="#1217-les-hallucinations-hypnagogiques">👻 12.17 Les hallucinations hypnagogiques</a></li><li><a href="#1218-les-hallucinations-hypnopompiques">🌅 12.18 Les hallucinations hypnopompiques</a></li><li><a href="#1219-les-reves-lucides">💡 12.19 Les rêves lucides</a></li><li><a href="#1220-le-somnambulisme">🚶 12.20 Le somnambulisme</a></li><li><a href="#1221-la-somniloquie">🗣️ 12.21 La somniloquie</a></li><li><a href="#1222-le-bruxisme-du-sommeil">😬 12.22 Le bruxisme du sommeil</a></li><li><a href="#1223-le-reveil-confusionnel">🌙 12.23 Le réveil confusionnel</a></li><li><a href="#1224-le-faux-eveil">🪞 12.24 Le faux éveil</a></li><li><a href="#1225-le-deja-reve">🔄 12.25 Le déjà-rêvé</a></li><li><a href="#1226-lincorporation-de-stimuli-externes">🔊 12.26 L'incorporation de stimuli externes</a></li><li><a href="#1227-la-memoire-des-reves">🧠 12.27 La mémoire des rêves</a></li><li><a href="#1228-loubli-des-reves">🌫️ 12.28 L'oubli des rêves</a></li><li><a href="#1229-le-sommeil-et-la-consolidation-de-la-memoire">🧠 12.29 Le sommeil et la consolidation de la mémoire</a></li><li><a href="#1230-le-sommeil-et-les-emotions">❤️ 12.30 Le sommeil et les émotions</a></li><li><a href="#1231-le-manque-de-sommeil-et-lattention">🎯 12.31 Le manque de sommeil et l'attention</a></li><li><a href="#1232-le-manque-de-sommeil-et-la-memoire">🧠 12.32 Le manque de sommeil et la mémoire</a></li><li><a href="#1233-la-dette-de-sommeil">📉 12.33 La dette de sommeil</a></li><li><a href="#1234-le-decalage-horaire">✈️ 12.34 Le décalage horaire</a></li><li><a href="#1235-le-travail-de-nuit">🌃 12.35 Le travail de nuit</a></li><li><a href="#1236-la-sieste">😴 12.36 La sieste</a></li><li><a href="#1237-le-reve-et-la-memoire">🧠 12.37 Le rêve et la mémoire</a></li><li><a href="#1238-le-reve-et-le-traitement-emotionnel">❤️ 12.38 Le rêve et le traitement émotionnel</a></li><li><a href="#1239-les-differences-individuelles-dans-les-reves">👤 12.39 Les différences individuelles dans les rêves</a></li><li><a href="#1240-pourquoi-etudier-le-sommeil-et-les-reves">🔬 12.40 Pourquoi étudier le sommeil et les rêves ?</a></li></ul></nav>
     <div class="article-body">
       <blockquote>
 <p>Le sommeil est un état biologique essentiel au fonctionnement du cerveau et de l'organisme. Il s'accompagne de nombreux phénomènes psychologiques particuliers concernant la conscience, la mémoire, les émotions, la perception et les rêves.
@@ -555,6 +565,26 @@ function googleTranslateElementInit() {
 
 // ---------------------------------------------------------------
 // ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
 // Recherche sur tout le site (index chargé une seule fois, résultats
 // en direct pendant la frappe). L'index est un fichier JSON séparé,
 // généré au moment de la création du site.
@@ -736,47 +766,112 @@ function googleTranslateElementInit() {
 </script>
 <script>
 (function () {
-  // Nuage discret qui suit le curseur (souris) ou dérive doucement tout
-  // seul (tactile, pas de curseur). Désactivé si la personne préfère
-  // moins d'animations.
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
 
-  var root = document.documentElement;
-  var isTouch = window.matchMedia('(pointer: coarse)').matches;
-  var mouseX = window.innerWidth / 2;
-  var mouseY = window.innerHeight / 3;
-  var haloX = mouseX;
-  var haloY = mouseY;
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
 
-  if (isTouch) {
-    // Pas de souris : le nuage dérive tout seul, lentement, en boucle.
-    var start = performance.now();
-    function driftTick(now) {
-      var t = (now - start) / 1000;
-      var w = window.innerWidth, h = window.innerHeight;
-      haloX = w / 2 + Math.sin(t * 0.25) * (w * 0.3);
-      haloY = h / 3 + Math.cos(t * 0.2) * (h * 0.15);
-      root.style.setProperty('--mx', haloX + 'px');
-      root.style.setProperty('--my', haloY + 'px');
-      requestAnimationFrame(driftTick);
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
     }
-    requestAnimationFrame(driftTick);
-    return;
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
   }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
 
-  function tick() {
-    haloX += (mouseX - haloX) * 0.16;
-    haloY += (mouseY - haloY) * 0.16;
-    root.style.setProperty('--mx', haloX + 'px');
-    root.style.setProperty('--my', haloY + 'px');
-    requestAnimationFrame(tick);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.3;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
   }
-  requestAnimationFrame(tick);
+  requestAnimationFrame(frame);
 })();
 
 // Empêche le clic droit (frein basique, pas une vraie protection)
