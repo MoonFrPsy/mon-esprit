@@ -9,6 +9,11 @@
 </head>
 <body>
 <canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27">
+  <a href="../nouveautes.html">🆕 Nouveau : Confirmations visuelles — Voir toutes les nouveautés →</a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
   <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
   <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
@@ -384,7 +389,49 @@ function googleTranslateElementInit() {
   );
 }
 </script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
 <script>
 (function () {
   // Thème clair/sombre, mémorisé pour les prochaines visites.
@@ -402,10 +449,12 @@ function googleTranslateElementInit() {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
       btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
       btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
     }
   });
 })();
@@ -423,6 +472,7 @@ function googleTranslateElementInit() {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -613,8 +663,10 @@ function googleTranslateElementInit() {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();

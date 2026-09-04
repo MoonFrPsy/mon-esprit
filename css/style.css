@@ -705,6 +705,138 @@ h1, h2, h3 {
 .similar-item:hover { border-color: var(--clay); color: var(--clay); }
 .similar-icon { font-size: 1.15rem; flex-shrink: 0; }
 
+/* ---------- Journal des nouveautés (fiches dépliables) ---------- */
+
+.changelog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.changelog-card {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.changelog-card summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.9rem;
+}
+
+.changelog-card summary::-webkit-details-marker { display: none; }
+
+.changelog-date {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+
+.changelog-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: var(--title);
+  font-size: 1rem;
+  flex: 0 0 auto;
+}
+
+.changelog-short {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  flex: 1 1 200px;
+}
+
+.changelog-full {
+  margin: 0;
+  padding: 0 1.25rem 1.25rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.changelog-card:hover { border-color: var(--clay); }
+
+/* ---------- Notifications toast ---------- */
+
+.toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  pointer-events: none;
+}
+
+.toast {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 0.7rem 1.3rem;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  white-space: nowrap;
+}
+
+.toast.show { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 640px) {
+  .changelog-short { flex-basis: 100%; }
+}
+
+/* ---------- Bannière "nouveauté" en haut de page ---------- */
+
+.update-banner {
+  background: var(--link);
+  color: #0C1220;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.update-banner a {
+  color: #0C1220;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.update-banner button {
+  background: transparent;
+  border: none;
+  color: #0C1220;
+  font-size: 0.9rem;
+  cursor: pointer;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.update-banner button:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .update-banner { font-size: 0.78rem; padding: 0.6rem 0.75rem; }
+}
+
 .article-header .category {
   color: var(--clay);
   font-size: 0.9rem;

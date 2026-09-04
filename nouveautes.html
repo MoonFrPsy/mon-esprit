@@ -9,6 +9,11 @@
 </head>
 <body>
 <canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27">
+  <a href="nouveautes.html">🆕 Nouveau : Confirmations visuelles — Voir toutes les nouveautés →</a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
   <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
   <a href="index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
@@ -36,61 +41,248 @@
     <div class="article-header">
       <span class="category">📋 Journal du site</span>
       <h1>Nouveautés</h1>
-      <p class="article-meta">Ce qui a été ajouté ou amélioré sur Mon Esprit, au fil du temps.</p>
+      <p class="article-meta">Ce qui a été ajouté ou amélioré sur Mon Esprit, au fil du temps. Clique sur une fiche pour en voir le détail.</p>
     </div>
     <div class="article-body">
-
-<h2>3 septembre 2026</h2>
-
-<ul>
-<li><strong>Recherche sur tout le site</strong> : une barre de recherche en haut de chaque page, qui couvre l'intégralité du contenu (chapitres et entrées individuelles), avec extrait et lien direct.</li>
-<li><strong>Historique de lecture</strong> : les chapitres déjà consultés apparaissent sur l'accueil, avec une reprise automatique au bon endroit sur une page déjà visitée.</li>
-<li><strong>Traduction automatique en anglais</strong> : un bouton EN/FR en haut du site.</li>
-<li><strong>Formulaire de contact</strong> pour écrire directement depuis le site.</li>
-<li><strong>Liens automatiques vers les définitions</strong> : les abréviations comme TAG, TOC, TSPT deviennent cliquables dans le texte.</li>
-<li><strong>Contenu enrichi</strong> : le chapitre sur les troubles anxieux inclut désormais des conseils concrets pour comprendre et accompagner un proche concerné, en plus des définitions.</li>
-<li><strong>Deux nouvelles catégories à venir</strong> : Psychologie/Justice/Criminologie, et Expériences célèbres de psychologie.</li>
-<li>Illustrations personnalisées pour chaque catégorie, mise en page pensée pour mobile, et quelques animations discrètes.</li>
-</ul>
-
-<h2>4 septembre 2026</h2>
-
-<ul>
-<li><strong>Sommaire latéral</strong> sur chaque page de chapitre : toutes les entrées du chapitre avec leurs sous-sections (Définition, Causes, Évolution...), repliable en un clic à toutes les tailles d'écran.</li>
-<li><strong>Boutons flottants</strong> "Accueil" et "Retour", toujours visibles, pour naviguer sans avoir à remonter en haut de page.</li>
-<li><strong>Curseur animé</strong> : une traînée fluide et colorée suit la souris (ou le doigt sur mobile), dans les couleurs du site.</li>
-<li>Ajustements visuels : ascenseurs redessinés aux couleurs du site, illustration de l'accueil qui pulse doucement, icônes de chapitre qui respirent, apparitions en fondu au défilement.</li>
-<li><strong>Nouvelle histoire vraie</strong> : « L'histoire qui a fait naître l'effet du témoin » (l'affaire Kitty Genovese), dans Histoires vraies de psychologie.</li>
-<li>Ajustements : bouton +/− bien visible pour replier le sommaire (ordinateur et téléphone), curseur fluide adouci (couleurs moins vives, moins dense).</li>
-<li><strong>Deux nouvelles catégories complètes</strong> : « Psychologie, justice et criminologie » (10 chapitres) et « Expériences célèbres de psychologie » (15 chapitres, dont Milgram, Asch, Stanford, Pavlov, l'expérience du marshmallow...). Le site passe à 146 chapitres au total.</li>
-<li>Un badge <strong>« Nouveau »</strong> apparaît sur les catégories fraîchement ajoutées, le temps qu'elles ne soient plus toutes neuves.</li>
-<li><strong>Contenu enrichi</strong> : la Partie 2 des Troubles psychologiques (TOC, dysmorphophobie, accumulation, trichotillomanie, excoriation) a maintenant, elle aussi, des conseils concrets pour accompagner un proche concerné.</li>
-<li><strong>Contenu enrichi</strong> : la Partie 3 — Troubles dépressifs (dépression majeure, dysthymie, dépression saisonnière, post-partum, chez l'enfant et l'adolescent) a aussi été complétée.</li>
-<li><strong>Contenu enrichi</strong> : la Partie 4 — Troubles bipolaires (types I et II, cyclothymie, épisode maniaque, prévention de la rechute) a également été complétée.</li>
-<li><strong>Contenu enrichi</strong> : la Partie 5 — Schizophrénie et autres troubles psychotiques (schizophrénie, trouble schizo-affectif, trouble délirant, hallucinations, symptômes négatifs) a été complétée, avec une petite coquille corrigée au passage (une entrée s'appelait « idées délirantes » alors qu'elle décrivait les hallucinations).</li>
-<li><strong>Contenu enrichi</strong> : la Partie 6 — Troubles de la personnalité (paranoïaque, borderline, narcissique, évitante, dépendante) a également été complétée.</li>
-<li>La Partie 7 (« Troubles des conduites alimentaires ») est temporairement fermée le temps de corriger un souci de contenu — elle réapparaîtra une fois le bon contenu en place.</li>
-<li>Après vérification de tout le reste des Troubles psychologiques : la Partie 8 (« Troubles neurodéveloppementaux ») a le même souci et est fermée elle aussi ; la Partie 20 (« Autres troubles ») est vide et fermée en attendant d'être rédigée ; la Partie 11 avait une erreur de numérotation interne, corrigée.</li>
-<li><strong>Contenu enrichi</strong> : la Partie 9 — Troubles dissociatifs (trouble dissociatif de l'identité, amnésie, dépersonnalisation/déréalisation, fugue dissociative) a été complétée, avec un doublon de contenu retiré au passage.</li>
-</ul>
-
-<h2>4 septembre 2026 — nouvelles fonctionnalités</h2>
-
-<ul>
-<li><strong>Thème clair</strong> : un bouton (🌙/☀️) permet de basculer entre le thème sombre et un thème clair, mémorisé pour les prochaines visites.</li>
-<li><strong>Police adaptée dyslexie</strong> : activable en un clic, également mémorisée.</li>
-<li><strong>Favoris</strong> : un bouton étoile sur chaque chapitre permet de le garder de côté, retrouvable ensuite sur l'accueil.</li>
-<li><strong>Entrées similaires</strong> : chaque chapitre suggère maintenant automatiquement d'autres chapitres de la même catégorie.</li>
-<li><strong>Curseur</strong> : désormais désactivé sur téléphone/tablette (inutile sans souris) et plus discret sur ordinateur.</li>
-<li>La catégorie "Termes et concepts" (encore vide) est masquée en attendant du contenu.</li>
-</ul>
-
-<p style="color:var(--ink-soft); font-size:0.92rem; margin-top:2rem;">D'autres mises à jour suivront au fil de l'enrichissement du contenu.</p>
-
+      <div class="changelog-list">
+        
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">5 septembre 2026 à 00h20</span>
+          <span class="changelog-title">Confirmations visuelles</span>
+          <span class="changelog-short">Un petit message confirme quand tu changes un réglage (thème, police, favoris).</span>
+        </summary>
+        <p class="changelog-full">Quand tu actives le thème clair, la police dyslexie, ou que tu ajoutes/retires un favori, un petit message discret apparaît quelques secondes pour confirmer, puis disparaît tout seul.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">5 septembre 2026 à 00h20</span>
+          <span class="changelog-title">Nouveautés en fiches dépliables</span>
+          <span class="changelog-short">Cette page devient plus facile à parcourir : clique sur une nouveauté pour en voir le détail.</span>
+        </summary>
+        <p class="changelog-full">Le journal des nouveautés passe d'une longue liste à des fiches individuelles, repliées par défaut. Un clic ouvre les détails d'une nouveauté, et ouvrir une autre fiche referme automatiquement la précédente.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-title">Catégorie masquée</span>
+          <span class="changelog-short">« Termes et concepts » n'apparaît plus, le temps d'être rédigée.</span>
+        </summary>
+        <p class="changelog-full">Cette catégorie était vide (juste un plan) : elle est masquée du menu et de l'accueil en attendant son contenu.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-title">Entrées similaires</span>
+          <span class="changelog-short">Chaque chapitre suggère d'autres chapitres proches.</span>
+        </summary>
+        <p class="changelog-full">En bas de chaque page de chapitre, une section suggère automatiquement d'autres chapitres de la même catégorie.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-title">Favoris</span>
+          <span class="changelog-short">Une étoile pour garder un chapitre de côté et le retrouver facilement.</span>
+        </summary>
+        <p class="changelog-full">Un bouton étoile sur chaque chapitre permet de l'ajouter à ses favoris, retrouvables ensuite dans une section dédiée sur l'accueil.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-title">Police adaptée dyslexie</span>
+          <span class="changelog-short">Une police plus facile à lire, activable en un clic.</span>
+        </summary>
+        <p class="changelog-full">Un bouton « Aa » active une police pensée pour la dyslexie sur tout le site, avec mémorisation du choix.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-title">Thème clair</span>
+          <span class="changelog-short">Un bouton pour basculer entre thème sombre et thème clair.</span>
+        </summary>
+        <p class="changelog-full">Un bouton (🌙/☀️) en haut du site permet de choisir entre le thème sombre habituel et un thème clair, avec mémorisation du choix pour les prochaines visites.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Vérification complète des Troubles psychologiques</span>
+          <span class="changelog-short">Trois parties fermées le temps d'être corrigées, une erreur de numérotation réparée.</span>
+        </summary>
+        <p class="changelog-full">Après une vérification approfondie des 20 parties : la Partie 7 (troubles des conduites alimentaires) et la Partie 8 (troubles neurodéveloppementaux) contenaient en fait le mauvais contenu et sont temporairement fermées ; la Partie 20 était vide et fermée aussi ; la Partie 11 avait juste une erreur de numérotation, corrigée.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Contenu enrichi : Partie 9 (dissociation)</span>
+          <span class="changelog-short">Conseils pratiques pour les troubles dissociatifs.</span>
+        </summary>
+        <p class="changelog-full">Trouble dissociatif de l'identité, amnésie, dépersonnalisation/déréalisation et fugue dissociative ont chacun leurs conseils. Un doublon de contenu a aussi été retiré.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Contenu enrichi : Partie 6 (personnalité)</span>
+          <span class="changelog-short">Conseils pratiques pour les troubles de la personnalité.</span>
+        </summary>
+        <p class="changelog-full">Paranoïaque, borderline, narcissique, évitante et dépendante ont chacun leurs conseils d'accompagnement.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Contenu enrichi : Partie 5 (schizophrénie)</span>
+          <span class="changelog-short">Conseils pratiques pour la schizophrénie et les troubles psychotiques.</span>
+        </summary>
+        <p class="changelog-full">Schizophrénie, trouble schizo-affectif, trouble délirant, hallucinations et symptômes négatifs ont chacun leurs conseils. Une petite erreur a aussi été corrigée : une entrée s'appelait « idées délirantes » alors qu'elle décrivait les hallucinations.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Contenu enrichi : Partie 4 (bipolarité)</span>
+          <span class="changelog-short">Conseils pratiques pour les troubles bipolaires, dont la gestion d'un épisode maniaque.</span>
+        </summary>
+        <p class="changelog-full">Types I et II, cyclothymie, épisode maniaque et prévention de la rechute ont désormais des conseils concrets.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Contenu enrichi : Partie 3 (dépression)</span>
+          <span class="changelog-short">Conseils pratiques pour la dépression, y compris post-partum et chez l'enfant.</span>
+        </summary>
+        <p class="changelog-full">Dépression majeure, dysthymie, dépression saisonnière, post-partum et chez l'enfant/adolescent ont chacune leurs conseils d'accompagnement.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Contenu enrichi : Partie 2 (TOC)</span>
+          <span class="changelog-short">Conseils pratiques pour le TOC, la dysmorphophobie, l'accumulation et les troubles apparentés.</span>
+        </summary>
+        <p class="changelog-full">5 troubles de cette partie ont désormais des conseils concrets pour comprendre et accompagner un proche concerné.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Deux catégories complètes</span>
+          <span class="changelog-short">146 chapitres au total : justice/criminologie et expériences célèbres sont maintenant remplies.</span>
+        </summary>
+        <p class="changelog-full">« Psychologie, justice et criminologie » (10 chapitres) et « Expériences célèbres de psychologie » (15 chapitres, dont Milgram, Asch, Stanford, Pavlov, le marshmallow...) ont rejoint le site avec tout leur contenu.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Nouvelle histoire vraie</span>
+          <span class="changelog-short">L'affaire Kitty Genovese et la naissance de l'« effet du témoin ».</span>
+        </summary>
+        <p class="changelog-full">Une 5ᵉ histoire a rejoint la catégorie Histoires vraies de psychologie : comment un fait divers a mené à la découverte d'un phénomène de psychologie sociale majeur.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Curseur animé</span>
+          <span class="changelog-short">Une traînée colorée et fluide suit la souris.</span>
+        </summary>
+        <p class="changelog-full">Sur ordinateur, une traînée de couleur suit le mouvement de la souris, dans les teintes du site, avec un rendu doux façon encre dans l'eau.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Boutons Accueil et Retour</span>
+          <span class="changelog-short">Toujours visibles, pour naviguer sans remonter en haut de page.</span>
+        </summary>
+        <p class="changelog-full">Deux petits boutons flottants restent affichés en permanence pour revenir à l'accueil ou à la page précédente d'un simple clic.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">4 septembre 2026</span>
+          <span class="changelog-title">Sommaire par chapitre</span>
+          <span class="changelog-short">Sur chaque page, une liste pour aller directement à la section qui t'intéresse.</span>
+        </summary>
+        <p class="changelog-full">Chaque page de chapitre a un sommaire listant toutes ses entrées et leurs sous-parties (Définition, Causes, Évolution...), repliable en un clic, à toutes les tailles d'écran.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">3 septembre 2026</span>
+          <span class="changelog-title">Habillage visuel</span>
+          <span class="changelog-short">Une illustration et une couleur propres à chaque catégorie, un site pensé pour le mobile.</span>
+        </summary>
+        <p class="changelog-full">Chaque catégorie a sa propre illustration et sa couleur d'identité. La mise en page s'adapte au téléphone, et quelques animations discrètes (icônes, apparitions en fondu) ont été ajoutées.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">3 septembre 2026</span>
+          <span class="changelog-title">Nouvelles catégories annoncées</span>
+          <span class="changelog-short">Psychologie & justice, et expériences célèbres rejoignent bientôt le site.</span>
+        </summary>
+        <p class="changelog-full">Deux nouvelles catégories sont annoncées sur l'accueil, en attendant leur contenu : « Psychologie, justice et criminologie » et « Expériences célèbres de psychologie ».</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">3 septembre 2026</span>
+          <span class="changelog-title">Premier contenu enrichi</span>
+          <span class="changelog-short">Des conseils concrets pour comprendre et aider un proche, en plus des définitions.</span>
+        </summary>
+        <p class="changelog-full">Le chapitre sur les troubles anxieux inclut désormais, pour chaque trouble, des conseils pour comprendre ce que vit la personne et l'accompagner au quotidien.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">3 septembre 2026</span>
+          <span class="changelog-title">Liens vers les définitions</span>
+          <span class="changelog-short">Les abréviations comme TAG ou TOC deviennent cliquables.</span>
+        </summary>
+        <p class="changelog-full">Quand une abréviation déjà définie ailleurs apparaît dans un texte, sa première apparition sur la page devient un lien vers sa définition complète.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">3 septembre 2026</span>
+          <span class="changelog-title">Formulaire de contact</span>
+          <span class="changelog-short">Un moyen d'écrire directement depuis le site.</span>
+        </summary>
+        <p class="changelog-full">Un formulaire sur la page d'accueil permet d'envoyer un message sans passer par un logiciel mail.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">3 septembre 2026</span>
+          <span class="changelog-title">Traduction en anglais</span>
+          <span class="changelog-short">Un bouton EN/FR traduit tout le site automatiquement.</span>
+        </summary>
+        <p class="changelog-full">Un bouton en haut du site permet de basculer le contenu en anglais (traduction automatique) et de revenir au français.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">3 septembre 2026</span>
+          <span class="changelog-title">Historique de lecture</span>
+          <span class="changelog-short">Le site retient les chapitres déjà lus et propose de reprendre où tu t'es arrêté.</span>
+        </summary>
+        <p class="changelog-full">Les chapitres déjà consultés apparaissent sur l'accueil, avec une reprise automatique au bon endroit quand tu reviens sur une page déjà visitée.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-date">3 septembre 2026</span>
+          <span class="changelog-title">Recherche sur tout le site</span>
+          <span class="changelog-short">Une barre de recherche qui trouve n'importe quel trouble ou notion en tapant quelques lettres.</span>
+        </summary>
+        <p class="changelog-full">Une barre de recherche en haut de chaque page, qui couvre l'intégralité du contenu (chapitres et entrées individuelles), avec un extrait et un lien direct vers le bon endroit.</p>
+      </details>
+      </div>
+      <p style="color:var(--ink-soft); font-size:0.92rem; margin-top:2rem;">D'autres mises à jour suivront au fil de l'enrichissement du contenu.</p>
     </div>
     <a class="back-link" href="index.html">← Retour à l'accueil</a>
   </div>
 </main>
+<script>
+(function () {
+  // Effet accordéon : ouvrir une fiche referme automatiquement les autres.
+  var cards = document.querySelectorAll('.changelog-card');
+  cards.forEach(function (card) {
+    card.addEventListener('toggle', function () {
+      if (card.open) {
+        cards.forEach(function (other) {
+          if (other !== card) other.open = false;
+        });
+      }
+    });
+  });
+})();
+</script>
 
 <footer class="site-footer">
   <div class="container">
@@ -106,7 +298,49 @@ function googleTranslateElementInit() {
   );
 }
 </script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
 <script>
 (function () {
   // Thème clair/sombre, mémorisé pour les prochaines visites.
@@ -124,10 +358,12 @@ function googleTranslateElementInit() {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
       btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
       btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
     }
   });
 })();
@@ -145,6 +381,7 @@ function googleTranslateElementInit() {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -335,8 +572,10 @@ function googleTranslateElementInit() {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
