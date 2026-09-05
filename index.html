@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mon Esprit — une encyclopédie de la psychologie</title>
 <meta name="description" content="Comprendre son esprit, un concept à la fois. Troubles, syndromes, mécanismes de défense, émotions et histoires vraies expliqués simplement.">
-<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <canvas id="fluid-cursor" aria-hidden="true"></canvas>
-<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
-  <a href="nouveautes.html">
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
     <span>🆕</span>
-    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
     <span class="update-banner-arrow">→</span>
   </a>
   <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
@@ -20,14 +21,17 @@
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
   <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
 </div>
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="site-title">Mon Esprit</a>
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
     <nav class="site-nav">
-      <a href="index.html#categories">Catégories</a>
-      <a href="index.html#a-propos">À propos</a>
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
       <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
       <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
@@ -36,6 +40,7 @@
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -113,7 +118,7 @@
 
     <div class="cat-grid" id="categories">
       
-      <a class="cat-card" href="categorie/troubles.html" style="--accent:var(--acc-troubles)">
+      <a class="cat-card" href="/categorie/troubles/" style="--accent:var(--acc-troubles)">
         
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
@@ -126,7 +131,7 @@
         <p>Les différents troubles reconnus en psychologie et en psychiatrie : anxieux, dépressifs, bipolaires, alimentaires, du sommeil, et bien d'autres.</p>
         <span class="cat-count">20 chapitres</span>
       </a>
-      <a class="cat-card" href="categorie/syndromes.html" style="--accent:var(--acc-syndromes)">
+      <a class="cat-card" href="/categorie/syndromes/" style="--accent:var(--acc-syndromes)">
         
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
@@ -140,7 +145,7 @@
         <p>Des syndromes connus aux plus rares : identité, perception, mémoire, stress, culture, corps, et phénomènes particuliers.</p>
         <span class="cat-count">13 chapitres</span>
       </a>
-      <a class="cat-card" href="categorie/lexique.html" style="--accent:var(--acc-lexique)">
+      <a class="cat-card" href="/categorie/lexique/" style="--accent:var(--acc-lexique)">
         
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
@@ -152,7 +157,7 @@
         <p>Les mots et expressions utilisés en consultation, en thérapie, ou dans le suivi d'un accompagnement psychologique.</p>
         <span class="cat-count">10 chapitres</span>
       </a>
-      <a class="cat-card" href="categorie/mecanismes.html" style="--accent:var(--acc-mecanismes)">
+      <a class="cat-card" href="/categorie/mecanismes/" style="--accent:var(--acc-mecanismes)">
         
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
@@ -162,7 +167,7 @@
         <p>Comment l'esprit fait face, souvent inconsciemment, aux émotions difficiles, aux conflits internes et au stress.</p>
         <span class="cat-count">12 chapitres</span>
       </a>
-      <a class="cat-card" href="categorie/phenomenes.html" style="--accent:var(--acc-phenomenes)">
+      <a class="cat-card" href="/categorie/phenomenes/" style="--accent:var(--acc-phenomenes)">
         
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
@@ -176,7 +181,7 @@
         <p>Des phénomènes qui influencent la perception, la mémoire, les émotions, la conscience et les décisions au quotidien.</p>
         <span class="cat-count">20 chapitres</span>
       </a>
-      <a class="cat-card" href="categorie/emotions.html" style="--accent:var(--acc-emotions)">
+      <a class="cat-card" href="/categorie/emotions/" style="--accent:var(--acc-emotions)">
         
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
@@ -187,7 +192,7 @@
         <p>Comprendre les émotions, les réactions humaines, les relations avec les autres et les comportements adoptés au quotidien.</p>
         <span class="cat-count">20 chapitres</span>
       </a>
-      <a class="cat-card" href="categorie/avances.html" style="--accent:var(--acc-avances)">
+      <a class="cat-card" href="/categorie/avances/" style="--accent:var(--acc-avances)">
         
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="28" cy="28" r="9"/>
@@ -206,7 +211,7 @@
         <p>Des notions plus complexes issues de la psychologie, de la psychologie clinique et de la psychopathologie.</p>
         <span class="cat-count">20 chapitres</span>
       </a>
-      <a class="cat-card" href="categorie/histoires.html" style="--accent:var(--acc-histoires)">
+      <a class="cat-card" href="/categorie/histoires/" style="--accent:var(--acc-histoires)">
         
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <rect x="16" y="22" width="88" height="76" rx="5"/>
@@ -217,7 +222,7 @@
         <p>Des histoires réelles, documentées et analysées pour mieux comprendre la psychologie humaine.</p>
         <span class="cat-count">5 chapitres</span>
       </a>
-      <a class="cat-card" href="categorie/justice.html" style="--accent:var(--acc-justice)">
+      <a class="cat-card" href="/categorie/justice/" style="--accent:var(--acc-justice)">
         <span class="cat-badge-new">Nouveau</span>
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
@@ -233,7 +238,7 @@
         <p>La psychologie dans le contexte judiciaire et criminologique : mémoire des témoins, interrogatoires, comportement criminel, profilage et décisions judiciaires.</p>
         <span class="cat-count">10 chapitres</span>
       </a>
-      <a class="cat-card" href="categorie/experiences.html" style="--accent:var(--acc-experiences)">
+      <a class="cat-card" href="/categorie/experiences/" style="--accent:var(--acc-experiences)">
         <span class="cat-badge-new">Nouveau</span>
         <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <line x1="44" y1="14" x2="76" y2="14"/>
@@ -315,7 +320,7 @@
 <footer class="site-footer">
   <div class="container">
     <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
-    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
   </div>
 </footer>
 <script>
@@ -665,7 +670,7 @@ function showToast(msg) {
   if (backBtn) {
     backBtn.addEventListener('click', function () {
       if (window.history.length > 1) window.history.back();
-      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : 'index.html';
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
     });
   }
 })();
@@ -683,7 +688,7 @@ function showToast(msg) {
 
   function loadIndex() {
     if (!indexPromise) {
-      indexPromise = fetch('search-index.json')
+      indexPromise = fetch('/search-index.json')
         .then(function (r) { return r.json(); })
         .then(function (data) { index = data; })
         .catch(function () { index = []; });
@@ -721,10 +726,15 @@ function showToast(msg) {
     });
   }
 
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
   function render(results, query) {
+    lastQuery = query;
     if (results.length === 0) {
       box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
       return;
     }
     box.innerHTML = results.map(function (item) {
@@ -740,11 +750,13 @@ function showToast(msg) {
       '</a>';
     }).join('');
     box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
   }
 
   input.addEventListener('focus', loadIndex);
   input.addEventListener('input', function () {
     var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
     if (query.length < 2) { box.hidden = true; return; }
     loadIndex().then(function () { render(runSearch(query), query); });
   });
@@ -752,8 +764,50 @@ function showToast(msg) {
     if (e.key === 'Escape') { box.hidden = true; input.blur(); }
   });
   document.addEventListener('click', function (e) {
-    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
   });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
 })();
 
 // ---------------------------------------------------------------
