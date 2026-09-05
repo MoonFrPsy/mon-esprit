@@ -36,6 +36,7 @@
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -939,10 +940,15 @@ function showToast(msg) {
     });
   }
 
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
   function render(results, query) {
+    lastQuery = query;
     if (results.length === 0) {
       box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
       return;
     }
     box.innerHTML = results.map(function (item) {
@@ -958,11 +964,13 @@ function showToast(msg) {
       '</a>';
     }).join('');
     box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
   }
 
   input.addEventListener('focus', loadIndex);
   input.addEventListener('input', function () {
     var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
     if (query.length < 2) { box.hidden = true; return; }
     loadIndex().then(function () { render(runSearch(query), query); });
   });
@@ -970,8 +978,50 @@ function showToast(msg) {
     if (e.key === 'Escape') { box.hidden = true; input.blur(); }
   });
   document.addEventListener('click', function (e) {
-    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
   });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="../' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
 })();
 
 // ---------------------------------------------------------------

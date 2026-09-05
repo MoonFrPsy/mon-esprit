@@ -367,6 +367,39 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.smart-search-btn {
+  display: block;
+  width: 100%;
+  margin-top: 0.6rem;
+  background: transparent;
+  border: 1px dashed var(--clay);
+  color: var(--clay);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.55rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.smart-search-btn:hover { background: color-mix(in srgb, var(--clay) 12%, transparent); }
+.smart-search-btn:disabled { opacity: 0.6; cursor: wait; }
+
+.smart-search-result {
+  display: block;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  background: var(--bg-raised-2);
+  border-left: 3px solid var(--clay);
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.smart-search-result-title { font-weight: 700; display: block; }
+.smart-search-result-meta { color: var(--ink-soft); font-size: 0.78rem; text-transform: uppercase; }
+.smart-search-error { padding: 1rem; color: var(--ink-soft); font-size: 0.85rem; text-align: center; }
+
 /* La recherche a besoin de place : le header passe sur deux lignes */
 .site-header .container { row-gap: 0.25rem; }
 
