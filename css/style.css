@@ -776,11 +776,25 @@ h1, h2, h3 {
 
 .changelog-card summary::-webkit-details-marker { display: none; }
 
-.changelog-date {
+.changelog-day { margin-bottom: 2.2rem; }
+
+.changelog-day-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  color: var(--clay);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.changelog-time {
   color: var(--ink-soft);
   font-size: 0.78rem;
   font-weight: 600;
   flex: 0 0 auto;
+  background: var(--bg-raised-2);
+  padding: 0.1rem 0.5rem;
+  border-radius: 20px;
 }
 
 .changelog-title {
