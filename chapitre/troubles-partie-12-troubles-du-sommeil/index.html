@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partie 12 — Troubles du sommeil — Mon Esprit</title>
+<meta name="description" content="Partie 12 — Troubles du sommeil, dans la catégorie Troubles psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#121-le-trouble-dinsomnie">🧠 12.1 Le trouble d'insomnie</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#consequences-possibles">Conséquences possibles</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#122-le-trouble-dhypersomnolence">🧠 12.2 Le trouble d'hypersomnolence</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#123-la-narcolepsie">🧠 12.3 La narcolepsie</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#la-cataplexie">La cataplexie</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#124-la-narcolepsie-de-type-1">🧠 12.4 La narcolepsie de type 1</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#125-la-narcolepsie-de-type-2">🧠 12.5 La narcolepsie de type 2</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#126-les-troubles-respiratoires-lies-au-sommeil">🧠 12.6 Les troubles respiratoires liés au sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#principaux-exemples">Principaux exemples</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#127-lapnee-obstructive-du-sommeil">🧠 12.7 L'apnée obstructive du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#consequences-possibles_1">Conséquences possibles</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#128-lapnee-centrale-du-sommeil">🧠 12.8 L'apnée centrale du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#129-les-troubles-du-rythme-circadien-veille-sommeil">🧠 12.9 Les troubles du rythme circadien veille-sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#principales-formes">Principales formes</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1210-le-trouble-du-rythme-veille-sommeil-retarde">🧠 12.10 Le trouble du rythme veille-sommeil retardé</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1211-le-trouble-du-rythme-veille-sommeil-avance">🧠 12.11 Le trouble du rythme veille-sommeil avancé</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1212-le-trouble-du-travail-poste">🧠 12.12 Le trouble du travail posté</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1213-le-trouble-lie-au-decalage-horaire">🧠 12.13 Le trouble lié au décalage horaire</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations_11">Manifestations</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1214-les-parasomnies">🧠 12.14 Les parasomnies</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1215-le-somnambulisme">🧠 12.15 Le somnambulisme</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_12">Manifestations</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1216-les-terreurs-nocturnes">🧠 12.16 Les terreurs nocturnes</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations_13">Manifestations</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1217-le-trouble-des-cauchemars">🧠 12.17 Le trouble des cauchemars</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#manifestations_14">Manifestations</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1218-le-trouble-du-comportement-en-sommeil-paradoxal">🧠 12.18 Le trouble du comportement en sommeil paradoxal</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#manifestations_15">Manifestations</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1219-la-paralysie-du-sommeil">🧠 12.19 La paralysie du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#manifestations_16">Manifestations</a></li><li><a href="#duree">Durée</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1220-les-hallucinations-liees-au-sommeil">🧠 12.20 Les hallucinations liées au sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#manifestations_17">Manifestations</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1221-le-syndrome-des-jambes-sans-repos">🧠 12.21 Le syndrome des jambes sans repos</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#manifestations_18">Manifestations</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1222-le-trouble-des-mouvements-periodiques-des-membres">🧠 12.22 Le trouble des mouvements périodiques des membres</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations_19">Manifestations</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1223-le-bruxisme-du-sommeil">🧠 12.23 Le bruxisme du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations_20">Manifestations</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1224-lenuresie-liee-au-sommeil">🧠 12.24 L'énurésie liée au sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#manifestations_21">Manifestations</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1225-les-troubles-du-sommeil-lies-a-une-substance-ou-a-un-medicament">🧠 12.25 Les troubles du sommeil liés à une substance ou à un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#manifestations_22">Manifestations</a></li><li><a href="#exemples-de-substances-pouvant-influencer-le-sommeil">Exemples de substances pouvant influencer le sommeil</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1226-les-troubles-du-sommeil-dus-a-une-autre-affection-medicale">🧠 12.26 Les troubles du sommeil dus à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#exemples_1">Exemples</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1227-la-dette-de-sommeil">🧠 12.27 La dette de sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#manifestations_23">Manifestations</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1228-la-privation-de-sommeil">🧠 12.28 La privation de sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#consequences-possibles_2">Conséquences possibles</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1229-le-sommeil-insuffisant-comportemental">🧠 12.29 Le sommeil insuffisant comportemental</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#exemples_2">Exemples</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1230-les-consequences-psychologiques-des-troubles-du-sommeil">🧠 12.30 Les conséquences psychologiques des troubles du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#consequences-possibles_3">Conséquences possibles</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Partie 12 — Troubles du sommeil',
+        category: 'Troubles psychologiques',
+        icon: '🩺'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Partie 12 — Troubles du sommeil</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-troubles)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <h1 id="121-le-trouble-dinsomnie" class="entry-title hc-1">🧠 12.1 Le trouble d'insomnie</h1>
+<h2 id="definition">Définition</h2>
+<p>Le <strong>trouble d'insomnie</strong> correspond à une difficulté persistante à s'endormir, à rester endormi ou à obtenir un sommeil suffisamment réparateur malgré des conditions permettant normalement de dormir.</p>
+<h2 id="manifestations">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>avoir du mal à s'endormir</li>
+<li>se réveiller plusieurs fois pendant la nuit</li>
+<li>se réveiller trop tôt</li>
+<li>avoir l'impression de ne pas avoir suffisamment dormi</li>
+<li>ressentir une fatigue importante pendant la journée</li>
+<li>avoir des difficultés de concentration.</li>
+</ul>
+<h2 id="consequences-possibles">Conséquences possibles</h2>
+<p>L'insomnie peut provoquer :</p>
+<ul>
+<li>fatigue</li>
+<li>irritabilité</li>
+<li>difficultés de mémoire</li>
+<li>baisse des performances</li>
+<li>somnolence</li>
+<li>difficultés émotionnelles.</li>
+</ul>
+<h2 id="a-retenir">À retenir</h2>
+<p>Une mauvaise nuit occasionnelle n'est pas nécessairement une insomnie. Le trouble implique une difficulté persistante ayant des conséquences sur le fonctionnement quotidien.</p>
+<hr />
+<h1 id="122-le-trouble-dhypersomnolence" class="entry-title hc-2">🧠 12.2  Le trouble d'hypersomnolence</h1>
+<h2 id="definition_1">Définition</h2>
+<p>Le <strong>trouble d'hypersomnolence</strong> se caractérise par une somnolence excessive pendant la journée malgré des périodes de sommeil qui peuvent être suffisamment longues.</p>
+<h2 id="manifestations_1">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>avoir constamment envie de dormir</li>
+<li>faire de longues siestes</li>
+<li>avoir des difficultés à rester éveillée</li>
+<li>avoir énormément de difficultés à se réveiller</li>
+<li>ressentir une sensation de sommeil non réparateur.</li>
+</ul>
+<h2 id="consequences">Conséquences</h2>
+<p>Cela peut affecter :</p>
+<ul>
+<li>les études</li>
+<li>le travail</li>
+<li>la concentration</li>
+<li>la conduite</li>
+<li>la vie sociale.</li>
+</ul>
+<h2 id="a-retenir_1">À retenir</h2>
+<p>L'hypersomnolence correspond à une somnolence excessive et persistante, et pas simplement au fait d'aimer dormir longtemps.</p>
+<hr />
+<h1 id="123-la-narcolepsie" class="entry-title hc-3">🧠 12.3  La narcolepsie</h1>
+<h2 id="definition_2">Définition</h2>
+<p>La <strong>narcolepsie</strong> est un trouble neurologique du sommeil caractérisé notamment par une somnolence diurne excessive et des épisodes incontrôlables d'endormissement.</p>
+<h2 id="manifestations_2">Manifestations</h2>
+<p>Elle peut comprendre :</p>
+<ul>
+<li>attaques de sommeil</li>
+<li>somnolence importante pendant la journée</li>
+<li>cataplexie dans certaines formes</li>
+<li>paralysie du sommeil</li>
+<li>hallucinations lors de l'endormissement ou du réveil</li>
+<li>sommeil nocturne perturbé.</li>
+</ul>
+<h2 id="la-cataplexie">La cataplexie</h2>
+<p>La <strong>cataplexie</strong> correspond à une perte soudaine et temporaire du tonus musculaire, souvent déclenchée par une émotion forte.</p>
+<p>La personne reste généralement consciente pendant l'épisode.</p>
+<h2 id="a-retenir_2">À retenir</h2>
+<p>La narcolepsie est principalement un trouble neurologique du sommeil et ne doit pas être confondue avec une simple fatigue.</p>
+<hr />
+<h1 id="124-la-narcolepsie-de-type-1" class="entry-title hc-4">🧠 12.4 La narcolepsie de type 1</h1>
+<h2 id="definition_3">Définition</h2>
+<p>La <strong>narcolepsie de type 1</strong> est une forme de narcolepsie généralement associée à la cataplexie et à une diminution de l'hypocrétine dans certaines situations.</p>
+<h2 id="manifestations_3">Manifestations</h2>
+<p>Elle peut provoquer :</p>
+<ul>
+<li>somnolence diurne excessive</li>
+<li>attaques de sommeil</li>
+<li>cataplexie</li>
+<li>paralysie du sommeil</li>
+<li>hallucinations liées au sommeil.</li>
+</ul>
+<h2 id="a-retenir_3">À retenir</h2>
+<p>La présence de cataplexie constitue une caractéristique importante de cette forme de narcolepsie.</p>
+<hr />
+<h1 id="125-la-narcolepsie-de-type-2" class="entry-title hc-5">🧠 12.5 La narcolepsie de type 2</h1>
+<h2 id="definition_4">Définition</h2>
+<p>La <strong>narcolepsie de type 2</strong> correspond à une forme de narcolepsie caractérisée par une somnolence diurne excessive et des anomalies du sommeil paradoxal, généralement sans cataplexie.</p>
+<h2 id="manifestations_4">Manifestations</h2>
+<p>Elle peut comprendre :</p>
+<ul>
+<li>endormissements incontrôlables</li>
+<li>somnolence importante</li>
+<li>sommeil nocturne perturbé</li>
+<li>paralysie du sommeil</li>
+<li>hallucinations liées au sommeil.</li>
+</ul>
+<h2 id="a-retenir_4">À retenir</h2>
+<p>La principale différence avec la narcolepsie de type 1 est notamment l'absence habituelle de cataplexie.</p>
+<hr />
+<h1 id="126-les-troubles-respiratoires-lies-au-sommeil" class="entry-title hc-1">🧠 12.6 Les troubles respiratoires liés au sommeil</h1>
+<h2 id="definition_5">Définition</h2>
+<p>Les <strong>troubles respiratoires liés au sommeil</strong> regroupent plusieurs troubles dans lesquels la respiration est perturbée pendant le sommeil.</p>
+<h2 id="principaux-exemples">Principaux exemples</h2>
+<ul>
+<li>apnée obstructive du sommeil</li>
+<li>apnée centrale du sommeil</li>
+<li>hypoventilation liée au sommeil</li>
+<li>hypoxémie liée au sommeil dans certaines situations.</li>
+</ul>
+<h2 id="manifestations_5">Manifestations</h2>
+<p>Ils peuvent provoquer :</p>
+<ul>
+<li>ronflements</li>
+<li>pauses respiratoires</li>
+<li>réveils nocturnes</li>
+<li>fatigue</li>
+<li>somnolence diurne</li>
+<li>maux de tête au réveil.</li>
+</ul>
+<h2 id="a-retenir_5">À retenir</h2>
+<p>Les troubles respiratoires du sommeil peuvent avoir des conséquences importantes sur la santé et nécessitent parfois une évaluation médicale spécialisée.</p>
+<hr />
+<h1 id="127-lapnee-obstructive-du-sommeil" class="entry-title hc-2">🧠 12.7 L'apnée obstructive du sommeil</h1>
+<h2 id="definition_6">Définition</h2>
+<p>L'<strong>apnée obstructive du sommeil</strong> correspond à des épisodes répétés pendant lesquels les voies respiratoires supérieures se ferment ou se rétrécissent suffisamment pour perturber la respiration pendant le sommeil.</p>
+<h2 id="manifestations_6">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>ronfler fortement</li>
+<li>avoir des pauses respiratoires observées par son entourage</li>
+<li>se réveiller en suffoquant</li>
+<li>avoir un sommeil fragmenté</li>
+<li>être très fatiguée pendant la journée.</li>
+</ul>
+<h2 id="consequences-possibles_1">Conséquences possibles</h2>
+<p>Une apnée non prise en charge peut être associée à différents problèmes de santé.</p>
+<h2 id="a-retenir_6">À retenir</h2>
+<p>L'apnée obstructive est un trouble médical du sommeil et ne doit pas être considérée comme une simple mauvaise qualité de sommeil.</p>
+<hr />
+<h1 id="128-lapnee-centrale-du-sommeil" class="entry-title hc-3">🧠 12.8 L'apnée centrale du sommeil</h1>
+<h2 id="definition_7">Définition</h2>
+<p>L'<strong>apnée centrale du sommeil</strong> correspond à des épisodes pendant lesquels le cerveau ne génère temporairement pas correctement le signal nécessaire à la respiration.</p>
+<h2 id="manifestations_7">Manifestations</h2>
+<p>Elle peut provoquer :</p>
+<ul>
+<li>pauses respiratoires</li>
+<li>réveils nocturnes</li>
+<li>sommeil fragmenté</li>
+<li>fatigue diurne.</li>
+</ul>
+<h2 id="particularite">Particularité</h2>
+<p>Contrairement à l'apnée obstructive, le problème principal ne vient pas d'une obstruction mécanique des voies respiratoires.</p>
+<h2 id="a-retenir_7">À retenir</h2>
+<p>L'apnée centrale nécessite une évaluation médicale afin d'en rechercher la cause.</p>
+<hr />
+<h1 id="129-les-troubles-du-rythme-circadien-veille-sommeil" class="entry-title hc-4">🧠 12.9 Les troubles du rythme circadien veille-sommeil</h1>
+<h2 id="definition_8">Définition</h2>
+<p>Les <strong>troubles du rythme circadien veille-sommeil</strong> apparaissent lorsque l'horloge biologique de la personne est désynchronisée par rapport aux horaires souhaités ou nécessaires.</p>
+<h2 id="principales-formes">Principales formes</h2>
+<p>On peut notamment retrouver :</p>
+<ul>
+<li>trouble du rythme retardé</li>
+<li>trouble du rythme avancé</li>
+<li>trouble du rythme veille-sommeil irrégulier</li>
+<li>trouble du rythme veille-sommeil non synchronisé avec 24 heures</li>
+<li>trouble lié au travail posté</li>
+<li>trouble lié au décalage horaire.</li>
+</ul>
+<h2 id="a-retenir_8">À retenir</h2>
+<p>Le problème principal est le décalage entre le rythme biologique de la personne et les horaires auxquels elle doit dormir ou être éveillée.</p>
+<hr />
+<h1 id="1210-le-trouble-du-rythme-veille-sommeil-retarde" class="entry-title hc-5">🧠 12.10 Le trouble du rythme veille-sommeil retardé</h1>
+<h2 id="definition_9">Définition</h2>
+<p>La personne s'endort et se réveille beaucoup plus tard que ce qui est habituellement attendu.</p>
+<h2 id="manifestations_8">Manifestations</h2>
+<p>Elle peut :</p>
+<ul>
+<li>avoir énormément de difficultés à s'endormir tôt</li>
+<li>dormir très tard lorsqu'elle est libre</li>
+<li>avoir du mal à se réveiller le matin</li>
+<li>être particulièrement fatiguée lorsqu'elle doit se lever tôt.</li>
+</ul>
+<h2 id="a-retenir_9">À retenir</h2>
+<p>Lorsque la personne peut suivre son propre rythme, son sommeil peut parfois être de durée et de qualité normales.</p>
+<hr />
+<h1 id="1211-le-trouble-du-rythme-veille-sommeil-avance" class="entry-title hc-1">🧠 12.11 Le trouble du rythme veille-sommeil avancé</h1>
+<h2 id="definition_10">Définition</h2>
+<p>Le <strong>trouble du rythme veille-sommeil avancé</strong> correspond à un rythme biologique décalé vers des horaires beaucoup plus précoces.</p>
+<h2 id="manifestations_9">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>avoir très sommeil tôt le soir</li>
+<li>s'endormir très tôt</li>
+<li>se réveiller extrêmement tôt</li>
+<li>être incapable de rester éveillée jusqu'à des horaires habituels.</li>
+</ul>
+<h2 id="a-retenir_10">À retenir</h2>
+<p>Le problème vient principalement d'un rythme biologique avancé par rapport aux horaires sociaux habituels.</p>
+<hr />
+<h1 id="1212-le-trouble-du-travail-poste" class="entry-title hc-2">🧠 12.12 Le trouble du travail posté</h1>
+<h2 id="definition_11">Définition</h2>
+<p>Le <strong>trouble lié au travail posté</strong> peut apparaître lorsque les horaires professionnels perturbent fortement le rythme veille-sommeil.</p>
+<h2 id="manifestations_10">Manifestations</h2>
+<p>La personne peut présenter :</p>
+<ul>
+<li>difficultés à dormir après une période de travail</li>
+<li>somnolence pendant les heures de travail</li>
+<li>fatigue</li>
+<li>difficultés de concentration</li>
+<li>irritabilité.</li>
+</ul>
+<h2 id="a-retenir_11">À retenir</h2>
+<p>Les horaires nocturnes ou alternants peuvent perturber fortement l'horloge biologique.</p>
+<hr />
+<h1 id="1213-le-trouble-lie-au-decalage-horaire" class="entry-title hc-3">🧠 12.13 Le trouble lié au décalage horaire</h1>
+<h2 id="definition_12">Définition</h2>
+<p>Le <strong>trouble lié au décalage horaire</strong>, ou jet lag, apparaît lorsque le rythme circadien est temporairement désynchronisé après un déplacement rapide entre plusieurs fuseaux horaires.</p>
+<h2 id="manifestations_11">Manifestations</h2>
+<ul>
+<li>difficultés à dormir</li>
+<li>fatigue</li>
+<li>somnolence</li>
+<li>difficultés de concentration</li>
+<li>troubles digestifs possibles</li>
+<li>réveils à des horaires inhabituels.</li>
+</ul>
+<h2 id="a-retenir_12">À retenir</h2>
+<p>Le décalage horaire est généralement temporaire et s'améliore lorsque l'organisme s'adapte au nouvel horaire.</p>
+<hr />
+<h1 id="1214-les-parasomnies" class="entry-title hc-4">🧠 12.14 Les parasomnies</h1>
+<h2 id="definition_13">Définition</h2>
+<p>Les <strong>parasomnies</strong> regroupent des comportements ou expériences inhabituels qui surviennent pendant le sommeil ou lors des transitions entre sommeil et éveil.</p>
+<h2 id="exemples">Exemples</h2>
+<ul>
+<li>somnambulisme</li>
+<li>terreurs nocturnes</li>
+<li>comportements complexes pendant le sommeil</li>
+<li>certaines hallucinations liées au sommeil.</li>
+</ul>
+<h2 id="a-retenir_13">À retenir</h2>
+<p>Une parasomnie ne correspond pas nécessairement à un trouble psychologique. Elle concerne principalement des phénomènes liés au sommeil.</p>
+<hr />
+<h1 id="1215-le-somnambulisme" class="entry-title hc-5">🧠 12.15 Le somnambulisme</h1>
+<h2 id="definition_14">Définition</h2>
+<p>Le <strong>somnambulisme</strong> correspond à des épisodes durant lesquels une personne se lève ou réalise certaines activités alors qu'elle est encore dans un état de sommeil.</p>
+<h2 id="manifestations_12">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>se lever</li>
+<li>marcher</li>
+<li>parler</li>
+<li>réaliser des actions simples</li>
+<li>avoir peu ou pas de souvenir de l'épisode.</li>
+</ul>
+<h2 id="a-retenir_14">À retenir</h2>
+<p>Le somnambulisme survient principalement pendant certaines phases du sommeil et est particulièrement fréquent durant l'enfance.</p>
+<h1 id="1216-les-terreurs-nocturnes" class="entry-title hc-1">🧠 12.16 Les terreurs nocturnes</h1>
+<h2 id="definition_15">Définition</h2>
+<p>Les <strong>terreurs nocturnes</strong> sont des épisodes de réveil partiel accompagnés d'une forte réaction de peur.</p>
+<h2 id="manifestations_13">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>crier</li>
+<li>sembler extrêmement effrayée</li>
+<li>avoir les yeux ouverts</li>
+<li>être difficile à réveiller</li>
+<li>présenter une forte activation physique</li>
+<li>ne pas se souvenir clairement de l'épisode.</li>
+</ul>
+<h2 id="a-retenir_15">À retenir</h2>
+<p>Les terreurs nocturnes sont différentes des cauchemars classiques.</p>
+<hr />
+<h1 id="1217-le-trouble-des-cauchemars" class="entry-title hc-2">🧠 12.17  Le trouble des cauchemars</h1>
+<h2 id="definition_16">Définition</h2>
+<p>Le <strong>trouble des cauchemars</strong> implique des rêves répétés, particulièrement intenses et généralement désagréables, pouvant provoquer un réveil et une détresse importante.</p>
+<h2 id="manifestations_14">Manifestations</h2>
+<p>Les cauchemars peuvent provoquer :</p>
+<ul>
+<li>peur</li>
+<li>anxiété</li>
+<li>tristesse</li>
+<li>réveils fréquents</li>
+<li>difficultés à se rendormir.</li>
+</ul>
+<h2 id="a-retenir_16">À retenir</h2>
+<p>Faire occasionnellement un cauchemar est normal. Le trouble implique une fréquence ou une intensité suffisamment importante pour provoquer une détresse ou une perturbation du fonctionnement.</p>
+<hr />
+<h1 id="1218-le-trouble-du-comportement-en-sommeil-paradoxal" class="entry-title hc-3">🧠 12.18 Le trouble du comportement en sommeil paradoxal</h1>
+<h2 id="definition_17">Définition</h2>
+<p>Le <strong>trouble du comportement en sommeil paradoxal</strong> correspond à une perte de l'atonie musculaire normalement présente pendant le sommeil paradoxal.</p>
+<p>La personne peut alors réaliser physiquement certains éléments de ses rêves.</p>
+<h2 id="manifestations_15">Manifestations</h2>
+<p>Elle peut :</p>
+<ul>
+<li>parler</li>
+<li>crier</li>
+<li>bouger les bras ou les jambes</li>
+<li>donner des coups</li>
+<li>tomber du lit.</li>
+</ul>
+<h2 id="a-retenir_17">À retenir</h2>
+<p>Ce trouble est principalement neurologique et peut être associé à certaines maladies neurodégénératives.</p>
+<hr />
+<h1 id="1219-la-paralysie-du-sommeil" class="entry-title hc-4">🧠 12.19 La paralysie du sommeil</h1>
+<h2 id="definition_18">Définition</h2>
+<p>La <strong>paralysie du sommeil</strong> correspond à une incapacité temporaire à bouger ou à parler lors de l'endormissement ou du réveil.</p>
+<h2 id="manifestations_16">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>être consciente</li>
+<li>ne pas pouvoir bouger</li>
+<li>ressentir une pression corporelle</li>
+<li>avoir des hallucinations</li>
+<li>ressentir une forte peur.</li>
+</ul>
+<h2 id="duree">Durée</h2>
+<p>Les épisodes sont généralement courts et se terminent spontanément.</p>
+<h2 id="a-retenir_18">À retenir</h2>
+<p>La paralysie du sommeil peut être très impressionnante mais n'est généralement pas dangereuse en elle-même.</p>
+<hr />
+<h1 id="1220-les-hallucinations-liees-au-sommeil" class="entry-title hc-5">🧠 12.20 Les hallucinations liées au sommeil</h1>
+<h2 id="definition_19">Définition</h2>
+<p>Les <strong>hallucinations hypnagogiques</strong> apparaissent principalement lors de l'endormissement.</p>
+<p>Les <strong>hallucinations hypnopompiques</strong> apparaissent principalement lors du réveil.</p>
+<h2 id="manifestations_17">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>voir des formes ou des personnes</li>
+<li>entendre des sons</li>
+<li>ressentir une présence</li>
+<li>ressentir certaines sensations corporelles inhabituelles.</li>
+</ul>
+<h2 id="a-retenir_19">À retenir</h2>
+<p>Ces expériences peuvent survenir chez des personnes ne présentant aucun trouble psychotique.</p>
+<hr />
+<h1 id="1221-le-syndrome-des-jambes-sans-repos" class="entry-title hc-1">🧠 12.21 Le syndrome des jambes sans repos</h1>
+<h2 id="definition_20">Définition</h2>
+<p>Le <strong>syndrome des jambes sans repos</strong> est un trouble neurologique caractérisé par un besoin difficilement contrôlable de bouger les jambes, souvent accompagné de sensations désagréables.</p>
+<h2 id="manifestations_18">Manifestations</h2>
+<p>Les sensations peuvent être :</p>
+<ul>
+<li>fourmillements</li>
+<li>tiraillements</li>
+<li>démangeaisons internes</li>
+<li>inconfort</li>
+<li>besoin de bouger.</li>
+</ul>
+<p>Les symptômes apparaissent généralement davantage au repos et le soir ou la nuit.</p>
+<h2 id="consequences_1">Conséquences</h2>
+<p>Ils peuvent provoquer :</p>
+<ul>
+<li>difficultés d'endormissement</li>
+<li>réveils</li>
+<li>fatigue.</li>
+</ul>
+<h2 id="a-retenir_20">À retenir</h2>
+<p>Le syndrome des jambes sans repos est principalement un trouble neurologique et ne doit pas être confondu avec une simple agitation.</p>
+<hr />
+<h1 id="1222-le-trouble-des-mouvements-periodiques-des-membres" class="entry-title hc-2">🧠 12.22 Le trouble des mouvements périodiques des membres</h1>
+<h2 id="definition_21">Définition</h2>
+<p>Le <strong>trouble des mouvements périodiques des membres</strong> correspond à des mouvements involontaires et répétitifs des jambes ou parfois des bras pendant le sommeil.</p>
+<h2 id="manifestations_19">Manifestations</h2>
+<p>Les mouvements peuvent :</p>
+<ul>
+<li>survenir à intervalles réguliers</li>
+<li>fragmenter le sommeil</li>
+<li>provoquer des micro-réveils</li>
+<li>entraîner une fatigue pendant la journée.</li>
+</ul>
+<h2 id="a-retenir_21">À retenir</h2>
+<p>La personne peut ne pas être consciente de ses mouvements pendant la nuit.</p>
+<hr />
+<h1 id="1223-le-bruxisme-du-sommeil" class="entry-title hc-3">🧠 12.23 Le bruxisme du sommeil</h1>
+<h2 id="definition_22">Définition</h2>
+<p>Le <strong>bruxisme du sommeil</strong> correspond au fait de serrer ou grincer involontairement des dents pendant le sommeil.</p>
+<h2 id="manifestations_20">Manifestations</h2>
+<p>Il peut provoquer :</p>
+<ul>
+<li>douleurs de la mâchoire</li>
+<li>usure des dents</li>
+<li>maux de tête</li>
+<li>tensions musculaires</li>
+<li>douleurs au réveil.</li>
+</ul>
+<h2 id="a-retenir_22">À retenir</h2>
+<p>Le bruxisme peut être influencé par plusieurs facteurs, notamment le stress, mais il ne s'explique pas uniquement par des causes psychologiques.</p>
+<hr />
+<h1 id="1224-lenuresie-liee-au-sommeil" class="entry-title hc-4">🧠 12.24 L'énurésie liée au sommeil</h1>
+<h2 id="definition_23">Définition</h2>
+<p>L'<strong>énurésie</strong> correspond à des épisodes répétés d'émission d'urine involontaire, notamment pendant le sommeil, chez une personne ayant dépassé l'âge où cette situation est normalement attendue.</p>
+<h2 id="manifestations_21">Manifestations</h2>
+<p>Elle peut principalement concerner :</p>
+<ul>
+<li>les enfants</li>
+<li>parfois les adolescents</li>
+<li>plus rarement les adultes.</li>
+</ul>
+<h2 id="a-retenir_23">À retenir</h2>
+<p>L'énurésie peut avoir différentes causes et nécessite parfois une évaluation médicale.</p>
+<hr />
+<h1 id="1225-les-troubles-du-sommeil-lies-a-une-substance-ou-a-un-medicament" class="entry-title hc-5">🧠 12.25 Les troubles du sommeil liés à une substance ou à un médicament</h1>
+<h2 id="definition_24">Définition</h2>
+<p>Certaines substances ou certains médicaments peuvent provoquer ou aggraver des difficultés de sommeil.</p>
+<h2 id="manifestations_22">Manifestations</h2>
+<p>Ils peuvent notamment provoquer :</p>
+<ul>
+<li>insomnie</li>
+<li>somnolence</li>
+<li>modifications du rythme du sommeil</li>
+<li>sommeil fragmenté</li>
+<li>perturbation du sommeil paradoxal.</li>
+</ul>
+<h2 id="exemples-de-substances-pouvant-influencer-le-sommeil">Exemples de substances pouvant influencer le sommeil</h2>
+<p>Selon la substance et la situation :</p>
+<ul>
+<li>stimulants</li>
+<li>alcool</li>
+<li>nicotine</li>
+<li>certains médicaments</li>
+<li>certaines drogues.</li>
+</ul>
+<h2 id="a-retenir_24">À retenir</h2>
+<p>Les troubles du sommeil peuvent parfois être directement liés à la consommation ou au sevrage d'une substance ou à un médicament.</p>
+<hr />
+<h1 id="1226-les-troubles-du-sommeil-dus-a-une-autre-affection-medicale" class="entry-title hc-1">🧠 12.26 Les troubles du sommeil dus à une autre affection médicale</h1>
+<h2 id="definition_25">Définition</h2>
+<p>Certaines maladies médicales peuvent provoquer des perturbations importantes du sommeil.</p>
+<h2 id="exemples_1">Exemples</h2>
+<p>Des problèmes peuvent notamment être associés à :</p>
+<ul>
+<li>douleurs chroniques</li>
+<li>maladies respiratoires</li>
+<li>troubles neurologiques</li>
+<li>troubles hormonaux</li>
+<li>certaines maladies cardiovasculaires.</li>
+</ul>
+<h2 id="a-retenir_25">À retenir</h2>
+<p>Avant de considérer une difficulté de sommeil comme purement psychologique, il peut être nécessaire de rechercher des causes médicales.</p>
+<hr />
+<h1 id="1227-la-dette-de-sommeil" class="entry-title hc-2">🧠 12.27 La dette de sommeil</h1>
+<h2 id="definition_26">Définition</h2>
+<p>La <strong>dette de sommeil</strong> correspond à l'accumulation d'un manque de sommeil par rapport aux besoins habituels d'une personne.</p>
+<h2 id="manifestations_23">Manifestations</h2>
+<p>Elle peut provoquer :</p>
+<ul>
+<li>fatigue</li>
+<li>somnolence</li>
+<li>irritabilité</li>
+<li>difficultés d'attention</li>
+<li>baisse des performances</li>
+<li>temps de réaction plus lent.</li>
+</ul>
+<h2 id="a-retenir_26">À retenir</h2>
+<p>La dette de sommeil est une notion liée au manque de sommeil et ne constitue pas en elle-même un diagnostic psychiatrique.</p>
+<hr />
+<h1 id="1228-la-privation-de-sommeil" class="entry-title hc-3">🧠 12.28 La privation de sommeil</h1>
+<h2 id="definition_27">Définition</h2>
+<p>La <strong>privation de sommeil</strong> correspond à une réduction importante de la quantité de sommeil obtenue.</p>
+<p>Elle peut être volontaire ou involontaire.</p>
+<h2 id="consequences-possibles_2">Conséquences possibles</h2>
+<p>Un manque important de sommeil peut entraîner :</p>
+<ul>
+<li>fatigue</li>
+<li>difficultés de concentration</li>
+<li>irritabilité</li>
+<li>troubles de la mémoire</li>
+<li>baisse des performances</li>
+<li>somnolence.</li>
+</ul>
+<h2 id="a-retenir_27">À retenir</h2>
+<p>La privation de sommeil peut aggraver certains problèmes psychologiques et physiques.</p>
+<hr />
+<h1 id="1229-le-sommeil-insuffisant-comportemental" class="entry-title hc-4">🧠 12.29 Le sommeil insuffisant comportemental</h1>
+<h2 id="definition_28">Définition</h2>
+<p>Le <strong>sommeil insuffisant comportemental</strong> correspond notamment à une durée de sommeil insuffisante résultant d'habitudes ou de contraintes comportementales, plutôt que d'une incapacité physiologique à dormir.</p>
+<h2 id="exemples_2">Exemples</h2>
+<p>Une personne peut volontairement réduire son temps de sommeil pour :</p>
+<ul>
+<li>jouer</li>
+<li>travailler</li>
+<li>regarder des séries</li>
+<li>utiliser son téléphone</li>
+<li>étudier.</li>
+</ul>
+<h2 id="a-retenir_28">À retenir</h2>
+<p>Dormir volontairement trop peu n'est pas nécessairement une insomnie.</p>
+<hr />
+<h1 id="1230-les-consequences-psychologiques-des-troubles-du-sommeil" class="entry-title hc-5">🧠 12.30 Les conséquences psychologiques des troubles du sommeil</h1>
+<h2 id="definition_29">Définition</h2>
+<p>Les troubles du sommeil peuvent avoir des répercussions importantes sur le fonctionnement psychologique.</p>
+<h2 id="consequences-possibles_3">Conséquences possibles</h2>
+<p>Ils peuvent notamment être associés à :</p>
+<ul>
+<li>irritabilité</li>
+<li>difficultés de concentration</li>
+<li>baisse de motivation</li>
+<li>difficultés de régulation émotionnelle</li>
+<li>augmentation de l'anxiété</li>
+<li>humeur dépressive</li>
+<li>baisse des performances.</li>
+</ul>
+<h2 id="a-retenir_29">À retenir</h2>
+<p>Le sommeil et la santé mentale sont étroitement liés. Un trouble du sommeil peut accompagner un trouble psychologique, mais il peut également exister indépendamment.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-13-troubles-lies-aux-substances-et-aux-addictions/"><span class="similar-icon">🩺</span>Partie 13 — Troubles liés aux substances et aux addictions</a><a class="similar-item" href="/chapitre/troubles-partie-14-troubles-neurocognitifs/"><span class="similar-icon">🩺</span>Partie 14 — Troubles neurocognitifs</a><a class="similar-item" href="/chapitre/troubles-partie-15-troubles-disruptifs-du-controle-des-impulsions-et-des-conduites/"><span class="similar-icon">🩺</span>Partie 15 — Troubles disruptifs, du contrôle des impulsions et des conduites</a></div>
+    </div>
+    <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

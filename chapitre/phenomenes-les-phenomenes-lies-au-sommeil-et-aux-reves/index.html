@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les phénomènes liés au sommeil et aux rêves — Mon Esprit</title>
+<meta name="description" content="Les phénomènes liés au sommeil et aux rêves, dans la catégorie Phénomènes psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#121-le-sommeil">😴 12.1 Le sommeil</a></li><li><a href="#122-le-cycle-veille-sommeil">🕰️ 12.2 Le cycle veille-sommeil</a></li><li><a href="#123-lhorloge-biologique">🌙 12.3 L'horloge biologique</a></li><li><a href="#124-le-rythme-circadien">🌅 12.4 Le rythme circadien</a></li><li><a href="#125-la-pression-de-sommeil">💤 12.5 La pression de sommeil</a></li><li><a href="#126-lendormissement">🛌 12.6 L'endormissement</a></li><li><a href="#127-les-micro-reveils">👁️ 12.7 Les micro-réveils</a></li><li><a href="#128-les-differents-stades-du-sommeil">🧠 12.8 Les différents stades du sommeil</a></li><li><a href="#129-le-sommeil-lent">🌌 12.9 Le sommeil lent</a></li><li><a href="#1210-le-sommeil-paradoxal">⚡ 12.10 Le sommeil paradoxal</a></li><li><a href="#1211-les-reves">🌙 12.11 Les rêves</a></li><li><a href="#1212-le-contenu-des-reves">🧠 12.12 Le contenu des rêves</a></li><li><a href="#1213-les-reves-recurrents">🔁 12.13 Les rêves récurrents</a></li><li><a href="#1214-les-cauchemars">😨 12.14 Les cauchemars</a></li><li><a href="#1215-les-terreurs-nocturnes">😱 12.15 Les terreurs nocturnes</a></li><li><a href="#1216-la-paralysie-du-sommeil">🛑 12.16 La paralysie du sommeil</a></li><li><a href="#1217-les-hallucinations-hypnagogiques">👻 12.17 Les hallucinations hypnagogiques</a></li><li><a href="#1218-les-hallucinations-hypnopompiques">🌅 12.18 Les hallucinations hypnopompiques</a></li><li><a href="#1219-les-reves-lucides">💡 12.19 Les rêves lucides</a></li><li><a href="#1220-le-somnambulisme">🚶 12.20 Le somnambulisme</a></li><li><a href="#1221-la-somniloquie">🗣️ 12.21 La somniloquie</a></li><li><a href="#1222-le-bruxisme-du-sommeil">😬 12.22 Le bruxisme du sommeil</a></li><li><a href="#1223-le-reveil-confusionnel">🌙 12.23 Le réveil confusionnel</a></li><li><a href="#1224-le-faux-eveil">🪞 12.24 Le faux éveil</a></li><li><a href="#1225-le-deja-reve">🔄 12.25 Le déjà-rêvé</a></li><li><a href="#1226-lincorporation-de-stimuli-externes">🔊 12.26 L'incorporation de stimuli externes</a></li><li><a href="#1227-la-memoire-des-reves">🧠 12.27 La mémoire des rêves</a></li><li><a href="#1228-loubli-des-reves">🌫️ 12.28 L'oubli des rêves</a></li><li><a href="#1229-le-sommeil-et-la-consolidation-de-la-memoire">🧠 12.29 Le sommeil et la consolidation de la mémoire</a></li><li><a href="#1230-le-sommeil-et-les-emotions">❤️ 12.30 Le sommeil et les émotions</a></li><li><a href="#1231-le-manque-de-sommeil-et-lattention">🎯 12.31 Le manque de sommeil et l'attention</a></li><li><a href="#1232-le-manque-de-sommeil-et-la-memoire">🧠 12.32 Le manque de sommeil et la mémoire</a></li><li><a href="#1233-la-dette-de-sommeil">📉 12.33 La dette de sommeil</a></li><li><a href="#1234-le-decalage-horaire">✈️ 12.34 Le décalage horaire</a></li><li><a href="#1235-le-travail-de-nuit">🌃 12.35 Le travail de nuit</a></li><li><a href="#1236-la-sieste">😴 12.36 La sieste</a></li><li><a href="#1237-le-reve-et-la-memoire">🧠 12.37 Le rêve et la mémoire</a></li><li><a href="#1238-le-reve-et-le-traitement-emotionnel">❤️ 12.38 Le rêve et le traitement émotionnel</a></li><li><a href="#1239-les-differences-individuelles-dans-les-reves">👤 12.39 Les différences individuelles dans les rêves</a></li><li><a href="#1240-pourquoi-etudier-le-sommeil-et-les-reves">🔬 12.40 Pourquoi étudier le sommeil et les rêves ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Les phénomènes liés au sommeil et aux rêves',
+        category: 'Phénomènes psychologiques',
+        icon: '🔮'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/phenomenes/">🔮 Phénomènes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Les phénomènes liés au sommeil et aux rêves</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-phenomenes)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <blockquote>
+<p>Le sommeil est un état biologique essentiel au fonctionnement du cerveau et de l'organisme. Il s'accompagne de nombreux phénomènes psychologiques particuliers concernant la conscience, la mémoire, les émotions, la perception et les rêves.
+</p>
+<p>Certains phénomènes sont extrêmement fréquents, tandis que d'autres sont plus rares ou apparaissent dans certaines situations. L'étude du sommeil permet notamment de mieux comprendre les mécanismes de la conscience, de la mémoire et de la régulation émotionnelle.
+</p>
+</blockquote>
+<h2 id="121-le-sommeil" class="entry-title hc-1">😴 12.1 Le sommeil</h2>
+<p>Le sommeil est un état physiologique caractérisé par une diminution de la vigilance et une modification importante de l'activité cérébrale.</p>
+<p>Il ne correspond pas simplement à une absence de conscience. Le cerveau reste actif et réalise différentes opérations essentielles pendant cette période.</p>
+<p>Le sommeil participe notamment à la récupération, à la consolidation de certaines informations mémorisées et au fonctionnement émotionnel.</p>
+<h2 id="122-le-cycle-veille-sommeil" class="entry-title hc-2">🕰️ 12.2 Le cycle veille-sommeil</h2>
+<p>Le cycle veille-sommeil correspond à l'alternance entre les périodes d'éveil et de sommeil.</p>
+<p>Cette alternance est influencée par plusieurs mécanismes biologiques, notamment l'horloge circadienne et l'accumulation progressive de la pression de sommeil.</p>
+<p>Lorsque ces mécanismes sont perturbés, les horaires d'endormissement et de réveil peuvent être modifiés.</p>
+<h2 id="123-lhorloge-biologique" class="entry-title hc-3">🌙 12.3 L'horloge biologique</h2>
+<p>L'horloge biologique est un système interne qui contribue à organiser différentes fonctions de l'organisme selon une temporalité régulière.</p>
+<p>Elle influence notamment :</p>
+<ul>
+<li>le sommeil</li>
+<li>l'éveil</li>
+<li>la température corporelle</li>
+<li>certaines sécrétions hormonales</li>
+<li>la vigilance</li>
+<li>les performances cognitives</li>
+</ul>
+<p>Elle est notamment synchronisée par les variations de lumière et d'obscurité.</p>
+<h2 id="124-le-rythme-circadien" class="entry-title hc-4">🌅 12.4 Le rythme circadien</h2>
+<p>Le rythme circadien correspond à un cycle biologique d'environ 24 heures.</p>
+<p>Il influence les périodes où l'organisme est naturellement plus préparé à dormir ou à être éveillé.</p>
+<p>La lumière, les horaires de repas, l'activité physique et les habitudes quotidiennes peuvent contribuer à synchroniser ce rythme.</p>
+<h2 id="125-la-pression-de-sommeil" class="entry-title hc-5">💤 12.5 La pression de sommeil</h2>
+<p>La pression de sommeil correspond au besoin de dormir qui augmente progressivement pendant l'éveil.</p>
+<p>Plus une période d'éveil se prolonge, plus la pression de sommeil augmente généralement.</p>
+<p>Le sommeil permet ensuite de réduire cette pression.</p>
+<p>Ce mécanisme fonctionne parallèlement au rythme circadien.</p>
+<h2 id="126-lendormissement" class="entry-title hc-1">🛌 12.6 L'endormissement</h2>
+<p>L'endormissement est la transition entre l'état d'éveil et le sommeil.</p>
+<p>Durant cette période, l'activité mentale peut progressivement changer. Les pensées deviennent parfois moins organisées et des images ou sensations inhabituelles peuvent apparaître.</p>
+<p>Cette phase constitue également la période pendant laquelle peuvent apparaître certaines hallucinations hypnagogiques.</p>
+<h2 id="127-les-micro-reveils" class="entry-title hc-2">👁️ 12.7 Les micro-réveils</h2>
+<p>Les micro-réveils sont de très brèves périodes durant lesquelles le niveau de vigilance augmente momentanément pendant le sommeil.</p>
+<p>Ils peuvent être tellement courts qu'ils ne sont généralement pas mémorisés.</p>
+<p>Ils peuvent notamment être provoqués par des bruits, des mouvements, des changements de température ou d'autres stimulations.</p>
+<h2 id="128-les-differents-stades-du-sommeil" class="entry-title hc-3">🧠 12.8 Les différents stades du sommeil</h2>
+<p>Le sommeil n'est pas un état uniforme.</p>
+<p>Il comprend plusieurs stades caractérisés par des différences dans l'activité cérébrale et physiologique.</p>
+<p>On distingue principalement :</p>
+<ul>
+<li>le sommeil léger</li>
+<li>le sommeil lent plus profond</li>
+<li>le sommeil paradoxal</li>
+</ul>
+<p>Ces stades se succèdent plusieurs fois au cours d'une nuit.</p>
+<h2 id="129-le-sommeil-lent" class="entry-title hc-4">🌌 12.9 Le sommeil lent</h2>
+<p>Le sommeil lent correspond aux stades du sommeil caractérisés notamment par un ralentissement général de certaines activités physiologiques.</p>
+<p>Le sommeil profond constitue une période particulièrement importante pour la récupération physique.</p>
+<p>Le cerveau continue cependant à traiter certaines informations pendant cette phase.</p>
+<h2 id="1210-le-sommeil-paradoxal" class="entry-title hc-5">⚡ 12.10 Le sommeil paradoxal</h2>
+<p>Le sommeil paradoxal est une phase caractérisée notamment par une activité cérébrale relativement élevée, des mouvements oculaires rapides et une importante diminution du tonus musculaire.</p>
+<p>Les rêves particulièrement vivaces sont fréquents pendant cette phase, même si les rêves peuvent également survenir à d'autres moments du sommeil.</p>
+<h2 id="1211-les-reves" class="entry-title hc-1">🌙 12.11 Les rêves</h2>
+<p>Les rêves correspondent à des expériences mentales qui peuvent survenir pendant le sommeil.</p>
+<p>Ils peuvent comprendre :</p>
+<ul>
+<li>des images</li>
+<li>des sons</li>
+<li>des émotions</li>
+<li>des sensations corporelles</li>
+<li>des dialogues</li>
+<li>des souvenirs</li>
+<li>des situations imaginaires</li>
+</ul>
+<p>Le contenu des rêves peut être très cohérent ou au contraire présenter des changements soudains et des associations inhabituelles.</p>
+<h2 id="1212-le-contenu-des-reves" class="entry-title hc-2">🧠 12.12 Le contenu des rêves</h2>
+<p>Le contenu d'un rêve peut mélanger différentes informations provenant de la mémoire, des émotions, des expériences récentes et de représentations imaginaires.</p>
+<p>Un rêve peut ainsi combiner plusieurs personnes, lieux ou événements qui n'ont normalement aucun rapport entre eux.</p>
+<p>Le contenu des rêves ne constitue pas automatiquement une représentation symbolique ayant une signification précise.</p>
+<h2 id="1213-les-reves-recurrents" class="entry-title hc-3">🔁 12.13 Les rêves récurrents</h2>
+<p>Les rêves récurrents sont des rêves qui présentent régulièrement des thèmes, des situations ou des scénarios similaires.</p>
+<p>Ils peuvent varier légèrement d'une occurrence à l'autre.</p>
+<p>Ils sont parfois associés à certaines préoccupations émotionnelles, mais leur signification ne peut pas être déterminée uniquement à partir de leur contenu.</p>
+<h2 id="1214-les-cauchemars" class="entry-title hc-4">😨 12.14 Les cauchemars</h2>
+<p>Les cauchemars sont des rêves particulièrement désagréables pouvant provoquer de la peur, de l'angoisse, de la tristesse ou d'autres émotions négatives.</p>
+<p>Ils peuvent provoquer un réveil et laisser un souvenir relativement précis du rêve.</p>
+<p>Leur fréquence peut être influencée par différents facteurs, notamment le stress, certaines expériences émotionnelles ou des perturbations du sommeil.</p>
+<h2 id="1215-les-terreurs-nocturnes" class="entry-title hc-5">😱 12.15 Les terreurs nocturnes</h2>
+<p>Les terreurs nocturnes correspondent à des épisodes de forte activation pendant le sommeil, souvent accompagnés de cris, de mouvements ou d'une expression intense de peur.</p>
+<p>Elles surviennent généralement pendant le sommeil lent profond et diffèrent des cauchemars.</p>
+<p>Lors d'une terreur nocturne, le souvenir de l'épisode peut être très limité au réveil.</p>
+<h2 id="1216-la-paralysie-du-sommeil" class="entry-title hc-1">🛑 12.16 La paralysie du sommeil</h2>
+<p>La paralysie du sommeil correspond à une incapacité temporaire à bouger lors de l'endormissement ou du réveil.</p>
+<p>La personne est généralement consciente de son environnement mais ne peut momentanément pas effectuer certains mouvements volontaires.</p>
+<p>Des hallucinations peuvent parfois accompagner l'épisode.</p>
+<p>Le phénomène est généralement bref et résulte d'un décalage temporaire entre certains mécanismes du sommeil et de l'éveil.</p>
+<h2 id="1217-les-hallucinations-hypnagogiques" class="entry-title hc-2">👻 12.17 Les hallucinations hypnagogiques</h2>
+<p>Les hallucinations hypnagogiques apparaissent lors de la transition entre l'éveil et le sommeil.</p>
+<p>Elles peuvent être :</p>
+<ul>
+<li>visuelles</li>
+<li>auditives</li>
+<li>tactiles</li>
+<li>corporelles</li>
+</ul>
+<p>Elles peuvent sembler extrêmement réalistes alors qu'elles surviennent dans un état de transition vers le sommeil.</p>
+<h2 id="1218-les-hallucinations-hypnopompiques" class="entry-title hc-3">🌅 12.18 Les hallucinations hypnopompiques</h2>
+<p>Les hallucinations hypnopompiques apparaissent lors de la transition entre le sommeil et l'éveil.</p>
+<p>Elles ressemblent aux hallucinations hypnagogiques, mais surviennent au moment du réveil.</p>
+<p>Elles peuvent parfois être associées à une paralysie du sommeil.</p>
+<h2 id="1219-les-reves-lucides" class="entry-title hc-4">💡 12.19 Les rêves lucides</h2>
+<p>Un rêve lucide est un rêve durant lequel la personne prend conscience qu'elle est en train de rêver.</p>
+<p>Certaines personnes rapportent également pouvoir influencer certains éléments du rêve.</p>
+<p>Le degré de contrôle peut cependant varier considérablement.</p>
+<h2 id="1220-le-somnambulisme" class="entry-title hc-5">🚶 12.20 Le somnambulisme</h2>
+<p>Le somnambulisme correspond à des comportements moteurs réalisés pendant le sommeil.</p>
+<p>Une personne peut notamment se lever, marcher ou effectuer certaines actions alors qu'elle n'est pas complètement éveillée.</p>
+<p>Le souvenir de l'épisode peut être absent ou incomplet au réveil.</p>
+<h2 id="1221-la-somniloquie" class="entry-title hc-1">🗣️ 12.21 La somniloquie</h2>
+<p>La somniloquie correspond au fait de parler pendant son sommeil.</p>
+<p>Les paroles peuvent être compréhensibles ou totalement désorganisées.</p>
+<p>La personne peut généralement ne pas avoir conscience de l'épisode.</p>
+<h2 id="1222-le-bruxisme-du-sommeil" class="entry-title hc-2">😬 12.22 Le bruxisme du sommeil</h2>
+<p>Le bruxisme du sommeil correspond au fait de serrer ou grincer les dents pendant le sommeil.</p>
+<p>Il peut être associé à des micro-réveils et à différentes caractéristiques du fonctionnement du sommeil.</p>
+<p>Lorsqu'il est fréquent, il peut entraîner une usure dentaire ou des douleurs musculaires.</p>
+<h2 id="1223-le-reveil-confusionnel" class="entry-title hc-3">🌙 12.23 Le réveil confusionnel</h2>
+<p>Le réveil confusionnel correspond à une période durant laquelle une personne présente temporairement une désorientation ou une certaine confusion après son réveil.</p>
+<p>Elle peut avoir du mal à comprendre immédiatement où elle se trouve ou ce qu'elle faisait avant de se réveiller.</p>
+<p>Ce phénomène est particulièrement associé aux transitions depuis certaines phases du sommeil.</p>
+<h2 id="1224-le-faux-eveil" class="entry-title hc-4">🪞 12.24 Le faux éveil</h2>
+<p>Le faux éveil correspond à un rêve dans lequel une personne croit s'être réveillée alors qu'elle est toujours en train de dormir.</p>
+<p>Le rêve peut reproduire des éléments familiers de l'environnement réel.</p>
+<p>La personne peut ensuite se réveiller réellement et comprendre que le premier réveil était lui-même un rêve.</p>
+<h2 id="1225-le-deja-reve" class="entry-title hc-5">🔄 12.25 Le déjà-rêvé</h2>
+<p>Le déjà-rêvé correspond au sentiment d'avoir déjà rêvé d'une situation qui est actuellement vécue dans un rêve.</p>
+<p>Ce phénomène peut donner une impression de familiarité particulière à l'intérieur même de l'expérience onirique.</p>
+<p>Il peut être rapproché de certains phénomènes de déjà-vu, mais il concerne spécifiquement l'expérience du rêve.</p>
+<h2 id="1226-lincorporation-de-stimuli-externes" class="entry-title hc-1">🔊 12.26 L'incorporation de stimuli externes</h2>
+<p>Des informations provenant de l'environnement peuvent parfois être intégrées au contenu d'un rêve.</p>
+<p>Un son extérieur, une sensation physique ou une autre stimulation peut ainsi être transformé en élément du scénario onirique.</p>
+<p>Le cerveau peut donc intégrer certaines informations réelles dans une expérience mentale produite pendant le sommeil.</p>
+<h2 id="1227-la-memoire-des-reves" class="entry-title hc-2">🧠 12.27 La mémoire des rêves</h2>
+<p>Certaines personnes se souviennent régulièrement de leurs rêves tandis que d'autres ont rarement cette impression.</p>
+<p>Le souvenir d'un rêve dépend notamment du moment du réveil et de la rapidité avec laquelle l'attention se porte sur l'expérience vécue.</p>
+<p>Un rêve peut être oublié très rapidement après le réveil.</p>
+<h2 id="1228-loubli-des-reves" class="entry-title hc-3">🌫️ 12.28 L'oubli des rêves</h2>
+<p>L'oubli des rêves est extrêmement fréquent.</p>
+<p>Même lorsqu'un rêve a été vécu de manière très intense, son souvenir peut disparaître rapidement après le réveil.</p>
+<p>Le contenu peut progressivement devenir fragmentaire avant de disparaître complètement.</p>
+<h2 id="1229-le-sommeil-et-la-consolidation-de-la-memoire" class="entry-title hc-4">🧠 12.29 Le sommeil et la consolidation de la mémoire</h2>
+<p>Le sommeil joue un rôle important dans certains processus de consolidation de la mémoire.</p>
+<p>Certaines informations apprises avant le sommeil peuvent être stabilisées ou réorganisées pendant celui-ci.</p>
+<p>Le sommeil ne fonctionne cependant pas comme un simple enregistrement automatique de toutes les informations vécues pendant la journée.</p>
+<h2 id="1230-le-sommeil-et-les-emotions" class="entry-title hc-5">❤️ 12.30 Le sommeil et les émotions</h2>
+<p>Le sommeil participe au fonctionnement émotionnel.</p>
+<p>Une perturbation importante du sommeil peut notamment influencer la réactivité émotionnelle, l'humeur et la capacité à gérer certaines situations.</p>
+<p>Les relations entre sommeil et émotions sont réciproques : les émotions peuvent également influencer la qualité du sommeil.</p>
+<h2 id="1231-le-manque-de-sommeil-et-lattention" class="entry-title hc-1">🎯 12.31 Le manque de sommeil et l'attention</h2>
+<p>Le manque de sommeil peut diminuer certaines capacités attentionnelles.</p>
+<p>Il peut notamment entraîner :</p>
+<ul>
+<li>davantage de distractions</li>
+<li>une vigilance réduite</li>
+<li>des temps de réaction plus longs</li>
+<li>une difficulté à maintenir l'attention</li>
+</ul>
+<p>Ces effets peuvent varier selon l'importance et la durée de la privation de sommeil.</p>
+<h2 id="1232-le-manque-de-sommeil-et-la-memoire" class="entry-title hc-2">🧠 12.32 Le manque de sommeil et la mémoire</h2>
+<p>Le manque de sommeil peut perturber différents processus impliqués dans la mémoire.</p>
+<p>L'encodage de nouvelles informations peut notamment être moins efficace lorsque la vigilance est réduite.</p>
+<p>La consolidation de certaines informations peut également être affectée.</p>
+<h2 id="1233-la-dette-de-sommeil" class="entry-title hc-3">📉 12.33 La dette de sommeil</h2>
+<p>La dette de sommeil correspond à l'accumulation d'un manque de sommeil au fil du temps.</p>
+<p>Elle peut apparaître lorsque la durée de sommeil est régulièrement inférieure aux besoins individuels.</p>
+<p>Elle peut contribuer à une diminution de la vigilance, des performances cognitives et de certaines capacités de régulation émotionnelle.</p>
+<h2 id="1234-le-decalage-horaire" class="entry-title hc-4">✈️ 12.34 Le décalage horaire</h2>
+<p>Le décalage horaire apparaît lorsque l'horloge biologique est temporairement désynchronisée par rapport à l'heure locale.</p>
+<p>Il peut provoquer :</p>
+<ul>
+<li>une somnolence inhabituelle</li>
+<li>des difficultés d'endormissement</li>
+<li>des réveils à des horaires inhabituels</li>
+<li>une diminution temporaire de la vigilance</li>
+</ul>
+<p>L'organisme peut progressivement se resynchroniser.</p>
+<h2 id="1235-le-travail-de-nuit" class="entry-title hc-5">🌃 12.35 Le travail de nuit</h2>
+<p>Le travail de nuit peut perturber l'organisation habituelle du rythme circadien.</p>
+<p>Dormir pendant la journée ne reproduit pas nécessairement exactement les conditions biologiques du sommeil nocturne.</p>
+<p>Les horaires décalés peuvent donc influencer la vigilance, le sommeil et certains rythmes biologiques.</p>
+<h2 id="1236-la-sieste" class="entry-title hc-1">😴 12.36 La sieste</h2>
+<p>La sieste correspond à une période de sommeil réalisée en dehors du sommeil principal.</p>
+<p>Elle peut avoir différents effets selon sa durée, son horaire et les caractéristiques individuelles.</p>
+<p>Une sieste courte peut notamment contribuer à réduire temporairement la somnolence et améliorer certaines performances attentionnelles.</p>
+<h2 id="1237-le-reve-et-la-memoire" class="entry-title hc-2">🧠 12.37 Le rêve et la mémoire</h2>
+<p>Les rêves et la mémoire entretiennent des relations complexes.</p>
+<p>Des éléments issus de souvenirs récents ou anciens peuvent apparaître dans les rêves.</p>
+<p>Cependant, le fait qu'un souvenir apparaisse dans un rêve ne signifie pas nécessairement qu'il est reproduit fidèlement.</p>
+<p>Le rêve peut transformer, mélanger ou réorganiser différents éléments mémorisés.</p>
+<h2 id="1238-le-reve-et-le-traitement-emotionnel" class="entry-title hc-3">❤️ 12.38 Le rêve et le traitement émotionnel</h2>
+<p>Les rêves sont souvent associés à des expériences émotionnelles.</p>
+<p>Certaines théories proposent qu'ils puissent participer à certains processus de traitement ou de régulation émotionnelle.</p>
+<p>Cependant, les mécanismes exacts et la fonction précise des rêves restent encore étudiés et ne peuvent pas être réduits à une seule explication.</p>
+<h2 id="1239-les-differences-individuelles-dans-les-reves" class="entry-title hc-4">👤 12.39 Les différences individuelles dans les rêves</h2>
+<p>Les expériences oniriques varient considérablement d'une personne à l'autre.</p>
+<p>Certaines personnes rapportent des rêves très fréquents et détaillés, tandis que d'autres se souviennent rarement de leurs rêves.</p>
+<p>Les différences peuvent concerner :</p>
+<ul>
+<li>la fréquence des rêves mémorisés</li>
+<li>leur intensité émotionnelle</li>
+<li>leur complexité</li>
+<li>leur caractère récurrent</li>
+<li>leur capacité à devenir lucides</li>
+</ul>
+<h2 id="1240-pourquoi-etudier-le-sommeil-et-les-reves" class="entry-title hc-5">🔬 12.40 Pourquoi étudier le sommeil et les rêves ?</h2>
+<p>L'étude du sommeil permet de mieux comprendre plusieurs fonctions fondamentales du cerveau.</p>
+<p>Elle permet notamment d'étudier les relations entre :</p>
+<ul>
+<li>sommeil et mémoire</li>
+<li>sommeil et émotions</li>
+<li>sommeil et attention</li>
+<li>sommeil et conscience</li>
+<li>sommeil et apprentissage</li>
+<li>sommeil et fonctionnement biologique</li>
+</ul>
+<p>Les rêves sont également particulièrement intéressants pour l'étude de la conscience, car ils montrent qu'une expérience mentale riche peut apparaître alors que le cerveau se trouve dans un état de sommeil.</p>
+<h1 id="recapitulatif">📚 RÉCAPITULATIF</h1>
+<table>
+<thead>
+<tr>
+<th>Phénomène</th>
+<th>Domaine principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cycle veille-sommeil</td>
+<td>Rythmes biologiques</td>
+</tr>
+<tr>
+<td>Rythme circadien</td>
+<td>Biologie et sommeil</td>
+</tr>
+<tr>
+<td>Pression de sommeil</td>
+<td>Régulation du sommeil</td>
+</tr>
+<tr>
+<td>Sommeil paradoxal</td>
+<td>Neurophysiologie</td>
+</tr>
+<tr>
+<td>Rêves</td>
+<td>Conscience et cognition</td>
+</tr>
+<tr>
+<td>Cauchemars</td>
+<td>Émotions et sommeil</td>
+</tr>
+<tr>
+<td>Terreurs nocturnes</td>
+<td>Sommeil</td>
+</tr>
+<tr>
+<td>Paralysie du sommeil</td>
+<td>Sommeil et conscience</td>
+</tr>
+<tr>
+<td>Hallucinations hypnagogiques</td>
+<td>Perception et sommeil</td>
+</tr>
+<tr>
+<td>Hallucinations hypnopompiques</td>
+<td>Perception et sommeil</td>
+</tr>
+<tr>
+<td>Rêve lucide</td>
+<td>Conscience</td>
+</tr>
+<tr>
+<td>Somnambulisme</td>
+<td>Sommeil et comportement</td>
+</tr>
+<tr>
+<td>Somniloquie</td>
+<td>Sommeil et comportement</td>
+</tr>
+<tr>
+<td>Faux éveil</td>
+<td>Conscience et rêve</td>
+</tr>
+<tr>
+<td>Déjà-rêvé</td>
+<td>Mémoire et rêve</td>
+</tr>
+<tr>
+<td>Mémoire des rêves</td>
+<td>Mémoire</td>
+</tr>
+<tr>
+<td>Oubli des rêves</td>
+<td>Mémoire</td>
+</tr>
+<tr>
+<td>Dette de sommeil</td>
+<td>Sommeil et cognition</td>
+</tr>
+<tr>
+<td>Décalage horaire</td>
+<td>Rythme circadien</td>
+</tr>
+<tr>
+<td>Sieste</td>
+<td>Sommeil et vigilance</td>
+</tr>
+</tbody>
+</table>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>🧠 Le sommeil est un état actif durant lequel le cerveau continue de réaliser de nombreux traitements.</p>
+<p>🌙 Les rêves constituent des expériences mentales pouvant contenir des images, des émotions, des souvenirs et des sensations.</p>
+<p>⏰ Le rythme circadien contribue à organiser les périodes d'éveil et de sommeil.</p>
+<p>💭 Les rêves peuvent intégrer et transformer différents éléments provenant de la mémoire et de l'environnement.</p>
+<p>🛑 Certains phénomènes comme la paralysie du sommeil ou les hallucinations hypnagogiques peuvent apparaître lors des transitions entre sommeil et éveil.</p>
+<p>🧠 Le sommeil joue un rôle important dans la mémoire, l'attention et le fonctionnement émotionnel.</p>
+<p>🔬 Les fonctions exactes des rêves restent encore un sujet d'étude scientifique.</p>
+<h1 id="fin-de-la-partie-12">🌙 FIN DE LA PARTIE 12</h1>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Phénomènes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-stress/"><span class="similar-icon">🔮</span>Les phénomènes liés au stress</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-psychosomatiques/"><span class="similar-icon">🔮</span>Les phénomènes psychosomatiques</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-comportementaux/"><span class="similar-icon">🔮</span>Les phénomènes comportementaux</a></div>
+    </div>
+    <a class="back-link" href="/categorie/phenomenes/">← Retour à « Phénomènes psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

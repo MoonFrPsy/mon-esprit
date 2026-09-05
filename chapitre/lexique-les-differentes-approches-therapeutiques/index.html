@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les différentes approches thérapeutiques — Mon Esprit</title>
+<meta name="description" content="Les différentes approches thérapeutiques, dans la catégorie Lexique des séances psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#71-la-tcc-therapie-cognitivo-comportementale">🧠 7.1 La TCC — Thérapie cognitivo-comportementale</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#techniques-possibles">🛠️ Techniques possibles</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#72-la-psychanalyse">🛋️ 7.2 La psychanalyse</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#concepts-associes">🧠 Concepts associés</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#73-la-therapie-psychodynamique">🔎 7.3 La thérapie psychodynamique</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#exemple">💭 Exemple</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#74-lapproche-humaniste">❤️ 7.4 L'approche humaniste</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#concepts-associes_1">🧠 Concepts associés</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#75-la-therapie-centree-sur-la-personne">🗣️ 7.5 La thérapie centrée sur la personne</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#exemple_1">💭 Exemple</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#76-la-therapie-systemique">👨‍👩‍👧 7.6 La thérapie systémique</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#exemple_2">💭 Exemple</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#77-la-therapie-de-couple">💑 7.7 La thérapie de couple</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#78-la-therapie-familiale">👨‍👩‍👧‍👦 7.8 La thérapie familiale</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#exemple_3">💭 Exemple</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#79-lact-therapie-dacceptation-et-dengagement">🧠 7.9 L'ACT — Thérapie d'acceptation et d'engagement</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#concepts-importants">🛠️ Concepts importants</a></li><li><a href="#exemple_4">💭 Exemple</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#710-la-tcd-therapie-comportementale-dialectique">🧩 7.10 La TCD — Thérapie comportementale dialectique</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#competences-travaillees">🛠️ Compétences travaillées</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#711-la-pleine-conscience-mindfulness">🌿 7.11 La pleine conscience / Mindfulness</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#exemple_5">💭 Exemple</a></li><li><a href="#a-retenir_10">📌 À retenir</a></li></ul></li><li><a href="#712-lemdr">👁️ 7.12 L'EMDR</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#travail-possible">🧠 Travail possible</a></li><li><a href="#a-retenir_11">📌 À retenir</a></li></ul></li><li><a href="#713-la-therapie-des-schemas">🧠 7.13 La thérapie des schémas</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#concepts-associes_2">🧩 Concepts associés</a></li><li><a href="#a-retenir_12">📌 À retenir</a></li></ul></li><li><a href="#714-lentretien-motivationnel">🗣️ 7.14 L'entretien motivationnel</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#exemple_6">💭 Exemple</a></li><li><a href="#a-retenir_13">📌 À retenir</a></li></ul></li><li><a href="#715-la-therapie-comportementale">🧠 7.15 La thérapie comportementale</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#techniques-possibles_1">🛠️ Techniques possibles</a></li><li><a href="#a-retenir_14">📌 À retenir</a></li></ul></li><li><a href="#716-la-therapie-cognitive">💭 7.16 La thérapie cognitive</a><ul class="sidebar-sublist"><li><a href="#definition_15">🔎 Définition</a></li><li><a href="#exemple_7">💭 Exemple</a></li><li><a href="#a-retenir_15">📌 À retenir</a></li></ul></li><li><a href="#717-les-therapies-mediatisees-par-lart">🎨 7.17 Les thérapies médiatisées par l'art</a><ul class="sidebar-sublist"><li><a href="#definition_16">🔎 Définition</a></li><li><a href="#a-retenir_16">📌 À retenir</a></li></ul></li><li><a href="#718-la-therapie-existentielle">🧍 7.18 La thérapie existentielle</a><ul class="sidebar-sublist"><li><a href="#definition_17">🔎 Définition</a></li><li><a href="#exemple_8">💭 Exemple</a></li><li><a href="#a-retenir_17">📌 À retenir</a></li></ul></li><li><a href="#719-la-therapie-integrative">🌱 7.19 La thérapie intégrative</a><ul class="sidebar-sublist"><li><a href="#definition_18">🔎 Définition</a></li><li><a href="#a-retenir_18">📌 À retenir</a></li></ul></li><li><a href="#720-lapproche-centree-sur-les-emotions">🧠 7.20 L'approche centrée sur les émotions</a><ul class="sidebar-sublist"><li><a href="#definition_19">🔎 Définition</a></li><li><a href="#exemple_9">💭 Exemple</a></li><li><a href="#a-retenir_19">📌 À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Les différentes approches thérapeutiques',
+        category: 'Lexique des séances psychologiques',
+        icon: '💬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/lexique/">💬 Lexique des séances psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Les différentes approches thérapeutiques</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-lexique)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>🧠 La psychothérapie regroupe différentes approches qui proposent des façons particulières de comprendre les difficultés psychologiques et de travailler sur celles-ci.</p>
+<blockquote>
+<p>Chaque approche possède ses propres concepts, méthodes et objectifs. Certaines peuvent être davantage centrées sur les pensées et les comportements, d'autres sur les émotions, les relations, l'histoire personnelle ou les expériences vécues.
+</p>
+</blockquote>
+<hr />
+<h2 id="71-la-tcc-therapie-cognitivo-comportementale" class="entry-title hc-1">🧠 7.1  La TCC — Thérapie cognitivo-comportementale</h2>
+<h3 id="definition">🔎 Définition</h3>
+<p>La thérapie cognitivo-comportementale (TCC) est une approche qui s'intéresse notamment aux liens entre <strong>pensées, émotions et comportements</strong>.</p>
+<p>Elle cherche à identifier certains fonctionnements qui contribuent aux difficultés rencontrées et à développer de nouvelles façons d'y faire face.</p>
+<h3 id="techniques-possibles">🛠️ Techniques possibles</h3>
+<ul>
+<li>restructuration cognitive ;</li>
+<li>exposition ;</li>
+<li>exercices comportementaux ;</li>
+<li>observation des pensées ;</li>
+<li>résolution de problèmes ;</li>
+<li>entraînement à certaines compétences.</li>
+</ul>
+<h3 id="a-retenir">📌 À retenir</h3>
+<p>La TCC est une approche structurée qui travaille notamment sur les interactions entre cognition et comportement.</p>
+<hr />
+<h2 id="72-la-psychanalyse" class="entry-title hc-2">🛋️ 7.2 La psychanalyse</h2>
+<h3 id="definition_1">🔎 Définition</h3>
+<p>La psychanalyse est une approche issue des travaux de <strong>Sigmund Freud</strong>, puis développée et transformée par de nombreux autres auteurs.</p>
+<p>Elle accorde une place importante à l'inconscient, aux conflits psychiques, aux expériences précoces et aux relations.</p>
+<h3 id="concepts-associes">🧠 Concepts associés</h3>
+<ul>
+<li>inconscient ;</li>
+<li>refoulement ;</li>
+<li>transfert ;</li>
+<li>résistance ;</li>
+<li>conflit psychique ;</li>
+<li>association libre.</li>
+</ul>
+<h3 id="a-retenir_1">📌 À retenir</h3>
+<p>La psychanalyse constitue une approche historique majeure dans le développement de la psychologie clinique et de la psychothérapie.</p>
+<hr />
+<h2 id="73-la-therapie-psychodynamique" class="entry-title hc-3">🔎 7.3 La thérapie psychodynamique</h2>
+<h3 id="definition_2">🔎 Définition</h3>
+<p>Les thérapies psychodynamiques sont issues de différentes traditions psychanalytiques et psychodynamiques.</p>
+<p>Elles s'intéressent notamment aux conflits internes, aux émotions, aux relations, aux expériences passées et aux schémas qui peuvent influencer le fonctionnement actuel.</p>
+<h3 id="exemple">💭 Exemple</h3>
+<p>Une difficulté relationnelle actuelle peut être explorée en lien avec des expériences antérieures et avec la manière dont les relations sont vécues.</p>
+<h3 id="a-retenir_2">📌 À retenir</h3>
+<p>La thérapie psychodynamique est plus large que la psychanalyse classique et peut prendre différentes formes.</p>
+<hr />
+<h2 id="74-lapproche-humaniste" class="entry-title hc-4">❤️ 7.4 L'approche humaniste</h2>
+<h3 id="definition_3">🔎 Définition</h3>
+<p>Les approches humanistes mettent l'accent sur l'expérience subjective, les émotions, l'authenticité, la relation thérapeutique et le développement personnel.</p>
+<p>Elles considèrent notamment l'individu comme une personne capable d'évoluer et de donner du sens à son expérience.</p>
+<h3 id="concepts-associes_1">🧠 Concepts associés</h3>
+<ul>
+<li>authenticité ;</li>
+<li>expérience subjective ;</li>
+<li>acceptation ;</li>
+<li>développement personnel ;</li>
+<li>relation thérapeutique.</li>
+</ul>
+<h3 id="a-retenir_3">📌 À retenir</h3>
+<p>L'approche humaniste accorde une place importante au vécu personnel et à la relation avec le thérapeute.</p>
+<hr />
+<h2 id="75-la-therapie-centree-sur-la-personne" class="entry-title hc-5">🗣️ 7.5 La thérapie centrée sur la personne</h2>
+<h3 id="definition_4">🔎 Définition</h3>
+<p>Développée notamment par <strong>Carl Rogers</strong>, cette approche considère la relation thérapeutique comme un élément essentiel du processus de changement.</p>
+<p>Elle met particulièrement en avant :</p>
+<ul>
+<li>l'empathie ;</li>
+<li>la congruence ;</li>
+<li>le regard positif inconditionnel.</li>
+</ul>
+<h3 id="exemple_1">💭 Exemple</h3>
+<p>Le thérapeute cherche à créer un environnement dans lequel les expériences peuvent être exprimées et explorées sans jugement.</p>
+<h3 id="a-retenir_4">📌 À retenir</h3>
+<p>La qualité de la relation thérapeutique occupe une place centrale dans cette approche.</p>
+<hr />
+<h2 id="76-la-therapie-systemique" class="entry-title hc-1">👨‍👩‍👧 7.6 La thérapie systémique</h2>
+<h3 id="definition_5">🔎 Définition</h3>
+<p>La thérapie systémique considère les difficultés psychologiques et relationnelles dans le contexte des <strong>systèmes auxquels une personne appartient</strong>.</p>
+<p>Cela peut notamment concerner :</p>
+<ul>
+<li>la famille ;</li>
+<li>le couple ;</li>
+<li>les relations professionnelles ;</li>
+<li>certains environnements sociaux.</li>
+</ul>
+<h3 id="exemple_2">💭 Exemple</h3>
+<p>Une difficulté vécue par une personne peut être étudiée en observant également les interactions entre les différents membres de son entourage.</p>
+<h3 id="a-retenir_5">📌 À retenir</h3>
+<p>L'approche systémique s'intéresse particulièrement aux relations et aux interactions.</p>
+<hr />
+<h2 id="77-la-therapie-de-couple" class="entry-title hc-2">💑 7.7 La thérapie de couple</h2>
+<h3 id="definition_6">🔎 Définition</h3>
+<p>La thérapie de couple vise à travailler sur les difficultés rencontrées dans une relation de couple.</p>
+<p>Les sujets abordés peuvent inclure :</p>
+<ul>
+<li>communication ;</li>
+<li>conflits ;</li>
+<li>confiance ;</li>
+<li>attentes ;</li>
+<li>intimité ;</li>
+<li>changements de vie ;</li>
+<li>séparation éventuelle.</li>
+</ul>
+<h3 id="a-retenir_6">📌 À retenir</h3>
+<p>Le travail porte généralement sur la dynamique relationnelle plutôt que sur la recherche d'un unique responsable.</p>
+<hr />
+<h2 id="78-la-therapie-familiale" class="entry-title hc-3">👨‍👩‍👧‍👦 7.8 La thérapie familiale</h2>
+<h3 id="definition_7">🔎 Définition</h3>
+<p>La thérapie familiale travaille sur les relations et les interactions entre plusieurs membres d'une famille.</p>
+<p>Elle peut être utilisée lorsqu'une difficulté concerne fortement le fonctionnement familial.</p>
+<h3 id="exemple_3">💭 Exemple</h3>
+<p>Les interactions entre parents et enfants peuvent être étudiées afin de comprendre comment certaines difficultés se maintiennent.</p>
+<h3 id="a-retenir_7">📌 À retenir</h3>
+<p>La famille peut être considérée comme un système dans lequel les comportements des uns influencent ceux des autres.</p>
+<hr />
+<h2 id="79-lact-therapie-dacceptation-et-dengagement" class="entry-title hc-4">🧠 7.9 L'ACT — Thérapie d'acceptation et d'engagement</h2>
+<h3 id="definition_8">🔎 Définition</h3>
+<p>L'ACT (<em>Acceptance and Commitment Therapy</em>) appartient aux approches comportementales et contextuelles.</p>
+<p>Elle cherche notamment à développer la <strong>flexibilité psychologique</strong>.</p>
+<h3 id="concepts-importants">🛠️ Concepts importants</h3>
+<ul>
+<li>acceptation ;</li>
+<li>défusion cognitive ;</li>
+<li>valeurs personnelles ;</li>
+<li>action engagée ;</li>
+<li>pleine conscience ;</li>
+<li>flexibilité psychologique.</li>
+</ul>
+<h3 id="exemple_4">💭 Exemple</h3>
+<p>Plutôt que de chercher systématiquement à supprimer une pensée désagréable, le travail peut consister à apprendre à l'observer tout en continuant à agir selon ses valeurs.</p>
+<h3 id="a-retenir_8">📌 À retenir</h3>
+<p>L'objectif n'est pas nécessairement de supprimer les pensées ou émotions difficiles.</p>
+<hr />
+<h2 id="710-la-tcd-therapie-comportementale-dialectique" class="entry-title hc-5">🧩 7.10 La TCD — Thérapie comportementale dialectique</h2>
+<h3 id="definition_9">🔎 Définition</h3>
+<p>La thérapie comportementale dialectique, ou <strong>TCD</strong> (<em>DBT en anglais</em>), a été développée notamment par <strong>Marsha Linehan</strong>.</p>
+<p>Elle combine différents éléments comportementaux, cognitifs et de pleine conscience.</p>
+<h3 id="competences-travaillees">🛠️ Compétences travaillées</h3>
+<ul>
+<li>régulation émotionnelle ;</li>
+<li>tolérance à la détresse ;</li>
+<li>pleine conscience ;</li>
+<li>efficacité interpersonnelle.</li>
+</ul>
+<h3 id="a-retenir_9">📌 À retenir</h3>
+<p>La TCD accorde une place importante à l'apprentissage de compétences permettant de gérer des émotions très intenses et des situations difficiles.</p>
+<hr />
+<h2 id="711-la-pleine-conscience-mindfulness" class="entry-title hc-1">🌿 7.11 La pleine conscience / Mindfulness</h2>
+<h3 id="definition_10">🔎 Définition</h3>
+<p>La pleine conscience consiste à porter volontairement son attention sur l'expérience présente, avec une attitude d'observation et sans chercher immédiatement à modifier ce qui est observé.</p>
+<h3 id="exemple_5">💭 Exemple</h3>
+<p>Observer une émotion, une sensation corporelle ou une pensée sans essayer immédiatement de la repousser.</p>
+<h3 id="a-retenir_10">📌 À retenir</h3>
+<p>La pleine conscience peut être intégrée à différentes approches thérapeutiques et ne constitue pas nécessairement une thérapie indépendante.</p>
+<hr />
+<h2 id="712-lemdr" class="entry-title hc-2">👁️ 7.12 L'EMDR</h2>
+<h3 id="definition_11">🔎 Définition</h3>
+<p>L'EMDR (<em>Eye Movement Desensitization and Reprocessing</em>) est une approche thérapeutique développée notamment pour travailler sur des souvenirs traumatiques et certaines conséquences psychologiques associées.</p>
+<p>Elle utilise notamment une stimulation bilatérale pendant certaines phases du protocole.</p>
+<h3 id="travail-possible">🧠 Travail possible</h3>
+<p>Le processus peut notamment viser à modifier la manière dont certains souvenirs traumatiques sont vécus et intégrés.</p>
+<h3 id="a-retenir_11">📌 À retenir</h3>
+<p>L'EMDR est particulièrement connu pour sa place dans la prise en charge du psychotraumatisme.</p>
+<hr />
+<h2 id="713-la-therapie-des-schemas" class="entry-title hc-3">🧠 7.13 La thérapie des schémas</h2>
+<h3 id="definition_12">🔎 Définition</h3>
+<p>La thérapie des schémas est une approche développée notamment par <strong>Jeffrey Young</strong>.</p>
+<p>Elle s'intéresse aux schémas précoces et durables pouvant influencer la manière de percevoir soi-même, les autres et les relations.</p>
+<h3 id="concepts-associes_2">🧩 Concepts associés</h3>
+<ul>
+<li>schémas précoces ;</li>
+<li>besoins émotionnels fondamentaux ;</li>
+<li>modes ;</li>
+<li>stratégies d'adaptation.</li>
+</ul>
+<h3 id="a-retenir_12">📌 À retenir</h3>
+<p>Elle cherche notamment à comprendre des fonctionnements qui peuvent se répéter dans différentes situations et relations.</p>
+<hr />
+<h2 id="714-lentretien-motivationnel" class="entry-title hc-4">🗣️ 7.14 L'entretien motivationnel</h2>
+<h3 id="definition_13">🔎 Définition</h3>
+<p>L'entretien motivationnel est une méthode de communication destinée notamment à renforcer la motivation et l'engagement dans un changement.</p>
+<p>Il cherche à explorer l'ambivalence plutôt qu'à imposer directement une solution.</p>
+<h3 id="exemple_6">💭 Exemple</h3>
+<p>Une personne peut vouloir changer une habitude tout en ayant simultanément de bonnes raisons de la conserver. L'entretien permet d'explorer cette ambivalence.</p>
+<h3 id="a-retenir_13">📌 À retenir</h3>
+<p>L'entretien motivationnel cherche davantage à faire émerger les propres motivations de la personne qu'à lui imposer celles du professionnel.</p>
+<hr />
+<h2 id="715-la-therapie-comportementale" class="entry-title hc-5">🧠 7.15 La thérapie comportementale</h2>
+<h3 id="definition_14">🔎 Définition</h3>
+<p>Les thérapies comportementales se concentrent principalement sur les comportements et leur relation avec l'environnement et les conséquences qui les suivent.</p>
+<h3 id="techniques-possibles_1">🛠️ Techniques possibles</h3>
+<ul>
+<li>exposition ;</li>
+<li>apprentissage de nouveaux comportements ;</li>
+<li>renforcement ;</li>
+<li>exercices comportementaux.</li>
+</ul>
+<h3 id="a-retenir_14">📌 À retenir</h3>
+<p>Les approches comportementales ont notamment contribué au développement des TCC modernes.</p>
+<hr />
+<h2 id="716-la-therapie-cognitive" class="entry-title hc-1">💭 7.16 La thérapie cognitive</h2>
+<h3 id="definition_15">🔎 Définition</h3>
+<p>La thérapie cognitive s'intéresse particulièrement aux pensées, croyances et interprétations qui influencent les émotions et les comportements.</p>
+<h3 id="exemple_7">💭 Exemple</h3>
+<p>Une situation peut être vécue très différemment selon la manière dont elle est interprétée.</p>
+<h3 id="a-retenir_15">📌 À retenir</h3>
+<p>La thérapie cognitive constitue l'une des bases historiques des thérapies cognitivo-comportementales.</p>
+<hr />
+<h2 id="717-les-therapies-mediatisees-par-lart" class="entry-title hc-2">🎨 7.17 Les thérapies médiatisées par l'art</h2>
+<h3 id="definition_16">🔎 Définition</h3>
+<p>Les thérapies utilisant des médiations artistiques peuvent s'appuyer sur différentes formes de création, comme :</p>
+<ul>
+<li>dessin ;</li>
+<li>peinture ;</li>
+<li>musique ;</li>
+<li>expression corporelle ;</li>
+<li>théâtre.</li>
+</ul>
+<p>Elles utilisent la création comme support d'expression, d'exploration ou de travail thérapeutique selon le cadre proposé.</p>
+<h3 id="a-retenir_16">📌 À retenir</h3>
+<p>La création artistique peut servir de médiation thérapeutique sans être simplement considérée comme une activité artistique ordinaire.</p>
+<hr />
+<h2 id="718-la-therapie-existentielle" class="entry-title hc-3">🧍 7.18 La thérapie existentielle</h2>
+<h3 id="definition_17">🔎 Définition</h3>
+<p>La thérapie existentielle s'intéresse notamment aux grandes questions liées à l'existence, au sens, à la liberté, aux choix, aux responsabilités et à la condition humaine.</p>
+<h3 id="exemple_8">💭 Exemple</h3>
+<p>Une personne peut explorer le sens qu'elle donne à une période de changement ou à certaines décisions importantes de sa vie.</p>
+<h3 id="a-retenir_17">📌 À retenir</h3>
+<p>Cette approche accorde une place importante au sens donné aux expériences.</p>
+<hr />
+<h2 id="719-la-therapie-integrative" class="entry-title hc-4">🌱 7.19 La thérapie intégrative</h2>
+<h3 id="definition_18">🔎 Définition</h3>
+<p>Une approche intégrative combine différents concepts ou techniques provenant de plusieurs courants thérapeutiques.</p>
+<p>Le choix des méthodes peut être adapté à la situation, aux objectifs et au fonctionnement de la personne.</p>
+<h3 id="a-retenir_18">📌 À retenir</h3>
+<p>L'intégration de plusieurs approches ne signifie pas simplement utiliser toutes les techniques disponibles : elle repose normalement sur un cadre théorique et clinique cohérent.</p>
+<hr />
+<h2 id="720-lapproche-centree-sur-les-emotions" class="entry-title hc-5">🧠 7.20 L'approche centrée sur les émotions</h2>
+<h3 id="definition_19">🔎 Définition</h3>
+<p>Les approches centrées sur les émotions accordent une place importante à l'identification, l'exploration, la compréhension et la transformation de l'expérience émotionnelle.</p>
+<h3 id="exemple_9">💭 Exemple</h3>
+<p>Une émotion actuelle peut être explorée afin de comprendre ce qu'elle exprime, à quel besoin elle est associée et comment elle influence les comportements.</p>
+<h3 id="a-retenir_19">📌 À retenir</h3>
+<p>L'émotion est considérée comme une source importante d'informations sur l'expérience vécue.</p>
+<hr />
+<h1 id="a-retenir_20">🧠 À RETENIR</h1>
+<p>Il n'existe pas une seule manière de pratiquer la psychothérapie.</p>
+<p>Les différentes approches peuvent se distinguer par :</p>
+<p><strong>🧠 leur théorie → 🔎 leur manière de comprendre les difficultés → 🛠️ leurs techniques → 🎯 leurs objectifs</strong></p>
+<p>Certaines approches sont particulièrement structurées, tandis que d'autres accordent davantage de place à l'exploration, à la relation thérapeutique ou à l'histoire personnelle.</p>
+<blockquote>
+<p>💬 Une même technique peut également être utilisée dans plusieurs approches différentes. Le terme utilisé ne suffit donc pas toujours à déterminer exactement la manière dont une thérapie est menée.
+</p>
+<p>⚠️ Les termes « thérapie », « approche », « méthode » et « technique » ne sont pas toujours synonymes. Une approche peut contenir plusieurs méthodes et techniques différentes.
+</p>
+</blockquote>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Lexique des séances psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/lexique-les-concepts-lies-au-traumatisme/"><span class="similar-icon">💬</span>Les concepts liés au traumatisme</a><a class="similar-item" href="/chapitre/lexique-le-changement-et-le-developpement-psychologique/"><span class="similar-icon">💬</span>Le changement et le développement psychologique</a><a class="similar-item" href="/chapitre/lexique-les-termes-avances-en-psychologie/"><span class="similar-icon">💬</span>Les termes avancés en psychologie</a></div>
+    </div>
+    <a class="back-link" href="/categorie/lexique/">← Retour à « Lexique des séances psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

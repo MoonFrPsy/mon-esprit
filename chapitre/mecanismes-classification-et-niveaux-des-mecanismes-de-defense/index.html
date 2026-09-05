@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classification et niveaux des mécanismes de défense — Mon Esprit</title>
+<meta name="description" content="Classification et niveaux des mécanismes de défense, dans la catégorie Mécanismes de défense de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#121-pourquoi-classer-les-mecanismes-de-defense">🧠 12.1 Pourquoi classer les mécanismes de défense ?</a></li><li><a href="#122-les-defenses-matures">🌱 12.2 Les défenses matures</a></li><li><a href="#123-la-sublimation">🎨 12.3 La sublimation</a></li><li><a href="#124-lhumour">😂 12.4 L'humour</a></li><li><a href="#125-lanticipation">🔮 12.5 L'anticipation</a></li><li><a href="#126-la-suppression-consciente">🗣️ 12.6 La suppression consciente</a></li><li><a href="#127-laffiliation">🤝 12.7 L'affiliation</a></li><li><a href="#128-les-defenses-intermediaires">🧩 12.8 Les défenses intermédiaires</a></li><li><a href="#129-le-refoulement">🚪 12.9 Le refoulement</a></li><li><a href="#1210-le-deplacement">🔄 12.10 Le déplacement</a></li><li><a href="#1211-lisolation-de-laffect">🧊 12.11 L'isolation de l'affect</a></li><li><a href="#1212-lintellectualisation">🧠 12.12 L'intellectualisation</a></li><li><a href="#1213-la-rationalisation">🧾 12.13 La rationalisation</a></li><li><a href="#1214-les-defenses-moins-matures">⚠️ 12.14 Les défenses moins matures</a></li><li><a href="#1215-le-deni">🚫 12.15 Le déni</a></li><li><a href="#1216-la-projection">🪞 12.16 La projection</a></li><li><a href="#1217-la-regression">🔙 12.17 La régression</a></li><li><a href="#1218-le-passage-a-lacte">⚡ 12.18 Le passage à l'acte</a></li><li><a href="#1219-les-defenses-primitives">🌫️ 12.19 Les défenses primitives</a></li><li><a href="#1220-le-clivage">🌓 12.20 Le clivage</a></li><li><a href="#1221-lidentification-projective">🧩 12.21 L'identification projective</a></li><li><a href="#1222-lomnipotence">👑 12.22 L'omnipotence</a></li><li><a href="#1223-la-distorsion-de-la-realite">🌀 12.23 La distorsion de la réalité</a></li><li><a href="#1224-une-classification-simplifiee">📊 12.24 Une classification simplifiée</a></li><li><a href="#1225-les-classifications-ne-sont-pas-universelles">🔬 12.25 Les classifications ne sont pas universelles</a></li><li><a href="#1226-le-niveau-dune-defense-peut-evoluer">📈 12.26 Le niveau d'une défense peut évoluer</a></li><li><a href="#1227-une-meme-defense-peut-avoir-plusieurs-fonctions">🔄 12.27 Une même défense peut avoir plusieurs fonctions</a></li><li><a href="#1228-defense-mature-ne-signifie-pas-meilleure-personne">⚖️ 12.28 Défense mature ne signifie pas « meilleure personne »</a></li><li><a href="#1229-les-defenses-et-la-flexibilite-psychologique">🧠 12.29 Les défenses et la flexibilité psychologique</a></li><li><a href="#1230-les-defenses-dans-levaluation-clinique">🩺 12.30 Les défenses dans l'évaluation clinique</a></li><li><a href="#1231-les-limites-des-classifications">🚨 12.31 Les limites des classifications</a></li><li><a href="#1232-defense-coping-et-regulation-emotionnelle">📚 12.32 Défense, coping et régulation émotionnelle</a></li><li><a href="#1233-les-mecanismes-de-defense-dans-les-differentes-approches">🔎 12.33 Les mécanismes de défense dans les différentes approches</a></li><li><a href="#1234-peut-on-avoir-plusieurs-niveaux-de-defense">🧩 12.34 Peut-on avoir plusieurs niveaux de défense ?</a></li><li><a href="#1235-le-fonctionnement-defensif-global">🧠 12.35 Le fonctionnement défensif global</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Classification et niveaux des mécanismes de défense',
+        category: 'Mécanismes de défense',
+        icon: '🧩'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/mecanismes/">🧩 Mécanismes de défense</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Classification et niveaux des mécanismes de défense</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-mecanismes)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Les mécanismes de défense peuvent être classés selon leur degré d'adaptation, leur complexité et leur manière de modifier la perception des émotions ou de la réalité.</p>
+<p>Ces classifications proviennent principalement des modèles psychodynamiques et ont évolué au fil du temps. Elles permettent surtout de comprendre différents styles de fonctionnement psychologique.</p>
+<p>Un mécanisme considéré comme « immature » n'est pas automatiquement pathologique. Son caractère problématique dépend notamment de sa fréquence, de sa rigidité, du contexte et de ses conséquences.</p>
+<hr />
+<h2 id="121-pourquoi-classer-les-mecanismes-de-defense" class="entry-title hc-1">🧠 12.1 Pourquoi classer les mécanismes de défense ?</h2>
+<p>La classification permet de comparer différents mécanismes selon leur fonctionnement.</p>
+<p>Elle peut notamment prendre en compte :</p>
+<ul>
+<li>le rapport à la réalité</li>
+<li>la conscience du mécanisme</li>
+<li>la gestion des émotions</li>
+<li>la flexibilité</li>
+<li>les conséquences sur les relations</li>
+<li>l'adaptation à la situation</li>
+<li>le niveau de distorsion de l'expérience</li>
+</ul>
+<p>Ces classifications ne servent pas à classer les personnes elles-mêmes.</p>
+<hr />
+<h2 id="122-les-defenses-matures" class="entry-title hc-2">🌱 12.2 Les défenses matures</h2>
+<p>Les défenses dites matures permettent généralement de gérer une tension psychologique tout en conservant une bonne capacité d'adaptation.</p>
+<p>Elles peuvent notamment inclure :</p>
+<ul>
+<li>sublimation</li>
+<li>humour</li>
+<li>anticipation</li>
+<li>suppression consciente</li>
+<li>affiliation</li>
+<li>altruisme</li>
+</ul>
+<p>Elles permettent souvent de prendre en compte la réalité tout en limitant l'impact d'une émotion difficile.</p>
+<hr />
+<h2 id="123-la-sublimation" class="entry-title hc-3">🎨 12.3 La sublimation</h2>
+<p>La sublimation consiste, dans certains modèles psychodynamiques, à transformer une impulsion ou une tension psychique en activité socialement valorisée ou constructive.</p>
+<p>Exemples :</p>
+<ul>
+<li>transformer une forte énergie émotionnelle en activité artistique</li>
+<li>utiliser une frustration pour développer une compétence</li>
+<li>canaliser une agressivité dans une activité sportive</li>
+</ul>
+<p>Elle est généralement considérée comme une défense particulièrement adaptative.</p>
+<hr />
+<h2 id="124-lhumour" class="entry-title hc-4">😂 12.4 L'humour</h2>
+<p>L'humour peut permettre de diminuer la tension associée à une situation difficile.</p>
+<p>Il peut aider à :</p>
+<ul>
+<li>prendre de la distance</li>
+<li>exprimer indirectement certaines émotions</li>
+<li>diminuer l'anxiété</li>
+<li>maintenir des relations sociales</li>
+</ul>
+<p>L'humour ne signifie cependant pas nécessairement qu'une émotion difficile est absente.</p>
+<hr />
+<h2 id="125-lanticipation" class="entry-title hc-5">🔮 12.5 L'anticipation</h2>
+<p>L'anticipation consiste à imaginer à l'avance une situation difficile et à réfléchir à la manière de l'affronter.</p>
+<p>Elle peut permettre :</p>
+<ul>
+<li>de préparer une réponse</li>
+<li>de diminuer l'incertitude</li>
+<li>d'organiser une action</li>
+<li>de mieux gérer une situation stressante</li>
+</ul>
+<p>Elle devient moins adaptée lorsqu'elle se transforme en inquiétude permanente ou en besoin excessif de prévoir chaque détail.</p>
+<hr />
+<h2 id="126-la-suppression-consciente" class="entry-title hc-1">🗣️ 12.6 La suppression consciente</h2>
+<p>La suppression correspond à la décision consciente de mettre temporairement une pensée ou une émotion de côté.</p>
+<p>Exemple :</p>
+<blockquote>
+<p>« Ce problème est important, mais je vais me concentrer sur ce que je dois faire maintenant et y revenir plus tard. »
+</p>
+</blockquote>
+<p>Elle se distingue du refoulement, qui est généralement décrit comme un processus inconscient dans les modèles psychodynamiques.</p>
+<hr />
+<h2 id="127-laffiliation" class="entry-title hc-2">🤝 12.7 L'affiliation</h2>
+<p>L'affiliation consiste à rechercher le soutien d'autres personnes pour faire face à une difficulté.</p>
+<p>Elle peut prendre la forme de :</p>
+<ul>
+<li>parler à un proche</li>
+<li>demander de l'aide</li>
+<li>rechercher du soutien émotionnel</li>
+<li>partager une expérience difficile</li>
+</ul>
+<p>Elle peut favoriser l'adaptation en diminuant l'isolement face à une situation stressante.</p>
+<hr />
+<h2 id="128-les-defenses-intermediaires" class="entry-title hc-3">🧩 12.8 Les défenses intermédiaires</h2>
+<p>Les défenses intermédiaires, parfois appelées défenses névrotiques dans certains modèles, permettent généralement de réduire une tension psychique sans entraîner nécessairement une importante déformation de la réalité.</p>
+<p>On peut notamment retrouver :</p>
+<ul>
+<li>refoulement</li>
+<li>déplacement</li>
+<li>isolation de l'affect</li>
+<li>formation réactionnelle</li>
+<li>intellectualisation</li>
+<li>rationalisation</li>
+</ul>
+<p>Ces mécanismes peuvent être utilisés de manière ponctuelle et relativement adaptée.</p>
+<hr />
+<h2 id="129-le-refoulement" class="entry-title hc-4">🚪 12.9 Le refoulement</h2>
+<p>Le refoulement est un concept central des modèles psychanalytiques et psychodynamiques.</p>
+<p>Il désigne un processus par lequel certaines représentations ou certains contenus psychiques sont maintenus hors de la conscience.</p>
+<p>Le concept possède une histoire importante en psychologie dynamique, mais son interprétation varie selon les approches.</p>
+<hr />
+<h2 id="1210-le-deplacement" class="entry-title hc-5">🔄 12.10 Le déplacement</h2>
+<p>Le déplacement consiste à transférer une émotion ou une réaction associée à une situation vers une autre cible.</p>
+<p>Exemple :</p>
+<p>Une frustration ressentie dans une situation professionnelle peut ensuite être exprimée dans un autre contexte où les conséquences semblent moins importantes.</p>
+<p>Le déplacement peut concerner notamment la colère, la peur ou l'irritation.</p>
+<hr />
+<h2 id="1211-lisolation-de-laffect" class="entry-title hc-1">🧊 12.11 L'isolation de l'affect</h2>
+<p>L'isolation de l'affect consiste à séparer une expérience de la réaction émotionnelle qui lui est habituellement associée.</p>
+<p>Une personne peut par exemple raconter un événement très difficile de manière extrêmement factuelle, avec peu d'expression émotionnelle.</p>
+<p>Ce fonctionnement peut être temporaire ou devenir plus rigide selon les situations.</p>
+<hr />
+<h2 id="1212-lintellectualisation" class="entry-title hc-2">🧠 12.12 L'intellectualisation</h2>
+<p>L'intellectualisation consiste à utiliser fortement l'analyse, la logique ou les explications abstraites pour prendre de la distance avec une émotion.</p>
+<p>Elle peut permettre de réfléchir efficacement à une situation.</p>
+<p>Elle peut cependant limiter le contact avec les émotions lorsqu'elle devient systématique.</p>
+<hr />
+<h2 id="1213-la-rationalisation" class="entry-title hc-3">🧾 12.13 La rationalisation</h2>
+<p>La rationalisation consiste à construire une explication logique ou acceptable permettant de rendre un comportement, une émotion ou une décision plus facilement tolérable.</p>
+<p>Elle peut protéger l'image de soi ou réduire une tension interne.</p>
+<p>Une justification peut évidemment être vraie et réfléchie sans constituer une rationalisation. Le contexte et la fonction psychologique sont importants.</p>
+<hr />
+<h2 id="1214-les-defenses-moins-matures" class="entry-title hc-4">⚠️ 12.14 Les défenses moins matures</h2>
+<p>Certains modèles décrivent d'autres défenses comme moins matures parce qu'elles peuvent davantage modifier la perception d'une situation ou fonctionner de manière plus automatique.</p>
+<p>On retrouve notamment :</p>
+<ul>
+<li>déni</li>
+<li>projection</li>
+<li>régression</li>
+<li>acting out</li>
+<li>dissociation dans certaines classifications</li>
+<li>fantasme</li>
+</ul>
+<p>L'utilisation ponctuelle de ces mécanismes ne signifie pas qu'un fonctionnement est pathologique.</p>
+<hr />
+<h2 id="1215-le-deni" class="entry-title hc-5">🚫 12.15 Le déni</h2>
+<p>Le déni consiste à ne pas reconnaître, minimiser ou repousser certains aspects d'une réalité psychologiquement difficile à accepter.</p>
+<p>Il peut concerner :</p>
+<ul>
+<li>un problème</li>
+<li>une émotion</li>
+<li>une conséquence</li>
+<li>une difficulté personnelle</li>
+<li>une situation extérieure</li>
+</ul>
+<p>Le déni peut être temporaire et protecteur.</p>
+<hr />
+<h2 id="1216-la-projection" class="entry-title hc-1">🪞 12.16 La projection</h2>
+<p>La projection consiste à attribuer à une autre personne certains contenus psychiques difficiles à reconnaître comme appartenant à soi.</p>
+<p>Elle peut concerner :</p>
+<ul>
+<li>émotions</li>
+<li>intentions</li>
+<li>désirs</li>
+<li>pensées</li>
+<li>traits de personnalité</li>
+</ul>
+<p>Elle ne signifie pas que les interprétations concernant les autres sont systématiquement fausses.</p>
+<hr />
+<h2 id="1217-la-regression" class="entry-title hc-2">🔙 12.17 La régression</h2>
+<p>La régression désigne un retour temporaire vers certains modes de fonctionnement associés à des périodes antérieures du développement.</p>
+<p>Elle peut apparaître lors de :</p>
+<ul>
+<li>stress important</li>
+<li>maladie</li>
+<li>sentiment d'insécurité</li>
+<li>changement majeur</li>
+<li>situation de dépendance</li>
+</ul>
+<p>Elle peut être transitoire.</p>
+<hr />
+<h2 id="1218-le-passage-a-lacte" class="entry-title hc-3">⚡ 12.18 Le passage à l'acte</h2>
+<p>Le passage à l'acte, ou acting out dans certains modèles, désigne une expression d'une tension psychique principalement à travers un comportement plutôt qu'à travers sa verbalisation ou sa réflexion.</p>
+<p>Il peut permettre une décharge temporaire de tension.</p>
+<p>Cependant, tout comportement impulsif ou émotionnel n'est pas nécessairement un acting out au sens clinique.</p>
+<hr />
+<h2 id="1219-les-defenses-primitives" class="entry-title hc-4">🌫️ 12.19 Les défenses primitives</h2>
+<p>Certains modèles décrivent un groupe de défenses particulièrement primitives ou très anciennes sur le plan du fonctionnement psychique.</p>
+<p>Elles peuvent notamment comprendre :</p>
+<ul>
+<li>clivage</li>
+<li>déni massif</li>
+<li>identification projective</li>
+<li>distorsion importante de la réalité</li>
+<li>projection primitive</li>
+<li>omnipotence</li>
+</ul>
+<p>Ces mécanismes peuvent fortement modifier la perception de soi, des autres ou des situations.</p>
+<hr />
+<h2 id="1220-le-clivage" class="entry-title hc-5">🌓 12.20 Le clivage</h2>
+<p>Le clivage consiste à maintenir séparées des représentations opposées qui sont difficiles à intégrer simultanément.</p>
+<p>Une personne peut par exemple être représentée comme :</p>
+<blockquote>
+<p>totalement bonne
+</p>
+</blockquote>
+<p>puis comme :</p>
+<blockquote>
+<p>totalement mauvaise
+</p>
+</blockquote>
+<p>sans intégration intermédiaire des qualités et défauts.</p>
+<p>Le concept est particulièrement utilisé dans certaines formulations psychodynamiques.</p>
+<hr />
+<h2 id="1221-lidentification-projective" class="entry-title hc-1">🧩 12.21 L'identification projective</h2>
+<p>L'identification projective est un concept psychodynamique complexe.</p>
+<p>Elle implique généralement :</p>
+<ol>
+<li>l'attribution de certains éléments psychiques à une autre personne</li>
+<li>une relation particulière avec cette personne</li>
+<li>une expérience relationnelle dans laquelle ces éléments peuvent ensuite être ressentis ou vécus dans l'interaction</li>
+</ol>
+<p>Le concept possède différentes définitions selon les écoles psychodynamiques.</p>
+<p>Il ne doit pas être réduit à une simple « projection ».</p>
+<hr />
+<h2 id="1222-lomnipotence" class="entry-title hc-2">👑 12.22 L'omnipotence</h2>
+<p>L'omnipotence correspond à une représentation exagérée de sa capacité à contrôler les événements, les autres ou soi-même.</p>
+<p>Elle peut permettre de réduire temporairement :</p>
+<ul>
+<li>sentiment d'impuissance</li>
+<li>vulnérabilité</li>
+<li>incertitude</li>
+<li>peur de dépendre des autres</li>
+</ul>
+<p>Dans certains modèles, elle est considérée comme une défense primitive.</p>
+<hr />
+<h2 id="1223-la-distorsion-de-la-realite" class="entry-title hc-3">🌀 12.23 La distorsion de la réalité</h2>
+<p>Certaines défenses peuvent modifier la manière dont une personne interprète une situation.</p>
+<p>La distorsion peut concerner :</p>
+<ul>
+<li>perception de soi</li>
+<li>perception des autres</li>
+<li>interprétation d'un événement</li>
+<li>importance attribuée à une situation</li>
+<li>conséquences d'un comportement</li>
+</ul>
+<p>Une interprétation différente de la réalité n'est cependant pas automatiquement une distorsion pathologique.</p>
+<hr />
+<h2 id="1224-une-classification-simplifiee" class="entry-title hc-4">📊 12.24 Une classification simplifiée</h2>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Exemples de mécanismes</th>
+<th>Fonction générale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🌱 Mature</td>
+<td>Sublimation, humour, anticipation, affiliation</td>
+<td>Gérer la tension avec une bonne adaptation</td>
+</tr>
+<tr>
+<td>🧠 Intermédiaire</td>
+<td>Refoulement, déplacement, intellectualisation, rationalisation</td>
+<td>Réduire la tension sans importante déformation de la réalité</td>
+</tr>
+<tr>
+<td>⚠️ Moins mature</td>
+<td>Déni, projection, régression, acting out</td>
+<td>Protéger rapidement contre une tension importante</td>
+</tr>
+<tr>
+<td>🧩 Primitive</td>
+<td>Clivage, omnipotence, identification projective, déni massif</td>
+<td>Protéger contre des expériences psychiques particulièrement difficiles</td>
+</tr>
+</tbody>
+</table>
+<p>Cette classification est simplifiée et ne représente pas une classification universelle.</p>
+<hr />
+<h2 id="1225-les-classifications-ne-sont-pas-universelles" class="entry-title hc-5">🔬 12.25 Les classifications ne sont pas universelles</h2>
+<p>Il existe plusieurs modèles de classification des mécanismes de défense.</p>
+<p>Les catégories peuvent varier selon :</p>
+<ul>
+<li>l'école psychologique</li>
+<li>le modèle théorique</li>
+<li>l'époque</li>
+<li>l'objectif de l'évaluation</li>
+<li>la définition utilisée pour chaque mécanisme</li>
+</ul>
+<p>Un mécanisme peut donc être placé différemment selon les classifications.</p>
+<hr />
+<h2 id="1226-le-niveau-dune-defense-peut-evoluer" class="entry-title hc-1">📈 12.26 Le niveau d'une défense peut évoluer</h2>
+<p>L'utilisation des mécanismes de défense n'est pas nécessairement fixe.</p>
+<p>Une personne peut utiliser :</p>
+<ul>
+<li>une défense très adaptée dans une situation</li>
+<li>une défense intermédiaire dans une autre</li>
+<li>une défense moins mature lorsqu'elle est fortement stressée</li>
+</ul>
+<p>Le fonctionnement psychologique peut donc varier selon le contexte.</p>
+<hr />
+<h2 id="1227-une-meme-defense-peut-avoir-plusieurs-fonctions" class="entry-title hc-2">🔄 12.27 Une même défense peut avoir plusieurs fonctions</h2>
+<p>Un mécanisme de défense peut remplir différentes fonctions selon la situation.</p>
+<p>Par exemple, l'intellectualisation peut :</p>
+<ul>
+<li>aider à organiser une situation</li>
+<li>diminuer une émotion trop intense</li>
+<li>permettre de réfléchir avant d'agir</li>
+<li>éviter temporairement une émotion</li>
+</ul>
+<p>Il faut donc étudier la fonction du mécanisme plutôt que simplement lui attribuer une valeur positive ou négative.</p>
+<hr />
+<h2 id="1228-defense-mature-ne-signifie-pas-meilleure-personne" class="entry-title hc-3">⚖️ 12.28 Défense mature ne signifie pas « meilleure personne »</h2>
+<p>Les niveaux de défense ne constituent pas une hiérarchie morale.</p>
+<p>Une personne utilisant occasionnellement une défense considérée comme moins mature n'est pas « moins mature » dans son ensemble.</p>
+<p>Les classifications concernent des <strong>modes de fonctionnement psychologique</strong>, pas la valeur ou la personnalité globale d'une personne.</p>
+<hr />
+<h2 id="1229-les-defenses-et-la-flexibilite-psychologique" class="entry-title hc-4">🧠 12.29 Les défenses et la flexibilité psychologique</h2>
+<p>La flexibilité constitue un élément important.</p>
+<p>Un fonctionnement flexible permet généralement de modifier ses stratégies selon :</p>
+<ul>
+<li>la situation</li>
+<li>l'intensité émotionnelle</li>
+<li>les conséquences</li>
+<li>les besoins</li>
+<li>les relations</li>
+<li>les changements de contexte</li>
+</ul>
+<p>Une défense devient davantage problématique lorsqu'elle devient presque la seule manière de gérer certaines situations.</p>
+<hr />
+<h2 id="1230-les-defenses-dans-levaluation-clinique" class="entry-title hc-5">🩺 12.30 Les défenses dans l'évaluation clinique</h2>
+<p>Dans certaines approches cliniques, l'étude des défenses peut contribuer à comprendre :</p>
+<ul>
+<li>la régulation émotionnelle</li>
+<li>les conflits internes</li>
+<li>les relations</li>
+<li>l'image de soi</li>
+<li>la gestion du stress</li>
+<li>la manière de faire face aux difficultés</li>
+</ul>
+<p>Elle ne remplace cependant pas l'étude des symptômes, du fonctionnement quotidien, de l'histoire personnelle et des autres facteurs psychologiques.</p>
+<hr />
+<h2 id="1231-les-limites-des-classifications" class="entry-title hc-1">🚨 12.31 Les limites des classifications</h2>
+<p>Les classifications des mécanismes de défense ne permettent pas :</p>
+<ul>
+<li>de diagnostiquer automatiquement un trouble</li>
+<li>de déterminer la personnalité complète d'une personne</li>
+<li>de prédire avec certitude un comportement</li>
+<li>d'expliquer toutes les difficultés psychologiques</li>
+<li>de déterminer la valeur psychologique d'une personne</li>
+</ul>
+<p>Elles constituent principalement des outils conceptuels.</p>
+<hr />
+<h2 id="1232-defense-coping-et-regulation-emotionnelle" class="entry-title hc-2">📚 12.32 Défense, coping et régulation émotionnelle</h2>
+<p>Ces notions sont proches mais différentes.</p>
+<p><strong>Mécanisme de défense</strong></p>
+<p>Processus décrit principalement dans les modèles psychodynamiques pour expliquer la protection contre certaines tensions psychiques.</p>
+<p><strong>Coping</strong></p>
+<p>Ensemble des stratégies utilisées pour faire face à une situation stressante.</p>
+<p><strong>Régulation émotionnelle</strong></p>
+<p>Processus permettant d'influencer l'intensité, la durée ou l'expression des émotions.</p>
+<p>Ces concepts peuvent se recouper sans être synonymes.</p>
+<hr />
+<h2 id="1233-les-mecanismes-de-defense-dans-les-differentes-approches" class="entry-title hc-3">🔎 12.33 Les mécanismes de défense dans les différentes approches</h2>
+<p>Les mécanismes de défense sont particulièrement importants dans les approches psychodynamiques.</p>
+<p>D'autres courants utilisent davantage :</p>
+<ul>
+<li>schémas cognitifs</li>
+<li>pensées automatiques</li>
+<li>apprentissage</li>
+<li>comportements</li>
+<li>stratégies d'adaptation</li>
+<li>régulation émotionnelle</li>
+<li>processus interpersonnels</li>
+<li>facteurs biologiques</li>
+<li>facteurs environnementaux</li>
+</ul>
+<p>Les mécanismes de défense représentent donc un modèle parmi plusieurs modèles permettant d'étudier le fonctionnement psychologique.</p>
+<hr />
+<h2 id="1234-peut-on-avoir-plusieurs-niveaux-de-defense" class="entry-title hc-4">🧩 12.34 Peut-on avoir plusieurs niveaux de défense ?</h2>
+<p>Oui.</p>
+<p>Une même personne peut utiliser différents mécanismes selon les circonstances.</p>
+<p>Par exemple :</p>
+<blockquote>
+<p>Une situation ordinaire peut être gérée avec humour ou anticipation.
+</p>
+<p>Une situation plus stressante peut entraîner de l'intellectualisation ou du déplacement.
+</p>
+<p>Une situation extrêmement difficile peut provoquer davantage de déni, de dissociation ou d'autres défenses moins élaborées.
+</p>
+</blockquote>
+<p>Le fonctionnement défensif peut donc être variable.</p>
+<hr />
+<h2 id="1235-le-fonctionnement-defensif-global" class="entry-title hc-5">🧠 12.35 Le fonctionnement défensif global</h2>
+<p>Plutôt que de rechercher un mécanisme unique, certains modèles s'intéressent au fonctionnement défensif général.</p>
+<p>Cela peut inclure :</p>
+<ul>
+<li>diversité des défenses</li>
+<li>niveau d'adaptation</li>
+<li>flexibilité</li>
+<li>stabilité</li>
+<li>fréquence</li>
+<li>intensité</li>
+<li>conséquences</li>
+<li>capacité à modifier ses stratégies</li>
+</ul>
+<p>Cette approche permet une compréhension plus nuancée.</p>
+<hr />
+<h1 id="recapitulatif-final">📋 RÉCAPITULATIF FINAL</h1>
+<table>
+<thead>
+<tr>
+<th>Niveau</th>
+<th>Principaux exemples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🌱 Mature</td>
+<td>Sublimation, humour, anticipation, affiliation</td>
+</tr>
+<tr>
+<td>🧠 Intermédiaire</td>
+<td>Refoulement, déplacement, isolation de l'affect, intellectualisation, rationalisation</td>
+</tr>
+<tr>
+<td>⚠️ Moins mature</td>
+<td>Déni, projection, régression, acting out</td>
+</tr>
+<tr>
+<td>🧩 Primitive</td>
+<td>Clivage, omnipotence, identification projective, déni massif</td>
+</tr>
+</tbody>
+</table>
+<h3 id="les-points-essentiels">Les points essentiels</h3>
+<ul>
+<li>Les classifications varient selon les modèles.</li>
+<li>Un mécanisme de défense n'est pas automatiquement pathologique.</li>
+<li>Une défense peut être utile dans certaines situations.</li>
+<li>Une même personne peut utiliser plusieurs mécanismes.</li>
+<li>Le niveau de défense peut varier selon le contexte.</li>
+<li>La flexibilité est importante.</li>
+<li>Les classifications ne permettent pas de juger une personne.</li>
+<li>Un mécanisme de défense isolé ne permet pas de poser un diagnostic.</li>
+<li>Les mécanismes de défense constituent un modèle parmi d'autres en psychologie.</li>
+</ul>
+<hr />
+<h1 id="a-retenir">🧠 À RETENIR</h1>
+<blockquote>
+<p>Les mécanismes de défense sont des processus psychologiques permettant de gérer certaines tensions, émotions ou conflits internes.
+</p>
+<p>Ils peuvent être classés selon différents niveaux d'adaptation, mais aucune classification n'est totalement universelle.
+</p>
+<p>Les défenses dites matures ne rendent pas une personne « meilleure », tout comme l'utilisation d'une défense moins mature ne rend pas une personne « moins mature ».
+</p>
+<p>Le fonctionnement défensif peut changer selon les situations et le niveau de stress.
+</p>
+<p>Une compréhension complète nécessite d'étudier la fréquence, l'intensité, la flexibilité, le contexte et les conséquences des mécanismes utilisés.
+</p>
+<p>Les mécanismes de défense ne constituent qu'un des nombreux modèles permettant de comprendre le fonctionnement psychologique.
+</p>
+</blockquote>
+<p>Cette catégorie a permis d'explorer progressivement les mécanismes de défense, leur fonctionnement, leurs manifestations dans les émotions, les pensées, l'identité, les relations, le stress, la psychopathologie, la vie quotidienne et la psychologie clinique.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Mécanismes de défense »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/mecanismes-comprendre-les-mecanismes-de-defense/"><span class="similar-icon">🧩</span>Comprendre les mécanismes de défense</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-fondamentaux/"><span class="similar-icon">🧩</span>Les mécanismes de défense fondamentaux</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-lies-aux-emotions/"><span class="similar-icon">🧩</span>Les mécanismes liés aux émotions</a></div>
+    </div>
+    <a class="back-link" href="/categorie/mecanismes/">← Retour à « Mécanismes de défense »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

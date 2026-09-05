@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syndromes rares et phénomènes particuliers — Mon Esprit</title>
+<meta name="description" content="Syndromes rares et phénomènes particuliers, dans la catégorie Syndromes psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#131-le-syndrome-de-ganser">🧠 13.1 Le syndrome de Ganser</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#manifestations-possibles">🧠 Manifestations possibles</a></li><li><a href="#associations-possibles">🧬 Associations possibles</a></li><li><a href="#statut">🩺 Statut</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#132-le-syndrome-de-kleinelevin">😴 13.2 Le syndrome de KleineLevin</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#manifestations-possibles_1">😴 Manifestations possibles</a></li><li><a href="#evolution">🧬 Évolution</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#133-la-narcolepsie-maladie-de-gelineau">😴 13.3 La narcolepsie / maladie de Gélineau</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#manifestations-principales">😴 Manifestations principales</a></li><li><a href="#mecanisme">🧬 Mécanisme</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#134-le-syndrome-de-paris">🗼 13.4 Le syndrome de Paris</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#manifestations-rapportees">🧠 Manifestations rapportées</a></li><li><a href="#explication-possible">🧬 Explication possible</a></li><li><a href="#statut_1">🩺 Statut</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#135-le-syndrome-de-jerusalem">🕍 13.5 Le syndrome de Jérusalem</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#manifestations-possibles_2">🧠 Manifestations possibles</a></li><li><a href="#particularite">🧬 Particularité</a></li><li><a href="#statut_2">🩺 Statut</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#136-le-syndrome-de-stendhal">🎨 13.6 Le syndrome de Stendhal</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#manifestations-rapportees_1">🧠 Manifestations rapportées</a></li><li><a href="#explication">🧬 Explication</a></li><li><a href="#statut_3">🩺 Statut</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#137-le-trouble-dissociatif-de-lidentite">🎭 13.7 Le trouble dissociatif de l'identité</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#manifestations-possibles_3">🧠 Manifestations possibles</a></li><li><a href="#dissociation">🧬 Dissociation</a></li><li><a href="#diagnostic_2">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_1">🛠️ Prise en charge</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#138-le-syndrome-de-munchhausen">🎭 13.8 Le syndrome de Münchhausen</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#manifestations-possibles_4">🧠 Manifestations possibles</a></li><li><a href="#motivation">🧬 Motivation</a></li><li><a href="#statut_4">🩺 Statut</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#139-le-trouble-factice-impose-a-autrui">👶 13.9 Le trouble factice imposé à autrui</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#manifestations-possibles_5">🧠 Manifestations possibles</a></li><li><a href="#particularite_1">🧬 Particularité</a></li><li><a href="#statut_5">🩺 Statut</a></li><li><a href="#a-retenir_8">⚠️ À retenir</a></li></ul></li><li><a href="#1310-le-syndrome-de-la-personnalite-multiple-dans-la-culture-populaire">🧠 13.10 Le syndrome de la « personnalité multiple » dans la culture populaire</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#dans-la-culture-populaire">🎬 Dans la culture populaire</a></li><li><a href="#realite-clinique">🧠 Réalité clinique</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#a-retenir-partie-13">🔬 À RETENIR PARTIE 13</a><ul class="sidebar-sublist"><li><a href="#syndrome-clinique">🩺 Syndrome clinique</a></li><li><a href="#trouble-reconnu">🧠 Trouble reconnu</a></li><li><a href="#phenomene-descriptif">🌍 Phénomène descriptif</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Syndromes rares et phénomènes particuliers',
+        category: 'Syndromes psychologiques',
+        icon: '🧬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/syndromes/">🧬 Syndromes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Syndromes rares et phénomènes particuliers</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-syndromes)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <blockquote>
+<p>Cette partie regroupe des syndromes et phénomènes particulièrement rares, atypiques ou célèbres en psychologie, psychiatrie, neurologie et médecine du sommeil. Certains sont des diagnostics ou des syndromes reconnus, tandis que d'autres sont surtout des descriptions cliniques ou culturelles.
+</p>
+</blockquote>
+<h1 id="131-le-syndrome-de-ganser" class="entry-title hc-1">🧠 13.1  Le syndrome de Ganser</h1>
+<h2 id="definition">🔎 Définition</h2>
+<p>Le <strong>syndrome de Ganser</strong> est un phénomène psychiatrique rare caractérisé notamment par des réponses approximatives ou « à côté » de la question.</p>
+<p>La personne semble comprendre la question, mais fournit une réponse proche de la bonne réponse sans être exacte.</p>
+<p>Exemple :</p>
+<p><strong>Question :</strong> « Combien font 2 + 2 ? »</p>
+<p><strong>Réponse :</strong> « 5. »</p>
+<p>Le comportement peut donner l'impression que la personne connaît la réponse mais ne fournit volontairement pas la réponse exacte. Cependant, l'interprétation clinique est beaucoup plus complexe.</p>
+<h2 id="manifestations-possibles">🧠 Manifestations possibles</h2>
+<p>Réponses approximatives
+Confusion
+Désorientation
+Troubles de l'attention
+Troubles de la mémoire
+Perceptions inhabituelles
+Modifications de la conscience
+Comportements inhabituels</p>
+<h2 id="associations-possibles">🧬 Associations possibles</h2>
+<p>Historiquement, le syndrome a souvent été associé à des situations psychiatriques sévères ou à des états dissociatifs.</p>
+<p>Il peut également être observé dans certains contextes neurologiques ou médicaux.</p>
+<h2 id="statut">🩺 Statut</h2>
+<p>Le syndrome de Ganser est un phénomène clinique rare. Son statut diagnostique varie selon les classifications et les auteurs.</p>
+<h2 id="a-retenir">📌 À retenir</h2>
+<p>Le syndrome de Ganser est principalement caractérisé par des <strong>réponses approximatives et une altération inhabituelle du fonctionnement cognitif ou de la conscience</strong>.</p>
+<h1 id="132-le-syndrome-de-kleinelevin" class="entry-title hc-2">😴 13.2  Le syndrome de KleineLevin</h1>
+<h2 id="definition_1">🔎 Définition</h2>
+<p>Le <strong>syndrome de KleineLevin</strong> est un trouble neurologique du sommeil extrêmement rare caractérisé par des épisodes récurrents d'<strong>hypersomnie</strong>, accompagnés de modifications importantes du comportement et du fonctionnement cognitif.</p>
+<p>Les épisodes peuvent durer plusieurs jours ou semaines avant de disparaître.</p>
+<p>Entre les épisodes, le fonctionnement peut redevenir largement normal.</p>
+<h2 id="manifestations-possibles_1">😴 Manifestations possibles</h2>
+<p>Pendant les épisodes :</p>
+<p>Sommeil extrêmement prolongé
+Difficulté à rester éveillé
+Confusion
+Ralentissement cognitif
+Désorientation
+Modification de la perception
+Irritabilité
+Comportement inhabituel
+Augmentation de l'appétit chez certaines personnes
+Hypersexualité chez certaines personnes</p>
+<h2 id="evolution">🧬 Évolution</h2>
+<p>Le syndrome évolue généralement par <strong>épisodes séparés par des périodes de rémission</strong>.</p>
+<p>Il apparaît souvent pendant l'adolescence, mais peut également commencer à d'autres périodes de la vie.</p>
+<h2 id="diagnostic">🩺 Diagnostic</h2>
+<p>Le diagnostic repose notamment sur :</p>
+<p>La répétition des épisodes
+L'hypersomnie importante
+Les modifications comportementales et cognitives
+L'exclusion d'autres causes médicales ou neurologiques</p>
+<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
+<p>La prise en charge est principalement médicale et vise notamment à :</p>
+<p>gérer les épisodes ;
+assurer la sécurité ;
+surveiller le sommeil ;
+rechercher d'éventuels facteurs déclenchants.</p>
+<h2 id="a-retenir_1">📌 À retenir</h2>
+<p>Le syndrome de KleineLevin est un <strong>trouble neurologique du sommeil rare</strong>, caractérisé par des épisodes récurrents de sommeil excessif et de modifications comportementales.</p>
+<h1 id="133-la-narcolepsie-maladie-de-gelineau" class="entry-title hc-3">😴 13.3  La narcolepsie / maladie de Gélineau</h1>
+<h2 id="definition_2">🔎 Définition</h2>
+<p>La <strong>narcolepsie</strong>, historiquement appelée <strong>maladie de Gélineau</strong>, est un trouble neurologique du sommeil caractérisé par une somnolence diurne excessive et des épisodes incontrôlables d'endormissement.</p>
+<h2 id="manifestations-principales">😴 Manifestations principales</h2>
+<h3 id="somnolence-diurne-excessive">💤 Somnolence diurne excessive</h3>
+<p>Une envie irrépressible de dormir peut apparaître pendant la journée.</p>
+<h3 id="cataplexie">💪 Cataplexie</h3>
+<p>Dans certains types de narcolepsie, des émotions fortes peuvent provoquer une perte soudaine du tonus musculaire.</p>
+<p>Exemples :</p>
+<p>faiblesse des jambes ;
+chute de la tête ;
+difficulté à maintenir une posture ;
+perte musculaire brève.</p>
+<p>La personne peut rester consciente pendant l'épisode.</p>
+<h3 id="paralysie-du-sommeil">🌙 Paralysie du sommeil</h3>
+<p>Une incapacité temporaire à bouger lors de l'endormissement ou du réveil peut apparaître.</p>
+<h3 id="hallucinations-hypnagogiques-ou-hypnopompiques">👁️ Hallucinations hypnagogiques ou hypnopompiques</h3>
+<p>Des expériences perceptives particulièrement réalistes peuvent survenir lors de la transition entre sommeil et éveil.</p>
+<h2 id="mecanisme">🧬 Mécanisme</h2>
+<p>Certaines formes de narcolepsie sont associées à une diminution importante de l'hypocrétine/orexine, un système impliqué dans la régulation de l'éveil et du sommeil.</p>
+<h2 id="diagnostic_1">🩺 Diagnostic</h2>
+<p>Il peut notamment impliquer :</p>
+<p>étude du sommeil ;
+polysomnographie ;
+test itératif de latence d'endormissement ;
+évaluation des symptômes.</p>
+<h2 id="a-retenir_2">📌 À retenir</h2>
+<p>La narcolepsie est avant tout une <strong>maladie neurologique du sommeil</strong>, et non simplement une tendance à être fatigué.</p>
+<h1 id="134-le-syndrome-de-paris" class="entry-title hc-4">🗼 13.4  Le syndrome de Paris</h1>
+<h2 id="definition_3">🔎 Définition</h2>
+<p>Le <strong>syndrome de Paris</strong> est une expression utilisée pour décrire un état de détresse psychologique intense pouvant apparaître chez certaines personnes lors d'un séjour à Paris lorsque la réalité vécue ne correspond pas à leurs attentes ou représentations de la ville.</p>
+<h2 id="manifestations-rapportees">🧠 Manifestations rapportées</h2>
+<p>Selon les descriptions :</p>
+<p>anxiété intense ;
+désorientation ;
+sentiment d'irréalité ;
+confusion ;
+symptômes physiques ;
+agitation ;
+parfois expériences perceptives inhabituelles.</p>
+<h2 id="explication-possible">🧬 Explication possible</h2>
+<p>Plusieurs facteurs peuvent intervenir :</p>
+<p><strong>attentes idéalisées + choc culturel + fatigue + barrière linguistique + stress + environnement inhabituel.</strong></p>
+<h2 id="statut_1">🩺 Statut</h2>
+<p>Le syndrome de Paris n'est <strong>pas un diagnostic psychiatrique officiel</strong>.</p>
+<p>Il s'agit principalement d'une description culturelle et clinique.</p>
+<h2 id="a-retenir_3">📌 À retenir</h2>
+<p>Le syndrome de Paris illustre l'influence que peuvent avoir les <strong>attentes culturelles et l'environnement</strong> sur l'expérience psychologique.</p>
+<h1 id="135-le-syndrome-de-jerusalem" class="entry-title hc-5">🕍 13.5  Le syndrome de Jérusalem</h1>
+<h2 id="definition_4">🔎 Définition</h2>
+<p>Le <strong>syndrome de Jérusalem</strong> désigne un phénomène dans lequel une personne visitant Jérusalem développe des préoccupations religieuses ou spirituelles extrêmement intenses, parfois accompagnées de comportements inhabituels.</p>
+<h2 id="manifestations-possibles_2">🧠 Manifestations possibles</h2>
+<p>Certaines descriptions cliniques rapportent :</p>
+<p>préoccupations religieuses intenses ;
+sentiment d'avoir une mission particulière ;
+identification à un personnage religieux ;
+discours religieux inhabituel ;
+retrait social ;
+comportements rituels inhabituels ;
+expériences délirantes ou perceptives.</p>
+<h2 id="particularite">🧬 Particularité</h2>
+<p>Le contexte religieux et culturel de Jérusalem peut jouer un rôle important dans l'apparition ou la forme prise par certains symptômes.</p>
+<h2 id="statut_2">🩺 Statut</h2>
+<p>Le syndrome de Jérusalem n'est pas un diagnostic psychiatrique autonome.</p>
+<p>Il peut correspondre à différentes situations psychiatriques selon les cas.</p>
+<h2 id="a-retenir_4">📌 À retenir</h2>
+<p>Il s'agit d'un <strong>phénomène culturel et clinique</strong> dans lequel un contexte religieux particulièrement chargé peut s'intégrer à une expérience psychiatrique.</p>
+<h1 id="136-le-syndrome-de-stendhal" class="entry-title hc-1">🎨 13.6  Le syndrome de Stendhal</h1>
+<h2 id="definition_5">🔎 Définition</h2>
+<p>Le <strong>syndrome de Stendhal</strong> est une expression utilisée pour décrire un ensemble de réactions physiques et psychologiques pouvant apparaître face à une exposition intense à l'art, notamment lorsqu'une personne se trouve confrontée à une grande quantité d'œuvres particulièrement impressionnantes.</p>
+<p>Le phénomène est particulièrement associé à Florence.</p>
+<h2 id="manifestations-rapportees_1">🧠 Manifestations rapportées</h2>
+<p>Étourdissements
+Palpitations
+Confusion
+Sensation d'irréalité
+Désorientation
+Émotions extrêmement fortes
+Anxiété
+Malaise physique</p>
+<h2 id="explication">🧬 Explication</h2>
+<p>L'expérience peut être influencée par :</p>
+<p>Intensité émotionnelle
+Fatigue
+Stress
+Attentes personnelles
+Environnement
+Sensibilité individuelle</p>
+<h2 id="statut_3">🩺 Statut</h2>
+<p>Le syndrome de Stendhal n'est <strong>pas un diagnostic psychiatrique officiel</strong>.</p>
+<p>Il s'agit davantage d'une expression culturelle et d'une observation clinique discutée.</p>
+<h2 id="a-retenir_5">📌 À retenir</h2>
+<p>Le syndrome de Stendhal décrit une <strong>réaction particulièrement intense face à l'art ou à une expérience esthétique</strong>.</p>
+<h1 id="137-le-trouble-dissociatif-de-lidentite" class="entry-title hc-2">🎭 13.7  Le trouble dissociatif de l'identité</h1>
+<h2 id="definition_6">🔎 Définition</h2>
+<p>Le <strong>trouble dissociatif de l'identité (TDI)</strong> est un trouble dissociatif caractérisé par une perturbation de l'identité associée à la présence de différents états de personnalité ou de différentes expériences du soi.</p>
+<p>Il peut également provoquer des <strong>lacunes de mémoire autobiographique</strong> qui dépassent les oublis ordinaires.</p>
+<h2 id="manifestations-possibles_3">🧠 Manifestations possibles</h2>
+<p>Sensation d'identités ou d'états du soi distincts
+Modifications du comportement
+Modifications de la perception de soi
+Périodes d'amnésie
+Sensation d'être spectateur de ses propres actions
+Dépersonnalisation
+Difficultés à reconstruire certains événements
+Changements importants dans les émotions ou les préférences selon les états</p>
+<h2 id="dissociation">🧬 Dissociation</h2>
+<p>La <strong>dissociation</strong> correspond à une perturbation dans l'intégration normale de différentes fonctions psychologiques.</p>
+<p>Elle peut concerner :</p>
+<p>mémoire ;
+identité ;
+perception ;
+conscience ;
+émotions.</p>
+<h2 id="diagnostic_2">🩺 Diagnostic</h2>
+<p>Le diagnostic est clinique.</p>
+<p>Il nécessite de distinguer le TDI d'autres situations pouvant provoquer des changements d'identité, des pertes de mémoire ou des expériences dissociatives.</p>
+<h2 id="prise-en-charge_1">🛠️ Prise en charge</h2>
+<p>La prise en charge est généralement psychothérapeutique et peut viser notamment :</p>
+<p>la stabilisation ;
+la compréhension des phénomènes dissociatifs ;
+la réduction des symptômes ;
+l'intégration du fonctionnement psychologique.</p>
+<h2 id="a-retenir_6">📌 À retenir</h2>
+<p>Le terme populaire <strong>« personnalité multiple »</strong> est imprécis.</p>
+<p>Le terme clinique utilisé est :</p>
+<p><strong>Trouble dissociatif de l'identité (TDI).</strong></p>
+<h1 id="138-le-syndrome-de-munchhausen" class="entry-title hc-3">🎭 13.8  Le syndrome de Münchhausen</h1>
+<h2 id="definition_7">🔎 Définition</h2>
+<p>Le <strong>syndrome de Münchhausen</strong> est une ancienne appellation utilisée pour décrire une forme de <strong>trouble factice</strong> dans laquelle une personne provoque, simule ou présente volontairement des symptômes afin d'adopter le rôle de malade.</p>
+<p>L'objectif principal n'est pas nécessairement d'obtenir un avantage matériel évident.</p>
+<h2 id="manifestations-possibles_4">🧠 Manifestations possibles</h2>
+<p>Une personne peut :</p>
+<p>inventer certains symptômes ;
+exagérer volontairement des symptômes ;
+provoquer certains problèmes de santé ;
+multiplier les consultations ;
+présenter des antécédents médicaux complexes ;
+rechercher fréquemment des examens ou des hospitalisations.</p>
+<h2 id="motivation">🧬 Motivation</h2>
+<p>Le trouble factice se distingue notamment de la simulation par le fait que le comportement est associé à une <strong>motivation psychologique liée au rôle de malade</strong> plutôt qu'à un bénéfice externe clairement identifiable.</p>
+<h2 id="statut_4">🩺 Statut</h2>
+<p>Le terme « syndrome de Münchhausen » est aujourd'hui largement remplacé par le concept de <strong>trouble factice</strong> dans les classifications modernes.</p>
+<h2 id="a-retenir_7">📌 À retenir</h2>
+<p>Il s'agit d'un phénomène différent de la simulation visant clairement un avantage externe.</p>
+<h1 id="139-le-trouble-factice-impose-a-autrui" class="entry-title hc-4">👶 13.9  Le trouble factice imposé à autrui</h1>
+<h2 id="definition_8">🔎 Définition</h2>
+<p>Le <strong>trouble factice imposé à autrui</strong> correspond à une situation dans laquelle une personne falsifie, provoque ou présente artificiellement des symptômes chez une autre personne dont elle a la charge.</p>
+<p>La personne concernée est souvent un enfant ou une personne dépendante.</p>
+<h2 id="manifestations-possibles_5">🧠 Manifestations possibles</h2>
+<p>La personne responsable peut :</p>
+<p>inventer des symptômes ;
+exagérer des problèmes médicaux ;
+provoquer volontairement certains symptômes ;
+modifier des informations médicales ;
+multiplier les consultations.</p>
+<h2 id="particularite_1">🧬 Particularité</h2>
+<p>Le phénomène peut être extrêmement difficile à détecter car les symptômes sont parfois observés principalement en présence de la personne responsable.</p>
+<h2 id="statut_5">🩺 Statut</h2>
+<p>Il s'agit d'un trouble factice reconnu dans les classifications diagnostiques modernes sous différentes formulations.</p>
+<p>L'ancienne expression <strong>« syndrome de Münchhausen par procuration »</strong> est aujourd'hui moins privilégiée.</p>
+<h2 id="a-retenir_8">⚠️ À retenir</h2>
+<p>Ce phénomène peut représenter une forme de <strong>maltraitance médicale</strong> et peut mettre directement en danger la personne concernée.</p>
+<h1 id="1310-le-syndrome-de-la-personnalite-multiple-dans-la-culture-populaire" class="entry-title hc-5">🧠 13.10  Le syndrome de la « personnalité multiple » dans la culture populaire</h1>
+<h2 id="definition_9">🔎 Définition</h2>
+<p>La notion de <strong>« personnalité multiple »</strong> est largement présente dans les films, séries et œuvres de fiction.</p>
+<p>Elle est souvent représentée comme plusieurs personnes totalement indépendantes partageant le même corps.</p>
+<p>Cette représentation est généralement <strong>beaucoup plus spectaculaire que la réalité clinique du trouble dissociatif de l'identité</strong>.</p>
+<h2 id="dans-la-culture-populaire">🎬 Dans la culture populaire</h2>
+<p>Les œuvres de fiction présentent parfois :</p>
+<p>changements instantanés extrêmement visibles ;
+personnalités totalement opposées ;
+souvenirs complètement séparés ;
+comportements violents automatiquement associés à une identité particulière.</p>
+<p>Ces représentations peuvent être très éloignées de la diversité réelle des manifestations dissociatives.</p>
+<h2 id="realite-clinique">🧠 Réalité clinique</h2>
+<p>Le TDI peut présenter des manifestations très différentes selon les personnes.</p>
+<p>Les changements d'état peuvent être :</p>
+<p>subtils ;
+progressifs ;
+difficiles à identifier ;
+accompagnés de symptômes dissociatifs ;
+associés à des troubles de mémoire.</p>
+<h2 id="a-retenir_9">📌 À retenir</h2>
+<p><strong>« Personnalité multiple »</strong> est principalement une expression populaire.</p>
+<p>Le terme clinique est <strong>trouble dissociatif de l'identité</strong>.</p>
+<h1 id="a-retenir-partie-13" class="entry-title hc-1">🔬 À RETENIR  PARTIE 13</h1>
+<p>Les phénomènes rares montrent que les manifestations psychologiques peuvent être extrêmement diverses.</p>
+<p>Certains phénomènes sont :</p>
+<p><strong>🧠 neurologiques</strong></p>
+<p><strong>😴 liés au sommeil</strong></p>
+<p><strong>🧩 dissociatifs</strong></p>
+<p><strong>🌍 culturels</strong></p>
+<p><strong>🎨 liés aux expériences émotionnelles</strong></p>
+<p><strong>🩺 médicaux</strong></p>
+<p><strong>🎭 psychiatriques</strong></p>
+<p>Il est également essentiel de distinguer trois catégories :</p>
+<h3 id="syndrome-clinique">🩺 Syndrome clinique</h3>
+<p>Un ensemble identifiable de symptômes observés dans la pratique médicale ou psychologique.</p>
+<h3 id="trouble-reconnu">🧠 Trouble reconnu</h3>
+<p>Une condition pouvant disposer de critères diagnostiques établis dans une classification médicale ou psychiatrique.</p>
+<h3 id="phenomene-descriptif">🌍 Phénomène descriptif</h3>
+<p>Une expression utilisée pour décrire une expérience particulière sans constituer nécessairement un diagnostic officiel.</p>
+<blockquote>
+<p><strong>Un nom spectaculaire ne signifie donc pas forcément qu'il s'agit d'une maladie reconnue.</strong>
+</p>
+</blockquote>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Syndromes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-de-l-identite-et-de-la-reconnaissance/"><span class="similar-icon">🧬</span>Syndromes de l'identité et de la reconnaissance</a><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-a-la-perception/"><span class="similar-icon">🧬</span>Syndromes liés à la perception</a><a class="similar-item" href="/chapitre/syndromes-syndromes-delirants-particuliers/"><span class="similar-icon">🧬</span>Syndromes délirants particuliers</a></div>
+    </div>
+    <a class="back-link" href="/categorie/syndromes/">← Retour à « Syndromes psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

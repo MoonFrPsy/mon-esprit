@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partie 7 — Troubles des conduites alimentaires — Mon Esprit</title>
+<meta name="description" content="Partie 7 — Troubles des conduites alimentaires, dans la catégorie Troubles psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#71-lanorexie-mentale">🍽️ 7.1 L'anorexie mentale</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#comprendre-lanorexie-mentale">🔎 Comprendre l'anorexie mentale</a></li><li><a href="#manifestations-psychologiques">🧠 Manifestations psychologiques</a></li><li><a href="#manifestations-comportementales">🎯 Manifestations comportementales</a></li><li><a href="#manifestations-physiques">⚡ Manifestations physiques</a></li><li><a href="#causes-et-facteurs-de-risque">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne">🤝 Comment aider un proche concerné</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#idees-recues">❌ Idées reçues</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#72-la-boulimie">🍽️ 7.2 La boulimie</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#comprendre-la-boulimie">🔎 Comprendre la boulimie</a></li><li><a href="#manifestations-psychologiques_1">🧠 Manifestations psychologiques</a></li><li><a href="#manifestations-comportementales_1">🎯 Manifestations comportementales</a></li><li><a href="#manifestations-physiques_1">⚡ Manifestations physiques</a></li><li><a href="#causes-et-facteurs-de-risque_1">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_1">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_1">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes_1">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne_1">🤝 Comment aider un proche concerné</a></li><li><a href="#prise-en-charge_1">🛠️ Prise en charge</a></li><li><a href="#idees-recues_1">❌ Idées reçues</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#73-lacces-hyperphagique-hyperphagie-boulimique">🍽️ 7.3 L'accès hyperphagique (hyperphagie boulimique)</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#comprendre-ce-trouble">🔎 Comprendre ce trouble</a></li><li><a href="#manifestations">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque_2">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_2">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_2">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes_2">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic_2">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne_2">🤝 Comment aider un proche concerné</a></li><li><a href="#prise-en-charge_2">🛠️ Prise en charge</a></li><li><a href="#idees-recues_2">❌ Idées reçues</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#74-le-pica">🍽️ 7.4 Le pica</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#comprendre-le-pica">🔎 Comprendre le pica</a></li><li><a href="#manifestations_1">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque_3">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_3">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_3">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#diagnostic_3">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne-notamment-un-enfant">🤝 Comment aider un proche concerné (notamment un enfant)</a></li><li><a href="#prise-en-charge_3">🛠️ Prise en charge</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#75-le-trouble-de-rumination">🍽️ 7.5 Le trouble de rumination</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#comprendre-ce-trouble_1">🔎 Comprendre ce trouble</a></li><li><a href="#manifestations_2">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque_4">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_4">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_4">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#diagnostic_4">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne_3">🤝 Comment aider un proche concerné</a></li><li><a href="#prise-en-charge_4">🛠️ Prise en charge</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#76-le-trouble-de-restriction-ou-devitement-de-lingestion-daliments-arfid">🍽️ 7.6 Le trouble de restriction ou d'évitement de l'ingestion d'aliments (ARFID)</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#comprendre-larfid">🔎 Comprendre l'ARFID</a></li><li><a href="#manifestations_3">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque_5">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_5">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_5">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#diagnostic_5">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne-notamment-un-enfant_1">🤝 Comment aider un proche concerné (notamment un enfant)</a></li><li><a href="#prise-en-charge_5">🛠️ Prise en charge</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#77-le-trouble-des-conduites-alimentaires-specifie">🍽️ 7.7 Le trouble des conduites alimentaires spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#comprendre-cette-categorie">🔎 Comprendre cette catégorie</a></li><li><a href="#manifestations_4">🧠 Manifestations</a></li><li><a href="#diagnostic_6">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_6">🛠️ Prise en charge</a></li><li><a href="#idees-recues_3">❌ Idées reçues</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#78-le-trouble-des-conduites-alimentaires-non-specifie">🍽️ 7.8 Le trouble des conduites alimentaires non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#comprendre-cette-categorie_1">🔎 Comprendre cette catégorie</a></li><li><a href="#diagnostic_7">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_7">🛠️ Prise en charge</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Partie 7 — Troubles des conduites alimentaires',
+        category: 'Troubles psychologiques',
+        icon: '🩺'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Partie 7 — Troubles des conduites alimentaires</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-troubles)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Dans ce chapitre :</p>
+<ul>
+<li>🍽️ 7.1 L'anorexie mentale</li>
+<li>🍽️ 7.2 La boulimie</li>
+<li>🍽️ 7.3 L'accès hyperphagique (hyperphagie boulimique)</li>
+<li>🍽️ 7.4 Le pica</li>
+<li>🍽️ 7.5 Le trouble de rumination</li>
+<li>🍽️ 7.6 Le trouble de restriction ou d'évitement de l'ingestion d'aliments (<a class="gloss-link" href="#76-le-trouble-de-restriction-ou-devitement-de-lingestion-daliments-arfid" title="Voir la définition de ARFID">ARFID</a>)</li>
+<li>🍽️ 7.7 Le trouble des conduites alimentaires spécifié</li>
+<li>🍽️ 7.8 Le trouble des conduites alimentaires non spécifié</li>
+</ul>
+<hr />
+<h1 id="71-lanorexie-mentale" class="entry-title hc-1">🍽️ 7.1 L'anorexie mentale</h1>
+<h2 id="definition">Définition</h2>
+<p>L'<strong>anorexie mentale</strong> est un trouble des conduites alimentaires caractérisé par une <strong>restriction alimentaire importante et durable</strong>, une <strong>peur intense de prendre du poids</strong> (ou des comportements persistants faisant obstacle à la prise de poids, alors même que le poids est significativement bas), et une <strong>perturbation de la perception de son propre corps</strong> ou de son poids.</p>
+<p>Contrairement à une idée reçue, l'anorexie n'est pas un simple « régime qui va trop loin » : il s'agit d'un trouble psychiatrique sérieux, associé au taux de mortalité le plus élevé parmi l'ensemble des troubles psychiatriques, principalement en lien avec les complications médicales et le risque suicidaire.</p>
+<hr />
+<h2 id="comprendre-lanorexie-mentale">🔎 Comprendre l'anorexie mentale</h2>
+<p>La restriction alimentaire, dans l'anorexie, n'est presque jamais qu'une question de nourriture : elle s'accompagne le plus souvent d'un besoin de contrôle, d'une estime de soi très liée à l'apparence corporelle ou au poids, et parfois d'une difficulté plus large à tolérer l'incertitude ou les émotions intenses.</p>
+<p>Deux formes cliniques sont classiquement décrites : une forme <strong>restrictive</strong>, dans laquelle la perte de poids est obtenue principalement par la restriction alimentaire et l'exercice physique, et une forme avec <strong>accès hyperphagiques/comportements purgatifs</strong>, dans laquelle des épisodes de perte de contrôle alimentaire alternent avec des comportements compensatoires.</p>
+<p>La perception du corps est souvent très déformée : une personne peut se percevoir comme étant « en surpoids » alors que son poids est objectivement très bas, un phénomène parfois appelé distorsion de l'image corporelle.</p>
+<hr />
+<h2 id="manifestations-psychologiques">🧠 Manifestations psychologiques</h2>
+<ul>
+<li>peur intense de prendre du poids ou de « grossir », persistant même après une perte de poids importante ;</li>
+<li>préoccupation envahissante concernant le poids, la silhouette ou l'alimentation, occupant une large place dans les pensées quotidiennes ;</li>
+<li>distorsion de l'image corporelle (perception de soi comme étant en surpoids malgré un poids bas) ;</li>
+<li>estime de soi très fortement dépendante du poids ou de la silhouette ;</li>
+<li>difficulté à reconnaître la gravité de l'amaigrissement (déni fréquent, en particulier chez l'adolescent) ;</li>
+<li>rigidité de pensée, perfectionnisme et besoin de contrôle marqués ;</li>
+<li>irritabilité, retrait social et difficultés de concentration, en partie liées à la dénutrition elle-même.</li>
+</ul>
+<h2 id="manifestations-comportementales">🎯 Manifestations comportementales</h2>
+<ul>
+<li>restriction alimentaire progressive, souvent centrée d'abord sur certains aliments perçus comme « à risque » (matières grasses, sucres) ;</li>
+<li>rituels autour des repas (découpage minutieux des aliments, horaires très stricts, évitement des repas en présence d'autrui) ;</li>
+<li>vérifications fréquentes du poids ou du corps (pesées répétées, mesures, vérification dans le miroir), ou à l'inverse évitement total de ces vérifications ;</li>
+<li>activité physique excessive, parfois pratiquée en secret ;</li>
+<li>dans certaines formes, recours à des comportements compensatoires (vomissements provoqués, usage de laxatifs ou de diurétiques) ;</li>
+<li>dissimulation de la restriction alimentaire à l'entourage (prétextes, manipulation des quantités, occultation des repas non pris).</li>
+</ul>
+<h2 id="manifestations-physiques">⚡ Manifestations physiques</h2>
+<p>La dénutrition prolongée peut avoir des répercussions sur l'ensemble de l'organisme :</p>
+<ul>
+<li>fatigue intense, sensation de froid permanente ;</li>
+<li>arrêt ou irrégularité des règles chez la femme (aménorrhée) ;</li>
+<li>chute de cheveux, peau sèche, apparition d'un fin duvet sur le corps (lanugo) ;</li>
+<li>ralentissement du rythme cardiaque et baisse de la tension artérielle ;</li>
+<li>fragilisation osseuse à long terme (risque d'ostéoporose) ;</li>
+<li>troubles digestifs (ballonnements, constipation) ;</li>
+<li>dans les formes sévères, complications cardiaques et déséquilibres électrolytiques pouvant engager le pronostic vital.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque">🧬 Causes et facteurs de risque</h2>
+<h3 id="facteurs-psychologiques">Facteurs psychologiques</h3>
+<p>Perfectionnisme, faible estime de soi, forte anxiété, difficulté à tolérer l'incertitude ou les émotions intenses, et besoin marqué de contrôle sont fréquemment retrouvés.</p>
+<h3 id="facteurs-familiaux-et-environnementaux">Facteurs familiaux et environnementaux</h3>
+<p>Antécédents familiaux de troubles alimentaires ou d'autres troubles psychiatriques, environnement familial où l'apparence ou la performance sont particulièrement valorisées, événements de vie difficiles ou transitions importantes (adolescence, changement d'école, séparation).</p>
+<h3 id="facteurs-socioculturels">Facteurs socioculturels</h3>
+<p>Exposition à des normes esthétiques valorisant la minceur, pression sociale (y compris via les réseaux sociaux), pratique de certaines activités où le poids est particulièrement surveillé (danse, mannequinat, certains sports).</p>
+<h3 id="facteurs-biologiques">Facteurs biologiques</h3>
+<p>Une composante génétique et des particularités du fonctionnement de certains circuits cérébraux impliqués dans la régulation de l'appétit, des émotions et de la récompense sont également étudiées.</p>
+<hr />
+<h2 id="evolution">📈 Évolution</h2>
+<p>L'évolution est très variable : certaines personnes se rétablissent complètement après un épisode unique, d'autres connaissent une évolution chronique avec des rechutes, notamment lors de périodes de stress. Un dépistage et une prise en charge précoces sont associés à un meilleur pronostic, en particulier chez l'adolescent.</p>
+<p>Sans prise en charge, le trouble peut s'installer durablement et entraîner des complications médicales sévères, ainsi qu'un risque suicidaire non négligeable.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne">🌍 Conséquences dans la vie quotidienne</h2>
+<p>L'anorexie peut affecter la scolarité ou le travail (fatigue, difficultés de concentration), les relations familiales (tensions autour des repas, sentiment d'impuissance des proches) et la vie sociale (évitement des repas partagés, isolement progressif). Le retentissement physique peut également limiter les activités quotidiennes.</p>
+<hr />
+<h2 id="troubles-pouvant-etre-associes">🔗 Troubles pouvant être associés</h2>
+<ul>
+<li>troubles anxieux, en particulier le trouble obsessionnel-compulsif ;</li>
+<li>troubles dépressifs ;</li>
+<li>traits ou trouble de la personnalité obsessionnelle-compulsive ou évitante ;</li>
+<li>risque suicidaire, qu'il est important de systématiquement évaluer.</li>
+</ul>
+<hr />
+<h2 id="diagnostic">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur une évaluation clinique complète (psychiatrique et médicale), portant sur l'histoire du poids et de l'alimentation, l'intensité de la peur de prendre du poids, la perception du corps, ainsi que sur un bilan médical (biologique, cardiaque) permettant d'évaluer le retentissement de la dénutrition et d'écarter d'autres causes de perte de poids.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne">🤝 Comment aider un proche concerné</h2>
+<ul>
+<li><strong>Éviter les commentaires sur le poids, l'apparence ou les quantités mangées</strong>, y compris bien intentionnés (« tu as l'air d'aller mieux », « mange un peu plus ») : ces remarques renforcent souvent la préoccupation corporelle plutôt que de l'apaiser.</li>
+<li><strong>Ne pas négocier ni forcer autour de la nourriture</strong>, ce qui peut transformer chaque repas en conflit et renforcer le sentiment de perte de contrôle de la personne.</li>
+<li><strong>Exprimer son inquiétude en parlant de ce que l'on observe</strong> (fatigue, tristesse, retrait) plutôt qu'en se focalisant sur le poids ou l'alimentation elle-même.</li>
+<li><strong>Encourager fermement, mais avec bienveillance, une prise en charge médicale et psychologique</strong>, en particulier en cas de perte de poids rapide ou de signes de gravité.</li>
+<li><strong>Prendre soin de soi en tant que proche</strong>, l'accompagnement d'une personne anorexique pouvant être long et éprouvant, et solliciter un soutien pour soi-même si besoin (associations de familles notamment).</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
+<p>La prise en charge est généralement pluridisciplinaire, associant un suivi médical (surveillance du poids et des complications physiques), un suivi nutritionnel, et une prise en charge psychothérapeutique (thérapies familiales, en particulier chez l'adolescent, thérapies cognitivo-comportementales chez l'adulte). Une hospitalisation peut être nécessaire en cas de dénutrition sévère ou de risque vital.</p>
+<p>Le rétablissement est un processus généralement long, qui ne se limite pas à la reprise de poids : le travail psychologique sur l'image de soi, le contrôle et l'estime personnelle est central pour prévenir les rechutes.</p>
+<hr />
+<h2 id="idees-recues">❌ Idées reçues</h2>
+<h3 id="lanorexie-ne-touche-que-les-adolescentes">« L'anorexie ne touche que les adolescentes. »</h3>
+<p>Non : bien que plus fréquente chez les adolescentes et jeunes femmes, l'anorexie touche également les hommes et des personnes de tous âges, souvent sous-diagnostiquée dans ces populations.</p>
+<h3 id="il-suffit-de-se-forcer-a-manger-pour-guerir">« Il suffit de se forcer à manger pour guérir. »</h3>
+<p>Non : l'anorexie est un trouble psychiatrique complexe, dans lequel la restriction alimentaire n'est qu'une manifestation visible d'un fonctionnement psychologique plus profond, nécessitant une prise en charge globale.</p>
+<hr />
+<h2 id="a-retenir">📌 À retenir</h2>
+<p>L'anorexie mentale associe restriction alimentaire sévère, peur intense de prendre du poids et distorsion de l'image corporelle. Il s'agit d'un trouble psychiatrique grave, aux conséquences médicales potentiellement sérieuses, dont la prise en charge précoce et pluridisciplinaire améliore significativement le pronostic.</p>
+<hr />
+<h1 id="72-la-boulimie" class="entry-title hc-2">🍽️ 7.2 La boulimie</h1>
+<h2 id="definition_1">Définition</h2>
+<p>La <strong>boulimie</strong> (boulimie nerveuse) est un trouble des conduites alimentaires caractérisé par la survenue répétée d'<strong>épisodes de crises alimentaires</strong> (ingestion d'une grande quantité de nourriture avec un sentiment de perte de contrôle), suivis de <strong>comportements compensatoires visant à éviter la prise de poids</strong> (vomissements provoqués, usage de laxatifs, jeûne, exercice physique excessif).</p>
+<p>Contrairement à l'anorexie, le poids des personnes boulimiques se situe le plus souvent dans une fourchette normale, ce qui peut rendre le trouble moins visible pour l'entourage.</p>
+<hr />
+<h2 id="comprendre-la-boulimie">🔎 Comprendre la boulimie</h2>
+<p>La crise de boulimie se distingue d'un simple excès alimentaire par le sentiment de perte de contrôle qui l'accompagne : la personne a l'impression de ne plus pouvoir s'arrêter de manger, même lorsqu'elle n'a plus faim, voire jusqu'à l'inconfort physique.</p>
+<p>Cette perte de contrôle est généralement suivie d'un sentiment intense de honte ou de culpabilité, qui pousse la personne à recourir à des comportements compensatoires. Un cycle peut alors s'installer, dans lequel la restriction entre les crises (par culpabilité) favorise elle-même la survenue de nouvelles crises.</p>
+<hr />
+<h2 id="manifestations-psychologiques_1">🧠 Manifestations psychologiques</h2>
+<ul>
+<li>sentiment de perte de contrôle pendant les crises alimentaires ;</li>
+<li>honte, culpabilité et dégoût de soi après les crises ;</li>
+<li>estime de soi très dépendante du poids et de la silhouette ;</li>
+<li>anxiété importante autour de l'alimentation, en particulier entre les crises ;</li>
+<li>fluctuations émotionnelles marquées, les crises étant souvent déclenchées par un stress ou une émotion difficile à gérer.</li>
+</ul>
+<h2 id="manifestations-comportementales_1">🎯 Manifestations comportementales</h2>
+<ul>
+<li>épisodes récurrents de crises alimentaires, souvent réalisés en cachette ;</li>
+<li>comportements compensatoires après les crises (vomissements provoqués, usage de laxatifs ou diurétiques, jeûne compensatoire, exercice physique excessif) ;</li>
+<li>alternance entre périodes de restriction alimentaire stricte et crises alimentaires ;</li>
+<li>dissimulation des crises et des comportements compensatoires à l'entourage.</li>
+</ul>
+<h2 id="manifestations-physiques_1">⚡ Manifestations physiques</h2>
+<ul>
+<li>irritation ou érosion de l'émail dentaire (en cas de vomissements répétés) ;</li>
+<li>gonflement des glandes salivaires ;</li>
+<li>troubles digestifs (reflux, douleurs abdominales, constipation) ;</li>
+<li>déséquilibres électrolytiques, pouvant dans les cas sévères entraîner des troubles du rythme cardiaque ;</li>
+<li>fluctuations de poids, généralement plus modérées que dans l'anorexie.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_1">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>antécédents personnels ou familiaux de troubles alimentaires, anxieux ou dépressifs ;</li>
+<li>faible estime de soi et forte préoccupation corporelle ;</li>
+<li>antécédents de régimes stricts, la restriction favorisant la survenue de crises ;</li>
+<li>impulsivité et difficultés de régulation émotionnelle ;</li>
+<li>exposition à des normes esthétiques valorisant la minceur ;</li>
+<li>dans certains cas, antécédents de traumatismes.</li>
+</ul>
+<hr />
+<h2 id="evolution_1">📈 Évolution</h2>
+<p>L'évolution est variable, avec des périodes de rémission et de rechute possibles, souvent en lien avec le niveau de stress ou les événements de vie. Une prise en charge adaptée permet une amélioration significative pour une grande partie des personnes concernées.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_1">🌍 Conséquences dans la vie quotidienne</h2>
+<p>La boulimie peut fortement affecter la vie sociale (organisation de la vie autour des crises et de leur dissimulation, évitement des repas partagés), la vie professionnelle ou scolaire (temps consacré aux crises et aux comportements compensatoires), ainsi que l'estime de soi et l'humeur générale.</p>
+<hr />
+<h2 id="troubles-pouvant-etre-associes_1">🔗 Troubles pouvant être associés</h2>
+<ul>
+<li>troubles dépressifs et anxieux ;</li>
+<li>troubles liés à l'usage de substances ;</li>
+<li>traits ou trouble de la personnalité borderline, dans certains cas ;</li>
+<li>antécédents ou trouble anxieux généralisé.</li>
+</ul>
+<hr />
+<h2 id="diagnostic_1">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur la fréquence et la nature des crises alimentaires, la présence de comportements compensatoires, et leur retentissement, associé à un bilan médical recherchant d'éventuelles complications (dentaires, digestives, électrolytiques).</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne_1">🤝 Comment aider un proche concerné</h2>
+<ul>
+<li><strong>Ne pas culpabiliser ni juger</strong> la personne concernant les crises ou les comportements compensatoires, qui échappent largement à sa volonté consciente.</li>
+<li><strong>Éviter de surveiller ou de contrôler son alimentation</strong>, ce qui peut renforcer la honte et l'isolement plutôt que d'aider.</li>
+<li><strong>Rester attentif aux signes physiques</strong> pouvant indiquer une complication (fatigue importante, malaises), sans en faire un sujet de contrôle permanent.</li>
+<li><strong>Encourager une prise en charge spécialisée</strong>, en particulier lorsque les crises deviennent fréquentes ou lorsque la détresse est importante.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_1">🛠️ Prise en charge</h2>
+<p>Les thérapies cognitivo-comportementales constituent l'approche de référence pour la boulimie, avec un travail sur les déclencheurs des crises, la restriction alimentaire excessive entre les crises et les pensées liées à l'image corporelle. Un traitement médicamenteux (certains antidépresseurs) peut également être proposé en complément. Un suivi médical est recommandé pour surveiller les éventuelles complications physiques.</p>
+<hr />
+<h2 id="idees-recues_1">❌ Idées reçues</h2>
+<h3 id="on-peut-reperer-une-personne-boulimique-a-son-poids">« On peut repérer une personne boulimique à son poids. »</h3>
+<p>Non : la plupart des personnes boulimiques ont un poids normal, ce qui rend le trouble souvent invisible de l'extérieur.</p>
+<h3 id="cest-juste-un-manque-de-volonte-face-a-la-nourriture">« C'est juste un manque de volonté face à la nourriture. »</h3>
+<p>Non : la boulimie est un trouble psychiatrique complexe, impliquant des mécanismes de régulation émotionnelle et de contrôle des impulsions, bien au-delà d'un simple manque de volonté.</p>
+<hr />
+<h2 id="a-retenir_1">📌 À retenir</h2>
+<p>La boulimie associe des crises alimentaires avec perte de contrôle à des comportements compensatoires visant à éviter la prise de poids, dans un cycle souvent alimenté par la honte et la restriction. Une prise en charge par thérapie cognitivo-comportementale permet une amélioration significative dans la majorité des cas.</p>
+<hr />
+<h1 id="73-lacces-hyperphagique-hyperphagie-boulimique" class="entry-title hc-3">🍽️ 7.3 L'accès hyperphagique (hyperphagie boulimique)</h1>
+<h2 id="definition_2">Définition</h2>
+<p>L'<strong>accès hyperphagique</strong> (hyperphagie boulimique, ou <em>binge-eating disorder</em>) est un trouble des conduites alimentaires caractérisé par des <strong>épisodes récurrents de crises alimentaires avec perte de contrôle</strong>, sans recours régulier à des comportements compensatoires (contrairement à la boulimie).</p>
+<hr />
+<h2 id="comprendre-ce-trouble">🔎 Comprendre ce trouble</h2>
+<p>Il s'agit du trouble des conduites alimentaires le plus fréquent, touchant aussi bien les hommes que les femmes, et à tout âge. L'absence de comportements compensatoires distingue ce trouble de la boulimie, mais les deux partagent la caractéristique centrale de la perte de contrôle pendant les crises.</p>
+<p>Les crises surviennent souvent en réponse à des émotions négatives (stress, tristesse, ennui) et sont généralement suivies d'une forte détresse psychologique.</p>
+<hr />
+<h2 id="manifestations">🧠 Manifestations</h2>
+<ul>
+<li>crises alimentaires récurrentes avec sentiment de perte de contrôle ;</li>
+<li>consommation rapide de nourriture, souvent au-delà de la sensation de faim, jusqu'à un inconfort physique ;</li>
+<li>consommation en cachette par honte de la quantité ingérée ;</li>
+<li>forte détresse (culpabilité, dégoût de soi) après les crises, sans comportement compensatoire régulier pour l'atténuer ;</li>
+<li>crises souvent déclenchées par le stress, l'ennui ou des émotions négatives.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_2">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>antécédents de régimes restrictifs répétés ;</li>
+<li>difficultés de régulation émotionnelle, les crises servant parfois de stratégie (inefficace à long terme) pour apaiser une détresse ;</li>
+<li>antécédents familiaux de troubles alimentaires ou de l'humeur ;</li>
+<li>stigmatisation liée au poids, pouvant elle-même renforcer le trouble.</li>
+</ul>
+<hr />
+<h2 id="evolution_2">📈 Évolution</h2>
+<p>Ce trouble peut devenir chronique en l'absence de prise en charge, avec un risque de prise de poids progressive et de complications associées (métaboliques notamment), ainsi qu'un retentissement psychologique important (baisse de l'estime de soi, dépression).</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_2">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Au-delà des éventuelles conséquences physiques liées à la prise de poids, ce trouble a un retentissement psychologique souvent majeur : honte, isolement social, évitement des situations impliquant de la nourriture partagée.</p>
+<hr />
+<h2 id="troubles-pouvant-etre-associes_2">🔗 Troubles pouvant être associés</h2>
+<ul>
+<li>troubles dépressifs et anxieux ;</li>
+<li>obésité, bien que tous les patients en situation d'obésité ne présentent pas ce trouble et inversement ;</li>
+<li>troubles liés à l'usage de substances, dans certains cas.</li>
+</ul>
+<hr />
+<h2 id="diagnostic_2">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur la fréquence des crises (au moins une fois par semaine sur une durée prolongée), le sentiment de perte de contrôle associé, et l'absence de comportements compensatoires réguliers.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne_2">🤝 Comment aider un proche concerné</h2>
+<ul>
+<li><strong>Ne jamais commenter le poids ou les quantités mangées</strong>, ces remarques renforçant la honte déjà présente.</li>
+<li><strong>Éviter de proposer des régimes restrictifs</strong>, ceux-ci pouvant paradoxalement favoriser de nouvelles crises.</li>
+<li><strong>Encourager l'expression des émotions</strong> en dehors des moments de crise, pour aider à identifier d'autres façons de faire face au stress.</li>
+<li><strong>Orienter vers une prise en charge spécialisée</strong> plutôt que vers une simple prise en charge diététique isolée.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_2">🛠️ Prise en charge</h2>
+<p>Les thérapies cognitivo-comportementales sont recommandées en première intention, avec un travail sur les déclencheurs émotionnels des crises et les pensées liées à l'alimentation et à l'image corporelle. Un accompagnement psychologique de la relation à la nourriture est privilégié à une approche uniquement centrée sur la perte de poids.</p>
+<hr />
+<h2 id="idees-recues_2">❌ Idées reçues</h2>
+<h3 id="cest-la-meme-chose-que-la-boulimie">« C'est la même chose que la boulimie. »</h3>
+<p>Non : l'accès hyperphagique se distingue par l'absence de comportements compensatoires réguliers après les crises.</p>
+<h3 id="cest-juste-un-manque-de-discipline-alimentaire">« C'est juste un manque de discipline alimentaire. »</h3>
+<p>Non : il s'agit d'un trouble reconnu, souvent lié à des difficultés de régulation émotionnelle plutôt qu'à un simple manque de discipline.</p>
+<hr />
+<h2 id="a-retenir_2">📌 À retenir</h2>
+<p>L'accès hyperphagique associe des crises alimentaires avec perte de contrôle, sans comportement compensatoire régulier. C'est le trouble des conduites alimentaires le plus fréquent, souvent lié à des difficultés de régulation émotionnelle, et pouvant bénéficier d'une prise en charge psychothérapeutique efficace.</p>
+<hr />
+<h1 id="74-le-pica" class="entry-title hc-4">🍽️ 7.4 Le pica</h1>
+<h2 id="definition_3">Définition</h2>
+<p>Le <strong>pica</strong> est un trouble caractérisé par l'<strong>ingestion persistante de substances non nutritives et non alimentaires</strong> (terre, craie, papier, cheveux, glace, entre autres), inappropriée par rapport au niveau de développement de la personne.</p>
+<hr />
+<h2 id="comprendre-le-pica">🔎 Comprendre le pica</h2>
+<p>Ce trouble peut apparaître dès l'enfance, mais aussi chez l'adulte, en particulier dans le cadre d'une grossesse, d'un handicap intellectuel, ou de certains troubles psychiatriques. Il se distingue des comportements exploratoires normaux du jeune enfant (porter des objets à la bouche) par sa persistance au-delà de l'âge où ce comportement est développementalement attendu, ainsi que par le caractère répété et intentionnel de l'ingestion.</p>
+<hr />
+<h2 id="manifestations_1">🧠 Manifestations</h2>
+<ul>
+<li>ingestion répétée de substances non nutritives sur une durée d'au moins un mois ;</li>
+<li>absence de dégoût ou d'aversion vis-à-vis de ces substances, contrairement à la réaction attendue ;</li>
+<li>comportement inapproprié par rapport à l'âge ou au niveau de développement ;</li>
+<li>dans certains cas, dissimulation du comportement à l'entourage.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_3">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>carences nutritionnelles (en fer ou en zinc notamment), parfois associées au pica ;</li>
+<li>handicap intellectuel ou troubles du développement ;</li>
+<li>grossesse (des envies inhabituelles limitées et sans risque ne relèvent cependant pas systématiquement d'un trouble) ;</li>
+<li>troubles psychiatriques associés (troubles du spectre de l'autisme, schizophrénie, dans certains cas) ;</li>
+<li>stress ou négligence, en particulier chez l'enfant.</li>
+</ul>
+<hr />
+<h2 id="evolution_3">📈 Évolution</h2>
+<p>Chez l'enfant, le pica peut disparaître avec la maturation, en particulier si les carences nutritionnelles sous-jacentes sont corrigées. Chez l'adulte ou en cas de handicap intellectuel associé, le trouble peut être plus persistant.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_3">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Le pica peut entraîner des complications physiques sérieuses selon la substance ingérée : occlusions intestinales, intoxications (plomb notamment en cas d'ingestion de peinture), infections parasitaires, ou lésions dentaires.</p>
+<hr />
+<h2 id="diagnostic_3">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur l'observation du comportement, la recherche de carences nutritionnelles associées et l'évaluation d'un éventuel trouble du développement ou psychiatrique sous-jacent.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne-notamment-un-enfant">🤝 Comment aider un proche concerné (notamment un enfant)</h2>
+<ul>
+<li><strong>Sécuriser l'environnement</strong> en limitant l'accès aux substances concernées, en particulier lorsqu'elles présentent un risque toxique.</li>
+<li><strong>Consulter un médecin</strong> pour rechercher une carence nutritionnelle sous-jacente, facilement traitable dans de nombreux cas.</li>
+<li><strong>Éviter les réactions de dégoût ou de punition excessive</strong>, qui n'aident généralement pas à faire cesser le comportement et peuvent renforcer la dissimulation.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_3">🛠️ Prise en charge</h2>
+<p>La correction d'une éventuelle carence nutritionnelle constitue une priorité. Un accompagnement comportemental peut être proposé, en particulier chez l'enfant ou en cas de handicap intellectuel associé, ainsi qu'un suivi médical des complications éventuelles.</p>
+<hr />
+<h2 id="a-retenir_3">📌 À retenir</h2>
+<p>Le pica se caractérise par l'ingestion répétée de substances non alimentaires, pouvant être liée à une carence nutritionnelle, un trouble du développement ou un contexte de stress, et nécessitant une évaluation médicale en raison des risques physiques associés.</p>
+<hr />
+<h1 id="75-le-trouble-de-rumination" class="entry-title hc-5">🍽️ 7.5 Le trouble de rumination</h1>
+<h2 id="definition_4">Définition</h2>
+<p>Le <strong>trouble de rumination</strong> est caractérisé par la <strong>régurgitation répétée d'aliments après les repas</strong>, qui peuvent ensuite être remâchés, ravalés ou recrachés, en l'absence de cause médicale expliquant ce comportement (contrairement au reflux gastro-œsophagique par exemple).</p>
+<hr />
+<h2 id="comprendre-ce-trouble_1">🔎 Comprendre ce trouble</h2>
+<p>Ce trouble peut apparaître chez le nourrisson, l'enfant ou l'adulte. Contrairement au vomissement, la régurgitation dans ce trouble n'est généralement pas précédée de nausée ou d'effort, et semble se produire de façon quasi automatique, parfois même perçue comme apaisante par la personne (en particulier chez le jeune enfant).</p>
+<hr />
+<h2 id="manifestations_2">🧠 Manifestations</h2>
+<ul>
+<li>régurgitations répétées survenant peu après les repas, sur une période d'au moins un mois ;</li>
+<li>remâchage, ravalement ou expulsion des aliments régurgités ;</li>
+<li>absence de nausée, de haut-le-cœur ou de dégoût précédant la régurgitation ;</li>
+<li>chez le nourrisson, position caractéristique du corps (cambrure, tension) pouvant précéder l'épisode.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_4">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>chez le nourrisson : négligence, manque de stimulation ou stress dans la relation avec l'entourage, bien que le trouble puisse également survenir en l'absence de tels facteurs ;</li>
+<li>chez l'enfant et l'adulte : présence fréquente d'un handicap intellectuel associé, bien que le trouble puisse aussi toucher des personnes sans déficience intellectuelle ;</li>
+<li>possible fonction d'auto-apaisement ou de gestion du stress.</li>
+</ul>
+<hr />
+<h2 id="evolution_4">📈 Évolution</h2>
+<p>Chez le nourrisson, le trouble peut se résoudre spontanément, mais peut aussi entraîner un retard de croissance en cas de persistance, nécessitant une prise en charge. Chez l'adulte, l'évolution peut être plus chronique.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_4">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Le trouble peut entraîner une perte de poids ou un retard de croissance (chez l'enfant), des complications dentaires (en cas de contact répété avec les remontées acides), ainsi qu'un isolement social lié à la gêne provoquée par ce comportement en présence d'autrui.</p>
+<hr />
+<h2 id="diagnostic_4">🩺 Diagnostic</h2>
+<p>Le diagnostic nécessite d'écarter au préalable une cause médicale digestive (reflux gastro-œsophagique, sténose) pouvant expliquer les régurgitations, avant de retenir un trouble de rumination.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne_3">🤝 Comment aider un proche concerné</h2>
+<ul>
+<li><strong>Consulter un médecin en priorité</strong> pour écarter une cause digestive avant toute autre interprétation.</li>
+<li><strong>Chez le nourrisson</strong>, veiller à un environnement affectif stable et stimulant durant les repas.</li>
+<li><strong>Éviter la honte ou la punition</strong>, ce comportement échappant largement au contrôle volontaire de la personne, en particulier chez le jeune enfant.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_4">🛠️ Prise en charge</h2>
+<p>La prise en charge associe un suivi médical (nutritionnel notamment en cas de retard de croissance) et, selon l'âge et le contexte, un accompagnement comportemental visant à modifier les habitudes autour des repas et à proposer des stratégies alternatives d'apaisement.</p>
+<hr />
+<h2 id="a-retenir_4">📌 À retenir</h2>
+<p>Le trouble de rumination se caractérise par des régurgitations répétées et automatiques après les repas, sans cause médicale digestive identifiée, nécessitant un bilan médical préalable puis un accompagnement adapté à l'âge de la personne concernée.</p>
+<hr />
+<h1 id="76-le-trouble-de-restriction-ou-devitement-de-lingestion-daliments-arfid" class="entry-title hc-1">🍽️ 7.6 Le trouble de restriction ou d'évitement de l'ingestion d'aliments (ARFID)</h1>
+<h2 id="definition_5">Définition</h2>
+<p>Le <strong>trouble de restriction ou d'évitement de l'ingestion d'aliments</strong> (ARFID, de l'anglais <em>avoidant/restrictive food intake disorder</em>) est caractérisé par un <strong>évitement ou une restriction alimentaire significative</strong>, non lié à une préoccupation concernant le poids ou l'image corporelle (contrairement à l'anorexie), entraînant une insuffisance des apports nutritionnels ou énergétiques.</p>
+<hr />
+<h2 id="comprendre-larfid">🔎 Comprendre l'ARFID</h2>
+<p>Ce trouble se distingue nettement de l'anorexie : la restriction n'est pas motivée par la peur de grossir, mais par d'autres mécanismes, tels qu'un manque d'intérêt pour l'alimentation, une hypersensibilité sensorielle vis-à-vis de certaines textures, odeurs ou couleurs d'aliments, ou une peur de conséquences négatives liées à l'alimentation (peur de s'étouffer ou de vomir, notamment après une expérience négative).</p>
+<hr />
+<h2 id="manifestations_3">🧠 Manifestations</h2>
+<ul>
+<li>restriction alimentaire importante en termes de quantité ou de variété des aliments consommés ;</li>
+<li>perte de poids significative, retard de croissance (chez l'enfant), ou carences nutritionnelles ;</li>
+<li>dépendance à une alimentation entérale ou à des compléments nutritionnels dans les formes sévères ;</li>
+<li>absence de préoccupation concernant le poids ou l'image corporelle, contrairement à l'anorexie ;</li>
+<li>anxiété marquée face à certains aliments (en lien avec leur texture, leur apparence, ou la peur d'un incident comme l'étouffement).</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_5">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>hypersensibilité sensorielle, fréquemment associée aux troubles du spectre de l'autisme ;</li>
+<li>antécédent d'incident alimentaire traumatique (étouffement, vomissement important) ayant déclenché une peur persistante ;</li>
+<li>manque d'intérêt général pour l'alimentation, parfois présent dès la petite enfance ;</li>
+<li>anxiété généralisée ou troubles anxieux associés.</li>
+</ul>
+<hr />
+<h2 id="evolution_5">📈 Évolution</h2>
+<p>L'évolution dépend fortement de la cause sous-jacente et de la précocité de la prise en charge. Une intervention précoce, en particulier chez l'enfant, améliore généralement le pronostic et limite le retentissement sur la croissance.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_5">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Ce trouble peut entraîner d'importantes difficultés lors des repas familiaux ou scolaires, un isolement social lié à l'évitement de situations impliquant de la nourriture (invitations, restaurants), ainsi que des carences nutritionnelles pouvant affecter la croissance et le développement chez l'enfant.</p>
+<hr />
+<h2 id="diagnostic_5">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur l'évaluation de la restriction alimentaire et de son retentissement nutritionnel, en excluant une préoccupation liée au poids ou à l'image corporelle, ainsi qu'une cause médicale expliquant à elle seule la restriction.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne-notamment-un-enfant_1">🤝 Comment aider un proche concerné (notamment un enfant)</h2>
+<ul>
+<li><strong>Éviter de forcer à manger</strong>, ce qui peut renforcer l'anxiété autour des aliments redoutés.</li>
+<li><strong>Introduire de nouveaux aliments très progressivement</strong>, en respectant le rythme de la personne plutôt qu'en imposant de grandes quantités d'un coup.</li>
+<li><strong>Ne pas minimiser les sensations sensorielles rapportées</strong> (texture, odeur), qui sont bien réelles pour la personne concernée.</li>
+<li><strong>Consulter un professionnel</strong> (médecin, diététicien, psychologue) en cas de perte de poids, de retard de croissance, ou de restriction très sévère.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_5">🛠️ Prise en charge</h2>
+<p>La prise en charge est généralement pluridisciplinaire, associant un suivi nutritionnel, un accompagnement comportemental (exposition très progressive à de nouveaux aliments) et, selon le contexte, une prise en charge de l'anxiété ou des particularités sensorielles associées.</p>
+<hr />
+<h2 id="a-retenir_5">📌 À retenir</h2>
+<p>L'ARFID se distingue de l'anorexie par l'absence de préoccupation liée au poids ou à l'image corporelle : la restriction alimentaire y est plutôt motivée par un manque d'intérêt pour la nourriture, une hypersensibilité sensorielle, ou une peur liée à un incident alimentaire antérieur.</p>
+<hr />
+<h1 id="77-le-trouble-des-conduites-alimentaires-specifie" class="entry-title hc-2">🍽️ 7.7 Le trouble des conduites alimentaires spécifié</h1>
+<h2 id="definition_6">Définition</h2>
+<p>Le <strong>trouble des conduites alimentaires spécifié</strong> est une catégorie utilisée pour des présentations cliniques provoquant une souffrance ou un retentissement significatif, mais ne remplissant pas l'ensemble des critères d'un trouble alimentaire précis (anorexie, boulimie, accès hyperphagique).</p>
+<hr />
+<h2 id="comprendre-cette-categorie">🔎 Comprendre cette catégorie</h2>
+<p>Cette catégorie permet de reconnaître et de prendre en charge des présentations cliniquement significatives, mais atypiques : par exemple une anorexie mentale avec un poids restant dans les limites normales (anorexie dite « atypique »), une boulimie ou un accès hyperphagique avec une fréquence de crises plus faible que celle requise pour le diagnostic complet, ou encore un trouble purgatif isolé (recours à des comportements compensatoires sans crises alimentaires).</p>
+<h2 id="manifestations_4">🧠 Manifestations</h2>
+<p>Variables selon la présentation, elles peuvent comprendre certains éléments de l'anorexie, de la boulimie ou de l'accès hyperphagique, sans en remplir tous les critères, avec un retentissement psychologique ou physique néanmoins significatif.</p>
+<h2 id="diagnostic_6">🩺 Diagnostic</h2>
+<p>Le professionnel identifie la présentation clinique précise et précise en quoi elle diffère des critères d'un trouble alimentaire complet, tout en reconnaissant la souffrance associée.</p>
+<h2 id="prise-en-charge_6">🛠️ Prise en charge</h2>
+<p>La prise en charge suit les mêmes principes que pour le trouble le plus proche cliniquement (anorexie, boulimie ou accès hyperphagique), adaptée à la présentation spécifique de la personne.</p>
+<h2 id="idees-recues_3">❌ Idées reçues</h2>
+<h3 id="si-ca-ne-coche-pas-toutes-les-cases-ce-nest-pas-grave">« Si ça ne coche pas toutes les cases, ce n'est pas grave. »</h3>
+<p>Non : un trouble alimentaire spécifié peut être tout aussi sérieux et nécessiter une prise en charge tout aussi attentive qu'un trouble remplissant l'ensemble des critères diagnostiques.</p>
+<h2 id="a-retenir_6">📌 À retenir</h2>
+<p>Le trouble des conduites alimentaires spécifié désigne des présentations cliniquement significatives ne remplissant pas tous les critères d'un trouble alimentaire précis, mais nécessitant une prise en charge tout aussi sérieuse.</p>
+<hr />
+<h1 id="78-le-trouble-des-conduites-alimentaires-non-specifie" class="entry-title hc-3">🍽️ 7.8 Le trouble des conduites alimentaires non spécifié</h1>
+<h2 id="definition_7">Définition</h2>
+<p>Le <strong>trouble des conduites alimentaires non spécifié</strong> est utilisé lorsque les symptômes d'un trouble alimentaire sont présents et provoquent une souffrance significative, mais que les informations disponibles ne permettent pas, ou que le contexte clinique ne permet pas, de préciser davantage le diagnostic.</p>
+<h2 id="comprendre-cette-categorie_1">🔎 Comprendre cette catégorie</h2>
+<p>Cette catégorie est notamment utilisée dans des contextes d'évaluation en urgence, où toutes les informations nécessaires à un diagnostic précis ne sont pas encore disponibles.</p>
+<h2 id="diagnostic_7">🩺 Diagnostic</h2>
+<p>Elle est posée lorsque le tableau clinique évoque un trouble alimentaire sans que les critères d'une catégorie précise ne puissent être confirmés dans l'immédiat.</p>
+<h2 id="prise-en-charge_7">🛠️ Prise en charge</h2>
+<p>La prise en charge initiale vise avant tout à sécuriser la personne sur le plan médical et nutritionnel, en attendant une évaluation plus approfondie permettant, si besoin, de préciser le diagnostic.</p>
+<h2 id="a-retenir_7">📌 À retenir</h2>
+<p>Le trouble des conduites alimentaires non spécifié reconnaît la présence de symptômes significatifs sans permettre, dans l'immédiat, un diagnostic plus précis, ce qui n'empêche pas une prise en charge rapide et adaptée.</p>
+<hr />
+<p><em>Les contenus de cette partie sont proposés à titre informatif et éducatif et ne remplacent ni un diagnostic ni un accompagnement par un professionnel de santé qualifié. Si toi-même ou une personne de ton entourage traverse des difficultés liées à l'alimentation, il est important d'en parler à un médecin ou à un professionnel de santé mentale.</em></p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-8-troubles-neurodeveloppementaux/"><span class="similar-icon">🩺</span>Partie 8 — Troubles neurodéveloppementaux</a><a class="similar-item" href="/chapitre/troubles-partie-9-troubles-dissociatifs/"><span class="similar-icon">🩺</span>Partie 9 — Troubles dissociatifs</a><a class="similar-item" href="/chapitre/troubles-partie-10-troubles-lies-aux-traumatismes-et-au-stress/"><span class="similar-icon">🩺</span>Partie 10 — Troubles liés aux traumatismes et au stress</a></div>
+    </div>
+    <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

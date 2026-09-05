@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expression et communication émotionnelle — Mon Esprit</title>
+<meta name="description" content="Expression et communication émotionnelle, dans la catégorie Émotions et comportements humains de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#111-quest-ce-que-lexpression-emotionnelle">🗣️ 11.1 Qu'est-ce que l'expression émotionnelle ?</a></li><li><a href="#112-les-expressions-faciales">👁️ 11.2 Les expressions faciales</a></li><li><a href="#113-la-voix-et-les-emotions">🔊 11.3 La voix et les émotions</a></li><li><a href="#114-la-posture-emotionnelle">🧍 11.4 La posture émotionnelle</a></li><li><a href="#115-les-gestes">🤲 11.5 Les gestes</a></li><li><a href="#116-le-langage-emotionnel">🗣️ 11.6 Le langage émotionnel</a></li><li><a href="#117-letiquetage-emotionnel">🏷️ 11.7 L'étiquetage émotionnel</a></li><li><a href="#118-la-conscience-emotionnelle">🧠 11.8 La conscience émotionnelle</a></li><li><a href="#119-la-reconnaissance-des-emotions-dautrui">👀 11.9 La reconnaissance des émotions d'autrui</a></li><li><a href="#1110-le-role-du-contexte">🧩 11.10 Le rôle du contexte</a></li><li><a href="#1111-linterpretation-des-signaux-emotionnels">🧠 11.11 L'interprétation des signaux émotionnels</a></li><li><a href="#1112-les-malentendus-emotionnels">🔄 11.12 Les malentendus émotionnels</a></li><li><a href="#1113-la-dissimulation-emotionnelle">🫥 11.13 La dissimulation émotionnelle</a></li><li><a href="#1114-la-simulation-emotionnelle">🎭 11.14 La simulation émotionnelle</a></li><li><a href="#1115-la-suppression-de-lexpression-emotionnelle">🤐 11.15 La suppression de l'expression émotionnelle</a></li><li><a href="#1116-expression-et-experience-emotionnelle">🧠 11.16 Expression et expérience émotionnelle</a></li><li><a href="#1117-lintensite-de-lexpression">🌡️ 11.17 L'intensité de l'expression</a></li><li><a href="#1118-les-differences-culturelles">🌍 11.18 Les différences culturelles</a></li><li><a href="#1119-lexpression-emotionnelle-au-cours-du-developpement">👶 11.19 L'expression émotionnelle au cours du développement</a></li><li><a href="#1120-lexpression-emotionnelle-dans-les-relations">🧑‍🤝‍🧑 11.20 L'expression émotionnelle dans les relations</a></li><li><a href="#1121-lexpression-de-laffection">❤️ 11.21 L'expression de l'affection</a></li><li><a href="#1122-lexpression-de-la-tristesse">😔 11.22 L'expression de la tristesse</a></li><li><a href="#1123-lexpression-de-la-colere">😡 11.23 L'expression de la colère</a></li><li><a href="#1124-lexpression-de-la-peur">😨 11.24 L'expression de la peur</a></li><li><a href="#1125-lexpression-de-la-joie">😄 11.25 L'expression de la joie</a></li><li><a href="#1126-la-contagion-emotionnelle">🧑‍🤝‍🧑 11.26 La contagion émotionnelle</a></li><li><a href="#1127-le-mimetisme-emotionnel">🪞 11.27 Le mimétisme émotionnel</a></li><li><a href="#1128-la-regulation-emotionnelle-interpersonnelle">🔄 11.28 La régulation émotionnelle interpersonnelle</a></li><li><a href="#1129-le-soutien-emotionnel">🫂 11.29 Le soutien émotionnel</a></li><li><a href="#1130-lempathie-dans-la-communication">🧠 11.30 L'empathie dans la communication</a></li><li><a href="#1131-lecoute-emotionnelle">👂 11.31 L'écoute émotionnelle</a></li><li><a href="#1132-la-validation-emotionnelle">💬 11.32 La validation émotionnelle</a></li><li><a href="#1133-lescalade-emotionnelle">⚡ 11.33 L'escalade émotionnelle</a></li><li><a href="#1134-le-retrait-emotionnel">🧊 11.34 Le retrait émotionnel</a></li><li><a href="#1135-la-confidentialite-emotionnelle">🔐 11.35 La confidentialité émotionnelle</a></li><li><a href="#1136-les-emotions-implicites">🧠 11.36 Les émotions implicites</a></li><li><a href="#1137-la-communication-emotionnelle-numerique">📱 11.37 La communication émotionnelle numérique</a></li><li><a href="#1138-les-erreurs-dinterpretation-en-ligne">👀 11.38 Les erreurs d'interprétation en ligne</a></li><li><a href="#1139-les-differences-individuelles-dans-lexpression-emotionnelle">🧩 11.39 Les différences individuelles dans l'expression émotionnelle</a></li><li><a href="#1140-pourquoi-etudier-lexpression-et-la-communication-emotionnelle">🔬 11.40 Pourquoi étudier l'expression et la communication émotionnelle ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Expression et communication émotionnelle',
+        category: 'Émotions et comportements humains',
+        icon: '❤️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/emotions/">❤️ Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Expression et communication émotionnelle</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-emotions)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Les émotions ne sont pas uniquement ressenties intérieurement. Elles peuvent également être exprimées, communiquées et interprétées par d'autres personnes.</p>
+<p>La communication émotionnelle repose sur plusieurs éléments : les paroles, la voix, les expressions du visage, les gestes, la posture et le comportement.</p>
+<h2 id="111-quest-ce-que-lexpression-emotionnelle" class="entry-title hc-1">🗣️ 11.1 Qu'est-ce que l'expression émotionnelle ?</h2>
+<p>L'expression émotionnelle correspond à la manière dont un état émotionnel peut être manifesté extérieurement.</p>
+<p>Elle peut être volontaire, automatique ou partiellement contrôlée.</p>
+<h2 id="112-les-expressions-faciales" class="entry-title hc-2">👁️ 11.2 Les expressions faciales</h2>
+<p>Le visage constitue une importante source d'informations émotionnelles.</p>
+<p>Les mouvements des yeux, de la bouche, des sourcils et d'autres muscles faciaux peuvent participer à l'expression de différentes émotions.</p>
+<h2 id="113-la-voix-et-les-emotions" class="entry-title hc-3">🔊 11.3 La voix et les émotions</h2>
+<p>Les émotions peuvent modifier certaines caractéristiques de la voix.</p>
+<p>Le ton, le rythme, l'intensité ou les pauses peuvent transmettre des informations émotionnelles.</p>
+<h2 id="114-la-posture-emotionnelle" class="entry-title hc-4">🧍 11.4 La posture émotionnelle</h2>
+<p>La posture corporelle peut également fournir des indices concernant l'état émotionnel.</p>
+<p>Une personne peut modifier sa manière de se tenir, de bouger ou d'occuper l'espace selon son état émotionnel.</p>
+<h2 id="115-les-gestes" class="entry-title hc-5">🤲 11.5 Les gestes</h2>
+<p>Les gestes peuvent accompagner la communication émotionnelle.</p>
+<p>Ils peuvent renforcer un message verbal ou transmettre certaines informations sans utiliser de mots.</p>
+<h2 id="116-le-langage-emotionnel" class="entry-title hc-1">🗣️ 11.6 Le langage émotionnel</h2>
+<p>Les individus peuvent utiliser des mots pour décrire directement leurs émotions.</p>
+<p>Le vocabulaire émotionnel permet notamment de distinguer différents états comme la frustration, la tristesse, l'inquiétude ou la colère.</p>
+<h2 id="117-letiquetage-emotionnel" class="entry-title hc-2">🏷️ 11.7 L'étiquetage émotionnel</h2>
+<p>L'étiquetage émotionnel consiste à identifier et nommer une émotion.</p>
+<p>Mettre un mot sur une expérience émotionnelle peut modifier la manière dont elle est vécue et comprise.</p>
+<h2 id="118-la-conscience-emotionnelle" class="entry-title hc-3">🧠 11.8 La conscience émotionnelle</h2>
+<p>La conscience émotionnelle correspond à la capacité à identifier et reconnaître ses propres états émotionnels.</p>
+<p>Elle peut faciliter leur communication.</p>
+<h2 id="119-la-reconnaissance-des-emotions-dautrui" class="entry-title hc-4">👀 11.9 La reconnaissance des émotions d'autrui</h2>
+<p>Les individus peuvent tenter d'identifier les émotions ressenties par d'autres personnes.</p>
+<p>Cette reconnaissance repose sur les expressions, la voix, le comportement et le contexte.</p>
+<h2 id="1110-le-role-du-contexte" class="entry-title hc-5">🧩 11.10 Le rôle du contexte</h2>
+<p>Un même comportement peut avoir différentes significations selon la situation.</p>
+<p>Un silence peut par exemple correspondre à de la tristesse, de la réflexion, de la fatigue ou simplement à une absence de volonté de parler.</p>
+<h2 id="1111-linterpretation-des-signaux-emotionnels" class="entry-title hc-1">🧠 11.11 L'interprétation des signaux émotionnels</h2>
+<p>Les signaux émotionnels doivent être interprétés.</p>
+<p>Cette interprétation peut être influencée par les expériences précédentes, les attentes, les connaissances et l'état émotionnel de la personne qui observe.</p>
+<h2 id="1112-les-malentendus-emotionnels" class="entry-title hc-2">🔄 11.12 Les malentendus émotionnels</h2>
+<p>Une émotion peut être mal interprétée.</p>
+<p>Une expression neutre peut être perçue comme froide ou hostile alors qu'elle ne correspond pas réellement à cet état.</p>
+<h2 id="1113-la-dissimulation-emotionnelle" class="entry-title hc-3">🫥 11.13 La dissimulation émotionnelle</h2>
+<p>Une personne peut volontairement limiter l'expression visible d'une émotion.</p>
+<p>Elle peut par exemple essayer de ne pas montrer sa tristesse, sa colère ou son anxiété.</p>
+<h2 id="1114-la-simulation-emotionnelle" class="entry-title hc-4">🎭 11.14 La simulation émotionnelle</h2>
+<p>Une personne peut parfois exprimer une émotion qu'elle ne ressent pas réellement.</p>
+<p>Cela peut être utilisé dans certaines situations sociales, professionnelles ou culturelles.</p>
+<h2 id="1115-la-suppression-de-lexpression-emotionnelle" class="entry-title hc-5">🤐 11.15 La suppression de l'expression émotionnelle</h2>
+<p>La suppression consiste à empêcher ou limiter volontairement l'expression extérieure d'une émotion.</p>
+<p>Elle ne signifie pas nécessairement que l'émotion elle-même disparaît.</p>
+<h2 id="1116-expression-et-experience-emotionnelle" class="entry-title hc-1">🧠 11.16 Expression et expérience émotionnelle</h2>
+<p>L'expression visible d'une émotion et l'expérience intérieure ne correspondent pas toujours exactement.</p>
+<p>Une personne peut ressentir une émotion intense tout en présentant très peu de signes extérieurs.</p>
+<h2 id="1117-lintensite-de-lexpression" class="entry-title hc-2">🌡️ 11.17 L'intensité de l'expression</h2>
+<p>L'intensité avec laquelle une émotion est exprimée varie selon les personnes.</p>
+<p>Deux individus peuvent ressentir une émotion de même intensité tout en l'exprimant de manière très différente.</p>
+<h2 id="1118-les-differences-culturelles" class="entry-title hc-3">🌍 11.18 Les différences culturelles</h2>
+<p>Les normes culturelles peuvent influencer les émotions considérées comme appropriées à exprimer.</p>
+<p>Certaines cultures ou certains environnements peuvent favoriser davantage la retenue, tandis que d'autres peuvent valoriser une expression plus ouverte.</p>
+<h2 id="1119-lexpression-emotionnelle-au-cours-du-developpement" class="entry-title hc-4">👶 11.19 L'expression émotionnelle au cours du développement</h2>
+<p>La manière d'exprimer les émotions évolue au cours du développement.</p>
+<p>Les capacités de compréhension, de communication et de régulation émotionnelle deviennent progressivement plus complexes.</p>
+<h2 id="1120-lexpression-emotionnelle-dans-les-relations" class="entry-title hc-5">🧑‍🤝‍🧑 11.20 L'expression émotionnelle dans les relations</h2>
+<p>Les émotions jouent un rôle important dans les relations proches.</p>
+<p>Exprimer de l'affection, de la tristesse, de la colère ou de la gratitude peut transmettre des informations importantes à l'autre personne.</p>
+<h2 id="1121-lexpression-de-laffection" class="entry-title hc-1">❤️ 11.21 L'expression de l'affection</h2>
+<p>L'affection peut être exprimée verbalement ou non verbalement.</p>
+<p>Les paroles, les gestes, la proximité et l'attention peuvent tous participer à cette expression.</p>
+<h2 id="1122-lexpression-de-la-tristesse" class="entry-title hc-2">😔 11.22 L'expression de la tristesse</h2>
+<p>La tristesse peut être communiquée par les paroles, les expressions faciales, le comportement ou le retrait.</p>
+<p>Elle peut également provoquer une recherche de soutien social.</p>
+<h2 id="1123-lexpression-de-la-colere" class="entry-title hc-3">😡 11.23 L'expression de la colère</h2>
+<p>La colère peut être communiquée de manière verbale ou non verbale.</p>
+<p>Son expression peut varier d'une simple manifestation d'irritation à une réaction beaucoup plus intense.</p>
+<h2 id="1124-lexpression-de-la-peur" class="entry-title hc-4">😨 11.24 L'expression de la peur</h2>
+<p>La peur peut être communiquée par les expressions faciales, la voix, la posture ou les comportements.</p>
+<p>Ces signaux peuvent également informer les autres de la présence potentielle d'une menace.</p>
+<h2 id="1125-lexpression-de-la-joie" class="entry-title hc-5">😄 11.25 L'expression de la joie</h2>
+<p>La joie peut être exprimée par le sourire, le rire, la voix, les gestes ou la recherche de partage avec les autres.</p>
+<p>Elle peut également favoriser certaines interactions sociales positives.</p>
+<h2 id="1126-la-contagion-emotionnelle" class="entry-title hc-1">🧑‍🤝‍🧑 11.26 La contagion émotionnelle</h2>
+<p>Une personne peut être influencée émotionnellement par l'état d'autres personnes.</p>
+<p>Cette contagion peut se produire consciemment ou automatiquement.</p>
+<h2 id="1127-le-mimetisme-emotionnel" class="entry-title hc-2">🪞 11.27 Le mimétisme émotionnel</h2>
+<p>Les individus peuvent reproduire involontairement certaines expressions ou attitudes observées chez les autres.</p>
+<p>Ce mimétisme peut participer à la synchronisation des interactions.</p>
+<h2 id="1128-la-regulation-emotionnelle-interpersonnelle" class="entry-title hc-3">🔄 11.28 La régulation émotionnelle interpersonnelle</h2>
+<p>Une personne peut contribuer à modifier l'état émotionnel d'une autre personne.</p>
+<p>Le soutien, la réassurance, l'écoute ou simplement la présence peuvent influencer l'expérience émotionnelle.</p>
+<h2 id="1129-le-soutien-emotionnel" class="entry-title hc-4">🫂 11.29 Le soutien émotionnel</h2>
+<p>Le soutien émotionnel consiste notamment à offrir de l'écoute, de la compréhension, de la présence ou de l'affection.</p>
+<p>Il peut contribuer à modifier la manière dont une situation émotionnelle est vécue.</p>
+<h2 id="1130-lempathie-dans-la-communication" class="entry-title hc-5">🧠 11.30 L'empathie dans la communication</h2>
+<p>L'empathie permet notamment de prendre en compte l'expérience émotionnelle d'une autre personne.</p>
+<p>Elle peut faciliter certaines formes de communication et de compréhension mutuelle.</p>
+<h2 id="1131-lecoute-emotionnelle" class="entry-title hc-1">👂 11.31 L'écoute émotionnelle</h2>
+<p>L'écoute émotionnelle consiste à prêter attention non seulement aux mots utilisés, mais également aux indices concernant l'état émotionnel de la personne.</p>
+<p>Elle implique notamment l'attention portée au ton, au rythme et au contexte.</p>
+<h2 id="1132-la-validation-emotionnelle" class="entry-title hc-2">💬 11.32 La validation émotionnelle</h2>
+<p>La validation émotionnelle consiste à reconnaître qu'une émotion ou une expérience émotionnelle existe et peut avoir une signification pour la personne.</p>
+<p>Elle ne signifie pas nécessairement être d'accord avec l'interprétation ou le comportement associé.</p>
+<h2 id="1133-lescalade-emotionnelle" class="entry-title hc-3">⚡ 11.33 L'escalade émotionnelle</h2>
+<p>Une émotion exprimée peut provoquer une réaction émotionnelle chez une autre personne.</p>
+<p>Dans certaines interactions conflictuelles, cette dynamique peut créer une augmentation progressive de l'intensité émotionnelle.</p>
+<h2 id="1134-le-retrait-emotionnel" class="entry-title hc-4">🧊 11.34 Le retrait émotionnel</h2>
+<p>Une personne peut réduire temporairement sa communication émotionnelle.</p>
+<p>Ce retrait peut concerner les paroles, les expressions ou la recherche de proximité.</p>
+<h2 id="1135-la-confidentialite-emotionnelle" class="entry-title hc-5">🔐 11.35 La confidentialité émotionnelle</h2>
+<p>Les individus ne communiquent pas nécessairement toutes leurs émotions aux autres.</p>
+<p>Certaines expériences émotionnelles peuvent rester privées ou être partagées uniquement avec certaines personnes.</p>
+<h2 id="1136-les-emotions-implicites" class="entry-title hc-1">🧠 11.36 Les émotions implicites</h2>
+<p>Une émotion peut influencer le comportement sans être clairement identifiée ou exprimée.</p>
+<p>Une personne peut ainsi agir différemment sans avoir conscience de l'état émotionnel qui influence son comportement.</p>
+<h2 id="1137-la-communication-emotionnelle-numerique" class="entry-title hc-2">📱 11.37 La communication émotionnelle numérique</h2>
+<p>Les messages numériques disposent de moins d'indices non verbaux que les interactions en face à face.</p>
+<p>Les emojis, la ponctuation, les délais de réponse ou la formulation peuvent alors être utilisés pour transmettre certaines informations émotionnelles.</p>
+<h2 id="1138-les-erreurs-dinterpretation-en-ligne" class="entry-title hc-3">👀 11.38 Les erreurs d'interprétation en ligne</h2>
+<p>L'absence de ton de voix et d'expressions faciales peut augmenter les possibilités de malentendu dans certaines communications numériques.</p>
+<p>Un même message écrit peut être interprété de différentes manières.</p>
+<h2 id="1139-les-differences-individuelles-dans-lexpression-emotionnelle" class="entry-title hc-4">🧩 11.39 Les différences individuelles dans l'expression émotionnelle</h2>
+<p>Les personnes diffèrent dans leur manière de ressentir et d'exprimer leurs émotions.</p>
+<p>Ces différences peuvent être influencées par la personnalité, le développement, les expériences, la culture et le contexte.</p>
+<h2 id="1140-pourquoi-etudier-lexpression-et-la-communication-emotionnelle" class="entry-title hc-5">🔬 11.40 Pourquoi étudier l'expression et la communication émotionnelle ?</h2>
+<p>La communication émotionnelle permet de comprendre comment les émotions circulent entre les individus :</p>
+<p><strong>❤️ émotion → 🧠 expérience → 🗣️ expression → 👀 perception → 🧩 interprétation → 🧑‍🤝‍🧑 réaction</strong></p>
+<p>Elle montre que communiquer une émotion ne consiste pas uniquement à parler de ce que l'on ressent. Les comportements, la voix, le visage, les gestes et le contexte participent également à la transmission des informations émotionnelles.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>L'expression émotionnelle peut être :</p>
+<p><strong>🗣️ verbale → 👀 faciale → 🔊 vocale → 🧍 corporelle → 🤲 comportementale</strong></p>
+<p>Une émotion ressentie n'est pas toujours exprimée, et une émotion exprimée n'est pas nécessairement ressentie avec la même intensité.</p>
+<p>La communication émotionnelle dépend également du <strong>contexte, de la culture, des relations, des expériences individuelles et des capacités de régulation émotionnelle</strong>.</p>
+<p>Enfin, interpréter l'émotion d'une autre personne nécessite de considérer plusieurs indices : <strong>un seul comportement ne permet généralement pas de déterminer avec certitude ce qu'une personne ressent.</strong></p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-regulation-des-emotions-et-comportements/"><span class="similar-icon">❤️</span>Régulation des émotions et comportements</a><a class="similar-item" href="/chapitre/emotions-impulsivite-et-controle-de-soi/"><span class="similar-icon">❤️</span>Impulsivité et contrôle de soi</a><a class="similar-item" href="/chapitre/emotions-emotions-motivation-et-objectifs/"><span class="similar-icon">❤️</span>Émotions, motivation et objectifs</a></div>
+    </div>
+    <a class="back-link" href="/categorie/emotions/">← Retour à « Émotions et comportements humains »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partie 8 — Troubles neurodéveloppementaux — Mon Esprit</title>
+<meta name="description" content="Partie 8 — Troubles neurodéveloppementaux, dans la catégorie Troubles psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#81-le-trouble-du-developpement-intellectuel">🧩 8.1 Le trouble du développement intellectuel</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#comprendre-ce-trouble">🔎 Comprendre ce trouble</a></li><li><a href="#manifestations">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne">🤝 Comment aider un proche concerné</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#idees-recues">❌ Idées reçues</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#82-les-troubles-de-la-communication">🧩 8.2 Les troubles de la communication</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#comprendre-ces-troubles">🔎 Comprendre ces troubles</a></li><li><a href="#manifestations_1">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque_1">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_1">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_1">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne-notamment-un-enfant">🤝 Comment aider un proche concerné (notamment un enfant)</a></li><li><a href="#prise-en-charge_1">🛠️ Prise en charge</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#83-le-trouble-du-spectre-de-lautisme">🧩 8.3 Le trouble du spectre de l'autisme</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#comprendre-le-tsa">🔎 Comprendre le TSA</a></li><li><a href="#manifestations-sociales-et-communicationnelles">🧠 Manifestations sociales et communicationnelles</a></li><li><a href="#comportements-interets-et-activites-restreints-et-repetitifs">🎯 Comportements, intérêts et activités restreints et répétitifs</a></li><li><a href="#causes-et-facteurs-de-risque_2">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_2">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_2">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes_1">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic_2">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne_1">🤝 Comment aider un proche concerné</a></li><li><a href="#prise-en-charge_2">🛠️ Prise en charge</a></li><li><a href="#idees-recues_1">❌ Idées reçues</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#84-le-trouble-deficit-de-lattentionhyperactivite-tdah">🧩 8.4 Le trouble déficit de l'attention/hyperactivité (TDAH)</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#comprendre-le-tdah">🔎 Comprendre le TDAH</a></li><li><a href="#manifestations-dinattention">🧠 Manifestations d'inattention</a></li><li><a href="#manifestations-dhyperactivite-et-dimpulsivite">⚡ Manifestations d'hyperactivité et d'impulsivité</a></li><li><a href="#causes-et-facteurs-de-risque_3">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_3">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_3">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes_2">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic_3">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne_2">🤝 Comment aider un proche concerné</a></li><li><a href="#prise-en-charge_3">🛠️ Prise en charge</a></li><li><a href="#idees-recues_2">❌ Idées reçues</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#85-le-trouble-specifique-des-apprentissages">🧩 8.5 Le trouble spécifique des apprentissages</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#comprendre-ce-trouble_1">🔎 Comprendre ce trouble</a></li><li><a href="#manifestations_2">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque_4">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_4">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_4">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#diagnostic_4">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne-notamment-un-enfant_1">🤝 Comment aider un proche concerné (notamment un enfant)</a></li><li><a href="#prise-en-charge_4">🛠️ Prise en charge</a></li><li><a href="#idees-recues_3">❌ Idées reçues</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#86-le-trouble-developpemental-de-la-coordination">🧩 8.6 Le trouble développemental de la coordination</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#comprendre-ce-trouble_2">🔎 Comprendre ce trouble</a></li><li><a href="#manifestations_3">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque_5">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_5">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_5">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#diagnostic_5">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne-notamment-un-enfant_2">🤝 Comment aider un proche concerné (notamment un enfant)</a></li><li><a href="#prise-en-charge_5">🛠️ Prise en charge</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#87-le-trouble-de-mouvement-stereotype">🧩 8.7 Le trouble de mouvement stéréotypé</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#comprendre-ce-trouble_3">🔎 Comprendre ce trouble</a></li><li><a href="#manifestations_4">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque_6">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_6">📈 Évolution</a></li><li><a href="#diagnostic_6">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne-notamment-un-enfant_3">🤝 Comment aider un proche concerné (notamment un enfant)</a></li><li><a href="#prise-en-charge_6">🛠️ Prise en charge</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#88-les-tics-et-le-syndrome-de-gilles-de-la-tourette">🧩 8.8 Les tics et le syndrome de Gilles de la Tourette</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#comprendre-les-tics">🔎 Comprendre les tics</a></li><li><a href="#manifestations_5">🧠 Manifestations</a></li><li><a href="#causes-et-facteurs-de-risque_7">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution_7">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne_6">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes_3">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic_7">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-concerne-notamment-un-enfant_4">🤝 Comment aider un proche concerné (notamment un enfant)</a></li><li><a href="#prise-en-charge_7">🛠️ Prise en charge</a></li><li><a href="#idees-recues_4">❌ Idées reçues</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Partie 8 — Troubles neurodéveloppementaux',
+        category: 'Troubles psychologiques',
+        icon: '🩺'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Partie 8 — Troubles neurodéveloppementaux</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-troubles)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Dans ce chapitre :</p>
+<ul>
+<li>🧩 8.1 Le trouble du développement intellectuel</li>
+<li>🧩 8.2 Les troubles de la communication</li>
+<li>🧩 8.3 Le trouble du spectre de l'autisme</li>
+<li>🧩 8.4 Le trouble déficit de l'attention/hyperactivité (<a class="gloss-link" href="#84-le-trouble-deficit-de-lattentionhyperactivite-tdah" title="Voir la définition de TDAH">TDAH</a>)</li>
+<li>🧩 8.5 Le trouble spécifique des apprentissages</li>
+<li>🧩 8.6 Le trouble développemental de la coordination</li>
+<li>🧩 8.7 Le trouble de mouvement stéréotypé</li>
+<li>🧩 8.8 Les tics et le syndrome de Gilles de la Tourette</li>
+</ul>
+<hr />
+<h1 id="81-le-trouble-du-developpement-intellectuel" class="entry-title hc-1">🧩 8.1 Le trouble du développement intellectuel</h1>
+<h2 id="definition">Définition</h2>
+<p>Le <strong>trouble du développement intellectuel</strong> (anciennement appelé « retard mental » ou « déficience intellectuelle ») est un trouble neurodéveloppemental caractérisé par des <strong>limitations significatives du fonctionnement intellectuel</strong> (raisonnement, résolution de problèmes, apprentissage) et du <strong>comportement adaptatif</strong> (autonomie dans la vie quotidienne, communication, compétences sociales), apparaissant durant la période du développement.</p>
+<hr />
+<h2 id="comprendre-ce-trouble">🔎 Comprendre ce trouble</h2>
+<p>Le diagnostic repose sur trois critères conjoints : des difficultés intellectuelles significatives, des difficultés adaptatives concrètes dans la vie quotidienne, et une apparition durant l'enfance ou l'adolescence. Le fonctionnement intellectuel seul (mesuré historiquement par le quotient intellectuel) ne suffit plus, dans les classifications actuelles, à définir la sévérité du trouble : c'est le retentissement sur l'autonomie concrète de la personne qui prime.</p>
+<p>Quatre degrés de sévérité sont généralement distingués (léger, moyen, sévère, profond), définis avant tout par le niveau de soutien nécessaire dans les domaines conceptuel (langage, raisonnement, apprentissages scolaires), social (relations, communication sociale) et pratique (autonomie du quotidien, gestion de l'argent, du temps).</p>
+<hr />
+<h2 id="manifestations">🧠 Manifestations</h2>
+<ul>
+<li>difficultés d'apprentissage, notamment scolaire, plus ou moins marquées selon la sévérité ;</li>
+<li>difficultés de raisonnement abstrait et de résolution de problèmes ;</li>
+<li>retard ou difficultés dans le développement du langage ;</li>
+<li>difficultés d'autonomie dans les activités de la vie quotidienne (hygiène, gestion du temps, de l'argent, des démarches administratives) ;</li>
+<li>difficultés dans les compétences sociales (compréhension des codes sociaux, gestion des relations) ;</li>
+<li>dans les formes plus sévères, dépendance importante à l'aide d'autrui pour les gestes du quotidien.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque">🧬 Causes et facteurs de risque</h2>
+<h3 id="facteurs-prenataux">Facteurs prénataux</h3>
+<p>Anomalies génétiques (trisomie 21 notamment), infections maternelles durant la grossesse, exposition à certaines substances (alcool notamment, à l'origine du syndrome d'alcoolisation fœtale), malformations cérébrales.</p>
+<h3 id="facteurs-perinataux">Facteurs périnataux</h3>
+<p>Complications lors de l'accouchement, prématurité importante, manque d'oxygénation à la naissance.</p>
+<h3 id="facteurs-postnataux">Facteurs postnataux</h3>
+<p>Infections graves durant la petite enfance (méningites notamment), traumatismes crâniens sévères, carences ou négligences graves durant les premières années de vie.</p>
+<p>Dans une proportion importante des cas, aucune cause précise n'est identifiée.</p>
+<hr />
+<h2 id="evolution">📈 Évolution</h2>
+<p>Le trouble du développement intellectuel est présent tout au long de la vie, mais son retentissement peut évoluer favorablement grâce à un accompagnement adapté, une scolarisation aménagée et un soutien à l'autonomie. Le niveau de soutien nécessaire peut également évoluer avec l'âge et l'accompagnement reçu.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Le retentissement dépend fortement du degré de sévérité : dans les formes légères, la personne peut mener une vie largement autonome avec un soutien ponctuel, tandis que dans les formes sévères ou profondes, un accompagnement quotidien est nécessaire pour l'ensemble des activités de la vie courante.</p>
+<hr />
+<h2 id="troubles-pouvant-etre-associes">🔗 Troubles pouvant être associés</h2>
+<ul>
+<li>troubles du spectre de l'autisme (fréquemment associés) ;</li>
+<li>épilepsie ;</li>
+<li>troubles moteurs ;</li>
+<li>troubles anxieux ou dépressifs, en particulier dans les formes légères où la personne peut avoir conscience de ses difficultés.</li>
+</ul>
+<hr />
+<h2 id="diagnostic">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur une évaluation psychométrique standardisée du fonctionnement intellectuel, associée à une évaluation clinique et fonctionnelle du comportement adaptatif dans les différents domaines de la vie quotidienne, réalisée par une équipe spécialisée.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne">🤝 Comment aider un proche concerné</h2>
+<ul>
+<li><strong>Adapter sa communication</strong> (phrases simples et concrètes, supports visuels si besoin) sans pour autant infantiliser la personne, quel que soit son âge.</li>
+<li><strong>Favoriser l'autonomie</strong> dans la mesure du possible, en proposant un soutien ajusté plutôt qu'en faisant systématiquement à sa place.</li>
+<li><strong>Valoriser les réussites et les compétences</strong>, qui existent quel que soit le degré de sévérité du trouble.</li>
+<li><strong>S'informer sur les dispositifs de soutien existants</strong> (accompagnement scolaire, médico-social, associatif) pour construire un parcours adapté.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
+<p>La prise en charge est principalement éducative et sociale : scolarisation adaptée (avec ou sans accompagnement spécialisé selon la sévérité), rééducations (orthophonie, psychomotricité) selon les besoins, accompagnement médico-social pour le développement de l'autonomie, et soutien à la famille. Il n'existe pas de traitement médicamenteux du trouble lui-même, bien qu'un traitement puisse être proposé pour des troubles associés (épilepsie, troubles anxieux).</p>
+<hr />
+<h2 id="idees-recues">❌ Idées reçues</h2>
+<h3 id="toutes-les-personnes-concernees-ont-les-memes-difficultes">« Toutes les personnes concernées ont les mêmes difficultés. »</h3>
+<p>Non : le trouble du développement intellectuel regroupe une très grande diversité de profils, de sévérité et de besoins, d'une personne à l'autre.</p>
+<h3 id="une-personne-avec-ce-trouble-ne-peut-rien-apprendre">« Une personne avec ce trouble ne peut rien apprendre. »</h3>
+<p>Non : avec un accompagnement adapté, des apprentissages restent possibles à tous les degrés de sévérité, à des rythmes et dans des domaines différents.</p>
+<hr />
+<h2 id="a-retenir">📌 À retenir</h2>
+<p>Le trouble du développement intellectuel associe des limitations du fonctionnement intellectuel et du comportement adaptatif, apparaissant durant l'enfance, avec une sévérité et des besoins de soutien très variables d'une personne à l'autre, nécessitant un accompagnement éducatif et social adapté tout au long de la vie.</p>
+<hr />
+<h1 id="82-les-troubles-de-la-communication" class="entry-title hc-2">🧩 8.2 Les troubles de la communication</h1>
+<h2 id="definition_1">Définition</h2>
+<p>Les <strong>troubles de la communication</strong> regroupent plusieurs troubles neurodéveloppementaux affectant le <strong>langage, la parole ou la communication sociale</strong>, incluant notamment le trouble du langage, le trouble de la phonation, le trouble de la fluidité verbale apparaissant durant l'enfance (bégaiement) et le trouble de la communication sociale (pragmatique).</p>
+<hr />
+<h2 id="comprendre-ces-troubles">🔎 Comprendre ces troubles</h2>
+<h3 id="le-trouble-du-langage">Le trouble du langage</h3>
+<p>Concerne des difficultés persistantes dans l'acquisition et l'utilisation du langage (vocabulaire réduit, difficultés à construire des phrases, difficultés à organiser un discours), sans que cela soit expliqué par un déficit auditif, intellectuel ou neurologique.</p>
+<h3 id="le-trouble-de-la-phonation">Le trouble de la phonation</h3>
+<p>Concerne des difficultés dans la production des sons de la parole, rendant celle-ci difficile à comprendre pour l'entourage, au-delà de l'âge où ces sons sont normalement maîtrisés.</p>
+<h3 id="le-trouble-de-la-fluidite-verbale-apparaissant-durant-lenfance-begaiement">Le trouble de la fluidité verbale apparaissant durant l'enfance (bégaiement)</h3>
+<p>Se caractérise par des perturbations de la fluidité et du rythme de la parole (répétitions de sons ou de syllabes, blocages, allongements de sons), débutant durant l'enfance.</p>
+<h3 id="le-trouble-de-la-communication-sociale-pragmatique">Le trouble de la communication sociale (pragmatique)</h3>
+<p>Concerne des difficultés dans l'usage social du langage et de la communication (adapter son discours au contexte ou à l'interlocuteur, respecter les tours de parole, comprendre les sous-entendus ou l'humour), en dehors de tout trouble du spectre de l'autisme.</p>
+<hr />
+<h2 id="manifestations_1">🧠 Manifestations</h2>
+<ul>
+<li>vocabulaire réduit ou difficultés à former des phrases correctement structurées ;</li>
+<li>difficultés à être compris en raison d'une prononciation imprécise ;</li>
+<li>répétitions, blocages ou hésitations marquées dans la parole ;</li>
+<li>difficulté à adapter son discours selon le contexte social ou l'interlocuteur ;</li>
+<li>frustration, retrait social ou évitement de la prise de parole, en particulier en cas de moquerie de la part des pairs.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_1">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>composante génétique et antécédents familiaux, notamment pour le bégaiement ;</li>
+<li>retards de développement du système nerveux impliqué dans le langage ;</li>
+<li>facteurs environnementaux (stimulation langagière durant la petite enfance) ;</li>
+<li>association fréquente avec d'autres troubles neurodéveloppementaux (trouble spécifique des apprentissages, TDAH).</li>
+</ul>
+<hr />
+<h2 id="evolution_1">📈 Évolution</h2>
+<p>De nombreux troubles de la communication s'améliorent avec la prise en charge orthophonique, en particulier lorsqu'ils sont pris en charge précocement. Certains troubles, comme le bégaiement, peuvent persister à des degrés variables à l'âge adulte chez une partie des personnes concernées.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_1">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Ces troubles peuvent affecter les apprentissages scolaires, les relations avec les pairs (risque de moqueries ou d'isolement), la confiance en soi, et plus tard l'insertion professionnelle, en particulier pour les métiers nécessitant une communication orale importante.</p>
+<hr />
+<h2 id="diagnostic_1">🩺 Diagnostic</h2>
+<p>Le diagnostic est établi par un bilan orthophonique approfondi, complété par une évaluation du développement global de l'enfant afin d'écarter d'autres causes (déficit auditif, trouble intellectuel, trouble du spectre de l'autisme).</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne-notamment-un-enfant">🤝 Comment aider un proche concerné (notamment un enfant)</h2>
+<ul>
+<li><strong>Laisser le temps nécessaire</strong> pour s'exprimer, sans terminer les phrases à sa place ni le presser, en particulier en cas de bégaiement.</li>
+<li><strong>Ne pas corriger systématiquement</strong> chaque erreur de langage en pleine conversation, ce qui peut décourager la prise de parole ; reformuler naturellement la phrase correcte dans sa propre réponse est souvent plus efficace.</li>
+<li><strong>Encourager sans forcer</strong> la pratique de la parole dans des situations où l'enfant se sent en sécurité.</li>
+<li><strong>Solliciter un bilan orthophonique précoce</strong> en cas de doute, un accompagnement précoce améliorant généralement le pronostic.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_1">🛠️ Prise en charge</h2>
+<p>La prise en charge orthophonique constitue le socle de l'accompagnement, adaptée au trouble spécifique concerné. Des aménagements scolaires peuvent également être proposés (temps supplémentaire pour les évaluations orales, par exemple).</p>
+<hr />
+<h2 id="a-retenir_1">📌 À retenir</h2>
+<p>Les troubles de la communication regroupent différentes difficultés touchant le langage, la parole ou son usage social, généralement bien pris en charge par une intervention orthophonique adaptée, d'autant plus efficace qu'elle est mise en place précocement.</p>
+<hr />
+<h1 id="83-le-trouble-du-spectre-de-lautisme" class="entry-title hc-3">🧩 8.3 Le trouble du spectre de l'autisme</h1>
+<h2 id="definition_2">Définition</h2>
+<p>Le <strong>trouble du spectre de l'autisme (TSA)</strong> est un trouble neurodéveloppemental caractérisé par des <strong>difficultés persistantes de la communication et des interactions sociales</strong>, associées à des <strong>comportements, intérêts ou activités restreints et répétitifs</strong>, présents dès la petite enfance.</p>
+<p>Le terme « spectre » souligne l'immense diversité des profils regroupés sous ce diagnostic, allant de personnes ayant besoin d'un soutien important au quotidien à des personnes autonomes dans la plupart des domaines de leur vie.</p>
+<hr />
+<h2 id="comprendre-le-tsa">🔎 Comprendre le TSA</h2>
+<p>Le TSA n'est pas une maladie à « guérir », mais une différence de fonctionnement neurologique durable, influençant la façon dont la personne perçoit le monde, communique et interagit avec autrui. La notion de spectre reflète également la variabilité de l'intensité des difficultés selon les domaines (une personne peut avoir des difficultés sociales importantes et des capacités de langage préservées, ou l'inverse).</p>
+<p>De nombreuses personnes autistes présentent également des particularités sensorielles marquées (hyper ou hyposensibilité à certains stimuli) et des intérêts spécifiques très intenses, qui peuvent représenter à la fois une source de difficultés et une véritable ressource (expertise, concentration, plaisir).</p>
+<hr />
+<h2 id="manifestations-sociales-et-communicationnelles">🧠 Manifestations sociales et communicationnelles</h2>
+<ul>
+<li>difficultés dans la réciprocité sociale et émotionnelle (initier ou maintenir une conversation, partager des intérêts ou des émotions) ;</li>
+<li>difficultés dans la communication non verbale (contact visuel, gestes, expressions faciales) ;</li>
+<li>difficultés à développer, maintenir et comprendre les relations sociales adaptées à l'âge ;</li>
+<li>difficultés à comprendre les codes sociaux implicites, le second degré ou l'ironie.</li>
+</ul>
+<h2 id="comportements-interets-et-activites-restreints-et-repetitifs">🎯 Comportements, intérêts et activités restreints et répétitifs</h2>
+<ul>
+<li>mouvements moteurs répétitifs (balancements, battements de mains) ou langage répétitif (écholalie) ;</li>
+<li>attachement marqué à des routines ou rituels, avec détresse importante en cas de changement ;</li>
+<li>intérêts très restreints mais particulièrement intenses et approfondis ;</li>
+<li>hyper ou hyporéactivité à certains stimuli sensoriels (sons, textures, lumières, odeurs).</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_2">🧬 Causes et facteurs de risque</h2>
+<p>Les causes exactes du TSA restent partiellement comprises, mais une <strong>composante génétique forte</strong> est aujourd'hui bien établie, avec l'implication de multiples gènes. Des facteurs prénataux (certaines expositions durant la grossesse, prématurité importante) peuvent également jouer un rôle dans certains cas.</p>
+<p>Il est aujourd'hui bien établi, par de nombreuses études scientifiques indépendantes, qu'il n'existe <strong>aucun lien entre les vaccins et l'apparition du TSA</strong>, contrairement à une idée largement répandue mais infondée.</p>
+<hr />
+<h2 id="evolution_2">📈 Évolution</h2>
+<p>Le TSA est un trouble présent tout au long de la vie, mais son expression et son retentissement peuvent évoluer significativement grâce à un accompagnement précoce et adapté, qui peut permettre de développer des compétences sociales et de communication, ainsi que des stratégies pour gérer les particularités sensorielles.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_2">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Le retentissement varie énormément d'une personne à l'autre : certaines personnes autistes mènent une vie professionnelle et sociale autonome (parfois diagnostiquées seulement à l'âge adulte), tandis que d'autres nécessitent un accompagnement important pour les activités du quotidien. Le risque de comorbidités anxieuses ou dépressives est important, notamment chez les personnes ayant conscience de leurs différences et confrontées à des difficultés d'inclusion sociale.</p>
+<hr />
+<h2 id="troubles-pouvant-etre-associes_1">🔗 Troubles pouvant être associés</h2>
+<ul>
+<li>trouble du développement intellectuel (associé chez une partie des personnes concernées, mais pas systématiquement) ;</li>
+<li>TDAH ;</li>
+<li>troubles anxieux, en particulier l'anxiété sociale ;</li>
+<li>épilepsie ;</li>
+<li>troubles du sommeil.</li>
+</ul>
+<hr />
+<h2 id="diagnostic_2">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur une évaluation clinique approfondie et pluridisciplinaire, incluant l'observation directe du comportement et de la communication, un entretien détaillé avec les parents sur le développement précoce, ainsi que des outils d'évaluation standardisés spécifiques. Le diagnostic peut être posé dès la petite enfance, mais aussi, de plus en plus fréquemment, à l'âge adulte.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne_1">🤝 Comment aider un proche concerné</h2>
+<ul>
+<li><strong>Respecter les besoins sensoriels</strong> de la personne (bruit, lumière, textures), plutôt que de les minimiser ou de les forcer à s'y exposer sans accompagnement.</li>
+<li><strong>Prévenir des changements à l'avance</strong> lorsque c'est possible, les imprévus pouvant être source d'une détresse importante.</li>
+<li><strong>Ne pas chercher à supprimer les intérêts spécifiques</strong>, qui peuvent au contraire constituer un point d'appui précieux pour l'apprentissage et le bien-être.</li>
+<li><strong>Adapter sa communication</strong> en étant clair, concret et explicite, en évitant les sous-entendus ambigus.</li>
+<li><strong>Écouter les personnes autistes elles-mêmes</strong> sur leur propre expérience, en particulier les adultes autonomes, dont le témoignage direct enrichit considérablement la compréhension du trouble.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_2">🛠️ Prise en charge</h2>
+<p>L'accompagnement est généralement pluridisciplinaire et individualisé : interventions éducatives et comportementales précoces (en particulier chez le jeune enfant), orthophonie, psychomotricité, ergothérapie pour les particularités sensorielles, et accompagnement à l'inclusion scolaire et sociale. Il n'existe pas de traitement médicamenteux du TSA en tant que tel, bien qu'un traitement puisse être proposé pour des troubles associés (anxiété, troubles du sommeil).</p>
+<hr />
+<h2 id="idees-recues_1">❌ Idées reçues</h2>
+<h3 id="les-vaccins-causent-lautisme">« Les vaccins causent l'autisme. »</h3>
+<p>Non : cette croyance, issue d'une étude aujourd'hui totalement discréditée et rétractée, a été démentie par de très nombreuses études scientifiques rigoureuses menées depuis.</p>
+<h3 id="toutes-les-personnes-autistes-sont-pareilles">« Toutes les personnes autistes sont pareilles. »</h3>
+<p>Non : le terme « spectre » souligne justement l'extrême diversité des profils, des besoins et des capacités au sein du TSA.</p>
+<h3 id="lautisme-cest-un-manque-dempathie">« L'autisme, c'est un manque d'empathie. »</h3>
+<p>Non : de nombreuses personnes autistes ressentent une empathie intense, mais peuvent avoir des difficultés à l'exprimer ou à la percevoir selon les codes sociaux habituels.</p>
+<hr />
+<h2 id="a-retenir_2">📌 À retenir</h2>
+<p>Le trouble du spectre de l'autisme associe des difficultés de communication et d'interaction sociale à des comportements et intérêts restreints et répétitifs, avec une immense diversité de profils. Un accompagnement précoce et individualisé, respectueux des particularités de chaque personne, permet un développement optimal des compétences et du bien-être.</p>
+<hr />
+<h1 id="84-le-trouble-deficit-de-lattentionhyperactivite-tdah" class="entry-title hc-4">🧩 8.4 Le trouble déficit de l'attention/hyperactivité (TDAH)</h1>
+<h2 id="definition_3">Définition</h2>
+<p>Le <strong>trouble déficit de l'attention/hyperactivité (TDAH)</strong> est un trouble neurodéveloppemental caractérisé par un <strong>niveau d'inattention et/ou d'hyperactivité-impulsivité</strong> persistant, plus important que ce qui est attendu pour l'âge de la personne, et ayant un retentissement significatif dans plusieurs domaines de vie (scolaire, professionnel, familial, social).</p>
+<hr />
+<h2 id="comprendre-le-tdah">🔎 Comprendre le TDAH</h2>
+<p>Trois présentations sont classiquement distinguées : une présentation à prédominance <strong>inattentive</strong> (difficultés de concentration et d'organisation, sans hyperactivité marquée, plus souvent sous-diagnostiquée notamment chez les filles), une présentation à prédominance <strong>hyperactive-impulsive</strong>, et une présentation <strong>combinée</strong> (les deux dimensions étant marquées).</p>
+<p>Le TDAH n'est pas un simple manque de discipline ou de volonté : il est associé à des différences neurobiologiques mesurables, notamment dans certains circuits cérébraux impliqués dans les fonctions exécutives, la régulation de l'attention et le contrôle des impulsions.</p>
+<hr />
+<h2 id="manifestations-dinattention">🧠 Manifestations d'inattention</h2>
+<ul>
+<li>difficulté à maintenir son attention sur une tâche, en particulier peu stimulante ;</li>
+<li>distractibilité importante face aux stimuli extérieurs ;</li>
+<li>difficultés d'organisation et de gestion du temps ;</li>
+<li>tendance à perdre fréquemment des objets nécessaires à une tâche ;</li>
+<li>oublis fréquents dans les activités quotidiennes ;</li>
+<li>difficulté à suivre des instructions ou à terminer des tâches jusqu'au bout.</li>
+</ul>
+<h2 id="manifestations-dhyperactivite-et-dimpulsivite">⚡ Manifestations d'hyperactivité et d'impulsivité</h2>
+<ul>
+<li>agitation motrice, difficulté à rester assis dans des situations où cela est attendu ;</li>
+<li>sensation interne d'agitation, chez l'adolescent et l'adulte notamment ;</li>
+<li>difficulté à attendre son tour ;</li>
+<li>tendance à répondre avant la fin d'une question ou à interrompre les autres ;</li>
+<li>impulsivité dans les décisions ou les propos, avec parfois des conséquences sociales ou pratiques.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_3">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>forte composante génétique et héréditaire, le TDAH étant l'un des troubles neurodéveloppementaux les plus héréditaires ;</li>
+<li>facteurs prénataux (exposition à certaines substances durant la grossesse, prématurité) ;</li>
+<li>particularités du fonctionnement de certains circuits cérébraux impliqués dans la dopamine et la régulation de l'attention.</li>
+</ul>
+<p>Le TDAH n'est pas causé par une mauvaise éducation, un excès d'écrans ou une alimentation inadaptée, bien que ces facteurs puissent influencer l'intensité des symptômes observés au quotidien.</p>
+<hr />
+<h2 id="evolution_3">📈 Évolution</h2>
+<p>Longtemps considéré comme un trouble propre à l'enfance, le TDAH est aujourd'hui reconnu comme persistant fréquemment à l'âge adulte, bien que l'hyperactivité motrice tende à s'atténuer avec l'âge au profit d'une agitation plus interne et de difficultés attentionnelles et organisationnelles persistantes.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_3">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Le TDAH peut affecter la réussite scolaire ou professionnelle (malgré des capacités intellectuelles normales, voire élevées), les relations sociales et familiales (impulsivité, oublis perçus comme un manque d'attention envers autrui), ainsi que l'estime de soi, en particulier lorsque le trouble n'est pas reconnu et que la personne est régulièrement qualifiée de « paresseuse » ou « désorganisée ».</p>
+<hr />
+<h2 id="troubles-pouvant-etre-associes_2">🔗 Troubles pouvant être associés</h2>
+<ul>
+<li>trouble spécifique des apprentissages ;</li>
+<li>troubles anxieux et dépressifs ;</li>
+<li>trouble oppositionnel avec provocation, chez l'enfant ;</li>
+<li>troubles liés à l'usage de substances, plus fréquents chez les adultes ayant un TDAH non traité ;</li>
+<li>trouble du spectre de l'autisme, dans certains cas.</li>
+</ul>
+<hr />
+<h2 id="diagnostic_3">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur une évaluation clinique approfondie, recherchant la présence des symptômes dans plusieurs contextes de vie (école ou travail, maison, relations sociales), leur persistance depuis l'enfance, et leur retentissement fonctionnel significatif, en écartant d'autres causes pouvant expliquer les symptômes.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne_2">🤝 Comment aider un proche concerné</h2>
+<ul>
+<li><strong>Structurer l'environnement</strong> (routines claires, supports visuels, découpage des tâches en étapes courtes) pour compenser les difficultés d'organisation.</li>
+<li><strong>Éviter les jugements moraux</strong> (« tu ne fais pas d'effort », « tu es dans la lune ») qui méconnaissent la nature neurodéveloppementale du trouble.</li>
+<li><strong>Valoriser les points forts</strong> souvent associés au TDAH (créativité, énergie, capacité à hyperfocaliser sur des sujets d'intérêt).</li>
+<li><strong>Encourager une évaluation spécialisée</strong> en cas de doute, en particulier chez l'adulte, où le trouble reste encore largement sous-diagnostiqué.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_3">🛠️ Prise en charge</h2>
+<p>La prise en charge associe généralement des approches psychoéducatives (comprendre le trouble et ses mécanismes), des stratégies comportementales et organisationnelles, un accompagnement psychologique en cas de retentissement sur l'estime de soi, et, selon les situations, un traitement médicamenteux, dont la prescription et le suivi relèvent d'un médecin spécialisé.</p>
+<hr />
+<h2 id="idees-recues_2">❌ Idées reçues</h2>
+<h3 id="le-tdah-nexiste-pas-cest-un-manque-deducation">« Le TDAH n'existe pas, c'est un manque d'éducation. »</h3>
+<p>Non : le TDAH est un trouble neurodéveloppemental reconnu internationalement, associé à des bases neurobiologiques bien documentées.</p>
+<h3 id="seuls-les-enfants-tres-agites-ont-un-tdah">« Seuls les enfants très agités ont un TDAH. »</h3>
+<p>Non : la présentation à prédominance inattentive, sans hyperactivité marquée, est fréquente et souvent sous-diagnostiquée, en particulier chez les filles.</p>
+<h3 id="le-tdah-disparait-a-lage-adulte">« Le TDAH disparaît à l'âge adulte. »</h3>
+<p>Non : il persiste fréquemment à l'âge adulte, bien que sa présentation évolue, l'hyperactivité motrice laissant souvent place à des difficultés attentionnelles et organisationnelles.</p>
+<hr />
+<h2 id="a-retenir_3">📌 À retenir</h2>
+<p>Le TDAH associe inattention et/ou hyperactivité-impulsivité de façon persistante et disproportionnée par rapport à l'âge, avec des bases neurobiologiques bien établies. Souvent identifié dès l'enfance, il peut également être diagnostiqué à l'âge adulte et bénéficier d'une prise en charge adaptée à chaque étape de la vie.</p>
+<hr />
+<h1 id="85-le-trouble-specifique-des-apprentissages" class="entry-title hc-5">🧩 8.5 Le trouble spécifique des apprentissages</h1>
+<h2 id="definition_4">Définition</h2>
+<p>Le <strong>trouble spécifique des apprentissages</strong> désigne des <strong>difficultés durables et significatives dans l'acquisition de compétences scolaires précises</strong> (lecture, expression écrite, mathématiques), malgré un enseignement adapté et en l'absence de déficience intellectuelle, sensorielle ou neurologique expliquant ces difficultés.</p>
+<hr />
+<h2 id="comprendre-ce-trouble_1">🔎 Comprendre ce trouble</h2>
+<p>Ce trouble regroupe notamment ce qui est communément appelé la <strong>dyslexie</strong> (difficultés spécifiques de la lecture), la <strong>dysorthographie</strong> (difficultés spécifiques de l'orthographe) et la <strong>dyscalculie</strong> (difficultés spécifiques des mathématiques), qui peuvent survenir isolément ou de façon associée chez une même personne.</p>
+<p>Ces difficultés ne sont ni liées à un manque d'effort, ni à un problème de vision ou d'audition non corrigé, mais à des particularités du traitement neurologique de l'information (traitement phonologique pour la dyslexie, par exemple).</p>
+<hr />
+<h2 id="manifestations_2">🧠 Manifestations</h2>
+<ul>
+<li>pour la lecture : lenteur importante, confusions de lettres ou de sons, difficultés de compréhension du texte lu malgré une intelligence normale ;</li>
+<li>pour l'expression écrite : nombreuses fautes d'orthographe persistantes malgré les corrections, difficulté à organiser ses idées à l'écrit ;</li>
+<li>pour les mathématiques : difficultés avec le sens des nombres, les calculs, ou la résolution de problèmes, disproportionnées par rapport au niveau scolaire général ;</li>
+<li>fatigue importante liée aux efforts fournis pour compenser ces difficultés ;</li>
+<li>possible baisse de l'estime de soi et anxiété scolaire, en particulier en l'absence de diagnostic et d'aménagements adaptés.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_4">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>composante génétique et antécédents familiaux fréquents ;</li>
+<li>particularités du développement de certaines régions cérébrales impliquées dans le traitement du langage écrit ou des nombres ;</li>
+<li>association fréquente avec le TDAH.</li>
+</ul>
+<hr />
+<h2 id="evolution_4">📈 Évolution</h2>
+<p>Le trouble persiste généralement à l'âge adulte, bien que des stratégies de compensation efficaces puissent être développées avec un accompagnement adapté, permettant une réussite scolaire et professionnelle tout à fait possible.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_4">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Sans reconnaissance ni aménagement, ce trouble peut entraîner un échec scolaire disproportionné par rapport aux capacités réelles de l'enfant, une perte de confiance en soi durable, et parfois un évitement plus général des situations d'apprentissage.</p>
+<hr />
+<h2 id="diagnostic_4">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur un bilan pluridisciplinaire spécialisé (neuropsychologique, orthophonique, parfois orthoptique), permettant d'objectiver un écart significatif entre le niveau attendu et les performances réelles dans le domaine concerné, en excluant d'autres causes explicatives (déficience intellectuelle, trouble sensoriel, absence de scolarisation adaptée).</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne-notamment-un-enfant_1">🤝 Comment aider un proche concerné (notamment un enfant)</h2>
+<ul>
+<li><strong>Ne pas assimiler les difficultés à un manque de travail ou d'intelligence</strong> : ce trouble touche des enfants aux capacités intellectuelles tout à fait normales, voire élevées.</li>
+<li><strong>Valoriser les autres compétences et centres d'intérêt</strong> de l'enfant, en dehors du domaine touché par le trouble.</li>
+<li><strong>Solliciter les aménagements disponibles</strong> (temps supplémentaire, supports adaptés, outils numériques) plutôt que d'attendre que l'enfant « rattrape seul » son retard.</li>
+<li><strong>Encourager un bilan spécialisé précoce</strong> en cas de doute, un accompagnement précoce étant associé à de meilleurs résultats.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_4">🛠️ Prise en charge</h2>
+<p>La prise en charge est rééducative (orthophonie pour la lecture et l'écriture, prise en charge spécialisée pour la dyscalculie) et repose également sur des aménagements pédagogiques adaptés (temps supplémentaire, supports différenciés, outils numériques compensatoires).</p>
+<hr />
+<h2 id="idees-recues_3">❌ Idées reçues</h2>
+<h3 id="la-dyslexie-cest-juste-voir-les-lettres-a-lenvers">« La dyslexie, c'est juste voir les lettres à l'envers. »</h3>
+<p>Non : la dyslexie concerne principalement des difficultés de traitement phonologique (associer les sons aux lettres), et non une inversion visuelle des lettres.</p>
+<h3 id="un-enfant-dyslexique-nest-pas-intelligent">« Un enfant dyslexique n'est pas intelligent. »</h3>
+<p>Non : le trouble spécifique des apprentissages est, par définition, indépendant du niveau intellectuel général de l'enfant.</p>
+<hr />
+<h2 id="a-retenir_4">📌 À retenir</h2>
+<p>Le trouble spécifique des apprentissages désigne des difficultés durables et spécifiques dans un domaine scolaire précis (lecture, écriture, mathématiques), indépendantes du niveau intellectuel général, nécessitant une rééducation ciblée et des aménagements pédagogiques adaptés.</p>
+<hr />
+<h1 id="86-le-trouble-developpemental-de-la-coordination" class="entry-title hc-1">🧩 8.6 Le trouble développemental de la coordination</h1>
+<h2 id="definition_5">Définition</h2>
+<p>Le <strong>trouble développemental de la coordination</strong> (également connu sous le terme de dyspraxie) est un trouble neurodéveloppemental caractérisé par des <strong>difficultés significatives dans l'acquisition et l'exécution de mouvements coordonnés</strong>, disproportionnées par rapport à l'âge et au niveau intellectuel de l'enfant.</p>
+<hr />
+<h2 id="comprendre-ce-trouble_2">🔎 Comprendre ce trouble</h2>
+<p>Ce trouble affecte la capacité à planifier, organiser et exécuter des gestes moteurs, qu'ils soient globaux (courir, faire du vélo, attraper un ballon) ou fins (écriture, boutonnage, utilisation de couverts). L'enfant sait généralement ce qu'il doit faire, mais rencontre des difficultés à coordonner et automatiser le geste lui-même.</p>
+<hr />
+<h2 id="manifestations_3">🧠 Manifestations</h2>
+<ul>
+<li>maladresse motrice importante (chutes fréquentes, objets renversés ou lâchés) ;</li>
+<li>difficultés dans les activités motrices globales (sport, jeux impliquant coordination et équilibre) ;</li>
+<li>difficultés dans les activités motrices fines (écriture souvent lente et peu lisible, découpage, laçage) ;</li>
+<li>lenteur importante dans l'exécution des tâches motrices comparée aux enfants du même âge ;</li>
+<li>fatigue liée à l'effort de concentration nécessaire pour réaliser des gestes que d'autres enfants automatisent facilement.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_5">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>particularités du développement de certaines zones cérébrales impliquées dans la planification et la coordination motrice ;</li>
+<li>prématurité et faible poids de naissance, facteurs de risque identifiés ;</li>
+<li>association fréquente avec d'autres troubles neurodéveloppementaux (TDAH, trouble spécifique des apprentissages).</li>
+</ul>
+<hr />
+<h2 id="evolution_5">📈 Évolution</h2>
+<p>Le trouble persiste généralement à l'âge adulte dans une certaine mesure, bien qu'un accompagnement précoce (psychomotricité, ergothérapie) permette de développer des stratégies de compensation efficaces, notamment pour les gestes du quotidien et l'écriture.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_5">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Ce trouble peut affecter la scolarité (écriture lente et fatigante, difficultés en sport), l'estime de soi (moqueries possibles liées à la maladresse), ainsi que l'autonomie dans certains gestes du quotidien (habillage, repas).</p>
+<hr />
+<h2 id="diagnostic_5">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur une évaluation par un psychomotricien ou un ergothérapeute, objectivant un écart significatif entre les capacités motrices de l'enfant et celles attendues pour son âge, en l'absence d'autre trouble neurologique ou médical expliquant ces difficultés.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne-notamment-un-enfant_2">🤝 Comment aider un proche concerné (notamment un enfant)</h2>
+<ul>
+<li><strong>Ne pas comparer aux autres enfants</strong> ni insister sur la maladresse, qui échappe totalement au contrôle volontaire de l'enfant.</li>
+<li><strong>Adapter les activités</strong> (outils ergonomiques, aménagement du poste de travail scolaire) plutôt que d'exiger une performance équivalente aux autres enfants.</li>
+<li><strong>Encourager la pratique dans un cadre non compétitif</strong>, pour permettre les progrès sans pression de performance.</li>
+<li><strong>Solliciter un bilan psychomoteur</strong> en cas de doute, un accompagnement précoce facilitant le développement de stratégies de compensation.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_5">🛠️ Prise en charge</h2>
+<p>La prise en charge repose principalement sur la psychomotricité et l'ergothérapie, avec un travail sur la coordination motrice et le développement de stratégies de compensation (utilisation d'outils adaptés, aménagements scolaires comme l'usage d'un ordinateur pour l'écriture).</p>
+<hr />
+<h2 id="a-retenir_5">📌 À retenir</h2>
+<p>Le trouble développemental de la coordination se caractérise par une maladresse motrice significative et durable, touchant les gestes globaux et/ou fins, nécessitant un accompagnement en psychomotricité ou en ergothérapie et des aménagements adaptés au quotidien.</p>
+<hr />
+<h1 id="87-le-trouble-de-mouvement-stereotype" class="entry-title hc-2">🧩 8.7 Le trouble de mouvement stéréotypé</h1>
+<h2 id="definition_6">Définition</h2>
+<p>Le <strong>trouble de mouvement stéréotypé</strong> est caractérisé par des <strong>mouvements moteurs répétitifs, apparemment sans but précis</strong>, qui débutent tôt dans le développement et interfèrent avec les activités quotidiennes ou entraînent des lésions corporelles.</p>
+<hr />
+<h2 id="comprendre-ce-trouble_3">🔎 Comprendre ce trouble</h2>
+<p>Les mouvements stéréotypés (balancements du corps, battements de mains, torsions des mains, mouvements de tête) sont fréquents chez le jeune enfant à un degré léger et transitoire, sans constituer un trouble. Ils deviennent cliniquement significatifs lorsqu'ils sont fréquents, persistants, interfèrent avec les apprentissages ou les activités sociales, ou entraînent des blessures (dans les formes les plus sévères, notamment lorsqu'elles sont associées à un handicap intellectuel).</p>
+<hr />
+<h2 id="manifestations_4">🧠 Manifestations</h2>
+<ul>
+<li>mouvements répétitifs et rythmiques, sans fonction apparente (balancements, battements de mains, torsions) ;</li>
+<li>possible auto-agression dans les formes sévères (se cogner la tête, se mordre), en particulier en cas de handicap intellectuel associé ;</li>
+<li>mouvements pouvant s'intensifier en contexte de stress, d'ennui ou d'excitation ;</li>
+<li>interférence possible avec les activités scolaires ou sociales.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_6">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>fréquemment associé à un trouble du développement intellectuel ou à un trouble du spectre de l'autisme ;</li>
+<li>peut également survenir de façon isolée chez un enfant au développement par ailleurs typique ;</li>
+<li>rôle possible d'auto-stimulation ou d'auto-apaisement face à l'ennui, au stress ou à une surcharge sensorielle.</li>
+</ul>
+<hr />
+<h2 id="evolution_6">📈 Évolution</h2>
+<p>Les formes légères et isolées s'atténuent souvent avec l'âge. Les formes plus sévères, en particulier associées à l'auto-agression, nécessitent une prise en charge spécifique et peuvent persister davantage, notamment en présence d'un trouble du développement intellectuel associé.</p>
+<hr />
+<h2 id="diagnostic_6">🩺 Diagnostic</h2>
+<p>Le diagnostic tient compte de l'âge de la personne, de la fréquence et de l'intensité des mouvements, de leur retentissement fonctionnel et du risque de blessure, ainsi que de la présence éventuelle d'un trouble du développement intellectuel ou d'un trouble du spectre de l'autisme associé.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne-notamment-un-enfant_3">🤝 Comment aider un proche concerné (notamment un enfant)</h2>
+<ul>
+<li><strong>Ne pas réprimer systématiquement</strong> les mouvements lorsqu'ils sont sans danger, ceux-ci pouvant avoir une fonction d'apaisement ou de régulation sensorielle pour l'enfant.</li>
+<li><strong>Sécuriser l'environnement</strong> en cas de mouvements à risque de blessure (auto-agression notamment).</li>
+<li><strong>Identifier les contextes déclencheurs</strong> (ennui, stress, surcharge sensorielle) pour, si besoin, proposer des alternatives adaptées.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_6">🛠️ Prise en charge</h2>
+<p>La prise en charge, lorsqu'elle est nécessaire, est principalement comportementale, visant à réduire les mouvements les plus problématiques (notamment en cas d'auto-agression) tout en respectant leur possible fonction de régulation, en lien avec une équipe spécialisée.</p>
+<hr />
+<h2 id="a-retenir_6">📌 À retenir</h2>
+<p>Le trouble de mouvement stéréotypé se caractérise par des mouvements répétitifs et sans but apparent, fréquemment associés à un trouble du développement intellectuel ou à un trouble du spectre de l'autisme, nécessitant une attention particulière en cas de risque de blessure.</p>
+<hr />
+<h1 id="88-les-tics-et-le-syndrome-de-gilles-de-la-tourette" class="entry-title hc-3">🧩 8.8 Les tics et le syndrome de Gilles de la Tourette</h1>
+<h2 id="definition_7">Définition</h2>
+<p>Un <strong>tic</strong> est un mouvement moteur ou une vocalisation <strong>soudain, rapide, récurrent et non rythmique</strong>. Le <strong>syndrome de Gilles de la Tourette</strong> est diagnostiqué lorsque des <strong>tics moteurs multiples et au moins un tic vocal</strong> sont présents depuis plus d'un an, avec un début durant l'enfance ou l'adolescence.</p>
+<hr />
+<h2 id="comprendre-les-tics">🔎 Comprendre les tics</h2>
+<p>Les tics peuvent être simples (clignement des yeux, hochement de tête, reniflement, raclement de gorge) ou complexes (séquences de mouvements, ou dans de rares cas, prononciation de mots ou de phrases, y compris parfois des mots inappropriés, phénomène plus rare que ne le suggère sa représentation médiatique).</p>
+<p>Les tics sont généralement précédés d'une sensation prémonitoire (une tension ou un besoin impérieux) que le tic vient temporairement soulager, un peu comme le besoin de se gratter avant de céder à une démangeaison. Ils peuvent être volontairement supprimés pendant un temps limité, au prix d'un effort et d'un inconfort croissants, avant de réapparaître souvent de façon plus marquée.</p>
+<hr />
+<h2 id="manifestations_5">🧠 Manifestations</h2>
+<ul>
+<li>tics moteurs simples (clignements, grimaces, haussements d'épaules) ou complexes (séquences de gestes) ;</li>
+<li>tics vocaux simples (reniflements, raclements de gorge, grognements) ou complexes (répétition de mots, plus rarement prononciation de mots inappropriés) ;</li>
+<li>fluctuation de l'intensité et de la fréquence des tics dans le temps, souvent aggravée par le stress, la fatigue ou l'excitation, et atténuée par la concentration sur une activité absorbante ;</li>
+<li>sensation prémonitoire précédant le tic chez de nombreuses personnes, en particulier à partir de l'adolescence.</li>
+</ul>
+<hr />
+<h2 id="causes-et-facteurs-de-risque_7">🧬 Causes et facteurs de risque</h2>
+<ul>
+<li>forte composante génétique, avec des antécédents familiaux fréquemment retrouvés ;</li>
+<li>particularités du fonctionnement de certains circuits cérébraux impliqués dans le contrôle moteur ;</li>
+<li>association fréquente avec le TDAH et le trouble obsessionnel-compulsif.</li>
+</ul>
+<hr />
+<h2 id="evolution_7">📈 Évolution</h2>
+<p>Les tics apparaissent généralement dans l'enfance, avec un pic d'intensité fréquent à l'adolescence, suivi d'une atténuation progressive à l'âge adulte pour une grande partie des personnes concernées, bien qu'une persistance à l'âge adulte reste possible.</p>
+<hr />
+<h2 id="consequences-dans-la-vie-quotidienne_6">🌍 Conséquences dans la vie quotidienne</h2>
+<p>Les tics peuvent entraîner une gêne sociale (moqueries, regards), une fatigue liée aux efforts de suppression volontaire en public, ainsi qu'un retentissement sur la concentration scolaire ou professionnelle dans les formes les plus marquées.</p>
+<hr />
+<h2 id="troubles-pouvant-etre-associes_3">🔗 Troubles pouvant être associés</h2>
+<ul>
+<li>TDAH ;</li>
+<li>trouble obsessionnel-compulsif ;</li>
+<li>troubles anxieux.</li>
+</ul>
+<hr />
+<h2 id="diagnostic_7">🩺 Diagnostic</h2>
+<p>Le diagnostic est clinique, basé sur l'observation des tics, leur ancienneté, leur diversité (moteurs et vocaux pour le syndrome de Gilles de la Tourette) et l'exclusion d'autres causes de mouvements anormaux.</p>
+<hr />
+<h2 id="comment-aider-un-proche-concerne-notamment-un-enfant_4">🤝 Comment aider un proche concerné (notamment un enfant)</h2>
+<ul>
+<li><strong>Ne pas demander d'arrêter le tic</strong> ou de « se contrôler » : cette demande, bien qu'intuitive, augmente généralement la tension et donc la fréquence des tics.</li>
+<li><strong>Ne pas attirer l'attention sur le tic</strong> devant d'autres personnes, ce qui peut accentuer la gêne ressentie.</li>
+<li><strong>Informer l'entourage scolaire ou professionnel</strong>, avec l'accord de la personne, pour favoriser la compréhension plutôt que la stigmatisation.</li>
+<li><strong>Encourager une consultation spécialisée</strong> en cas de retentissement important sur la vie quotidienne ou l'estime de soi.</li>
+</ul>
+<hr />
+<h2 id="prise-en-charge_7">🛠️ Prise en charge</h2>
+<p>De nombreux tics légers ne nécessitent pas de traitement spécifique en dehors d'un accompagnement psychoéducatif. Lorsque les tics sont plus marqués ou invalidants, une thérapie comportementale spécifique (visant à mieux gérer la sensation prémonitoire et à développer des réponses alternatives) peut être proposée, ainsi que, dans certains cas, un traitement médicamenteux.</p>
+<hr />
+<h2 id="idees-recues_4">❌ Idées reçues</h2>
+<h3 id="les-personnes-avec-le-syndrome-de-gilles-de-la-tourette-insultent-tout-le-temps-les-gens">« Les personnes avec le syndrome de Gilles de la Tourette insultent tout le temps les gens. »</h3>
+<p>Non : la coprolalie (prononciation incontrôlée de mots inappropriés) ne concerne qu'une minorité des personnes atteintes du syndrome, bien qu'elle soit largement sur-représentée dans les médias.</p>
+<h3 id="il-suffit-de-se-concentrer-pour-arreter-les-tics">« Il suffit de se concentrer pour arrêter les tics. »</h3>
+<p>Non : les tics peuvent être suspendus temporairement au prix d'un effort important, mais reviennent généralement, parfois de façon plus intense, une fois cet effort relâché.</p>
+<hr />
+<h2 id="a-retenir_7">📌 À retenir</h2>
+<p>Les tics sont des mouvements ou vocalisations soudains et récurrents, dont l'intensité fluctue avec le stress et la fatigue. Le syndrome de Gilles de la Tourette associe tics moteurs multiples et tics vocaux, avec une évolution généralement favorable à l'âge adulte pour une large part des personnes concernées.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-9-troubles-dissociatifs/"><span class="similar-icon">🩺</span>Partie 9 — Troubles dissociatifs</a><a class="similar-item" href="/chapitre/troubles-partie-10-troubles-lies-aux-traumatismes-et-au-stress/"><span class="similar-icon">🩺</span>Partie 10 — Troubles liés aux traumatismes et au stress</a><a class="similar-item" href="/chapitre/troubles-partie-11-troubles-a-symptomatologie-somatique/"><span class="similar-icon">🩺</span>Partie 11 — Troubles à symptomatologie somatique</a></div>
+    </div>
+    <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

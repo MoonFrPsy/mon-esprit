@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Esprit — une encyclopédie de la psychologie</title>
-<meta name="description" content="Comprendre son esprit, un concept à la fois. Troubles, syndromes, mécanismes de défense, émotions et histoires vraies expliqués simplement.">
-<link rel="stylesheet" href="css/style.css">
+<title>Joie, plaisir et récompense — Mon Esprit</title>
+<meta name="description" content="Joie, plaisir et récompense, dans la catégorie Émotions et comportements humains de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <canvas id="fluid-cursor" aria-hidden="true"></canvas>
-<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
-  <a href="nouveautes.html">
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
     <span>🆕</span>
-    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
     <span class="update-banner-arrow">→</span>
   </a>
   <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
@@ -20,14 +21,17 @@
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
   <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
 </div>
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="site-title">Mon Esprit</a>
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
     <nav class="site-nav">
-      <a href="index.html#categories">Catégories</a>
-      <a href="index.html#a-propos">À propos</a>
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
       <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
       <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
@@ -36,286 +40,208 @@
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
 <div id="google_translate_element" style="display:none;"></div>
 
-<main>
-  <section class="hero container">
-    <div class="hero-text">
-      <h1>Comprendre son esprit, un concept à la fois.</h1>
-      <p>Une encyclopédie accessible sur la psychologie : troubles, syndromes, mécanismes de défense, émotions et histoires vraies qui façonnent nos pensées et nos comportements.</p>
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#71-quest-ce-que-la-joie">😄 7.1 Qu'est-ce que la joie ?</a></li><li><a href="#72-la-fonction-de-la-joie">✨ 7.2 La fonction de la joie</a></li><li><a href="#73-le-plaisir">😊 7.3 Le plaisir</a></li><li><a href="#74-la-recompense">🎯 7.4 La récompense</a></li><li><a href="#75-le-systeme-de-recompense">🧠 7.5 Le système de récompense</a></li><li><a href="#76-la-dopamine">🧬 7.6 La dopamine</a></li><li><a href="#77-lanticipation-de-la-recompense">🔮 7.7 L'anticipation de la récompense</a></li><li><a href="#78-la-recompense-obtenue">🎁 7.8 La récompense obtenue</a></li><li><a href="#79-lerreur-de-prediction-de-recompense">📈 7.9 L'erreur de prédiction de récompense</a></li><li><a href="#710-lapprentissage-par-recompense">🔄 7.10 L'apprentissage par récompense</a></li><li><a href="#711-le-renforcement-positif">🧠 7.11 Le renforcement positif</a></li><li><a href="#712-la-motivation">🎯 7.12 La motivation</a></li><li><a href="#713-la-motivation-intrinseque">🔥 7.13 La motivation intrinsèque</a></li><li><a href="#714-la-motivation-extrinseque">🎁 7.14 La motivation extrinsèque</a></li><li><a href="#715-plaisir-et-motivation">⚖️ 7.15 Plaisir et motivation</a></li><li><a href="#716-le-desir">🧠 7.16 Le désir</a></li><li><a href="#717-vouloir-et-aimer">🍫 7.17 Vouloir et aimer</a></li><li><a href="#718-lanticipation-du-plaisir">🔮 7.18 L'anticipation du plaisir</a></li><li><a href="#719-les-attentes-concernant-le-plaisir">🧠 7.19 Les attentes concernant le plaisir</a></li><li><a href="#720-lecart-entre-plaisir-attendu-et-plaisir-reel">📊 7.20 L'écart entre plaisir attendu et plaisir réel</a></li><li><a href="#721-lhabituation">🔄 7.21 L'habituation</a></li><li><a href="#722-ladaptation-hedonique">🔥 7.22 L'adaptation hédonique</a></li><li><a href="#723-la-joie-et-les-emotions-positives">😊 7.23 La joie et les émotions positives</a></li><li><a href="#724-la-satisfaction">🧠 7.24 La satisfaction</a></li><li><a href="#725-la-fierte">🏆 7.25 La fierté</a></li><li><a href="#726-la-gratitude">💕 7.26 La gratitude</a></li><li><a href="#727-le-rire-et-lamusement">😆 7.27 Le rire et l'amusement</a></li><li><a href="#728-la-joie-partagee">🧑‍🤝‍🧑 7.28 La joie partagée</a></li><li><a href="#729-la-communication-de-la-joie">🗣️ 7.29 La communication de la joie</a></li><li><a href="#730-la-contagion-emotionnelle-positive">🔄 7.30 La contagion émotionnelle positive</a></li><li><a href="#731-la-joie-et-lattention">🧠 7.31 La joie et l'attention</a></li><li><a href="#732-la-joie-et-la-pensee">💭 7.32 La joie et la pensée</a></li><li><a href="#733-la-joie-et-la-memoire">🧠 7.33 La joie et la mémoire</a></li><li><a href="#734-la-joie-et-les-objectifs">🎯 7.34 La joie et les objectifs</a></li><li><a href="#735-la-recompense-et-le-comportement">🏃 7.35 La récompense et le comportement</a></li><li><a href="#736-les-recompenses-repetees">🔁 7.36 Les récompenses répétées</a></li><li><a href="#737-la-recompense-variable">🎲 7.37 La récompense variable</a></li><li><a href="#738-les-differences-individuelles">🧠 7.38 Les différences individuelles</a></li><li><a href="#739-joie-plaisir-et-comportement">⚖️ 7.39 Joie, plaisir et comportement</a></li><li><a href="#740-pourquoi-etudier-la-joie-le-plaisir-et-la-recompense">🔬 7.40 Pourquoi étudier la joie, le plaisir et la récompense ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Joie, plaisir et récompense',
+        category: 'Émotions et comportements humains',
+        icon: '❤️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/emotions/">❤️ Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Joie, plaisir et récompense</h1>
     </div>
+    <div id="resume-banner"></div>
     
-    <svg class="hero-illustration" viewBox="0 0 440 380" fill="none" aria-hidden="true">
-      <g class="hero-network">
-      <circle cx="180" cy="150" r="34" fill="var(--hc-1)" opacity="0.12"/>
-      <circle cx="230" cy="260" r="30" fill="var(--hc-4)" opacity="0.12"/>
-      <circle cx="320" cy="50" r="26" fill="var(--hc-3)" opacity="0.12"/>
-
-      <g stroke="var(--line)" stroke-width="1.5">
-        <line x1="60" y1="80" x2="140" y2="40"/>
-        <line x1="140" y1="40" x2="220" y2="70"/>
-        <line x1="220" y1="70" x2="320" y2="50"/>
-        <line x1="320" y1="50" x2="380" y2="120"/>
-        <line x1="60" y1="80" x2="90" y2="160"/>
-        <line x1="220" y1="70" x2="180" y2="150"/>
-        <line x1="90" y1="160" x2="180" y2="150"/>
-        <line x1="180" y1="150" x2="280" y2="170"/>
-        <line x1="280" y1="170" x2="380" y2="120"/>
-        <line x1="280" y1="170" x2="360" y2="210"/>
-        <line x1="90" y1="160" x2="50" y2="250"/>
-        <line x1="180" y1="150" x2="140" y2="260"/>
-        <line x1="50" y1="250" x2="140" y2="260"/>
-        <line x1="140" y1="260" x2="230" y2="260"/>
-        <line x1="230" y1="260" x2="310" y2="290"/>
-        <line x1="360" y1="210" x2="310" y2="290"/>
-        <line x1="140" y1="260" x2="100" y2="330"/>
-        <line x1="230" y1="260" x2="200" y2="340"/>
-        <line x1="100" y1="330" x2="200" y2="340"/>
-      </g>
-
-      <circle cx="60" cy="80" r="14" fill="var(--hc-1)"/>
-      <circle cx="140" cy="40" r="9" fill="var(--hc-2)"/>
-      <circle cx="220" cy="70" r="16" fill="var(--hc-3)"/>
-      <circle cx="320" cy="50" r="10" fill="var(--hc-4)"/>
-      <circle cx="380" cy="120" r="12" fill="var(--hc-5)"/>
-      <circle cx="90" cy="160" r="10" fill="var(--hc-4)"/>
-      <circle cx="180" cy="150" r="20" fill="var(--hc-1)"/>
-      <circle cx="280" cy="170" r="11" fill="var(--hc-2)"/>
-      <circle cx="360" cy="210" r="8" fill="var(--hc-3)"/>
-      <circle cx="50" cy="250" r="12" fill="var(--hc-5)"/>
-      <circle cx="140" cy="260" r="9" fill="var(--hc-3)"/>
-      <circle cx="230" cy="260" r="14" fill="var(--hc-4)"/>
-      <circle cx="310" cy="290" r="10" fill="var(--hc-1)"/>
-      <circle cx="100" cy="330" r="8" fill="var(--hc-2)"/>
-      <circle cx="200" cy="340" r="11" fill="var(--hc-5)"/>
-      </g>
-    </svg>
-  </section>
-
-  <section class="container">
-    <div id="favorites-section" class="reading-history" hidden>
-      <h2>⭐ Mes favoris</h2>
-      <div class="history-list" id="favorites-list"></div>
-    </div>
-
-    <div id="reading-history" class="reading-history" hidden>
-      <h2><span class="block-icon block-icon-inline"><svg class="block-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="16" y="22" width="88" height="76" rx="5"/>
-        <circle cx="41" cy="48" r="10"/>
-        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
-    </svg></span>Reprendre ta lecture</h2>
-      <div class="history-list"></div>
-      <button type="button" class="history-more" hidden>Voir plus</button>
-    </div>
-
-    <div class="cat-grid" id="categories">
-      
-      <a class="cat-card" href="categorie/troubles.html" style="--accent:var(--acc-troubles)">
-        
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
-                 C26 95 42 101 53 96 C59 103 71 103 77 96
-                 C90 99 101 87 98 75 C108 67 106 51 96 45
-                 C97 29 82 15 60 16 Z"/>
-        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
-    </svg></span>
-        <h2>Troubles psychologiques</h2>
-        <p>Les différents troubles reconnus en psychologie et en psychiatrie : anxieux, dépressifs, bipolaires, alimentaires, du sommeil, et bien d'autres.</p>
-        <span class="cat-count">20 chapitres</span>
-      </a>
-      <a class="cat-card" href="categorie/syndromes.html" style="--accent:var(--acc-syndromes)">
-        
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
-        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
-        <line x1="37" y1="22" x2="83" y2="22"/>
-        <line x1="32" y1="46" x2="88" y2="46"/>
-        <line x1="32" y1="78" x2="88" y2="78"/>
-        <line x1="37" y1="100" x2="83" y2="100"/>
-    </svg></span>
-        <h2>Syndromes psychologiques</h2>
-        <p>Des syndromes connus aux plus rares : identité, perception, mémoire, stress, culture, corps, et phénomènes particuliers.</p>
-        <span class="cat-count">13 chapitres</span>
-      </a>
-      <a class="cat-card" href="categorie/lexique.html" style="--accent:var(--acc-lexique)">
-        
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
-                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
-        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
-                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
-    </svg></span>
-        <h2>Lexique des séances psychologiques</h2>
-        <p>Les mots et expressions utilisés en consultation, en thérapie, ou dans le suivi d'un accompagnement psychologique.</p>
-        <span class="cat-count">10 chapitres</span>
-      </a>
-      <a class="cat-card" href="categorie/mecanismes.html" style="--accent:var(--acc-mecanismes)">
-        
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
-        <path d="M45 59 L55 69 L76 46"/>
-    </svg></span>
-        <h2>Mécanismes de défense</h2>
-        <p>Comment l'esprit fait face, souvent inconsciemment, aux émotions difficiles, aux conflits internes et au stress.</p>
-        <span class="cat-count">12 chapitres</span>
-      </a>
-      <a class="cat-card" href="categorie/phenomenes.html" style="--accent:var(--acc-phenomenes)">
-        
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
-        <circle cx="60" cy="60" r="15"/>
-        <line x1="60" y1="12" x2="60" y2="23"/>
-        <line x1="60" y1="97" x2="60" y2="108"/>
-        <line x1="15" y1="60" x2="4" y2="60"/>
-        <line x1="116" y1="60" x2="105" y2="60"/>
-    </svg></span>
-        <h2>Phénomènes psychologiques</h2>
-        <p>Des phénomènes qui influencent la perception, la mémoire, les émotions, la conscience et les décisions au quotidien.</p>
-        <span class="cat-count">20 chapitres</span>
-      </a>
-      <a class="cat-card" href="categorie/emotions.html" style="--accent:var(--acc-emotions)">
-        
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-emotions)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
                  C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
         <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
-    </svg></span>
-        <h2>Émotions et comportements humains</h2>
-        <p>Comprendre les émotions, les réactions humaines, les relations avec les autres et les comportements adoptés au quotidien.</p>
-        <span class="cat-count">20 chapitres</span>
-      </a>
-      <a class="cat-card" href="categorie/avances.html" style="--accent:var(--acc-avances)">
-        
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="28" cy="28" r="9"/>
-        <circle cx="92" cy="28" r="9"/>
-        <circle cx="60" cy="64" r="9"/>
-        <circle cx="28" cy="98" r="9"/>
-        <circle cx="92" cy="98" r="9"/>
-        <line x1="34" y1="34" x2="55" y2="59"/>
-        <line x1="86" y1="34" x2="65" y2="59"/>
-        <line x1="34" y1="92" x2="55" y2="69"/>
-        <line x1="86" y1="92" x2="65" y2="69"/>
-        <line x1="35" y1="28" x2="85" y2="28"/>
-        <line x1="35" y1="98" x2="85" y2="98"/>
-    </svg></span>
-        <h2>Concepts avancés</h2>
-        <p>Des notions plus complexes issues de la psychologie, de la psychologie clinique et de la psychopathologie.</p>
-        <span class="cat-count">20 chapitres</span>
-      </a>
-      <a class="cat-card" href="categorie/histoires.html" style="--accent:var(--acc-histoires)">
-        
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="16" y="22" width="88" height="76" rx="5"/>
-        <circle cx="41" cy="48" r="10"/>
-        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
-    </svg></span>
-        <h2>Histoires vraies de psychologie</h2>
-        <p>Des histoires réelles, documentées et analysées pour mieux comprendre la psychologie humaine.</p>
-        <span class="cat-count">5 chapitres</span>
-      </a>
-      <a class="cat-card" href="categorie/justice.html" style="--accent:var(--acc-justice)">
-        <span class="cat-badge-new">Nouveau</span>
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
-        <line x1="60" y1="26" x2="60" y2="95"/>
-        <line x1="42" y1="95" x2="78" y2="95"/>
-        <line x1="25" y1="40" x2="95" y2="40"/>
-        <line x1="25" y1="40" x2="16" y2="60"/>
-        <line x1="95" y1="40" x2="104" y2="60"/>
-        <path d="M6 60 Q16 76 26 60"/>
-        <path d="M94 60 Q104 76 114 60"/>
-    </svg></span>
-        <h2>Psychologie, justice et criminologie</h2>
-        <p>La psychologie dans le contexte judiciaire et criminologique : mémoire des témoins, interrogatoires, comportement criminel, profilage et décisions judiciaires.</p>
-        <span class="cat-count">10 chapitres</span>
-      </a>
-      <a class="cat-card" href="categorie/experiences.html" style="--accent:var(--acc-experiences)">
-        <span class="cat-badge-new">Nouveau</span>
-        <span class="cat-icon"><svg class="cat-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="44" y1="14" x2="76" y2="14"/>
-        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
-        <line x1="34" y1="72" x2="86" y2="72"/>
-        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
-        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
-        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
-    </svg></span>
-        <h2>Expériences célèbres de psychologie</h2>
-        <p>Des expériences réellement menées, avec leurs résultats, leurs limites et leur contexte historique — sans transformer leurs conclusions en vérités absolues.</p>
-        <span class="cat-count">15 chapitres</span>
-      </a>
+    </svg>
     </div>
-
-    <div class="about-block" id="a-propos">
-      <span class="block-icon"><svg class="block-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="28" cy="28" r="9"/>
-        <circle cx="92" cy="28" r="9"/>
-        <circle cx="60" cy="64" r="9"/>
-        <circle cx="28" cy="98" r="9"/>
-        <circle cx="92" cy="98" r="9"/>
-        <line x1="34" y1="34" x2="55" y2="59"/>
-        <line x1="86" y1="34" x2="65" y2="59"/>
-        <line x1="34" y1="92" x2="55" y2="69"/>
-        <line x1="86" y1="92" x2="65" y2="69"/>
-        <line x1="35" y1="28" x2="85" y2="28"/>
-        <line x1="35" y1="98" x2="85" y2="98"/>
-    </svg></span>
-      <h2>À propos de ce site</h2>
-      <p>Mon Esprit est une encyclopédie personnelle consacrée à la psychologie : 145 chapitres répartis en 10 grandes catégories, des troubles psychologiques aux histoires vraies, en passant par les mécanismes de défense, les émotions et les concepts avancés. L'objectif est simple : rendre accessible une matière souvent complexe, sans jargon inutile, pour toute personne curieuse de mieux comprendre le fonctionnement de l'esprit humain — le sien comme celui des autres. Le contenu s'enrichit progressivement, catégorie par catégorie.</p>
+    <div class="article-body">
+      <p>La joie est une émotion généralement associée à une expérience agréable, à l'accomplissement d'un objectif, à une interaction positive ou à la présence d'un événement considéré comme favorable.</p>
+<p>Elle est étroitement liée au plaisir, à la motivation et aux systèmes de récompense, mais ces notions ne sont pas identiques.</p>
+<p>La joie peut influencer les pensées, l'attention, la mémoire, les comportements et les interactions sociales.</p>
+<h2 id="71-quest-ce-que-la-joie" class="entry-title hc-1">😄 7.1 Qu'est-ce que la joie ?</h2>
+<p>La joie est une émotion généralement associée à une expérience positive ou à la perception qu'une situation correspond favorablement aux attentes.</p>
+<p>Elle peut être légère, intense, brève ou relativement durable.</p>
+<h2 id="72-la-fonction-de-la-joie" class="entry-title hc-2">✨ 7.2 La fonction de la joie</h2>
+<p>La joie peut favoriser l'approche de situations ou d'activités associées à des expériences positives.</p>
+<p>Elle peut également faciliter certaines interactions sociales et renforcer certains comportements.</p>
+<h2 id="73-le-plaisir" class="entry-title hc-3">😊 7.3 Le plaisir</h2>
+<p>Le plaisir correspond à l'expérience subjective agréable associée à une activité, une sensation, un événement ou une récompense.</p>
+<p>Il peut être physique, sensoriel, émotionnel ou intellectuel.</p>
+<h2 id="74-la-recompense" class="entry-title hc-4">🎯 7.4 La récompense</h2>
+<p>Une récompense est un événement ou une conséquence qui augmente généralement la valeur subjective d'un comportement ou la probabilité qu'il soit reproduit.</p>
+<p>La perception d'une récompense dépend toutefois du contexte et des différences individuelles.</p>
+<h2 id="75-le-systeme-de-recompense" class="entry-title hc-5">🧠 7.5 Le système de récompense</h2>
+<p>Le cerveau possède plusieurs réseaux impliqués dans l'apprentissage, la motivation et la réponse aux récompenses.</p>
+<p>Le système de récompense ne correspond pas à une seule zone du cerveau.</p>
+<h2 id="76-la-dopamine" class="entry-title hc-1">🧬 7.6 La dopamine</h2>
+<p>La dopamine participe notamment à différents processus liés à la motivation, à l'apprentissage par renforcement et à l'anticipation de certaines récompenses.</p>
+<p>Elle ne doit pas être considérée comme une simple « molécule du plaisir ».</p>
+<h2 id="77-lanticipation-de-la-recompense" class="entry-title hc-2">🔮 7.7 L'anticipation de la récompense</h2>
+<p>Une récompense peut influencer le comportement avant même qu'elle soit obtenue.</p>
+<p>L'anticipation d'un résultat agréable peut augmenter la motivation à effectuer certaines actions.</p>
+<h2 id="78-la-recompense-obtenue" class="entry-title hc-3">🎁 7.8 La récompense obtenue</h2>
+<p>La réception d'une récompense fournit des informations permettant notamment de comparer le résultat obtenu avec ce qui était attendu.</p>
+<p>Cette comparaison participe à certains mécanismes d'apprentissage.</p>
+<h2 id="79-lerreur-de-prediction-de-recompense" class="entry-title hc-4">📈 7.9 L'erreur de prédiction de récompense</h2>
+<p>L'erreur de prédiction correspond à une différence entre une récompense attendue et une récompense réellement obtenue.</p>
+<p>Elle peut contribuer à modifier les attentes futures.</p>
+<h2 id="710-lapprentissage-par-recompense" class="entry-title hc-5">🔄 7.10 L'apprentissage par récompense</h2>
+<p>Lorsqu'un comportement est régulièrement suivi d'une conséquence positive, la probabilité de reproduire ce comportement peut augmenter.</p>
+<p>Ce mécanisme constitue une base importante de l'apprentissage par renforcement.</p>
+<h2 id="711-le-renforcement-positif" class="entry-title hc-1">🧠 7.11 Le renforcement positif</h2>
+<p>Le renforcement positif correspond à l'ajout d'une conséquence qui augmente la probabilité qu'un comportement soit reproduit.</p>
+<p>Il ne signifie pas simplement « faire quelque chose de positif ».</p>
+<h2 id="712-la-motivation" class="entry-title hc-2">🎯 7.12 La motivation</h2>
+<p>La motivation correspond aux processus qui influencent l'orientation, l'intensité et la persistance d'un comportement vers un objectif.</p>
+<p>Elle peut être influencée par les récompenses, les besoins, les attentes et le contexte.</p>
+<h2 id="713-la-motivation-intrinseque" class="entry-title hc-3">🔥 7.13 La motivation intrinsèque</h2>
+<p>La motivation intrinsèque correspond à une motivation liée à l'intérêt ou au plaisir associé à l'activité elle-même.</p>
+<p>L'activité est alors réalisée sans que la récompense extérieure soit nécessairement la principale raison d'agir.</p>
+<h2 id="714-la-motivation-extrinseque" class="entry-title hc-4">🎁 7.14 La motivation extrinsèque</h2>
+<p>La motivation extrinsèque est davantage liée aux conséquences externes d'une activité.</p>
+<p>Elle peut notamment être associée à :</p>
+<ul>
+<li>une récompense ;</li>
+<li>une reconnaissance ;</li>
+<li>une note ;</li>
+<li>un avantage ;</li>
+<li>l'évitement d'une conséquence négative.</li>
+</ul>
+<h2 id="715-plaisir-et-motivation" class="entry-title hc-5">⚖️ 7.15 Plaisir et motivation</h2>
+<p>Le plaisir et la motivation sont liés mais différents.</p>
+<p>Une activité peut être agréable sans provoquer une forte motivation à la répéter, et une personne peut être fortement motivée par un objectif qui n'est pas particulièrement plaisant.</p>
+<h2 id="716-le-desir" class="entry-title hc-1">🧠 7.16 Le désir</h2>
+<p>Le désir correspond à une tendance psychologique orientée vers l'obtention d'un objet, d'une expérience ou d'un résultat.</p>
+<p>Le désir et le plaisir peuvent fonctionner différemment.</p>
+<h2 id="717-vouloir-et-aimer" class="entry-title hc-2">🍫 7.17 Vouloir et aimer</h2>
+<p>Certains modèles distinguent le fait de <strong>vouloir</strong> une récompense et le fait de <strong>l'apprécier</strong> lorsqu'elle est obtenue.</p>
+<p>Une personne peut donc rechercher fortement quelque chose sans que son expérience réelle soit aussi agréable qu'attendu.</p>
+<h2 id="718-lanticipation-du-plaisir" class="entry-title hc-3">🔮 7.18 L'anticipation du plaisir</h2>
+<p>Imaginer une expérience agréable peut produire une réponse émotionnelle avant que l'expérience ne se produise réellement.</p>
+<p>Cette anticipation peut contribuer à la motivation.</p>
+<h2 id="719-les-attentes-concernant-le-plaisir" class="entry-title hc-4">🧠 7.19 Les attentes concernant le plaisir</h2>
+<p>Le plaisir attendu peut influencer les décisions et les comportements.</p>
+<p>Les attentes peuvent toutefois être différentes de l'expérience réellement vécue.</p>
+<h2 id="720-lecart-entre-plaisir-attendu-et-plaisir-reel" class="entry-title hc-5">📊 7.20 L'écart entre plaisir attendu et plaisir réel</h2>
+<p>Une activité peut être beaucoup plus agréable ou beaucoup moins agréable que prévu.</p>
+<p>Cet écart fournit de nouvelles informations susceptibles de modifier les attentes futures.</p>
+<h2 id="721-lhabituation" class="entry-title hc-1">🔄 7.21 L'habituation</h2>
+<p>Lorsqu'un même stimulus agréable est présenté de nombreuses fois, sa réponse subjective peut diminuer.</p>
+<p>Ce phénomène est appelé habituation.</p>
+<h2 id="722-ladaptation-hedonique" class="entry-title hc-2">🔥 7.22 L'adaptation hédonique</h2>
+<p>L'adaptation hédonique désigne la tendance à revenir progressivement vers un niveau émotionnel relativement habituel après certains changements positifs ou négatifs.</p>
+<p>Elle ne signifie pas que toutes les émotions disparaissent avec le temps.</p>
+<h2 id="723-la-joie-et-les-emotions-positives" class="entry-title hc-3">😊 7.23 La joie et les émotions positives</h2>
+<p>La joie fait partie des émotions positives, mais elle n'est pas la seule.</p>
+<p>D'autres expériences positives peuvent inclure :</p>
+<ul>
+<li>la gratitude ;</li>
+<li>la fierté ;</li>
+<li>l'intérêt ;</li>
+<li>l'amusement ;</li>
+<li>la satisfaction ;</li>
+<li>l'attachement.</li>
+</ul>
+<h2 id="724-la-satisfaction" class="entry-title hc-4">🧠 7.24 La satisfaction</h2>
+<p>La satisfaction correspond à l'évaluation positive d'un résultat, d'une situation ou d'une expérience.</p>
+<p>Elle peut apparaître lorsqu'un résultat correspond aux attentes ou les dépasse.</p>
+<h2 id="725-la-fierte" class="entry-title hc-5">🏆 7.25 La fierté</h2>
+<p>La fierté peut apparaître lorsqu'une personne évalue positivement une réalisation ou une caractéristique personnelle.</p>
+<p>Elle peut contribuer à renforcer certains comportements ou objectifs.</p>
+<h2 id="726-la-gratitude" class="entry-title hc-1">💕 7.26 La gratitude</h2>
+<p>La gratitude correspond à une réponse émotionnelle associée à la reconnaissance d'un bénéfice reçu ou d'une contribution positive.</p>
+<p>Elle peut également avoir une dimension sociale importante.</p>
+<h2 id="727-le-rire-et-lamusement" class="entry-title hc-2">😆 7.27 Le rire et l'amusement</h2>
+<p>L'amusement peut provoquer le rire, mais rire et amusement ne sont pas synonymes.</p>
+<p>Le rire peut également avoir des fonctions sociales et apparaître dans différents états émotionnels.</p>
+<h2 id="728-la-joie-partagee" class="entry-title hc-3">🧑‍🤝‍🧑 7.28 La joie partagée</h2>
+<p>Les émotions positives peuvent être partagées avec d'autres personnes.</p>
+<p>Une expérience positive collective peut renforcer certains liens sociaux et favoriser la proximité.</p>
+<h2 id="729-la-communication-de-la-joie" class="entry-title hc-4">🗣️ 7.29 La communication de la joie</h2>
+<p>La joie peut être communiquée par :</p>
+<ul>
+<li>les expressions faciales ;</li>
+<li>la voix ;</li>
+<li>les gestes ;</li>
+<li>les paroles ;</li>
+<li>le comportement.</li>
+</ul>
+<p>Ces signaux permettent aux autres personnes de détecter certains états émotionnels.</p>
+<h2 id="730-la-contagion-emotionnelle-positive" class="entry-title hc-5">🔄 7.30 La contagion émotionnelle positive</h2>
+<p>L'état émotionnel positif d'une personne peut influencer celui des personnes présentes autour d'elle.</p>
+<p>Ce phénomène peut participer à la création d'une atmosphère émotionnelle collective.</p>
+<h2 id="731-la-joie-et-lattention" class="entry-title hc-1">🧠 7.31 La joie et l'attention</h2>
+<p>Les émotions positives peuvent influencer la manière dont l'attention est orientée.</p>
+<p>Dans certaines conditions, elles peuvent favoriser une attention plus large portée aux informations disponibles.</p>
+<h2 id="732-la-joie-et-la-pensee" class="entry-title hc-2">💭 7.32 La joie et la pensée</h2>
+<p>Certains états émotionnels positifs peuvent influencer la flexibilité cognitive, l'exploration des idées et certaines formes de créativité.</p>
+<p>Ces effets dépendent toutefois du contexte et du niveau d'activation émotionnelle.</p>
+<h2 id="733-la-joie-et-la-memoire" class="entry-title hc-3">🧠 7.33 La joie et la mémoire</h2>
+<p>Les émotions peuvent influencer l'encodage et la récupération des souvenirs.</p>
+<p>Les événements émotionnellement positifs peuvent être particulièrement mémorisés dans certaines conditions.</p>
+<h2 id="734-la-joie-et-les-objectifs" class="entry-title hc-4">🎯 7.34 La joie et les objectifs</h2>
+<p>La réussite d'un objectif peut provoquer de la joie et renforcer la motivation à poursuivre certaines activités.</p>
+<p>La réussite peut également modifier les attentes concernant les objectifs futurs.</p>
+<h2 id="735-la-recompense-et-le-comportement" class="entry-title hc-5">🏃 7.35 La récompense et le comportement</h2>
+<p>Les conséquences positives peuvent renforcer certains comportements.</p>
+<p>Cependant, le renforcement dépend de la manière dont la conséquence est vécue et de son importance pour l'individu.</p>
+<h2 id="736-les-recompenses-repetees" class="entry-title hc-1">🔁 7.36 Les récompenses répétées</h2>
+<p>Une récompense répétée ne produit pas nécessairement toujours le même effet.</p>
+<p>L'habitude, les attentes, le contexte et la valeur subjective peuvent modifier la réponse.</p>
+<h2 id="737-la-recompense-variable" class="entry-title hc-2">🎲 7.37 La récompense variable</h2>
+<p>Lorsqu'une récompense apparaît de manière imprévisible, son caractère incertain peut influencer fortement certains comportements d'approche et de répétition.</p>
+<p>Ce principe est notamment étudié dans les recherches sur l'apprentissage et les comportements répétitifs.</p>
+<h2 id="738-les-differences-individuelles" class="entry-title hc-3">🧠 7.38 Les différences individuelles</h2>
+<p>La même récompense peut provoquer des réactions très différentes selon les personnes.</p>
+<p>Les préférences, les expériences passées, les objectifs, le contexte et l'état émotionnel influencent notamment la valeur attribuée à une récompense.</p>
+<h2 id="739-joie-plaisir-et-comportement" class="entry-title hc-4">⚖️ 7.39 Joie, plaisir et comportement</h2>
+<p>La joie et le plaisir peuvent favoriser certains comportements d'approche, mais ils ne déterminent pas automatiquement les actions.</p>
+<p>Les décisions dépendent également des objectifs, des contraintes, des habitudes et du contexte.</p>
+<h2 id="740-pourquoi-etudier-la-joie-le-plaisir-et-la-recompense" class="entry-title hc-5">🔬 7.40 Pourquoi étudier la joie, le plaisir et la récompense ?</h2>
+<p>Ces phénomènes permettent d'observer les relations entre :</p>
+<p><strong>expérience → plaisir → récompense → motivation → comportement → apprentissage</strong></p>
+<p>Ils permettent également de comprendre comment les expériences positives influencent les comportements futurs.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>La joie, le plaisir et la récompense sont étroitement liés mais correspondent à des phénomènes différents.</p>
+<p><strong>😊 joie → 🍫 plaisir → 🎁 récompense → 🎯 motivation → 🏃 comportement → 🧠 apprentissage</strong></p>
+<p>Le cerveau ne possède pas une simple « zone du plaisir ». Les expériences de récompense impliquent plusieurs réseaux cérébraux et différents neurotransmetteurs.</p>
+<p>La dopamine participe notamment à la motivation, à l'apprentissage et à l'anticipation des récompenses, mais elle ne peut pas être réduite à une simple « molécule du bonheur ».</p>
+<p>Enfin, une récompense n'a pas la même valeur pour tout le monde : <strong>le contexte, les expériences passées, les attentes et les différences individuelles influencent fortement la manière dont elle est vécue.</strong></p>
     </div>
-
-    <div class="support-note">
-      <span class="support-note-icon">🌱</span>
-      <div>
-        <p class="support-note-title">Un projet qui continue de grandir</p>
-        <p>Mon Esprit reste aujourd'hui un projet personnel et gratuit. Le contenu continuera de s'enrichir dans tous les cas — mais certaines idées pour faire évoluer le site plus loin (comme une recherche plus intelligente, capable de comprendre une description avec ses propres mots) demanderont des moyens plus importants qu'aujourd'hui, notamment un vrai serveur. Un petit soutien aide directement à financer cette évolution. Et si tu préfères juste en discuter, n'hésite pas à <a href="#contact">me contacter</a>.</p>
-        <a class="kofi-button" href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener">
-          ☕ Soutenir sur Ko-fi
-        </a>
-      </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-honte-culpabilite-et-embarras/"><span class="similar-icon">❤️</span>Honte, culpabilité et embarras</a><a class="similar-item" href="/chapitre/emotions-amour-attachement-et-comportements/"><span class="similar-icon">❤️</span>Amour, attachement et comportements</a><a class="similar-item" href="/chapitre/emotions-emotions-et-relations-sociales/"><span class="similar-icon">❤️</span>Émotions et relations sociales</a></div>
     </div>
-
-    <div class="section-divider" aria-hidden="true">
-      <svg viewBox="0 0 200 20" preserveAspectRatio="none">
-        <circle cx="10" cy="10" r="3" fill="var(--hc-1)"/>
-        <circle cx="60" cy="10" r="3" fill="var(--hc-2)"/>
-        <circle cx="110" cy="10" r="3" fill="var(--hc-3)"/>
-        <circle cx="150" cy="10" r="3" fill="var(--hc-4)"/>
-        <circle cx="190" cy="10" r="3" fill="var(--hc-5)"/>
-        <line x1="16" y1="10" x2="54" y2="10" stroke="var(--line)" stroke-width="1"/>
-        <line x1="66" y1="10" x2="104" y2="10" stroke="var(--line)" stroke-width="1"/>
-        <line x1="116" y1="10" x2="144" y2="10" stroke="var(--line)" stroke-width="1"/>
-        <line x1="156" y1="10" x2="184" y2="10" stroke="var(--line)" stroke-width="1"/>
-      </svg>
-    </div>
-
-    <div class="contact-block" id="contact">
-      <span class="block-icon"><svg class="block-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
-                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
-        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
-                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
-    </svg></span>
-      <h2>Me contacter</h2>
-      <p class="lead">Une question, une remarque, une idée de sujet à traiter ? Écris-moi directement ici.</p>
-      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mwlkbjrr" method="POST">
-        <input type="text" name="name" placeholder="Ton prénom (optionnel)">
-        <input type="email" name="_replyto" placeholder="Ton adresse email" required>
-        <textarea name="message" placeholder="Ton message..." required></textarea>
-        <button type="submit">Envoyer</button>
-        <p class="form-status" id="form-status" hidden></p>
-      </form>
-    </div>
-  </section>
+    <a class="back-link" href="/categorie/emotions/">← Retour à « Émotions et comportements humains »</a>
+  </div>
 </main>
 
 <footer class="site-footer">
   <div class="container">
     <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
-    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
   </div>
 </footer>
 <script>
@@ -665,7 +591,7 @@ function showToast(msg) {
   if (backBtn) {
     backBtn.addEventListener('click', function () {
       if (window.history.length > 1) window.history.back();
-      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : 'index.html';
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
     });
   }
 })();
@@ -683,7 +609,7 @@ function showToast(msg) {
 
   function loadIndex() {
     if (!indexPromise) {
-      indexPromise = fetch('search-index.json')
+      indexPromise = fetch('/search-index.json')
         .then(function (r) { return r.json(); })
         .then(function (data) { index = data; })
         .catch(function () { index = []; });
@@ -721,10 +647,15 @@ function showToast(msg) {
     });
   }
 
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
   function render(results, query) {
+    lastQuery = query;
     if (results.length === 0) {
       box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
       return;
     }
     box.innerHTML = results.map(function (item) {
@@ -740,11 +671,13 @@ function showToast(msg) {
       '</a>';
     }).join('');
     box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
   }
 
   input.addEventListener('focus', loadIndex);
   input.addEventListener('input', function () {
     var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
     if (query.length < 2) { box.hidden = true; return; }
     loadIndex().then(function () { render(runSearch(query), query); });
   });
@@ -752,8 +685,50 @@ function showToast(msg) {
     if (e.key === 'Escape') { box.hidden = true; input.blur(); }
   });
   document.addEventListener('click', function (e) {
-    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
   });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
 })();
 
 // ---------------------------------------------------------------

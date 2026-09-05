@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partie 14 — Troubles neurocognitifs — Mon Esprit</title>
+<meta name="description" content="Partie 14 — Troubles neurocognitifs, dans la catégorie Troubles psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#141-le-trouble-neurocognitif-leger">🧠 14.1 Le trouble neurocognitif léger</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#fonctions-pouvant-etre-concernees">Fonctions pouvant être concernées</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#142-le-trouble-neurocognitif-majeur">🧠 14.2 Le trouble neurocognitif majeur</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#143-le-trouble-neurocognitif-majeur-ou-leger-du-a-la-maladie-dalzheimer">🧠 14.3 Le trouble neurocognitif majeur ou léger dû à la maladie d'Alzheimer</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#144-le-trouble-neurocognitif-vasculaire">🧠 14.4 Le trouble neurocognitif vasculaire</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#145-le-trouble-neurocognitif-a-corps-de-lewy">🧠 14.5 Le trouble neurocognitif à corps de Lewy</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#146-le-trouble-neurocognitif-du-a-la-maladie-de-parkinson">🧠 14.6 Le trouble neurocognitif dû à la maladie de Parkinson</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#147-le-trouble-neurocognitif-du-a-un-traumatisme-cranien">🧠 14.7 Le trouble neurocognitif dû à un traumatisme crânien</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#148-le-trouble-neurocognitif-du-a-une-infection-par-le-vih">🧠 14.8 Le trouble neurocognitif dû à une infection par le VIH</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#149-le-trouble-neurocognitif-du-a-une-substance-ou-a-un-medicament">🧠 14.9 Le trouble neurocognitif dû à une substance ou à un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1410-le-trouble-neurocognitif-du-a-une-maladie-a-prions">🧠 14.10 Le trouble neurocognitif dû à une maladie à prions</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1411-le-trouble-neurocognitif-du-a-la-maladie-de-huntington">🧠 14.11 Le trouble neurocognitif dû à la maladie de Huntington</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations-cognitives">Manifestations cognitives</a></li><li><a href="#manifestations-comportementales">Manifestations comportementales</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1412-le-trouble-neurocognitif-du-a-une-autre-affection-medicale">🧠 14.12 Le trouble neurocognitif dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1413-le-trouble-neurocognitif-frontotemporal">🧠 14.13 Le trouble neurocognitif frontotemporal</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1414-laphasie-progressive-primaire">🧠 14.14 L'aphasie progressive primaire</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_11">Manifestations</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1415-les-troubles-de-memoire-lies-aux-troubles-neurocognitifs">🧠 14.15 Les troubles de mémoire liés aux troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_12">Manifestations</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1416-les-troubles-de-lattention">🧠 14.16 Les troubles de l'attention</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations_13">Manifestations</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1417-les-troubles-des-fonctions-executives">🧠 14.17 Les troubles des fonctions exécutives</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#manifestations_14">Manifestations</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1418-les-troubles-visuospatiaux">🧠 14.18 Les troubles visuospatiaux</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#manifestations_15">Manifestations</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1419-les-troubles-du-langage-dans-les-troubles-neurocognitifs">🧠 14.19 Les troubles du langage dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#manifestations_16">Manifestations</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1420-les-troubles-de-la-cognition-sociale">🧠 14.20 Les troubles de la cognition sociale</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#manifestations_17">Manifestations</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1421-le-syndrome-confusionnel">🧠 14.21 Le syndrome confusionnel</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#manifestations_18">Manifestations</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1422-le-delirium-du-a-une-intoxication">🧠 14.22 Le délirium dû à une intoxication</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations_19">Manifestations</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1423-le-delirium-du-au-sevrage">🧠 14.23 Le délirium dû au sevrage</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations_20">Manifestations</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1424-la-demence">🧠 14.24 La démence</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#manifestations_21">Manifestations</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1425-la-demence-a-debut-precoce">🧠 14.25 La démence à début précoce</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1426-la-progression-des-troubles-neurocognitifs">🧠 14.26 La progression des troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#evolutions-possibles">Évolutions possibles</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1427-les-troubles-neurocognitifs-reversibles-ou-partiellement-reversibles">🧠 14.27 Les troubles neurocognitifs réversibles ou partiellement réversibles</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#causes-possibles_3">Causes possibles</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1428-les-changements-comportementaux-dans-les-troubles-neurocognitifs">🧠 14.28 Les changements comportementaux dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#manifestations_22">Manifestations</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1429-lapathie-dans-les-troubles-neurocognitifs">🧠 14.29 L'apathie dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#manifestations_23">Manifestations</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1430-les-hallucinations-dans-les-troubles-neurocognitifs">🧠 14.30 Les hallucinations dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#manifestations_24">Manifestations</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li><li><a href="#1431-les-troubles-du-sommeil-associes-aux-troubles-neurocognitifs">🧠 14.31 Les troubles du sommeil associés aux troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_30">Définition</a></li><li><a href="#manifestations_25">Manifestations</a></li><li><a href="#a-retenir_30">À retenir</a></li></ul></li><li><a href="#1432-lanosognosie">🧠 14.32 L'anosognosie</a><ul class="sidebar-sublist"><li><a href="#definition_31">Définition</a></li><li><a href="#manifestations_26">Manifestations</a></li><li><a href="#a-retenir_31">À retenir</a></li></ul></li><li><a href="#1433-la-perte-progressive-dautonomie">🧠 14.33 La perte progressive d'autonomie</a><ul class="sidebar-sublist"><li><a href="#definition_32">Définition</a></li><li><a href="#activites-pouvant-devenir-difficiles">Activités pouvant devenir difficiles</a></li><li><a href="#a-retenir_32">À retenir</a></li></ul></li><li><a href="#1434-levaluation-neuropsychologique">🧠 14.34 L'évaluation neuropsychologique</a><ul class="sidebar-sublist"><li><a href="#definition_33">Définition</a></li><li><a href="#fonctions-evaluees">Fonctions évaluées</a></li><li><a href="#a-retenir_33">À retenir</a></li></ul></li><li><a href="#1435-le-diagnostic-differentiel-des-troubles-neurocognitifs">🧠 14.35 Le diagnostic différentiel des troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_34">Définition</a></li><li><a href="#causes-pouvant-etre-envisagees">Causes pouvant être envisagées</a></li><li><a href="#a-retenir_34">À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Partie 14 — Troubles neurocognitifs',
+        category: 'Troubles psychologiques',
+        icon: '🩺'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Partie 14 — Troubles neurocognitifs</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-troubles)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <h1 id="141-le-trouble-neurocognitif-leger" class="entry-title hc-1">🧠 14.1 Le trouble neurocognitif léger</h1>
+<h2 id="definition">Définition</h2>
+<p>Le <strong>trouble neurocognitif léger</strong> correspond à une diminution des capacités cognitives par rapport au fonctionnement antérieur, mais cette diminution ne provoque généralement pas une perte complète d'autonomie.</p>
+<h2 id="fonctions-pouvant-etre-concernees">Fonctions pouvant être concernées</h2>
+<ul>
+<li>mémoire</li>
+<li>attention</li>
+<li>langage</li>
+<li>fonctions exécutives</li>
+<li>perception</li>
+<li>cognition sociale.</li>
+</ul>
+<h2 id="manifestations">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>avoir davantage de difficultés à mémoriser</li>
+<li>oublier certaines informations</li>
+<li>avoir besoin de plus de temps pour effectuer certaines tâches</li>
+<li>avoir des difficultés à trouver certains mots</li>
+<li>rencontrer davantage de difficultés pour organiser des activités complexes.</li>
+</ul>
+<h2 id="a-retenir">À retenir</h2>
+<p>Un trouble neurocognitif léger n'est pas synonyme de démence. La personne conserve généralement son autonomie, même si certaines tâches peuvent demander davantage d'efforts.</p>
+<hr />
+<h1 id="142-le-trouble-neurocognitif-majeur" class="entry-title hc-2">🧠 14.2 Le trouble neurocognitif majeur</h1>
+<h2 id="definition_1">Définition</h2>
+<p>Le <strong>trouble neurocognitif majeur</strong> correspond à une diminution importante des capacités cognitives qui interfère avec l'autonomie de la personne dans la vie quotidienne.</p>
+<h2 id="manifestations_1">Manifestations</h2>
+<p>Selon la cause, la personne peut présenter :</p>
+<ul>
+<li>pertes de mémoire</li>
+<li>difficultés de langage</li>
+<li>désorientation</li>
+<li>difficultés de planification</li>
+<li>problèmes de jugement</li>
+<li>difficultés à reconnaître certaines personnes ou certains objets</li>
+<li>changements du comportement.</li>
+</ul>
+<h2 id="a-retenir_1">À retenir</h2>
+<p>Le terme « trouble neurocognitif majeur » est utilisé pour décrire un syndrome. Il ne désigne pas une maladie unique.</p>
+<hr />
+<h1 id="143-le-trouble-neurocognitif-majeur-ou-leger-du-a-la-maladie-dalzheimer" class="entry-title hc-3">🧠 14.3 Le trouble neurocognitif majeur ou léger dû à la maladie d'Alzheimer</h1>
+<h2 id="definition_2">Définition</h2>
+<p>La <strong>maladie d'Alzheimer</strong> est une maladie neurodégénérative pouvant provoquer une détérioration progressive de plusieurs fonctions cognitives.</p>
+<h2 id="manifestations_2">Manifestations</h2>
+<p>Les premiers symptômes peuvent notamment concerner :</p>
+<ul>
+<li>la mémoire récente</li>
+<li>l'apprentissage de nouvelles informations</li>
+<li>l'orientation</li>
+<li>le langage</li>
+<li>les fonctions exécutives.</li>
+</ul>
+<p>Avec l'évolution de la maladie, les difficultés peuvent devenir plus importantes.</p>
+<h2 id="evolution">Évolution</h2>
+<p>La maladie est généralement progressive.</p>
+<h2 id="a-retenir_2">À retenir</h2>
+<p>La maladie d'Alzheimer est une cause fréquente de trouble neurocognitif majeur, particulièrement chez les personnes âgées.</p>
+<hr />
+<h1 id="144-le-trouble-neurocognitif-vasculaire" class="entry-title hc-4">🧠 14.4 Le trouble neurocognitif vasculaire</h1>
+<h2 id="definition_3">Définition</h2>
+<p>Le <strong>trouble neurocognitif vasculaire</strong> est associé à des atteintes du cerveau provoquées par des problèmes affectant les vaisseaux sanguins cérébraux.</p>
+<h2 id="causes-possibles">Causes possibles</h2>
+<ul>
+<li>AVC</li>
+<li>petits infarctus cérébraux</li>
+<li>maladie des petits vaisseaux</li>
+<li>autres atteintes vasculaires cérébrales.</li>
+</ul>
+<h2 id="manifestations_3">Manifestations</h2>
+<p>Les fonctions exécutives et l'attention peuvent notamment être affectées.</p>
+<p>La personne peut présenter :</p>
+<ul>
+<li>ralentissement</li>
+<li>difficultés d'organisation</li>
+<li>difficultés d'attention</li>
+<li>problèmes de mémoire</li>
+<li>difficultés à résoudre des problèmes.</li>
+</ul>
+<h2 id="a-retenir_3">À retenir</h2>
+<p>Les troubles vasculaires peuvent avoir une évolution progressive ou apparaître après plusieurs événements cérébrovasculaires.</p>
+<hr />
+<h1 id="145-le-trouble-neurocognitif-a-corps-de-lewy" class="entry-title hc-5">🧠 14.5 Le trouble neurocognitif à corps de Lewy</h1>
+<h2 id="definition_4">Définition</h2>
+<p>Le <strong>trouble neurocognitif à corps de Lewy</strong> est associé à la présence de dépôts anormaux appelés <strong>corps de Lewy</strong> dans le cerveau.</p>
+<h2 id="manifestations_4">Manifestations</h2>
+<p>Il peut provoquer :</p>
+<ul>
+<li>fluctuations importantes des capacités cognitives</li>
+<li>hallucinations visuelles</li>
+<li>troubles de l'attention</li>
+<li>problèmes visuospatiaux</li>
+<li>symptômes moteurs ressemblant à ceux de la maladie de Parkinson</li>
+<li>troubles du sommeil.</li>
+</ul>
+<h2 id="a-retenir_4">À retenir</h2>
+<p>Les fluctuations cognitives et les hallucinations visuelles peuvent être particulièrement caractéristiques.</p>
+<hr />
+<h1 id="146-le-trouble-neurocognitif-du-a-la-maladie-de-parkinson" class="entry-title hc-1">🧠 14.6 Le trouble neurocognitif dû à la maladie de Parkinson</h1>
+<h2 id="definition_5">Définition</h2>
+<p>Certaines personnes atteintes de <strong>maladie de Parkinson</strong> peuvent développer un trouble neurocognitif.</p>
+<h2 id="manifestations_5">Manifestations</h2>
+<p>Les difficultés peuvent concerner :</p>
+<ul>
+<li>attention</li>
+<li>fonctions exécutives</li>
+<li>vitesse de traitement</li>
+<li>mémoire</li>
+<li>capacités visuospatiales.</li>
+</ul>
+<h2 id="a-retenir_5">À retenir</h2>
+<p>Les troubles moteurs et cognitifs peuvent évoluer différemment selon les personnes.</p>
+<hr />
+<h1 id="147-le-trouble-neurocognitif-du-a-un-traumatisme-cranien" class="entry-title hc-2">🧠 14.7 Le trouble neurocognitif dû à un traumatisme crânien</h1>
+<h2 id="definition_6">Définition</h2>
+<p>Un <strong>traumatisme crânien</strong> peut entraîner des difficultés cognitives persistantes.</p>
+<h2 id="manifestations_6">Manifestations</h2>
+<p>Selon la gravité et les zones cérébrales touchées, on peut observer :</p>
+<ul>
+<li>problèmes de mémoire</li>
+<li>difficultés d'attention</li>
+<li>ralentissement</li>
+<li>difficultés de planification</li>
+<li>changements émotionnels</li>
+<li>difficultés de contrôle des impulsions.</li>
+</ul>
+<h2 id="a-retenir_6">À retenir</h2>
+<p>Les conséquences dépendent notamment de la gravité du traumatisme et des régions cérébrales concernées.</p>
+<hr />
+<h1 id="148-le-trouble-neurocognitif-du-a-une-infection-par-le-vih" class="entry-title hc-3">🧠 14.8 Le trouble neurocognitif dû à une infection par le VIH</h1>
+<h2 id="definition_7">Définition</h2>
+<p>Une infection par le <strong>VIH</strong> peut, dans certaines situations, être associée à des difficultés cognitives.</p>
+<h2 id="manifestations_7">Manifestations</h2>
+<p>Elles peuvent notamment concerner :</p>
+<ul>
+<li>attention</li>
+<li>mémoire</li>
+<li>vitesse de traitement</li>
+<li>fonctions exécutives.</li>
+</ul>
+<h2 id="a-retenir_7">À retenir</h2>
+<p>Les traitements modernes ont fortement modifié l'évolution des complications neurologiques liées au VIH.</p>
+<hr />
+<h1 id="149-le-trouble-neurocognitif-du-a-une-substance-ou-a-un-medicament" class="entry-title hc-4">🧠 14.9 Le trouble neurocognitif dû à une substance ou à un médicament</h1>
+<h2 id="definition_8">Définition</h2>
+<p>Certaines substances ou certains médicaments peuvent provoquer des perturbations cognitives.</p>
+<h2 id="manifestations_8">Manifestations</h2>
+<p>Selon la substance, on peut observer :</p>
+<ul>
+<li>troubles de mémoire</li>
+<li>difficultés d'attention</li>
+<li>ralentissement</li>
+<li>confusion</li>
+<li>difficultés exécutives.</li>
+</ul>
+<h2 id="a-retenir_8">À retenir</h2>
+<p>L'évaluation doit prendre en compte la substance utilisée, la quantité, la durée d'utilisation et l'évolution des symptômes.</p>
+<hr />
+<h1 id="1410-le-trouble-neurocognitif-du-a-une-maladie-a-prions" class="entry-title hc-5">🧠 14.10 Le trouble neurocognitif dû à une maladie à prions</h1>
+<h2 id="definition_9">Définition</h2>
+<p>Les <strong>maladies à prions</strong> sont des maladies neurologiques rares pouvant provoquer une détérioration cérébrale rapide.</p>
+<h2 id="manifestations_9">Manifestations</h2>
+<p>Elles peuvent provoquer :</p>
+<ul>
+<li>déclin cognitif rapide</li>
+<li>troubles de coordination</li>
+<li>changements comportementaux</li>
+<li>troubles neurologiques multiples.</li>
+</ul>
+<h2 id="a-retenir_9">À retenir</h2>
+<p>Ces maladies sont rares et peuvent évoluer rapidement.</p>
+<hr />
+<h1 id="1411-le-trouble-neurocognitif-du-a-la-maladie-de-huntington" class="entry-title hc-1">🧠 14.11 Le trouble neurocognitif dû à la maladie de Huntington</h1>
+<h2 id="definition_10">Définition</h2>
+<p>La <strong>maladie de Huntington</strong> est une maladie neurodégénérative héréditaire pouvant affecter les mouvements, la cognition et le comportement.</p>
+<h2 id="manifestations-cognitives">Manifestations cognitives</h2>
+<ul>
+<li>difficultés de planification</li>
+<li>ralentissement</li>
+<li>difficultés d'attention</li>
+<li>problèmes de mémoire</li>
+<li>difficultés de contrôle des comportements.</li>
+</ul>
+<h2 id="manifestations-comportementales">Manifestations comportementales</h2>
+<ul>
+<li>irritabilité</li>
+<li>impulsivité</li>
+<li>changements émotionnels.</li>
+</ul>
+<h2 id="a-retenir_10">À retenir</h2>
+<p>La maladie associe généralement des manifestations motrices, cognitives et psychiatriques.</p>
+<hr />
+<h1 id="1412-le-trouble-neurocognitif-du-a-une-autre-affection-medicale" class="entry-title hc-2">🧠 14.12 Le trouble neurocognitif dû à une autre affection médicale</h1>
+<h2 id="definition_11">Définition</h2>
+<p>Certaines maladies médicales peuvent provoquer ou contribuer à une détérioration cognitive.</p>
+<h2 id="exemples">Exemples</h2>
+<ul>
+<li>certaines maladies neurologiques</li>
+<li>certaines maladies métaboliques</li>
+<li>certaines infections</li>
+<li>certaines maladies auto-immunes</li>
+<li>certaines carences.</li>
+</ul>
+<h2 id="a-retenir_11">À retenir</h2>
+<p>Un trouble cognitif peut avoir une cause médicale réversible ou partiellement réversible, ce qui rend l'évaluation médicale importante.</p>
+<hr />
+<h1 id="1413-le-trouble-neurocognitif-frontotemporal" class="entry-title hc-3">🧠 14.13 Le trouble neurocognitif frontotemporal</h1>
+<h2 id="definition_12">Définition</h2>
+<p>Le <strong>trouble neurocognitif frontotemporal</strong> est associé à une dégénérescence touchant principalement certaines régions frontales et temporales du cerveau.</p>
+<h2 id="manifestations_10">Manifestations</h2>
+<p>Il peut provoquer :</p>
+<ul>
+<li>changements importants de personnalité</li>
+<li>désinhibition</li>
+<li>apathie</li>
+<li>comportements répétitifs</li>
+<li>perte des conventions sociales</li>
+<li>difficultés du langage.</li>
+</ul>
+<h2 id="particularite">Particularité</h2>
+<p>Les changements comportementaux ou langagiers peuvent apparaître relativement tôt.</p>
+<h2 id="a-retenir_12">À retenir</h2>
+<p>Le profil peut être très différent de celui observé dans la maladie d'Alzheimer.</p>
+<hr />
+<h1 id="1414-laphasie-progressive-primaire" class="entry-title hc-4">🧠 14.14 L'aphasie progressive primaire</h1>
+<h2 id="definition_13">Définition</h2>
+<p>L'<strong>aphasie progressive primaire</strong> correspond à un syndrome dans lequel les difficultés du langage constituent initialement le principal problème.</p>
+<h2 id="manifestations_11">Manifestations</h2>
+<p>La personne peut avoir des difficultés à :</p>
+<ul>
+<li>trouver ses mots</li>
+<li>comprendre certains mots</li>
+<li>produire des phrases</li>
+<li>utiliser correctement le langage.</li>
+</ul>
+<h2 id="evolution_1">Évolution</h2>
+<p>Les difficultés peuvent progressivement s'étendre à d'autres fonctions cognitives selon la cause.</p>
+<h2 id="a-retenir_13">À retenir</h2>
+<p>Le langage est au premier plan au début de certaines formes d'aphasie progressive primaire.</p>
+<hr />
+<h1 id="1415-les-troubles-de-memoire-lies-aux-troubles-neurocognitifs" class="entry-title hc-5">🧠 14.15 Les troubles de mémoire liés aux troubles neurocognitifs</h1>
+<h2 id="definition_14">Définition</h2>
+<p>Les troubles neurocognitifs peuvent provoquer différents types de problèmes de mémoire.</p>
+<h2 id="manifestations_12">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>oublier des informations récentes</li>
+<li>répéter certaines questions</li>
+<li>perdre des objets</li>
+<li>avoir des difficultés à apprendre de nouvelles informations</li>
+<li>avoir des difficultés à retrouver certains souvenirs.</li>
+</ul>
+<h2 id="a-retenir_14">À retenir</h2>
+<p>Les troubles de mémoire ne signifient pas automatiquement qu'une personne présente une maladie neurodégénérative.</p>
+<hr />
+<h1 id="1416-les-troubles-de-lattention" class="entry-title hc-1">🧠 14.16 Les troubles de l'attention</h1>
+<h2 id="definition_15">Définition</h2>
+<p>Les troubles neurocognitifs peuvent affecter la capacité à maintenir ou orienter son attention.</p>
+<h2 id="manifestations_13">Manifestations</h2>
+<ul>
+<li>distractibilité</li>
+<li>difficulté à suivre une conversation</li>
+<li>difficulté à effectuer plusieurs étapes</li>
+<li>lenteur</li>
+<li>difficultés à maintenir l'effort mental.</li>
+</ul>
+<h2 id="a-retenir_15">À retenir</h2>
+<p>Les difficultés attentionnelles peuvent avoir de nombreuses causes.</p>
+<hr />
+<h1 id="1417-les-troubles-des-fonctions-executives" class="entry-title hc-2">🧠 14.17 Les troubles des fonctions exécutives</h1>
+<h2 id="definition_16">Définition</h2>
+<p>Les <strong>fonctions exécutives</strong> permettent notamment de planifier, organiser, contrôler et adapter son comportement.</p>
+<h2 id="manifestations_14">Manifestations</h2>
+<p>Une personne peut avoir des difficultés à :</p>
+<ul>
+<li>organiser une activité</li>
+<li>résoudre un problème</li>
+<li>prendre une décision</li>
+<li>changer de stratégie</li>
+<li>contrôler certaines impulsions</li>
+<li>gérer plusieurs étapes.</li>
+</ul>
+<h2 id="a-retenir_16">À retenir</h2>
+<p>Les fonctions exécutives sont essentielles à l'autonomie quotidienne.</p>
+<hr />
+<h1 id="1418-les-troubles-visuospatiaux" class="entry-title hc-3">🧠 14.18 Les troubles visuospatiaux</h1>
+<h2 id="definition_17">Définition</h2>
+<p>Les difficultés <strong>visuospatiales</strong> concernent la capacité à comprendre et utiliser les informations relatives à l'espace.</p>
+<h2 id="manifestations_15">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>avoir du mal à s'orienter</li>
+<li>se perdre dans des endroits connus</li>
+<li>avoir des difficultés à estimer les distances</li>
+<li>rencontrer des problèmes pour utiliser certains objets.</li>
+</ul>
+<h2 id="a-retenir_17">À retenir</h2>
+<p>Ces difficultés peuvent être présentes dans différents troubles neurocognitifs.</p>
+<hr />
+<h1 id="1419-les-troubles-du-langage-dans-les-troubles-neurocognitifs" class="entry-title hc-4">🧠 14.19 Les troubles du langage dans les troubles neurocognitifs</h1>
+<h2 id="definition_18">Définition</h2>
+<p>Certains troubles neurocognitifs peuvent provoquer des difficultés importantes de communication.</p>
+<h2 id="manifestations_16">Manifestations</h2>
+<ul>
+<li>difficultés à trouver les mots</li>
+<li>vocabulaire réduit</li>
+<li>difficultés à comprendre</li>
+<li>difficultés à produire des phrases</li>
+<li>répétitions</li>
+<li>difficultés à nommer des objets.</li>
+</ul>
+<h2 id="a-retenir_18">À retenir</h2>
+<p>Les troubles du langage peuvent fournir des informations importantes sur les régions cérébrales touchées.</p>
+<hr />
+<h1 id="1420-les-troubles-de-la-cognition-sociale" class="entry-title hc-5">🧠 14.20 Les troubles de la cognition sociale</h1>
+<h2 id="definition_19">Définition</h2>
+<p>La <strong>cognition sociale</strong> correspond aux capacités permettant notamment de comprendre les émotions, intentions et comportements des autres.</p>
+<h2 id="manifestations_17">Manifestations</h2>
+<p>Une personne peut :</p>
+<ul>
+<li>avoir des difficultés à interpréter les émotions</li>
+<li>comprendre moins bien certaines règles sociales</li>
+<li>devenir plus impulsive</li>
+<li>avoir des comportements socialement inadaptés.</li>
+</ul>
+<h2 id="a-retenir_19">À retenir</h2>
+<p>Ces difficultés sont particulièrement importantes dans certains troubles frontotemporaux.</p>
+<hr />
+<h1 id="1421-le-syndrome-confusionnel" class="entry-title hc-1">🧠 14.21 Le syndrome confusionnel</h1>
+<h2 id="definition_20">Définition</h2>
+<p>Le <strong>syndrome confusionnel</strong>, ou délirium, correspond à une perturbation aiguë de l'attention et de la conscience accompagnée de changements cognitifs.</p>
+<h2 id="manifestations_18">Manifestations</h2>
+<p>Il peut provoquer :</p>
+<ul>
+<li>confusion</li>
+<li>désorientation</li>
+<li>fluctuations de l'attention</li>
+<li>agitation</li>
+<li>somnolence</li>
+<li>hallucinations</li>
+<li>changements rapides de l'état mental.</li>
+</ul>
+<h2 id="causes-possibles_1">Causes possibles</h2>
+<ul>
+<li>infection</li>
+<li>médicament</li>
+<li>intoxication</li>
+<li>sevrage</li>
+<li>troubles métaboliques</li>
+<li>maladie aiguë.</li>
+</ul>
+<h2 id="a-retenir_20">À retenir</h2>
+<p>Le délirium apparaît généralement rapidement et constitue une situation médicale nécessitant une évaluation.</p>
+<hr />
+<h1 id="1422-le-delirium-du-a-une-intoxication" class="entry-title hc-2">🧠 14.22 Le délirium dû à une intoxication</h1>
+<h2 id="definition_21">Définition</h2>
+<p>Certaines intoxications peuvent provoquer un état confusionnel aigu.</p>
+<h2 id="manifestations_19">Manifestations</h2>
+<p>Selon la substance :</p>
+<ul>
+<li>confusion</li>
+<li>agitation</li>
+<li>troubles de l'attention</li>
+<li>désorientation</li>
+<li>hallucinations.</li>
+</ul>
+<h2 id="a-retenir_21">À retenir</h2>
+<p>Le délirium associé à une intoxication peut nécessiter une prise en charge médicale urgente.</p>
+<hr />
+<h1 id="1423-le-delirium-du-au-sevrage" class="entry-title hc-3">🧠 14.23 Le délirium dû au sevrage</h1>
+<h2 id="definition_22">Définition</h2>
+<p>Le <strong>délirium de sevrage</strong> peut apparaître après l'arrêt ou la diminution brutale de certaines substances chez une personne dépendante.</p>
+<h2 id="manifestations_20">Manifestations</h2>
+<p>Il peut provoquer :</p>
+<ul>
+<li>confusion importante</li>
+<li>agitation</li>
+<li>hallucinations</li>
+<li>tremblements</li>
+<li>troubles de l'attention</li>
+<li>perturbation du cycle veille-sommeil.</li>
+</ul>
+<h2 id="a-retenir_22">À retenir</h2>
+<p>Certaines formes de sevrage peuvent être dangereuses et nécessitent une prise en charge médicale.</p>
+<hr />
+<h1 id="1424-la-demence" class="entry-title hc-4">🧠 14.24 La démence</h1>
+<h2 id="definition_23">Définition</h2>
+<p>Le terme <strong>démence</strong> est encore largement utilisé dans le langage courant et médical, mais les classifications modernes utilisent notamment le terme <strong>trouble neurocognitif majeur</strong>.</p>
+<h2 id="manifestations_21">Manifestations</h2>
+<p>La démence peut correspondre à :</p>
+<ul>
+<li>perte progressive d'autonomie</li>
+<li>troubles de mémoire</li>
+<li>difficultés de langage</li>
+<li>troubles du jugement</li>
+<li>désorientation</li>
+<li>changements comportementaux.</li>
+</ul>
+<h2 id="a-retenir_23">À retenir</h2>
+<p>« Démence » ne désigne pas une maladie unique. Plusieurs maladies peuvent provoquer un syndrome démentiel.</p>
+<h1 id="1425-la-demence-a-debut-precoce" class="entry-title hc-5">🧠 14.25 La démence à début précoce</h1>
+<h2 id="definition_24">Définition</h2>
+<p>On parle généralement de <strong>début précoce</strong> lorsqu'un syndrome démentiel apparaît avant l'âge habituellement associé aux formes tardives.</p>
+<h2 id="causes-possibles_2">Causes possibles</h2>
+<ul>
+<li>maladie d'Alzheimer à début précoce</li>
+<li>dégénérescences frontotemporales</li>
+<li>maladies génétiques</li>
+<li>maladies neurologiques</li>
+<li>autres causes médicales.</li>
+</ul>
+<h2 id="a-retenir_24">À retenir</h2>
+<p>L'âge d'apparition peut influencer les causes envisagées et l'évaluation médicale.</p>
+<hr />
+<h1 id="1426-la-progression-des-troubles-neurocognitifs" class="entry-title hc-1">🧠 14.26 La progression des troubles neurocognitifs</h1>
+<h2 id="definition_25">Définition</h2>
+<p>L'évolution d'un trouble neurocognitif dépend fortement de sa cause.</p>
+<h2 id="evolutions-possibles">Évolutions possibles</h2>
+<p>Le trouble peut être :</p>
+<ul>
+<li>progressif</li>
+<li>fluctuant</li>
+<li>stable</li>
+<li>partiellement réversible</li>
+<li>rapidement évolutif.</li>
+</ul>
+<h2 id="a-retenir_25">À retenir</h2>
+<p>Tous les troubles neurocognitifs n'évoluent pas de la même manière.</p>
+<hr />
+<h1 id="1427-les-troubles-neurocognitifs-reversibles-ou-partiellement-reversibles" class="entry-title hc-2">🧠 14.27 Les troubles neurocognitifs réversibles ou partiellement réversibles</h1>
+<h2 id="definition_26">Définition</h2>
+<p>Certaines causes de difficultés cognitives peuvent être traitées et parfois améliorées.</p>
+<h2 id="causes-possibles_3">Causes possibles</h2>
+<ul>
+<li>certaines carences</li>
+<li>effets médicamenteux</li>
+<li>troubles métaboliques</li>
+<li>certaines infections</li>
+<li>troubles endocriniens</li>
+<li>certains troubles du sommeil.</li>
+</ul>
+<h2 id="a-retenir_26">À retenir</h2>
+<p>Une baisse cognitive récente mérite une évaluation afin de rechercher d'éventuelles causes traitables.</p>
+<hr />
+<h1 id="1428-les-changements-comportementaux-dans-les-troubles-neurocognitifs" class="entry-title hc-3">🧠 14.28 Les changements comportementaux dans les troubles neurocognitifs</h1>
+<h2 id="definition_27">Définition</h2>
+<p>Les troubles neurocognitifs peuvent provoquer des changements du comportement ou de la personnalité.</p>
+<h2 id="manifestations_22">Manifestations</h2>
+<ul>
+<li>irritabilité</li>
+<li>apathie</li>
+<li>désinhibition</li>
+<li>agitation</li>
+<li>agressivité</li>
+<li>retrait social</li>
+<li>comportements répétitifs.</li>
+</ul>
+<h2 id="a-retenir_27">À retenir</h2>
+<p>Ces changements peuvent être liés à l'atteinte cérébrale et ne signifient pas nécessairement que la personne « choisit » de se comporter ainsi.</p>
+<hr />
+<h1 id="1429-lapathie-dans-les-troubles-neurocognitifs" class="entry-title hc-4">🧠 14.29 L'apathie dans les troubles neurocognitifs</h1>
+<h2 id="definition_28">Définition</h2>
+<p>L'<strong>apathie</strong> correspond à une diminution importante de la motivation et de l'initiative.</p>
+<h2 id="manifestations_23">Manifestations</h2>
+<p>La personne peut :</p>
+<ul>
+<li>avoir moins envie de faire des activités</li>
+<li>parler moins</li>
+<li>avoir besoin d'être sollicitée</li>
+<li>montrer moins d'intérêt pour son environnement.</li>
+</ul>
+<h2 id="a-retenir_28">À retenir</h2>
+<p>L'apathie peut être observée dans plusieurs maladies neurologiques.</p>
+<hr />
+<h1 id="1430-les-hallucinations-dans-les-troubles-neurocognitifs" class="entry-title hc-5">🧠 14.30 Les hallucinations dans les troubles neurocognitifs</h1>
+<h2 id="definition_29">Définition</h2>
+<p>Certaines personnes présentant un trouble neurocognitif peuvent avoir des hallucinations.</p>
+<h2 id="manifestations_24">Manifestations</h2>
+<p>Elles peuvent :</p>
+<ul>
+<li>voir des personnes inexistantes</li>
+<li>entendre des sons</li>
+<li>percevoir des choses qui ne sont pas présentes.</li>
+</ul>
+<h2 id="particularite_1">Particularité</h2>
+<p>Les hallucinations visuelles sont particulièrement fréquentes dans certains troubles, notamment ceux associés aux corps de Lewy.</p>
+<h2 id="a-retenir_29">À retenir</h2>
+<p>La présence d'hallucinations ne signifie pas automatiquement qu'une personne souffre d'un trouble psychotique.</p>
+<hr />
+<h1 id="1431-les-troubles-du-sommeil-associes-aux-troubles-neurocognitifs" class="entry-title hc-1">🧠 14.31 Les troubles du sommeil associés aux troubles neurocognitifs</h1>
+<h2 id="definition_30">Définition</h2>
+<p>Les troubles neurocognitifs peuvent perturber le cycle veille-sommeil.</p>
+<h2 id="manifestations_25">Manifestations</h2>
+<ul>
+<li>difficultés d'endormissement</li>
+<li>réveils nocturnes</li>
+<li>somnolence diurne</li>
+<li>inversion du rythme jour-nuit</li>
+<li>agitation nocturne.</li>
+</ul>
+<h2 id="a-retenir_30">À retenir</h2>
+<p>Les troubles du sommeil peuvent aggraver les difficultés cognitives et comportementales.</p>
+<hr />
+<h1 id="1432-lanosognosie" class="entry-title hc-2">🧠 14.32 L'anosognosie</h1>
+<h2 id="definition_31">Définition</h2>
+<p>L'<strong>anosognosie</strong> correspond à une diminution ou une absence de conscience de certaines difficultés ou déficits.</p>
+<h2 id="manifestations_26">Manifestations</h2>
+<p>Une personne peut :</p>
+<ul>
+<li>ne pas reconnaître ses difficultés</li>
+<li>sous-estimer certains problèmes</li>
+<li>ne pas comprendre pourquoi son entourage s'inquiète.</li>
+</ul>
+<h2 id="a-retenir_31">À retenir</h2>
+<p>L'anosognosie peut être liée à certaines atteintes cérébrales et ne correspond pas nécessairement à un simple déni volontaire.</p>
+<hr />
+<h1 id="1433-la-perte-progressive-dautonomie" class="entry-title hc-3">🧠 14.33 La perte progressive d'autonomie</h1>
+<h2 id="definition_32">Définition</h2>
+<p>Dans les troubles neurocognitifs majeurs, la diminution des capacités cognitives peut progressivement affecter l'autonomie.</p>
+<h2 id="activites-pouvant-devenir-difficiles">Activités pouvant devenir difficiles</h2>
+<ul>
+<li>gérer les finances</li>
+<li>prendre correctement des médicaments</li>
+<li>préparer les repas</li>
+<li>se déplacer</li>
+<li>faire des achats</li>
+<li>organiser les tâches quotidiennes.</li>
+</ul>
+<h2 id="a-retenir_32">À retenir</h2>
+<p>La perte d'autonomie constitue un élément important permettant de distinguer les troubles neurocognitifs majeurs des troubles légers.</p>
+<hr />
+<h1 id="1434-levaluation-neuropsychologique" class="entry-title hc-4">🧠 14.34 L'évaluation neuropsychologique</h1>
+<h2 id="definition_33">Définition</h2>
+<p>L'<strong>évaluation neuropsychologique</strong> consiste à examiner différentes fonctions cognitives à l'aide d'entretiens et de tests standardisés.</p>
+<h2 id="fonctions-evaluees">Fonctions évaluées</h2>
+<ul>
+<li>mémoire</li>
+<li>attention</li>
+<li>langage</li>
+<li>fonctions exécutives</li>
+<li>capacités visuospatiales</li>
+<li>cognition sociale.</li>
+</ul>
+<h2 id="a-retenir_33">À retenir</h2>
+<p>Les tests neuropsychologiques peuvent aider à identifier le profil des difficultés, mais ils ne suffisent pas toujours à déterminer seuls la cause du trouble.</p>
+<hr />
+<h1 id="1435-le-diagnostic-differentiel-des-troubles-neurocognitifs" class="entry-title hc-5">🧠 14.35 Le diagnostic différentiel des troubles neurocognitifs</h1>
+<h2 id="definition_34">Définition</h2>
+<p>Le <strong>diagnostic différentiel</strong> consiste à rechercher différentes causes possibles lorsque des difficultés cognitives apparaissent.</p>
+<h2 id="causes-pouvant-etre-envisagees">Causes pouvant être envisagées</h2>
+<ul>
+<li>maladie neurodégénérative</li>
+<li>dépression</li>
+<li>trouble du sommeil</li>
+<li>médicament</li>
+<li>consommation de substances</li>
+<li>maladie neurologique</li>
+<li>problème métabolique</li>
+<li>infection</li>
+<li>carence.</li>
+</ul>
+<h2 id="a-retenir_34">À retenir</h2>
+<p>Une baisse des capacités cognitives peut avoir de nombreuses causes. Une évaluation complète permet de mieux les distinguer.</p>
+<hr />
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-15-troubles-disruptifs-du-controle-des-impulsions-et-des-conduites/"><span class="similar-icon">🩺</span>Partie 15 — Troubles disruptifs, du contrôle des impulsions et des conduites</a><a class="similar-item" href="/chapitre/troubles-partie-16-troubles-de-l-attachement/"><span class="similar-icon">🩺</span>Partie 16 — Troubles de l'attachement</a><a class="similar-item" href="/chapitre/troubles-partie-17-troubles-lies-a-la-sexualite/"><span class="similar-icon">🩺</span>Partie 17 — Troubles liés à la sexualité</a></div>
+    </div>
+    <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

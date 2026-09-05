@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les mythes sur la psychologie criminelle — Mon Esprit</title>
+<meta name="description" content="Les mythes sur la psychologie criminelle, dans la catégorie Psychologie, justice et criminologie de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#101-tous-les-psychopathes-sont-dangereux">🧠 10.1 « TOUS LES PSYCHOPATHES SONT DANGEREUX »</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#102-un-criminel-est-forcement-malade-mental">🧠 10.2 « UN CRIMINEL EST FORCÉMENT MALADE MENTAL »</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#103-on-peut-reconnaitre-un-criminel-a-son-apparence">🧠 10.3 « ON PEUT RECONNAÎTRE UN CRIMINEL À SON APPARENCE »</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#104-le-profilage-permet-de-trouver-le-coupable">🧠 10.4 « LE PROFILAGE PERMET DE TROUVER LE COUPABLE »</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#105-les-traumatismes-rendent-violent">🧠 10.5 « LES TRAUMATISMES RENDENT VIOLENT »</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#106-un-menteur-evite-forcement-le-regard">🧠 10.6 « UN MENTEUR ÉVITE FORCÉMENT LE REGARD »</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#107-la-psychopathie-signifie-absence-totale-demotions">🧠 10.7 « LA PSYCHOPATHIE SIGNIFIE ABSENCE TOTALE D'ÉMOTIONS »</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#108-un-comportement-etrange-signifie-quune-personne-est-dangereuse">🧠 10.8 « UN COMPORTEMENT ÉTRANGE SIGNIFIE QU'UNE PERSONNE EST DANGEREUSE »</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#109-les-criminels-sont-tous-manipulateurs">🧠 10.9 « LES CRIMINELS SONT TOUS MANIPULATEURS »</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li><li><a href="#a-retenir_8">📌 À RETENIR</a></li></ul></li><li><a href="#1010-les-crimes-sont-toujours-commis-pour-une-seule-raison">🧠 10.10 « LES CRIMES SONT TOUJOURS COMMIS POUR UNE SEULE RAISON »</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li><li><a href="#a-retenir_9">📌 À RETENIR</a></li></ul></li><li><a href="#en-pratique">🧩 EN PRATIQUE</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Les mythes sur la psychologie criminelle',
+        category: 'Psychologie, justice et criminologie',
+        icon: '⚖️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/justice/">⚖️ Psychologie, justice et criminologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Les mythes sur la psychologie criminelle</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-justice)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <blockquote>
+<p>Distinguer les connaissances scientifiques des représentations populaires concernant les criminels, la psychopathie, la violence, le mensonge et le profilage.
+</p>
+</blockquote>
+<h2 id="101-tous-les-psychopathes-sont-dangereux" class="entry-title hc-1">🧠 10.1 « TOUS LES PSYCHOPATHES SONT DANGEREUX »</h2>
+<h3 id="definition">🔎 DÉFINITION</h3>
+<p>La psychopathie désigne un ensemble de caractéristiques psychologiques étudiées notamment dans les domaines clinique et médico-légal. Elle peut notamment concerner l'empathie, les émotions, les relations interpersonnelles et certains comportements antisociaux.</p>
+<h3 id="explication">🧠 EXPLICATION</h3>
+<p>La psychopathie est souvent représentée dans les films et les séries comme une caractéristique automatiquement associée à la violence.</p>
+<p>Cette représentation est beaucoup trop simplifiée.</p>
+<p>Les caractéristiques psychopathiques peuvent varier en intensité et toutes les personnes présentant certains de ces traits ne commettent pas nécessairement des actes violents.</p>
+<p>La dangerosité dépend de nombreux facteurs et ne peut pas être déterminée à partir d'un seul trait psychologique.</p>
+<h3 id="exemple">💬 EXEMPLE</h3>
+<p>Une personne peut présenter certains traits associés à la psychopathie sans avoir commis d'infraction violente.</p>
+<h3 id="a-retenir">📌 À RETENIR</h3>
+<p>Psychopathie et dangerosité ne sont pas synonymes.</p>
+<hr />
+<h2 id="102-un-criminel-est-forcement-malade-mental" class="entry-title hc-2">🧠 10.2 « UN CRIMINEL EST FORCÉMENT MALADE MENTAL »</h2>
+<h3 id="definition_1">🔎 DÉFINITION</h3>
+<p>La maladie ou le trouble mental désigne un ensemble de conditions psychologiques ou psychiatriques pouvant affecter le fonctionnement d'une personne.</p>
+<h3 id="explication_1">🧠 EXPLICATION</h3>
+<p>Un comportement criminel et un trouble mental sont deux notions différentes.</p>
+<p>Certaines personnes ayant commis des infractions peuvent présenter un trouble psychique, mais ce n'est pas systématique.</p>
+<p>Inversement, l'immense majorité des personnes souffrant de troubles psychiques ne commettent pas de comportements criminels.</p>
+<p>Il faut également distinguer un diagnostic psychiatrique d'une éventuelle responsabilité juridique.</p>
+<h3 id="exemple_1">💬 EXEMPLE</h3>
+<p>Une personne peut commettre une infraction sans présenter de trouble mental, tandis qu'une personne souffrant d'un trouble psychique peut ne jamais commettre la moindre infraction.</p>
+<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<p>Trouble mental et criminalité ne sont pas synonymes.</p>
+<hr />
+<h2 id="103-on-peut-reconnaitre-un-criminel-a-son-apparence" class="entry-title hc-3">🧠 10.3 « ON PEUT RECONNAÎTRE UN CRIMINEL À SON APPARENCE »</h2>
+<h3 id="definition_2">🔎 DÉFINITION</h3>
+<p>Cette idée consiste à penser que certaines caractéristiques physiques ou certains comportements permettraient d'identifier une personne criminelle.</p>
+<h3 id="explication_2">🧠 EXPLICATION</h3>
+<p>Il n'existe pas d'apparence physique universelle permettant de reconnaître une personne criminelle.</p>
+<p>La criminalité concerne des personnes présentant des caractéristiques physiques, sociales et psychologiques extrêmement diverses.</p>
+<p>Les représentations médiatiques peuvent cependant créer des images stéréotypées du « criminel ».</p>
+<p>Ces stéréotypes peuvent influencer la manière dont certaines personnes sont perçues, sans fournir une information fiable sur leur comportement réel.</p>
+<h3 id="exemple_2">💬 EXEMPLE</h3>
+<p>Une personne ayant une apparence intimidante peut être perçue comme dangereuse alors qu'aucun élément objectif ne permet de conclure qu'elle est plus susceptible de commettre une infraction.</p>
+<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<p>L'apparence d'une personne ne permet pas de déterminer si elle est criminelle ou dangereuse.</p>
+<hr />
+<h2 id="104-le-profilage-permet-de-trouver-le-coupable" class="entry-title hc-4">🧠 10.4 « LE PROFILAGE PERMET DE TROUVER LE COUPABLE »</h2>
+<h3 id="definition_3">🔎 DÉFINITION</h3>
+<p>Le profilage criminel consiste à formuler des hypothèses concernant certaines caractéristiques possibles d'un auteur à partir d'éléments comportementaux et contextuels.</p>
+<h3 id="explication_3">🧠 EXPLICATION</h3>
+<p>Les œuvres de fiction présentent parfois le profilage comme une méthode permettant d'identifier immédiatement un criminel.</p>
+<p>Dans la réalité, le profilage produit principalement des hypothèses.</p>
+<p>Un profil peut contribuer à orienter certaines recherches, mais il ne permet pas de déterminer avec certitude l'identité d'une personne.</p>
+<p>Les preuves matérielles, les témoignages, les analyses scientifiques et les autres éléments d'enquête restent essentiels.</p>
+<h3 id="exemple_3">💬 EXEMPLE</h3>
+<p>Un profil peut suggérer certaines caractéristiques possibles d'un auteur, mais plusieurs personnes peuvent correspondre à ces caractéristiques.</p>
+<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<p>Le profilage peut orienter une enquête, mais il ne permet pas à lui seul d'identifier un coupable.</p>
+<hr />
+<h2 id="105-les-traumatismes-rendent-violent" class="entry-title hc-5">🧠 10.5 « LES TRAUMATISMES RENDENT VIOLENT »</h2>
+<h3 id="definition_4">🔎 DÉFINITION</h3>
+<p>Cette idée consiste à considérer qu'une personne ayant vécu un traumatisme deviendrait nécessairement violente.</p>
+<h3 id="explication_4">🧠 EXPLICATION</h3>
+<p>Les expériences traumatiques peuvent avoir de nombreuses conséquences psychologiques, mais elles ne déterminent pas automatiquement le comportement futur.</p>
+<p>Les réactions dépendent de nombreux facteurs : nature de l'expérience, environnement, ressources personnelles, relations sociales, développement et contexte de vie.</p>
+<p>Certaines personnes développent des difficultés importantes, tandis que d'autres présentent une capacité d'adaptation importante.</p>
+<p>Associer automatiquement traumatisme et violence constitue donc une généralisation abusive.</p>
+<h3 id="exemple_4">💬 EXEMPLE</h3>
+<p>Deux personnes ayant vécu des expériences difficiles peuvent développer des réactions très différentes : l'une peut devenir particulièrement anxieuse tandis que l'autre peut développer d'autres stratégies d'adaptation sans comportement violent.</p>
+<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<p>Avoir vécu un traumatisme ne signifie pas devenir violent.</p>
+<hr />
+<h2 id="106-un-menteur-evite-forcement-le-regard" class="entry-title hc-1">🧠 10.6 « UN MENTEUR ÉVITE FORCÉMENT LE REGARD »</h2>
+<h3 id="definition_5">🔎 DÉFINITION</h3>
+<p>Cette croyance consiste à considérer que le contact visuel permettrait de déterminer si une personne ment.</p>
+<h3 id="explication_5">🧠 EXPLICATION</h3>
+<p>Le comportement visuel varie naturellement selon les personnes et les situations.</p>
+<p>Une personne peut éviter le regard parce qu'elle est anxieuse, intimidée, concentrée ou mal à l'aise.</p>
+<p>À l'inverse, une personne qui ment peut maintenir volontairement un contact visuel.</p>
+<p>Il n'existe donc pas de comportement unique permettant de détecter de manière fiable un mensonge.</p>
+<p>La détection du mensonge est un phénomène beaucoup plus complexe que l'observation d'un simple geste.</p>
+<h3 id="exemple_5">💬 EXEMPLE</h3>
+<p>Un témoin peut éviter le regard pendant une audition parce qu'il est extrêmement stressé, sans pour autant mentir.</p>
+<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<p>Éviter le regard ne constitue pas une preuve de mensonge.</p>
+<hr />
+<h2 id="107-la-psychopathie-signifie-absence-totale-demotions" class="entry-title hc-2">🧠 10.7 « LA PSYCHOPATHIE SIGNIFIE ABSENCE TOTALE D'ÉMOTIONS »</h2>
+<h3 id="definition_6">🔎 DÉFINITION</h3>
+<p>Cette croyance présente la psychopathie comme une absence complète d'émotions ou de sentiments.</p>
+<h3 id="explication_6">🧠 EXPLICATION</h3>
+<p>La réalité psychologique est beaucoup plus complexe.</p>
+<p>Les caractéristiques associées à la psychopathie concernent notamment certains aspects du fonctionnement émotionnel, comme l'empathie, la culpabilité ou certaines réactions affectives.</p>
+<p>Cela ne signifie pas nécessairement qu'une personne ne ressent absolument aucune émotion.</p>
+<p>Les émotions humaines ne fonctionnent pas selon un simple modèle « ressentir ou ne rien ressentir ».</p>
+<h3 id="exemple_6">💬 EXEMPLE</h3>
+<p>Une personne présentant certains traits psychopathiques peut ressentir de la colère, de l'excitation, de la frustration ou du plaisir tout en présentant des difficultés particulières concernant l'empathie ou la culpabilité.</p>
+<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<p>Psychopathie ne signifie pas absence totale d'émotions.</p>
+<hr />
+<h2 id="108-un-comportement-etrange-signifie-quune-personne-est-dangereuse" class="entry-title hc-3">🧠 10.8 « UN COMPORTEMENT ÉTRANGE SIGNIFIE QU'UNE PERSONNE EST DANGEREUSE »</h2>
+<h3 id="definition_7">🔎 DÉFINITION</h3>
+<p>Cette croyance consiste à associer automatiquement un comportement inhabituel, étrange ou socialement différent à une éventuelle dangerosité.</p>
+<h3 id="explication_7">🧠 EXPLICATION</h3>
+<p>Un comportement inhabituel peut avoir de nombreuses explications.</p>
+<p>Il peut être lié à la personnalité, au stress, à la timidité, à des différences individuelles, à une situation particulière ou à de nombreux autres facteurs.</p>
+<p>La dangerosité ne peut pas être déterminée simplement à partir d'une impression subjective.</p>
+<p>Cette confusion peut également renforcer les stéréotypes concernant les personnes considérées comme différentes.</p>
+<h3 id="exemple_7">💬 EXEMPLE</h3>
+<p>Une personne très silencieuse ou ayant une manière inhabituelle de communiquer peut être perçue comme inquiétante sans que cela fournisse une information fiable sur son comportement futur.</p>
+<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<p>Un comportement inhabituel ne constitue pas en lui-même un indicateur fiable de dangerosité.</p>
+<hr />
+<h2 id="109-les-criminels-sont-tous-manipulateurs" class="entry-title hc-4">🧠 10.9 « LES CRIMINELS SONT TOUS MANIPULATEURS »</h2>
+<h3 id="definition_8">🔎 DÉFINITION</h3>
+<p>La manipulation désigne l'utilisation de stratégies visant à influencer les pensées, les émotions ou les comportements d'une autre personne, parfois à son détriment.</p>
+<h3 id="explication_8">🧠 EXPLICATION</h3>
+<p>La manipulation peut exister dans différents contextes sociaux et n'est pas exclusive aux personnes ayant commis des infractions.</p>
+<p>De la même manière, toutes les personnes ayant commis un crime ne présentent pas nécessairement des comportements manipulateurs.</p>
+<p>Certains comportements criminels peuvent être liés à d'autres facteurs : impulsivité, conflit, opportunité, pression sociale, intérêt matériel ou nombreuses autres circonstances.</p>
+<h3 id="exemple_8">💬 EXEMPLE</h3>
+<p>Une personne peut commettre une infraction impulsivement sans avoir préparé une stratégie complexe visant à manipuler les autres.</p>
+<h3 id="a-retenir_8">📌 À RETENIR</h3>
+<p>Criminalité et manipulation ne sont pas automatiquement associées.</p>
+<hr />
+<h2 id="1010-les-crimes-sont-toujours-commis-pour-une-seule-raison" class="entry-title hc-5">🧠 10.10 « LES CRIMES SONT TOUJOURS COMMIS POUR UNE SEULE RAISON »</h2>
+<h3 id="definition_9">🔎 DÉFINITION</h3>
+<p>Cette idée consiste à considérer qu'un comportement criminel possède nécessairement une motivation unique et facilement identifiable.</p>
+<h3 id="explication_9">🧠 EXPLICATION</h3>
+<p>Les comportements criminels peuvent résulter de plusieurs facteurs qui interagissent.</p>
+<p>Les motivations peuvent être diverses : recherche de gain, colère, vengeance, influence du groupe, impulsivité, idéologie, recherche de sensations, contraintes environnementales ou autres facteurs.</p>
+<p>Une même infraction peut également être influencée par plusieurs motivations simultanément.</p>
+<p>Comprendre un comportement criminel nécessite donc d'étudier son contexte plutôt que de rechercher systématiquement une cause unique.</p>
+<h3 id="exemple_9">💬 EXEMPLE</h3>
+<p>Une infraction peut être influencée à la fois par une motivation financière, une situation conflictuelle et l'influence d'autres personnes.</p>
+<h3 id="a-retenir_9">📌 À RETENIR</h3>
+<p>Le comportement criminel est généralement multifactoriel et ne peut pas toujours être expliqué par une seule motivation.</p>
+<hr />
+<h2 id="en-pratique" class="entry-title hc-1">🧩 EN PRATIQUE</h2>
+<p>La psychologie criminelle est particulièrement exposée aux représentations simplifiées, notamment à travers les films, les séries, les documentaires et certains contenus diffusés sur Internet.</p>
+<p>Ces représentations peuvent donner l'impression que certains comportements permettent de « reconnaître » instantanément un criminel, un menteur ou une personne dangereuse.</p>
+<p>La réalité est beaucoup plus complexe.</p>
+<p>Il est essentiel de distinguer :</p>
+<p><strong>Un trait psychologique</strong> → une caractéristique pouvant être présente à différents degrés.</p>
+<p><strong>Un trouble psychologique</strong> → une condition répondant à des critères cliniques précis.</p>
+<p><strong>Un comportement criminel</strong> → un comportement défini comme une infraction par le droit applicable.</p>
+<p><strong>La dangerosité</strong> → une notion complexe qui nécessite une évaluation globale du risque.</p>
+<p><strong>Une hypothèse criminologique</strong> → une interprétation susceptible d'être réévaluée.</p>
+<p>La psychologie criminelle ne permet donc pas de « lire » une personne à partir de son apparence, de son regard ou d'un comportement isolé.</p>
+<p>Elle cherche plutôt à comprendre <strong>comment les facteurs individuels, psychologiques, sociaux et environnementaux peuvent interagir dans certains comportements</strong>.</p>
+<p>Cette approche permet d'éviter les amalgames entre criminalité, maladie mentale, psychopathie, violence et dangerosité.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Psychologie, justice et criminologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-organisation-du-lexique-la-psychologie-et-la-justice/"><span class="similar-icon">⚖️</span>Organisation du lexique — la psychologie et la justice</a><a class="similar-item" href="/chapitre/justice-la-memoire-la-perception-et-les-temoignages/"><span class="similar-icon">⚖️</span>La mémoire, la perception et les témoignages</a><a class="similar-item" href="/chapitre/justice-les-interrogatoires-et-les-faux-aveux/"><span class="similar-icon">⚖️</span>Les interrogatoires et les faux aveux</a></div>
+    </div>
+    <a class="back-link" href="/categorie/justice/">← Retour à « Psychologie, justice et criminologie »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

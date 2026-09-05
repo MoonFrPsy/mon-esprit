@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La peur et les comportements — Mon Esprit</title>
+<meta name="description" content="La peur et les comportements, dans la catégorie Émotions et comportements humains de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#41-quest-ce-que-la-peur">😨 4.1 Qu'est-ce que la peur ?</a></li><li><a href="#42-la-perception-de-la-menace">🧠 4.2 La perception de la menace</a></li><li><a href="#43-la-detection-rapide-de-la-menace">⚡ 4.3 La détection rapide de la menace</a></li><li><a href="#44-lattention-orientee-vers-la-menace">👁️ 4.4 L'attention orientée vers la menace</a></li><li><a href="#45-lhypervigilance">🧠 4.5 L'hypervigilance</a></li><li><a href="#46-la-surveillance-de-lenvironnement">👂 4.6 La surveillance de l'environnement</a></li><li><a href="#47-les-reactions-corporelles-de-la-peur">🫀 4.7 Les réactions corporelles de la peur</a></li><li><a href="#48-les-pensees-liees-a-la-peur">🧠 4.8 Les pensées liées à la peur</a></li><li><a href="#49-lanticipation-de-la-menace">🔮 4.9 L'anticipation de la menace</a></li><li><a href="#410-lanxiete-et-la-peur">🌪️ 4.10 L'anxiété et la peur</a></li><li><a href="#411-la-reaction-de-fuite">🏃 4.11 La réaction de fuite</a></li><li><a href="#412-la-reaction-de-gel">🛑 4.12 La réaction de gel</a></li><li><a href="#413-la-reaction-de-confrontation">⚔️ 4.13 La réaction de confrontation</a></li><li><a href="#414-la-recherche-de-securite">🤝 4.14 La recherche de sécurité</a></li><li><a href="#415-levitement">🚪 4.15 L'évitement</a></li><li><a href="#416-le-renforcement-de-levitement">🔄 4.16 Le renforcement de l'évitement</a></li><li><a href="#417-les-comportements-de-securite">🛡️ 4.17 Les comportements de sécurité</a></li><li><a href="#418-la-verification">🔎 4.18 La vérification</a></li><li><a href="#419-la-recherche-de-reassurance">💬 4.19 La recherche de réassurance</a></li><li><a href="#420-la-rumination-liee-a-la-peur">🧠 4.20 La rumination liée à la peur</a></li><li><a href="#421-les-scenarios-catastrophiques">🔮 4.21 Les scénarios catastrophiques</a></li><li><a href="#422-la-surestimation-du-danger">📈 4.22 La surestimation du danger</a></li><li><a href="#423-la-sous-estimation-des-capacites-de-controle">📉 4.23 La sous-estimation des capacités de contrôle</a></li><li><a href="#424-la-perception-du-controle">⚖️ 4.24 La perception du contrôle</a></li><li><a href="#425-la-memoire-et-la-peur">🧠 4.25 La mémoire et la peur</a></li><li><a href="#426-le-conditionnement-de-la-peur">🔗 4.26 Le conditionnement de la peur</a></li><li><a href="#427-lextinction-de-la-peur">🔄 4.27 L'extinction de la peur</a></li><li><a href="#428-la-generalisation-de-la-peur">🧠 4.28 La généralisation de la peur</a></li><li><a href="#429-la-discrimination-de-la-menace">🎯 4.29 La discrimination de la menace</a></li><li><a href="#430-la-peur-et-lapprentissage">🧩 4.30 La peur et l'apprentissage</a></li><li><a href="#431-la-peur-et-la-prise-de-decision">🧠 4.31 La peur et la prise de décision</a></li><li><a href="#432-la-peur-sociale">👥 4.32 La peur sociale</a></li><li><a href="#433-le-regard-des-autres">👀 4.33 Le regard des autres</a></li><li><a href="#434-le-retrait-social">🚶 4.34 Le retrait social</a></li><li><a href="#435-la-posture-face-a-la-peur">🧍 4.35 La posture face à la peur</a></li><li><a href="#436-la-communication-de-la-peur">🗣️ 4.36 La communication de la peur</a></li><li><a href="#437-la-contagion-de-la-peur">🧑‍🤝‍🧑 4.37 La contagion de la peur</a></li><li><a href="#438-les-differences-individuelles-face-a-la-peur">🧬 4.38 Les différences individuelles face à la peur</a></li><li><a href="#439-quand-la-peur-devient-problematique">🌱 4.39 Quand la peur devient problématique</a></li><li><a href="#440-pourquoi-etudier-la-peur-et-les-comportements">🔬 4.40 Pourquoi étudier la peur et les comportements ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'La peur et les comportements',
+        category: 'Émotions et comportements humains',
+        icon: '❤️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/emotions/">❤️ Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>La peur et les comportements</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-emotions)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>La peur est une émotion fondamentale impliquée dans la détection et la réponse aux situations perçues comme menaçantes.</p>
+<p>Elle peut apparaître face à un danger réel, mais également face à une menace anticipée, incertaine ou simplement imaginée.</p>
+<p>La peur mobilise plusieurs systèmes à la fois : attention, perception, mémoire, activité physiologique, pensées et comportements.</p>
+<h2 id="41-quest-ce-que-la-peur" class="entry-title hc-1">😨 4.1 Qu'est-ce que la peur ?</h2>
+<p>La peur est une émotion généralement associée à la perception d'une menace ou d'un danger potentiel.</p>
+<p>Elle peut préparer l'organisme à réagir rapidement.</p>
+<p>Elle peut être déclenchée par :</p>
+<ul>
+<li>un danger physique ;</li>
+<li>une situation sociale ;</li>
+<li>une douleur potentielle ;</li>
+<li>une information menaçante ;</li>
+<li>un souvenir ;</li>
+<li>une anticipation.</li>
+</ul>
+<h2 id="42-la-perception-de-la-menace" class="entry-title hc-2">🧠 4.2 La perception de la menace</h2>
+<p>La peur dépend notamment de la manière dont une situation est évaluée.</p>
+<p>Une situation objectivement peu dangereuse peut être perçue comme très menaçante, tandis qu'une situation réellement dangereuse peut parfois être sous-estimée.</p>
+<h2 id="43-la-detection-rapide-de-la-menace" class="entry-title hc-3">⚡ 4.3 La détection rapide de la menace</h2>
+<p>Le cerveau peut traiter certaines informations potentiellement menaçantes très rapidement.</p>
+<p>Cette rapidité permet de mobiliser l'organisme avant même qu'une analyse consciente détaillée de la situation soit terminée.</p>
+<h2 id="44-lattention-orientee-vers-la-menace" class="entry-title hc-4">👁️ 4.4 L'attention orientée vers la menace</h2>
+<p>Lorsqu'une menace est détectée, l'attention peut être davantage dirigée vers les informations qui lui sont associées.</p>
+<p>Ce phénomène peut faciliter la détection d'un danger mais également maintenir l'attention sur des informations inquiétantes.</p>
+<h2 id="45-lhypervigilance" class="entry-title hc-5">🧠 4.5 L'hypervigilance</h2>
+<p>L'hypervigilance correspond à un état de surveillance particulièrement important de l'environnement.</p>
+<p>Elle peut conduire à rechercher constamment des signes de danger potentiel.</p>
+<h2 id="46-la-surveillance-de-lenvironnement" class="entry-title hc-1">👂 4.6 La surveillance de l'environnement</h2>
+<p>La peur peut augmenter la sensibilité aux changements présents dans l'environnement.</p>
+<p>Les sons, mouvements, expressions faciales ou événements inhabituels peuvent alors attirer davantage l'attention.</p>
+<h2 id="47-les-reactions-corporelles-de-la-peur" class="entry-title hc-2">🫀 4.7 Les réactions corporelles de la peur</h2>
+<p>La peur peut provoquer différentes modifications physiologiques.</p>
+<p>On peut notamment observer :</p>
+<ul>
+<li>accélération du rythme cardiaque ;</li>
+<li>respiration modifiée ;</li>
+<li>tension musculaire ;</li>
+<li>transpiration ;</li>
+<li>sensation de chaleur ou de froid ;</li>
+<li>augmentation de la vigilance.</li>
+</ul>
+<h2 id="48-les-pensees-liees-a-la-peur" class="entry-title hc-3">🧠 4.8 Les pensées liées à la peur</h2>
+<p>La peur peut modifier le contenu des pensées.</p>
+<p>Certaines pensées peuvent être orientées vers :</p>
+<ul>
+<li>le danger ;</li>
+<li>les conséquences possibles ;</li>
+<li>les moyens de s'échapper ;</li>
+<li>les scénarios futurs ;</li>
+<li>la recherche de sécurité.</li>
+</ul>
+<h2 id="49-lanticipation-de-la-menace" class="entry-title hc-4">🔮 4.9 L'anticipation de la menace</h2>
+<p>La peur peut apparaître avant qu'un événement dangereux ne se produise.</p>
+<p>L'organisme peut ainsi se préparer à une menace simplement anticipée.</p>
+<h2 id="410-lanxiete-et-la-peur" class="entry-title hc-5">🌪️ 4.10 L'anxiété et la peur</h2>
+<p>La peur et l'anxiété sont proches mais ne sont pas identiques.</p>
+<p>La peur est généralement davantage associée à une menace identifiée ou immédiate.</p>
+<p>L'anxiété est souvent davantage liée à une menace future, incertaine ou difficile à définir.</p>
+<h2 id="411-la-reaction-de-fuite" class="entry-title hc-1">🏃 4.11 La réaction de fuite</h2>
+<p>La fuite consiste à s'éloigner d'une situation perçue comme menaçante.</p>
+<p>Elle constitue l'une des réponses comportementales possibles face à la peur.</p>
+<h2 id="412-la-reaction-de-gel" class="entry-title hc-2">🛑 4.12 La réaction de gel</h2>
+<p>Le gel correspond à une réduction ou une interruption temporaire de certains mouvements ou comportements.</p>
+<p>Il peut apparaître lorsqu'une situation est perçue comme extrêmement menaçante ou difficile à gérer.</p>
+<h2 id="413-la-reaction-de-confrontation" class="entry-title hc-3">⚔️ 4.13 La réaction de confrontation</h2>
+<p>Certaines situations peuvent provoquer une réponse orientée vers la confrontation plutôt que vers la fuite.</p>
+<p>Cette réponse peut être influencée par le contexte, les possibilités d'action et l'évaluation de la menace.</p>
+<h2 id="414-la-recherche-de-securite" class="entry-title hc-4">🤝 4.14 La recherche de sécurité</h2>
+<p>Face à la peur, certains comportements peuvent viser à augmenter le sentiment de sécurité.</p>
+<p>Cela peut notamment prendre la forme :</p>
+<ul>
+<li>de vérifications ;</li>
+<li>de demandes de réassurance ;</li>
+<li>de rapprochement avec une personne ;</li>
+<li>de recherche d'informations ;</li>
+<li>d'évitement.</li>
+</ul>
+<h2 id="415-levitement" class="entry-title hc-5">🚪 4.15 L'évitement</h2>
+<p>L'évitement consiste à ne pas entrer en contact avec une situation, un lieu, un objet ou une expérience perçue comme menaçante.</p>
+<p>Il peut réduire la peur à court terme.</p>
+<p>Cependant, lorsque l'évitement devient systématique, il peut empêcher l'apprentissage que la situation est parfois moins dangereuse qu'anticipé.</p>
+<h2 id="416-le-renforcement-de-levitement" class="entry-title hc-1">🔄 4.16 Le renforcement de l'évitement</h2>
+<p>Lorsqu'un comportement réduit rapidement une émotion désagréable, il peut devenir plus probable qu'il soit reproduit.</p>
+<p>L'évitement peut ainsi être maintenu parce qu'il procure un soulagement immédiat.</p>
+<h2 id="417-les-comportements-de-securite" class="entry-title hc-2">🛡️ 4.17 Les comportements de sécurité</h2>
+<p>Les comportements de sécurité sont des actions utilisées pour réduire une menace perçue ou obtenir un sentiment de protection.</p>
+<p>Ils peuvent parfois devenir très fréquents et occuper une place importante dans le fonctionnement quotidien.</p>
+<h2 id="418-la-verification" class="entry-title hc-3">🔎 4.18 La vérification</h2>
+<p>La vérification consiste à rechercher activement une information permettant de déterminer si une menace est présente.</p>
+<p>Une vérification ponctuelle peut être adaptée.</p>
+<p>Lorsqu'elle devient répétitive et difficile à interrompre, elle peut participer au maintien de certaines inquiétudes.</p>
+<h2 id="419-la-recherche-de-reassurance" class="entry-title hc-4">💬 4.19 La recherche de réassurance</h2>
+<p>La recherche de réassurance consiste à demander à autrui une confirmation permettant de diminuer une inquiétude.</p>
+<p>Elle peut temporairement réduire l'incertitude ou la peur.</p>
+<h2 id="420-la-rumination-liee-a-la-peur" class="entry-title hc-5">🧠 4.20 La rumination liée à la peur</h2>
+<p>Une personne peut analyser de manière répétitive une situation menaçante ou ses conséquences possibles.</p>
+<p>Cette activité mentale peut donner l'impression de chercher une solution tout en maintenant l'attention sur le danger.</p>
+<h2 id="421-les-scenarios-catastrophiques" class="entry-title hc-1">🔮 4.21 Les scénarios catastrophiques</h2>
+<p>Les scénarios catastrophiques consistent à imaginer des conséquences particulièrement négatives d'une situation.</p>
+<p>Ils peuvent augmenter l'activation émotionnelle et renforcer la perception de menace.</p>
+<h2 id="422-la-surestimation-du-danger" class="entry-title hc-2">📈 4.22 La surestimation du danger</h2>
+<p>La peur peut modifier l'évaluation subjective d'un risque.</p>
+<p>Un événement peu probable peut alors être perçu comme particulièrement susceptible de se produire.</p>
+<h2 id="423-la-sous-estimation-des-capacites-de-controle" class="entry-title hc-3">📉 4.23 La sous-estimation des capacités de contrôle</h2>
+<p>Face à une menace, il est possible de percevoir ses propres capacités d'action comme insuffisantes.</p>
+<p>La situation peut alors sembler davantage incontrôlable.</p>
+<h2 id="424-la-perception-du-controle" class="entry-title hc-4">⚖️ 4.24 La perception du contrôle</h2>
+<p>Le sentiment de pouvoir agir sur une situation influence notamment la manière dont une menace est vécue.</p>
+<p>Une menace perçue comme incontrôlable peut générer davantage d'anxiété ou de peur.</p>
+<h2 id="425-la-memoire-et-la-peur" class="entry-title hc-5">🧠 4.25 La mémoire et la peur</h2>
+<p>Les événements émotionnels peuvent laisser des traces mnésiques importantes.</p>
+<p>Un souvenir associé à une expérience menaçante peut ensuite contribuer à déclencher une réaction émotionnelle lorsqu'un élément similaire est rencontré.</p>
+<h2 id="426-le-conditionnement-de-la-peur" class="entry-title hc-1">🔗 4.26 Le conditionnement de la peur</h2>
+<p>Un stimulus initialement neutre peut être associé à un événement désagréable.</p>
+<p>Après apprentissage, ce stimulus peut provoquer une réaction de peur même en l'absence du danger initial.</p>
+<h2 id="427-lextinction-de-la-peur" class="entry-title hc-2">🔄 4.27 L'extinction de la peur</h2>
+<p>Lorsqu'un stimulus précédemment associé à une menace est présenté à plusieurs reprises sans conséquence négative, la réponse de peur peut diminuer.</p>
+<p>Ce processus est appelé extinction.</p>
+<p>Il ne signifie pas nécessairement que l'apprentissage initial a complètement disparu.</p>
+<h2 id="428-la-generalisation-de-la-peur" class="entry-title hc-3">🧠 4.28 La généralisation de la peur</h2>
+<p>Une peur peut parfois s'étendre à des stimuli qui ressemblent au stimulus initialement associé au danger.</p>
+<p>Plus la généralisation est importante, plus un grand nombre de situations peuvent devenir associées à la peur.</p>
+<h2 id="429-la-discrimination-de-la-menace" class="entry-title hc-4">🎯 4.29 La discrimination de la menace</h2>
+<p>À l'inverse, le cerveau peut apprendre à différencier une situation réellement menaçante d'une situation qui lui ressemble mais qui ne présente pas le même danger.</p>
+<p>Cette capacité permet de mieux adapter les réactions.</p>
+<h2 id="430-la-peur-et-lapprentissage" class="entry-title hc-5">🧩 4.30 La peur et l'apprentissage</h2>
+<p>La peur peut favoriser l'apprentissage de certaines informations importantes pour éviter un danger futur.</p>
+<p>Elle peut notamment renforcer la mémorisation de certains événements ou indices associés à une menace.</p>
+<h2 id="431-la-peur-et-la-prise-de-decision" class="entry-title hc-1">🧠 4.31 La peur et la prise de décision</h2>
+<p>La peur peut influencer la manière dont les risques et les conséquences sont évalués.</p>
+<p>Elle peut favoriser des décisions orientées vers la réduction du danger plutôt que vers la recherche de récompense.</p>
+<h2 id="432-la-peur-sociale" class="entry-title hc-2">👥 4.32 La peur sociale</h2>
+<p>Certaines peurs concernent principalement les interactions sociales.</p>
+<p>Elles peuvent être liées à :</p>
+<ul>
+<li>l'évaluation par autrui ;</li>
+<li>le rejet ;</li>
+<li>l'embarras ;</li>
+<li>la critique ;</li>
+<li>la performance sociale.</li>
+</ul>
+<h2 id="433-le-regard-des-autres" class="entry-title hc-3">👀 4.33 Le regard des autres</h2>
+<p>Le fait de se sentir observé peut augmenter la conscience de soi dans certaines situations.</p>
+<p>Chez certaines personnes, cette attention accrue portée au regard d'autrui peut amplifier la peur sociale.</p>
+<h2 id="434-le-retrait-social" class="entry-title hc-4">🚶 4.34 Le retrait social</h2>
+<p>La peur peut provoquer un éloignement temporaire ou durable de certaines interactions.</p>
+<p>Le retrait peut constituer une stratégie visant à diminuer l'exposition à une situation perçue comme menaçante.</p>
+<h2 id="435-la-posture-face-a-la-peur" class="entry-title hc-5">🧍 4.35 La posture face à la peur</h2>
+<p>Les émotions peuvent modifier la posture et les mouvements.</p>
+<p>La peur peut notamment s'accompagner d'une immobilisation, d'une posture de protection ou d'une préparation à la fuite.</p>
+<h2 id="436-la-communication-de-la-peur" class="entry-title hc-1">🗣️ 4.36 La communication de la peur</h2>
+<p>La peur peut être communiquée par :</p>
+<ul>
+<li>le visage ;</li>
+<li>la voix ;</li>
+<li>la posture ;</li>
+<li>les mouvements ;</li>
+<li>les paroles.</li>
+</ul>
+<p>Les signaux de peur peuvent également être détectés par d'autres personnes.</p>
+<h2 id="437-la-contagion-de-la-peur" class="entry-title hc-2">🧑‍🤝‍🧑 4.37 La contagion de la peur</h2>
+<p>La peur peut parfois se transmettre indirectement entre individus.</p>
+<p>Observer une personne paniquée ou percevoir son inquiétude peut influencer l'état émotionnel d'autres personnes.</p>
+<h2 id="438-les-differences-individuelles-face-a-la-peur" class="entry-title hc-3">🧬 4.38 Les différences individuelles face à la peur</h2>
+<p>Les réactions à une même menace peuvent varier considérablement.</p>
+<p>Elles dépendent notamment :</p>
+<ul>
+<li>de l'expérience passée ;</li>
+<li>de l'apprentissage ;</li>
+<li>du contexte ;</li>
+<li>de la perception du contrôle ;</li>
+<li>de la personnalité ;</li>
+<li>de l'état physiologique.</li>
+</ul>
+<h2 id="439-quand-la-peur-devient-problematique" class="entry-title hc-4">🌱 4.39 Quand la peur devient problématique</h2>
+<p>La peur devient particulièrement problématique lorsqu'elle est très intense, persistante, disproportionnée par rapport au contexte ou qu'elle entraîne des restrictions importantes dans le fonctionnement quotidien.</p>
+<p>Certaines formes peuvent alors être associées à différents troubles anxieux ou autres problèmes psychologiques.</p>
+<p>La présence de peur seule ne constitue cependant pas un diagnostic.</p>
+<h2 id="440-pourquoi-etudier-la-peur-et-les-comportements" class="entry-title hc-5">🔬 4.40 Pourquoi étudier la peur et les comportements ?</h2>
+<p>La peur permet d'observer clairement les interactions entre :</p>
+<p><strong>menace → attention → interprétation → activation corporelle → émotion → comportement → conséquence</strong></p>
+<p>Elle montre notamment qu'une émotion peut modifier simultanément le corps, les pensées, la perception, les décisions et les comportements.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>La peur est une émotion qui mobilise <strong>le cerveau, le corps, l'attention, les pensées et les comportements</strong>.</p>
+<p>Elle peut provoquer des réponses différentes selon la situation :</p>
+<p><strong>😨 peur → 🧠 détection → 🫀 activation → 🏃 fuite / 🛑 gel / ⚔️ confrontation / 🛡️ recherche de sécurité</strong></p>
+<p>La peur n'est pas nécessairement négative. Lorsqu'elle est adaptée au contexte, elle contribue à détecter les dangers et à protéger l'organisme.</p>
+<p>Elle peut cependant devenir problématique lorsqu'elle devient <strong>excessive, persistante, très difficile à réguler ou fortement limitante</strong>.</p>
+<p>Surtout, la peur ne produit pas automatiquement un comportement précis : <strong>une même émotion peut conduire à des réactions différentes selon le contexte, l'apprentissage, les objectifs et les capacités de contrôle.</strong></p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-la-colere-et-l-agressivite/"><span class="similar-icon">❤️</span>La colère et l'agressivité</a><a class="similar-item" href="/chapitre/emotions-la-tristesse-et-le-retrait/"><span class="similar-icon">❤️</span>La tristesse et le retrait</a><a class="similar-item" href="/chapitre/emotions-joie-plaisir-et-recompense/"><span class="similar-icon">❤️</span>Joie, plaisir et récompense</a></div>
+    </div>
+    <a class="back-link" href="/categorie/emotions/">← Retour à « Émotions et comportements humains »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

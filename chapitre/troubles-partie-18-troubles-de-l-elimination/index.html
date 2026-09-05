@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partie 18 — Troubles de l'élimination — Mon Esprit</title>
+<meta name="description" content="Partie 18 — Troubles de l'élimination, dans la catégorie Troubles psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#181-quest-ce-quun-trouble-de-lelimination">🧠 18.1 Qu'est-ce qu'un trouble de l'élimination ?</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#principaux-troubles">Principaux troubles</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#182-lacquisition-de-la-proprete">🧠 18.2 L'acquisition de la propreté</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#developpement">Développement</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#183-lenuresie">🧠 18.3 L'énurésie</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#184-lenuresie-nocturne">🧠 18.4 L'énurésie nocturne</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#185-lenuresie-diurne">🧠 18.5 L'énurésie diurne</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#186-lenuresie-primaire">🧠 18.6 L'énurésie primaire</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#187-lenuresie-secondaire">🧠 18.7 L'énurésie secondaire</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#188-lencopresie">🧠 18.8 L'encoprésie</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#189-lencopresie-avec-constipation">🧠 18.9 L'encoprésie avec constipation</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#consequences-possibles">Conséquences possibles</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1810-lencopresie-sans-constipation">🧠 18.10 L'encoprésie sans constipation</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#facteurs-possibles">Facteurs possibles</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1811-la-constipation-chronique">🧠 18.11 La constipation chronique</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1812-la-retention-des-selles">🧠 18.12 La rétention des selles</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#pourquoi-cela-peut-arriver">Pourquoi cela peut arriver ?</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1813-la-peur-des-toilettes">🧠 18.13 La peur des toilettes</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#consequences">Conséquences</a></li></ul></li><li><a href="#1814-limpact-emotionnel">🧠 18.14 L'impact émotionnel</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li></ul></li><li><a href="#1815-limpact-social">🧠 18.15 L'impact social</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#situations-difficiles">Situations difficiles</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1816-limpact-scolaire">🧠 18.16 L'impact scolaire</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1817-les-moqueries">🧠 18.17 Les moqueries</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#consequences-possibles_1">Conséquences possibles</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1818-le-role-de-la-famille">🧠 18.18 Le rôle de la famille</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#approche-recommandee">Approche recommandée</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1819-les-causes-medicales">🧠 18.19 Les causes médicales</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1820-les-causes-psychologiques">🧠 18.20 Les causes psychologiques</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#facteurs-possibles_1">Facteurs possibles</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1821-le-stress-et-lelimination">🧠 18.21 Le stress et l'élimination</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#situations-possibles">Situations possibles</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1822-lanxiete-et-les-troubles-de-lelimination">🧠 18.22 L'anxiété et les troubles de l'élimination</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations-possibles_2">Manifestations possibles</a></li></ul></li><li><a href="#1823-les-troubles-du-sommeil-et-lenuresie">🧠 18.23 Les troubles du sommeil et l'énurésie</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#mecanismes-possibles">Mécanismes possibles</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1824-la-vessie-et-le-controle-urinaire">🧠 18.24 La vessie et le contrôle urinaire</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1825-le-fonctionnement-intestinal">🧠 18.25 Le fonctionnement intestinal</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1826-le-diagnostic">🧠 18.26 Le diagnostic</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#elements-etudies">Éléments étudiés</a></li></ul></li><li><a href="#1827-le-diagnostic-differentiel">🧠 18.27 Le diagnostic différentiel</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#possibilites">Possibilités</a></li></ul></li><li><a href="#1828-lexamen-medical">🧠 18.28 L'examen médical</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#objectifs">Objectifs</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1829-le-calendrier-des-symptomes">🧠 18.29 Le calendrier des symptômes</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#informations-utiles">Informations utiles</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1830-la-prise-en-charge-de-lenuresie">🧠 18.30 La prise en charge de l'énurésie</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#approches-possibles">Approches possibles</a></li></ul></li><li><a href="#1831-lalarme-denuresie">🧠 18.31 L'alarme d'énurésie</a><ul class="sidebar-sublist"><li><a href="#definition_30">Définition</a></li><li><a href="#objectif">Objectif</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1832-la-prise-en-charge-de-lencopresie">🧠 18.32 La prise en charge de l'encoprésie</a><ul class="sidebar-sublist"><li><a href="#definition_31">Définition</a></li><li><a href="#approches-possibles_1">Approches possibles</a></li></ul></li><li><a href="#1833-les-habitudes-aux-toilettes">🧠 18.33 Les habitudes aux toilettes</a><ul class="sidebar-sublist"><li><a href="#definition_32">Définition</a></li><li><a href="#exemple">Exemple</a></li></ul></li><li><a href="#1834-le-renforcement-positif">🧠 18.34 Le renforcement positif</a><ul class="sidebar-sublist"><li><a href="#definition_33">Définition</a></li><li><a href="#exemple_1">Exemple</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1835-les-punitions">🧠 18.35 Les punitions</a><ul class="sidebar-sublist"><li><a href="#definition_34">Définition</a></li><li><a href="#pourquoi-sont-elles-problematiques">Pourquoi sont-elles problématiques ?</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1836-lestime-de-soi">🧠 18.36 L'estime de soi</a><ul class="sidebar-sublist"><li><a href="#definition_35">Définition</a></li><li><a href="#manifestations-possibles_3">Manifestations possibles</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1837-le-role-des-parents">🧠 18.37 Le rôle des parents</a><ul class="sidebar-sublist"><li><a href="#definition_36">Définition</a></li><li><a href="#approche-utile">Approche utile</a></li></ul></li><li><a href="#1838-le-role-de-lecole">🧠 18.38 Le rôle de l'école</a><ul class="sidebar-sublist"><li><a href="#definition_37">Définition</a></li><li><a href="#mesures-possibles">Mesures possibles</a></li></ul></li><li><a href="#1839-les-troubles-de-lelimination-chez-ladolescent">🧠 18.39 Les troubles de l'élimination chez l'adolescent</a><ul class="sidebar-sublist"><li><a href="#definition_38">Définition</a></li><li><a href="#consequences-possibles_2">Conséquences possibles</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1840-les-troubles-de-lelimination-chez-ladulte">🧠 18.40 Les troubles de l'élimination chez l'adulte</a><ul class="sidebar-sublist"><li><a href="#definition_39">Définition</a></li><li><a href="#causes-possibles_3">Causes possibles</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li><li><a href="#1841-les-troubles-neurologiques">🧠 18.41 Les troubles neurologiques</a><ul class="sidebar-sublist"><li><a href="#definition_40">Définition</a></li><li><a href="#consequences-possibles_3">Conséquences possibles</a></li></ul></li><li><a href="#1842-les-medicaments">🧠 18.42 Les médicaments</a><ul class="sidebar-sublist"><li><a href="#definition_41">Définition</a></li><li><a href="#effets-possibles">Effets possibles</a></li><li><a href="#a-retenir_30">À retenir</a></li></ul></li><li><a href="#1843-lalimentation">🧠 18.43 L'alimentation</a><ul class="sidebar-sublist"><li><a href="#definition_42">Définition</a></li><li><a href="#facteurs-importants">Facteurs importants</a></li><li><a href="#a-retenir_31">À retenir</a></li></ul></li><li><a href="#1844-lhydratation">🧠 18.44 L'hydratation</a><ul class="sidebar-sublist"><li><a href="#definition_43">Définition</a></li><li><a href="#a-retenir_32">À retenir</a></li></ul></li><li><a href="#1845-le-cercle-douleur-retention">🧠 18.45 Le cercle douleur-rétention</a><ul class="sidebar-sublist"><li><a href="#definition_44">Définition</a></li><li><a href="#schema">Schéma</a></li><li><a href="#a-retenir_33">À retenir</a></li></ul></li><li><a href="#1846-les-troubles-de-lelimination-et-les-traumatismes">🧠 18.46 Les troubles de l'élimination et les traumatismes</a><ul class="sidebar-sublist"><li><a href="#definition_45">Définition</a></li><li><a href="#manifestations-possibles_4">Manifestations possibles</a></li><li><a href="#a-retenir_34">À retenir</a></li></ul></li><li><a href="#1847-les-troubles-associes">🧠 18.47 Les troubles associés</a><ul class="sidebar-sublist"><li><a href="#definition_46">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_35">À retenir</a></li></ul></li><li><a href="#1848-levolution">🧠 18.48 L'évolution</a><ul class="sidebar-sublist"><li><a href="#definition_47">Définition</a></li><li><a href="#facteurs-favorables">Facteurs favorables</a></li><li><a href="#a-retenir_36">À retenir</a></li></ul></li><li><a href="#1849-quand-consulter">🧠 18.49 Quand consulter ?</a><ul class="sidebar-sublist"><li><a href="#consultation-recommandee-notamment-lorsque">Consultation recommandée notamment lorsque :</a></li></ul></li><li><a href="#1850-les-idees-recues">🧠 18.50 Les idées reçues</a><ul class="sidebar-sublist"><li><a href="#idee-recue-1">Idée reçue 1</a></li><li><a href="#idee-recue-2">Idée reçue 2</a></li><li><a href="#idee-recue-3">Idée reçue 3</a></li><li><a href="#idee-recue-4">Idée reçue 4</a></li><li><a href="#idee-recue-5">Idée reçue 5</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: "Partie 18 — Troubles de l'élimination",
+        category: 'Troubles psychologiques',
+        icon: '🩺'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Partie 18 — Troubles de l'élimination</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-troubles)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <h1 id="181-quest-ce-quun-trouble-de-lelimination" class="entry-title hc-1">🧠 18.1 Qu'est-ce qu'un trouble de l'élimination ?</h1>
+<h2 id="definition">Définition</h2>
+<p>Un <strong>trouble de l'élimination</strong> correspond à une difficulté persistante ou répétée concernant le contrôle des urines ou des selles, lorsque cette difficulté dépasse ce qui est attendu pour l'âge et le développement de l'enfant.</p>
+<h2 id="principaux-troubles">Principaux troubles</h2>
+<p>Les deux grandes catégories sont :</p>
+<ul>
+<li>l'<strong>énurésie</strong> : émission d'urine dans des situations où le contrôle est normalement attendu ;</li>
+<li>l'<strong>encoprésie</strong> : émission répétée de selles dans des endroits inappropriés.</li>
+</ul>
+<h2 id="a-retenir">À retenir</h2>
+<p>Les troubles de l'élimination ne sont pas simplement un problème de « mauvaise volonté ».</p>
+<hr />
+<h1 id="182-lacquisition-de-la-proprete" class="entry-title hc-2">🧠 18.2 L'acquisition de la propreté</h1>
+<h2 id="definition_1">Définition</h2>
+<p>L'<strong>acquisition de la propreté</strong> est le processus durant lequel l'enfant apprend progressivement à contrôler ses urines et ses selles.</p>
+<h2 id="developpement">Développement</h2>
+<p>Cette acquisition dépend notamment :</p>
+<ul>
+<li>de la maturation neurologique ;</li>
+<li>du développement physique ;</li>
+<li>de l'apprentissage ;</li>
+<li>de l'environnement ;</li>
+<li>des capacités de l'enfant.</li>
+</ul>
+<h2 id="a-retenir_1">À retenir</h2>
+<p>Le rythme d'acquisition varie d'un enfant à l'autre.</p>
+<hr />
+<h1 id="183-lenuresie" class="entry-title hc-3">🧠 18.3 L'énurésie</h1>
+<h2 id="definition_2">Définition</h2>
+<p>L'<strong>énurésie</strong> correspond à une émission répétée d'urine dans le lit ou les vêtements, volontaire ou involontaire, chez un enfant pour lequel cette situation n'est plus considérée comme adaptée au développement.</p>
+<h2 id="manifestations">Manifestations</h2>
+<p>Elle peut survenir :</p>
+<ul>
+<li>principalement pendant le sommeil ;</li>
+<li>parfois pendant la journée ;</li>
+<li>ou dans les deux situations.</li>
+</ul>
+<h2 id="a-retenir_2">À retenir</h2>
+<p>L'énurésie nocturne est la forme la plus connue.</p>
+<hr />
+<h1 id="184-lenuresie-nocturne" class="entry-title hc-4">🧠 18.4 L'énurésie nocturne</h1>
+<h2 id="definition_3">Définition</h2>
+<p>L'<strong>énurésie nocturne</strong> correspond à des épisodes répétés d'émission d'urine pendant le sommeil.</p>
+<h2 id="manifestations_1">Manifestations</h2>
+<p>L'enfant peut :</p>
+<ul>
+<li>mouiller son lit ;</li>
+<li>ne pas se réveiller lorsqu'il urine ;</li>
+<li>avoir des épisodes plusieurs fois par semaine ;</li>
+<li>être gêné ou honteux de la situation.</li>
+</ul>
+<h2 id="a-retenir_3">À retenir</h2>
+<p>L'énurésie nocturne est relativement fréquente chez l'enfant.</p>
+<hr />
+<h1 id="185-lenuresie-diurne" class="entry-title hc-5">🧠 18.5 L'énurésie diurne</h1>
+<h2 id="definition_4">Définition</h2>
+<p>L'<strong>énurésie diurne</strong> correspond à des épisodes d'émission d'urine pendant la journée.</p>
+<h2 id="manifestations-possibles">Manifestations possibles</h2>
+<ul>
+<li>accidents urinaires ;</li>
+<li>urgence urinaire ;</li>
+<li>difficultés à se retenir ;</li>
+<li>mictions très fréquentes.</li>
+</ul>
+<h2 id="a-retenir_4">À retenir</h2>
+<p>Une évaluation médicale peut être nécessaire afin de rechercher une cause physique.</p>
+<hr />
+<h1 id="186-lenuresie-primaire" class="entry-title hc-1">🧠 18.6 L'énurésie primaire</h1>
+<h2 id="definition_5">Définition</h2>
+<p>L'<strong>énurésie primaire</strong> correspond à une énurésie chez un enfant qui n'a jamais acquis une continence urinaire durable.</p>
+<h2 id="a-retenir_5">À retenir</h2>
+<p>L'enfant n'a donc pas connu une période prolongée de continence avant la réapparition des épisodes.</p>
+<hr />
+<h1 id="187-lenuresie-secondaire" class="entry-title hc-2">🧠 18.7 L'énurésie secondaire</h1>
+<h2 id="definition_6">Définition</h2>
+<p>L'<strong>énurésie secondaire</strong> apparaît après une période durant laquelle l'enfant avait acquis une continence urinaire durable.</p>
+<h2 id="causes-possibles">Causes possibles</h2>
+<p>Elle peut être associée à :</p>
+<ul>
+<li>stress ;</li>
+<li>changements importants ;</li>
+<li>difficultés psychologiques ;</li>
+<li>constipation ;</li>
+<li>infections urinaires ;</li>
+<li>diabète ;</li>
+<li>autres problèmes médicaux.</li>
+</ul>
+<h2 id="a-retenir_6">À retenir</h2>
+<p>Une reprise soudaine des accidents urinaires mérite une attention particulière.</p>
+<hr />
+<h1 id="188-lencopresie" class="entry-title hc-3">🧠 18.8 L'encoprésie</h1>
+<h2 id="definition_7">Définition</h2>
+<p>L'<strong>encoprésie</strong> correspond à l'émission répétée de selles dans des endroits inappropriés chez un enfant ayant atteint un âge où la maîtrise des selles est normalement attendue.</p>
+<h2 id="manifestations_2">Manifestations</h2>
+<p>Les selles peuvent être retrouvées :</p>
+<ul>
+<li>dans les sous-vêtements ;</li>
+<li>dans les vêtements ;</li>
+<li>parfois dans des lieux inappropriés.</li>
+</ul>
+<h2 id="a-retenir_7">À retenir</h2>
+<p>L'encoprésie peut être volontaire ou involontaire, mais elle est souvent liée à des mécanismes physiologiques.</p>
+<hr />
+<h1 id="189-lencopresie-avec-constipation" class="entry-title hc-4">🧠 18.9 L'encoprésie avec constipation</h1>
+<h2 id="definition_8">Définition</h2>
+<p>Dans certaines formes d'encoprésie, une <strong>constipation chronique</strong> entraîne une accumulation de selles dans le rectum.</p>
+<p>Des selles plus liquides peuvent ensuite s'échapper involontairement autour du bouchon de selles.</p>
+<h2 id="consequences-possibles">Conséquences possibles</h2>
+<ul>
+<li>douleurs abdominales ;</li>
+<li>selles difficiles à évacuer ;</li>
+<li>ballonnements ;</li>
+<li>accidents dans les vêtements.</li>
+</ul>
+<h2 id="a-retenir_8">À retenir</h2>
+<p>L'encoprésie n'est donc pas forcément liée à un refus volontaire d'aller aux toilettes.</p>
+<hr />
+<h1 id="1810-lencopresie-sans-constipation" class="entry-title hc-5">🧠 18.10 L'encoprésie sans constipation</h1>
+<h2 id="definition_9">Définition</h2>
+<p>Certaines situations d'encoprésie peuvent apparaître sans constipation significative.</p>
+<h2 id="facteurs-possibles">Facteurs possibles</h2>
+<ul>
+<li>difficultés comportementales ;</li>
+<li>apprentissage de la propreté perturbé ;</li>
+<li>facteurs émotionnels ;</li>
+<li>difficultés psychologiques.</li>
+</ul>
+<h2 id="a-retenir_9">À retenir</h2>
+<p>Une évaluation permet de déterminer le mécanisme impliqué.</p>
+<hr />
+<h1 id="1811-la-constipation-chronique" class="entry-title hc-1">🧠 18.11 La constipation chronique</h1>
+<h2 id="definition_10">Définition</h2>
+<p>La <strong>constipation chronique</strong> correspond à une difficulté persistante à évacuer normalement les selles.</p>
+<h2 id="manifestations_3">Manifestations</h2>
+<ul>
+<li>selles peu fréquentes ;</li>
+<li>selles dures ;</li>
+<li>douleurs ;</li>
+<li>efforts importants pour déféquer ;</li>
+<li>rétention volontaire des selles.</li>
+</ul>
+<h2 id="a-retenir_10">À retenir</h2>
+<p>La constipation joue un rôle important dans de nombreux cas d'encoprésie.</p>
+<hr />
+<h1 id="1812-la-retention-des-selles" class="entry-title hc-2">🧠 18.12 La rétention des selles</h1>
+<h2 id="definition_11">Définition</h2>
+<p>La <strong>rétention fécale</strong> correspond au fait de retenir volontairement ou involontairement les selles.</p>
+<h2 id="pourquoi-cela-peut-arriver">Pourquoi cela peut arriver ?</h2>
+<p>L'enfant peut retenir ses selles à cause :</p>
+<ul>
+<li>d'une douleur précédente ;</li>
+<li>de la peur d'aller aux toilettes ;</li>
+<li>d'une mauvaise expérience ;</li>
+<li>d'un changement d'environnement ;</li>
+<li>de difficultés liées à l'apprentissage de la propreté.</li>
+</ul>
+<h2 id="a-retenir_11">À retenir</h2>
+<p>La rétention peut entraîner un cercle vicieux : douleur → peur → rétention → constipation → douleur.</p>
+<hr />
+<h1 id="1813-la-peur-des-toilettes" class="entry-title hc-3">🧠 18.13 La peur des toilettes</h1>
+<h2 id="definition_12">Définition</h2>
+<p>Certains enfants développent une peur ou une forte anxiété associée aux toilettes.</p>
+<h2 id="causes-possibles_1">Causes possibles</h2>
+<ul>
+<li>peur de tomber ;</li>
+<li>bruit de la chasse d'eau ;</li>
+<li>douleur lors des selles ;</li>
+<li>mauvaise expérience ;</li>
+<li>environnement inhabituel.</li>
+</ul>
+<h2 id="consequences">Conséquences</h2>
+<p>L'enfant peut éviter les toilettes et retenir ses urines ou ses selles.</p>
+<hr />
+<h1 id="1814-limpact-emotionnel" class="entry-title hc-4">🧠 18.14 L'impact émotionnel</h1>
+<h2 id="definition_13">Définition</h2>
+<p>Les troubles de l'élimination peuvent avoir des conséquences émotionnelles importantes.</p>
+<h2 id="manifestations_4">Manifestations</h2>
+<p>L'enfant peut ressentir :</p>
+<ul>
+<li>honte ;</li>
+<li>gêne ;</li>
+<li>anxiété ;</li>
+<li>tristesse ;</li>
+<li>perte de confiance ;</li>
+<li>peur que les autres découvrent ses accidents.</li>
+</ul>
+<hr />
+<h1 id="1815-limpact-social" class="entry-title hc-5">🧠 18.15 L'impact social</h1>
+<h2 id="definition_14">Définition</h2>
+<p>Les troubles de l'élimination peuvent perturber certaines activités sociales.</p>
+<h2 id="situations-difficiles">Situations difficiles</h2>
+<ul>
+<li>dormir chez des amis ;</li>
+<li>partir en vacances ;</li>
+<li>participer à des activités scolaires ;</li>
+<li>utiliser des toilettes publiques ;</li>
+<li>participer à certaines activités sportives.</li>
+</ul>
+<h2 id="a-retenir_12">À retenir</h2>
+<p>La peur d'un accident peut conduire certains enfants à éviter certaines situations.</p>
+<hr />
+<h1 id="1816-limpact-scolaire" class="entry-title hc-1">🧠 18.16 L'impact scolaire</h1>
+<h2 id="definition_15">Définition</h2>
+<p>Les difficultés d'élimination peuvent avoir un impact sur la vie scolaire.</p>
+<h2 id="manifestations-possibles_1">Manifestations possibles</h2>
+<ul>
+<li>peur d'avoir un accident ;</li>
+<li>évitement des toilettes scolaires ;</li>
+<li>difficultés de concentration ;</li>
+<li>honte ;</li>
+<li>isolement.</li>
+</ul>
+<h2 id="a-retenir_13">À retenir</h2>
+<p>Un environnement scolaire compréhensif peut aider à limiter les conséquences psychologiques.</p>
+<hr />
+<h1 id="1817-les-moqueries" class="entry-title hc-2">🧠 18.17 Les moqueries</h1>
+<h2 id="definition_16">Définition</h2>
+<p>Les accidents urinaires ou fécaux peuvent exposer l'enfant aux moqueries de ses camarades.</p>
+<h2 id="consequences-possibles_1">Conséquences possibles</h2>
+<ul>
+<li>honte ;</li>
+<li>isolement ;</li>
+<li>baisse de l'estime de soi ;</li>
+<li>anxiété ;</li>
+<li>refus d'aller à l'école.</li>
+</ul>
+<h2 id="a-retenir_14">À retenir</h2>
+<p>Les moqueries peuvent aggraver considérablement la souffrance de l'enfant.</p>
+<hr />
+<h1 id="1818-le-role-de-la-famille" class="entry-title hc-3">🧠 18.18 Le rôle de la famille</h1>
+<h2 id="definition_17">Définition</h2>
+<p>L'attitude de l'entourage peut influencer la manière dont l'enfant vit son trouble.</p>
+<h2 id="approche-recommandee">Approche recommandée</h2>
+<p>Il est préférable de :</p>
+<ul>
+<li>éviter les humiliations ;</li>
+<li>éviter les punitions ;</li>
+<li>rester calme ;</li>
+<li>encourager les progrès ;</li>
+<li>consulter lorsque nécessaire.</li>
+</ul>
+<h2 id="a-retenir_15">À retenir</h2>
+<p>Punir l'enfant ne permet généralement pas de résoudre la cause du problème.</p>
+<hr />
+<h1 id="1819-les-causes-medicales" class="entry-title hc-4">🧠 18.19 Les causes médicales</h1>
+<h2 id="definition_18">Définition</h2>
+<p>Certaines difficultés d'élimination peuvent avoir une origine médicale.</p>
+<h2 id="causes-possibles_2">Causes possibles</h2>
+<ul>
+<li>infection urinaire ;</li>
+<li>constipation ;</li>
+<li>diabète ;</li>
+<li>anomalies urinaires ;</li>
+<li>troubles neurologiques ;</li>
+<li>troubles digestifs.</li>
+</ul>
+<h2 id="a-retenir_16">À retenir</h2>
+<p>Une cause médicale doit être recherchée lorsque cela est nécessaire.</p>
+<hr />
+<h1 id="1820-les-causes-psychologiques" class="entry-title hc-5">🧠 18.20 Les causes psychologiques</h1>
+<h2 id="definition_19">Définition</h2>
+<p>Des facteurs psychologiques peuvent également participer à certains troubles de l'élimination.</p>
+<h2 id="facteurs-possibles_1">Facteurs possibles</h2>
+<ul>
+<li>stress ;</li>
+<li>anxiété ;</li>
+<li>changement familial ;</li>
+<li>difficultés scolaires ;</li>
+<li>événements stressants ;</li>
+<li>traumatismes.</li>
+</ul>
+<h2 id="a-retenir_17">À retenir</h2>
+<p>Une cause psychologique ne signifie pas que le problème est « imaginaire ».</p>
+<hr />
+<h1 id="1821-le-stress-et-lelimination" class="entry-title hc-1">🧠 18.21 Le stress et l'élimination</h1>
+<h2 id="definition_20">Définition</h2>
+<p>Le <strong>stress</strong> peut influencer le fonctionnement urinaire et digestif.</p>
+<h2 id="situations-possibles">Situations possibles</h2>
+<ul>
+<li>changement d'école ;</li>
+<li>déménagement ;</li>
+<li>séparation familiale ;</li>
+<li>arrivée d'un nouvel enfant ;</li>
+<li>conflit familial ;</li>
+<li>événement particulièrement stressant.</li>
+</ul>
+<h2 id="a-retenir_18">À retenir</h2>
+<p>Le stress peut contribuer à l'apparition ou à l'aggravation de certains symptômes.</p>
+<hr />
+<h1 id="1822-lanxiete-et-les-troubles-de-lelimination" class="entry-title hc-2">🧠 18.22 L'anxiété et les troubles de l'élimination</h1>
+<h2 id="definition_21">Définition</h2>
+<p>L'<strong>anxiété</strong> peut être associée à certaines difficultés d'élimination.</p>
+<h2 id="manifestations-possibles_2">Manifestations possibles</h2>
+<ul>
+<li>peur d'utiliser les toilettes ;</li>
+<li>besoin fréquent d'aller aux toilettes ;</li>
+<li>évitement ;</li>
+<li>inquiétude concernant les accidents.</li>
+</ul>
+<hr />
+<h1 id="1823-les-troubles-du-sommeil-et-lenuresie" class="entry-title hc-3">🧠 18.23 Les troubles du sommeil et l'énurésie</h1>
+<h2 id="definition_22">Définition</h2>
+<p>Le sommeil peut jouer un rôle dans l'énurésie nocturne.</p>
+<h2 id="mecanismes-possibles">Mécanismes possibles</h2>
+<p>Certains enfants peuvent avoir davantage de difficultés à se réveiller lorsque leur vessie est pleine.</p>
+<h2 id="a-retenir_19">À retenir</h2>
+<p>L'énurésie nocturne n'est pas simplement due au fait de « dormir trop profondément ».</p>
+<hr />
+<h1 id="1824-la-vessie-et-le-controle-urinaire" class="entry-title hc-4">🧠 18.24 La vessie et le contrôle urinaire</h1>
+<h2 id="definition_23">Définition</h2>
+<p>Le contrôle urinaire dépend de la coordination entre :</p>
+<ul>
+<li>cerveau ;</li>
+<li>système nerveux ;</li>
+<li>vessie ;</li>
+<li>muscles ;</li>
+<li>sphincters.</li>
+</ul>
+<h2 id="a-retenir_20">À retenir</h2>
+<p>Le contrôle urinaire se développe progressivement avec la maturation de l'enfant.</p>
+<hr />
+<h1 id="1825-le-fonctionnement-intestinal" class="entry-title hc-5">🧠 18.25 Le fonctionnement intestinal</h1>
+<h2 id="definition_24">Définition</h2>
+<p>Le contrôle des selles dépend notamment du fonctionnement :</p>
+<ul>
+<li>du système digestif ;</li>
+<li>du rectum ;</li>
+<li>des muscles sphinctériens ;</li>
+<li>du système nerveux.</li>
+</ul>
+<h2 id="a-retenir_21">À retenir</h2>
+<p>Les troubles des selles peuvent avoir des causes physiologiques importantes.</p>
+<hr />
+<h1 id="1826-le-diagnostic" class="entry-title hc-1">🧠 18.26 Le diagnostic</h1>
+<h2 id="definition_25">Définition</h2>
+<p>Le diagnostic repose sur une évaluation médicale et psychologique adaptée à la situation.</p>
+<h2 id="elements-etudies">Éléments étudiés</h2>
+<ul>
+<li>âge de l'enfant ;</li>
+<li>fréquence des accidents ;</li>
+<li>circonstances ;</li>
+<li>antécédents ;</li>
+<li>habitudes urinaires ;</li>
+<li>habitudes intestinales ;</li>
+<li>constipation ;</li>
+<li>événements récents ;</li>
+<li>impact psychologique.</li>
+</ul>
+<hr />
+<h1 id="1827-le-diagnostic-differentiel" class="entry-title hc-2">🧠 18.27 Le diagnostic différentiel</h1>
+<h2 id="definition_26">Définition</h2>
+<p>Le <strong>diagnostic différentiel</strong> consiste à rechercher d'autres problèmes pouvant expliquer les symptômes.</p>
+<h2 id="possibilites">Possibilités</h2>
+<ul>
+<li>infection urinaire ;</li>
+<li>constipation ;</li>
+<li>diabète ;</li>
+<li>maladie neurologique ;</li>
+<li>anomalie anatomique ;</li>
+<li>trouble du sommeil ;</li>
+<li>difficultés psychologiques.</li>
+</ul>
+<hr />
+<h1 id="1828-lexamen-medical" class="entry-title hc-3">🧠 18.28 L'examen médical</h1>
+<h2 id="definition_27">Définition</h2>
+<p>Un professionnel de santé peut réaliser différents examens selon les symptômes.</p>
+<h2 id="objectifs">Objectifs</h2>
+<ul>
+<li>rechercher une cause physique ;</li>
+<li>évaluer le fonctionnement urinaire ;</li>
+<li>rechercher une constipation ;</li>
+<li>identifier une maladie sous-jacente.</li>
+</ul>
+<h2 id="a-retenir_22">À retenir</h2>
+<p>Tous les enfants n'ont pas besoin des mêmes examens.</p>
+<hr />
+<h1 id="1829-le-calendrier-des-symptomes" class="entry-title hc-4">🧠 18.29 Le calendrier des symptômes</h1>
+<h2 id="definition_28">Définition</h2>
+<p>Noter les épisodes peut permettre d'identifier certains schémas.</p>
+<h2 id="informations-utiles">Informations utiles</h2>
+<ul>
+<li>date ;</li>
+<li>heure ;</li>
+<li>circonstances ;</li>
+<li>quantité approximative ;</li>
+<li>consommation de liquides ;</li>
+<li>selles ;</li>
+<li>douleurs ;</li>
+<li>accidents.</li>
+</ul>
+<h2 id="a-retenir_23">À retenir</h2>
+<p>Un suivi peut aider le professionnel à comprendre le fonctionnement du trouble.</p>
+<hr />
+<h1 id="1830-la-prise-en-charge-de-lenuresie" class="entry-title hc-5">🧠 18.30 La prise en charge de l'énurésie</h1>
+<h2 id="definition_29">Définition</h2>
+<p>La prise en charge dépend de l'âge, de la fréquence des épisodes et des causes éventuelles.</p>
+<h2 id="approches-possibles">Approches possibles</h2>
+<ul>
+<li>conseils comportementaux ;</li>
+<li>habitudes régulières aux toilettes ;</li>
+<li>gestion adaptée des boissons ;</li>
+<li>systèmes d'alarme ;</li>
+<li>traitements médicamenteux dans certaines situations.</li>
+</ul>
+<h1 id="1831-lalarme-denuresie" class="entry-title hc-1">🧠 18.31 L'alarme d'énurésie</h1>
+<h2 id="definition_30">Définition</h2>
+<p>L'<strong>alarme d'énurésie</strong> est un dispositif conçu pour détecter l'humidité et réveiller progressivement l'enfant.</p>
+<h2 id="objectif">Objectif</h2>
+<p>Elle vise à aider l'enfant à apprendre à reconnaître les signaux liés au remplissage de la vessie pendant la nuit.</p>
+<h2 id="a-retenir_24">À retenir</h2>
+<p>Son utilisation doit être adaptée à l'enfant et accompagnée d'un suivi approprié.</p>
+<hr />
+<h1 id="1832-la-prise-en-charge-de-lencopresie" class="entry-title hc-2">🧠 18.32 La prise en charge de l'encoprésie</h1>
+<h2 id="definition_31">Définition</h2>
+<p>La prise en charge dépend notamment de la présence ou non d'une constipation.</p>
+<h2 id="approches-possibles_1">Approches possibles</h2>
+<ul>
+<li>traitement de la constipation ;</li>
+<li>habitudes régulières aux toilettes ;</li>
+<li>accompagnement comportemental ;</li>
+<li>alimentation adaptée ;</li>
+<li>hydratation adaptée ;</li>
+<li>soutien psychologique lorsque nécessaire.</li>
+</ul>
+<hr />
+<h1 id="1833-les-habitudes-aux-toilettes" class="entry-title hc-3">🧠 18.33 Les habitudes aux toilettes</h1>
+<h2 id="definition_32">Définition</h2>
+<p>Des habitudes régulières peuvent aider certains enfants à développer un fonctionnement plus stable.</p>
+<h2 id="exemple">Exemple</h2>
+<p>L'enfant peut être encouragé à aller aux toilettes :</p>
+<ul>
+<li>à des moments réguliers ;</li>
+<li>sans pression excessive ;</li>
+<li>dans un environnement calme.</li>
+</ul>
+<hr />
+<h1 id="1834-le-renforcement-positif" class="entry-title hc-4">🧠 18.34 Le renforcement positif</h1>
+<h2 id="definition_33">Définition</h2>
+<p>Le <strong>renforcement positif</strong> consiste à valoriser les comportements appropriés et les progrès.</p>
+<h2 id="exemple_1">Exemple</h2>
+<p>On peut féliciter l'enfant lorsqu'il :</p>
+<ul>
+<li>va aux toilettes régulièrement ;</li>
+<li>signale son besoin ;</li>
+<li>suit les recommandations ;</li>
+<li>participe activement à sa prise en charge.</li>
+</ul>
+<h2 id="a-retenir_25">À retenir</h2>
+<p>L'objectif n'est pas de punir les accidents.</p>
+<hr />
+<h1 id="1835-les-punitions" class="entry-title hc-5">🧠 18.35 Les punitions</h1>
+<h2 id="definition_34">Définition</h2>
+<p>Les punitions consistent à sanctionner l'enfant à la suite d'un accident.</p>
+<h2 id="pourquoi-sont-elles-problematiques">Pourquoi sont-elles problématiques ?</h2>
+<p>Elles peuvent augmenter :</p>
+<ul>
+<li>honte ;</li>
+<li>anxiété ;</li>
+<li>peur ;</li>
+<li>culpabilité ;</li>
+<li>évitement.</li>
+</ul>
+<h2 id="a-retenir_26">À retenir</h2>
+<p>Les accidents ne sont généralement pas un comportement volontaire destiné à provoquer les adultes.</p>
+<hr />
+<h1 id="1836-lestime-de-soi" class="entry-title hc-1">🧠 18.36 L'estime de soi</h1>
+<h2 id="definition_35">Définition</h2>
+<p>Les troubles de l'élimination peuvent affecter l'image que l'enfant a de lui-même.</p>
+<h2 id="manifestations-possibles_3">Manifestations possibles</h2>
+<ul>
+<li>sentiment d'être différent ;</li>
+<li>honte ;</li>
+<li>perte de confiance ;</li>
+<li>peur du jugement.</li>
+</ul>
+<h2 id="a-retenir_27">À retenir</h2>
+<p>Le soutien émotionnel fait partie de la prise en charge globale.</p>
+<hr />
+<h1 id="1837-le-role-des-parents" class="entry-title hc-2">🧠 18.37 Le rôle des parents</h1>
+<h2 id="definition_36">Définition</h2>
+<p>Les parents peuvent contribuer au traitement en créant un environnement rassurant et stable.</p>
+<h2 id="approche-utile">Approche utile</h2>
+<ul>
+<li>rester patient ;</li>
+<li>éviter les humiliations ;</li>
+<li>suivre les recommandations médicales ;</li>
+<li>valoriser les progrès ;</li>
+<li>permettre à l'enfant de parler de ses difficultés.</li>
+</ul>
+<hr />
+<h1 id="1838-le-role-de-lecole" class="entry-title hc-3">🧠 18.38 Le rôle de l'école</h1>
+<h2 id="definition_37">Définition</h2>
+<p>L'école peut jouer un rôle important dans l'accompagnement de l'enfant.</p>
+<h2 id="mesures-possibles">Mesures possibles</h2>
+<ul>
+<li>accès facile aux toilettes ;</li>
+<li>possibilité de se changer discrètement ;</li>
+<li>respect de la confidentialité ;</li>
+<li>prévention des moqueries ;</li>
+<li>communication avec la famille lorsque nécessaire.</li>
+</ul>
+<hr />
+<h1 id="1839-les-troubles-de-lelimination-chez-ladolescent" class="entry-title hc-4">🧠 18.39 Les troubles de l'élimination chez l'adolescent</h1>
+<h2 id="definition_38">Définition</h2>
+<p>Certains troubles peuvent persister à l'adolescence.</p>
+<h2 id="consequences-possibles_2">Conséquences possibles</h2>
+<ul>
+<li>honte importante ;</li>
+<li>isolement ;</li>
+<li>anxiété sociale ;</li>
+<li>difficultés lors des voyages ;</li>
+<li>difficultés relationnelles.</li>
+</ul>
+<h2 id="a-retenir_28">À retenir</h2>
+<p>Une prise en charge reste possible même lorsque le trouble persiste après l'enfance.</p>
+<hr />
+<h1 id="1840-les-troubles-de-lelimination-chez-ladulte" class="entry-title hc-5">🧠 18.40 Les troubles de l'élimination chez l'adulte</h1>
+<h2 id="definition_39">Définition</h2>
+<p>Chez l'adulte, l'incontinence urinaire ou fécale peut avoir différentes causes médicales, neurologiques ou fonctionnelles.</p>
+<h2 id="causes-possibles_3">Causes possibles</h2>
+<ul>
+<li>vieillissement ;</li>
+<li>grossesse et accouchement ;</li>
+<li>troubles neurologiques ;</li>
+<li>maladies digestives ;</li>
+<li>troubles musculaires ;</li>
+<li>certains médicaments.</li>
+</ul>
+<h2 id="a-retenir_29">À retenir</h2>
+<p>Chez l'adulte, il faut rechercher une cause médicale plutôt que d'assimiler automatiquement le problème à un trouble psychologique.</p>
+<hr />
+<h1 id="1841-les-troubles-neurologiques" class="entry-title hc-1">🧠 18.41 Les troubles neurologiques</h1>
+<h2 id="definition_40">Définition</h2>
+<p>Le système nerveux participe au contrôle de la vessie et des intestins.</p>
+<h2 id="consequences-possibles_3">Conséquences possibles</h2>
+<p>Certaines maladies neurologiques peuvent donc provoquer :</p>
+<ul>
+<li>incontinence ;</li>
+<li>difficultés à uriner ;</li>
+<li>constipation ;</li>
+<li>perte de contrôle des selles.</li>
+</ul>
+<hr />
+<h1 id="1842-les-medicaments" class="entry-title hc-2">🧠 18.42 Les médicaments</h1>
+<h2 id="definition_41">Définition</h2>
+<p>Certains médicaments peuvent modifier le fonctionnement urinaire ou intestinal.</p>
+<h2 id="effets-possibles">Effets possibles</h2>
+<ul>
+<li>constipation ;</li>
+<li>diarrhée ;</li>
+<li>augmentation des urines ;</li>
+<li>difficultés de contrôle.</li>
+</ul>
+<h2 id="a-retenir_30">À retenir</h2>
+<p>Un médicament ne doit pas être arrêté sans avis médical.</p>
+<hr />
+<h1 id="1843-lalimentation" class="entry-title hc-3">🧠 18.43 L'alimentation</h1>
+<h2 id="definition_42">Définition</h2>
+<p>L'alimentation peut influencer le fonctionnement intestinal.</p>
+<h2 id="facteurs-importants">Facteurs importants</h2>
+<ul>
+<li>fibres ;</li>
+<li>hydratation ;</li>
+<li>habitudes alimentaires ;</li>
+<li>régularité des repas.</li>
+</ul>
+<h2 id="a-retenir_31">À retenir</h2>
+<p>Les besoins alimentaires varient selon l'âge et la situation médicale.</p>
+<hr />
+<h1 id="1844-lhydratation" class="entry-title hc-4">🧠 18.44 L'hydratation</h1>
+<h2 id="definition_43">Définition</h2>
+<p>L'hydratation joue un rôle important dans le fonctionnement urinaire et digestif.</p>
+<h2 id="a-retenir_32">À retenir</h2>
+<p>Il n'est généralement pas conseillé de supprimer excessivement les boissons pour éviter les accidents, car une hydratation insuffisante peut entraîner d'autres problèmes.</p>
+<hr />
+<h1 id="1845-le-cercle-douleur-retention" class="entry-title hc-5">🧠 18.45 Le cercle douleur-rétention</h1>
+<h2 id="definition_44">Définition</h2>
+<p>Certaines difficultés intestinales peuvent fonctionner selon un cercle vicieux.</p>
+<h2 id="schema">Schéma</h2>
+<p>Douleur → peur d'aller aux toilettes → rétention → accumulation des selles → selles plus difficiles → nouvelle douleur.</p>
+<h2 id="a-retenir_33">À retenir</h2>
+<p>Briser ce cercle constitue souvent un objectif important de la prise en charge.</p>
+<hr />
+<h1 id="1846-les-troubles-de-lelimination-et-les-traumatismes" class="entry-title hc-1">🧠 18.46 Les troubles de l'élimination et les traumatismes</h1>
+<h2 id="definition_45">Définition</h2>
+<p>Des expériences traumatiques ou fortement stressantes peuvent être associées à certaines difficultés d'élimination.</p>
+<h2 id="manifestations-possibles_4">Manifestations possibles</h2>
+<ul>
+<li>régression temporaire ;</li>
+<li>accidents ;</li>
+<li>rétention ;</li>
+<li>peur des toilettes.</li>
+</ul>
+<h2 id="a-retenir_34">À retenir</h2>
+<p>Une association avec un événement stressant ne prouve pas automatiquement une origine traumatique.</p>
+<hr />
+<h1 id="1847-les-troubles-associes" class="entry-title hc-2">🧠 18.47 Les troubles associés</h1>
+<h2 id="definition_46">Définition</h2>
+<p>Les troubles de l'élimination peuvent parfois être associés à d'autres difficultés.</p>
+<h2 id="exemples">Exemples</h2>
+<ul>
+<li>anxiété ;</li>
+<li><a class="gloss-link" href="/chapitre/troubles-partie-8-troubles-neurodeveloppementaux/#84-le-trouble-deficit-de-lattentionhyperactivite-tdah" title="Voir la définition de TDAH">TDAH</a> ;</li>
+<li>troubles du comportement ;</li>
+<li>difficultés émotionnelles ;</li>
+<li>troubles du sommeil.</li>
+</ul>
+<h2 id="a-retenir_35">À retenir</h2>
+<p>Il est important d'évaluer l'enfant dans son ensemble.</p>
+<hr />
+<h1 id="1848-levolution" class="entry-title hc-3">🧠 18.48 L'évolution</h1>
+<h2 id="definition_47">Définition</h2>
+<p>L'évolution dépend de la cause et de la prise en charge.</p>
+<h2 id="facteurs-favorables">Facteurs favorables</h2>
+<ul>
+<li>prise en charge précoce ;</li>
+<li>traitement d'une éventuelle constipation ;</li>
+<li>environnement rassurant ;</li>
+<li>absence de culpabilisation ;</li>
+<li>suivi médical.</li>
+</ul>
+<h2 id="a-retenir_36">À retenir</h2>
+<p>De nombreux enfants connaissent une amélioration avec le temps et une prise en charge adaptée.</p>
+<hr />
+<h1 id="1849-quand-consulter" class="entry-title hc-4">🧠 18.49 Quand consulter ?</h1>
+<h2 id="consultation-recommandee-notamment-lorsque">Consultation recommandée notamment lorsque :</h2>
+<ul>
+<li>les accidents persistent au-delà de l'âge attendu ;</li>
+<li>l'enfant recommence soudainement à avoir des accidents après une période de continence ;</li>
+<li>il existe des douleurs ;</li>
+<li>il y a une constipation importante ;</li>
+<li>l'enfant souffre psychologiquement ;</li>
+<li>les symptômes sont fréquents ;</li>
+<li>une maladie physique est possible.</li>
+</ul>
+<hr />
+<h1 id="1850-les-idees-recues" class="entry-title hc-5">🧠 18.50 Les idées reçues</h1>
+<h2 id="idee-recue-1">Idée reçue 1</h2>
+<p>« L'enfant fait exprès. »</p>
+<p>→ Faux. Les mécanismes peuvent être physiologiques, développementaux ou psychologiques.</p>
+<h2 id="idee-recue-2">Idée reçue 2</h2>
+<p>« Il suffit de punir l'enfant. »</p>
+<p>→ Faux. Les punitions peuvent augmenter la honte et l'anxiété.</p>
+<h2 id="idee-recue-3">Idée reçue 3</h2>
+<p>« L'énurésie signifie que l'enfant est immature. »</p>
+<p>→ Faux. De nombreux facteurs peuvent expliquer l'énurésie.</p>
+<h2 id="idee-recue-4">Idée reçue 4</h2>
+<p>« L'encoprésie est toujours volontaire. »</p>
+<p>→ Faux. La constipation et les fuites involontaires jouent souvent un rôle important.</p>
+<h2 id="idee-recue-5">Idée reçue 5</h2>
+<p>« Les troubles de l'élimination sont uniquement psychologiques. »</p>
+<p>→ Faux. Les causes médicales doivent également être prises en compte.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-19-troubles-lies-a-des-affections-medicales/"><span class="similar-icon">🩺</span>Partie 19 — Troubles liés à des affections médicales</a><a class="similar-item" href="/chapitre/troubles-partie-1-troubles-anxieux/"><span class="similar-icon">🩺</span>Partie 1 — Troubles anxieux</a><a class="similar-item" href="/chapitre/troubles-partie-2-troubles-obsessionnels-compulsifs-et-apparentes/"><span class="similar-icon">🩺</span>Partie 2 — Troubles obsessionnels-compulsifs et apparentés</a></div>
+    </div>
+    <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

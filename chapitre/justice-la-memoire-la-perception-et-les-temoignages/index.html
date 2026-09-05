@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La mémoire, la perception et les témoignages — Mon Esprit</title>
+<meta name="description" content="La mémoire, la perception et les témoignages, dans la catégorie Psychologie, justice et criminologie de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#21-la-perception-dun-evenement">2.1 LA PERCEPTION D'UN ÉVÉNEMENT</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#22-la-memoire">2.2 LA MÉMOIRE</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#23-la-memoire-des-temoins">2.3 LA MÉMOIRE DES TÉMOINS</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#24-les-faux-souvenirs">2.4 LES FAUX SOUVENIRS</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#25-la-suggestibilite">2.5 LA SUGGESTIBILITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li></ul></li><li><a href="#26-linfluence-des-questions">2.6 L'INFLUENCE DES QUESTIONS</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#27-le-stress-et-la-memoire">2.7 LE STRESS ET LA MÉMOIRE</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#28-lidentification-dun-suspect">2.8 L'IDENTIFICATION D'UN SUSPECT</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li></ul></li><li><a href="#29-la-reconnaissance-faciale">2.9 LA RECONNAISSANCE FACIALE</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li></ul></li><li><a href="#210-les-temoignages-contradictoires">2.10 LES TÉMOIGNAGES CONTRADICTOIRES</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li></ul></li><li><a href="#211-la-confiance-du-temoin">2.11 LA CONFIANCE DU TÉMOIN</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 DÉFINITION</a></li><li><a href="#explication_10">🧠 EXPLICATION</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#212-la-memoire-et-linfluence-sociale">2.12 LA MÉMOIRE ET L'INFLUENCE SOCIALE</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 DÉFINITION</a></li><li><a href="#explication_11">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'La mémoire, la perception et les témoignages',
+        category: 'Psychologie, justice et criminologie',
+        icon: '⚖️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/justice/">⚖️ Psychologie, justice et criminologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>La mémoire, la perception et les témoignages</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-justice)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <blockquote>
+<p>Comprendre le fonctionnement de la mémoire et de la perception dans le contexte judiciaire, ainsi que les différents facteurs pouvant influencer les témoignages et l'identification d'une personne.
+</p>
+</blockquote>
+<hr />
+<h2 id="21-la-perception-dun-evenement" class="entry-title hc-1">2.1 LA PERCEPTION D'UN ÉVÉNEMENT</h2>
+<h3 id="definition">🔎 DÉFINITION</h3>
+<p>La perception désigne le processus par lequel une personne reçoit, sélectionne et interprète les informations provenant de son environnement grâce à ses sens.</p>
+<h3 id="explication">🧠 EXPLICATION</h3>
+<p>Lorsqu'une personne est confrontée à un événement, elle ne l'enregistre pas comme une caméra.</p>
+<p>Le cerveau sélectionne certaines informations, en ignore d'autres et interprète ce qui est perçu en fonction du contexte, de l'attention, des connaissances antérieures et de l'état émotionnel.</p>
+<p>Dans une situation judiciaire, plusieurs personnes peuvent donc observer exactement le même événement et en conserver des perceptions différentes.</p>
+<p>La visibilité, la distance, la durée de l'événement, l'éclairage, le bruit ou encore la présence d'autres personnes peuvent également influencer ce qui est réellement perçu.</p>
+<p>Les émotions peuvent aussi modifier l'attention. Lorsqu'une situation est particulièrement stressante ou menaçante, l'attention peut se concentrer sur certains éléments considérés comme importants au détriment d'autres détails.</p>
+<h3 id="exemple">💬 EXEMPLE</h3>
+<p>Lors d'une altercation dans une rue sombre, un témoin peut parfaitement se souvenir de la présence d'un objet ou d'un mouvement tout en étant incapable de décrire précisément les vêtements ou le visage d'une personne.</p>
+<h3 id="a-retenir">📌 À RETENIR</h3>
+<p><strong>Percevoir un événement ne signifie pas enregistrer chaque détail de manière parfaite.</strong></p>
+<hr />
+<h2 id="22-la-memoire" class="entry-title hc-2">2.2 LA MÉMOIRE</h2>
+<h3 id="definition_1">🔎 DÉFINITION</h3>
+<p>La mémoire est l'ensemble des processus permettant d'encoder, de conserver et de récupérer des informations.</p>
+<h3 id="explication_1">🧠 EXPLICATION</h3>
+<p>La mémoire n'est pas un enregistrement permanent et parfaitement fidèle de la réalité.</p>
+<p>Elle fonctionne à travers plusieurs étapes :</p>
+<p><strong>L'encodage</strong></p>
+<p>Les informations perçues sont traitées et intégrées par le cerveau.</p>
+<p><strong>La consolidation</strong></p>
+<p>Certaines informations sont stabilisées et conservées dans le temps.</p>
+<p><strong>La récupération</strong></p>
+<p>Une information mémorisée est rappelée lorsque la personne tente de se souvenir d'un événement.</p>
+<p>À chacune de ces étapes, différentes influences peuvent intervenir.</p>
+<p>Un souvenir peut notamment être affecté par le temps, les émotions, les informations reçues après l'événement ou les discussions avec d'autres personnes.</p>
+<p>Cela signifie qu'un souvenir peut sembler extrêmement clair et convaincant tout en comportant certaines erreurs.</p>
+<h3 id="exemple_1">💬 EXEMPLE</h3>
+<p>Une personne peut être totalement convaincue de se souvenir d'un détail précis d'un événement alors que ce détail a en réalité été ajouté ou modifié progressivement après plusieurs discussions.</p>
+<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<p><strong>La confiance qu'une personne accorde à son souvenir ne garantit pas nécessairement son exactitude.</strong></p>
+<hr />
+<h2 id="23-la-memoire-des-temoins" class="entry-title hc-3">2.3 LA MÉMOIRE DES TÉMOINS</h2>
+<h3 id="definition_2">🔎 DÉFINITION</h3>
+<p>La mémoire des témoins correspond aux processus de mémorisation et de récupération impliqués lorsqu'une personne observe un événement puis doit en rapporter les détails.</p>
+<h3 id="explication_2">🧠 EXPLICATION</h3>
+<p>Un témoignage repose sur plusieurs étapes psychologiques.</p>
+<p>Une personne doit d'abord percevoir l'événement, puis en encoder certaines informations, les conserver et finalement les récupérer lorsqu'elle est interrogée.</p>
+<p>Une erreur peut donc apparaître à différents moments.</p>
+<p>Un témoin peut avoir mal perçu une information dès le départ.</p>
+<p>Il peut ensuite oublier certains détails.</p>
+<p>Enfin, les questions posées ou les informations reçues après l'événement peuvent influencer la récupération du souvenir.</p>
+<p>La qualité d'un témoignage dépend ainsi de nombreux facteurs.</p>
+<p>Parmi eux :</p>
+<ul>
+<li>les conditions d'observation ;</li>
+<li>la durée de l'événement ;</li>
+<li>la distance ;</li>
+<li>la luminosité ;</li>
+<li>le niveau d'attention ;</li>
+<li>le stress ;</li>
+<li>le temps écoulé ;</li>
+<li>les informations reçues après les faits ;</li>
+<li>la manière dont les questions sont formulées.</li>
+</ul>
+<h3 id="exemple_2">💬 EXEMPLE</h3>
+<p>Deux témoins présents au même endroit peuvent fournir des descriptions différentes sans que l'un d'eux cherche nécessairement à mentir.</p>
+<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<p>Une divergence entre plusieurs témoignages <strong>ne signifie pas automatiquement qu'une personne ment</strong>.</p>
+<hr />
+<h2 id="24-les-faux-souvenirs" class="entry-title hc-4">2.4 LES FAUX SOUVENIRS</h2>
+<h3 id="definition_3">🔎 DÉFINITION</h3>
+<p>Un faux souvenir est un souvenir qui contient des éléments inexacts ou qui correspond à un événement, un détail ou une expérience qui ne s'est pas réellement produit de la manière dont la personne s'en souvient.</p>
+<h3 id="explication_3">🧠 EXPLICATION</h3>
+<p>La mémoire humaine est reconstructive.</p>
+<p>Lorsqu'une personne se souvient d'un événement, elle ne récupère pas nécessairement une copie exacte de celui-ci. Le cerveau reconstruit le souvenir à partir des informations disponibles.</p>
+<p>Des éléments peuvent progressivement être ajoutés, supprimés ou modifiés.</p>
+<p>Les faux souvenirs peuvent apparaître de différentes manières.</p>
+<p>Une personne peut par exemple :</p>
+<ul>
+<li>mélanger deux événements ;</li>
+<li>attribuer une information à la mauvaise personne ;</li>
+<li>modifier un détail avec le temps ;</li>
+<li>intégrer une information entendue après l'événement ;</li>
+<li>être influencée par des questions suggestives.</li>
+</ul>
+<p>Un faux souvenir ne signifie pas nécessairement que la personne ment volontairement.</p>
+<p>Elle peut être sincèrement convaincue que son souvenir est exact.</p>
+<h3 id="exemple_3">💬 EXEMPLE</h3>
+<p>Après avoir entendu plusieurs personnes décrire un événement, un témoin peut finir par intégrer dans son propre souvenir un détail qu'il n'avait pourtant pas observé lui-même.</p>
+<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<p><strong>Un faux souvenir peut être sincèrement vécu comme un souvenir réel.</strong></p>
+<hr />
+<h2 id="25-la-suggestibilite" class="entry-title hc-5">2.5 LA SUGGESTIBILITÉ</h2>
+<h3 id="definition_4">🔎 DÉFINITION</h3>
+<p>La suggestibilité désigne la tendance d'une personne à intégrer certaines informations ou modifications dans ses souvenirs ou ses réponses sous l'influence de suggestions externes.</p>
+<h3 id="explication_4">🧠 EXPLICATION</h3>
+<p>Dans un contexte judiciaire, la manière dont une question est posée peut avoir de l'importance.</p>
+<p>Une question ouverte permet généralement à une personne de rapporter ce dont elle se souvient sans lui proposer directement une réponse.</p>
+<p>À l'inverse, une formulation contenant déjà une information peut influencer la manière dont la personne se rappelle l'événement.</p>
+<p>La suggestibilité peut être influencée par différents facteurs individuels et situationnels.</p>
+<p>Elle ne signifie pas qu'une personne est naïve ou qu'elle ment.</p>
+<p>Une personne peut simplement être particulièrement sensible à certaines formes d'influence dans certaines circonstances.</p>
+<h3 id="exemple_4">💬 EXEMPLE</h3>
+<p>Demander « Qu'as-tu vu ? » laisse davantage de liberté que demander « De quelle couleur était la voiture rouge ? », lorsque rien ne permet d'affirmer qu'elle était rouge.</p>
+<hr />
+<h2 id="26-linfluence-des-questions" class="entry-title hc-1">2.6 L'INFLUENCE DES QUESTIONS</h2>
+<h3 id="definition_5">🔎 DÉFINITION</h3>
+<p>La formulation des questions peut influencer la manière dont une personne récupère et rapporte un souvenir.</p>
+<h3 id="explication_5">🧠 EXPLICATION</h3>
+<p>Les questions ne sont pas toujours neutres.</p>
+<p>Certaines formulations peuvent introduire implicitement une information ou suggérer qu'un élément particulier était présent.</p>
+<p>Une personne peut alors chercher à adapter sa réponse à la question, parfois sans en avoir conscience.</p>
+<p>Dans un contexte judiciaire, cela rend particulièrement importante la manière dont les témoignages sont recueillis.</p>
+<p>Les questions ouvertes permettent généralement de commencer par recueillir le récit libre de la personne avant d'aborder certains détails.</p>
+<h3 id="exemple_5">💬 EXEMPLE</h3>
+<p>Une question comme « Que s'est-il passé ? » permet à la personne de raconter librement les événements.</p>
+<p>Une question comme « L'homme portait-il une veste noire ? » introduit déjà l'idée qu'il portait une veste et peut influencer la réponse.</p>
+<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<p><strong>La manière de poser une question peut influencer la récupération d'un souvenir.</strong></p>
+<hr />
+<h2 id="27-le-stress-et-la-memoire" class="entry-title hc-2">2.7 LE STRESS ET LA MÉMOIRE</h2>
+<h3 id="definition_6">🔎 DÉFINITION</h3>
+<p>Le stress est une réponse psychologique et physiologique à une situation perçue comme exigeante, menaçante ou difficile à gérer.</p>
+<h3 id="explication_6">🧠 EXPLICATION</h3>
+<p>Le stress peut influencer l'attention et la mémoire de différentes manières.</p>
+<p>Lorsqu'une personne est confrontée à une situation particulièrement menaçante, son attention peut se concentrer sur certains éléments jugés importants.</p>
+<p>Cela peut permettre de mémoriser certains aspects particulièrement saillants de la situation tout en rendant certains autres détails moins accessibles.</p>
+<p>Le stress n'entraîne donc pas systématiquement une bonne ou une mauvaise mémoire.</p>
+<p>Son influence dépend notamment de son intensité, du contexte, du moment où il intervient et des caractéristiques de la situation.</p>
+<h3 id="exemple_6">💬 EXEMPLE</h3>
+<p>Lors d'une agression, une victime peut se souvenir très précisément d'un élément menaçant tout en ayant des souvenirs moins précis concernant certains détails secondaires de la scène.</p>
+<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<p><strong>Le stress peut modifier l'attention et la mémoire, mais ses effets ne sont pas identiques dans toutes les situations.</strong></p>
+<hr />
+<h2 id="28-lidentification-dun-suspect" class="entry-title hc-3">2.8 L'IDENTIFICATION D'UN SUSPECT</h2>
+<h3 id="definition_7">🔎 DÉFINITION</h3>
+<p>L'identification d'un suspect correspond au processus par lequel un témoin tente de reconnaître une personne qu'il pense avoir observée lors d'un événement.</p>
+<h3 id="explication_7">🧠 EXPLICATION</h3>
+<p>La reconnaissance d'un visage peut être influencée par de nombreux facteurs.</p>
+<p>Parmi eux :</p>
+<ul>
+<li>la durée d'observation ;</li>
+<li>la distance ;</li>
+<li>la luminosité ;</li>
+<li>l'angle de vision ;</li>
+<li>le stress ;</li>
+<li>le temps écoulé ;</li>
+<li>la familiarité avec le visage ;</li>
+<li>les informations reçues après l'événement ;</li>
+<li>la procédure utilisée pour présenter les personnes à identifier.</li>
+</ul>
+<p>Il existe notamment une différence entre <strong>reconnaître réellement une personne</strong> et <strong>avoir l'impression qu'une personne ressemble à celle observée</strong>.</p>
+<p>La confiance d'un témoin dans son identification ne permet donc pas, à elle seule, de garantir son exactitude.</p>
+<h3 id="exemple_7">💬 EXEMPLE</h3>
+<p>Un témoin ayant aperçu brièvement une personne dans de mauvaises conditions de visibilité peut être convaincu de l'avoir reconnue alors que plusieurs personnes présentent des caractéristiques physiques similaires.</p>
+<hr />
+<h2 id="29-la-reconnaissance-faciale" class="entry-title hc-4">2.9 LA RECONNAISSANCE FACIALE</h2>
+<h3 id="definition_8">🔎 DÉFINITION</h3>
+<p>La reconnaissance faciale est la capacité à identifier ou à reconnaître un visage déjà rencontré.</p>
+<h3 id="explication_8">🧠 EXPLICATION</h3>
+<p>Le cerveau humain possède des mécanismes spécialisés permettant de traiter les informations liées aux visages.</p>
+<p>Cependant, cette capacité possède des limites.</p>
+<p>La reconnaissance peut être plus difficile lorsque :</p>
+<ul>
+<li>le visage est observé brièvement ;</li>
+<li>l'éclairage est mauvais ;</li>
+<li>le visage est partiellement masqué ;</li>
+<li>l'angle de vue est inhabituel ;</li>
+<li>le témoin est fortement stressé ;</li>
+<li>un délai important s'est écoulé.</li>
+</ul>
+<p>La familiarité joue également un rôle important. Il est généralement plus facile de reconnaître une personne régulièrement rencontrée qu'un visage aperçu une seule fois.</p>
+<h3 id="exemple_8">💬 EXEMPLE</h3>
+<p>Reconnaître immédiatement un proche dans une foule est généralement plus facile que reconnaître une personne inconnue aperçue quelques secondes plusieurs jours auparavant.</p>
+<hr />
+<h2 id="210-les-temoignages-contradictoires" class="entry-title hc-5">2.10 LES TÉMOIGNAGES CONTRADICTOIRES</h2>
+<h3 id="definition_9">🔎 DÉFINITION</h3>
+<p>Un témoignage contradictoire est un récit qui présente des différences ou des incohérences par rapport à un autre témoignage ou à une version antérieure des faits.</p>
+<h3 id="explication_9">🧠 EXPLICATION</h3>
+<p>Les contradictions entre témoignages peuvent avoir différentes origines.</p>
+<p>Elles peuvent notamment être liées à :</p>
+<ul>
+<li>des différences de perception ;</li>
+<li>des différences d'attention ;</li>
+<li>des erreurs de mémoire ;</li>
+<li>l'écoulement du temps ;</li>
+<li>la manière dont les questions ont été posées ;</li>
+<li>l'influence d'informations extérieures ;</li>
+<li>des interprétations différentes d'une même situation.</li>
+</ul>
+<p>Une contradiction ne constitue donc pas automatiquement une preuve de mensonge.</p>
+<p>Il faut examiner le contexte dans lequel le témoignage a été recueilli et la nature exacte de la contradiction.</p>
+<p>Certaines divergences peuvent concerner des détails secondaires tandis que d'autres peuvent porter sur des éléments essentiels.</p>
+<hr />
+<h2 id="211-la-confiance-du-temoin" class="entry-title hc-1">2.11 LA CONFIANCE DU TÉMOIN</h2>
+<h3 id="definition_10">🔎 DÉFINITION</h3>
+<p>La confiance du témoin correspond au degré de certitude subjectif avec lequel une personne affirme qu'un souvenir ou une identification est exact.</p>
+<h3 id="explication_10">🧠 EXPLICATION</h3>
+<p>Une personne peut être extrêmement convaincue de l'exactitude d'un souvenir sans que celui-ci soit parfaitement fidèle.</p>
+<p>La confiance et l'exactitude sont deux dimensions différentes.</p>
+<p>La confiance peut notamment être influencée par des facteurs extérieurs, comme les discussions avec d'autres personnes, les informations reçues après l'événement ou la manière dont une identification a été réalisée.</p>
+<p>Cela explique pourquoi une personne peut présenter un souvenir avec beaucoup d'assurance tout en se trompant sur certains éléments.</p>
+<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<p><strong>Être certain de quelque chose ne signifie pas nécessairement avoir raison.</strong></p>
+<hr />
+<h2 id="212-la-memoire-et-linfluence-sociale" class="entry-title hc-2">2.12 LA MÉMOIRE ET L'INFLUENCE SOCIALE</h2>
+<h3 id="definition_11">🔎 DÉFINITION</h3>
+<p>L'influence sociale désigne l'effet que les autres personnes peuvent exercer sur les pensées, les perceptions, les souvenirs ou les comportements d'un individu.</p>
+<h3 id="explication_11">🧠 EXPLICATION</h3>
+<p>Après un événement, les témoins peuvent discuter entre eux.</p>
+<p>Ces conversations peuvent parfois influencer la manière dont chacun se rappelle la situation.</p>
+<p>Une personne peut par exemple entendre un autre témoin mentionner un détail qu'elle n'avait pas remarqué. Ce détail peut ensuite être intégré à son propre souvenir.</p>
+<p>L'influence sociale peut donc participer à la modification progressive des souvenirs.</p>
+<p>Elle ne suppose pas nécessairement une volonté de tromper.</p>
+<h3 id="exemple_9">💬 EXEMPLE</h3>
+<p>Trois témoins discutent après un événement. L'un d'eux affirme avoir vu un individu porter un vêtement particulier. Les autres peuvent progressivement intégrer cette information dans leur propre souvenir, même s'ils ne l'avaient pas réellement observée.</p>
+<hr />
+<h1 id="a-retenir_7">📌 À RETENIR</h1>
+<p>🧠 <strong>La perception n'est pas une reproduction parfaite de la réalité.</strong></p>
+<p>🧩 <strong>La mémoire est un processus reconstructif et peut évoluer avec le temps.</strong></p>
+<p>👁️ <strong>Les conditions d'observation influencent la qualité d'un témoignage.</strong></p>
+<p>💭 <strong>Un faux souvenir peut être vécu comme un souvenir authentique.</strong></p>
+<p>🗣️ <strong>La formulation des questions peut influencer la récupération d'un souvenir.</strong></p>
+<p>😰 <strong>Le stress peut modifier l'attention et certains aspects de la mémoire.</strong></p>
+<p>🔎 <strong>L'identification d'une personne dépend de nombreux facteurs.</strong></p>
+<p>⚖️ <strong>Une contradiction dans un témoignage ne signifie pas automatiquement qu'il y a mensonge.</strong></p>
+<p>💬 <strong>La confiance exprimée par un témoin ne garantit pas l'exactitude de son souvenir.</strong></p>
+<p>👥 <strong>Les autres personnes peuvent influencer la manière dont un événement est mémorisé.</strong></p>
+<blockquote>
+<p>⚠️ Les témoignages humains constituent une source d'information importante, mais ils peuvent être affectés par les limites normales de la perception, de la mémoire et de l'influence sociale. Une erreur de mémoire n'implique pas nécessairement une volonté de tromper.
+</p>
+</blockquote>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Psychologie, justice et criminologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-les-interrogatoires-et-les-faux-aveux/"><span class="similar-icon">⚖️</span>Les interrogatoires et les faux aveux</a><a class="similar-item" href="/chapitre/justice-comprendre-le-comportement-criminel/"><span class="similar-icon">⚖️</span>Comprendre le comportement criminel</a><a class="similar-item" href="/chapitre/justice-personnalite-et-criminalite/"><span class="similar-icon">⚖️</span>Personnalité et criminalité</a></div>
+    </div>
+    <a class="back-link" href="/categorie/justice/">← Retour à « Psychologie, justice et criminologie »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

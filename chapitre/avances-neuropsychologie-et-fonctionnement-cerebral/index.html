@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neuropsychologie et fonctionnement cérébral — Mon Esprit</title>
+<meta name="description" content="Neuropsychologie et fonctionnement cérébral, dans la catégorie Concepts avancés de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#141-quest-ce-que-la-neuropsychologie">🧬 14.1 Qu'est-ce que la neuropsychologie ?</a></li><li><a href="#142-le-cerveau-comme-systeme">🧠 14.2 Le cerveau comme système</a></li><li><a href="#143-les-reseaux-cerebraux">🔗 14.3 Les réseaux cérébraux</a></li><li><a href="#144-la-specialisation-fonctionnelle">🧠 14.4 La spécialisation fonctionnelle</a></li><li><a href="#145-la-communication-entre-les-regions-cerebrales">🔄 14.5 La communication entre les régions cérébrales</a></li><li><a href="#146-les-neurones">⚡ 14.6 Les neurones</a></li><li><a href="#147-les-neurotransmetteurs">🧪 14.7 Les neurotransmetteurs</a></li><li><a href="#148-la-dopamine">🧠 14.8 La dopamine</a></li><li><a href="#149-la-serotonine">❤️ 14.9 La sérotonine</a></li><li><a href="#1410-la-noradrenaline">⚡ 14.10 La noradrénaline</a></li><li><a href="#1411-le-cortex-prefrontal">🧠 14.11 Le cortex préfrontal</a></li><li><a href="#1412-les-fonctions-executives-et-les-reseaux-frontaux">🧩 14.12 Les fonctions exécutives et les réseaux frontaux</a></li><li><a href="#1413-lhippocampe">🧠 14.13 L'hippocampe</a></li><li><a href="#1414-lamygdale">❤️ 14.14 L'amygdale</a></li><li><a href="#1415-le-systeme-limbique">🧠 14.15 Le système limbique</a></li><li><a href="#1416-les-systemes-sensoriels">👁️ 14.16 Les systèmes sensoriels</a></li><li><a href="#1417-la-perception-comme-construction-cerebrale">🧠 14.17 La perception comme construction cérébrale</a></li><li><a href="#1418-lattention">🧠 14.18 L'attention</a></li><li><a href="#1419-la-memoire">🔄 14.19 La mémoire</a></li><li><a href="#1420-le-langage">🗣️ 14.20 Le langage</a></li><li><a href="#1421-les-aphasies">🧠 14.21 Les aphasies</a></li><li><a href="#1422-la-prosopagnosie">👁️ 14.22 La prosopagnosie</a></li><li><a href="#1423-la-negligence-spatiale">🧭 14.23 La négligence spatiale</a></li><li><a href="#1424-le-syndrome-de-la-main-etrangere">✋ 14.24 Le syndrome de la main étrangère</a></li><li><a href="#1425-le-sentiment-dagentivite">🧠 14.25 Le sentiment d'agentivité</a></li><li><a href="#1426-le-sentiment-de-propriete-corporelle">🧍 14.26 Le sentiment de propriété corporelle</a></li><li><a href="#1427-la-conscience">🌌 14.27 La conscience</a></li><li><a href="#1428-le-soi-et-le-cerveau">🪞 14.28 Le soi et le cerveau</a></li><li><a href="#1429-le-cerveau-et-les-emotions">❤️ 14.29 Le cerveau et les émotions</a></li><li><a href="#1430-le-cerveau-et-le-corps">🫀 14.30 Le cerveau et le corps</a></li><li><a href="#1431-linteroception">🧠 14.31 L'interoception</a></li><li><a href="#1432-la-plasticite-cerebrale">🔄 14.32 La plasticité cérébrale</a></li><li><a href="#1433-la-plasticite-et-lapprentissage">🧠 14.33 La plasticité et l'apprentissage</a></li><li><a href="#1434-les-lesions-cerebrales">🩺 14.34 Les lésions cérébrales</a></li><li><a href="#1435-le-syndrome-de-korsakoff">🧠 14.35 Le syndrome de Korsakoff</a></li><li><a href="#1436-la-recuperation-apres-une-lesion">🧩 14.36 La récupération après une lésion</a></li><li><a href="#1437-comment-etudier-le-cerveau">🔬 14.37 Comment étudier le cerveau ?</a></li><li><a href="#1438-pourquoi-une-correlation-cerebrale-ne-prouve-pas-une-cause">🧠 14.38 Pourquoi une corrélation cérébrale ne prouve pas une cause ?</a></li><li><a href="#1439-le-cerveau-la-psychologie-et-lenvironnement">🧬 14.39 Le cerveau, la psychologie et l'environnement</a></li><li><a href="#1440-pourquoi-etudier-la-neuropsychologie-et-le-fonctionnement-cerebral">🌌 14.40 Pourquoi étudier la neuropsychologie et le fonctionnement cérébral ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Neuropsychologie et fonctionnement cérébral',
+        category: 'Concepts avancés',
+        icon: '🔬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/avances/">🔬 Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Neuropsychologie et fonctionnement cérébral</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-avances)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>La neuropsychologie étudie les relations entre le fonctionnement du cerveau et les fonctions psychologiques.</p>
+<p>Elle cherche notamment à comprendre comment les systèmes cérébraux participent à :</p>
+<ul>
+<li>perception</li>
+<li>attention</li>
+<li>mémoire</li>
+<li>langage</li>
+<li>émotions</li>
+<li>fonctions exécutives</li>
+<li>comportement</li>
+<li>cognition sociale</li>
+<li>conscience</li>
+<li>identité</li>
+</ul>
+<p>Elle s'intéresse également à ce qui se produit lorsque certaines fonctions cérébrales sont perturbées.</p>
+<p>Cependant, le cerveau ne fonctionne pas comme une collection de petites zones indépendantes.</p>
+<p>Les fonctions psychologiques reposent généralement sur des <strong>réseaux cérébraux distribués</strong>, qui communiquent entre eux et interagissent avec le corps et l'environnement.</p>
+<hr />
+<h2 id="141-quest-ce-que-la-neuropsychologie" class="entry-title hc-1">🧬 14.1 Qu'est-ce que la neuropsychologie ?</h2>
+<p>La neuropsychologie est une discipline située à l'intersection de la psychologie et des neurosciences.</p>
+<p>Elle étudie notamment les relations entre :</p>
+<p><strong>🧠 cerveau ↔ cognition ↔ émotions ↔ comportement</strong></p>
+<p>Elle peut s'intéresser au fonctionnement cérébral normal mais également aux conséquences psychologiques de lésions ou de maladies neurologiques.</p>
+<hr />
+<h2 id="142-le-cerveau-comme-systeme" class="entry-title hc-2">🧠 14.2 Le cerveau comme système</h2>
+<p>Le cerveau fonctionne comme un système extrêmement complexe.</p>
+<p>Des milliards de neurones communiquent entre eux grâce à des signaux électriques et chimiques.</p>
+<p>Cette organisation permet notamment :</p>
+<ul>
+<li>traitement de l'information</li>
+<li>apprentissage</li>
+<li>mémoire</li>
+<li>perception</li>
+<li>planification</li>
+<li>mouvement</li>
+<li>régulation émotionnelle</li>
+</ul>
+<p>Une fonction psychologique ne correspond généralement pas à un seul neurone ou à une seule région.</p>
+<hr />
+<h2 id="143-les-reseaux-cerebraux" class="entry-title hc-3">🔗 14.3 Les réseaux cérébraux</h2>
+<p>Les régions cérébrales communiquent continuellement.</p>
+<p>Une fonction peut donc dépendre d'un réseau comprenant plusieurs régions.</p>
+<p>Une perturbation d'une région peut modifier le fonctionnement de plusieurs systèmes.</p>
+<p>Cela explique pourquoi une lésion localisée peut parfois provoquer des conséquences qui dépassent largement une seule capacité cognitive.</p>
+<hr />
+<h2 id="144-la-specialisation-fonctionnelle" class="entry-title hc-4">🧠 14.4 La spécialisation fonctionnelle</h2>
+<p>Certaines régions cérébrales possèdent des rôles particulièrement importants dans certaines fonctions.</p>
+<p>Par exemple, certaines régions participent davantage à :</p>
+<ul>
+<li>langage</li>
+<li>vision</li>
+<li>mouvement</li>
+<li>mémoire</li>
+<li>contrôle exécutif</li>
+</ul>
+<p>Cependant, spécialisation ne signifie pas isolement.</p>
+<p>Une même fonction peut mobiliser plusieurs régions.</p>
+<hr />
+<h2 id="145-la-communication-entre-les-regions-cerebrales" class="entry-title hc-5">🔄 14.5 La communication entre les régions cérébrales</h2>
+<p>Le fonctionnement psychologique dépend fortement de la communication entre les différentes structures cérébrales.</p>
+<p>Cette communication permet notamment de combiner :</p>
+<p><strong>information sensorielle + mémoire + émotion + objectif + décision</strong></p>
+<p>Une décision complexe nécessite donc généralement l'interaction de nombreux systèmes.</p>
+<hr />
+<h2 id="146-les-neurones" class="entry-title hc-1">⚡ 14.6 Les neurones</h2>
+<p>Les neurones sont des cellules spécialisées dans la transmission de signaux.</p>
+<p>Ils communiquent notamment grâce à :</p>
+<p><strong>signaux électriques</strong></p>
+<p>et :</p>
+<p><strong>neurotransmission chimique</strong></p>
+<p>Les réseaux neuronaux permettent la transmission et la transformation de l'information.</p>
+<hr />
+<h2 id="147-les-neurotransmetteurs" class="entry-title hc-2">🧪 14.7 Les neurotransmetteurs</h2>
+<p>Les neurotransmetteurs sont des substances chimiques permettant notamment la communication entre neurones.</p>
+<p>Parmi les neurotransmetteurs étudiés en neurosciences figurent :</p>
+<ul>
+<li>dopamine</li>
+<li>sérotonine</li>
+<li>noradrénaline</li>
+<li>glutamate</li>
+<li>GABA</li>
+<li>acétylcholine</li>
+</ul>
+<p>Ils participent à de nombreux processus.</p>
+<p>Cependant, il est incorrect de réduire une fonction psychologique complexe à un seul neurotransmetteur.</p>
+<hr />
+<h2 id="148-la-dopamine" class="entry-title hc-3">🧠 14.8 La dopamine</h2>
+<p>La dopamine participe notamment à plusieurs processus :</p>
+<ul>
+<li>motivation</li>
+<li>apprentissage par renforcement</li>
+<li>mouvement</li>
+<li>anticipation de récompense</li>
+<li>saillance de certaines informations</li>
+</ul>
+<p>Elle n'est donc pas simplement « le neurotransmetteur du plaisir ».</p>
+<p>Son rôle dépend des circuits dans lesquels elle agit et du contexte.</p>
+<hr />
+<h2 id="149-la-serotonine" class="entry-title hc-4">❤️ 14.9 La sérotonine</h2>
+<p>La sérotonine intervient dans différents processus biologiques et psychologiques, notamment :</p>
+<ul>
+<li>régulation de l'humeur</li>
+<li>sommeil</li>
+<li>appétit</li>
+<li>fonctions cognitives</li>
+<li>régulation émotionnelle</li>
+</ul>
+<p>Son fonctionnement est complexe et ne peut pas être résumé à une simple opposition :</p>
+<p><strong>« manque de sérotonine = dépression »</strong></p>
+<p>Les troubles psychologiques sont multifactoriels.</p>
+<hr />
+<h2 id="1410-la-noradrenaline" class="entry-title hc-5">⚡ 14.10 La noradrénaline</h2>
+<p>La noradrénaline intervient notamment dans :</p>
+<ul>
+<li>vigilance</li>
+<li>attention</li>
+<li>activation</li>
+<li>réponse au stress</li>
+<li>traitement de certaines informations</li>
+</ul>
+<p>Elle participe aux mécanismes permettant de rester attentif à des événements importants.</p>
+<hr />
+<h2 id="1411-le-cortex-prefrontal" class="entry-title hc-1">🧠 14.11 Le cortex préfrontal</h2>
+<p>Le cortex préfrontal participe à de nombreuses fonctions dites exécutives.</p>
+<p>Il est notamment impliqué dans :</p>
+<ul>
+<li>planification</li>
+<li>inhibition</li>
+<li>prise de décision</li>
+<li>flexibilité</li>
+<li>mémoire de travail</li>
+<li>contrôle du comportement</li>
+</ul>
+<p>Il ne constitue cependant pas « le centre du cerveau ».</p>
+<p>Son fonctionnement dépend de nombreuses interactions avec d'autres régions.</p>
+<hr />
+<h2 id="1412-les-fonctions-executives-et-les-reseaux-frontaux" class="entry-title hc-2">🧩 14.12 Les fonctions exécutives et les réseaux frontaux</h2>
+<p>Les fonctions exécutives comprennent plusieurs capacités.</p>
+<p>On peut notamment citer :</p>
+<p><strong>inhibition</strong></p>
+<p><strong>mise à jour</strong></p>
+<p><strong>flexibilité</strong></p>
+<p><strong>planification</strong></p>
+<p><strong>surveillance des erreurs</strong></p>
+<p>Ces fonctions dépendent de réseaux comprenant notamment des régions frontales et leurs connexions avec d'autres systèmes cérébraux.</p>
+<hr />
+<h2 id="1413-lhippocampe" class="entry-title hc-3">🧠 14.13 L'hippocampe</h2>
+<p>L'hippocampe joue un rôle important dans plusieurs aspects de la mémoire.</p>
+<p>Il participe notamment à :</p>
+<ul>
+<li>formation de certains souvenirs</li>
+<li>mémoire épisodique</li>
+<li>représentation spatiale</li>
+<li>contextualisation des événements</li>
+</ul>
+<p>Une atteinte hippocampique peut provoquer d'importantes difficultés de mémorisation.</p>
+<hr />
+<h2 id="1414-lamygdale" class="entry-title hc-4">❤️ 14.14 L'amygdale</h2>
+<p>L'amygdale participe notamment au traitement de certaines informations émotionnellement importantes.</p>
+<p>Elle est particulièrement étudiée dans :</p>
+<ul>
+<li>détection de menace</li>
+<li>apprentissage émotionnel</li>
+<li>conditionnement</li>
+<li>mémoire émotionnelle</li>
+</ul>
+<p>Elle ne doit cependant pas être considérée comme le simple « centre de la peur ».</p>
+<p>Son fonctionnement est beaucoup plus complexe.</p>
+<hr />
+<h2 id="1415-le-systeme-limbique" class="entry-title hc-5">🧠 14.15 Le système limbique</h2>
+<p>L'expression « système limbique » est historiquement utilisée pour désigner plusieurs structures cérébrales impliquées dans différents processus.</p>
+<p>Ces structures ont notamment été étudiées en relation avec :</p>
+<ul>
+<li>émotions</li>
+<li>mémoire</li>
+<li>motivation</li>
+</ul>
+<p>Cependant, les modèles modernes soulignent davantage les interactions entre réseaux cérébraux que l'idée d'un système émotionnel complètement isolé.</p>
+<hr />
+<h2 id="1416-les-systemes-sensoriels" class="entry-title hc-1">👁️ 14.16 Les systèmes sensoriels</h2>
+<p>Le cerveau reçoit constamment des informations provenant des systèmes sensoriels :</p>
+<ul>
+<li>vision</li>
+<li>audition</li>
+<li>toucher</li>
+<li>goût</li>
+<li>odorat</li>
+<li>proprioception</li>
+<li>équilibre</li>
+</ul>
+<p>Ces informations sont transformées et intégrées afin de produire une expérience perceptive cohérente.</p>
+<hr />
+<h2 id="1417-la-perception-comme-construction-cerebrale" class="entry-title hc-2">🧠 14.17 La perception comme construction cérébrale</h2>
+<p>Le cerveau ne reçoit pas simplement une copie du monde extérieur.</p>
+<p>Il combine :</p>
+<p><strong>informations sensorielles + contexte + attentes + mémoire</strong></p>
+<p>pour construire une interprétation perceptive.</p>
+<p>C'est pourquoi une même stimulation peut être vécue différemment selon le contexte.</p>
+<hr />
+<h2 id="1418-lattention" class="entry-title hc-3">🧠 14.18 L'attention</h2>
+<p>L'attention permet de sélectionner certaines informations parmi une quantité considérable de stimulations.</p>
+<p>Elle peut être :</p>
+<ul>
+<li>sélective</li>
+<li>soutenue</li>
+<li>divisée</li>
+<li>orientée spatialement</li>
+</ul>
+<p>Le cerveau doit constamment déterminer quelles informations sont suffisamment importantes pour recevoir davantage de ressources.</p>
+<hr />
+<h2 id="1419-la-memoire" class="entry-title hc-4">🔄 14.19 La mémoire</h2>
+<p>La mémoire repose sur plusieurs systèmes.</p>
+<p>On peut notamment distinguer :</p>
+<ul>
+<li>mémoire épisodique</li>
+<li>mémoire sémantique</li>
+<li>mémoire procédurale</li>
+<li>mémoire de travail</li>
+<li>mémoire implicite</li>
+</ul>
+<p>Il n'existe donc pas une seule « zone de la mémoire ».</p>
+<p>Différents réseaux cérébraux participent à différents aspects de la mémorisation.</p>
+<hr />
+<h2 id="1420-le-langage" class="entry-title hc-5">🗣️ 14.20 Le langage</h2>
+<p>Le langage implique plusieurs fonctions :</p>
+<ul>
+<li>compréhension</li>
+<li>production</li>
+<li>accès lexical</li>
+<li>syntaxe</li>
+<li>répétition</li>
+<li>compréhension du contexte</li>
+</ul>
+<p>Certaines régions cérébrales sont particulièrement importantes dans le langage, notamment dans l'hémisphère dominant.</p>
+<p>Cependant, le langage repose sur un réseau distribué.</p>
+<hr />
+<h2 id="1421-les-aphasies" class="entry-title hc-1">🧠 14.21 Les aphasies</h2>
+<p>Une aphasie correspond à un trouble acquis du langage lié à une atteinte cérébrale.</p>
+<p>Elle peut affecter :</p>
+<ul>
+<li>expression</li>
+<li>compréhension</li>
+<li>dénomination</li>
+<li>répétition</li>
+<li>lecture</li>
+<li>écriture</li>
+</ul>
+<p>Il existe différents profils d'aphasie.</p>
+<p>Une difficulté à parler ne signifie donc pas nécessairement une perte générale de l'intelligence.</p>
+<hr />
+<h2 id="1422-la-prosopagnosie" class="entry-title hc-2">👁️ 14.22 La prosopagnosie</h2>
+<p>La prosopagnosie correspond à une difficulté importante à reconnaître les visages malgré une vision relativement préservée.</p>
+<p>La personne peut parfois reconnaître quelqu'un grâce à :</p>
+<ul>
+<li>voix</li>
+<li>démarche</li>
+<li>vêtements</li>
+<li>contexte</li>
+</ul>
+<p>Cela montre que reconnaître un visage constitue une fonction cognitive spécifique et complexe.</p>
+<hr />
+<h2 id="1423-la-negligence-spatiale" class="entry-title hc-3">🧭 14.23 La négligence spatiale</h2>
+<p>La négligence spatiale correspond à une difficulté à prendre en compte certaines informations provenant d'une partie de l'espace.</p>
+<p>Elle est souvent observée après certaines lésions cérébrales.</p>
+<p>Il ne s'agit pas simplement d'un problème de vision.</p>
+<p>Le problème concerne notamment l'orientation et l'allocation de l'attention spatiale.</p>
+<hr />
+<h2 id="1424-le-syndrome-de-la-main-etrangere" class="entry-title hc-4">✋ 14.24 Le syndrome de la main étrangère</h2>
+<p>Le syndrome de la main étrangère correspond à une perturbation rare dans laquelle une main peut produire des mouvements qui semblent échapper au contrôle volontaire habituel.</p>
+<p>La personne peut avoir l'impression :</p>
+<p><strong>« ce mouvement vient de ma main, mais je n'ai pas décidé de le faire »</strong></p>
+<p>Ce phénomène permet d'étudier le sentiment d'agentivité et les systèmes de contrôle moteur.</p>
+<hr />
+<h2 id="1425-le-sentiment-dagentivite" class="entry-title hc-5">🧠 14.25 Le sentiment d'agentivité</h2>
+<p>L'agentivité correspond au sentiment d'être l'auteur d'une action.</p>
+<p>Le cerveau compare notamment :</p>
+<p><strong>intention → action → résultat attendu</strong></p>
+<p>Lorsque ces éléments correspondent suffisamment, l'individu peut ressentir :</p>
+<p><strong>« c'est moi qui ai fait cela »</strong></p>
+<p>Des perturbations de ce système peuvent modifier l'expérience du contrôle.</p>
+<hr />
+<h2 id="1426-le-sentiment-de-propriete-corporelle" class="entry-title hc-1">🧍 14.26 Le sentiment de propriété corporelle</h2>
+<p>Le sentiment de propriété corporelle correspond à l'expérience subjective selon laquelle un corps ou une partie du corps appartient à soi.</p>
+<p>Les expériences de type <strong>rubber hand illusion</strong> montrent que cette perception peut être influencée par l'intégration multisensorielle.</p>
+<p>Le cerveau combine notamment :</p>
+<ul>
+<li>vision</li>
+<li>toucher</li>
+<li>proprioception</li>
+</ul>
+<p>pour construire une représentation du corps.</p>
+<hr />
+<h2 id="1427-la-conscience" class="entry-title hc-2">🌌 14.27 La conscience</h2>
+<p>La conscience reste l'un des problèmes les plus complexes des neurosciences.</p>
+<p>Elle implique notamment :</p>
+<ul>
+<li>éveil</li>
+<li>expérience subjective</li>
+<li>accès à certaines informations</li>
+<li>conscience de soi</li>
+<li>perception</li>
+</ul>
+<p>Il existe plusieurs théories scientifiques de la conscience, et aucune ne fournit actuellement une explication définitive de tous ses aspects.</p>
+<hr />
+<h2 id="1428-le-soi-et-le-cerveau" class="entry-title hc-3">🪞 14.28 Le soi et le cerveau</h2>
+<p>Le sentiment de soi repose sur l'interaction de nombreux processus :</p>
+<p><strong>mémoire autobiographique</strong></p>
+<p><strong>perception corporelle</strong></p>
+<p><strong>émotions</strong></p>
+<p><strong>attention</strong></p>
+<p><strong>agentivité</strong></p>
+<p><strong>représentations sociales</strong></p>
+<p>Le « soi » ne correspond donc pas à une structure cérébrale unique.</p>
+<p>Il s'agit plutôt d'une construction dynamique issue de plusieurs systèmes.</p>
+<hr />
+<h2 id="1429-le-cerveau-et-les-emotions" class="entry-title hc-4">❤️ 14.29 Le cerveau et les émotions</h2>
+<p>Les émotions reposent sur l'interaction de nombreux systèmes cérébraux.</p>
+<p>Elles impliquent notamment :</p>
+<ul>
+<li>détection de la signification</li>
+<li>mémoire</li>
+<li>attention</li>
+<li>réponses corporelles</li>
+<li>motivation</li>
+<li>préparation comportementale</li>
+</ul>
+<p>Il n'existe donc pas une seule « zone des émotions ».</p>
+<hr />
+<h2 id="1430-le-cerveau-et-le-corps" class="entry-title hc-5">🫀 14.30 Le cerveau et le corps</h2>
+<p>Le cerveau fonctionne en interaction permanente avec le corps.</p>
+<p>Les informations provenant du corps peuvent influencer :</p>
+<ul>
+<li>émotions</li>
+<li>perception</li>
+<li>attention</li>
+<li>décision</li>
+<li>sentiment de soi</li>
+</ul>
+<p>Cette communication est notamment étudiée à travers le concept d'<strong>interoception</strong>.</p>
+<hr />
+<h2 id="1431-linteroception" class="entry-title hc-1">🧠 14.31 L'interoception</h2>
+<p>L'interoception correspond à la perception et au traitement des signaux provenant de l'intérieur du corps.</p>
+<p>Cela peut concerner :</p>
+<ul>
+<li>rythme cardiaque</li>
+<li>respiration</li>
+<li>température</li>
+<li>tension musculaire</li>
+<li>sensations viscérales</li>
+</ul>
+<p>Ces informations participent à la construction de l'état corporel subjectif.</p>
+<hr />
+<h2 id="1432-la-plasticite-cerebrale" class="entry-title hc-2">🔄 14.32 La plasticité cérébrale</h2>
+<p>La plasticité cérébrale correspond à la capacité du système nerveux à modifier certaines de ses structures ou connexions en fonction :</p>
+<ul>
+<li>expérience</li>
+<li>apprentissage</li>
+<li>environnement</li>
+<li>développement</li>
+<li>récupération après certaines lésions</li>
+</ul>
+<p>Le cerveau n'est donc pas totalement figé.</p>
+<hr />
+<h2 id="1433-la-plasticite-et-lapprentissage" class="entry-title hc-3">🧠 14.33 La plasticité et l'apprentissage</h2>
+<p>Lorsqu'une compétence est répétée, certains réseaux neuronaux peuvent être modifiés.</p>
+<p>L'apprentissage repose notamment sur des changements dans :</p>
+<p><strong>connexions + efficacité synaptique + organisation des réseaux</strong></p>
+<p>La répétition et la pratique peuvent donc modifier le fonctionnement cérébral.</p>
+<hr />
+<h2 id="1434-les-lesions-cerebrales" class="entry-title hc-4">🩺 14.34 Les lésions cérébrales</h2>
+<p>Une lésion cérébrale peut modifier certaines fonctions psychologiques.</p>
+<p>Les conséquences dépendent notamment :</p>
+<ul>
+<li>localisation</li>
+<li>étendue</li>
+<li>nature de la lésion</li>
+<li>âge</li>
+<li>réseaux concernés</li>
+<li>plasticité</li>
+<li>état général</li>
+</ul>
+<p>Deux lésions relativement proches peuvent donc produire des conséquences différentes.</p>
+<hr />
+<h2 id="1435-le-syndrome-de-korsakoff" class="entry-title hc-5">🧠 14.35 Le syndrome de Korsakoff</h2>
+<p>Le syndrome de Korsakoff constitue un exemple important en neuropsychologie.</p>
+<p>Il est notamment associé à une atteinte sévère de la mémoire, généralement dans le contexte d'une carence importante en thiamine.</p>
+<p>Il peut notamment entraîner :</p>
+<ul>
+<li>difficultés de mémorisation</li>
+<li>troubles de l'apprentissage</li>
+<li>désorientation</li>
+<li>confabulations</li>
+</ul>
+<p>Il montre l'importance de certains réseaux cérébraux dans la mémoire.</p>
+<hr />
+<h2 id="1436-la-recuperation-apres-une-lesion" class="entry-title hc-1">🧩 14.36 La récupération après une lésion</h2>
+<p>Une récupération fonctionnelle peut parfois apparaître après une lésion cérébrale.</p>
+<p>Elle peut dépendre de :</p>
+<ul>
+<li>plasticité cérébrale</li>
+<li>rééducation</li>
+<li>stratégies compensatoires</li>
+<li>apprentissage</li>
+<li>réorganisation fonctionnelle</li>
+</ul>
+<p>La récupération n'est cependant pas toujours complète.</p>
+<hr />
+<h2 id="1437-comment-etudier-le-cerveau" class="entry-title hc-2">🔬 14.37 Comment étudier le cerveau ?</h2>
+<p>Les neurosciences utilisent différentes méthodes.</p>
+<p>Parmi elles :</p>
+<p><strong>IRM structurelle</strong></p>
+<p>permettant notamment d'étudier l'anatomie.</p>
+<p><strong>IRM fonctionnelle</strong></p>
+<p>permettant d'observer certaines variations liées à l'activité cérébrale.</p>
+<p><strong>EEG</strong></p>
+<p>permettant d'enregistrer l'activité électrique cérébrale avec une excellente résolution temporelle.</p>
+<p><strong>TEP</strong></p>
+<p>permettant notamment d'étudier certains aspects métaboliques ou moléculaires.</p>
+<p>Chaque méthode possède ses avantages et ses limites.</p>
+<hr />
+<h2 id="1438-pourquoi-une-correlation-cerebrale-ne-prouve-pas-une-cause" class="entry-title hc-3">🧠 14.38 Pourquoi une corrélation cérébrale ne prouve pas une cause ?</h2>
+<p>Lorsqu'une activité cérébrale est associée à un comportement, cela ne signifie pas automatiquement que cette activité est la cause unique du comportement.</p>
+<p>On peut observer :</p>
+<p><strong>activité cérébrale ↔ comportement</strong></p>
+<p>sans pouvoir conclure immédiatement :</p>
+<p><strong>activité cérébrale → comportement</strong></p>
+<p>La causalité nécessite des méthodes adaptées et plusieurs niveaux de preuves.</p>
+<hr />
+<h2 id="1439-le-cerveau-la-psychologie-et-lenvironnement" class="entry-title hc-4">🧬 14.39 Le cerveau, la psychologie et l'environnement</h2>
+<p>Le fonctionnement psychologique résulte de l'interaction entre plusieurs niveaux :</p>
+<p><strong>🧬 biologie</strong></p>
+<p><strong>🧠 cerveau</strong></p>
+<p><strong>🧠 cognition</strong></p>
+<p><strong>❤️ émotions</strong></p>
+<p><strong>🧑‍🤝‍🧑 relations</strong></p>
+<p><strong>🌍 environnement</strong></p>
+<p><strong>📚 expériences</strong></p>
+<p>Aucun de ces niveaux ne suffit généralement à expliquer seul un comportement humain complexe.</p>
+<p>La neuropsychologie permet donc de relier fonctionnement cérébral et fonctionnement psychologique sans réduire toute la psychologie au cerveau.</p>
+<hr />
+<h2 id="1440-pourquoi-etudier-la-neuropsychologie-et-le-fonctionnement-cerebral" class="entry-title hc-5">🌌 14.40 Pourquoi étudier la neuropsychologie et le fonctionnement cérébral ?</h2>
+<p>La neuropsychologie permet de mieux comprendre les relations entre cerveau et fonctionnement psychologique.</p>
+<p>Elle permet notamment d'étudier :</p>
+<p><strong>🧠 cognition</strong></p>
+<p><strong>👁️ perception</strong></p>
+<p><strong>🧠 mémoire</strong></p>
+<p><strong>🗣️ langage</strong></p>
+<p><strong>❤️ émotions</strong></p>
+<p><strong>🎯 fonctions exécutives</strong></p>
+<p><strong>🪞 identité</strong></p>
+<p><strong>🧍 représentation corporelle</strong></p>
+<p><strong>🧑‍🤝‍🧑 cognition sociale</strong></p>
+<p><strong>🌌 conscience</strong></p>
+<p>Elle montre surtout que le cerveau fonctionne comme un <strong>système dynamique de réseaux interconnectés</strong>, constamment influencé par le corps, l'expérience et l'environnement.</p>
+<p>Comprendre le cerveau permet donc d'approfondir la compréhension du fonctionnement psychologique, mais ne signifie pas que chaque phénomène psychologique possède une explication simple située dans une seule région cérébrale.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>La neuropsychologie étudie les relations entre <strong>cerveau, cognition, émotions et comportement</strong>.</p>
+<p>Il faut retenir plusieurs principes essentiels :</p>
+<p>🧠 <strong>Une fonction psychologique n'est généralement pas localisée dans une seule zone.</strong></p>
+<p>Les fonctions complexes reposent sur des réseaux cérébraux qui interagissent.</p>
+<p>🧬 <strong>Les neurotransmetteurs ne correspondent pas à des fonctions psychologiques uniques.</strong></p>
+<p>La dopamine n'est pas simplement « le plaisir » et la sérotonine n'est pas simplement « le bonheur ».</p>
+<p>🔗 <strong>Le cerveau fonctionne en réseau.</strong></p>
+<p>Une région peut participer à plusieurs fonctions et une fonction peut dépendre de plusieurs régions.</p>
+<p>🫀 <strong>Le cerveau fonctionne avec le corps.</strong></p>
+<p>Les signaux corporels participent notamment aux émotions, à la perception et au sentiment de soi.</p>
+<p>🔄 <strong>Le cerveau est plastique.</strong></p>
+<p>L'apprentissage, l'expérience et certaines formes de rééducation peuvent modifier le fonctionnement des réseaux cérébraux.</p>
+<p>🧠 <strong>Une corrélation n'est pas automatiquement une causalité.</strong></p>
+<p>Observer une association entre activité cérébrale et comportement ne permet pas à elle seule de déterminer une relation causale.</p>
+<p>🌍 <strong>Le fonctionnement psychologique est multifactoriel.</strong></p>
+<p><strong>biologie + cerveau + cognition + émotions + expériences + relations + environnement</strong></p>
+<p>La neuropsychologie permet ainsi de faire le lien entre plusieurs niveaux d'analyse sans réduire la complexité du fonctionnement humain à une seule région du cerveau ou à une seule substance chimique.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-psychopharmacologie-et-psychologie/"><span class="similar-icon">🔬</span>Psychopharmacologie et psychologie</a><a class="similar-item" href="/chapitre/avances-evaluation-psychologique-et-clinique/"><span class="similar-icon">🔬</span>Évaluation psychologique et clinique</a><a class="similar-item" href="/chapitre/avances-diagnostic-et-raisonnement-clinique/"><span class="similar-icon">🔬</span>Diagnostic et raisonnement clinique</a></div>
+    </div>
+    <a class="back-link" href="/categorie/avances/">← Retour à « Concepts avancés »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

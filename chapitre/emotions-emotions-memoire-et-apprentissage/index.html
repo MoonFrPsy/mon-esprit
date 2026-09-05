@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Émotions, mémoire et apprentissage — Mon Esprit</title>
+<meta name="description" content="Émotions, mémoire et apprentissage, dans la catégorie Émotions et comportements humains de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#171-quest-ce-que-la-memoire">🧠 17.1 Qu'est-ce que la mémoire ?</a></li><li><a href="#172-la-memoire-emotionnelle">❤️ 17.2 La mémoire émotionnelle</a></li><li><a href="#173-lactivation-emotionnelle-et-la-memoire">⚡ 17.3 L'activation émotionnelle et la mémoire</a></li><li><a href="#174-la-peur-et-la-memoire">😨 17.4 La peur et la mémoire</a></li><li><a href="#175-les-emotions-positives-et-la-memoire">😄 17.5 Les émotions positives et la mémoire</a></li><li><a href="#176-la-tristesse-et-la-memoire">😢 17.6 La tristesse et la mémoire</a></li><li><a href="#177-la-colere-et-la-memoire">😡 17.7 La colère et la mémoire</a></li><li><a href="#178-lencodage-emotionnel">🧠 17.8 L'encodage émotionnel</a></li><li><a href="#179-la-consolidation-de-la-memoire">🔒 17.9 La consolidation de la mémoire</a></li><li><a href="#1710-la-recuperation-emotionnelle-des-souvenirs">🔄 17.10 La récupération émotionnelle des souvenirs</a></li><li><a href="#1711-la-congruence-emotionnelle">🧩 17.11 La congruence émotionnelle</a></li><li><a href="#1712-la-memoire-reconstructive">🧠 17.12 La mémoire reconstructive</a></li><li><a href="#1713-les-faux-souvenirs">⚠️ 17.13 Les faux souvenirs</a></li><li><a href="#1714-la-reconsolidation">🔄 17.14 La reconsolidation</a></li><li><a href="#1715-lapprentissage-emotionnel">🧠 17.15 L'apprentissage émotionnel</a></li><li><a href="#1716-le-conditionnement-classique">🔔 17.16 Le conditionnement classique</a></li><li><a href="#1717-la-generalisation">🔄 17.17 La généralisation</a></li><li><a href="#1718-la-discrimination">🎯 17.18 La discrimination</a></li><li><a href="#1719-lextinction">🧯 17.19 L'extinction</a></li><li><a href="#1720-le-retour-spontane">🔁 17.20 Le retour spontané</a></li><li><a href="#1721-la-memoire-autobiographique">🧠 17.21 La mémoire autobiographique</a></li><li><a href="#1722-les-souvenirs-emotionnels">📖 17.22 Les souvenirs émotionnels</a></li><li><a href="#1723-les-souvenirs-flash">📸 17.23 Les souvenirs flash</a></li><li><a href="#1724-la-memoire-dependante-du-contexte">🧠 17.24 La mémoire dépendante du contexte</a></li><li><a href="#1725-la-memoire-dependante-de-letat">🌡️ 17.25 La mémoire dépendante de l'état</a></li><li><a href="#1726-lattention-pendant-lapprentissage">🧠 17.26 L'attention pendant l'apprentissage</a></li><li><a href="#1727-les-emotions-orientent-lapprentissage">❤️ 17.27 Les émotions orientent l'apprentissage</a></li><li><a href="#1728-la-motivation-et-lapprentissage">🔥 17.28 La motivation et l'apprentissage</a></li><li><a href="#1729-la-recompense-et-lapprentissage">🏆 17.29 La récompense et l'apprentissage</a></li><li><a href="#1730-la-punition-et-lapprentissage">⚠️ 17.30 La punition et l'apprentissage</a></li><li><a href="#1731-lapprentissage-par-erreur">🔄 17.31 L'apprentissage par erreur</a></li><li><a href="#1732-lerreur-de-prediction">🧠 17.32 L'erreur de prédiction</a></li><li><a href="#1733-les-habitudes-et-la-memoire">🧩 17.33 Les habitudes et la mémoire</a></li><li><a href="#1734-la-memoire-procedurale">🛠️ 17.34 La mémoire procédurale</a></li><li><a href="#1735-lapprentissage-implicite">🧠 17.35 L'apprentissage implicite</a></li><li><a href="#1736-lapprentissage-explicite">📚 17.36 L'apprentissage explicite</a></li><li><a href="#1737-les-associations-emotionnelles">🔗 17.37 Les associations émotionnelles</a></li><li><a href="#1738-les-souvenirs-et-les-comportements-futurs">🧠 17.38 Les souvenirs et les comportements futurs</a></li><li><a href="#1739-les-emotions-la-memoire-et-lapprentissage-forment-un-systeme">🔄 17.39 Les émotions, la mémoire et l'apprentissage forment un système</a></li><li><a href="#1740-pourquoi-etudier-les-emotions-la-memoire-et-lapprentissage">🔬 17.40 Pourquoi étudier les émotions, la mémoire et l'apprentissage ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Émotions, mémoire et apprentissage',
+        category: 'Émotions et comportements humains',
+        icon: '❤️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/emotions/">❤️ Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Émotions, mémoire et apprentissage</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-emotions)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Les émotions influencent fortement la manière dont les informations sont mémorisées, apprises et récupérées. Un événement émotionnellement important peut être traité différemment d'un événement neutre.</p>
+<p>La relation fonctionne également dans l'autre sens : les souvenirs et les apprentissages peuvent provoquer des émotions et modifier les réactions face à des situations futures.</p>
+<h2 id="171-quest-ce-que-la-memoire" class="entry-title hc-1">🧠 17.1 Qu'est-ce que la mémoire ?</h2>
+<p>La mémoire correspond à l'ensemble des processus permettant d'encoder, de conserver et de récupérer des informations.</p>
+<p>Elle permet notamment de conserver des connaissances, des expériences et des apprentissages.</p>
+<h2 id="172-la-memoire-emotionnelle" class="entry-title hc-2">❤️ 17.2 La mémoire émotionnelle</h2>
+<p>La mémoire émotionnelle désigne notamment la manière dont les événements associés à des émotions sont mémorisés et récupérés.</p>
+<p>L'importance émotionnelle d'un événement peut influencer son traitement mnésique.</p>
+<h2 id="173-lactivation-emotionnelle-et-la-memoire" class="entry-title hc-3">⚡ 17.3 L'activation émotionnelle et la mémoire</h2>
+<p>Une activation émotionnelle modérée peut favoriser certains aspects de la mémorisation.</p>
+<p>Une activation extrêmement importante peut cependant perturber certains processus cognitifs.</p>
+<h2 id="174-la-peur-et-la-memoire" class="entry-title hc-4">😨 17.4 La peur et la mémoire</h2>
+<p>Les événements associés à une menace peuvent laisser des traces mnésiques particulièrement importantes.</p>
+<p>Ces souvenirs peuvent ensuite influencer les réactions face à des situations similaires.</p>
+<h2 id="175-les-emotions-positives-et-la-memoire" class="entry-title hc-5">😄 17.5 Les émotions positives et la mémoire</h2>
+<p>Les expériences positives peuvent également être mémorisées de manière particulière.</p>
+<p>Le contexte, l'attention et l'importance accordée à l'événement influencent notamment leur mémorisation.</p>
+<h2 id="176-la-tristesse-et-la-memoire" class="entry-title hc-1">😢 17.6 La tristesse et la mémoire</h2>
+<p>L'état émotionnel peut influencer les informations auxquelles l'attention est portée et qui sont ensuite mémorisées.</p>
+<p>Un état triste peut notamment favoriser le traitement d'informations correspondant à cet état dans certaines situations.</p>
+<h2 id="177-la-colere-et-la-memoire" class="entry-title hc-2">😡 17.7 La colère et la mémoire</h2>
+<p>La colère peut modifier l'attention et l'interprétation d'un événement.</p>
+<p>Ces modifications peuvent ensuite influencer la manière dont certains éléments sont mémorisés.</p>
+<h2 id="178-lencodage-emotionnel" class="entry-title hc-3">🧠 17.8 L'encodage émotionnel</h2>
+<p>L'encodage correspond au processus par lequel une information est transformée en représentation pouvant être conservée en mémoire.</p>
+<p>L'état émotionnel au moment de l'encodage peut modifier ce processus.</p>
+<h2 id="179-la-consolidation-de-la-memoire" class="entry-title hc-4">🔒 17.9 La consolidation de la mémoire</h2>
+<p>La consolidation correspond aux processus qui contribuent à stabiliser certaines informations nouvellement apprises.</p>
+<p>Les émotions et les mécanismes physiologiques associés peuvent influencer certains aspects de cette consolidation.</p>
+<h2 id="1710-la-recuperation-emotionnelle-des-souvenirs" class="entry-title hc-5">🔄 17.10 La récupération émotionnelle des souvenirs</h2>
+<p>Un souvenir peut être plus facilement récupéré lorsqu'un état émotionnel similaire à celui présent lors de son encodage est retrouvé.</p>
+<p>Cette relation entre état émotionnel et récupération est parfois appelée mémoire dépendante de l'état.</p>
+<h2 id="1711-la-congruence-emotionnelle" class="entry-title hc-1">🧩 17.11 La congruence émotionnelle</h2>
+<p>La congruence émotionnelle correspond à une tendance à traiter ou récupérer plus facilement certaines informations correspondant à l'état émotionnel actuel.</p>
+<p>Par exemple, un état émotionnel particulier peut rendre certaines informations émotionnellement compatibles plus accessibles.</p>
+<h2 id="1712-la-memoire-reconstructive" class="entry-title hc-2">🧠 17.12 La mémoire reconstructive</h2>
+<p>La mémoire ne fonctionne pas comme un enregistrement parfaitement fidèle.</p>
+<p>Lorsqu'un souvenir est récupéré, il peut être reconstruit à partir de différentes informations disponibles.</p>
+<h2 id="1713-les-faux-souvenirs" class="entry-title hc-3">⚠️ 17.13 Les faux souvenirs</h2>
+<p>Un faux souvenir correspond à une expérience de souvenir qui contient des éléments inexacts ou qui ne correspond pas entièrement à ce qui s'est réellement produit.</p>
+<p>Le sentiment de certitude n'est pas une garantie absolue d'exactitude.</p>
+<h2 id="1714-la-reconsolidation" class="entry-title hc-4">🔄 17.14 La reconsolidation</h2>
+<p>Lorsqu'un souvenir est réactivé, il peut devenir temporairement susceptible d'être modifié avant d'être à nouveau stabilisé.</p>
+<p>Ce phénomène est appelé reconsolidation.</p>
+<h2 id="1715-lapprentissage-emotionnel" class="entry-title hc-5">🧠 17.15 L'apprentissage émotionnel</h2>
+<p>Les émotions peuvent participer à l'apprentissage en signalant qu'un événement est important.</p>
+<p>Les conséquences agréables ou désagréables d'une situation peuvent modifier les comportements futurs.</p>
+<h2 id="1716-le-conditionnement-classique" class="entry-title hc-1">🔔 17.16 Le conditionnement classique</h2>
+<p>Le conditionnement classique correspond à l'apprentissage d'une association entre différents stimuli.</p>
+<p>Une émotion peut apparaître en réponse à un stimulus qui a été associé auparavant à un événement émotionnel.</p>
+<h2 id="1717-la-generalisation" class="entry-title hc-2">🔄 17.17 La généralisation</h2>
+<p>Après un apprentissage émotionnel, une réaction peut parfois apparaître face à des stimuli ressemblant au stimulus initial.</p>
+<p>La généralisation permet de répondre à des situations similaires sans devoir apprendre chaque situation séparément.</p>
+<h2 id="1718-la-discrimination" class="entry-title hc-3">🎯 17.18 La discrimination</h2>
+<p>La discrimination correspond à la capacité à différencier des stimuli qui ne présentent pas les mêmes caractéristiques ou les mêmes conséquences.</p>
+<p>Elle permet notamment d'éviter de généraliser une réaction à toutes les situations similaires.</p>
+<h2 id="1719-lextinction" class="entry-title hc-4">🧯 17.19 L'extinction</h2>
+<p>L'extinction correspond à une diminution d'une réponse apprise lorsque la conséquence attendue ne se produit plus.</p>
+<p>Elle ne signifie pas nécessairement que l'apprentissage initial a complètement disparu.</p>
+<h2 id="1720-le-retour-spontane" class="entry-title hc-5">🔁 17.20 Le retour spontané</h2>
+<p>Une réponse émotionnelle précédemment diminuée peut parfois réapparaître après une période de temps.</p>
+<p>Ce phénomène est appelé retour spontané.</p>
+<h2 id="1721-la-memoire-autobiographique" class="entry-title hc-1">🧠 17.21 La mémoire autobiographique</h2>
+<p>La mémoire autobiographique concerne les souvenirs relatifs à sa propre histoire.</p>
+<p>Les émotions jouent un rôle important dans la manière dont certains événements personnels sont encodés et rappelés.</p>
+<h2 id="1722-les-souvenirs-emotionnels" class="entry-title hc-2">📖 17.22 Les souvenirs émotionnels</h2>
+<p>Certains souvenirs sont associés à une forte charge émotionnelle.</p>
+<p>Ils peuvent donner une impression de vivacité importante, sans pour autant être parfaitement exacts dans tous leurs détails.</p>
+<h2 id="1723-les-souvenirs-flash" class="entry-title hc-3">📸 17.23 Les souvenirs flash</h2>
+<p>Les souvenirs flash sont des souvenirs particulièrement détaillés et vivaces concernant les circonstances dans lesquelles une personne a appris une information émotionnellement importante.</p>
+<p>La confiance ressentie concernant ces souvenirs peut être élevée sans garantir leur exactitude complète.</p>
+<h2 id="1724-la-memoire-dependante-du-contexte" class="entry-title hc-4">🧠 17.24 La mémoire dépendante du contexte</h2>
+<p>Les informations peuvent parfois être mieux récupérées lorsque le contexte de récupération ressemble à celui de l'apprentissage.</p>
+<p>Le contexte peut être physique, mental ou émotionnel.</p>
+<h2 id="1725-la-memoire-dependante-de-letat" class="entry-title hc-5">🌡️ 17.25 La mémoire dépendante de l'état</h2>
+<p>L'état interne peut influencer la récupération de certaines informations.</p>
+<p>Un état émotionnel ou physiologique similaire à celui présent lors de l'apprentissage peut parfois faciliter l'accès à certains souvenirs.</p>
+<h2 id="1726-lattention-pendant-lapprentissage" class="entry-title hc-1">🧠 17.26 L'attention pendant l'apprentissage</h2>
+<p>L'attention joue un rôle essentiel dans l'apprentissage.</p>
+<p>Une information qui reçoit peu d'attention peut être moins efficacement encodée.</p>
+<h2 id="1727-les-emotions-orientent-lapprentissage" class="entry-title hc-2">❤️ 17.27 Les émotions orientent l'apprentissage</h2>
+<p>Les émotions peuvent signaler qu'une information est importante.</p>
+<p>Elles peuvent donc modifier la quantité de ressources attentionnelles consacrées à certains éléments.</p>
+<h2 id="1728-la-motivation-et-lapprentissage" class="entry-title hc-3">🔥 17.28 La motivation et l'apprentissage</h2>
+<p>La motivation influence l'engagement dans une activité d'apprentissage.</p>
+<p>Un objectif considéré comme important peut augmenter l'effort consacré à l'acquisition d'une information.</p>
+<h2 id="1729-la-recompense-et-lapprentissage" class="entry-title hc-4">🏆 17.29 La récompense et l'apprentissage</h2>
+<p>Une récompense peut renforcer certains apprentissages.</p>
+<p>Les conséquences positives d'un comportement peuvent augmenter la probabilité que ce comportement soit reproduit.</p>
+<h2 id="1730-la-punition-et-lapprentissage" class="entry-title hc-5">⚠️ 17.30 La punition et l'apprentissage</h2>
+<p>Une conséquence désagréable peut également modifier les comportements futurs.</p>
+<p>Cependant, les effets de la punition dépendent du contexte, de sa nature et de la manière dont elle est appliquée.</p>
+<h2 id="1731-lapprentissage-par-erreur" class="entry-title hc-1">🔄 17.31 L'apprentissage par erreur</h2>
+<p>Les erreurs fournissent des informations permettant de comparer ce qui était attendu avec ce qui s'est réellement produit.</p>
+<p>Cette différence peut contribuer à modifier les comportements et les connaissances futures.</p>
+<h2 id="1732-lerreur-de-prediction" class="entry-title hc-2">🧠 17.32 L'erreur de prédiction</h2>
+<p>L'erreur de prédiction correspond à l'écart entre une conséquence attendue et la conséquence réellement obtenue.</p>
+<p>Elle constitue un signal important dans certains mécanismes d'apprentissage.</p>
+<h2 id="1733-les-habitudes-et-la-memoire" class="entry-title hc-3">🧩 17.33 Les habitudes et la mémoire</h2>
+<p>Les comportements répétés peuvent progressivement devenir plus automatiques.</p>
+<p>La mémoire procédurale participe notamment à l'apprentissage de certaines compétences et habitudes.</p>
+<h2 id="1734-la-memoire-procedurale" class="entry-title hc-4">🛠️ 17.34 La mémoire procédurale</h2>
+<p>La mémoire procédurale concerne notamment les connaissances permettant de réaliser certaines actions ou compétences.</p>
+<p>Elle fonctionne en partie différemment de la mémoire déclarative.</p>
+<h2 id="1735-lapprentissage-implicite" class="entry-title hc-5">🧠 17.35 L'apprentissage implicite</h2>
+<p>L'apprentissage implicite correspond à l'acquisition de certaines connaissances ou compétences sans intention consciente d'apprendre.</p>
+<p>Une personne peut ainsi apprendre certaines régularités sans pouvoir expliquer précisément comment elle les a acquises.</p>
+<h2 id="1736-lapprentissage-explicite" class="entry-title hc-1">📚 17.36 L'apprentissage explicite</h2>
+<p>L'apprentissage explicite implique généralement une intention consciente d'acquérir une information ou une compétence.</p>
+<p>Il peut notamment concerner l'apprentissage volontaire de connaissances scolaires ou techniques.</p>
+<h2 id="1737-les-associations-emotionnelles" class="entry-title hc-2">🔗 17.37 Les associations émotionnelles</h2>
+<p>Une expérience émotionnelle peut créer des associations entre différents éléments présents au même moment.</p>
+<p>Ces associations peuvent ensuite influencer la perception et les comportements futurs.</p>
+<h2 id="1738-les-souvenirs-et-les-comportements-futurs" class="entry-title hc-3">🧠 17.38 Les souvenirs et les comportements futurs</h2>
+<p>Les souvenirs ne servent pas uniquement à reconstruire le passé.</p>
+<p>Ils permettent également d'anticiper certaines conséquences et d'orienter les comportements futurs.</p>
+<h2 id="1739-les-emotions-la-memoire-et-lapprentissage-forment-un-systeme" class="entry-title hc-4">🔄 17.39 Les émotions, la mémoire et l'apprentissage forment un système</h2>
+<p>Ces processus s'influencent mutuellement :</p>
+<p><strong>❤️ émotion → 👁️ attention → 🧠 mémoire → 📚 apprentissage → 🎯 comportement → ❤️ nouvelle émotion</strong></p>
+<p>Une expérience peut donc modifier les apprentissages futurs, tandis que les apprentissages passés peuvent modifier les réactions émotionnelles face à de nouvelles situations.</p>
+<h2 id="1740-pourquoi-etudier-les-emotions-la-memoire-et-lapprentissage" class="entry-title hc-5">🔬 17.40 Pourquoi étudier les émotions, la mémoire et l'apprentissage ?</h2>
+<p>Comprendre ces interactions permet de mieux comprendre comment les expériences deviennent des connaissances, des souvenirs, des habitudes et parfois des réactions émotionnelles automatiques.</p>
+<p>Les émotions ne sont donc ni simplement un obstacle à l'apprentissage ni une garantie de meilleure mémorisation. Leur influence dépend notamment de <strong>l'intensité émotionnelle, de l'attention, du contexte, de la motivation et de la nature de l'information</strong>.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>Les émotions peuvent influencer :</p>
+<p><strong>❤️ émotion → 👁️ attention → 🧠 encodage → 🔒 consolidation → 🔄 récupération</strong></p>
+<p>L'apprentissage peut ensuite modifier les réactions émotionnelles :</p>
+<p><strong>📚 expérience → 🔗 association → 🧠 apprentissage → ❤️ réaction émotionnelle future</strong></p>
+<p>Un souvenir émotionnellement intense peut être particulièrement vivant sans être parfaitement exact. La mémoire reste un processus <strong>reconstructif et influencé par le contexte</strong>.</p>
+<p>Les émotions, la mémoire et l'apprentissage fonctionnent donc comme un ensemble dynamique dans lequel chaque processus peut modifier les autres.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-emotions-intenses-et-debordement-emotionnel/"><span class="similar-icon">❤️</span>Émotions intenses et débordement émotionnel</a><a class="similar-item" href="/chapitre/emotions-comportements-complexes-lies-aux-emotions/"><span class="similar-icon">❤️</span>Comportements complexes liés aux émotions</a><a class="similar-item" href="/chapitre/emotions-les-interactions-entre-emotions-et-comportements/"><span class="similar-icon">❤️</span>Les interactions entre émotions et comportements</a></div>
+    </div>
+    <a class="back-link" href="/categorie/emotions/">← Retour à « Émotions et comportements humains »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concepts psychologiques très avancés — Mon Esprit</title>
+<meta name="description" content="Concepts psychologiques très avancés, dans la catégorie Concepts avancés de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#201-le-fonctionnement-psychologique-comme-systeme-complexe">🧠 20.1 Le fonctionnement psychologique comme système complexe</a></li><li><a href="#202-la-causalite-circulaire">🔄 20.2 La causalité circulaire</a></li><li><a href="#203-les-boucles-de-retroaction-positives">🔁 20.3 Les boucles de rétroaction positives</a></li><li><a href="#204-les-boucles-de-retroaction-negatives">🧱 20.4 Les boucles de rétroaction négatives</a></li><li><a href="#205-les-etats-attracteurs">🧠 20.5 Les états attracteurs</a></li><li><a href="#206-la-stabilite-dynamique">🔄 20.6 La stabilité dynamique</a></li><li><a href="#207-les-transitions-non-lineaires">🌪️ 20.7 Les transitions non linéaires</a></li><li><a href="#208-lemergence">🧬 20.8 L'émergence</a></li><li><a href="#209-le-reductionnisme">🔬 20.9 Le réductionnisme</a></li><li><a href="#2010-les-niveaux-danalyse">🧩 20.10 Les niveaux d'analyse</a><ul class="sidebar-sublist"><li><a href="#niveau-biologique">Niveau biologique</a></li><li><a href="#niveau-cognitif">Niveau cognitif</a></li><li><a href="#niveau-emotionnel">Niveau émotionnel</a></li><li><a href="#niveau-comportemental">Niveau comportemental</a></li><li><a href="#niveau-social">Niveau social</a></li></ul></li><li><a href="#2011-la-cognition-incarnee">🧠 20.11 La cognition incarnée</a></li><li><a href="#2012-linteroception-avancee">🫀 20.12 L'interoception avancée</a></li><li><a href="#2013-lallostasie">🧠 20.13 L'allostasie</a></li><li><a href="#2014-la-charge-allostatique">⚡ 20.14 La charge allostatique</a></li><li><a href="#2015-le-cerveau-predictif">🔮 20.15 Le cerveau prédictif</a></li><li><a href="#2016-lerreur-de-prediction">⚠️ 20.16 L'erreur de prédiction</a></li><li><a href="#2017-lapprentissage-bayesien">🧠 20.17 L'apprentissage bayésien</a></li><li><a href="#2018-le-traitement-top-down">👁️ 20.18 Le traitement top-down</a></li><li><a href="#2019-le-traitement-bottom-up">👁️ 20.19 Le traitement bottom-up</a></li><li><a href="#2020-linference-perceptive">🧠 20.20 L'inférence perceptive</a></li><li><a href="#2021-la-metacognition">🧩 20.21 La métacognition</a></li><li><a href="#2022-le-monitoring-metacognitif">🎯 20.22 Le monitoring métacognitif</a></li><li><a href="#2023-la-calibration-metacognitive">📊 20.23 La calibration métacognitive</a></li><li><a href="#2024-la-conscience-dacces">🧠 20.24 La conscience d'accès</a></li><li><a href="#2025-lexperience-subjective">🌌 20.25 L'expérience subjective</a></li><li><a href="#2026-le-probleme-difficile-de-la-conscience">🧠 20.26 Le problème difficile de la conscience</a></li><li><a href="#2027-le-sentiment-detre-soi">🪞 20.27 Le sentiment d'être soi</a></li><li><a href="#2028-le-sentiment-dagentivite">🧍 20.28 Le sentiment d'agentivité</a></li><li><a href="#2029-le-sentiment-de-propriete-corporelle">🫱 20.29 Le sentiment de propriété corporelle</a></li><li><a href="#2030-lintegration-multisensorielle">🧠 20.30 L'intégration multisensorielle</a></li><li><a href="#2031-la-construction-du-soi">🪞 20.31 La construction du soi</a></li><li><a href="#2032-lidentite-narrative">📖 20.32 L'identité narrative</a></li><li><a href="#2033-le-soi-passe-et-le-soi-futur">⏳ 20.33 Le soi passé et le soi futur</a></li><li><a href="#2034-la-projection-mentale-dans-le-futur">🧠 20.34 La projection mentale dans le futur</a></li><li><a href="#2035-la-simulation-mentale">🔄 20.35 La simulation mentale</a></li><li><a href="#2036-la-pensee-contrefactuelle">🧠 20.36 La pensée contrefactuelle</a></li><li><a href="#2037-lambivalence-psychologique">🔀 20.37 L'ambivalence psychologique</a></li><li><a href="#2038-le-conflit-entre-systemes-motivationnels">⚔️ 20.38 Le conflit entre systèmes motivationnels</a></li><li><a href="#2039-le-controle-cognitif">🧠 20.39 Le contrôle cognitif</a></li><li><a href="#2040-le-compromis-entre-automatisation-et-controle">⚡ 20.40 Le compromis entre automatisation et contrôle</a></li><li><a href="#2041-la-charge-cognitive">🧠 20.41 La charge cognitive</a></li><li><a href="#2042-la-competition-cognitive">🧠 20.42 La compétition cognitive</a></li><li><a href="#2043-la-regulation-emotionnelle-comme-systeme-dynamique">❤️ 20.43 La régulation émotionnelle comme système dynamique</a></li><li><a href="#2044-la-regulation-interpersonnelle">🔄 20.44 La régulation interpersonnelle</a></li><li><a href="#2045-la-theorie-de-lesprit-avancee">🧠 20.45 La théorie de l'esprit avancée</a></li><li><a href="#2046-la-mentalisation">🧩 20.46 La mentalisation</a></li><li><a href="#2047-la-cognition-sociale-recursive">👥 20.47 La cognition sociale récursive</a></li><li><a href="#2048-la-prediction-sociale">🧠 20.48 La prédiction sociale</a></li><li><a href="#2049-les-boucles-interpersonnelles">🔄 20.49 Les boucles interpersonnelles</a></li><li><a href="#2050-les-propheties-autorealisatrices-complexes">🪞 20.50 Les prophéties autoréalisatrices complexes</a></li><li><a href="#2051-les-mecanismes-transdiagnostiques">🧩 20.51 Les mécanismes transdiagnostiques</a></li><li><a href="#2052-lheterogeneite-clinique">🧠 20.52 L'hétérogénéité clinique</a></li><li><a href="#2053-la-multifinalite">🧬 20.53 La multifinalité</a></li><li><a href="#2054-lequifinalite">🔀 20.54 L'équifinalité</a></li><li><a href="#2055-la-plasticite-psychologique">🧠 20.55 La plasticité psychologique</a></li><li><a href="#2056-linteraction-genes-environnement">🧬 20.56 L'interaction gènes environnement</a></li><li><a href="#2057-linteraction-personne-environnement">🧠 20.57 L'interaction personne environnement</a></li><li><a href="#2058-le-contexte-comme-composante-du-fonctionnement-psychologique">🌍 20.58 Le contexte comme composante du fonctionnement psychologique</a></li><li><a href="#2059-le-modele-biopsychosocial-integre">🔬 20.59 Le modèle biopsychosocial intégré</a></li><li><a href="#2060-la-psychologie-comme-science-des-systemes-complexes">🌌 20.60 La psychologie comme science des systèmes complexes</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Concepts psychologiques très avancés',
+        category: 'Concepts avancés',
+        icon: '🔬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/avances/">🔬 Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Concepts psychologiques très avancés</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-avances)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Cette dernière partie constitue l'un des niveaux les plus complexes de cette catégorie.</p>
+<p>Les concepts présentés ici ne correspondent plus simplement à des définitions isolées. Ils cherchent à expliquer <strong>comment plusieurs processus psychologiques peuvent fonctionner ensemble</strong>, comment ils se modifient mutuellement et pourquoi le fonctionnement humain ne peut généralement pas être réduit à une seule cause.</p>
+<p>La psychologie avancée étudie notamment des systèmes dans lesquels :</p>
+<p><strong>🧠 cognition ↔ ❤️ émotion ↔ 🫀 corps ↔ 🧬 cerveau ↔ 🧍 comportement ↔ 👥 relations ↔ 🌍 environnement</strong></p>
+<p>Ces systèmes évoluent dans le temps.</p>
+<p>Une expérience peut modifier une croyance.</p>
+<p>Une croyance peut modifier l'attention.</p>
+<p>L'attention peut modifier la perception.</p>
+<p>La perception peut modifier l'émotion.</p>
+<p>L'émotion peut modifier le comportement.</p>
+<p>Le comportement produit ensuite de nouvelles expériences.</p>
+<p>Ces nouvelles expériences peuvent modifier les croyances initiales.</p>
+<p>On obtient alors des <strong>boucles de rétroaction</strong> plutôt qu'une simple chaîne de causes.</p>
+<p>Cette partie explore donc notamment :</p>
+<ul>
+<li>les systèmes dynamiques</li>
+<li>les processus prédictifs</li>
+<li>l'émergence</li>
+<li>la causalité circulaire</li>
+<li>la cognition incarnée</li>
+<li>la métacognition</li>
+<li>la construction du soi</li>
+<li>la conscience</li>
+<li>les interactions cerveau corps</li>
+<li>les modèles transdiagnostiques</li>
+<li>les interactions sociales complexes</li>
+<li>la plasticité</li>
+<li>les différences individuelles</li>
+<li>les modèles multifactoriels</li>
+</ul>
+<hr />
+<h2 id="201-le-fonctionnement-psychologique-comme-systeme-complexe" class="entry-title hc-1">🧠 20.1 Le fonctionnement psychologique comme système complexe</h2>
+<p>Un système complexe est constitué de plusieurs éléments qui interagissent entre eux.</p>
+<p>En psychologie, ces éléments peuvent être :</p>
+<ul>
+<li>pensées</li>
+<li>émotions</li>
+<li>souvenirs</li>
+<li>sensations corporelles</li>
+<li>comportements</li>
+<li>motivations</li>
+<li>croyances</li>
+<li>relations</li>
+<li>environnement</li>
+</ul>
+<p>Une modification d'un élément peut entraîner des changements dans plusieurs autres.</p>
+<p>Le fonctionnement psychologique peut donc être considéré comme un <strong>système d'interactions</strong> plutôt que comme une succession de mécanismes indépendants.</p>
+<hr />
+<h2 id="202-la-causalite-circulaire" class="entry-title hc-2">🔄 20.2 La causalité circulaire</h2>
+<p>Dans une causalité simple :</p>
+<p><strong>A → B</strong></p>
+<p>Dans une causalité circulaire :</p>
+<p><strong>A → B → C → A</strong></p>
+<p>Un phénomène peut donc devenir à la fois une conséquence et une cause indirecte d'un autre phénomène.</p>
+<p>Par exemple :</p>
+<p><strong>anxiété → évitement → soulagement → renforcement de l'évitement → anxiété future</strong></p>
+<p>Il devient alors difficile de déterminer une cause unique.</p>
+<hr />
+<h2 id="203-les-boucles-de-retroaction-positives" class="entry-title hc-3">🔁 20.3 Les boucles de rétroaction positives</h2>
+<p>Une rétroaction positive augmente ou amplifie un processus.</p>
+<p>Exemple :</p>
+<p><strong>inquiétude → surveillance accrue → détection de signes menaçants → inquiétude supplémentaire</strong></p>
+<p>Le système peut alors s'auto-amplifier.</p>
+<p>Cela ne signifie pas nécessairement que la boucle est « positive » au sens souhaitable.</p>
+<p>Le terme décrit ici simplement l'augmentation du processus initial.</p>
+<hr />
+<h2 id="204-les-boucles-de-retroaction-negatives" class="entry-title hc-4">🧱 20.4 Les boucles de rétroaction négatives</h2>
+<p>Une rétroaction négative réduit ou stabilise un processus.</p>
+<p>Elle peut participer au maintien d'un équilibre.</p>
+<p>Par exemple, certains mécanismes physiologiques permettent de corriger continuellement des variations internes.</p>
+<p>En psychologie, certaines stratégies peuvent également diminuer temporairement une activation émotionnelle.</p>
+<p>Les systèmes psychologiques comportent donc souvent plusieurs boucles simultanées.</p>
+<hr />
+<h2 id="205-les-etats-attracteurs" class="entry-title hc-5">🧠 20.5 Les états attracteurs</h2>
+<p>Dans certains modèles dynamiques, un <strong>état attracteur</strong> correspond à une configuration vers laquelle un système tend à revenir.</p>
+<p>En psychologie, cette notion peut être utilisée pour conceptualiser certaines habitudes ou certains modes de fonctionnement relativement stables.</p>
+<p>Par exemple :</p>
+<p><strong>situation → réaction habituelle → conséquence → retour à la réaction habituelle</strong></p>
+<p>Le système peut alors rester dans une configuration stable même si d'autres possibilités existent.</p>
+<hr />
+<h2 id="206-la-stabilite-dynamique" class="entry-title hc-1">🔄 20.6 La stabilité dynamique</h2>
+<p>La stabilité ne signifie pas nécessairement immobilité.</p>
+<p>Un système psychologique peut changer constamment tout en conservant certaines caractéristiques globales.</p>
+<p>Par exemple, les émotions changent au cours d'une journée, mais certaines tendances générales peuvent rester relativement stables.</p>
+<p>La stabilité psychologique peut donc être une <strong>stabilité dans le changement</strong>.</p>
+<hr />
+<h2 id="207-les-transitions-non-lineaires" class="entry-title hc-2">🌪️ 20.7 Les transitions non linéaires</h2>
+<p>Les changements psychologiques ne sont pas toujours progressifs.</p>
+<p>Une accumulation de petites modifications peut parfois être suivie d'un changement beaucoup plus important.</p>
+<p>On peut conceptualiser cela comme :</p>
+<p><strong>accumulation → seuil → transition</strong></p>
+<p>Cette approche permet notamment d'étudier certains changements rapides dans les comportements, les émotions ou les relations.</p>
+<hr />
+<h2 id="208-lemergence" class="entry-title hc-3">🧬 20.8 L'émergence</h2>
+<p>L'émergence désigne l'apparition de propriétés globales résultant de l'interaction de plusieurs éléments.</p>
+<p>Une propriété complexe peut donc ne pas être directement identifiable dans chacun des éléments qui la composent.</p>
+<p>La personnalité, la cognition ou certains phénomènes sociaux peuvent être étudiés sous cet angle.</p>
+<p>L'ensemble du système peut posséder des propriétés qui résultent de leurs interactions.</p>
+<hr />
+<h2 id="209-le-reductionnisme" class="entry-title hc-4">🔬 20.9 Le réductionnisme</h2>
+<p>Le réductionnisme consiste à expliquer un phénomène complexe principalement à partir d'un niveau plus élémentaire.</p>
+<p>Par exemple :</p>
+<p><strong>expliquer un comportement uniquement par un neurotransmetteur</strong></p>
+<p>peut fournir une information utile.</p>
+<p>Mais cela ne décrit pas nécessairement :</p>
+<ul>
+<li>le contexte</li>
+<li>les croyances</li>
+<li>l'apprentissage</li>
+<li>les émotions</li>
+<li>les relations</li>
+<li>l'histoire individuelle</li>
+</ul>
+<p>Une explication biologique peut donc être pertinente sans être suffisante.</p>
+<hr />
+<h2 id="2010-les-niveaux-danalyse" class="entry-title hc-5">🧩 20.10 Les niveaux d'analyse</h2>
+<p>Un même phénomène peut être étudié à plusieurs niveaux.</p>
+<h3 id="niveau-biologique">Niveau biologique</h3>
+<p>Activité cérébrale, hormones, neurotransmission.</p>
+<h3 id="niveau-cognitif">Niveau cognitif</h3>
+<p>Attention, mémoire, raisonnement, interprétation.</p>
+<h3 id="niveau-emotionnel">Niveau émotionnel</h3>
+<p>Activation, expérience subjective, régulation.</p>
+<h3 id="niveau-comportemental">Niveau comportemental</h3>
+<p>Actions, habitudes, apprentissage.</p>
+<h3 id="niveau-social">Niveau social</h3>
+<p>Relations, normes, groupes, culture.</p>
+<p>Aucun de ces niveaux n'est nécessairement « le seul vrai niveau ».</p>
+<p>Ils peuvent être complémentaires.</p>
+<hr />
+<h2 id="2011-la-cognition-incarnee" class="entry-title hc-1">🧠 20.11 La cognition incarnée</h2>
+<p>La cognition incarnée considère que certains processus cognitifs sont profondément liés au corps et à l'interaction avec l'environnement.</p>
+<p>La cognition n'est donc pas nécessairement étudiée comme un phénomène entièrement indépendant du corps.</p>
+<p>Elle peut être influencée par :</p>
+<ul>
+<li>posture</li>
+<li>mouvement</li>
+<li>sensations corporelles</li>
+<li>environnement</li>
+<li>action</li>
+</ul>
+<p>Cette approche contribue à rapprocher psychologie cognitive, perception, comportement et fonctionnement corporel.</p>
+<hr />
+<h2 id="2012-linteroception-avancee" class="entry-title hc-2">🫀 20.12 L'interoception avancée</h2>
+<p>L'interoception correspond au traitement des informations provenant de l'intérieur du corps.</p>
+<p>Elle peut participer à :</p>
+<ul>
+<li>perception émotionnelle</li>
+<li>régulation physiologique</li>
+<li>sentiment corporel</li>
+<li>prise de décision</li>
+<li>conscience corporelle</li>
+</ul>
+<p>Le cerveau ne traite donc pas uniquement les informations provenant du monde extérieur.</p>
+<p>Il traite également continuellement des informations provenant de l'organisme.</p>
+<hr />
+<h2 id="2013-lallostasie" class="entry-title hc-3">🧠 20.13 L'allostasie</h2>
+<p>L'allostasie désigne les processus permettant à l'organisme d'anticiper et de réguler ses besoins afin de maintenir un fonctionnement adapté.</p>
+<p>Contrairement à une conception strictement statique de l'équilibre interne, l'allostasie insiste sur l'adaptation aux changements.</p>
+<p>Le cerveau et le corps anticipent notamment certaines exigences environnementales.</p>
+<p>Cette notion est particulièrement importante dans l'étude du stress.</p>
+<hr />
+<h2 id="2014-la-charge-allostatique" class="entry-title hc-4">⚡ 20.14 La charge allostatique</h2>
+<p>Lorsque les systèmes d'adaptation sont sollicités de manière répétée ou prolongée, on peut parler de <strong>charge allostatique</strong>.</p>
+<p>Elle représente conceptuellement le coût cumulé de certaines adaptations physiologiques.</p>
+<p>Elle permet d'étudier les interactions entre :</p>
+<p><strong>stress chronique + régulation physiologique + santé</strong></p>
+<p>Elle ne correspond toutefois pas à une mesure psychologique unique.</p>
+<hr />
+<h2 id="2015-le-cerveau-predictif" class="entry-title hc-5">🔮 20.15 Le cerveau prédictif</h2>
+<p>Certains modèles considèrent le cerveau comme un système qui génère continuellement des prédictions.</p>
+<p>Il ne reçoit donc pas simplement les informations.</p>
+<p>Il tente également d'anticiper ce qui va être observé.</p>
+<p>Le processus peut être représenté ainsi :</p>
+<p><strong>prédiction → information sensorielle → comparaison → erreur éventuelle → mise à jour</strong></p>
+<p>Cette approche permet notamment d'étudier la perception et certaines expériences subjectives.</p>
+<hr />
+<h2 id="2016-lerreur-de-prediction" class="entry-title hc-1">⚠️ 20.16 L'erreur de prédiction</h2>
+<p>L'erreur de prédiction correspond à l'écart entre :</p>
+<p><strong>ce qui était attendu</strong></p>
+<p>et :</p>
+<p><strong>ce qui se produit réellement</strong></p>
+<p>Plus l'écart est important, plus l'information peut potentiellement conduire à une mise à jour des représentations.</p>
+<p>L'apprentissage peut donc être considéré comme un processus de modification progressive des prédictions.</p>
+<hr />
+<h2 id="2017-lapprentissage-bayesien" class="entry-title hc-2">🧠 20.17 L'apprentissage bayésien</h2>
+<p>Certains modèles utilisent une logique bayésienne pour conceptualiser la manière dont des croyances peuvent être mises à jour en fonction de nouvelles informations.</p>
+<p>Une représentation simplifiée serait :</p>
+<p><strong>croyance initiale + nouvelle information → croyance révisée</strong></p>
+<p>L'importance accordée à la nouvelle information dépend notamment de la confiance accordée aux connaissances antérieures et aux nouvelles données.</p>
+<p>Cela ne signifie pas que le cerveau effectue nécessairement des calculs mathématiques conscients.</p>
+<p>Il s'agit d'un modèle permettant de représenter certains processus d'inférence.</p>
+<hr />
+<h2 id="2018-le-traitement-top-down" class="entry-title hc-3">👁️ 20.18 Le traitement top-down</h2>
+<p>Le traitement top-down correspond à l'influence de connaissances, attentes ou objectifs sur le traitement des informations.</p>
+<p>Par exemple, savoir ce que l'on cherche peut modifier ce que l'on remarque.</p>
+<p>Les connaissances antérieures peuvent donc influencer la perception et l'interprétation.</p>
+<hr />
+<h2 id="2019-le-traitement-bottom-up" class="entry-title hc-4">👁️ 20.19 Le traitement bottom-up</h2>
+<p>Le traitement bottom-up correspond à un traitement davantage guidé par les informations provenant des données sensorielles.</p>
+<p>Les deux processus ne sont pas nécessairement opposés.</p>
+<p>Dans de nombreuses situations, le cerveau combine :</p>
+<p><strong>informations sensorielles + connaissances antérieures</strong></p>
+<hr />
+<h2 id="2020-linference-perceptive" class="entry-title hc-5">🧠 20.20 L'inférence perceptive</h2>
+<p>L'expérience perceptive peut être considérée comme le résultat d'une interprétation des informations disponibles.</p>
+<p>Le cerveau doit souvent déterminer :</p>
+<p><strong>« Que signifie cette information sensorielle ? »</strong></p>
+<p>Cette interprétation dépend notamment du contexte, des attentes et des informations disponibles.</p>
+<p>La perception devient ainsi un processus actif.</p>
+<hr />
+<h2 id="2021-la-metacognition" class="entry-title hc-1">🧩 20.21 La métacognition</h2>
+<p>La métacognition correspond à la capacité à traiter des informations concernant ses propres processus cognitifs.</p>
+<p>Elle peut concerner :</p>
+<ul>
+<li>compréhension</li>
+<li>mémoire</li>
+<li>raisonnement</li>
+<li>attention</li>
+<li>décision</li>
+</ul>
+<p>Exemple :</p>
+<p><strong>« Je pense avoir compris, mais suis-je réellement certain ? »</strong></p>
+<p>La métacognition permet donc une forme de surveillance du fonctionnement mental.</p>
+<hr />
+<h2 id="2022-le-monitoring-metacognitif" class="entry-title hc-2">🎯 20.22 Le monitoring métacognitif</h2>
+<p>Le monitoring consiste à surveiller son propre fonctionnement.</p>
+<p>Il peut concerner :</p>
+<p><strong>« Est-ce que je connais cette information ? »</strong></p>
+<p><strong>« Est-ce que mon souvenir est fiable ? »</strong></p>
+<p><strong>« Est-ce que je fais une erreur ? »</strong></p>
+<p>Le monitoring peut ensuite conduire à une modification du comportement.</p>
+<hr />
+<h2 id="2023-la-calibration-metacognitive" class="entry-title hc-3">📊 20.23 La calibration métacognitive</h2>
+<p>La calibration correspond à la relation entre :</p>
+<p><strong>niveau de confiance</strong></p>
+<p>et :</p>
+<p><strong>niveau réel de performance</strong></p>
+<p>Une bonne calibration signifie notamment qu'une personne est généralement plus confiante lorsqu'elle est effectivement plus susceptible d'avoir raison.</p>
+<p>Une mauvaise calibration peut produire :</p>
+<p><strong>forte confiance + faible précision</strong></p>
+<p>ou :</p>
+<p><strong>faible confiance + bonne précision</strong></p>
+<hr />
+<h2 id="2024-la-conscience-dacces" class="entry-title hc-4">🧠 20.24 La conscience d'accès</h2>
+<p>Certaines informations peuvent être traitées sans devenir nécessairement accessibles à la conscience.</p>
+<p>La conscience d'accès concerne notamment la disponibilité d'une information pour :</p>
+<ul>
+<li>raisonnement</li>
+<li>rapport verbal</li>
+<li>décision</li>
+<li>contrôle volontaire</li>
+</ul>
+<p>Cela permet de distinguer certains traitements inconscients de ce qui devient consciemment accessible.</p>
+<hr />
+<h2 id="2025-lexperience-subjective" class="entry-title hc-5">🌌 20.25 L'expérience subjective</h2>
+<p>L'expérience subjective correspond à la manière dont un phénomène est vécu de l'intérieur.</p>
+<p>Deux personnes peuvent être exposées à une situation similaire mais vivre des expériences différentes.</p>
+<p>L'expérience subjective constitue donc un objet important de la psychologie.</p>
+<p>Elle est cependant difficile à mesurer directement.</p>
+<hr />
+<h2 id="2026-le-probleme-difficile-de-la-conscience" class="entry-title hc-1">🧠 20.26 Le problème difficile de la conscience</h2>
+<p>La conscience pose une question particulièrement complexe :</p>
+<p><strong>comment des processus physiques et cérébraux peuvent-ils être associés à une expérience subjective ?</strong></p>
+<p>Les neurosciences peuvent identifier des corrélats de certains états conscients.</p>
+<p>Mais identifier une corrélation cérébrale ne constitue pas nécessairement une explication complète de l'expérience subjective.</p>
+<p>La conscience reste donc un sujet majeur de recherche.</p>
+<hr />
+<h2 id="2027-le-sentiment-detre-soi" class="entry-title hc-2">🪞 20.27 Le sentiment d'être soi</h2>
+<p>Le sentiment d'être soi résulte probablement de plusieurs processus combinés.</p>
+<p>Il implique notamment :</p>
+<ul>
+<li>mémoire autobiographique</li>
+<li>représentation corporelle</li>
+<li>continuité temporelle</li>
+<li>agentivité</li>
+<li>perception interne</li>
+<li>relations sociales</li>
+<li>narration personnelle</li>
+</ul>
+<p>Le « soi » peut donc être étudié comme un phénomène multidimensionnel.</p>
+<hr />
+<h2 id="2028-le-sentiment-dagentivite" class="entry-title hc-3">🧍 20.28 Le sentiment d'agentivité</h2>
+<p>L'agentivité correspond au sentiment d'être à l'origine d'une action.</p>
+<p>Par exemple :</p>
+<p><strong>« C'est moi qui ai effectué cette action. »</strong></p>
+<p>Ce sentiment dépend notamment de la correspondance entre :</p>
+<p><strong>intention → action → conséquence</strong></p>
+<p>Lorsque cette correspondance est perturbée, le sentiment d'agentivité peut être modifié.</p>
+<hr />
+<h2 id="2029-le-sentiment-de-propriete-corporelle" class="entry-title hc-4">🫱 20.29 Le sentiment de propriété corporelle</h2>
+<p>Le sentiment de propriété corporelle correspond au sentiment qu'un corps ou une partie du corps appartient à soi.</p>
+<p>Les expériences de type <strong>rubber hand illusion</strong> montrent que ce sentiment peut être influencé par l'intégration multisensorielle.</p>
+<p>Le cerveau combine notamment :</p>
+<ul>
+<li>vision</li>
+<li>toucher</li>
+<li>position du corps</li>
+</ul>
+<p>pour construire une représentation corporelle cohérente.</p>
+<hr />
+<h2 id="2030-lintegration-multisensorielle" class="entry-title hc-5">🧠 20.30 L'intégration multisensorielle</h2>
+<p>Le cerveau combine des informations provenant de plusieurs sens.</p>
+<p>Par exemple :</p>
+<p><strong>vision + audition + toucher</strong></p>
+<p>peuvent être intégrés pour construire une représentation cohérente d'un événement.</p>
+<p>Cette intégration explique notamment pourquoi la perception n'est pas simplement une succession de sens indépendants.</p>
+<hr />
+<h2 id="2031-la-construction-du-soi" class="entry-title hc-1">🪞 20.31 La construction du soi</h2>
+<p>Le soi peut être considéré comme une construction résultant de plusieurs processus.</p>
+<p>Il comprend notamment :</p>
+<p><strong>soi corporel</strong></p>
+<p><strong>soi autobiographique</strong></p>
+<p><strong>soi social</strong></p>
+<p><strong>soi narratif</strong></p>
+<p><strong>soi émotionnel</strong></p>
+<p><strong>soi agentique</strong></p>
+<p>Ces dimensions peuvent être relativement cohérentes tout en étant parfois en tension.</p>
+<hr />
+<h2 id="2032-lidentite-narrative" class="entry-title hc-2">📖 20.32 L'identité narrative</h2>
+<p>L'identité narrative correspond à l'organisation de certaines expériences sous la forme d'une histoire personnelle.</p>
+<p>Elle permet notamment de créer une continuité entre :</p>
+<p><strong>passé → présent → futur</strong></p>
+<p>Cette construction n'est pas nécessairement fixe.</p>
+<p>Le récit personnel peut évoluer lorsque de nouvelles expériences modifient l'interprétation du passé.</p>
+<hr />
+<h2 id="2033-le-soi-passe-et-le-soi-futur" class="entry-title hc-3">⏳ 20.33 Le soi passé et le soi futur</h2>
+<p>La représentation du soi ne concerne pas uniquement le présent.</p>
+<p>Il existe également :</p>
+<ul>
+<li>représentation du soi passé</li>
+<li>représentation du soi actuel</li>
+<li>représentation du soi futur</li>
+<li>soi idéal</li>
+<li>soi redouté</li>
+</ul>
+<p>Ces différentes représentations peuvent influencer les décisions et les comportements.</p>
+<hr />
+<h2 id="2034-la-projection-mentale-dans-le-futur" class="entry-title hc-4">🧠 20.34 La projection mentale dans le futur</h2>
+<p>La capacité à imaginer des situations futures permet notamment :</p>
+<ul>
+<li>anticipation</li>
+<li>planification</li>
+<li>préparation</li>
+<li>prise de décision</li>
+</ul>
+<p>La représentation du futur utilise en partie des connaissances et expériences antérieures.</p>
+<p>Elle n'est donc pas une simple « vision » du futur.</p>
+<p>Elle constitue une construction mentale.</p>
+<hr />
+<h2 id="2035-la-simulation-mentale" class="entry-title hc-5">🔄 20.35 La simulation mentale</h2>
+<p>La simulation mentale consiste à représenter intérieurement une situation qui n'est pas actuellement présente.</p>
+<p>Elle peut concerner :</p>
+<ul>
+<li>événements futurs</li>
+<li>événements passés</li>
+<li>actions</li>
+<li>conversations</li>
+<li>décisions</li>
+</ul>
+<p>Elle participe à la préparation comportementale et à la prise de décision.</p>
+<hr />
+<h2 id="2036-la-pensee-contrefactuelle" class="entry-title hc-1">🧠 20.36 La pensée contrefactuelle</h2>
+<p>La pensée contrefactuelle consiste à imaginer ce qui aurait pu se produire si certaines conditions avaient été différentes.</p>
+<p>Exemple :</p>
+<p><strong>« Si j'avais fait X, alors Y aurait peut-être eu lieu. »</strong></p>
+<p>Elle peut servir à :</p>
+<ul>
+<li>apprendre</li>
+<li>anticiper</li>
+<li>regretter</li>
+<li>planifier</li>
+</ul>
+<p>Elle peut donc être adaptative ou devenir répétitive selon son utilisation.</p>
+<hr />
+<h2 id="2037-lambivalence-psychologique" class="entry-title hc-2">🔀 20.37 L'ambivalence psychologique</h2>
+<p>L'ambivalence correspond à la coexistence de tendances opposées.</p>
+<p>Une personne peut simultanément :</p>
+<p><strong>vouloir quelque chose</strong></p>
+<p>et :</p>
+<p><strong>ne pas vouloir ses conséquences</strong></p>
+<p>L'ambivalence est fréquente dans les décisions complexes.</p>
+<p>Elle n'est donc pas nécessairement pathologique.</p>
+<hr />
+<h2 id="2038-le-conflit-entre-systemes-motivationnels" class="entry-title hc-3">⚔️ 20.38 Le conflit entre systèmes motivationnels</h2>
+<p>Plusieurs systèmes motivationnels peuvent entrer en compétition.</p>
+<p>Par exemple :</p>
+<p><strong>récompense immédiate</strong></p>
+<p>contre :</p>
+<p><strong>objectif à long terme</strong></p>
+<p>ou :</p>
+<p><strong>sécurité</strong></p>
+<p>contre :</p>
+<p><strong>exploration</strong></p>
+<p>Le comportement final peut résulter d'un compromis entre plusieurs forces.</p>
+<hr />
+<h2 id="2039-le-controle-cognitif" class="entry-title hc-4">🧠 20.39 Le contrôle cognitif</h2>
+<p>Le contrôle cognitif correspond aux mécanismes permettant de maintenir un objectif, sélectionner une réponse et modifier son comportement lorsque nécessaire.</p>
+<p>Il implique notamment :</p>
+<ul>
+<li>inhibition</li>
+<li>mise à jour</li>
+<li>flexibilité</li>
+<li>surveillance</li>
+<li>planification</li>
+</ul>
+<p>Le contrôle cognitif est particulièrement sollicité lorsque les automatismes ne suffisent plus.</p>
+<hr />
+<h2 id="2040-le-compromis-entre-automatisation-et-controle" class="entry-title hc-5">⚡ 20.40 Le compromis entre automatisation et contrôle</h2>
+<p>Les comportements automatisés sont rapides et économes en ressources.</p>
+<p>Les comportements contrôlés sont généralement plus flexibles mais plus coûteux cognitivement.</p>
+<p>Le fonctionnement psychologique repose donc en partie sur un compromis :</p>
+<p><strong>efficacité ↔ flexibilité</strong></p>
+<p>Un système entièrement automatisé manquerait d'adaptation.</p>
+<p>Un système entièrement contrôlé serait extrêmement coûteux.</p>
+<hr />
+<h2 id="2041-la-charge-cognitive" class="entry-title hc-1">🧠 20.41 La charge cognitive</h2>
+<p>La charge cognitive correspond aux ressources mentales mobilisées par une tâche.</p>
+<p>Elle peut augmenter lorsque plusieurs informations doivent être traitées simultanément.</p>
+<p>Lorsque les ressources disponibles sont dépassées, certaines performances peuvent diminuer.</p>
+<p>La charge cognitive influence notamment :</p>
+<ul>
+<li>mémoire de travail</li>
+<li>attention</li>
+<li>apprentissage</li>
+<li>prise de décision</li>
+</ul>
+<hr />
+<h2 id="2042-la-competition-cognitive" class="entry-title hc-2">🧠 20.42 La compétition cognitive</h2>
+<p>Plusieurs informations peuvent être en compétition pour accéder aux ressources cognitives.</p>
+<p>Par exemple :</p>
+<p><strong>objectif actuel</strong></p>
+<p>peut entrer en compétition avec :</p>
+<p><strong>distraction</strong></p>
+<p>ou :</p>
+<p><strong>pensée intrusive</strong></p>
+<p>Le contrôle cognitif permet notamment de favoriser certaines informations au détriment d'autres.</p>
+<hr />
+<h2 id="2043-la-regulation-emotionnelle-comme-systeme-dynamique" class="entry-title hc-3">❤️ 20.43 La régulation émotionnelle comme système dynamique</h2>
+<p>La régulation émotionnelle ne correspond pas à une seule stratégie.</p>
+<p>Elle implique potentiellement :</p>
+<ul>
+<li>attention</li>
+<li>interprétation</li>
+<li>mémoire</li>
+<li>comportement</li>
+<li>environnement</li>
+<li>relations sociales</li>
+</ul>
+<p>Une émotion peut donc être régulée avant même son apparition complète, pendant son développement ou après son activation.</p>
+<hr />
+<h2 id="2044-la-regulation-interpersonnelle" class="entry-title hc-4">🔄 20.44 La régulation interpersonnelle</h2>
+<p>Les émotions ne sont pas toujours régulées individuellement.</p>
+<p>Les interactions sociales peuvent modifier :</p>
+<ul>
+<li>niveau d'activation</li>
+<li>perception de sécurité</li>
+<li>interprétation</li>
+<li>motivation</li>
+</ul>
+<p>Une personne peut donc contribuer à la régulation émotionnelle d'une autre.</p>
+<p>C'est notamment le principe général de <strong>co-régulation</strong>.</p>
+<hr />
+<h2 id="2045-la-theorie-de-lesprit-avancee" class="entry-title hc-5">🧠 20.45 La théorie de l'esprit avancée</h2>
+<p>La théorie de l'esprit désigne la capacité à attribuer des états mentaux à soi-même et aux autres.</p>
+<p>À un niveau plus complexe, il devient possible de représenter :</p>
+<p><strong>« Je pense qu'il pense que je pense... »</strong></p>
+<p>Ces niveaux récursifs deviennent rapidement difficiles à maintenir cognitivement.</p>
+<p>Ils sont particulièrement intéressants dans l'étude de la cognition sociale.</p>
+<hr />
+<h2 id="2046-la-mentalisation" class="entry-title hc-1">🧩 20.46 La mentalisation</h2>
+<p>La mentalisation correspond à la capacité à comprendre les comportements à partir d'états mentaux.</p>
+<p>Elle concerne notamment :</p>
+<ul>
+<li>intentions</li>
+<li>croyances</li>
+<li>émotions</li>
+<li>désirs</li>
+<li>motivations</li>
+</ul>
+<p>Elle permet d'interpréter un comportement autrement qu'à partir de sa seule apparence observable.</p>
+<hr />
+<h2 id="2047-la-cognition-sociale-recursive" class="entry-title hc-2">👥 20.47 La cognition sociale récursive</h2>
+<p>Dans certaines interactions, chaque individu anticipe ce que l'autre pense.</p>
+<p>On peut alors avoir :</p>
+<p><strong>A interprète B</strong></p>
+<p>↓</p>
+<p><strong>B interprète A</strong></p>
+<p>↓</p>
+<p><strong>A interprète l'interprétation de B</strong></p>
+<p>Ce fonctionnement peut devenir très complexe.</p>
+<p>Il participe notamment à certaines situations sociales nécessitant beaucoup d'inférences.</p>
+<hr />
+<h2 id="2048-la-prediction-sociale" class="entry-title hc-3">🧠 20.48 La prédiction sociale</h2>
+<p>Le cerveau ne prédit pas uniquement les événements physiques.</p>
+<p>Il tente également d'anticiper les comportements d'autres individus.</p>
+<p>Ces prédictions peuvent concerner :</p>
+<ul>
+<li>intentions</li>
+<li>réactions</li>
+<li>émotions</li>
+<li>décisions</li>
+<li>comportements futurs</li>
+</ul>
+<p>Les interactions sociales deviennent donc en partie des processus de prédiction mutuelle.</p>
+<hr />
+<h2 id="2049-les-boucles-interpersonnelles" class="entry-title hc-4">🔄 20.49 Les boucles interpersonnelles</h2>
+<p>Un comportement peut modifier la réaction d'une autre personne, qui modifie ensuite le comportement initial.</p>
+<p>Exemple :</p>
+<p><strong>méfiance → comportement distant → distance de l'autre → confirmation de la méfiance</strong></p>
+<p>La relation devient alors un système dynamique à deux personnes.</p>
+<p>Le comportement de chacun contribue à produire celui de l'autre.</p>
+<hr />
+<h2 id="2050-les-propheties-autorealisatrices-complexes" class="entry-title hc-5">🪞 20.50 Les prophéties autoréalisatrices complexes</h2>
+<p>Une croyance peut modifier un comportement.</p>
+<p>Ce comportement peut modifier l'environnement social.</p>
+<p>L'environnement social peut ensuite produire une réaction confirmant partiellement la croyance initiale.</p>
+<p>On obtient :</p>
+<p><strong>croyance → comportement → réaction environnementale → confirmation → renforcement de la croyance</strong></p>
+<p>La croyance n'a donc pas nécessairement créé directement la réalité.</p>
+<p>Elle peut avoir contribué à modifier les conditions dans lesquelles la réalité s'est produite.</p>
+<hr />
+<h2 id="2051-les-mecanismes-transdiagnostiques" class="entry-title hc-1">🧩 20.51 Les mécanismes transdiagnostiques</h2>
+<p>Un processus transdiagnostique est un processus pouvant intervenir dans plusieurs troubles psychologiques différents.</p>
+<p>Exemples :</p>
+<ul>
+<li>évitement</li>
+<li>rumination</li>
+<li>dérégulation émotionnelle</li>
+<li>intolérance à l'incertitude</li>
+<li>rigidité cognitive</li>
+<li>comportements de sécurité</li>
+<li>biais attentionnels</li>
+</ul>
+<p>Cette approche cherche à comprendre les mécanismes communs au-delà des catégories diagnostiques.</p>
+<hr />
+<h2 id="2052-lheterogeneite-clinique" class="entry-title hc-2">🧠 20.52 L'hétérogénéité clinique</h2>
+<p>Deux personnes portant le même diagnostic peuvent présenter des fonctionnements très différents.</p>
+<p>Elles peuvent différer par :</p>
+<ul>
+<li>symptômes</li>
+<li>intensité</li>
+<li>histoire</li>
+<li>personnalité</li>
+<li>mécanismes de maintien</li>
+<li>environnement</li>
+<li>stratégies d'adaptation</li>
+</ul>
+<p>Un diagnostic ne décrit donc pas nécessairement l'intégralité du fonctionnement psychologique.</p>
+<hr />
+<h2 id="2053-la-multifinalite" class="entry-title hc-3">🧬 20.53 La multifinalité</h2>
+<p>La multifinalité correspond à l'idée qu'un même facteur initial peut conduire à plusieurs trajectoires différentes.</p>
+<p>Par exemple, une même expérience peut avoir des conséquences différentes selon :</p>
+<ul>
+<li>personnalité</li>
+<li>environnement</li>
+<li>ressources</li>
+<li>âge</li>
+<li>apprentissages</li>
+<li>contexte social</li>
+</ul>
+<p>Un facteur donné ne produit donc pas nécessairement une seule conséquence.</p>
+<hr />
+<h2 id="2054-lequifinalite" class="entry-title hc-4">🔀 20.54 L'équifinalité</h2>
+<p>L'équifinalité correspond à l'idée inverse :</p>
+<p><strong>plusieurs trajectoires différentes peuvent conduire à un résultat similaire.</strong></p>
+<p>Deux personnes peuvent présenter un même comportement pour des raisons complètement différentes.</p>
+<p>Cela montre pourquoi :</p>
+<p><strong>même comportement ≠ même mécanisme</strong></p>
+<hr />
+<h2 id="2055-la-plasticite-psychologique" class="entry-title hc-5">🧠 20.55 La plasticité psychologique</h2>
+<p>Le fonctionnement psychologique peut changer avec l'expérience.</p>
+<p>Les apprentissages peuvent modifier :</p>
+<ul>
+<li>croyances</li>
+<li>habitudes</li>
+<li>stratégies</li>
+<li>associations</li>
+<li>comportements</li>
+</ul>
+<p>Cette plasticité n'est cependant pas illimitée.</p>
+<p>Le changement dépend notamment de l'histoire, de la biologie, de l'environnement et des expériences futures.</p>
+<hr />
+<h2 id="2056-linteraction-genes-environnement" class="entry-title hc-1">🧬 20.56 L'interaction gènes environnement</h2>
+<p>Les caractéristiques biologiques et l'environnement peuvent interagir.</p>
+<p>Il ne s'agit donc pas simplement de demander :</p>
+<p><strong>« Est-ce génétique ou environnemental ? »</strong></p>
+<p>Une question plus pertinente peut être :</p>
+<p><strong>« Comment les facteurs biologiques et environnementaux interagissent-ils ? »</strong></p>
+<p>Certaines caractéristiques peuvent modifier la manière dont un individu répond à son environnement.</p>
+<hr />
+<h2 id="2057-linteraction-personne-environnement" class="entry-title hc-2">🧠 20.57 L'interaction personne environnement</h2>
+<p>L'individu influence son environnement et l'environnement influence l'individu.</p>
+<p>Par exemple :</p>
+<p><strong>personnalité → choix d'environnement</strong></p>
+<p>puis :</p>
+<p><strong>environnement → nouvelles expériences</strong></p>
+<p>puis :</p>
+<p><strong>expériences → modification de certains comportements</strong></p>
+<p>Le développement psychologique peut donc être considéré comme une interaction continue.</p>
+<hr />
+<h2 id="2058-le-contexte-comme-composante-du-fonctionnement-psychologique" class="entry-title hc-3">🌍 20.58 Le contexte comme composante du fonctionnement psychologique</h2>
+<p>Un comportement ne possède pas toujours la même signification selon le contexte.</p>
+<p>Une même réaction peut être :</p>
+<ul>
+<li>adaptée dans une situation</li>
+<li>inutile dans une autre</li>
+<li>protectrice dans un contexte</li>
+<li>problématique dans un autre</li>
+</ul>
+<p>La psychologie avancée doit donc éviter de séparer complètement le comportement de son environnement.</p>
+<hr />
+<h2 id="2059-le-modele-biopsychosocial-integre" class="entry-title hc-4">🔬 20.59 Le modèle biopsychosocial intégré</h2>
+<p>Le modèle biopsychosocial permet d'intégrer :</p>
+<p><strong>🧬 biologique</strong></p>
+<p><strong>🧠 psychologique</strong></p>
+<p><strong>🌍 social</strong></p>
+<p>Une approche avancée ne consiste pas simplement à additionner ces trois catégories.</p>
+<p>Elle cherche à comprendre leurs interactions.</p>
+<p>Par exemple :</p>
+<p><strong>stress social → interprétation cognitive → activation émotionnelle → réponse physiologique → comportement → conséquence sociale</strong></p>
+<p>Les trois niveaux participent alors à un même système.</p>
+<hr />
+<h2 id="2060-la-psychologie-comme-science-des-systemes-complexes" class="entry-title hc-5">🌌 20.60 La psychologie comme science des systèmes complexes</h2>
+<p>À son niveau le plus avancé, la psychologie peut être considérée comme l'étude de systèmes composés de multiples processus en interaction.</p>
+<p>Un phénomène psychologique peut simultanément dépendre de :</p>
+<p><strong>🧬 biologie</strong></p>
+<p><strong>🧠 cognition</strong></p>
+<p><strong>❤️ émotion</strong></p>
+<p><strong>🫀 physiologie</strong></p>
+<p><strong>🧍 comportement</strong></p>
+<p><strong>🪞 identité</strong></p>
+<p><strong>👥 relations</strong></p>
+<p><strong>🌍 environnement</strong></p>
+<p><strong>⏳ temporalité</strong></p>
+<p><strong>📚 histoire individuelle</strong></p>
+<p>Ces dimensions peuvent ensuite former des boucles de rétroaction.</p>
+<p>Par exemple :</p>
+<p><strong>🌍 environnement</strong></p>
+<p>↓</p>
+<p><strong>👁️ perception</strong></p>
+<p>↓</p>
+<p><strong>🧠 interprétation</strong></p>
+<p>↓</p>
+<p><strong>❤️ émotion</strong></p>
+<p>↓</p>
+<p><strong>🫀 état physiologique</strong></p>
+<p>↓</p>
+<p><strong>🧠 modification de l'attention</strong></p>
+<p>↓</p>
+<p><strong>🎯 décision</strong></p>
+<p>↓</p>
+<p><strong>🧍 comportement</strong></p>
+<p>↓</p>
+<p><strong>👥 réaction sociale</strong></p>
+<p>↓</p>
+<p><strong>📚 nouvelle expérience</strong></p>
+<p>↓</p>
+<p><strong>🧠 apprentissage</strong></p>
+<p>↓</p>
+<p><strong>🪞 modification possible des représentations de soi et des autres</strong></p>
+<p>↓</p>
+<p><strong>🌍 nouvel environnement</strong></p>
+<p>Le système recommence alors à évoluer.</p>
+<hr />
+<h1 id="2061-le-principe-de-circularite-psychologique">🧠 20.61 Le principe de circularité psychologique</h1>
+<p>Dans les modèles simples, on recherche souvent :</p>
+<p><strong>« Quelle est la cause ? »</strong></p>
+<p>Dans les systèmes complexes, cette question peut être insuffisante.</p>
+<p>Il faut parfois demander :</p>
+<p><strong>« Quelles sont les interactions qui maintiennent le phénomène ? »</strong></p>
+<p>La distinction est importante.</p>
+<p>Un phénomène peut avoir une origine particulière mais être ensuite maintenu par plusieurs mécanismes différents.</p>
+<hr />
+<h2 id="2062-les-facteurs-de-declenchement-et-les-facteurs-de-maintien" class="entry-title hc-1">🔄 20.62 Les facteurs de déclenchement et les facteurs de maintien</h2>
+<p>Un facteur peut contribuer au début d'un phénomène sans être responsable de son maintien.</p>
+<p>On peut distinguer :</p>
+<p><strong>facteurs prédisposants</strong></p>
+<p><strong>facteurs précipitants</strong></p>
+<p><strong>facteurs de maintien</strong></p>
+<p><strong>facteurs de protection</strong></p>
+<p>Cette distinction est particulièrement importante en psychopathologie.</p>
+<p>Elle permet d'éviter de rechercher une seule cause pour expliquer toute l'évolution d'un phénomène.</p>
+<hr />
+<h2 id="2063-les-interactions-entre-memoire-et-identite" class="entry-title hc-2">🧠 20.63 Les interactions entre mémoire et identité</h2>
+<p>Les souvenirs autobiographiques contribuent à la représentation du soi.</p>
+<p>Mais la représentation du soi influence également les souvenirs auxquels une personne accorde davantage d'importance.</p>
+<p>On obtient :</p>
+<p><strong>identité → sélection/interprétation des souvenirs → représentation du passé → identité</strong></p>
+<p>La mémoire et l'identité peuvent donc se construire mutuellement.</p>
+<hr />
+<h2 id="2064-les-interactions-entre-emotion-et-memoire" class="entry-title hc-3">❤️ 20.64 Les interactions entre émotion et mémoire</h2>
+<p>Les émotions peuvent influencer :</p>
+<ul>
+<li>encodage</li>
+<li>attention</li>
+<li>consolidation</li>
+<li>récupération</li>
+</ul>
+<p>Mais les souvenirs peuvent également déclencher des émotions.</p>
+<p>On obtient :</p>
+<p><strong>émotion → mémoire</strong></p>
+<p>et :</p>
+<p><strong>mémoire → émotion</strong></p>
+<p>Cette relation réciproque explique notamment pourquoi certains souvenirs possèdent une forte charge émotionnelle.</p>
+<hr />
+<h2 id="2065-les-interactions-entre-emotion-et-perception" class="entry-title hc-4">👁️ 20.65 Les interactions entre émotion et perception</h2>
+<p>L'état émotionnel peut influencer l'attention portée à certaines informations.</p>
+<p>Une personne très préoccupée par une menace peut être davantage attentive aux indices associés à cette menace.</p>
+<p>La perception n'est donc pas complètement indépendante de l'état psychologique.</p>
+<hr />
+<h2 id="2066-les-interactions-entre-attention-et-memoire" class="entry-title hc-5">🧠 20.66 Les interactions entre attention et mémoire</h2>
+<p>Ce qui reçoit davantage d'attention possède généralement davantage de chances d'être encodé efficacement.</p>
+<p>Mais les souvenirs peuvent également orienter l'attention.</p>
+<p>On retrouve donc une boucle :</p>
+<p><strong>mémoire → orientation de l'attention → nouvel encodage → mémoire</strong></p>
+<hr />
+<h2 id="2067-les-interactions-entre-motivation-et-cognition" class="entry-title hc-1">🎯 20.67 Les interactions entre motivation et cognition</h2>
+<p>La motivation influence notamment :</p>
+<ul>
+<li>attention</li>
+<li>effort</li>
+<li>persévérance</li>
+<li>décision</li>
+<li>apprentissage</li>
+</ul>
+<p>Mais les capacités cognitives influencent également la manière dont les objectifs sont poursuivis.</p>
+<p>La motivation n'est donc pas complètement indépendante de la cognition.</p>
+<hr />
+<h2 id="2068-les-interactions-entre-emotion-et-decision" class="entry-title hc-2">🧩 20.68 Les interactions entre émotion et décision</h2>
+<p>Les décisions ne sont pas uniquement basées sur des calculs rationnels.</p>
+<p>Les émotions peuvent modifier :</p>
+<ul>
+<li>perception du risque</li>
+<li>valeur subjective</li>
+<li>anticipation</li>
+<li>impulsivité</li>
+<li>préférence pour une récompense immédiate</li>
+</ul>
+<p>Mais les processus cognitifs peuvent également modifier l'expérience émotionnelle.</p>
+<hr />
+<h2 id="2069-les-interactions-entre-langage-et-pensee" class="entry-title hc-3">🧠 20.69 Les interactions entre langage et pensée</h2>
+<p>Le langage permet de représenter et communiquer des concepts.</p>
+<p>Il peut également influencer certains processus cognitifs en fournissant des catégories et des structures symboliques.</p>
+<p>Cependant, pensée et langage ne sont pas nécessairement identiques.</p>
+<p>Une grande partie de la cognition peut également fonctionner sans formulation verbale explicite.</p>
+<hr />
+<h2 id="2070-pourquoi-les-concepts-psychologiques-tres-avances-sont-ils-difficiles-a-etudier" class="entry-title hc-4">🌌 20.70 Pourquoi les concepts psychologiques très avancés sont-ils difficiles à étudier ?</h2>
+<p>Parce que l'objet étudié est lui-même extrêmement complexe.</p>
+<p>Le fonctionnement psychologique est :</p>
+<ul>
+<li>dynamique</li>
+<li>individuel</li>
+<li>contextuel</li>
+<li>biologique</li>
+<li>cognitif</li>
+<li>émotionnel</li>
+<li>social</li>
+<li>culturel</li>
+<li>historique</li>
+</ul>
+<p>Il existe également un problème méthodologique majeur :</p>
+<p><strong>les processus psychologiques ne sont pas directement observables dans leur totalité.</strong></p>
+<p>Les chercheurs doivent donc utiliser des indicateurs :</p>
+<ul>
+<li>comportementaux</li>
+<li>physiologiques</li>
+<li>cognitifs</li>
+<li>déclaratifs</li>
+<li>neurologiques</li>
+</ul>
+<p>Aucun indicateur ne représente nécessairement l'ensemble du phénomène.</p>
+<hr />
+<h1 id="2071-pourquoi-cette-partie-est-elle-particulierement-importante">🌌 20.71 Pourquoi cette partie est-elle particulièrement importante ?</h1>
+<p>Les concepts très avancés permettent de comprendre une idée fondamentale :</p>
+<p><strong>le fonctionnement psychologique humain ne peut généralement pas être expliqué par une seule variable.</strong></p>
+<p>Une émotion n'est pas uniquement une réaction corporelle.</p>
+<p>Une pensée n'est pas uniquement une activité cérébrale.</p>
+<p>Un comportement n'est pas uniquement une habitude.</p>
+<p>Une relation n'est pas uniquement une interaction entre deux personnes.</p>
+<p>L'identité n'est pas uniquement un souvenir.</p>
+<p>La personnalité n'est pas uniquement une liste de traits.</p>
+<p>La psychopathologie n'est pas uniquement une liste de symptômes.</p>
+<p>Tous ces phénomènes peuvent être compris comme des <strong>systèmes organisés de processus en interaction</strong>.</p>
+<hr />
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>🌌 <strong>Un phénomène psychologique complexe peut dépendre de plusieurs mécanismes simultanément.</strong></p>
+<p>🔄 <strong>Les causalités psychologiques peuvent être circulaires plutôt que strictement linéaires.</strong></p>
+<p>🧠 <strong>Les pensées, émotions, comportements, souvenirs et perceptions peuvent former des boucles de rétroaction.</strong></p>
+<p>🧬 <strong>Le cerveau et le corps fonctionnent en interaction permanente avec l'environnement.</strong></p>
+<p>🔮 <strong>Certains modèles considèrent le cerveau comme un système prédictif qui compare continuellement ses attentes aux informations reçues.</strong></p>
+<p>🧠 <strong>La métacognition permet d'observer et d'évaluer certains processus mentaux.</strong></p>
+<p>🪞 <strong>Le soi est multidimensionnel et implique notamment mémoire, corps, identité, agentivité et relations sociales.</strong></p>
+<p>👥 <strong>Les interactions sociales peuvent elles-mêmes fonctionner comme des systèmes dynamiques.</strong></p>
+<p>🧩 <strong>Un même comportement peut avoir plusieurs mécanismes différents.</strong></p>
+<p>🔀 <strong>Plusieurs trajectoires différentes peuvent également produire un résultat similaire.</strong></p>
+<p>🧠 <strong>Les facteurs biologiques, psychologiques et sociaux ne doivent pas nécessairement être considérés comme des explications concurrentes.</strong></p>
+<p>🌍 <strong>L'individu influence son environnement et son environnement influence l'individu.</strong></p>
+<p>🧬 <strong>La plasticité permet au fonctionnement psychologique de changer avec l'expérience, sans pour autant être illimitée.</strong></p>
+<p>⚠️ <strong>Une corrélation entre deux phénomènes ne suffit pas à démontrer une relation causale.</strong></p>
+<p>📊 <strong>Une mesure psychologique représente toujours une partie du phénomène étudié, pas nécessairement sa totalité.</strong></p>
+<p>🌌 <strong>La complexité psychologique vient en grande partie des interactions entre plusieurs niveaux d'organisation.</strong></p>
+<p>La représentation la plus complète de cette catégorie peut finalement être résumée ainsi :</p>
+<p><strong>🧬 cerveau</strong></p>
+<p>↕</p>
+<p><strong>🫀 corps</strong></p>
+<p>↕</p>
+<p><strong>👁️ perception</strong></p>
+<p>↕</p>
+<p><strong>🧠 cognition</strong></p>
+<p>↕</p>
+<p><strong>❤️ émotions</strong></p>
+<p>↕</p>
+<p><strong>🎯 motivation et décision</strong></p>
+<p>↕</p>
+<p><strong>🧍 comportement</strong></p>
+<p>↕</p>
+<p><strong>👥 relations sociales</strong></p>
+<p>↕</p>
+<p><strong>🌍 environnement</strong></p>
+<p>↕</p>
+<p><strong>📚 apprentissage et mémoire</strong></p>
+<p>↕</p>
+<p><strong>🪞 identité et représentation de soi</strong></p>
+<p>↕</p>
+<p><strong>⏳ évolution dans le temps</strong></p>
+<p>Aucun de ces niveaux ne fonctionne complètement isolément.</p>
+<p>Ils s'influencent, se régulent, se renforcent ou se modifient continuellement.</p>
+<p>C'est précisément cette organisation en systèmes, en boucles et en interactions qui rend l'étude du fonctionnement humain particulièrement complexe.</p>
+<p><strong>Comprendre la psychologie à un niveau très avancé, ce n'est donc plus seulement connaître des concepts. C'est comprendre comment ces concepts s'articulent entre eux.</strong></p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-modeles-et-theories-psychologiques/"><span class="similar-icon">🔬</span>Modèles et théories psychologiques</a><a class="similar-item" href="/chapitre/avances-fonctionnement-psychique/"><span class="similar-icon">🔬</span>Fonctionnement psychique</a><a class="similar-item" href="/chapitre/avances-structure-de-la-personnalite/"><span class="similar-icon">🔬</span>Structure de la personnalité</a></div>
+    </div>
+    <a class="back-link" href="/categorie/avances/">← Retour à « Concepts avancés »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

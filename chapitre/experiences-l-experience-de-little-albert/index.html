@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'expérience de Little Albert — Mon Esprit</title>
+<meta name="description" content="L'expérience de Little Albert, dans la catégorie Expériences célèbres de psychologie de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#41-presentation-de-lexperience">👶 4.1 PRÉSENTATION DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#42-le-rat-blanc">🐀 4.2 LE RAT BLANC</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#43-le-bruit-effrayant">🔊 4.3 LE BRUIT EFFRAYANT</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#44-le-conditionnement-de-la-peur">🧠 4.4 LE CONDITIONNEMENT DE LA PEUR</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#45-la-generalisation-de-la-peur">🧸 4.5 LA GÉNÉRALISATION DE LA PEUR</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#46-la-differenciation-entre-les-stimuli">🔄 4.6 LA DIFFÉRENCIATION ENTRE LES STIMULI</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#47-limportance-pour-la-psychologie">🧠 4.7 L'IMPORTANCE POUR LA PSYCHOLOGIE</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#48-les-questions-ethiques">⚠️ 4.8 LES QUESTIONS ÉTHIQUES</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#49-les-limites-de-lexperience">🔬 4.9 LES LIMITES DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li><li><a href="#a-retenir_8">📌 À RETENIR</a></li></ul></li><li><a href="#410-ce-que-lexperience-permet-reellement-de-conclure">🧩 4.10 CE QUE L'EXPÉRIENCE PERMET RÉELLEMENT DE CONCLURE</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li><li><a href="#a-retenir_9">📌 À RETENIR</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: "L'expérience de Little Albert",
+        category: 'Expériences célèbres de psychologie',
+        icon: '🧪'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/experiences/">🧪 Expériences célèbres de psychologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>L'expérience de Little Albert</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-experiences)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <blockquote>
+<p>Découvrir une expérience historique menée par John B. Watson et Rosalie Rayner en 1920, qui cherchait à étudier la manière dont une réaction émotionnelle pouvait être conditionnée par association avec un stimulus initialement neutre.
+</p>
+</blockquote>
+<hr />
+<h2 id="41-presentation-de-lexperience" class="entry-title hc-1">👶 4.1 PRÉSENTATION DE L'EXPÉRIENCE</h2>
+<h3 id="definition">🔎 DÉFINITION</h3>
+<p>L'expérience de Little Albert est une étude menée en <strong>1920</strong> par le psychologue <strong>John B. Watson</strong> et sa collaboratrice <strong>Rosalie Rayner</strong>.</p>
+<p>Elle avait pour objectif d'étudier la possibilité de <strong>conditionner une réaction émotionnelle de peur</strong> chez un jeune enfant.</p>
+<p>L'enfant participant est devenu célèbre sous le pseudonyme de <strong>« Little Albert »</strong>.</p>
+<h3 id="explication">🧠 EXPLICATION</h3>
+<p>Les chercheurs ont présenté à l'enfant différents objets et animaux afin d'observer ses réactions.</p>
+<p>Au départ, l'enfant ne semblait pas avoir peur d'un petit rat blanc qui lui était présenté.</p>
+<p>Les chercheurs ont ensuite associé la présence du rat à un bruit soudain et désagréable.</p>
+<p>Après plusieurs associations, l'enfant a montré des réactions de détresse lorsqu'il était confronté au rat.</p>
+<p>L'étude a été interprétée comme une démonstration du <strong>conditionnement d'une réaction émotionnelle</strong>.</p>
+<h3 id="exemple">💬 EXEMPLE</h3>
+<p>Un enfant peut initialement toucher ou observer un animal sans manifester de peur particulière. Si cet animal est régulièrement associé à un événement effrayant, l'animal peut ensuite devenir lui-même associé à la peur.</p>
+<h3 id="a-retenir">📌 À RETENIR</h3>
+<p>Little Albert est une expérience historique importante dans l'étude du <strong>conditionnement des réactions émotionnelles</strong>.</p>
+<hr />
+<h2 id="42-le-rat-blanc" class="entry-title hc-2">🐀 4.2 LE RAT BLANC</h2>
+<h3 id="definition_1">🔎 DÉFINITION</h3>
+<p>Le rat blanc était l'un des principaux stimuli utilisés dans l'expérience.</p>
+<h3 id="explication_1">🧠 EXPLICATION</h3>
+<p>Avant le conditionnement, le rat ne provoquait pas une réaction de peur importante chez l'enfant.</p>
+<p>Il constituait donc un stimulus relativement neutre par rapport à la réaction étudiée.</p>
+<p>Les chercheurs ont ensuite associé sa présence à un bruit soudain.</p>
+<p>L'objectif était d'observer si cette association pouvait modifier la réaction de l'enfant envers l'animal.</p>
+<h3 id="exemple_1">💬 EXEMPLE</h3>
+<p>Au début, l'enfant peut observer le rat et chercher à le toucher sans réaction de peur importante.</p>
+<p>Après les associations avec le bruit, la présentation du rat peut provoquer une réaction de retrait ou de détresse.</p>
+<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<p>Le rat représentait le <strong>stimulus initialement neutre</strong> qui allait être associé à un événement provoquant naturellement une réaction de peur.</p>
+<hr />
+<h2 id="43-le-bruit-effrayant" class="entry-title hc-3">🔊 4.3 LE BRUIT EFFRAYANT</h2>
+<h3 id="definition_2">🔎 DÉFINITION</h3>
+<p>Le bruit utilisé dans l'expérience constituait un stimulus capable de provoquer naturellement une réaction de sursaut et de détresse.</p>
+<h3 id="explication_2">🧠 EXPLICATION</h3>
+<p>Les chercheurs produisaient un bruit soudain derrière l'enfant.</p>
+<p>Ce bruit provoquait une réaction émotionnelle négative sans nécessiter d'apprentissage préalable.</p>
+<p>Il servait donc de stimulus permettant d'établir l'association avec le rat.</p>
+<p>Le principe était de présenter le bruit en association avec le stimulus initialement neutre.</p>
+<h3 id="exemple_2">💬 EXEMPLE</h3>
+<p>L'enfant observe le rat. Un bruit soudain est alors produit, provoquant une réaction de peur ou de détresse.</p>
+<p>Après plusieurs associations, la présence du rat peut elle-même devenir associée à cette réaction.</p>
+<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<p>Le bruit servait de <strong>stimulus naturellement aversif</strong> permettant de créer l'association étudiée.</p>
+<hr />
+<h2 id="44-le-conditionnement-de-la-peur" class="entry-title hc-4">🧠 4.4 LE CONDITIONNEMENT DE LA PEUR</h2>
+<h3 id="definition_3">🔎 DÉFINITION</h3>
+<p>Le conditionnement de la peur désigne un apprentissage dans lequel un stimulus initialement neutre devient associé à une réaction de peur après avoir été associé à un événement aversif.</p>
+<h3 id="explication_3">🧠 EXPLICATION</h3>
+<p>Dans l'expérience, le rat était associé à un bruit soudain et désagréable.</p>
+<p>Après plusieurs associations, l'enfant semblait manifester une réaction négative envers le rat même lorsque le bruit n'était plus présenté.</p>
+<p>Les chercheurs ont interprété cette modification comme une forme de conditionnement émotionnel.</p>
+<p>Cette expérience est historiquement importante car elle a contribué aux recherches sur l'apprentissage des réactions émotionnelles.</p>
+<h3 id="exemple_3">💬 EXEMPLE</h3>
+<p>Un stimulus qui ne provoquait pas initialement de peur peut finir par provoquer une réaction de retrait après avoir été régulièrement associé à un événement effrayant.</p>
+<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<p>Une réaction émotionnelle peut, dans certaines conditions, <strong>être influencée par des associations apprises</strong>.</p>
+<hr />
+<h2 id="45-la-generalisation-de-la-peur" class="entry-title hc-5">🧸 4.5 LA GÉNÉRALISATION DE LA PEUR</h2>
+<h3 id="definition_4">🔎 DÉFINITION</h3>
+<p>La généralisation désigne le fait qu'une réaction conditionnée puisse apparaître face à des stimuli ressemblant au stimulus initialement associé à cette réaction.</p>
+<h3 id="explication_4">🧠 EXPLICATION</h3>
+<p>Après le conditionnement, Little Albert aurait également manifesté des réactions négatives face à certains objets ou animaux présentant des caractéristiques similaires au rat.</p>
+<p>Cette observation a été interprétée comme une <strong>généralisation du stimulus</strong>.</p>
+<p>La réaction ne semblait donc pas limitée à l'objet initialement utilisé dans le conditionnement.</p>
+<h3 id="exemple_4">💬 EXEMPLE</h3>
+<p>Si une personne développe une peur après une expérience négative avec un animal particulier, elle peut parfois ressentir une réaction similaire face à des animaux présentant certaines caractéristiques communes.</p>
+<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<p>Une réaction apprise peut parfois <strong>se généraliser à des stimuli similaires</strong>.</p>
+<hr />
+<h2 id="46-la-differenciation-entre-les-stimuli" class="entry-title hc-1">🔄 4.6 LA DIFFÉRENCIATION ENTRE LES STIMULI</h2>
+<h3 id="definition_5">🔎 DÉFINITION</h3>
+<p>La discrimination des stimuli correspond à la capacité à distinguer différents stimuli et à ne pas produire exactement la même réponse envers chacun d'eux.</p>
+<h3 id="explication_5">🧠 EXPLICATION</h3>
+<p>Dans les mécanismes de conditionnement, la généralisation et la discrimination sont complémentaires.</p>
+<p>Un organisme peut apprendre qu'un stimulus particulier est associé à un événement tandis qu'un autre stimulus similaire ne l'est pas.</p>
+<p>Cette capacité permet d'éviter que la réaction apprise soit déclenchée indistinctement par tous les stimuli ressemblants.</p>
+<h3 id="exemple_5">💬 EXEMPLE</h3>
+<p>Une personne peut avoir peur d'un type précis d'animal sans ressentir exactement la même réaction face à tous les autres animaux.</p>
+<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<p>L'apprentissage peut conduire à la fois à une <strong>généralisation</strong> et à une capacité de <strong>discrimination entre différents stimuli</strong>.</p>
+<hr />
+<h2 id="47-limportance-pour-la-psychologie" class="entry-title hc-2">🧠 4.7 L'IMPORTANCE POUR LA PSYCHOLOGIE</h2>
+<h3 id="definition_6">🔎 DÉFINITION</h3>
+<p>L'expérience de Little Albert est devenue une référence historique dans l'étude de l'apprentissage émotionnel.</p>
+<h3 id="explication_6">🧠 EXPLICATION</h3>
+<p>Les travaux de Watson et Rayner ont contribué à populariser l'idée selon laquelle certaines réactions émotionnelles pouvaient être influencées par des mécanismes d'apprentissage.</p>
+<p>Ils s'inscrivaient dans le développement du <strong>béhaviorisme</strong>, courant psychologique qui accordait une importance particulière à l'étude observable des comportements.</p>
+<p>L'étude a également participé aux recherches ultérieures sur les phobies, le conditionnement et les apprentissages émotionnels.</p>
+<h3 id="exemple_6">💬 EXEMPLE</h3>
+<p>Les chercheurs peuvent étudier comment certaines réactions de peur se développent après qu'un événement désagréable a été associé à une situation ou un objet.</p>
+<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<p>Little Albert a contribué à l'histoire des recherches sur <strong>l'apprentissage et les réactions émotionnelles</strong>.</p>
+<hr />
+<h2 id="48-les-questions-ethiques" class="entry-title hc-3">⚠️ 4.8 LES QUESTIONS ÉTHIQUES</h2>
+<h3 id="definition_7">🔎 DÉFINITION</h3>
+<p>Les questions éthiques concernent les problèmes liés à la protection, au consentement et au bien-être des personnes participant à une recherche.</p>
+<h3 id="explication_7">🧠 EXPLICATION</h3>
+<p>L'expérience de Little Albert serait aujourd'hui considérée comme extrêmement problématique sur le plan éthique.</p>
+<p>Le participant était un très jeune enfant et les chercheurs ont volontairement provoqué des réactions de peur et de détresse dans le cadre de l'étude.</p>
+<p>Les normes contemporaines de recherche accordent une importance majeure à la protection des participants, particulièrement lorsqu'il s'agit d'enfants.</p>
+<p>L'expérience est donc également étudiée comme un exemple historique permettant de comprendre l'évolution de l'éthique en psychologie.</p>
+<h3 id="exemple_7">💬 EXEMPLE</h3>
+<p>Une recherche actuelle impliquant un enfant devrait prendre en compte des règles strictes concernant le consentement, la sécurité et la limitation des risques psychologiques.</p>
+<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<p>L'importance historique d'une expérience ne signifie pas que <strong>ses méthodes seraient considérées comme acceptables aujourd'hui</strong>.</p>
+<hr />
+<h2 id="49-les-limites-de-lexperience" class="entry-title hc-4">🔬 4.9 LES LIMITES DE L'EXPÉRIENCE</h2>
+<h3 id="definition_8">🔎 DÉFINITION</h3>
+<p>Une limite expérimentale correspond à un élément qui réduit la portée ou la certitude des conclusions pouvant être tirées d'une étude.</p>
+<h3 id="explication_8">🧠 EXPLICATION</h3>
+<p>L'expérience de Little Albert présente plusieurs limites importantes.</p>
+<p>Le nombre de participants était extrêmement faible et l'étude reposait essentiellement sur l'observation d'un seul enfant.</p>
+<p>Les descriptions historiques de l'expérience ont également fait l'objet de réévaluations et de débats concernant l'identité de Little Albert, les observations réalisées et l'interprétation des réactions de l'enfant.</p>
+<p>Il est donc incorrect de présenter cette étude comme une preuve définitive permettant d'expliquer toutes les peurs humaines.</p>
+<h3 id="exemple_8">💬 EXEMPLE</h3>
+<p>Observer une réaction chez un seul enfant ne permet pas automatiquement d'affirmer que tous les enfants développeraient exactement la même réaction dans les mêmes conditions.</p>
+<h3 id="a-retenir_8">📌 À RETENIR</h3>
+<p>Little Albert est une expérience <strong>historiquement importante mais limitée</strong>, qui doit être interprétée avec prudence.</p>
+<hr />
+<h2 id="410-ce-que-lexperience-permet-reellement-de-conclure" class="entry-title hc-5">🧩 4.10 CE QUE L'EXPÉRIENCE PERMET RÉELLEMENT DE CONCLURE</h2>
+<h3 id="definition_9">🔎 DÉFINITION</h3>
+<p>Interpréter correctement une expérience consiste à distinguer ce qui a été observé de ce qui peut réellement être généralisé à partir des résultats.</p>
+<h3 id="explication_9">🧠 EXPLICATION</h3>
+<p>L'expérience de Little Albert apporte un élément historique important en faveur de l'idée que certaines réactions émotionnelles peuvent être influencées par des associations apprises.</p>
+<p>Cependant, elle ne permet pas d'affirmer que toutes les peurs ou toutes les phobies sont simplement créées par conditionnement.</p>
+<p>Les réactions émotionnelles humaines sont beaucoup plus complexes et peuvent dépendre de facteurs biologiques, cognitifs, sociaux, développementaux et environnementaux.</p>
+<p>L'expérience doit également être interprétée en tenant compte de ses importantes limites méthodologiques et éthiques.</p>
+<h3 id="exemple_9">💬 EXEMPLE</h3>
+<p>Une personne peut développer une peur après une expérience négative, mais cela ne signifie pas que toutes les personnes exposées au même événement développeront nécessairement la même peur.</p>
+<h3 id="a-retenir_9">📌 À RETENIR</h3>
+<p>Little Albert montre l'intérêt du <strong>conditionnement émotionnel</strong>, mais ne constitue pas une explication complète de l'origine des peurs humaines.</p>
+<hr />
+<h1 id="en-pratique">🧩 EN PRATIQUE</h1>
+<p>L'expérience de Little Albert permet de comprendre plusieurs notions importantes :</p>
+<ul>
+<li>Une réaction émotionnelle peut être influencée par l'apprentissage.</li>
+<li>Un stimulus initialement neutre peut devenir associé à une émotion.</li>
+<li>Une réaction apprise peut parfois se généraliser à des stimuli similaires.</li>
+<li>Les mécanismes de conditionnement ont joué un rôle important dans l'histoire de la psychologie de l'apprentissage.</li>
+<li>Une expérience menée sur un seul participant ne permet pas de généraliser facilement ses résultats.</li>
+<li>Les méthodes utilisées doivent être replacées dans leur contexte historique.</li>
+<li>Les standards éthiques actuels rendent particulièrement problématiques les méthodes utilisées dans cette étude.</li>
+<li>Les peurs humaines ne peuvent pas être expliquées uniquement par le conditionnement.</li>
+</ul>
+<p>L'expérience de Little Albert reste ainsi une <strong>expérience historique majeure</strong>, mais elle doit être étudiée avec recul en distinguant ses observations, ses interprétations et ses nombreuses limites.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Expériences célèbres de psychologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/experiences-les-experiences-de-pavlov/"><span class="similar-icon">🧪</span>Les expériences de Pavlov</a><a class="similar-item" href="/chapitre/experiences-la-situation-etrange-de-mary-ainsworth/"><span class="similar-icon">🧪</span>La « situation étrange » de Mary Ainsworth</a><a class="similar-item" href="/chapitre/experiences-l-experience-de-sherif/"><span class="similar-icon">🧪</span>L'expérience de Sherif</a></div>
+    </div>
+    <a class="back-link" href="/categorie/experiences/">← Retour à « Expériences célèbres de psychologie »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Structure de la personnalité — Mon Esprit</title>
+<meta name="description" content="Structure de la personnalité, dans la catégorie Concepts avancés de l'encyclopédie Mon Esprit.">
+<link rel="icon" type="image/png" href="/images/favicon-64.png">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+  <a href="/nouveautes/">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-title">
+      <img src="/images/logo-180.png" alt="" class="site-logo">
+      Mon Esprit
+    </a>
+    <nav class="site-nav">
+      <a href="/#categories">Catégories</a>
+      <a href="/#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#31-quest-ce-que-la-personnalite">🪞 3.1 Qu'est-ce que la personnalité ?</a></li><li><a href="#32-le-temperament">🧬 3.2 Le tempérament</a></li><li><a href="#33-les-traits-de-personnalite">🧠 3.3 Les traits de personnalité</a></li><li><a href="#34-les-modeles-dimensionnels-de-la-personnalite">📊 3.4 Les modèles dimensionnels de la personnalité</a></li><li><a href="#35-les-modeles-categoriels-de-la-personnalite">🧩 3.5 Les modèles catégoriels de la personnalité</a></li><li><a href="#36-le-concept-de-soi">🪞 3.6 Le concept de soi</a></li><li><a href="#37-lidentite-personnelle">👤 3.7 L'identité personnelle</a></li><li><a href="#38-la-continuite-du-soi">🧠 3.8 La continuité du soi</a></li><li><a href="#39-la-coherence-du-soi">🧩 3.9 La cohérence du soi</a></li><li><a href="#310-lestime-de-soi">🪞 3.10 L'estime de soi</a></li><li><a href="#311-lautoevaluation">🔎 3.11 L'autoévaluation</a></li><li><a href="#312-le-soi-reel-et-le-soi-ideal">🪞 3.12 Le soi réel et le soi idéal</a></li><li><a href="#313-le-soi-futur">🌱 3.13 Le soi futur</a></li><li><a href="#314-le-soi-narratif">🧠 3.14 Le soi narratif</a></li><li><a href="#315-la-memoire-autobiographique-et-la-personnalite">💾 3.15 La mémoire autobiographique et la personnalité</a></li><li><a href="#316-les-representations-de-soi-et-des-autres">🧩 3.16 Les représentations de soi et des autres</a></li><li><a href="#317-les-representations-relationnelles">❤️ 3.17 Les représentations relationnelles</a></li><li><a href="#318-le-sentiment-dagentivite">🧠 3.18 Le sentiment d'agentivité</a></li><li><a href="#319-le-sentiment-de-propriete-corporelle">🫀 3.19 Le sentiment de propriété corporelle</a></li><li><a href="#320-limage-corporelle">🪞 3.20 L'image corporelle</a></li><li><a href="#321-la-regulation-emotionnelle-et-la-personnalite">🧠 3.21 La régulation émotionnelle et la personnalité</a></li><li><a href="#322-la-stabilite-emotionnelle">🧩 3.22 La stabilité émotionnelle</a></li><li><a href="#323-limpulsivite">⚡ 3.23 L'impulsivité</a></li><li><a href="#324-le-controle-de-soi">🧠 3.24 Le contrôle de soi</a></li><li><a href="#325-les-mecanismes-de-defense-et-la-personnalite">🧩 3.25 Les mécanismes de défense et la personnalité</a></li><li><a href="#326-le-clivage">🪞 3.26 Le clivage</a></li><li><a href="#327-lidealisation">🌟 3.27 L'idéalisation</a></li><li><a href="#328-la-devalorisation">🔻 3.28 La dévalorisation</a></li><li><a href="#329-lintegration-des-aspects-contradictoires">🔄 3.29 L'intégration des aspects contradictoires</a></li><li><a href="#330-la-mentalisation">🧠 3.30 La mentalisation</a></li><li><a href="#331-la-theorie-de-lesprit">🧩 3.31 La théorie de l'esprit</a></li><li><a href="#332-lattachement-et-la-personnalite">❤️ 3.32 L'attachement et la personnalité</a></li><li><a href="#333-la-personnalite-au-cours-du-developpement">🌱 3.33 La personnalité au cours du développement</a></li><li><a href="#334-linfluence-de-la-culture">🌍 3.34 L'influence de la culture</a></li><li><a href="#335-personnalite-et-contexte">🧠 3.35 Personnalité et contexte</a></li><li><a href="#336-personnalite-et-stabilite">🔄 3.36 Personnalité et stabilité</a></li><li><a href="#337-structure-de-personnalite-et-fonctionnement">🧩 3.37 Structure de personnalité et fonctionnement</a></li><li><a href="#338-personnalite-et-psychopathologie">🩺 3.38 Personnalité et psychopathologie</a></li><li><a href="#339-une-personnalite-peut-elle-changer">🧠 3.39 Une personnalité peut-elle changer ?</a></li><li><a href="#340-pourquoi-etudier-la-structure-de-la-personnalite">🌌 3.40 Pourquoi étudier la structure de la personnalité ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Structure de la personnalité',
+        category: 'Concepts avancés',
+        icon: '🔬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="/categorie/avances/">🔬 Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Structure de la personnalité</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-avances)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>La personnalité correspond à l'ensemble relativement organisé des caractéristiques psychologiques qui contribuent à la manière dont une personne pense, ressent, perçoit les situations, se comporte et entre en relation avec les autres.</p>
+<p>Elle ne peut pas être réduite à quelques traits de caractère. La personnalité implique différents niveaux de fonctionnement : tempérament, traits, identité, motivations, représentations de soi et des autres, régulation émotionnelle, fonctionnement relationnel et stratégies d'adaptation.</p>
+<p>Parler de <strong>structure de la personnalité</strong> revient à s'intéresser à la manière dont ces différents éléments sont organisés entre eux. Le terme « structure » ne signifie donc pas qu'une personnalité serait figée ou impossible à modifier.</p>
+<p>Une personne peut présenter certaines caractéristiques relativement stables tout en évoluant avec ses expériences, son environnement, son développement et les relations qu'elle entretient.</p>
+<hr />
+<h2 id="31-quest-ce-que-la-personnalite" class="entry-title hc-1">🪞 3.1 Qu'est-ce que la personnalité ?</h2>
+<p>La personnalité désigne l'organisation relativement durable de caractéristiques psychologiques qui influencent les manières habituelles de penser, ressentir et agir.</p>
+<p>Elle comprend notamment des dimensions liées :</p>
+<ul>
+<li>aux émotions</li>
+<li>aux motivations</li>
+<li>aux comportements</li>
+<li>aux relations</li>
+<li>aux croyances</li>
+<li>à l'identité</li>
+<li>aux habitudes psychologiques</li>
+<li>aux réactions face aux situations</li>
+</ul>
+<p>La personnalité ne signifie pas qu'une personne réagit toujours de la même manière.</p>
+<p>Le comportement dépend également du contexte.</p>
+<p>Une personne généralement calme peut ressentir une forte colère dans certaines circonstances. Une personne habituellement sociable peut également avoir besoin de solitude.</p>
+<p>La personnalité représente donc davantage des <strong>tendances relativement stables</strong> que des règles absolues.</p>
+<hr />
+<h2 id="32-le-temperament" class="entry-title hc-2">🧬 3.2 Le tempérament</h2>
+<p>Le tempérament correspond à certaines différences individuelles relativement précoces dans la réactivité émotionnelle, l'activité, l'attention ou les réponses comportementales.</p>
+<p>Il possède notamment une composante biologique importante, même si son expression est influencée par l'environnement et le développement.</p>
+<p>Certains enfants peuvent par exemple être naturellement plus réactifs aux changements ou aux stimulations, tandis que d'autres peuvent présenter une réactivité plus faible.</p>
+<p>Le tempérament n'est toutefois pas équivalent à la personnalité adulte.</p>
+<p>Il constitue plutôt l'un des éléments pouvant participer à sa construction.</p>
+<hr />
+<h2 id="33-les-traits-de-personnalite" class="entry-title hc-3">🧠 3.3 Les traits de personnalité</h2>
+<p>Les traits sont des dimensions permettant de décrire des tendances relativement stables du fonctionnement individuel.</p>
+<p>Ils permettent par exemple de décrire des différences concernant l'extraversion, la conscienciosité, l'ouverture, l'agréabilité ou la stabilité émotionnelle selon les modèles utilisés.</p>
+<p>Un trait ne signifie pas qu'une personne possède une caractéristique de manière absolue.</p>
+<p>Il représente généralement une position relative sur une dimension.</p>
+<p>Une personne peut donc être relativement extravertie sans être constamment sociable.</p>
+<hr />
+<h2 id="34-les-modeles-dimensionnels-de-la-personnalite" class="entry-title hc-4">📊 3.4 Les modèles dimensionnels de la personnalité</h2>
+<p>Les modèles dimensionnels décrivent la personnalité à partir de différentes dimensions plutôt qu'à partir de catégories totalement séparées.</p>
+<p>Cette approche permet de représenter les différences individuelles sous forme de continuités.</p>
+<p>Par exemple, deux personnes peuvent toutes les deux présenter une certaine tendance à l'impulsivité, mais à des niveaux différents.</p>
+<p>Les modèles dimensionnels sont particulièrement utiles lorsqu'une caractéristique existe à différents degrés dans la population.</p>
+<p>Ils permettent également d'éviter certaines oppositions trop simplistes du type « possède ce trait » ou « ne possède pas ce trait ».</p>
+<hr />
+<h2 id="35-les-modeles-categoriels-de-la-personnalite" class="entry-title hc-5">🧩 3.5 Les modèles catégoriels de la personnalité</h2>
+<p>Les modèles catégoriels regroupent certaines configurations psychologiques en catégories définies selon des critères précis.</p>
+<p>Cette logique est notamment utilisée dans les classifications diagnostiques des troubles de la personnalité.</p>
+<p>Elle permet de disposer de catégories communes pour la recherche et la pratique clinique.</p>
+<p>Cependant, les caractéristiques psychologiques réelles peuvent être plus continues et plus nuancées que les catégories utilisées dans les classifications.</p>
+<p>Une catégorie diagnostique ne représente donc pas nécessairement toute la complexité d'une personne.</p>
+<hr />
+<h2 id="36-le-concept-de-soi" class="entry-title hc-1">🪞 3.6 Le concept de soi</h2>
+<p>Le concept de soi correspond à l'ensemble des connaissances et représentations qu'une personne possède concernant elle-même.</p>
+<p>Il peut inclure des informations telles que :</p>
+<ul>
+<li>« je suis timide »</li>
+<li>« je suis quelqu'un de créatif »</li>
+<li>« je suis persévérant »</li>
+<li>« je suis une personne importante pour ma famille »</li>
+<li>« je suis mauvais dans certaines choses »</li>
+</ul>
+<p>Ces représentations peuvent être positives, négatives ou contradictoires.</p>
+<p>Le concept de soi évolue avec les expériences et peut différer selon les contextes.</p>
+<hr />
+<h2 id="37-lidentite-personnelle" class="entry-title hc-2">👤 3.7 L'identité personnelle</h2>
+<p>L'identité personnelle correspond à la manière dont une personne se définit comme un individu particulier et relativement continu à travers le temps.</p>
+<p>Elle répond notamment à des questions comme :</p>
+<p><strong>« Qui suis-je ? »</strong></p>
+<p><strong>« Qu'est-ce qui me définit ? »</strong></p>
+<p><strong>« Quelles sont mes valeurs ? »</strong></p>
+<p><strong>« Qu'est-ce qui fait que je reste moi-même malgré les changements ? »</strong></p>
+<p>L'identité comprend généralement des éléments personnels, relationnels, sociaux et autobiographiques.</p>
+<p>Elle se construit progressivement et peut continuer à évoluer tout au long de la vie.</p>
+<hr />
+<h2 id="38-la-continuite-du-soi" class="entry-title hc-3">🧠 3.8 La continuité du soi</h2>
+<p>La continuité du soi correspond au sentiment d'être la même personne à travers le temps malgré les changements.</p>
+<p>Une personne peut reconnaître que ses goûts, ses opinions, son apparence ou ses relations ont changé tout en conservant le sentiment d'une continuité personnelle.</p>
+<p>Cette continuité est notamment soutenue par la mémoire autobiographique, les représentations de soi et le récit personnel.</p>
+<p>Elle constitue une composante importante de l'identité.</p>
+<hr />
+<h2 id="39-la-coherence-du-soi" class="entry-title hc-4">🧩 3.9 La cohérence du soi</h2>
+<p>La cohérence du soi correspond au sentiment que les différentes parties de son identité peuvent être organisées dans une représentation relativement compréhensible.</p>
+<p>Une personne peut posséder plusieurs rôles différents :</p>
+<p><strong>ami → membre d'une famille → étudiant → collègue → partenaire</strong></p>
+<p>Ces rôles ne sont pas nécessairement identiques.</p>
+<p>La cohérence du soi permet de les intégrer dans une représentation globale de soi.</p>
+<p>Une personne peut donc être différente selon le contexte sans avoir nécessairement une identité incohérente.</p>
+<hr />
+<h2 id="310-lestime-de-soi" class="entry-title hc-5">🪞 3.10 L'estime de soi</h2>
+<p>L'estime de soi correspond à l'évaluation globale ou relativement générale qu'une personne porte sur sa propre valeur.</p>
+<p>Elle peut être influencée par :</p>
+<ul>
+<li>les réussites</li>
+<li>les échecs</li>
+<li>les relations</li>
+<li>les comparaisons sociales</li>
+<li>les expériences passées</li>
+<li>les normes personnelles</li>
+<li>les représentations de soi</li>
+</ul>
+<p>L'estime de soi peut également varier selon les domaines.</p>
+<p>Une personne peut avoir une bonne estime de ses compétences professionnelles tout en ayant une estime plus fragile concernant ses relations sociales.</p>
+<hr />
+<h2 id="311-lautoevaluation" class="entry-title hc-1">🔎 3.11 L'autoévaluation</h2>
+<p>L'autoévaluation correspond au processus par lequel une personne évalue ses propres caractéristiques ou performances.</p>
+<p>Elle peut comparer ce qu'elle pense être à :</p>
+<ul>
+<li>ses objectifs</li>
+<li>ses valeurs</li>
+<li>ses souvenirs</li>
+<li>ses attentes</li>
+<li>les autres</li>
+<li>une représentation idéale d'elle-même</li>
+</ul>
+<p>Cette évaluation peut influencer les émotions et les comportements.</p>
+<p>Par exemple, l'écart entre une performance réelle et un objectif personnel peut produire satisfaction, déception, honte ou motivation selon la manière dont il est interprété.</p>
+<hr />
+<h2 id="312-le-soi-reel-et-le-soi-ideal" class="entry-title hc-2">🪞 3.12 Le soi réel et le soi idéal</h2>
+<p>Le <strong>soi réel</strong> correspond à la représentation que la personne possède de ce qu'elle est actuellement.</p>
+<p>Le <strong>soi idéal</strong> correspond davantage à la représentation de ce qu'elle souhaiterait être.</p>
+<p>La comparaison entre ces deux représentations peut avoir différentes conséquences psychologiques.</p>
+<p>Un écart important peut provoquer de l'insatisfaction ou motiver certains changements.</p>
+<p>Cependant, avoir un idéal différent de la réalité n'est pas automatiquement problématique.</p>
+<p>Les objectifs personnels reposent justement souvent sur une différence entre la situation actuelle et une situation souhaitée.</p>
+<hr />
+<h2 id="313-le-soi-futur" class="entry-title hc-3">🌱 3.13 Le soi futur</h2>
+<p>Le soi futur correspond à la représentation de la personne qu'un individu pourrait devenir.</p>
+<p>Il peut exister plusieurs futurs possibles :</p>
+<ul>
+<li>un soi souhaité</li>
+<li>un soi redouté</li>
+<li>un soi probable</li>
+<li>un soi idéal</li>
+<li>un soi évité</li>
+</ul>
+<p>Ces représentations peuvent influencer les décisions présentes.</p>
+<p>Par exemple, une personne peut modifier son comportement actuel parce qu'elle anticipe les conséquences que ce comportement pourrait avoir sur son futur.</p>
+<hr />
+<h2 id="314-le-soi-narratif" class="entry-title hc-4">🧠 3.14 Le soi narratif</h2>
+<p>Le soi narratif correspond à la manière dont une personne construit une histoire cohérente à propos de sa propre vie.</p>
+<p>Cette histoire relie différents événements :</p>
+<p><strong>passé → présent → futur</strong></p>
+<p>Elle permet de donner une continuité aux expériences.</p>
+<p>Deux personnes ayant vécu des événements similaires peuvent construire des récits personnels très différents parce qu'elles ne donnent pas nécessairement le même sens aux événements.</p>
+<p>Le récit autobiographique constitue donc une composante importante de l'identité.</p>
+<hr />
+<h2 id="315-la-memoire-autobiographique-et-la-personnalite" class="entry-title hc-5">💾 3.15 La mémoire autobiographique et la personnalité</h2>
+<p>La mémoire autobiographique contient des souvenirs concernant sa propre vie.</p>
+<p>Elle contribue à maintenir une continuité personnelle.</p>
+<p>Les souvenirs permettent notamment de répondre à des questions telles que :</p>
+<p><strong>« Qu'est-ce que j'ai vécu ? »</strong></p>
+<p><strong>« Comment ai-je changé ? »</strong></p>
+<p><strong>« Comment suis-je devenu la personne que je suis aujourd'hui ? »</strong></p>
+<p>Cependant, les souvenirs autobiographiques sont reconstructifs.</p>
+<p>Le récit de soi peut donc évoluer avec le temps.</p>
+<hr />
+<h2 id="316-les-representations-de-soi-et-des-autres" class="entry-title hc-1">🧩 3.16 Les représentations de soi et des autres</h2>
+<p>Certaines approches psychologiques s'intéressent aux représentations internes que les individus développent concernant eux-mêmes et les autres.</p>
+<p>Une personne peut par exemple avoir des attentes concernant :</p>
+<p><strong>« Comment les autres vont-ils me traiter ? »</strong></p>
+<p>ou :</p>
+<p><strong>« Que puis-je attendre des autres ? »</strong></p>
+<p>Ces représentations sont influencées par les expériences passées.</p>
+<p>Elles peuvent également être modifiées par de nouvelles expériences.</p>
+<hr />
+<h2 id="317-les-representations-relationnelles" class="entry-title hc-2">❤️ 3.17 Les représentations relationnelles</h2>
+<p>Les représentations relationnelles concernent les attentes et représentations associées aux relations avec les autres.</p>
+<p>Elles peuvent influencer la manière dont une personne interprète :</p>
+<ul>
+<li>la proximité</li>
+<li>la distance</li>
+<li>le rejet</li>
+<li>le soutien</li>
+<li>la confiance</li>
+<li>les conflits</li>
+</ul>
+<p>Une même attitude d'une autre personne peut ainsi être interprétée différemment selon les représentations relationnelles de l'individu.</p>
+<hr />
+<h2 id="318-le-sentiment-dagentivite" class="entry-title hc-3">🧠 3.18 Le sentiment d'agentivité</h2>
+<p>Le sentiment d'agentivité correspond au sentiment d'être à l'origine de ses propres actions.</p>
+<p>Il permet notamment de ressentir :</p>
+<p><strong>« C'est moi qui ai fait cela. »</strong></p>
+<p>Il est différent du simple fait d'effectuer physiquement une action.</p>
+<p>Le cerveau doit également intégrer différentes informations pour construire le sentiment que l'action vient de soi.</p>
+<p>Le sentiment d'agentivité participe donc à la perception de soi comme acteur de son comportement.</p>
+<hr />
+<h2 id="319-le-sentiment-de-propriete-corporelle" class="entry-title hc-4">🫀 3.19 Le sentiment de propriété corporelle</h2>
+<p>Le sentiment de propriété corporelle correspond au sentiment qu'une partie du corps appartient à soi.</p>
+<p>Par exemple :</p>
+<p><strong>« Cette main est ma main. »</strong></p>
+<p>Ce sentiment paraît évident dans la vie quotidienne, mais les recherches expérimentales montrent qu'il peut être influencé par les informations sensorielles.</p>
+<p>L'illusion de la main en caoutchouc constitue notamment une expérience célèbre ayant permis d'étudier ce phénomène.</p>
+<hr />
+<h2 id="320-limage-corporelle" class="entry-title hc-5">🪞 3.20 L'image corporelle</h2>
+<p>L'image corporelle correspond à la représentation mentale et émotionnelle du corps.</p>
+<p>Elle comprend notamment la manière dont une personne perçoit son apparence et certaines caractéristiques physiques.</p>
+<p>Elle peut être influencée par :</p>
+<ul>
+<li>les expériences personnelles</li>
+<li>les interactions sociales</li>
+<li>les normes culturelles</li>
+<li>les comparaisons</li>
+<li>les représentations médiatiques</li>
+</ul>
+<p>L'image corporelle n'est donc pas simplement une photographie objective du corps.</p>
+<hr />
+<h2 id="321-la-regulation-emotionnelle-et-la-personnalite" class="entry-title hc-1">🧠 3.21 La régulation émotionnelle et la personnalité</h2>
+<p>La manière dont une personne régule ses émotions constitue une composante importante de son fonctionnement.</p>
+<p>Certaines personnes peuvent avoir tendance à exprimer rapidement leurs émotions.</p>
+<p>D'autres peuvent davantage les inhiber ou les analyser avant de les exprimer.</p>
+<p>Ces différences peuvent être relativement stables sans être totalement fixes.</p>
+<p>La régulation émotionnelle dépend également du contexte.</p>
+<p>Une stratégie efficace dans une situation peut devenir moins adaptée dans une autre.</p>
+<hr />
+<h2 id="322-la-stabilite-emotionnelle" class="entry-title hc-2">🧩 3.22 La stabilité émotionnelle</h2>
+<p>La stabilité émotionnelle décrit certaines différences individuelles dans la tendance à ressentir des fluctuations émotionnelles ou une réactivité importante.</p>
+<p>Elle est généralement considérée comme une dimension plutôt qu'une caractéristique absolue.</p>
+<p>Une personne relativement stable émotionnellement peut tout de même ressentir des émotions intenses.</p>
+<p>La stabilité décrit surtout une tendance générale dans le fonctionnement.</p>
+<hr />
+<h2 id="323-limpulsivite" class="entry-title hc-3">⚡ 3.23 L'impulsivité</h2>
+<p>L'impulsivité correspond à plusieurs tendances possibles, notamment la difficulté à attendre, à inhiber certaines réponses ou à prendre en compte suffisamment les conséquences futures.</p>
+<p>Elle n'est pas une caractéristique unique.</p>
+<p>Différentes formes d'impulsivité peuvent être distinguées.</p>
+<p>Une personne peut par exemple présenter une forte recherche de récompense immédiate sans nécessairement présenter une forte impulsivité motrice.</p>
+<p>L'impulsivité doit donc être étudiée de manière précise.</p>
+<hr />
+<h2 id="324-le-controle-de-soi" class="entry-title hc-4">🧠 3.24 Le contrôle de soi</h2>
+<p>Le contrôle de soi correspond à la capacité à réguler ses pensées, émotions ou comportements afin de poursuivre un objectif.</p>
+<p>Il peut notamment nécessiter :</p>
+<ul>
+<li>l'inhibition</li>
+<li>la planification</li>
+<li>la surveillance de son comportement</li>
+<li>la gestion des distractions</li>
+<li>la régulation émotionnelle</li>
+</ul>
+<p>Le contrôle de soi n'est pas illimité.</p>
+<p>La fatigue, le stress, les émotions et le contexte peuvent influencer les capacités de contrôle.</p>
+<hr />
+<h2 id="325-les-mecanismes-de-defense-et-la-personnalite" class="entry-title hc-5">🧩 3.25 Les mécanismes de défense et la personnalité</h2>
+<p>Les mécanismes de défense constituent un concept important dans plusieurs modèles psychodynamiques de la personnalité.</p>
+<p>Ils peuvent participer à la manière dont une personne gère les conflits, les émotions difficiles ou certaines représentations menaçantes.</p>
+<p>Certains fonctionnements défensifs peuvent être relativement flexibles.</p>
+<p>D'autres peuvent devenir très rigides.</p>
+<p>L'étude des défenses peut donc apporter des informations sur le fonctionnement psychologique, mais un mécanisme de défense isolé ne permet pas de définir la personnalité d'une personne.</p>
+<hr />
+<h2 id="326-le-clivage" class="entry-title hc-1">🪞 3.26 Le clivage</h2>
+<p>Dans certaines approches psychodynamiques, le clivage désigne un mode d'organisation dans lequel des représentations contradictoires sont maintenues séparément.</p>
+<p>Par exemple, une même personne peut être représentée comme entièrement positive dans un contexte puis entièrement négative dans un autre, sans intégration suffisante des aspects contradictoires.</p>
+<p>Le concept est plus spécifique que le simple fait d'avoir une opinion changeante.</p>
+<p>Il concerne la manière dont des représentations opposées sont organisées psychiquement.</p>
+<hr />
+<h2 id="327-lidealisation" class="entry-title hc-2">🌟 3.27 L'idéalisation</h2>
+<p>L'idéalisation correspond à une tendance à attribuer à une personne, une relation ou parfois à soi-même des caractéristiques extrêmement positives.</p>
+<p>Elle peut avoir différentes fonctions psychologiques.</p>
+<p>Dans certains modèles psychodynamiques, elle peut notamment être étudiée en relation avec le clivage ou avec certaines difficultés à intégrer simultanément les aspects positifs et négatifs d'une même personne.</p>
+<p>L'idéalisation peut également exister dans des formes ordinaires, par exemple lorsqu'une personne admire fortement quelqu'un.</p>
+<p>Elle n'est donc pas automatiquement pathologique.</p>
+<hr />
+<h2 id="328-la-devalorisation" class="entry-title hc-3">🔻 3.28 La dévalorisation</h2>
+<p>La dévalorisation correspond à une représentation fortement négative d'une personne, d'une situation ou de soi-même.</p>
+<p>Comme l'idéalisation, elle peut être étudiée dans différents contextes.</p>
+<p>Dans certains modèles psychodynamiques, l'alternance entre idéalisation et dévalorisation peut être considérée comme un indice de difficulté à intégrer des caractéristiques contradictoires.</p>
+<p>Il faut toutefois éviter de transformer une réaction ponctuelle en conclusion générale sur la personnalité.</p>
+<hr />
+<h2 id="329-lintegration-des-aspects-contradictoires" class="entry-title hc-4">🔄 3.29 L'intégration des aspects contradictoires</h2>
+<p>Une organisation psychologique relativement intégrée permet de reconnaître qu'une même personne peut posséder simultanément des caractéristiques positives et négatives.</p>
+<p>Par exemple :</p>
+<p><strong>« Cette personne peut être importante pour moi tout en ayant certains comportements que je désapprouve. »</strong></p>
+<p>Cette capacité permet de conserver une représentation nuancée.</p>
+<p>Elle évite certaines oppositions extrêmement rigides entre « totalement positif » et « totalement négatif ».</p>
+<hr />
+<h2 id="330-la-mentalisation" class="entry-title hc-5">🧠 3.30 La mentalisation</h2>
+<p>La mentalisation désigne la capacité à comprendre les comportements, les pensées et les émotions en termes d'états mentaux.</p>
+<p>Elle permet notamment de réfléchir à :</p>
+<p><strong>« Qu'est-ce que je ressens ? »</strong></p>
+<p><strong>« Pourquoi ai-je réagi comme cela ? »</strong></p>
+<p><strong>« Que peut ressentir l'autre ? »</strong></p>
+<p><strong>« Quelles intentions pourrait-il avoir ? »</strong></p>
+<p>La mentalisation n'est pas une capacité tout ou rien.</p>
+<p>Elle peut varier selon le contexte, l'état émotionnel et la complexité de la situation.</p>
+<hr />
+<h2 id="331-la-theorie-de-lesprit" class="entry-title hc-1">🧩 3.31 La théorie de l'esprit</h2>
+<p>La théorie de l'esprit désigne la capacité à attribuer à soi-même et aux autres des états mentaux tels que des croyances, intentions, désirs ou connaissances.</p>
+<p>Elle permet notamment de comprendre qu'une autre personne peut posséder une information différente de la sienne.</p>
+<p>Cette capacité joue un rôle important dans les interactions sociales.</p>
+<p>Elle ne signifie pas qu'il est possible de lire parfaitement les pensées des autres.</p>
+<p>Il s'agit plutôt de construire des hypothèses concernant leurs états mentaux.</p>
+<hr />
+<h2 id="332-lattachement-et-la-personnalite" class="entry-title hc-2">❤️ 3.32 L'attachement et la personnalité</h2>
+<p>Les expériences relationnelles, notamment celles liées à l'attachement, peuvent participer au développement de certaines représentations concernant soi-même et les autres.</p>
+<p>Les modèles de l'attachement étudient notamment les attentes concernant la disponibilité, la proximité et la sécurité relationnelle.</p>
+<p>Cependant, les styles d'attachement ne doivent pas être considérés comme des étiquettes définitives de personnalité.</p>
+<p>Le fonctionnement relationnel peut évoluer et varie selon les relations et les contextes.</p>
+<hr />
+<h2 id="333-la-personnalite-au-cours-du-developpement" class="entry-title hc-3">🌱 3.33 La personnalité au cours du développement</h2>
+<p>La personnalité n'apparaît pas soudainement à l'âge adulte.</p>
+<p>Elle se construit progressivement à travers l'interaction entre :</p>
+<p><strong>tempérament + maturation + apprentissages + relations + environnement + expériences</strong></p>
+<p>Certaines caractéristiques apparaissent relativement tôt.</p>
+<p>D'autres se développent ou se transforment avec l'âge.</p>
+<p>La personnalité adulte conserve donc certaines continuités tout en présentant des possibilités importantes de changement.</p>
+<hr />
+<h2 id="334-linfluence-de-la-culture" class="entry-title hc-4">🌍 3.34 L'influence de la culture</h2>
+<p>La personnalité et son expression sont également influencées par la culture.</p>
+<p>Les normes sociales peuvent modifier ce qui est considéré comme :</p>
+<ul>
+<li>autonome</li>
+<li>réservé</li>
+<li>expressif</li>
+<li>compétitif</li>
+<li>coopératif</li>
+<li>acceptable</li>
+<li>valorisé</li>
+</ul>
+<p>Une même caractéristique peut donc être exprimée différemment selon le contexte culturel.</p>
+<p>Il est ainsi important d'éviter de considérer une seule norme culturelle comme universelle.</p>
+<hr />
+<h2 id="335-personnalite-et-contexte" class="entry-title hc-5">🧠 3.35 Personnalité et contexte</h2>
+<p>La personnalité influence les comportements, mais le contexte exerce également une influence importante.</p>
+<p>Une personne peut être très différente selon qu'elle se trouve :</p>
+<ul>
+<li>seule</li>
+<li>avec ses proches</li>
+<li>dans un groupe</li>
+<li>dans un contexte professionnel</li>
+<li>dans une situation stressante</li>
+</ul>
+<p>Cela ne signifie pas nécessairement qu'elle « change de personnalité ».</p>
+<p>Cela montre plutôt que les comportements résultent de l'interaction entre les caractéristiques individuelles et les situations.</p>
+<hr />
+<h2 id="336-personnalite-et-stabilite" class="entry-title hc-1">🔄 3.36 Personnalité et stabilité</h2>
+<p>La personnalité présente une certaine stabilité, mais cette stabilité est relative.</p>
+<p>Certaines caractéristiques peuvent rester relativement constantes pendant de longues périodes.</p>
+<p>D'autres peuvent évoluer.</p>
+<p>Les changements peuvent notamment être associés au développement, aux expériences importantes, aux relations, au contexte social ou à des changements dans les objectifs de vie.</p>
+<p>La stabilité et le changement ne sont donc pas nécessairement opposés.</p>
+<hr />
+<h2 id="337-structure-de-personnalite-et-fonctionnement" class="entry-title hc-2">🧩 3.37 Structure de personnalité et fonctionnement</h2>
+<p>Dans certaines approches cliniques, le terme <strong>structure de personnalité</strong> est utilisé pour décrire la manière dont plusieurs fonctions psychologiques sont organisées.</p>
+<p>L'analyse peut notamment concerner :</p>
+<ul>
+<li>l'identité</li>
+<li>les relations</li>
+<li>les mécanismes de défense</li>
+<li>la régulation émotionnelle</li>
+<li>le rapport à la réalité</li>
+<li>le contrôle des impulsions</li>
+</ul>
+<p>Cette utilisation clinique du terme « structure » ne signifie pas qu'une personne appartient définitivement à une catégorie immuable.</p>
+<p>Il s'agit d'une manière théorique de décrire l'organisation du fonctionnement psychologique.</p>
+<hr />
+<h2 id="338-personnalite-et-psychopathologie" class="entry-title hc-3">🩺 3.38 Personnalité et psychopathologie</h2>
+<p>La psychopathologie peut parfois être étudiée à travers des caractéristiques de personnalité qui deviennent particulièrement rigides, persistantes ou inadaptées.</p>
+<p>Cependant, posséder un trait particulier ne signifie pas posséder un trouble de la personnalité.</p>
+<p>Un diagnostic repose sur un ensemble de critères et sur l'évaluation globale du fonctionnement.</p>
+<p>Il faut notamment considérer la durée, la stabilité, le contexte, le retentissement et l'ensemble du fonctionnement psychologique.</p>
+<p>Une caractéristique isolée ne suffit donc pas.</p>
+<hr />
+<h2 id="339-une-personnalite-peut-elle-changer" class="entry-title hc-4">🧠 3.39 Une personnalité peut-elle changer ?</h2>
+<p>Oui.</p>
+<p>La personnalité présente une certaine stabilité mais elle n'est pas totalement figée.</p>
+<p>Les recherches montrent que certaines caractéristiques peuvent évoluer au cours de la vie.</p>
+<p>Les expériences, les relations, les changements de rôle, le développement et différents événements peuvent contribuer à ces transformations.</p>
+<p>Il est donc plus juste de considérer la personnalité comme une organisation <strong>relativement stable mais évolutive</strong>.</p>
+<hr />
+<h2 id="340-pourquoi-etudier-la-structure-de-la-personnalite" class="entry-title hc-5">🌌 3.40 Pourquoi étudier la structure de la personnalité ?</h2>
+<p>Étudier la structure de la personnalité permet de dépasser l'idée simpliste selon laquelle une personnalité serait uniquement une liste de traits.</p>
+<p>Il devient possible d'étudier simultanément :</p>
+<p><strong>tempérament → traits → identité → représentations de soi → représentations des autres → émotions → défenses → relations → comportements</strong></p>
+<p>Cette perspective permet de comprendre pourquoi deux personnes ayant des traits similaires peuvent fonctionner très différemment.</p>
+<p>Elle permet également de comprendre pourquoi une même personne peut présenter des comportements différents selon les situations tout en conservant certaines caractéristiques relativement stables.</p>
+<p>La structure de la personnalité constitue donc une manière d'étudier <strong>l'organisation globale du fonctionnement individuel</strong>, tout en tenant compte de son évolution et de son interaction avec l'environnement.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>La personnalité ne correspond pas uniquement au « caractère ».</p>
+<p>Elle comprend plusieurs dimensions :</p>
+<p>🧬 <strong>Tempérament</strong></p>
+<p>📊 <strong>Traits</strong></p>
+<p>🪞 <strong>Identité</strong></p>
+<p>🧠 <strong>Représentations de soi et des autres</strong></p>
+<p>❤️ <strong>Régulation émotionnelle</strong></p>
+<p>🧩 <strong>Mécanismes de défense</strong></p>
+<p>🧑‍🤝‍🧑 <strong>Fonctionnement relationnel</strong></p>
+<p>🎯 <strong>Motivations et objectifs</strong></p>
+<p>🔄 <strong>Stratégies d'adaptation</strong></p>
+<p>La personnalité est généralement <strong>relativement stable</strong>, mais elle n'est pas immuable.</p>
+<p>La <strong>structure de la personnalité</strong> désigne, selon les modèles utilisés, la manière dont différents éléments psychologiques sont organisés et interagissent.</p>
+<p>Il est essentiel de distinguer :</p>
+<p><strong>trait de personnalité ≠ comportement isolé</strong></p>
+<p><strong>caractéristique de personnalité ≠ trouble de la personnalité</strong></p>
+<p><strong>style relationnel ≠ diagnostic</strong></p>
+<p><strong>émotion intense ≠ structure de personnalité particulière</strong></p>
+<p><strong>mécanisme de défense ≠ personnalité entière</strong></p>
+<p>Une compréhension avancée de la personnalité nécessite donc d'observer <strong>l'organisation globale du fonctionnement</strong>, son évolution dans le temps, son adaptation au contexte et les interactions entre ses différentes composantes.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-psychodynamique-et-inconscient/"><span class="similar-icon">🔬</span>Psychodynamique et inconscient</a><a class="similar-item" href="/chapitre/avances-psychologie-du-developpement-avancee/"><span class="similar-icon">🔬</span>Psychologie du développement avancée</a><a class="similar-item" href="/chapitre/avances-cognition-et-fonctions-executives/"><span class="similar-icon">🔬</span>Cognition et fonctions exécutives</a></div>
+    </div>
+    <a class="back-link" href="/categorie/avances/">← Retour à « Concepts avancés »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '/';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  var smartBtn = document.getElementById('smart-search-btn');
+  var lastQuery = '';
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      if (smartBtn) smartBtn.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+    if (smartBtn) smartBtn.hidden = results.length >= 3;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (smartBtn) smartBtn.hidden = true;
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
+  });
+
+  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
+  if (smartBtn) {
+    smartBtn.addEventListener('click', function () {
+      if (!lastQuery) return;
+      smartBtn.disabled = true;
+      smartBtn.textContent = '🧠 Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      box.hidden = false;
+
+      fetch('https://api.monesprit.fr/search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: lastQuery })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error('bad status');
+          return r.json();
+        })
+        .then(function (data) {
+          var results = data.results || [];
+          if (results.length === 0) {
+            box.innerHTML = '<div class="smart-search-error">Aucun trouble ne correspond suffisamment à ta recherche. Essaie de reformuler.</div>';
+            return;
+          }
+          box.innerHTML = results.map(function (item) {
+            var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+            return '<a class="smart-search-result" href="' + item.url + '">' +
+              '<span class="smart-search-result-title">' + escapeHtml(item.title) + '</span>' +
+              (meta ? '<span class="smart-search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+              '</a>';
+          }).join('');
+        })
+        .catch(function () {
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
+        })
+        .finally(function () {
+          smartBtn.disabled = false;
+          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+        });
+    });
+  }
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
+</body>
+</html>
