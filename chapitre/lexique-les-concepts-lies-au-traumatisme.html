@@ -9,8 +9,12 @@
 </head>
 <body>
 <canvas id="fluid-cursor" aria-hidden="true"></canvas>
-<div class="update-banner" id="update-banner" hidden data-count="27">
-  <a href="../nouveautes.html">🆕 Nouveau : Confirmations visuelles — Voir toutes les nouveautés →</a>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
   <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
@@ -24,6 +28,7 @@
     <nav class="site-nav">
       <a href="../index.html#categories">Catégories</a>
       <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
       <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
@@ -418,6 +423,7 @@ function googleTranslateElementInit() {
 (function () {
   // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
   // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
   var banner = document.getElementById('update-banner');
   if (!banner) return;
   var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
@@ -425,6 +431,22 @@ function googleTranslateElementInit() {
   if (currentCount > seenCount) {
     banner.hidden = false;
   }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
   var closeBtn = document.getElementById('update-banner-close');
   if (closeBtn) {
     closeBtn.addEventListener('click', function () {

@@ -803,39 +803,63 @@ h1, h2, h3 {
 /* ---------- Bannière "nouveauté" en haut de page ---------- */
 
 .update-banner {
-  background: var(--link);
-  color: #0C1220;
+  background: var(--bg-raised);
+  border-bottom: 1px solid var(--line);
+  border-top: 2px solid var(--clay);
+  color: var(--ink-soft);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 0.65rem 1rem;
-  font-size: 0.88rem;
-  font-weight: 600;
+  gap: 0.9rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
   text-align: center;
 }
 
-.update-banner a {
-  color: #0C1220;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+/* Corrige un bug d'affichage : sans cette règle, l'attribut "hidden"
+   posé en JavaScript n'avait aucun effet, car la règle .update-banner
+   ci-dessus (display: flex) prenait toujours le dessus. */
+.update-banner[hidden] {
+  display: none;
 }
+
+.update-banner a {
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.update-banner a:hover .update-banner-text { color: var(--clay); }
+
+.update-banner-text {
+  color: var(--ink);
+  font-weight: 600;
+  transition: opacity 0.35s ease;
+}
+
+.update-banner-text.fading { opacity: 0; }
+
+.update-banner-arrow { color: var(--clay); flex-shrink: 0; }
 
 .update-banner button {
   background: transparent;
   border: none;
-  color: #0C1220;
-  font-size: 0.9rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
   cursor: pointer;
   opacity: 0.7;
   flex-shrink: 0;
 }
 
-.update-banner button:hover { opacity: 1; }
+.update-banner button:hover { opacity: 1; color: var(--clay); }
 
 @media (max-width: 640px) {
-  .update-banner { font-size: 0.78rem; padding: 0.6rem 0.75rem; }
+  .update-banner { font-size: 0.74rem; padding: 0.5rem 0.7rem; }
 }
+
 
 .article-header .category {
   color: var(--clay);
@@ -1166,6 +1190,53 @@ h1, h2, h3 {
   margin: 0;
 }
 
+.support-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: transparent;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+  margin: 0 0 3rem;
+  max-width: 640px;
+}
+
+.support-note-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.4; }
+
+.support-note-title {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.9rem;
+  margin: 0 0 0.3rem;
+}
+
+.support-note p {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.support-note a { color: var(--clay); }
+
+.kofi-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  background: var(--clay);
+  color: var(--bg);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.kofi-button:hover { transform: translateY(-2px); opacity: 0.9; }
+
 /* ---------- Icônes décoratives de bloc + séparateur ---------- */
 
 .block-icon {
@@ -1262,6 +1333,21 @@ body {
 
 .icon-toggle:hover { border-color: var(--clay); color: var(--clay); }
 .icon-toggle.active { border-color: var(--link); color: var(--link); }
+
+.kofi-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid var(--clay);
+  font-size: 0.95rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.kofi-nav-link:hover { background: var(--clay); }
 
 /* Neutralise l'habillage par défaut de Google Translate pour qu'il ne
    casse pas la mise en page (bandeau du haut, surlignage, etc.) */
