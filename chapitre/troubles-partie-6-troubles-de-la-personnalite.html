@@ -9,15 +9,6 @@
 </head>
 <body>
 <canvas id="fluid-cursor" aria-hidden="true"></canvas>
-<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
-  <a href="../nouveautes.html">
-    <span>🆕</span>
-    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
-    <span class="update-banner-arrow">→</span>
-  </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
-</div>
-<div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
   <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
   <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
@@ -28,9 +19,6 @@
     <nav class="site-nav">
       <a href="../index.html#categories">Catégories</a>
       <a href="../index.html#a-propos">À propos</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
-      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
@@ -45,7 +33,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#61-le-trouble-de-la-personnalite-paranoiaque">🧠 6.1 Le trouble de la personnalité paranoïaque</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#relations">Relations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#comment-aider-un-proche">🤝 Comment aider un proche</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#62-le-trouble-de-la-personnalite-schizoide">🧠 6.2 Le trouble de la personnalité schizoïde</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#a-distinguer">À distinguer</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#63-le-trouble-de-la-personnalite-schizotypique">🧠 6.3 Le trouble de la personnalité schizotypique</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#relations_1">Relations</a></li><li><a href="#difference-avec-la-schizophrenie">Différence avec la schizophrénie</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#64-le-trouble-de-la-personnalite-antisociale">🧠 6.4 Le trouble de la personnalité antisociale</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#empathie-et-culpabilite">Empathie et culpabilité</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#65-le-trouble-de-la-personnalite-borderline">🧠 6.5 Le trouble de la personnalité borderline</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations-emotionnelles">Manifestations émotionnelles</a></li><li><a href="#relations_2">Relations</a></li><li><a href="#image-de-soi">Image de soi</a></li><li><a href="#impulsivite">Impulsivité</a></li><li><a href="#autres-manifestations">Autres manifestations</a></li><li><a href="#comment-aider-un-proche-avec-un-trouble-borderline">🤝 Comment aider un proche avec un trouble borderline</a></li><li><a href="#prise-en-charge_1">🛠️ Prise en charge</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#66-le-trouble-de-la-personnalite-histrionique">🧠 6.6 Le trouble de la personnalité histrionique</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#relations_3">Relations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#67-le-trouble-de-la-personnalite-narcissique">🧠 6.7 Le trouble de la personnalité narcissique</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#estime-de-soi">Estime de soi</a></li><li><a href="#a-distinguer_1">À distinguer</a></li><li><a href="#comment-interagir-avec-un-proche-narcissique">🤝 Comment interagir avec un proche narcissique</a></li><li><a href="#prise-en-charge_2">🛠️ Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#68-le-trouble-de-la-personnalite-evitante">🧠 6.8 Le trouble de la personnalité évitante</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#difference-avec-la-timidite">Différence avec la timidité</a></li><li><a href="#comment-aider-un-proche_1">🤝 Comment aider un proche</a></li><li><a href="#prise-en-charge_3">🛠️ Prise en charge</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#69-le-trouble-de-la-personnalite-dependante">🧠 6.9 Le trouble de la personnalité dépendante</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#relations_4">Relations</a></li><li><a href="#a-distinguer_2">À distinguer</a></li><li><a href="#comment-aider-un-proche_2">🤝 Comment aider un proche</a></li><li><a href="#prise-en-charge_4">🛠️ Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#610-le-trouble-de-la-personnalite-obsessionnelle-compulsive">🧠 6.10 Le trouble de la personnalité obsessionnelle-compulsive</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#attention-a-la-confusion-avec-le-toc">Attention à la confusion avec le TOC</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#611-les-troubles-de-la-personnalite-fonctionnement-general">🧠 6.11 Les troubles de la personnalité : fonctionnement général</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#caracteristiques-generales">Caractéristiques générales</a></li><li><a href="#debut">Début</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#612-les-groupes-de-troubles-de-la-personnalite">🧠 6.12 Les groupes de troubles de la personnalité</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#groupe-a-personnalites-dites-excentriques-ou-bizarres">Groupe A — Personnalités dites excentriques ou bizarres</a></li><li><a href="#groupe-b-personnalites-dites-dramatiques-emotionnelles-ou-imprevisibles">Groupe B — Personnalités dites dramatiques, émotionnelles ou imprévisibles</a></li><li><a href="#groupe-c-personnalites-dites-anxieuses-ou-craintives">Groupe C — Personnalités dites anxieuses ou craintives</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#613-traits-de-personnalite-et-trouble-de-la-personnalite">🧠 6.13 Traits de personnalité et trouble de la personnalité</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#quand-devient-il-problematique">Quand devient-il problématique ?</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#614-la-rigidite-psychologique">🧠 6.14 La rigidité psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#importance">Importance</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#61-le-trouble-de-la-personnalite-paranoiaque">🧠 6.1 Le trouble de la personnalité paranoïaque</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#relations">Relations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#62-le-trouble-de-la-personnalite-schizoide">🧠 6.2 Le trouble de la personnalité schizoïde</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#a-distinguer">À distinguer</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#63-le-trouble-de-la-personnalite-schizotypique">🧠 6.3 Le trouble de la personnalité schizotypique</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#relations_1">Relations</a></li><li><a href="#difference-avec-la-schizophrenie">Différence avec la schizophrénie</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#64-le-trouble-de-la-personnalite-antisociale">🧠 6.4 Le trouble de la personnalité antisociale</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#empathie-et-culpabilite">Empathie et culpabilité</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#65-le-trouble-de-la-personnalite-borderline">🧠 6.5 Le trouble de la personnalité borderline</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations-emotionnelles">Manifestations émotionnelles</a></li><li><a href="#relations_2">Relations</a></li><li><a href="#image-de-soi">Image de soi</a></li><li><a href="#impulsivite">Impulsivité</a></li><li><a href="#autres-manifestations">Autres manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#66-le-trouble-de-la-personnalite-histrionique">🧠 6.6 Le trouble de la personnalité histrionique</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#relations_3">Relations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#67-le-trouble-de-la-personnalite-narcissique">🧠 6.7 Le trouble de la personnalité narcissique</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#estime-de-soi">Estime de soi</a></li><li><a href="#a-distinguer_1">À distinguer</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#68-le-trouble-de-la-personnalite-evitante">🧠 6.8 Le trouble de la personnalité évitante</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#difference-avec-la-timidite">Différence avec la timidité</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#69-le-trouble-de-la-personnalite-dependante">🧠 6.9 Le trouble de la personnalité dépendante</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#relations_4">Relations</a></li><li><a href="#a-distinguer_2">À distinguer</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#610-le-trouble-de-la-personnalite-obsessionnelle-compulsive">🧠 6.10 Le trouble de la personnalité obsessionnelle-compulsive</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#attention-a-la-confusion-avec-le-toc">Attention à la confusion avec le TOC</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#611-les-troubles-de-la-personnalite-fonctionnement-general">🧠 6.11 Les troubles de la personnalité : fonctionnement général</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#caracteristiques-generales">Caractéristiques générales</a></li><li><a href="#debut">Début</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#612-les-groupes-de-troubles-de-la-personnalite">🧠 6.12 Les groupes de troubles de la personnalité</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#groupe-a-personnalites-dites-excentriques-ou-bizarres">Groupe A — Personnalités dites excentriques ou bizarres</a></li><li><a href="#groupe-b-personnalites-dites-dramatiques-emotionnelles-ou-imprevisibles">Groupe B — Personnalités dites dramatiques, émotionnelles ou imprévisibles</a></li><li><a href="#groupe-c-personnalites-dites-anxieuses-ou-craintives">Groupe C — Personnalités dites anxieuses ou craintives</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#613-traits-de-personnalite-et-trouble-de-la-personnalite">🧠 6.13 Traits de personnalité et trouble de la personnalité</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#quand-devient-il-problematique">Quand devient-il problématique ?</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#614-la-rigidite-psychologique">🧠 6.14 La rigidité psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#importance">Importance</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -58,7 +46,6 @@
     </script>
     <div class="article-header">
       <span class="category"><a href="../categorie/troubles.html">🩺 Troubles psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
       <h1>Partie 6 — Troubles de la personnalité</h1>
     </div>
     <div id="resume-banner"></div>
@@ -97,15 +84,6 @@
 <h2 id="particularite">Particularité</h2>
 <p>Il ne faut pas confondre ce trouble avec une simple prudence ou une méfiance occasionnelle.</p>
 <p>Les caractéristiques sont durables et influencent profondément le fonctionnement de la personne.</p>
-<h2 id="comment-aider-un-proche">🤝 Comment aider un proche</h2>
-<ul>
-<li><strong>Ne pas prendre la méfiance comme une attaque personnelle</strong>, même si elle vise parfois ceux qui essaient d'aider — elle fait partie du fonctionnement du trouble, pas un jugement réfléchi sur la relation.</li>
-<li><strong>Être particulièrement clair et cohérent</strong> dans ses paroles et ses actes : les ambiguïtés ou les changements de discours peuvent facilement être interprétés comme des signes de trahison.</li>
-<li><strong>Éviter les secrets ou les messes basses</strong>, même anodins, qui peuvent alimenter la suspicion.</li>
-<li><strong>Ne pas chercher à convaincre à tout prix</strong> que la méfiance est infondée ; il est souvent plus utile de rester factuel et rassurant sur la durée que de débattre point par point.</li>
-</ul>
-<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
-<p>Une psychothérapie peut aider la personne à identifier ses schémas de pensée méfiants et à développer une plus grande tolérance à l'incertitude relationnelle. L'alliance de confiance avec le thérapeute se construit souvent plus lentement que pour d'autres troubles, ce qui fait partie du processus.</p>
 <h2 id="a-retenir">À retenir</h2>
 <p>Le trouble de la personnalité paranoïaque implique une méfiance persistante et généralisée envers les intentions des autres.</p>
 <h1 id="62-le-trouble-de-la-personnalite-schizoide" class="entry-title hc-2">🧠 6.2  Le trouble de la personnalité schizoïde</h1>
@@ -213,17 +191,6 @@
 </ul>
 <h2 id="autres-manifestations">Autres manifestations</h2>
 <p>Des comportements d'automutilation ou des pensées suicidaires peuvent également apparaître chez certaines personnes.</p>
-<h2 id="comment-aider-un-proche-avec-un-trouble-borderline">🤝 Comment aider un proche avec un trouble borderline</h2>
-<ul>
-<li><strong>Valider l'intensité de l'émotion ressentie</strong>, même si la réaction semble disproportionnée par rapport à la situation — l'émotion, elle, est bien réelle et intense pour la personne.</li>
-<li><strong>Rester stable et prévisible dans la relation</strong>, en particulier autour des sujets de séparation ou d'éloignement, souvent vécus de façon très intense.</li>
-<li><strong>Poser des limites claires sans rupture brutale.</strong> Il est possible de dire non ou de prendre de la distance sans que cela soit vécu comme un abandon total, en l'exprimant clairement et calmement.</li>
-<li><strong>Prendre au sérieux toute évocation d'automutilation ou de pensées suicidaires</strong>, sans dramatiser ni minimiser, et orienter vers un professionnel de santé.</li>
-<li><strong>Éviter les réactions extrêmes en miroir</strong> (colère, rejet) face à l'intensité émotionnelle exprimée, qui peuvent renforcer le cycle plutôt que l'apaiser.</li>
-<li><strong>Prendre soin de soi.</strong> La relation avec une personne borderline peut être intense pour l'entourage aussi ; un soutien personnel (thérapie, groupe de parole) est souvent précieux.</li>
-</ul>
-<h2 id="prise-en-charge_1">🛠️ Prise en charge</h2>
-<p>Certaines psychothérapies spécifiquement développées pour ce trouble, notamment la <strong>thérapie comportementale dialectique (TCD)</strong>, ont montré leur utilité : elles travaillent sur la régulation émotionnelle, la tolérance à la détresse et les compétences relationnelles. Un accompagnement au long cours, parfois avec un soutien médicamenteux ciblé sur certains symptômes, est généralement nécessaire.</p>
 <h2 id="a-retenir_4">À retenir</h2>
 <p>Le trouble borderline ne signifie pas simplement « être très émotif ». Il s'agit d'un trouble complexe impliquant notamment la régulation émotionnelle, les relations et l'identité.</p>
 <h1 id="66-le-trouble-de-la-personnalite-histrionique" class="entry-title hc-1">🧠 6.6  Le trouble de la personnalité histrionique</h1>
@@ -262,15 +229,6 @@
 <p>Une critique peut provoquer une réaction émotionnelle importante.</p>
 <h2 id="a-distinguer_1">À distinguer</h2>
 <p>Être fier de soi, aimer les compliments ou avoir confiance en soi ne signifie pas avoir un trouble de la personnalité narcissique.</p>
-<h2 id="comment-interagir-avec-un-proche-narcissique">🤝 Comment interagir avec un proche narcissique</h2>
-<ul>
-<li><strong>Ne pas confondre l'assurance apparente avec une invulnérabilité réelle</strong> : l'estime de soi sous-jacente est souvent fragile, ce qui explique des réactions parfois disproportionnées à la critique.</li>
-<li><strong>Poser des limites claires sur ce qui est acceptable dans la relation</strong>, sans attendre que la personne les devine — le manque d'empathie n'est généralement pas intentionnel, mais fait partie du trouble.</li>
-<li><strong>Éviter d'alimenter en permanence le besoin de validation</strong>, ce qui peut renforcer le schéma sans aider la personne à long terme.</li>
-<li><strong>Prendre soin de sa propre estime de soi</strong> dans la relation, particulièrement si elle est mise à mal de façon répétée.</li>
-</ul>
-<h2 id="prise-en-charge_2">🛠️ Prise en charge</h2>
-<p>Une psychothérapie peut aider la personne à travailler sur l'estime de soi sous-jacente et sur les difficultés relationnelles associées, mais la démarche est souvent initiée tardivement, la personne consultant plus fréquemment pour des difficultés associées (relations, humeur) que pour le trouble lui-même.</p>
 <h2 id="a-retenir_6">À retenir</h2>
 <p>Le narcissisme existe sur un continuum. Le trouble narcissique correspond à une forme persistante et problématique de ces caractéristiques.</p>
 <h1 id="68-le-trouble-de-la-personnalite-evitante" class="entry-title hc-3">🧠 6.8  Le trouble de la personnalité évitante</h1>
@@ -289,15 +247,6 @@
 <h2 id="difference-avec-la-timidite">Différence avec la timidité</h2>
 <p>La timidité est fréquente et ne constitue pas automatiquement un trouble.</p>
 <p>Dans le trouble de la personnalité évitante, les difficultés sont plus persistantes, généralisées et ont un impact important sur la vie de la personne.</p>
-<h2 id="comment-aider-un-proche_1">🤝 Comment aider un proche</h2>
-<ul>
-<li><strong>Avancer à son rythme plutôt que de le forcer</strong> à des situations sociales anxiogènes — l'exposition brutale peut renforcer l'évitement plutôt que le réduire.</li>
-<li><strong>Valoriser chaque petit pas</strong> (une interaction, une sortie) plutôt que de comparer à ce qui semblerait « normal » pour quelqu'un d'autre.</li>
-<li><strong>Éviter les critiques directes</strong>, particulièrement redoutées par la personne, même formulées avec de bonnes intentions.</li>
-<li><strong>Encourager sans insister</strong> une prise en charge professionnelle, qui peut aider à progresser plus sereinement que seul.</li>
-</ul>
-<h2 id="prise-en-charge_3">🛠️ Prise en charge</h2>
-<p>La thérapie cognitivo-comportementale, notamment via une exposition progressive et un travail sur la peur du jugement, constitue une approche fréquemment utilisée pour ce trouble.</p>
 <h2 id="a-retenir_7">À retenir</h2>
 <p>Le trouble évitant est marqué par une forte peur du rejet et une tendance à éviter les situations sociales ou relationnelles.</p>
 <h1 id="69-le-trouble-de-la-personnalite-dependante" class="entry-title hc-4">🧠 6.9  Le trouble de la personnalité dépendante</h1>
@@ -319,15 +268,6 @@
 <h2 id="a-distinguer_2">À distinguer</h2>
 <p>Avoir besoin d'aide ou être attaché à quelqu'un n'est pas nécessairement pathologique.</p>
 <p>Le trouble implique un schéma durable de dépendance qui limite l'autonomie.</p>
-<h2 id="comment-aider-un-proche_2">🤝 Comment aider un proche</h2>
-<ul>
-<li><strong>Encourager l'autonomie par petites étapes</strong>, plutôt que de continuer à décider à sa place — même avec de bonnes intentions, cela peut renforcer la dépendance plutôt que d'aider.</li>
-<li><strong>Valoriser les décisions prises seule</strong>, même mineures, pour renforcer la confiance dans sa propre capacité à fonctionner de façon autonome.</li>
-<li><strong>Rester présent sans devenir la seule source de réassurance</strong> : orienter aussi vers d'autres ressources (amis, professionnels) évite de porter seul cette charge sur la durée.</li>
-<li><strong>Ne pas profiter de cette dépendance</strong> ni s'en agacer excessivement ; les deux réactions peuvent entretenir la dynamique du trouble.</li>
-</ul>
-<h2 id="prise-en-charge_4">🛠️ Prise en charge</h2>
-<p>Une psychothérapie peut aider à développer progressivement la confiance en sa propre capacité de jugement et de décision, souvent en travaillant sur la peur sous-jacente de l'abandon ou de la désapprobation.</p>
 <h2 id="a-retenir_8">À retenir</h2>
 <p>Le trouble dépendant se caractérise principalement par une difficulté importante à fonctionner de manière autonome et un besoin excessif d'être pris en charge.</p>
 <h1 id="610-le-trouble-de-la-personnalite-obsessionnelle-compulsive" class="entry-title hc-5">🧠 6.10  Le trouble de la personnalité obsessionnelle-compulsive</h1>
@@ -345,7 +285,7 @@
 <li>accorder une importance excessive aux détails.</li>
 </ul>
 <h2 id="attention-a-la-confusion-avec-le-toc">Attention à la confusion avec le TOC</h2>
-<p>Le <strong>TPOC</strong> et le <strong><a class="gloss-link" href="troubles-partie-2-troubles-obsessionnels-compulsifs-et-apparentes.html#21-le-trouble-obsessionnel-compulsif-toc" title="Voir la définition de TOC">TOC</a></strong> sont deux troubles différents.</p>
+<p>Le <strong>TPOC</strong> et le <strong><a class="gloss-link" href="troubles-partie-7-troubles-des-conduites-alimentaires.html#71-le-trouble-obsessionnel-compulsif-toc" title="Voir la définition de TOC">TOC</a></strong> sont deux troubles différents.</p>
 <p>Le TOC est principalement caractérisé par des obsessions et des compulsions.</p>
 <p>Le TPOC concerne davantage un style de personnalité durable marqué par le perfectionnisme, le contrôle et la rigidité.</p>
 <h2 id="a-retenir_9">À retenir</h2>
@@ -438,11 +378,6 @@
 <h2 id="a-retenir_13">À retenir</h2>
 <p>La rigidité psychologique est un concept important pour comprendre certains troubles de la personnalité, mais elle ne constitue pas un diagnostic à elle seule.</p>
     </div>
-    
-    <div class="similar-block">
-      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="troubles-partie-9-troubles-dissociatifs.html"><span class="similar-icon">🩺</span>Partie 9 — Troubles dissociatifs</a><a class="similar-item" href="troubles-partie-10-troubles-lies-aux-traumatismes-et-au-stress.html"><span class="similar-icon">🩺</span>Partie 10 — Troubles liés aux traumatismes et au stress</a><a class="similar-item" href="troubles-partie-11-troubles-a-symptomatologie-somatique.html"><span class="similar-icon">🩺</span>Partie 11 — Troubles à symptomatologie somatique</a></div>
-    </div>
     <a class="back-link" href="../categorie/troubles.html">← Retour à « Troubles psychologiques »</a>
   </div>
 </main>
@@ -461,110 +396,7 @@ function googleTranslateElementInit() {
   );
 }
 </script>
-<script>
-(function () {
-  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
-  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
-  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
-  var banner = document.getElementById('update-banner');
-  if (!banner) return;
-  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
-  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
-  if (currentCount > seenCount) {
-    banner.hidden = false;
-  }
-
-  var textEl = document.getElementById('update-banner-text');
-  var titles = [];
-  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
-  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var idx = 0;
-    setInterval(function () {
-      idx = (idx + 1) % titles.length;
-      textEl.classList.add('fading');
-      setTimeout(function () {
-        textEl.textContent = titles[idx];
-        textEl.classList.remove('fading');
-      }, 350);
-    }, 10000);
-  }
-
-  var closeBtn = document.getElementById('update-banner-close');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
-      banner.hidden = true;
-      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
-    });
-  }
-  var link = banner.querySelector('a');
-  if (link) {
-    link.addEventListener('click', function () {
-      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
-    });
-  }
-})();
-</script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script>
-// Notification "toast" discrète, réutilisée par plusieurs boutons.
-function showToast(msg) {
-  var container = document.getElementById('toast-container');
-  if (!container) return;
-  var t = document.createElement('div');
-  t.className = 'toast';
-  t.textContent = msg;
-  container.appendChild(t);
-  requestAnimationFrame(function () { t.classList.add('show'); });
-  setTimeout(function () {
-    t.classList.remove('show');
-    setTimeout(function () { t.remove(); }, 300);
-  }, 2200);
-}
-</script>
-<script>
-(function () {
-  // Thème clair/sombre, mémorisé pour les prochaines visites.
-  var root = document.documentElement;
-  var btn = document.getElementById('theme-toggle');
-  if (!btn) return;
-  var saved = localStorage.getItem('mon-esprit-theme');
-  if (saved === 'light') {
-    root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
-  }
-  btn.addEventListener('click', function () {
-    var isLight = root.getAttribute('data-theme') === 'light';
-    if (isLight) {
-      root.removeAttribute('data-theme');
-      localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
-    } else {
-      root.setAttribute('data-theme', 'light');
-      localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
-    }
-  });
-})();
-
-(function () {
-  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
-  var root = document.documentElement;
-  var btn = document.getElementById('dyslexia-toggle');
-  if (!btn) return;
-  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
-    root.classList.add('dyslexia-font');
-    btn.classList.add('active');
-  }
-  btn.addEventListener('click', function () {
-    var on = root.classList.toggle('dyslexia-font');
-    btn.classList.toggle('active', on);
-    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
-  });
-})();
-</script>
 <script>
 (function () {
   // Bascule FR/EN fiable via cookie Google Translate + rechargement.
@@ -718,66 +550,6 @@ function showToast(msg) {
         expanded = !expanded;
         render(expanded);
         moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
-      });
-    }
-  }
-})();
-
-// ---------------------------------------------------------------
-// Favoris : bouton étoile sur les chapitres, mémorisé pour les
-// prochaines visites, avec une liste dédiée sur l'accueil.
-// ---------------------------------------------------------------
-(function () {
-  var FAV_KEY = 'mon-esprit-favorites';
-  function loadFavorites() {
-    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
-  }
-  function saveFavorites(list) {
-    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
-  }
-
-  // --- Sur une page de chapitre : bouton étoile ---
-  var favBtn = document.getElementById('favorite-btn');
-  if (favBtn && window.__chapterMeta) {
-    var path = window.location.pathname;
-    var meta = window.__chapterMeta;
-    function refreshBtn() {
-      var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
-      favBtn.classList.toggle('is-favorite', isFav);
-      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
-    }
-    favBtn.addEventListener('click', function () {
-      var favorites = loadFavorites();
-      var idx = favorites.findIndex(function (f) { return f.url === path; });
-      if (idx === -1) {
-        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
-      } else {
-        favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
-      }
-      saveFavorites(favorites);
-      refreshBtn();
-    });
-    refreshBtn();
-  }
-
-  // --- Sur l'accueil : liste des favoris ---
-  var favSection = document.getElementById('favorites-section');
-  if (favSection) {
-    var favorites = loadFavorites();
-    if (favorites.length > 0) {
-      favSection.hidden = false;
-      var favList = document.getElementById('favorites-list');
-      favorites.forEach(function (f) {
-        var a = document.createElement('a');
-        a.className = 'history-item';
-        a.href = f.url;
-        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
-          '<span><span class="history-title">' + f.title + '</span>' +
-          '<span class="history-cat">' + f.category + '</span></span>';
-        favList.appendChild(a);
       });
     }
   }
@@ -989,10 +761,8 @@ function showToast(msg) {
   // Traînée fluide colorée façon encre dans l'eau : un système de
   // particules qui se mélangent, ondulent, ralentissent puis se
   // dissipent. Le point du curseur reste net et discret par-dessus.
-  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
-  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (window.matchMedia('(pointer: coarse)').matches) return;
   var canvas = document.getElementById('fluid-cursor');
   if (!canvas || !canvas.getContext) return;
   var ctx = canvas.getContext('2d');
@@ -1069,7 +839,7 @@ function showToast(msg) {
 
       if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
 
-      var alpha = p.life * 0.22;
+      var alpha = p.life * 0.3;
       var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
       grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
       grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');

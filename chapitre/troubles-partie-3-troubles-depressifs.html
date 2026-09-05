@@ -9,15 +9,6 @@
 </head>
 <body>
 <canvas id="fluid-cursor" aria-hidden="true"></canvas>
-<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
-  <a href="../nouveautes.html">
-    <span>🆕</span>
-    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
-    <span class="update-banner-arrow">→</span>
-  </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
-</div>
-<div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
   <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
   <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
@@ -28,9 +19,6 @@
     <nav class="site-nav">
       <a href="../index.html#categories">Catégories</a>
       <a href="../index.html#a-propos">À propos</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
-      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
@@ -45,7 +33,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#31-le-trouble-depressif-caracterise">🧠 3.1 Le trouble dépressif caractérisé</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations-principales">Manifestations principales</a></li><li><a href="#manifestations-emotionnelles">Manifestations émotionnelles</a></li><li><a href="#manifestations-cognitives">Manifestations cognitives</a></li><li><a href="#manifestations-physiques">Manifestations physiques</a></li><li><a href="#causes">Causes</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#comment-aider-un-proche-en-depression">🤝 Comment aider un proche en dépression</a></li><li><a href="#techniques-concretes">🛠️ Techniques concrètes</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#32-le-trouble-depressif-persistant">🧠 3.2 Le trouble dépressif persistant</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#causes_1">Causes</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#comment-aider-un-proche">🤝 Comment aider un proche</a></li><li><a href="#techniques-concretes_1">🛠️ Techniques concrètes</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#33-le-trouble-dysphorique-premenstruel">🧠 3.3 Le trouble dysphorique prémenstruel</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations-emotionnelles_1">Manifestations émotionnelles</a></li><li><a href="#manifestations-cognitives_1">Manifestations cognitives</a></li><li><a href="#manifestations-physiques_1">Manifestations physiques</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#34-le-trouble-depressif-induit-par-une-substance-ou-un-medicament">🧠 3.4 Le trouble dépressif induit par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#35-le-trouble-depressif-du-a-une-autre-affection-medicale">🧠 3.5 Le trouble dépressif dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#36-autre-trouble-depressif-specifie">🧠 3.6 Autre trouble dépressif spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#interet">Intérêt</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#37-trouble-depressif-non-specifie">🧠 3.7 Trouble dépressif non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#38-episode-depressif">🧩3.8 Épisode dépressif</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#symptomes">Symptômes</a></li><li><a href="#intensite">Intensité</a></li><li><a href="#evolution_2">Évolution</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#39-la-depression-avec-caracteristiques-melancoliques">🧠 3.9 La dépression avec caractéristiques mélancoliques</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#310-la-depression-avec-caracteristiques-atypiques">🧠 3.10 La dépression avec caractéristiques atypiques</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#311-la-depression-avec-caracteristiques-psychotiques">🧠 3.11 La dépression avec caractéristiques psychotiques</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#particularite_2">Particularité</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#312-la-depression-avec-caracteristiques-anxieuses">🧠 3.12 La dépression avec caractéristiques anxieuses</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#313-la-depression-avec-caracteristiques-mixtes">🧠 3.13 La dépression avec caractéristiques mixtes</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li><li><a href="#importance-clinique">Importance clinique</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#314-la-depression-saisonniere">🧠 3.14 La dépression saisonnière</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#particularite_3">Particularité</a></li><li><a href="#comment-aider-un-proche_1">🤝 Comment aider un proche</a></li><li><a href="#techniques-et-prise-en-charge">🛠️ Techniques et prise en charge</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#315-la-depression-post-partum">🧠 3.15 La dépression post-partum</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-distinguer-du-baby-blues">À distinguer du baby blues</a></li><li><a href="#comment-aider-un-proche-jeune-parent">🤝 Comment aider un proche jeune parent</a></li><li><a href="#techniques-et-prise-en-charge_1">🛠️ Techniques et prise en charge</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#316-la-depression-chez-lenfant-et-ladolescent">🧠 3.16 La dépression chez l'enfant et l'adolescent</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#particularite_4">Particularité</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#comment-aider-un-enfant-ou-un-adolescent">🤝 Comment aider un enfant ou un adolescent</a></li><li><a href="#techniques-concretes_2">🛠️ Techniques concrètes</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#317-la-remission-dun-episode-depressif">🧠 3.17 La rémission d'un épisode dépressif</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#importance">Importance</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#318-la-rechute-et-la-recidive-depressive">🧠 3.18 La rechute et la récidive dépressive</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#facteurs-pouvant-favoriser-une-reapparition">Facteurs pouvant favoriser une réapparition</a></li><li><a href="#prevention">Prévention</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#31-le-trouble-depressif-caracterise">🧠 3.1 Le trouble dépressif caractérisé</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations-principales">Manifestations principales</a></li><li><a href="#manifestations-emotionnelles">Manifestations émotionnelles</a></li><li><a href="#manifestations-cognitives">Manifestations cognitives</a></li><li><a href="#manifestations-physiques">Manifestations physiques</a></li><li><a href="#causes">Causes</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#32-le-trouble-depressif-persistant">🧠 3.2 Le trouble dépressif persistant</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#causes_1">Causes</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#33-le-trouble-dysphorique-premenstruel">🧠 3.3 Le trouble dysphorique prémenstruel</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations-emotionnelles_1">Manifestations émotionnelles</a></li><li><a href="#manifestations-cognitives_1">Manifestations cognitives</a></li><li><a href="#manifestations-physiques_1">Manifestations physiques</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#34-le-trouble-depressif-induit-par-une-substance-ou-un-medicament">🧠 3.4 Le trouble dépressif induit par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#35-le-trouble-depressif-du-a-une-autre-affection-medicale">🧠 3.5 Le trouble dépressif dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#36-autre-trouble-depressif-specifie">🧠 3.6 Autre trouble dépressif spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#interet">Intérêt</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#37-trouble-depressif-non-specifie">🧠 3.7 Trouble dépressif non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#38-episode-depressif">🧩3.8 Épisode dépressif</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#symptomes">Symptômes</a></li><li><a href="#intensite">Intensité</a></li><li><a href="#evolution_2">Évolution</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#39-la-depression-avec-caracteristiques-melancoliques">🧠 3.9 La dépression avec caractéristiques mélancoliques</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#310-la-depression-avec-caracteristiques-atypiques">🧠 3.10 La dépression avec caractéristiques atypiques</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#311-la-depression-avec-caracteristiques-psychotiques">🧠 3.11 La dépression avec caractéristiques psychotiques</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#particularite_2">Particularité</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#312-la-depression-avec-caracteristiques-anxieuses">🧠 3.12 La dépression avec caractéristiques anxieuses</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#313-la-depression-avec-caracteristiques-mixtes">🧠 3.13 La dépression avec caractéristiques mixtes</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li><li><a href="#importance-clinique">Importance clinique</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#314-la-depression-saisonniere">🧠 3.14 La dépression saisonnière</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#particularite_3">Particularité</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#315-la-depression-post-partum">🧠 3.15 La dépression post-partum</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-distinguer-du-baby-blues">À distinguer du baby blues</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#316-la-depression-chez-lenfant-et-ladolescent">🧠 3.16 La dépression chez l'enfant et l'adolescent</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#particularite_4">Particularité</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#317-la-remission-dun-episode-depressif">🧠 3.17 La rémission d'un épisode dépressif</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#importance">Importance</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#318-la-rechute-et-la-recidive-depressive">🧠 3.18 La rechute et la récidive dépressive</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#facteurs-pouvant-favoriser-une-reapparition">Facteurs pouvant favoriser une réapparition</a></li><li><a href="#prevention">Prévention</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -58,7 +46,6 @@
     </script>
     <div class="article-header">
       <span class="category"><a href="../categorie/troubles.html">🩺 Troubles psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
       <h1>Partie 3 — Troubles dépressifs</h1>
     </div>
     <div id="resume-banner"></div>
@@ -141,27 +128,6 @@
 <li>adaptation du mode de vie.</li>
 </ul>
 <p>Le traitement dépend de la situation individuelle.</p>
-<h2 id="comment-aider-un-proche-en-depression">🤝 Comment aider un proche en dépression</h2>
-<ul>
-<li><strong>Ne pas minimiser ni comparer.</strong> « Secoue-toi » ou « d'autres ont pire » peuvent renforcer la culpabilité déjà présente et donner l'impression de ne pas être compris.</li>
-<li><strong>Ne pas exiger un effort de volonté.</strong> La dépression n'est pas un manque de motivation que la personne pourrait surmonter en se forçant davantage.</li>
-<li><strong>Rester présent sans forcer à parler ou à sortir.</strong> Proposer sans insister, et accepter un refus sans le vivre comme un rejet personnel.</li>
-<li><strong>Prendre au sérieux toute évocation de désespoir ou d'idées noires.</strong> Si la personne évoque des pensées suicidaires, ne pas rester seul avec cette information : encourager fermement un contact avec un professionnel ou une ligne d'écoute, même si ces propos semblent dits « à la légère ».</li>
-<li><strong>Prendre soin de soi aussi.</strong> Accompagner un proche dépressif sur la durée est éprouvant ; chercher son propre soutien n'est pas égoïste.</li>
-</ul>
-<h2 id="techniques-concretes">🛠️ Techniques concrètes</h2>
-<h3 id="a-court-terme">À court terme</h3>
-<ul>
-<li><strong>Petites actions structurantes</strong> : maintenir un minimum de routine (heure de lever, un repas, une courte sortie) aide souvent plus que de grands objectifs, difficiles à tenir en période de dépression.</li>
-<li><strong>Fractionner les tâches</strong> en étapes très simples plutôt que d'attendre une motivation qui peut manquer durablement.</li>
-</ul>
-<h3 id="sur-le-long-terme">Sur le long terme</h3>
-<ul>
-<li><strong>Psychothérapie</strong>, notamment les TCC ou les thérapies interpersonnelles, pour travailler sur les pensées négatives et le retrait progressif des activités.</li>
-<li><strong>Traitement médicamenteux</strong>, parfois proposé par un professionnel de santé, seul ou associé à une psychothérapie.</li>
-<li><strong>Activité physique régulière et exposition à la lumière</strong>, dont l'effet sur l'humeur est documenté, en complément d'un suivi, pas à sa place.</li>
-<li><strong>Suivi régulier</strong>, y compris après amélioration, pour repérer tôt un éventuel retour des symptômes.</li>
-</ul>
 <h2 id="evolution">Évolution</h2>
 <p>La dépression peut être ponctuelle ou récidivante.</p>
 <p>Certaines personnes connaissent un seul épisode tandis que d'autres présentent plusieurs épisodes au cours de leur vie.</p>
@@ -211,14 +177,6 @@
 <h2 id="prise-en-charge_1">Prise en charge</h2>
 <p>Une psychothérapie peut aider à modifier certains schémas de pensée et comportements.</p>
 <p>Un traitement médicamenteux peut également être envisagé selon la situation.</p>
-<h2 id="comment-aider-un-proche">🤝 Comment aider un proche</h2>
-<ul>
-<li><strong>Ne pas réduire son état à un « trait de caractère ».</strong> Entendre « c'est juste toi, tu as toujours été comme ça » peut décourager la personne de chercher de l'aide, alors que la dysthymie se soigne comme les autres formes de dépression.</li>
-<li><strong>Valoriser les petites améliorations</strong>, souvent peu visibles sur une humeur chroniquement basse, plutôt que d'attendre un changement radical.</li>
-<li><strong>Encourager une consultation</strong>, même si l'état semble « supportable » au quotidien — la durée ne rend pas la souffrance moins réelle ni moins traitable.</li>
-</ul>
-<h2 id="techniques-concretes_1">🛠️ Techniques concrètes</h2>
-<p>Une psychothérapie, souvent des TCC, travaille sur les schémas de pensée installés depuis longtemps et sur les comportements de retrait qui entretiennent l'humeur basse. Un traitement médicamenteux peut être envisagé selon la situation. Comme la dysthymie s'installe sur la durée, les progrès sont souvent progressifs plutôt que rapides — un suivi patient dans le temps fait partie du traitement.</p>
 <h2 id="a-retenir_1">À retenir</h2>
 <p>La dysthymie se distingue principalement par son caractère durable. Une personne peut fonctionner relativement normalement tout en vivant depuis longtemps avec une humeur dépressive.</p>
 <h1 id="33-le-trouble-dysphorique-premenstruel" class="entry-title hc-3">🧠 3.3  Le trouble dysphorique prémenstruel</h1>
@@ -480,14 +438,6 @@
 </ul>
 <h2 id="particularite_3">Particularité</h2>
 <p>Le caractère répétitif et saisonnier des épisodes est essentiel.</p>
-<h2 id="comment-aider-un-proche_1">🤝 Comment aider un proche</h2>
-<ul>
-<li><strong>Anticiper avec la personne</strong> l'arrivée de la saison à risque plutôt que d'attendre que les symptômes s'installent, si le profil s'est déjà répété les années précédentes.</li>
-<li><strong>Favoriser l'exposition à la lumière naturelle</strong> (sorties en journée, luminosité de l'intérieur) sans en faire une obligation culpabilisante si la fatigue est importante.</li>
-<li><strong>Rester attentif aux mêmes signes que pour une dépression classique</strong>, notamment si l'intensité dépasse ce que la personne a connu les années précédentes.</li>
-</ul>
-<h2 id="techniques-et-prise-en-charge">🛠️ Techniques et prise en charge</h2>
-<p>La <strong>luminothérapie</strong> (exposition à une lumière spécifique, généralement le matin) est une approche spécifiquement étudiée pour ce profil saisonnier, en complément d'une psychothérapie ou d'un traitement médicamenteux si nécessaire — le choix dépend de l'intensité des épisodes et se construit avec un professionnel de santé.</p>
 <h2 id="a-retenir_13">À retenir</h2>
 <p>Une dépression saisonnière correspond à un schéma particulier d'apparition des épisodes dépressifs à certaines périodes de l'année.</p>
 <h1 id="315-la-depression-post-partum" class="entry-title hc-5">🧠 3.15 La dépression post-partum</h1>
@@ -509,15 +459,6 @@
 <h2 id="a-distinguer-du-baby-blues">À distinguer du baby blues</h2>
 <p>Le <strong>baby blues</strong> est fréquent après l'accouchement et est généralement bref.</p>
 <p>La dépression post-partum est plus intense ou plus durable et peut nécessiter une prise en charge.</p>
-<h2 id="comment-aider-un-proche-jeune-parent">🤝 Comment aider un proche jeune parent</h2>
-<ul>
-<li><strong>Ne jamais culpabiliser</strong> ni laisser entendre qu'un « bon parent » ne devrait pas se sentir ainsi — la dépression post-partum n'a aucun lien avec l'amour porté à l'enfant, et la culpabilité est déjà l'un des symptômes les plus lourds à porter.</li>
-<li><strong>Proposer une aide concrète</strong> (garde de l'enfant, tâches du quotidien) plutôt que des conseils généraux : le manque de sommeil et la charge mentale aggravent souvent les symptômes.</li>
-<li><strong>Encourager sans attendre une consultation</strong> auprès d'un professionnel de santé (médecin, sage-femme, psychologue) — plus la prise en charge est précoce, plus elle est efficace.</li>
-<li><strong>Prendre au sérieux toute évocation de pensées noires</strong>, y compris envers l'enfant : ces pensées, aussi effrayantes soient-elles à évoquer, doivent être signalées immédiatement à un professionnel de santé, sans jugement.</li>
-</ul>
-<h2 id="techniques-et-prise-en-charge_1">🛠️ Techniques et prise en charge</h2>
-<p>Un dépistage précoce, souvent proposé lors des visites postnatales, permet une prise en charge rapide : psychothérapie, groupes de soutien entre parents, et traitement médicamenteux compatible avec l'allaitement si besoin, à évaluer avec un professionnel de santé. Le repos, même fractionné, et le soutien de l'entourage pour les tâches quotidiennes font partie intégrante du rétablissement.</p>
 <h2 id="a-retenir_14">À retenir</h2>
 <p>La dépression post-partum est un problème médical et psychologique réel. Elle ne signifie pas qu'un parent est incapable d'aimer son enfant.</p>
 <h1 id="316-la-depression-chez-lenfant-et-ladolescent" class="entry-title hc-1">🧠 3.16  La dépression chez l'enfant et l'adolescent</h1>
@@ -541,16 +482,6 @@
 <p>Chez l'enfant et l'adolescent, l'irritabilité peut parfois être plus visible que la tristesse.</p>
 <h2 id="prise-en-charge_8">Prise en charge</h2>
 <p>L'accompagnement peut impliquer le jeune, sa famille, l'école et des professionnels de santé selon la situation.</p>
-<h2 id="comment-aider-un-enfant-ou-un-adolescent">🤝 Comment aider un enfant ou un adolescent</h2>
-<ul>
-<li><strong>Prêter attention à l'irritabilité et à la colère</strong>, pas seulement à la tristesse — chez les jeunes, ce sont souvent les signes les plus visibles.</li>
-<li><strong>Éviter de mettre la baisse des résultats scolaires sur le compte de la seule « paresse »</strong> avant d'avoir envisagé d'autres causes.</li>
-<li><strong>Maintenir le dialogue sans forcer les confidences</strong> : proposer d'en parler régulièrement, sans insister si le jeune se ferme, tout en restant disponible.</li>
-<li><strong>Impliquer l'école si besoin</strong>, en accord avec le jeune quand c'est possible, pour un accompagnement cohérent entre la maison et la scolarité.</li>
-<li><strong>Prendre au sérieux tout changement brutal de comportement</strong> ou toute évocation de mal-être profond, et consulter rapidement un professionnel de santé.</li>
-</ul>
-<h2 id="techniques-concretes_2">🛠️ Techniques concrètes</h2>
-<p>Une psychothérapie adaptée à l'âge, souvent avec une implication parentale, est fréquemment proposée. Un traitement médicamenteux est plus rarement utilisé chez les plus jeunes et toujours encadré par un spécialiste.</p>
 <h2 id="a-retenir_15">À retenir</h2>
 <p>La dépression chez les jeunes peut prendre des formes différentes. Un changement durable et important du comportement mérite une attention particulière.</p>
 <h1 id="317-la-remission-dun-episode-depressif" class="entry-title hc-2"><strong>🧠 3.17  La rémission d'un épisode dépressif</strong></h1>
@@ -581,11 +512,6 @@
 <h2 id="a-retenir_17">À retenir</h2>
 <p>La disparition des symptômes n'empêche pas nécessairement leur réapparition. La prévention des épisodes futurs peut donc faire partie de la prise en charge.</p>
     </div>
-    
-    <div class="similar-block">
-      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="troubles-partie-4-troubles-bipolaires.html"><span class="similar-icon">🩺</span>Partie 4 — Troubles bipolaires</a><a class="similar-item" href="troubles-partie-5-schizophrenie-et-autres-troubles-psychotiques.html"><span class="similar-icon">🩺</span>Partie 5 — Schizophrénie et autres troubles psychotiques</a><a class="similar-item" href="troubles-partie-6-troubles-de-la-personnalite.html"><span class="similar-icon">🩺</span>Partie 6 — Troubles de la personnalité</a></div>
-    </div>
     <a class="back-link" href="../categorie/troubles.html">← Retour à « Troubles psychologiques »</a>
   </div>
 </main>
@@ -604,110 +530,7 @@ function googleTranslateElementInit() {
   );
 }
 </script>
-<script>
-(function () {
-  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
-  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
-  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
-  var banner = document.getElementById('update-banner');
-  if (!banner) return;
-  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
-  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
-  if (currentCount > seenCount) {
-    banner.hidden = false;
-  }
-
-  var textEl = document.getElementById('update-banner-text');
-  var titles = [];
-  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
-  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var idx = 0;
-    setInterval(function () {
-      idx = (idx + 1) % titles.length;
-      textEl.classList.add('fading');
-      setTimeout(function () {
-        textEl.textContent = titles[idx];
-        textEl.classList.remove('fading');
-      }, 350);
-    }, 10000);
-  }
-
-  var closeBtn = document.getElementById('update-banner-close');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
-      banner.hidden = true;
-      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
-    });
-  }
-  var link = banner.querySelector('a');
-  if (link) {
-    link.addEventListener('click', function () {
-      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
-    });
-  }
-})();
-</script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script>
-// Notification "toast" discrète, réutilisée par plusieurs boutons.
-function showToast(msg) {
-  var container = document.getElementById('toast-container');
-  if (!container) return;
-  var t = document.createElement('div');
-  t.className = 'toast';
-  t.textContent = msg;
-  container.appendChild(t);
-  requestAnimationFrame(function () { t.classList.add('show'); });
-  setTimeout(function () {
-    t.classList.remove('show');
-    setTimeout(function () { t.remove(); }, 300);
-  }, 2200);
-}
-</script>
-<script>
-(function () {
-  // Thème clair/sombre, mémorisé pour les prochaines visites.
-  var root = document.documentElement;
-  var btn = document.getElementById('theme-toggle');
-  if (!btn) return;
-  var saved = localStorage.getItem('mon-esprit-theme');
-  if (saved === 'light') {
-    root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
-  }
-  btn.addEventListener('click', function () {
-    var isLight = root.getAttribute('data-theme') === 'light';
-    if (isLight) {
-      root.removeAttribute('data-theme');
-      localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
-    } else {
-      root.setAttribute('data-theme', 'light');
-      localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
-    }
-  });
-})();
-
-(function () {
-  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
-  var root = document.documentElement;
-  var btn = document.getElementById('dyslexia-toggle');
-  if (!btn) return;
-  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
-    root.classList.add('dyslexia-font');
-    btn.classList.add('active');
-  }
-  btn.addEventListener('click', function () {
-    var on = root.classList.toggle('dyslexia-font');
-    btn.classList.toggle('active', on);
-    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
-  });
-})();
-</script>
 <script>
 (function () {
   // Bascule FR/EN fiable via cookie Google Translate + rechargement.
@@ -861,66 +684,6 @@ function showToast(msg) {
         expanded = !expanded;
         render(expanded);
         moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
-      });
-    }
-  }
-})();
-
-// ---------------------------------------------------------------
-// Favoris : bouton étoile sur les chapitres, mémorisé pour les
-// prochaines visites, avec une liste dédiée sur l'accueil.
-// ---------------------------------------------------------------
-(function () {
-  var FAV_KEY = 'mon-esprit-favorites';
-  function loadFavorites() {
-    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
-  }
-  function saveFavorites(list) {
-    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
-  }
-
-  // --- Sur une page de chapitre : bouton étoile ---
-  var favBtn = document.getElementById('favorite-btn');
-  if (favBtn && window.__chapterMeta) {
-    var path = window.location.pathname;
-    var meta = window.__chapterMeta;
-    function refreshBtn() {
-      var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
-      favBtn.classList.toggle('is-favorite', isFav);
-      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
-    }
-    favBtn.addEventListener('click', function () {
-      var favorites = loadFavorites();
-      var idx = favorites.findIndex(function (f) { return f.url === path; });
-      if (idx === -1) {
-        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
-      } else {
-        favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
-      }
-      saveFavorites(favorites);
-      refreshBtn();
-    });
-    refreshBtn();
-  }
-
-  // --- Sur l'accueil : liste des favoris ---
-  var favSection = document.getElementById('favorites-section');
-  if (favSection) {
-    var favorites = loadFavorites();
-    if (favorites.length > 0) {
-      favSection.hidden = false;
-      var favList = document.getElementById('favorites-list');
-      favorites.forEach(function (f) {
-        var a = document.createElement('a');
-        a.className = 'history-item';
-        a.href = f.url;
-        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
-          '<span><span class="history-title">' + f.title + '</span>' +
-          '<span class="history-cat">' + f.category + '</span></span>';
-        favList.appendChild(a);
       });
     }
   }
@@ -1132,10 +895,8 @@ function showToast(msg) {
   // Traînée fluide colorée façon encre dans l'eau : un système de
   // particules qui se mélangent, ondulent, ralentissent puis se
   // dissipent. Le point du curseur reste net et discret par-dessus.
-  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
-  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  // Désactivé si la personne préfère moins d'animations.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (window.matchMedia('(pointer: coarse)').matches) return;
   var canvas = document.getElementById('fluid-cursor');
   if (!canvas || !canvas.getContext) return;
   var ctx = canvas.getContext('2d');
@@ -1212,7 +973,7 @@ function showToast(msg) {
 
       if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
 
-      var alpha = p.life * 0.22;
+      var alpha = p.life * 0.3;
       var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
       grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
       grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');

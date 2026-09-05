@@ -34,51 +34,10 @@
   --acc-emotions: var(--link);
   --acc-avances: #E27DBB;
   --acc-histoires: #C9A876;
-  --acc-justice: #C75450;
-  --acc-experiences: #7C93FF;
 
   --mx: 50%;
   --my: 30%;
 }
-
-/* ---------- Thème clair (activé via data-theme="light" sur <html>) ---------- */
-html[data-theme="light"] {
-  --bg: #F7F7F5;
-  --bg-raised: #FFFFFF;
-  --bg-raised-2: #EFEFEC;
-  --ink: #24282A;
-  --ink-soft: #5C645D;
-  --title: #14171A;
-  --link: #2A56D6;
-  --clay: #C56A1F;
-  --line: #DDE0DB;
-
-  --hc-1: #0E86AD;
-  --hc-2: #7A4FE0;
-  --hc-3: #A6740A;
-  --hc-4: #159C78;
-  --hc-5: #D6336C;
-
-  --acc-avances: #B84F8C;
-  --acc-histoires: #96702E;
-  --acc-justice: #A83530;
-  --acc-experiences: #4A63E8;
-}
-
-html[data-theme="light"] #fluid-cursor { mix-blend-mode: multiply; }
-html[data-theme="light"] body::before { display: none; }
-
-/* ---------- Police adaptée dyslexie (activée via .dyslexia-font sur <html>) --- */
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
-html.dyslexia-font,
-html.dyslexia-font .site-title,
-html.dyslexia-font h1,
-html.dyslexia-font h2,
-html.dyslexia-font h3 {
-  font-family: 'Comic Neue', 'Comic Sans MS', sans-serif !important;
-  letter-spacing: 0.02em;
-}
-html.dyslexia-font body { line-height: 1.85; }
 
 * { box-sizing: border-box; }
 
@@ -296,6 +255,8 @@ h1, h2, h3 {
   border-radius: 3px;
 }
 .search-results::-webkit-scrollbar-thumb:hover { background: var(--ink-soft); }
+  padding: 0.5rem;
+}
 
 .search-result-item {
   display: flex;
@@ -458,7 +419,6 @@ h1, h2, h3 {
 
 .cat-card {
   --accent: var(--clay);
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -469,20 +429,6 @@ h1, h2, h3 {
   text-decoration: none;
   color: inherit;
   transition: border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
-}
-
-.cat-badge-new {
-  position: absolute;
-  top: 0.9rem;
-  right: 0.9rem;
-  background: var(--accent);
-  color: var(--bg);
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 0.25rem 0.55rem;
-  border-radius: 20px;
 }
 
 .cat-card:hover {
@@ -625,241 +571,11 @@ h1, h2, h3 {
 .chapter-item .read-more { color: var(--link); font-size: 0.92rem; font-weight: 600; }
 .chapter-item:hover h2, .chapter-item:hover .read-more { color: var(--clay); }
 
-.chapter-item-disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.chapter-item-disabled h2 { color: var(--ink-soft); }
-
-.chapter-badge-closed {
-  color: var(--ink-soft);
-  font-size: 0.85rem;
-  font-weight: 600;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 0.25rem 0.7rem;
-  flex-shrink: 0;
-}
-
 /* ---------- Article page (generic) ---------- */
 
 .article-header {
   padding: 3.5rem 0 2rem;
-  position: relative;
 }
-
-.favorite-btn {
-  position: absolute;
-  top: 3.5rem;
-  right: 0;
-  background: var(--bg-raised);
-  border: 1px solid var(--line);
-  color: var(--ink-soft);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.favorite-btn:hover { border-color: var(--clay); color: var(--clay); }
-.favorite-btn.is-favorite { color: var(--clay); border-color: var(--clay); }
-
-.similar-block {
-  margin: 3rem 0 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--line);
-}
-
-.similar-block h2 {
-  font-size: 1.05rem;
-  color: var(--ink-soft);
-  margin-bottom: 1rem;
-}
-
-.similar-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.similar-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: var(--bg-raised);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 0.85rem 1.1rem;
-  text-decoration: none;
-  color: var(--ink);
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: border-color 0.15s ease;
-}
-
-.similar-item:hover { border-color: var(--clay); color: var(--clay); }
-.similar-icon { font-size: 1.15rem; flex-shrink: 0; }
-
-/* ---------- Journal des nouveautés (fiches dépliables) ---------- */
-
-.changelog-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.changelog-card {
-  background: var(--bg-raised);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 0;
-  overflow: hidden;
-}
-
-.changelog-card summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 1rem 1.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.3rem 0.9rem;
-}
-
-.changelog-card summary::-webkit-details-marker { display: none; }
-
-.changelog-date {
-  color: var(--ink-soft);
-  font-size: 0.78rem;
-  font-weight: 600;
-  flex: 0 0 auto;
-}
-
-.changelog-title {
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  color: var(--title);
-  font-size: 1rem;
-  flex: 0 0 auto;
-}
-
-.changelog-short {
-  color: var(--ink-soft);
-  font-size: 0.88rem;
-  flex: 1 1 200px;
-}
-
-.changelog-full {
-  margin: 0;
-  padding: 0 1.25rem 1.25rem;
-  color: var(--ink);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.changelog-card:hover { border-color: var(--clay); }
-
-/* ---------- Notifications toast ---------- */
-
-.toast-container {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-  pointer-events: none;
-}
-
-.toast {
-  background: var(--bg-raised);
-  border: 1px solid var(--line);
-  color: var(--ink);
-  padding: 0.7rem 1.3rem;
-  border-radius: 30px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  white-space: nowrap;
-}
-
-.toast.show { opacity: 1; transform: translateY(0); }
-
-@media (max-width: 640px) {
-  .changelog-short { flex-basis: 100%; }
-}
-
-/* ---------- Bannière "nouveauté" en haut de page ---------- */
-
-.update-banner {
-  background: var(--bg-raised);
-  border-bottom: 1px solid var(--line);
-  border-top: 2px solid var(--clay);
-  color: var(--ink-soft);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.9rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.82rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-/* Corrige un bug d'affichage : sans cette règle, l'attribut "hidden"
-   posé en JavaScript n'avait aucun effet, car la règle .update-banner
-   ci-dessus (display: flex) prenait toujours le dessus. */
-.update-banner[hidden] {
-  display: none;
-}
-
-.update-banner a {
-  color: var(--ink);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.update-banner a:hover .update-banner-text { color: var(--clay); }
-
-.update-banner-text {
-  color: var(--ink);
-  font-weight: 600;
-  transition: opacity 0.35s ease;
-}
-
-.update-banner-text.fading { opacity: 0; }
-
-.update-banner-arrow { color: var(--clay); flex-shrink: 0; }
-
-.update-banner button {
-  background: transparent;
-  border: none;
-  color: var(--ink-soft);
-  font-size: 0.85rem;
-  cursor: pointer;
-  opacity: 0.7;
-  flex-shrink: 0;
-}
-
-.update-banner button:hover { opacity: 1; color: var(--clay); }
-
-@media (max-width: 640px) {
-  .update-banner { font-size: 0.74rem; padding: 0.5rem 0.7rem; }
-}
-
 
 .article-header .category {
   color: var(--clay);
@@ -1022,47 +738,27 @@ h1, h2, h3 {
 .chapter-sidebar::-webkit-scrollbar-thumb:hover { background: var(--ink-soft); }
 
 .sidebar-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.6rem;
+  display: block;
   font-weight: 700;
   color: var(--clay);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  margin: 0 0 0.5rem;
-  padding: 0.55rem 0.75rem;
+  margin: 0 0 0.85rem;
   cursor: pointer;
   list-style: none;
-  background: var(--bg-raised-2);
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  user-select: none;
 }
-
-.sidebar-title:hover { border-color: var(--clay); }
 
 .sidebar-title::-webkit-details-marker { display: none; }
 
 .sidebar-title::after {
-  content: '−';
-  color: var(--ink);
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1;
-  flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-raised);
-  border-radius: 4px;
+  content: '▾';
+  float: right;
+  color: var(--ink-soft);
+  transition: transform 0.2s ease;
 }
 
-.chapter-sidebar details:not([open]) .sidebar-title { margin-bottom: 0; }
-.chapter-sidebar details:not([open]) .sidebar-title::after { content: '+'; }
+.chapter-sidebar details[open] .sidebar-title::after { transform: rotate(180deg); }
 
 .sidebar-list, .sidebar-sublist { list-style: none; margin: 0; padding: 0; }
 
@@ -1109,6 +805,8 @@ h1, h2, h3 {
     width: 100%;
     flex: none;
   }
+  .sidebar-title { margin-bottom: 0; }
+  .chapter-sidebar details[open] .sidebar-list { margin-top: 0.9rem; }
 }
 
 .prose-wide {
@@ -1190,53 +888,6 @@ h1, h2, h3 {
   margin: 0;
 }
 
-.support-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.9rem;
-  background: transparent;
-  border: 1px dashed var(--line);
-  border-radius: 10px;
-  padding: 1.1rem 1.3rem;
-  margin: 0 0 3rem;
-  max-width: 640px;
-}
-
-.support-note-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.4; }
-
-.support-note-title {
-  font-weight: 700;
-  color: var(--ink);
-  font-size: 0.9rem;
-  margin: 0 0 0.3rem;
-}
-
-.support-note p {
-  color: var(--ink-soft);
-  font-size: 0.85rem;
-  line-height: 1.55;
-  margin: 0;
-}
-
-.support-note a { color: var(--clay); }
-
-.kofi-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  background: var(--clay);
-  color: var(--bg);
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-}
-
-.kofi-button:hover { transform: translateY(-2px); opacity: 0.9; }
-
 /* ---------- Icônes décoratives de bloc + séparateur ---------- */
 
 .block-icon {
@@ -1313,41 +964,6 @@ body {
 }
 
 .lang-toggle:hover { border-color: var(--clay); color: var(--clay); }
-
-.icon-toggle {
-  background: transparent;
-  border: 1px solid var(--line);
-  color: var(--ink-soft);
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 700;
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-.icon-toggle:hover { border-color: var(--clay); color: var(--clay); }
-.icon-toggle.active { border-color: var(--link); color: var(--link); }
-
-.kofi-nav-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
-  border: 1px solid var(--clay);
-  font-size: 0.95rem;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.kofi-nav-link:hover { background: var(--clay); }
 
 /* Neutralise l'habillage par défaut de Google Translate pour qu'il ne
    casse pas la mise en page (bandeau du haut, surlignage, etc.) */
