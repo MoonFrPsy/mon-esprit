@@ -10,10 +10,10 @@
 </head>
 <body>
 <canvas id="fluid-cursor" aria-hidden="true"></canvas>
-<div class="update-banner" id="update-banner" hidden data-count="31" data-titles='["Vrai logo du site", "Petit logo", "Bannière annonçant les nouveautés", "Recherche intelligente", "Confirmations visuelles"]'>
+<div class="update-banner" id="update-banner" hidden data-count="34" data-titles='["Deux chapitres enfin réparés", "Page « À propos de moi »", "Des adresses plus propres", "Vrai logo du site", "Petit logo"]'>
   <a href="/nouveautes/">
     <span>🆕</span>
-    <span class="update-banner-text" id="update-banner-text">Vrai logo du site</span>
+    <span class="update-banner-text" id="update-banner-text">Deux chapitres enfin réparés</span>
     <span class="update-banner-arrow">→</span>
   </a>
   <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
@@ -32,6 +32,7 @@
     <nav class="site-nav">
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
+      <a href="/a-propos-de-moi/">À propos de moi</a>
       <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
       <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
@@ -51,14 +52,41 @@
     <div class="article-header">
       <span class="category">📋 Journal du site</span>
       <h1>Nouveautés</h1>
-      <p class="article-meta">Ce qui a été ajouté ou amélioré sur Mon Esprit, au fil du temps. Clique sur une fiche pour en voir le détail.</p>
+      <p class="article-meta">Ce qui a été ajouté ou amélioré sur Mon Esprit, au fil du temps, du plus récent au plus ancien. Clique sur une fiche pour en voir le détail.</p>
     </div>
     <div class="article-body">
-      <div class="changelog-list">
-        
+      
+      <div class="changelog-day">
+        <h2 class="changelog-day-title">5 septembre 2026</h2>
+        <div class="changelog-list">
+          
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">5 septembre 2026 à 18h30</span>
+          <span class="changelog-time">21h30</span>
+          <span class="changelog-title">Deux chapitres enfin réparés</span>
+          <span class="changelog-short">Les troubles des conduites alimentaires et neurodéveloppementaux sont de retour, avec le bon contenu.</span>
+        </summary>
+        <p class="changelog-full">La Partie 7 (troubles des conduites alimentaires) et la Partie 8 (troubles neurodéveloppementaux) contenaient le mauvais contenu depuis un moment et étaient fermées. Elles sont maintenant complètes et de nouveau accessibles.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-time">21h30</span>
+          <span class="changelog-title">Page « À propos de moi »</span>
+          <span class="changelog-short">Une nouvelle page pour savoir qui se cache derrière Mon Esprit.</span>
+        </summary>
+        <p class="changelog-full">Une page dédiée présente la personne derrière le projet, pourquoi il a été créé, et ce qu'il n'a pas pour objectif d'être (un diagnostic ou un remplacement d'un professionnel). Accessible directement depuis le haut du site.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-time">21h30</span>
+          <span class="changelog-title">Des adresses plus propres</span>
+          <span class="changelog-short">Les liens du site n'affichent plus « .html » à la fin.</span>
+        </summary>
+        <p class="changelog-full">Toutes les adresses du site sont désormais plus courtes et plus lisibles (par exemple monesprit.fr/categorie/troubles/ au lieu de troubles.html). Les anciens liens continuent de fonctionner : ils redirigent automatiquement vers la nouvelle adresse.</p>
+      </details>
+      <details class="changelog-card">
+        <summary>
+          <span class="changelog-time">18h30</span>
           <span class="changelog-title">Vrai logo du site</span>
           <span class="changelog-short">Le site a maintenant son propre logo, à côté du nom « Mon Esprit ».</span>
         </summary>
@@ -66,7 +94,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">5 septembre 2026 à 18h30</span>
+          <span class="changelog-time">18h30</span>
           <span class="changelog-title">Petit logo</span>
           <span class="changelog-short">Une icône apparaît maintenant dans l'onglet du navigateur.</span>
         </summary>
@@ -74,7 +102,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">5 septembre 2026 à 18h30</span>
+          <span class="changelog-time">18h30</span>
           <span class="changelog-title">Bannière annonçant les nouveautés</span>
           <span class="changelog-short">Un bandeau en haut du site signale la dernière nouveauté, et défile automatiquement.</span>
         </summary>
@@ -82,7 +110,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">5 septembre 2026 à 18h30</span>
+          <span class="changelog-time">18h30</span>
           <span class="changelog-title">Recherche intelligente</span>
           <span class="changelog-short">Un bouton qui comprend le sens de ta recherche, même sans connaître le bon mot.</span>
         </summary>
@@ -90,7 +118,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">5 septembre 2026 à 00h20</span>
+          <span class="changelog-time">00h20</span>
           <span class="changelog-title">Confirmations visuelles</span>
           <span class="changelog-short">Un petit message confirme quand tu changes un réglage (thème, police, favoris).</span>
         </summary>
@@ -98,15 +126,21 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">5 septembre 2026 à 00h20</span>
+          <span class="changelog-time">00h20</span>
           <span class="changelog-title">Nouveautés en fiches dépliables</span>
           <span class="changelog-short">Cette page devient plus facile à parcourir : clique sur une nouveauté pour en voir le détail.</span>
         </summary>
         <p class="changelog-full">Le journal des nouveautés passe d'une longue liste à des fiches individuelles, repliées par défaut. Un clic ouvre les détails d'une nouveauté, et ouvrir une autre fiche referme automatiquement la précédente.</p>
       </details>
+        </div>
+      </div>
+      <div class="changelog-day">
+        <h2 class="changelog-day-title">4 septembre 2026</h2>
+        <div class="changelog-list">
+          
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-time">23h50</span>
           <span class="changelog-title">Catégorie masquée</span>
           <span class="changelog-short">« Termes et concepts » n'apparaît plus, le temps d'être rédigée.</span>
         </summary>
@@ -114,7 +148,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-time">23h50</span>
           <span class="changelog-title">Entrées similaires</span>
           <span class="changelog-short">Chaque chapitre suggère d'autres chapitres proches.</span>
         </summary>
@@ -122,7 +156,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-time">23h50</span>
           <span class="changelog-title">Favoris</span>
           <span class="changelog-short">Une étoile pour garder un chapitre de côté et le retrouver facilement.</span>
         </summary>
@@ -130,7 +164,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-time">23h50</span>
           <span class="changelog-title">Police adaptée dyslexie</span>
           <span class="changelog-short">Une police plus facile à lire, activable en un clic.</span>
         </summary>
@@ -138,7 +172,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026 à 23h50</span>
+          <span class="changelog-time">23h50</span>
           <span class="changelog-title">Thème clair</span>
           <span class="changelog-short">Un bouton pour basculer entre thème sombre et thème clair.</span>
         </summary>
@@ -146,7 +180,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Vérification complète des Troubles psychologiques</span>
           <span class="changelog-short">Trois parties fermées le temps d'être corrigées, une erreur de numérotation réparée.</span>
         </summary>
@@ -154,7 +188,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Contenu enrichi : Partie 9 (dissociation)</span>
           <span class="changelog-short">Conseils pratiques pour les troubles dissociatifs.</span>
         </summary>
@@ -162,7 +196,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Contenu enrichi : Partie 6 (personnalité)</span>
           <span class="changelog-short">Conseils pratiques pour les troubles de la personnalité.</span>
         </summary>
@@ -170,7 +204,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Contenu enrichi : Partie 5 (schizophrénie)</span>
           <span class="changelog-short">Conseils pratiques pour la schizophrénie et les troubles psychotiques.</span>
         </summary>
@@ -178,7 +212,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Contenu enrichi : Partie 4 (bipolarité)</span>
           <span class="changelog-short">Conseils pratiques pour les troubles bipolaires, dont la gestion d'un épisode maniaque.</span>
         </summary>
@@ -186,7 +220,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Contenu enrichi : Partie 3 (dépression)</span>
           <span class="changelog-short">Conseils pratiques pour la dépression, y compris post-partum et chez l'enfant.</span>
         </summary>
@@ -194,7 +228,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Contenu enrichi : Partie 2 (TOC)</span>
           <span class="changelog-short">Conseils pratiques pour le TOC, la dysmorphophobie, l'accumulation et les troubles apparentés.</span>
         </summary>
@@ -202,7 +236,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Deux catégories complètes</span>
           <span class="changelog-short">146 chapitres au total : justice/criminologie et expériences célèbres sont maintenant remplies.</span>
         </summary>
@@ -210,7 +244,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Nouvelle histoire vraie</span>
           <span class="changelog-short">L'affaire Kitty Genovese et la naissance de l'« effet du témoin ».</span>
         </summary>
@@ -218,7 +252,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Curseur animé</span>
           <span class="changelog-short">Une traînée colorée et fluide suit la souris.</span>
         </summary>
@@ -226,7 +260,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Boutons Accueil et Retour</span>
           <span class="changelog-short">Toujours visibles, pour naviguer sans remonter en haut de page.</span>
         </summary>
@@ -234,15 +268,21 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">4 septembre 2026</span>
+          
           <span class="changelog-title">Sommaire par chapitre</span>
           <span class="changelog-short">Sur chaque page, une liste pour aller directement à la section qui t'intéresse.</span>
         </summary>
         <p class="changelog-full">Chaque page de chapitre a un sommaire listant toutes ses entrées et leurs sous-parties (Définition, Causes, Évolution...), repliable en un clic, à toutes les tailles d'écran.</p>
       </details>
+        </div>
+      </div>
+      <div class="changelog-day">
+        <h2 class="changelog-day-title">3 septembre 2026</h2>
+        <div class="changelog-list">
+          
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">3 septembre 2026</span>
+          
           <span class="changelog-title">Habillage visuel</span>
           <span class="changelog-short">Une illustration et une couleur propres à chaque catégorie, un site pensé pour le mobile.</span>
         </summary>
@@ -250,7 +290,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">3 septembre 2026</span>
+          
           <span class="changelog-title">Nouvelles catégories annoncées</span>
           <span class="changelog-short">Psychologie & justice, et expériences célèbres rejoignent bientôt le site.</span>
         </summary>
@@ -258,7 +298,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">3 septembre 2026</span>
+          
           <span class="changelog-title">Premier contenu enrichi</span>
           <span class="changelog-short">Des conseils concrets pour comprendre et aider un proche, en plus des définitions.</span>
         </summary>
@@ -266,7 +306,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">3 septembre 2026</span>
+          
           <span class="changelog-title">Liens vers les définitions</span>
           <span class="changelog-short">Les abréviations comme TAG ou TOC deviennent cliquables.</span>
         </summary>
@@ -274,7 +314,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">3 septembre 2026</span>
+          
           <span class="changelog-title">Formulaire de contact</span>
           <span class="changelog-short">Un moyen d'écrire directement depuis le site.</span>
         </summary>
@@ -282,7 +322,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">3 septembre 2026</span>
+          
           <span class="changelog-title">Traduction en anglais</span>
           <span class="changelog-short">Un bouton EN/FR traduit tout le site automatiquement.</span>
         </summary>
@@ -290,7 +330,7 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">3 septembre 2026</span>
+          
           <span class="changelog-title">Historique de lecture</span>
           <span class="changelog-short">Le site retient les chapitres déjà lus et propose de reprendre où tu t'es arrêté.</span>
         </summary>
@@ -298,12 +338,13 @@
       </details>
       <details class="changelog-card">
         <summary>
-          <span class="changelog-date">3 septembre 2026</span>
+          
           <span class="changelog-title">Recherche sur tout le site</span>
           <span class="changelog-short">Une barre de recherche qui trouve n'importe quel trouble ou notion en tapant quelques lettres.</span>
         </summary>
         <p class="changelog-full">Une barre de recherche en haut de chaque page, qui couvre l'intégralité du contenu (chapitres et entrées individuelles), avec un extrait et un lien direct vers le bon endroit.</p>
       </details>
+        </div>
       </div>
       <p style="color:var(--ink-soft); font-size:0.92rem; margin-top:2rem;">D'autres mises à jour suivront au fil de l'enrichissement du contenu.</p>
     </div>
@@ -329,7 +370,7 @@
 <footer class="site-footer">
   <div class="container">
     <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
-    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/a-propos-de-moi/" class="footer-changelog-link">À propos de moi</a> — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="/nouveautes/" class="footer-changelog-link">Nouveautés du site</a></p>
   </div>
 </footer>
 <script>
