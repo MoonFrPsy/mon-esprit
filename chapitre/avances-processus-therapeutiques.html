@@ -2,12 +2,1215 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/avances-processus-therapeutiques/">
-<link rel="canonical" href="/chapitre/avances-processus-therapeutiques/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/avances-processus-therapeutiques/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Processus thérapeutiques — Mon Esprit</title>
+<meta name="description" content="Processus thérapeutiques, dans la catégorie Concepts avancés de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/avances-processus-therapeutiques/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#181-quest-ce-quun-processus-therapeutique">🧠 18.1 Qu'est-ce qu'un processus thérapeutique ?</a></li><li><a href="#182-therapie-et-changement-psychologique">🩺 18.2 Thérapie et changement psychologique</a></li><li><a href="#183-lalliance-therapeutique">🤝 18.3 L'alliance thérapeutique</a></li><li><a href="#184-les-objectifs-therapeutiques">🎯 18.4 Les objectifs thérapeutiques</a></li><li><a href="#185-le-role-de-la-parole">🗣️ 18.5 Le rôle de la parole</a></li><li><a href="#186-la-prise-de-conscience">🧠 18.6 La prise de conscience</a></li><li><a href="#187-linsight">🔎 18.7 L'insight</a></li><li><a href="#188-la-formulation-du-probleme">🧩 18.8 La formulation du problème</a></li><li><a href="#189-les-mecanismes-de-maintien">🔄 18.9 Les mécanismes de maintien</a></li><li><a href="#1810-levitement">🚪 18.10 L'évitement</a></li><li><a href="#1811-lexposition">🧠 18.11 L'exposition</a></li><li><a href="#1812-lapprentissage-par-exposition">🔬 18.12 L'apprentissage par exposition</a></li><li><a href="#1813-lextinction-et-les-nouveaux-apprentissages">🧠 18.13 L'extinction et les nouveaux apprentissages</a></li><li><a href="#1814-la-restructuration-cognitive">💭 18.14 La restructuration cognitive</a></li><li><a href="#1815-les-croyances-centrales">🧠 18.15 Les croyances centrales</a></li><li><a href="#1816-les-schemas-psychologiques">🔗 18.16 Les schémas psychologiques</a></li><li><a href="#1817-la-metacognition-en-therapie">🧠 18.17 La métacognition en thérapie</a></li><li><a href="#1818-la-flexibilite-psychologique">🌱 18.18 La flexibilité psychologique</a></li><li><a href="#1819-lacceptation-emotionnelle">❤️ 18.19 L'acceptation émotionnelle</a></li><li><a href="#1820-la-regulation-emotionnelle-en-therapie">🧠 18.20 La régulation émotionnelle en thérapie</a></li><li><a href="#1821-lexpression-emotionnelle">🗣️ 18.21 L'expression émotionnelle</a></li><li><a href="#1822-le-traitement-emotionnel">🧠 18.22 Le traitement émotionnel</a></li><li><a href="#1823-la-reevaluation-dune-experience">🧩 18.23 La réévaluation d'une expérience</a></li><li><a href="#1824-la-reconsolidation-de-la-memoire">🔄 18.24 La reconsolidation de la mémoire</a></li><li><a href="#1825-les-comportements-therapeutiques">🧠 18.25 Les comportements thérapeutiques</a></li><li><a href="#1826-lexperimentation-comportementale">🎯 18.26 L'expérimentation comportementale</a></li><li><a href="#1827-lactivation-comportementale">🧠 18.27 L'activation comportementale</a></li><li><a href="#1828-le-processus-relationnel">🤝 18.28 Le processus relationnel</a></li><li><a href="#1829-le-transfert">🪞 18.29 Le transfert</a></li><li><a href="#1830-le-contre-transfert">🔄 18.30 Le contre-transfert</a></li><li><a href="#1831-la-resistance">🚧 18.31 La résistance</a></li><li><a href="#1832-la-motivation-au-changement">🧠 18.32 La motivation au changement</a></li><li><a href="#1833-lambivalence-therapeutique">⚖️ 18.33 L'ambivalence thérapeutique</a></li><li><a href="#1834-le-renforcement-et-lapprentissage">🧩 18.34 Le renforcement et l'apprentissage</a></li><li><a href="#1835-la-generalisation">🧠 18.35 La généralisation</a></li><li><a href="#1836-la-prevention-de-la-rechute">🔄 18.36 La prévention de la rechute</a></li><li><a href="#1837-comment-mesurer-le-changement">📈 18.37 Comment mesurer le changement ?</a></li><li><a href="#1838-comment-sait-on-quune-therapie-fonctionne">🔬 18.38 Comment sait-on qu'une thérapie fonctionne ?</a></li><li><a href="#1839-les-limites-des-modeles-therapeutiques">⚠️ 18.39 Les limites des modèles thérapeutiques</a></li><li><a href="#1840-pourquoi-etudier-les-processus-therapeutiques">🔬 18.40 Pourquoi étudier les processus thérapeutiques ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Processus thérapeutiques',
+        category: 'Concepts avancés',
+        icon: '🔬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/avances.html">🔬 Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Processus thérapeutiques</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-avances)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Les processus thérapeutiques désignent l'ensemble des mécanismes psychologiques qui peuvent intervenir au cours d'une psychothérapie.</p>
+<p>Une thérapie ne consiste pas simplement à :</p>
+<p><strong>parler → recevoir des conseils → aller mieux</strong></p>
+<p>Le changement psychologique peut impliquer de nombreux processus :</p>
+<ul>
+<li>modification des croyances</li>
+<li>apprentissage</li>
+<li>exposition</li>
+<li>régulation émotionnelle</li>
+<li>compréhension de soi</li>
+<li>modification des comportements</li>
+<li>développement de nouvelles stratégies</li>
+<li>amélioration des relations</li>
+<li>traitement de certaines expériences émotionnelles</li>
+<li>développement de la métacognition</li>
+<li>modification des schémas psychologiques</li>
+</ul>
+<p>Les différentes approches thérapeutiques ne reposent pas toutes sur les mêmes mécanismes.</p>
+<hr />
+<h2 id="181-quest-ce-quun-processus-therapeutique" class="entry-title hc-1">🧠 18.1 Qu'est-ce qu'un processus thérapeutique ?</h2>
+<p>Un processus thérapeutique correspond à un mécanisme pouvant contribuer au changement psychologique au cours d'une intervention.</p>
+<p>Il peut être :</p>
+<ul>
+<li>cognitif</li>
+<li>émotionnel</li>
+<li>comportemental</li>
+<li>relationnel</li>
+<li>interpersonnel</li>
+<li>métacognitif</li>
+<li>physiologique</li>
+</ul>
+<p>Plusieurs processus peuvent fonctionner simultanément.</p>
+<hr />
+<h2 id="182-therapie-et-changement-psychologique" class="entry-title hc-2">🩺 18.2 Thérapie et changement psychologique</h2>
+<p>Le changement thérapeutique peut concerner différents niveaux.</p>
+<p>Par exemple :</p>
+<p><strong>pensées</strong></p>
+<p>↓</p>
+<p><strong>émotions</strong></p>
+<p>↓</p>
+<p><strong>comportements</strong></p>
+<p>↓</p>
+<p><strong>relations</strong></p>
+<p>↓</p>
+<p><strong>représentation de soi</strong></p>
+<p>Le changement d'un niveau peut également influencer les autres.</p>
+<p>Une modification comportementale peut par exemple produire de nouvelles expériences qui modifient progressivement certaines croyances.</p>
+<hr />
+<h2 id="183-lalliance-therapeutique" class="entry-title hc-3">🤝 18.3 L'alliance thérapeutique</h2>
+<p>L'alliance thérapeutique correspond à la qualité de la collaboration entre le patient et le thérapeute.</p>
+<p>Elle peut notamment inclure :</p>
+<ul>
+<li>accord sur les objectifs</li>
+<li>collaboration</li>
+<li>sentiment de travailler ensemble</li>
+<li>relation de confiance</li>
+<li>compréhension du cadre thérapeutique</li>
+</ul>
+<p>L'alliance ne signifie pas nécessairement que le patient et le thérapeute sont toujours d'accord.</p>
+<p>Une relation thérapeutique peut contenir des désaccords tout en restant fonctionnelle.</p>
+<hr />
+<h2 id="184-les-objectifs-therapeutiques" class="entry-title hc-4">🎯 18.4 Les objectifs thérapeutiques</h2>
+<p>Les objectifs permettent de donner une direction au travail thérapeutique.</p>
+<p>Ils peuvent concerner :</p>
+<ul>
+<li>réduction de certains symptômes</li>
+<li>amélioration du fonctionnement</li>
+<li>changement comportemental</li>
+<li>compréhension de certaines difficultés</li>
+<li>amélioration des relations</li>
+<li>développement de compétences</li>
+<li>adaptation à une situation</li>
+</ul>
+<p>Les objectifs peuvent évoluer au cours de la thérapie.</p>
+<hr />
+<h2 id="185-le-role-de-la-parole" class="entry-title hc-5">🗣️ 18.5 Le rôle de la parole</h2>
+<p>Dans de nombreuses psychothérapies, la parole constitue un outil central.</p>
+<p>Parler peut permettre de :</p>
+<ul>
+<li>mettre en mots une expérience</li>
+<li>organiser des souvenirs</li>
+<li>identifier des émotions</li>
+<li>clarifier des pensées</li>
+<li>examiner certaines croyances</li>
+<li>communiquer des expériences difficiles</li>
+</ul>
+<p>Cependant, parler d'un problème ne produit pas automatiquement un changement.</p>
+<p>Le processus dépend notamment de ce qui est fait avec ce contenu.</p>
+<hr />
+<h2 id="186-la-prise-de-conscience" class="entry-title hc-1">🧠 18.6 La prise de conscience</h2>
+<p>La prise de conscience correspond à l'identification plus claire d'un phénomène psychologique.</p>
+<p>Elle peut concerner :</p>
+<ul>
+<li>émotions</li>
+<li>pensées</li>
+<li>comportements</li>
+<li>besoins</li>
+<li>schémas</li>
+<li>relations</li>
+<li>mécanismes répétitifs</li>
+</ul>
+<p>La prise de conscience peut constituer une étape importante, mais elle n'est pas toujours suffisante pour provoquer un changement.</p>
+<hr />
+<h2 id="187-linsight" class="entry-title hc-2">🔎 18.7 L'insight</h2>
+<p>L'insight désigne généralement une compréhension nouvelle ou plus profonde de certains processus psychologiques.</p>
+<p>Une personne peut par exemple comprendre :</p>
+<p><strong>« Je réagis toujours de cette manière lorsque je me sens rejetée. »</strong></p>
+<p>L'insight permet de relier plusieurs expériences auparavant perçues comme séparées.</p>
+<p>Il peut contribuer au changement lorsqu'il permet ensuite une modification des réponses psychologiques ou comportementales.</p>
+<hr />
+<h2 id="188-la-formulation-du-probleme" class="entry-title hc-3">🧩 18.8 La formulation du problème</h2>
+<p>La formulation thérapeutique cherche à comprendre comment le problème fonctionne.</p>
+<p>Elle peut examiner :</p>
+<p><strong>déclencheurs → pensées → émotions → comportements → conséquences</strong></p>
+<p>Cette représentation permet notamment d'identifier certains mécanismes de maintien.</p>
+<hr />
+<h2 id="189-les-mecanismes-de-maintien" class="entry-title hc-4">🔄 18.9 Les mécanismes de maintien</h2>
+<p>Une difficulté peut continuer à exister parce que certaines réactions entretiennent involontairement le problème.</p>
+<p>Par exemple :</p>
+<p><strong>peur → évitement → soulagement → renforcement de l'évitement</strong></p>
+<p>La thérapie peut chercher à modifier cette boucle.</p>
+<hr />
+<h2 id="1810-levitement" class="entry-title hc-5">🚪 18.10 L'évitement</h2>
+<p>L'évitement consiste à réduire ou empêcher le contact avec une situation, une pensée, une émotion ou une sensation jugée difficile.</p>
+<p>Il peut produire un soulagement immédiat.</p>
+<p>Cependant, lorsque l'évitement devient systématique, il peut empêcher certains apprentissages.</p>
+<hr />
+<h2 id="1811-lexposition" class="entry-title hc-1">🧠 18.11 L'exposition</h2>
+<p>L'exposition consiste à entrer progressivement en contact avec une situation, un stimulus, un souvenir ou une sensation redoutée dans un cadre thérapeutique approprié.</p>
+<p>Elle peut permettre de nouveaux apprentissages.</p>
+<p>L'objectif n'est pas nécessairement de faire disparaître immédiatement toute peur.</p>
+<p>Il peut plutôt s'agir d'apprendre :</p>
+<p><strong>« cette expérience peut être tolérée et de nouvelles conséquences sont possibles »</strong></p>
+<hr />
+<h2 id="1812-lapprentissage-par-exposition" class="entry-title hc-2">🔬 18.12 L'apprentissage par exposition</h2>
+<p>L'exposition peut permettre une mise à jour des prédictions.</p>
+<p>Avant l'exposition :</p>
+<p><strong>« Si je fais cela, quelque chose de catastrophique va arriver. »</strong></p>
+<p>Après différentes expériences :</p>
+<p><strong>« Ce que je prévoyais ne s'est pas produit de la manière attendue. »</strong></p>
+<p>Le cerveau peut alors progressivement modifier certaines prédictions.</p>
+<hr />
+<h2 id="1813-lextinction-et-les-nouveaux-apprentissages" class="entry-title hc-3">🧠 18.13 L'extinction et les nouveaux apprentissages</h2>
+<p>En psychologie expérimentale, l'extinction correspond notamment à la diminution d'une réponse conditionnée lorsque le stimulus n'est plus suivi de la conséquence attendue.</p>
+<p>Dans les troubles anxieux, l'exposition peut favoriser de nouveaux apprentissages.</p>
+<p>Cependant, l'ancien apprentissage ne disparaît pas nécessairement complètement.</p>
+<p>De nouvelles associations peuvent apprendre à coexister avec les anciennes.</p>
+<hr />
+<h2 id="1814-la-restructuration-cognitive" class="entry-title hc-4">💭 18.14 La restructuration cognitive</h2>
+<p>La restructuration cognitive consiste notamment à examiner certaines pensées ou croyances problématiques.</p>
+<p>Le processus peut inclure :</p>
+<p><strong>pensée → preuves → alternatives → nouvelle interprétation</strong></p>
+<p>L'objectif n'est pas de remplacer automatiquement toute pensée négative par une pensée positive.</p>
+<p>Il s'agit plutôt de rechercher une interprétation plus précise et mieux soutenue par les informations disponibles.</p>
+<hr />
+<h2 id="1815-les-croyances-centrales" class="entry-title hc-5">🧠 18.15 Les croyances centrales</h2>
+<p>Certaines croyances peuvent être très générales et concerner :</p>
+<ul>
+<li>soi</li>
+<li>autres</li>
+<li>monde</li>
+<li>sécurité</li>
+<li>valeur personnelle</li>
+</ul>
+<p>Elles peuvent influencer de nombreuses situations.</p>
+<p>Une thérapie peut chercher à identifier leur fonctionnement et à examiner les expériences qui les renforcent ou les contredisent.</p>
+<hr />
+<h2 id="1816-les-schemas-psychologiques" class="entry-title hc-1">🔗 18.16 Les schémas psychologiques</h2>
+<p>Un schéma correspond à une organisation relativement stable de connaissances, croyances, attentes et interprétations.</p>
+<p>Un schéma peut influencer :</p>
+<p><strong>ce qui est remarqué → ce qui est interprété → ce qui est ressenti → ce qui est fait</strong></p>
+<p>Les schémas peuvent donc participer à la répétition de certains modes de fonctionnement.</p>
+<hr />
+<h2 id="1817-la-metacognition-en-therapie" class="entry-title hc-2">🧠 18.17 La métacognition en thérapie</h2>
+<p>La métacognition correspond à la capacité à réfléchir sur ses propres processus mentaux.</p>
+<p>Elle permet notamment d'observer :</p>
+<p><strong>« Je remarque que je pense cela. »</strong></p>
+<p>plutôt que :</p>
+<p><strong>« Cette pensée est forcément vraie. »</strong></p>
+<p>Cette distinction peut créer une distance entre une pensée et l'adhésion automatique à celle-ci.</p>
+<hr />
+<h2 id="1818-la-flexibilite-psychologique" class="entry-title hc-3">🌱 18.18 La flexibilité psychologique</h2>
+<p>La flexibilité psychologique correspond à la capacité à adapter son comportement et son fonctionnement mental aux différentes situations.</p>
+<p>Elle implique notamment la possibilité de :</p>
+<ul>
+<li>ressentir une émotion sans être entièrement dirigé par elle</li>
+<li>modifier une stratégie inefficace</li>
+<li>tolérer l'incertitude</li>
+<li>agir selon ses objectifs</li>
+<li>accepter certaines expériences internes</li>
+</ul>
+<p>Elle s'oppose davantage à la rigidité qu'à la stabilité.</p>
+<hr />
+<h2 id="1819-lacceptation-emotionnelle" class="entry-title hc-4">❤️ 18.19 L'acceptation émotionnelle</h2>
+<p>L'acceptation émotionnelle consiste à reconnaître l'existence d'une émotion sans chercher systématiquement à la supprimer.</p>
+<p>Elle ne signifie pas :</p>
+<p><strong>« j'aime cette émotion »</strong></p>
+<p>ou :</p>
+<p><strong>« je suis d'accord avec ce qui se passe »</strong></p>
+<p>Elle signifie plutôt :</p>
+<p><strong>« cette émotion est présente et je peux l'observer sans nécessairement devoir agir immédiatement dessus »</strong></p>
+<hr />
+<h2 id="1820-la-regulation-emotionnelle-en-therapie" class="entry-title hc-5">🧠 18.20 La régulation émotionnelle en thérapie</h2>
+<p>La thérapie peut permettre d'apprendre différentes stratégies de régulation.</p>
+<p>Cela peut inclure :</p>
+<ul>
+<li>identification des émotions</li>
+<li>tolérance émotionnelle</li>
+<li>réévaluation cognitive</li>
+<li>résolution de problèmes</li>
+<li>communication</li>
+<li>modification comportementale</li>
+</ul>
+<p>L'objectif n'est pas nécessairement de diminuer toutes les émotions.</p>
+<p>Certaines émotions fournissent des informations importantes.</p>
+<hr />
+<h2 id="1821-lexpression-emotionnelle" class="entry-title hc-1">🗣️ 18.21 L'expression émotionnelle</h2>
+<p>Certaines thérapies utilisent l'expression émotionnelle comme processus thérapeutique.</p>
+<p>Mettre en mots une émotion peut permettre de mieux :</p>
+<ul>
+<li>l'identifier</li>
+<li>la différencier</li>
+<li>la comprendre</li>
+<li>la communiquer</li>
+</ul>
+<p>Cependant, l'expression émotionnelle seule n'est pas toujours suffisante.</p>
+<p>Elle doit être replacée dans un processus thérapeutique plus large.</p>
+<hr />
+<h2 id="1822-le-traitement-emotionnel" class="entry-title hc-2">🧠 18.22 Le traitement émotionnel</h2>
+<p>Le traitement émotionnel désigne notamment le processus par lequel une expérience émotionnelle est progressivement intégrée et comprise.</p>
+<p>Une expérience difficile peut initialement être associée à :</p>
+<ul>
+<li>peur</li>
+<li>évitement</li>
+<li>souvenirs fragmentés</li>
+<li>réactions corporelles</li>
+</ul>
+<p>Le travail thérapeutique peut permettre de modifier progressivement certaines associations.</p>
+<hr />
+<h2 id="1823-la-reevaluation-dune-experience" class="entry-title hc-3">🧩 18.23 La réévaluation d'une expérience</h2>
+<p>Une expérience passée peut être réinterprétée avec de nouvelles informations.</p>
+<p>Cela ne signifie pas modifier les faits historiques.</p>
+<p>Cela signifie modifier leur <strong>signification psychologique</strong>.</p>
+<p>Une personne peut par exemple passer de :</p>
+<p><strong>« cet événement prouve que je suis incapable »</strong></p>
+<p>à :</p>
+<p><strong>« cet événement a eu certaines conséquences, mais il ne définit pas entièrement mes capacités »</strong></p>
+<hr />
+<h2 id="1824-la-reconsolidation-de-la-memoire" class="entry-title hc-4">🔄 18.24 La reconsolidation de la mémoire</h2>
+<p>Lorsqu'un souvenir est réactivé, certains modèles neuroscientifiques proposent qu'il puisse temporairement devenir susceptible de modification avant d'être à nouveau stabilisé.</p>
+<p>Ce processus est appelé <strong>reconsolidation</strong>.</p>
+<p>Il constitue un domaine important de recherche concernant les mécanismes possibles de certains changements thérapeutiques.</p>
+<p>Cependant, toutes les formes de changement thérapeutique ne peuvent pas être réduites à la reconsolidation.</p>
+<hr />
+<h2 id="1825-les-comportements-therapeutiques" class="entry-title hc-5">🧠 18.25 Les comportements thérapeutiques</h2>
+<p>Certaines thérapies travaillent directement sur les comportements.</p>
+<p>Cela peut inclure :</p>
+<ul>
+<li>exposition</li>
+<li>activation comportementale</li>
+<li>entraînement aux compétences</li>
+<li>résolution de problèmes</li>
+<li>expérimentation comportementale</li>
+</ul>
+<p>Modifier un comportement peut produire de nouvelles expériences et donc de nouveaux apprentissages.</p>
+<hr />
+<h2 id="1826-lexperimentation-comportementale" class="entry-title hc-1">🎯 18.26 L'expérimentation comportementale</h2>
+<p>Une expérimentation comportementale permet de tester une prédiction dans la réalité.</p>
+<p>Exemple :</p>
+<p><strong>prédiction → « si je fais X, alors Y va forcément arriver »</strong></p>
+<p>↓</p>
+<p><strong>expérience</strong></p>
+<p>↓</p>
+<p><strong>résultat observé</strong></p>
+<p>↓</p>
+<p><strong>comparaison avec la prédiction</strong></p>
+<p>Cela permet parfois de mettre à l'épreuve certaines croyances.</p>
+<hr />
+<h2 id="1827-lactivation-comportementale" class="entry-title hc-2">🧠 18.27 L'activation comportementale</h2>
+<p>L'activation comportementale consiste notamment à augmenter progressivement certaines activités ayant une valeur ou une fonction importante.</p>
+<p>Elle est particulièrement étudiée dans le traitement de la dépression.</p>
+<p>L'objectif n'est pas simplement :</p>
+<p><strong>« faire plus de choses »</strong></p>
+<p>mais de modifier certaines relations entre :</p>
+<p><strong>activité → récompense → humeur → retrait → nouvelle activité</strong></p>
+<hr />
+<h2 id="1828-le-processus-relationnel" class="entry-title hc-3">🤝 18.28 Le processus relationnel</h2>
+<p>La relation avec le thérapeute peut elle-même devenir un espace d'observation et d'apprentissage.</p>
+<p>Elle peut permettre d'examiner :</p>
+<ul>
+<li>confiance</li>
+<li>limites</li>
+<li>communication</li>
+<li>attentes</li>
+<li>peur du jugement</li>
+<li>dépendance</li>
+<li>évitement relationnel</li>
+</ul>
+<p>Cela varie fortement selon les approches thérapeutiques.</p>
+<hr />
+<h2 id="1829-le-transfert" class="entry-title hc-4">🪞 18.29 Le transfert</h2>
+<p>Dans les approches psychodynamiques, le transfert désigne notamment le fait que certaines attentes, émotions ou représentations relationnelles puissent être mobilisées dans la relation thérapeutique.</p>
+<p>La relation thérapeutique peut alors devenir un contexte permettant d'observer certains schémas relationnels.</p>
+<p>Le transfert n'est donc pas simplement :</p>
+<p><strong>« aimer ou détester son thérapeute »</strong></p>
+<p>Il peut concerner des attentes relationnelles beaucoup plus complexes.</p>
+<hr />
+<h2 id="1830-le-contre-transfert" class="entry-title hc-5">🔄 18.30 Le contre-transfert</h2>
+<p>Le contre-transfert désigne historiquement les réactions du thérapeute dans la relation avec le patient.</p>
+<p>Les conceptions contemporaines varient selon les approches.</p>
+<p>Ces réactions peuvent être considérées comme des informations potentielles sur la relation, mais elles doivent être analysées avec prudence.</p>
+<p>Une réaction du thérapeute n'est pas automatiquement la preuve de quelque chose concernant le patient.</p>
+<hr />
+<h2 id="1831-la-resistance" class="entry-title hc-1">🚧 18.31 La résistance</h2>
+<p>Dans certaines approches psychothérapeutiques, le terme résistance désigne des processus qui peuvent empêcher ou ralentir certains changements.</p>
+<p>Cela peut se manifester par :</p>
+<ul>
+<li>évitement</li>
+<li>changement de sujet</li>
+<li>oubli</li>
+<li>intellectualisation</li>
+<li>opposition</li>
+<li>difficulté à modifier certains comportements</li>
+</ul>
+<p>Le terme est utilisé différemment selon les modèles.</p>
+<p>Il ne signifie pas simplement :</p>
+<p><strong>« le patient ne veut pas coopérer »</strong></p>
+<hr />
+<h2 id="1832-la-motivation-au-changement" class="entry-title hc-2">🧠 18.32 La motivation au changement</h2>
+<p>La motivation peut fluctuer.</p>
+<p>Une personne peut simultanément :</p>
+<p><strong>vouloir changer</strong></p>
+<p>et</p>
+<p><strong>craindre les conséquences du changement</strong></p>
+<p>Cette ambivalence est fréquente dans de nombreux processus thérapeutiques.</p>
+<p>Elle peut donc être étudiée plutôt que considérée uniquement comme un obstacle.</p>
+<hr />
+<h2 id="1833-lambivalence-therapeutique" class="entry-title hc-3">⚖️ 18.33 L'ambivalence thérapeutique</h2>
+<p>L'ambivalence correspond à la coexistence de motivations contradictoires.</p>
+<p>Par exemple :</p>
+<p><strong>« Je veux changer, mais j'ai peur de perdre ce que je connais. »</strong></p>
+<p>Ces deux tendances peuvent être présentes simultanément.</p>
+<p>Le changement peut alors nécessiter une évolution progressive de l'équilibre entre ces motivations.</p>
+<hr />
+<h2 id="1834-le-renforcement-et-lapprentissage" class="entry-title hc-4">🧩 18.34 Le renforcement et l'apprentissage</h2>
+<p>Certains changements thérapeutiques peuvent être compris à travers les mécanismes d'apprentissage.</p>
+<p>Un comportement peut devenir plus probable lorsqu'il produit une conséquence renforçante.</p>
+<p>La thérapie peut donc modifier certains environnements d'apprentissage et introduire de nouvelles expériences.</p>
+<hr />
+<h2 id="1835-la-generalisation" class="entry-title hc-5">🧠 18.35 La généralisation</h2>
+<p>Un apprentissage réalisé dans une situation thérapeutique doit idéalement pouvoir être transféré à d'autres contextes.</p>
+<p>C'est ce qu'on peut appeler la généralisation.</p>
+<p>Par exemple :</p>
+<p><strong>nouvelle compétence en séance</strong></p>
+<p>↓</p>
+<p><strong>application dans la vie quotidienne</strong></p>
+<p>↓</p>
+<p><strong>répétition</strong></p>
+<p>↓</p>
+<p><strong>nouveau fonctionnement plus stable</strong></p>
+<p>Sans généralisation, une amélioration peut rester limitée au contexte thérapeutique.</p>
+<hr />
+<h2 id="1836-la-prevention-de-la-rechute" class="entry-title hc-1">🔄 18.36 La prévention de la rechute</h2>
+<p>Une amélioration thérapeutique ne signifie pas nécessairement que le risque de retour des symptômes disparaît définitivement.</p>
+<p>Certaines approches travaillent donc sur :</p>
+<ul>
+<li>identification des signes précoces</li>
+<li>stratégies d'adaptation</li>
+<li>maintien des apprentissages</li>
+<li>gestion des situations à risque</li>
+<li>autonomie</li>
+</ul>
+<p>L'objectif est notamment de rendre les changements plus durables.</p>
+<hr />
+<h2 id="1837-comment-mesurer-le-changement" class="entry-title hc-2">📈 18.37 Comment mesurer le changement ?</h2>
+<p>Le changement thérapeutique peut être évalué de différentes manières.</p>
+<p>On peut examiner :</p>
+<ul>
+<li>symptômes</li>
+<li>fonctionnement quotidien</li>
+<li>qualité de vie</li>
+<li>comportements</li>
+<li>objectifs personnels</li>
+<li>questionnaires</li>
+<li>observations</li>
+</ul>
+<p>L'évolution peut être suivie avant, pendant et après la thérapie.</p>
+<hr />
+<h2 id="1838-comment-sait-on-quune-therapie-fonctionne" class="entry-title hc-3">🔬 18.38 Comment sait-on qu'une thérapie fonctionne ?</h2>
+<p>La recherche utilise différentes méthodes pour étudier l'efficacité des psychothérapies.</p>
+<p>Elle peut comparer :</p>
+<ul>
+<li>groupes traités</li>
+<li>groupes témoins</li>
+<li>différentes interventions</li>
+<li>évolution des symptômes</li>
+<li>résultats à long terme</li>
+</ul>
+<p>Il faut cependant distinguer :</p>
+<p><strong>efficacité moyenne</strong></p>
+<p>de :</p>
+<p><strong>réponse individuelle</strong></p>
+<p>Une intervention pouvant être efficace en moyenne ne produit pas nécessairement le même résultat chez chaque personne.</p>
+<hr />
+<h2 id="1839-les-limites-des-modeles-therapeutiques" class="entry-title hc-4">⚠️ 18.39 Les limites des modèles thérapeutiques</h2>
+<p>Aucun modèle psychothérapeutique ne décrit parfaitement l'ensemble du changement psychologique.</p>
+<p>Les mécanismes peuvent être :</p>
+<ul>
+<li>multiples</li>
+<li>interactifs</li>
+<li>dépendants du contexte</li>
+<li>variables selon les individus</li>
+</ul>
+<p>Il existe également plusieurs écoles thérapeutiques proposant des explications différentes.</p>
+<p>Les recherches contemporaines cherchent notamment à déterminer quels mécanismes sont communs à plusieurs approches et lesquels sont spécifiques à certaines thérapies.</p>
+<hr />
+<h2 id="1840-pourquoi-etudier-les-processus-therapeutiques" class="entry-title hc-5">🔬 18.40 Pourquoi étudier les processus thérapeutiques ?</h2>
+<p>Étudier les processus thérapeutiques permet de comprendre <strong>comment le changement psychologique peut se produire</strong>, et pas seulement de savoir si une thérapie produit statistiquement une amélioration.</p>
+<p>Un changement peut impliquer :</p>
+<p><strong>🧠 compréhension</strong></p>
+<p>↓</p>
+<p><strong>❤️ expérience émotionnelle</strong></p>
+<p>↓</p>
+<p><strong>🎯 comportement</strong></p>
+<p>↓</p>
+<p><strong>🔄 apprentissage</strong></p>
+<p>↓</p>
+<p><strong>🧩 modification des croyances</strong></p>
+<p>↓</p>
+<p><strong>🤝 changement relationnel</strong></p>
+<p>↓</p>
+<p><strong>🌱 nouveau fonctionnement</strong></p>
+<p>Les processus thérapeutiques sont donc multidimensionnels.</p>
+<p>Ils peuvent agir simultanément sur les pensées, les émotions, les comportements, les relations, les souvenirs et les représentations de soi.</p>
+<p>Une psychothérapie ne fonctionne pas nécessairement grâce à un seul mécanisme.</p>
+<p>Elle peut plutôt être comprise comme un <strong>ensemble dynamique de processus qui interagissent au cours du temps</strong>.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>🧠 <strong>Une psychothérapie ne consiste pas uniquement à parler.</strong></p>
+<p>Elle peut mobiliser des processus cognitifs, émotionnels, comportementaux et relationnels.</p>
+<p>🤝 <strong>L'alliance thérapeutique est importante.</strong></p>
+<p>Elle concerne notamment la collaboration autour des objectifs et du travail thérapeutique.</p>
+<p>🔎 <strong>L'insight peut favoriser la compréhension.</strong></p>
+<p>Mais comprendre un problème ne garantit pas automatiquement sa modification.</p>
+<p>🚪 <strong>L'évitement peut maintenir certaines difficultés.</strong></p>
+<p>Il peut produire un soulagement immédiat tout en empêchant certains apprentissages.</p>
+<p>🧠 <strong>L'exposition permet de nouveaux apprentissages.</strong></p>
+<p>Elle peut notamment modifier certaines prédictions et associations liées à la peur.</p>
+<p>💭 <strong>La restructuration cognitive permet d'examiner certaines interprétations.</strong></p>
+<p>L'objectif est davantage de rechercher une compréhension plus précise que de remplacer systématiquement une pensée négative par une pensée positive.</p>
+<p>❤️ <strong>La régulation émotionnelle peut être travaillée.</strong></p>
+<p>Réguler une émotion ne signifie pas nécessairement la supprimer.</p>
+<p>🔄 <strong>Les comportements peuvent produire de nouveaux apprentissages.</strong></p>
+<p>Une nouvelle expérience répétée peut progressivement modifier certaines attentes et habitudes.</p>
+<p>🧩 <strong>La thérapie peut agir sur des boucles de maintien.</strong></p>
+<p>Modifier un seul élément peut parfois influencer plusieurs autres processus.</p>
+<p>📈 <strong>Le changement peut être progressif.</strong></p>
+<p>Il peut concerner les symptômes, les comportements, les émotions, les relations ou la représentation de soi.</p>
+<p>⚠️ <strong>Les mécanismes thérapeutiques ne sont pas identiques dans toutes les thérapies.</strong></p>
+<p>Chaque approche possède ses propres modèles, concepts et méthodes.</p>
+<p>Enfin, comprendre les processus thérapeutiques revient à étudier une question centrale de la psychologie clinique :</p>
+<p><strong>comment un fonctionnement psychologique relativement stable peut-il progressivement se modifier ?</strong></p>
+<p>La réponse implique généralement plusieurs niveaux à la fois :</p>
+<p><strong>🧠 cognition + ❤️ émotions + 🎯 comportements + 🤝 relations + 🧬 apprentissage + 🌱 environnement</strong></p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="avances-recherche-et-modeles-scientifiques.html"><span class="similar-icon">🔬</span>Recherche et modèles scientifiques</a><a class="similar-item" href="avances-concepts-psychologiques-tres-avances.html"><span class="similar-icon">🔬</span>Concepts psychologiques très avancés</a><a class="similar-item" href="avances-modeles-et-theories-psychologiques.html"><span class="similar-icon">🔬</span>Modèles et théories psychologiques</a></div>
+    </div>
+    <a class="back-link" href="../categorie/avances.html">← Retour à « Concepts avancés »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

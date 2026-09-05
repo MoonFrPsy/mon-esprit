@@ -2,12 +2,962 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/phenomenes-les-phenomenes-psychologiques-complexes/">
-<link rel="canonical" href="/chapitre/phenomenes-les-phenomenes-psychologiques-complexes/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/phenomenes-les-phenomenes-psychologiques-complexes/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les phénomènes psychologiques complexes — Mon Esprit</title>
+<meta name="description" content="Les phénomènes psychologiques complexes, dans la catégorie Phénomènes psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/phenomenes-les-phenomenes-psychologiques-complexes/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#201-la-complexite-psychologique">🧩 20.1 La complexité psychologique</a></li><li><a href="#202-linteraction-entre-plusieurs-processus">🔄 20.2 L'interaction entre plusieurs processus</a></li><li><a href="#203-les-boucles-cognitives">🧠 20.3 Les boucles cognitives</a></li><li><a href="#204-les-boucles-emotionnelles">❤️ 20.4 Les boucles émotionnelles</a></li><li><a href="#205-linteraction-perception-emotion">👁️ 20.5 L'interaction perception émotion</a></li><li><a href="#206-linteraction-memoire-emotion">🧠 20.6 L'interaction mémoire émotion</a></li><li><a href="#207-linteraction-attention-emotion">🔎 20.7 L'interaction attention émotion</a></li><li><a href="#208-linteraction-pensee-emotion">💭 20.8 L'interaction pensée émotion</a></li><li><a href="#209-linteraction-corps-esprit">🧍 20.9 L'interaction corps esprit</a></li><li><a href="#2010-linteroception">🧠 20.10 L'interoception</a></li><li><a href="#2011-le-cycle-sensation-interpretation">🔄 20.11 Le cycle sensation interprétation</a></li><li><a href="#2012-la-metacognition">🧠 20.12 La métacognition</a></li><li><a href="#2013-la-conscience-de-soi">🪞 20.13 La conscience de soi</a></li><li><a href="#2014-la-construction-du-soi">🧩 20.14 La construction du soi</a></li><li><a href="#2015-lidentite-narrative">🧠 20.15 L'identité narrative</a></li><li><a href="#2016-la-continuite-psychologique">⏳ 20.16 La continuité psychologique</a></li><li><a href="#2017-le-conflit-entre-objectifs">🔀 20.17 Le conflit entre objectifs</a></li><li><a href="#2018-lambivalence-psychologique">⚖️ 20.18 L'ambivalence psychologique</a></li><li><a href="#2019-la-dissonance-cognitive-complexe">🧠 20.19 La dissonance cognitive complexe</a></li><li><a href="#2020-la-regulation-emotionnelle-complexe">🔄 20.20 La régulation émotionnelle complexe</a></li><li><a href="#2021-la-flexibilite-psychologique">🧠 20.21 La flexibilité psychologique</a></li><li><a href="#2022-la-rigidite-psychologique">🔒 20.22 La rigidité psychologique</a></li><li><a href="#2023-ladaptation-psychologique">🔄 20.23 L'adaptation psychologique</a></li><li><a href="#2024-la-resilience">🌱 20.24 La résilience</a></li><li><a href="#2025-le-coping-complexe">🧠 20.25 Le coping complexe</a></li><li><a href="#2026-ladaptation-sociale">🧩 20.26 L'adaptation sociale</a></li><li><a href="#2027-lidentite-sociale-et-personnelle">👥 20.27 L'identité sociale et personnelle</a></li><li><a href="#2028-la-cognition-sociale-complexe">🧠 20.28 La cognition sociale complexe</a></li><li><a href="#2029-la-theorie-de-lesprit">💭 20.29 La théorie de l'esprit</a></li><li><a href="#2030-la-prise-de-perspective">🧠 20.30 La prise de perspective</a></li><li><a href="#2031-lempathie-complexe">❤️ 20.31 L'empathie complexe</a></li><li><a href="#2032-la-contagion-emotionnelle-sociale">🔄 20.32 La contagion émotionnelle sociale</a></li><li><a href="#2033-linfluence-reciproque">🧠 20.33 L'influence réciproque</a></li><li><a href="#2034-linteraction-individu-environnement">🌐 20.34 L'interaction individu environnement</a></li><li><a href="#2035-les-differences-individuelles">🧠 20.35 Les différences individuelles</a></li><li><a href="#2036-linteraction-cerveau-comportement">🔬 20.36 L'interaction cerveau comportement</a></li><li><a href="#2037-la-plasticite-cerebrale">🧠 20.37 La plasticité cérébrale</a></li><li><a href="#2038-les-systemes-dynamiques-psychologiques">🔄 20.38 Les systèmes dynamiques psychologiques</a></li><li><a href="#2039-le-caractere-multifactoriel-du-fonctionnement-psychologique">🧩 20.39 Le caractère multifactoriel du fonctionnement psychologique</a></li><li><a href="#2040-pourquoi-etudier-les-phenomenes-psychologiques-complexes">🔬 20.40 Pourquoi étudier les phénomènes psychologiques complexes ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Les phénomènes psychologiques complexes',
+        category: 'Phénomènes psychologiques',
+        icon: '🔮'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/phenomenes.html">🔮 Phénomènes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Les phénomènes psychologiques complexes</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-phenomenes)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Les phénomènes psychologiques complexes correspondent à des expériences ou des fonctionnements qui impliquent simultanément plusieurs processus psychologiques.</p>
+<p>Ils peuvent associer la perception, la mémoire, les émotions, l'attention, la conscience, les comportements, les relations sociales ou encore l'identité.</p>
+<p>Un phénomène complexe ne possède donc généralement pas une cause unique. Il peut résulter de l'interaction de plusieurs facteurs individuels, biologiques, psychologiques et environnementaux.</p>
+<h2 id="201-la-complexite-psychologique" class="entry-title hc-1">🧩 20.1 La complexité psychologique</h2>
+<p>Le fonctionnement psychologique résulte de l'interaction de nombreux processus.</p>
+<p>Une même expérience peut ainsi mobiliser simultanément :</p>
+<ul>
+<li>les émotions ;</li>
+<li>la mémoire ;</li>
+<li>l'attention ;</li>
+<li>les pensées ;</li>
+<li>les comportements ;</li>
+<li>les sensations corporelles ;</li>
+<li>les interactions sociales.</li>
+</ul>
+<h2 id="202-linteraction-entre-plusieurs-processus" class="entry-title hc-2">🔄 20.2 L'interaction entre plusieurs processus</h2>
+<p>Les différents systèmes psychologiques s'influencent continuellement.</p>
+<p>Une émotion peut modifier l'attention, l'attention peut modifier la perception, la perception peut influencer les pensées et les pensées peuvent à leur tour modifier les émotions.</p>
+<p>Il existe donc de nombreuses interactions réciproques.</p>
+<h2 id="203-les-boucles-cognitives" class="entry-title hc-3">🧠 20.3 Les boucles cognitives</h2>
+<p>Une boucle cognitive apparaît lorsque plusieurs processus se renforcent mutuellement.</p>
+<p>Par exemple :</p>
+<p><strong>Pensée → émotion → attention → interprétation → nouvelle pensée</strong></p>
+<p>Ces boucles peuvent contribuer à maintenir certaines expériences psychologiques.</p>
+<h2 id="204-les-boucles-emotionnelles" class="entry-title hc-4">❤️ 20.4 Les boucles émotionnelles</h2>
+<p>Les émotions peuvent influencer les pensées et les comportements, qui peuvent ensuite renforcer ou diminuer l'émotion initiale.</p>
+<p>Une émotion n'est donc pas toujours un événement isolé.</p>
+<p>Elle peut participer à une dynamique psychologique plus large.</p>
+<h2 id="205-linteraction-perception-emotion" class="entry-title hc-5">👁️ 20.5 L'interaction perception émotion</h2>
+<p>La perception d'une situation peut être influencée par l'état émotionnel.</p>
+<p>Inversement, ce qui est perçu peut modifier l'état émotionnel.</p>
+<p>La perception et les émotions fonctionnent ainsi en interaction constante.</p>
+<h2 id="206-linteraction-memoire-emotion" class="entry-title hc-1">🧠 20.6 L'interaction mémoire émotion</h2>
+<p>Les émotions peuvent influencer la manière dont certains souvenirs sont encodés et récupérés.</p>
+<p>Inversement, le rappel d'un souvenir peut provoquer une nouvelle réaction émotionnelle.</p>
+<h2 id="207-linteraction-attention-emotion" class="entry-title hc-2">🔎 20.7 L'interaction attention émotion</h2>
+<p>L'état émotionnel peut modifier ce qui attire l'attention.</p>
+<p>Une personne préoccupée par une menace peut par exemple être particulièrement attentive aux informations associées à cette menace.</p>
+<p>L'attention peut ensuite renforcer l'expérience émotionnelle.</p>
+<h2 id="208-linteraction-pensee-emotion" class="entry-title hc-3">💭 20.8 L'interaction pensée émotion</h2>
+<p>Les pensées et les émotions s'influencent mutuellement.</p>
+<p>Une interprétation particulière d'une situation peut modifier l'émotion ressentie, tandis qu'une émotion peut influencer la manière dont la situation est interprétée.</p>
+<h2 id="209-linteraction-corps-esprit" class="entry-title hc-4">🧍 20.9 L'interaction corps esprit</h2>
+<p>Les sensations corporelles et les processus psychologiques sont continuellement liés.</p>
+<p>Le rythme cardiaque, la respiration, la tension musculaire ou les sensations digestives peuvent influencer l'expérience psychologique.</p>
+<p>Inversement, les émotions et le stress peuvent modifier certaines réactions physiologiques.</p>
+<h2 id="2010-linteroception" class="entry-title hc-5">🧠 20.10 L'interoception</h2>
+<p>L'interoception correspond à la perception des signaux provenant de l'intérieur du corps.</p>
+<p>Elle participe notamment à la perception :</p>
+<ul>
+<li>du rythme cardiaque ;</li>
+<li>de la respiration ;</li>
+<li>de la température ;</li>
+<li>de la faim ;</li>
+<li>de la douleur ;</li>
+<li>de certaines sensations viscérales.</li>
+</ul>
+<h2 id="2011-le-cycle-sensation-interpretation" class="entry-title hc-1">🔄 20.11 Le cycle sensation interprétation</h2>
+<p>Une sensation corporelle peut être interprétée de différentes manières.</p>
+<p>L'interprétation peut ensuite modifier l'émotion et l'attention portée à cette sensation.</p>
+<p>Cela peut créer un cycle entre sensation, interprétation, émotion et nouvelle perception corporelle.</p>
+<h2 id="2012-la-metacognition" class="entry-title hc-2">🧠 20.12 La métacognition</h2>
+<p>La métacognition correspond à la capacité à réfléchir à ses propres processus cognitifs.</p>
+<p>Elle comprend notamment la capacité à évaluer :</p>
+<ul>
+<li>ce que l'on sait ;</li>
+<li>ce que l'on ne sait pas ;</li>
+<li>la fiabilité d'un souvenir ;</li>
+<li>la certitude d'un jugement ;</li>
+<li>l'efficacité d'une stratégie.</li>
+</ul>
+<h2 id="2013-la-conscience-de-soi" class="entry-title hc-3">🪞 20.13 La conscience de soi</h2>
+<p>La conscience de soi correspond à la capacité à avoir une représentation de soi-même en tant qu'individu.</p>
+<p>Elle peut inclure :</p>
+<ul>
+<li>les pensées ;</li>
+<li>les émotions ;</li>
+<li>le corps ;</li>
+<li>l'identité ;</li>
+<li>les comportements ;</li>
+<li>les relations avec les autres.</li>
+</ul>
+<h2 id="2014-la-construction-du-soi" class="entry-title hc-4">🧩 20.14 La construction du soi</h2>
+<p>Le sentiment de soi se construit à partir de nombreuses informations.</p>
+<p>Les souvenirs, les expériences, les interactions sociales, les émotions et les représentations personnelles participent à cette construction.</p>
+<h2 id="2015-lidentite-narrative" class="entry-title hc-5">🧠 20.15 L'identité narrative</h2>
+<p>L'identité narrative correspond à la manière dont une personne organise son histoire personnelle sous la forme d'un récit cohérent.</p>
+<p>Les souvenirs sont sélectionnés, organisés et interprétés afin de donner une continuité à l'histoire personnelle.</p>
+<h2 id="2016-la-continuite-psychologique" class="entry-title hc-1">⏳ 20.16 La continuité psychologique</h2>
+<p>La continuité psychologique correspond au sentiment que la personne actuelle est liée à celle qu'elle était auparavant et à celle qu'elle pense devenir.</p>
+<p>La mémoire autobiographique joue notamment un rôle important dans cette continuité.</p>
+<h2 id="2017-le-conflit-entre-objectifs" class="entry-title hc-2">🔀 20.17 Le conflit entre objectifs</h2>
+<p>Une personne peut poursuivre plusieurs objectifs incompatibles.</p>
+<p>Par exemple, rechercher simultanément :</p>
+<ul>
+<li>sécurité et nouveauté ;</li>
+<li>autonomie et proximité ;</li>
+<li>récompense immédiate et objectif à long terme.</li>
+</ul>
+<p>Ces conflits peuvent rendre certaines décisions difficiles.</p>
+<h2 id="2018-lambivalence-psychologique" class="entry-title hc-3">⚖️ 20.18 L'ambivalence psychologique</h2>
+<p>L'ambivalence correspond à la coexistence de tendances, pensées ou émotions opposées concernant un même objet ou une même situation.</p>
+<p>Une personne peut simultanément ressentir de l'attirance et du rejet, de l'envie et de la peur, ou de l'espoir et du doute.</p>
+<h2 id="2019-la-dissonance-cognitive-complexe" class="entry-title hc-4">🧠 20.19 La dissonance cognitive complexe</h2>
+<p>Une situation peut contenir plusieurs croyances, valeurs ou comportements incompatibles.</p>
+<p>La dissonance qui en résulte peut influencer les émotions, les décisions, les attitudes et les comportements.</p>
+<h2 id="2020-la-regulation-emotionnelle-complexe" class="entry-title hc-5">🔄 20.20 La régulation émotionnelle complexe</h2>
+<p>La régulation émotionnelle implique différents processus permettant de modifier l'expérience ou l'expression des émotions.</p>
+<p>Elle peut intervenir avant, pendant ou après l'apparition d'une émotion.</p>
+<h2 id="2021-la-flexibilite-psychologique" class="entry-title hc-1">🧠 20.21 La flexibilité psychologique</h2>
+<p>La flexibilité psychologique correspond à la capacité à adapter ses pensées, ses émotions et ses comportements aux exigences d'une situation tout en conservant une certaine cohérence avec ses objectifs.</p>
+<p>Elle implique notamment la capacité à modifier une stratégie lorsqu'elle ne fonctionne plus.</p>
+<h2 id="2022-la-rigidite-psychologique" class="entry-title hc-2">🔒 20.22 La rigidité psychologique</h2>
+<p>La rigidité psychologique correspond à une difficulté importante à modifier certaines pensées, stratégies ou comportements malgré l'évolution du contexte.</p>
+<p>Elle peut concerner différents domaines du fonctionnement psychologique.</p>
+<h2 id="2023-ladaptation-psychologique" class="entry-title hc-3">🔄 20.23 L'adaptation psychologique</h2>
+<p>L'adaptation correspond à la capacité d'un individu à ajuster son fonctionnement aux changements de son environnement.</p>
+<p>Elle peut mobiliser :</p>
+<ul>
+<li>la cognition ;</li>
+<li>les émotions ;</li>
+<li>les comportements ;</li>
+<li>les relations sociales ;</li>
+<li>les capacités de résolution de problèmes.</li>
+</ul>
+<h2 id="2024-la-resilience" class="entry-title hc-4">🌱 20.24 La résilience</h2>
+<p>La résilience désigne la capacité à maintenir ou retrouver un fonctionnement relativement adapté après certaines expériences difficiles.</p>
+<p>Elle ne signifie pas l'absence de souffrance ou de conséquences psychologiques.</p>
+<h2 id="2025-le-coping-complexe" class="entry-title hc-5">🧠 20.25 Le coping complexe</h2>
+<p>Le coping correspond aux stratégies utilisées pour faire face à des situations perçues comme difficiles ou stressantes.</p>
+<p>Plusieurs stratégies peuvent être utilisées simultanément et évoluer au cours du temps.</p>
+<h2 id="2026-ladaptation-sociale" class="entry-title hc-1">🧩 20.26 L'adaptation sociale</h2>
+<p>L'adaptation sociale correspond à la manière dont une personne ajuste son comportement aux normes, attentes et caractéristiques de son environnement social.</p>
+<p>Elle nécessite notamment de comprendre les règles sociales et de modifier certaines réponses en fonction du contexte.</p>
+<h2 id="2027-lidentite-sociale-et-personnelle" class="entry-title hc-2">👥 20.27 L'identité sociale et personnelle</h2>
+<p>Une personne possède différentes représentations d'elle-même.</p>
+<p>Certaines sont liées à ses caractéristiques personnelles tandis que d'autres sont liées à ses appartenances sociales et aux relations qu'elle entretient avec les autres.</p>
+<h2 id="2028-la-cognition-sociale-complexe" class="entry-title hc-3">🧠 20.28 La cognition sociale complexe</h2>
+<p>La cognition sociale regroupe les processus permettant de comprendre et d'interpréter les autres.</p>
+<p>Elle implique notamment :</p>
+<ul>
+<li>la perception sociale ;</li>
+<li>les intentions ;</li>
+<li>les émotions ;</li>
+<li>les croyances ;</li>
+<li>les attentes ;</li>
+<li>les normes sociales.</li>
+</ul>
+<h2 id="2029-la-theorie-de-lesprit" class="entry-title hc-4">💭 20.29 La théorie de l'esprit</h2>
+<p>La théorie de l'esprit correspond à la capacité à attribuer à soi-même ou à autrui des états mentaux tels que des croyances, intentions, désirs ou émotions.</p>
+<p>Elle permet notamment de comprendre que les autres peuvent avoir des informations différentes de celles que l'on possède.</p>
+<h2 id="2030-la-prise-de-perspective" class="entry-title hc-5">🧠 20.30 La prise de perspective</h2>
+<p>La prise de perspective consiste à essayer de comprendre une situation depuis le point de vue d'une autre personne.</p>
+<p>Elle peut concerner :</p>
+<ul>
+<li>les pensées ;</li>
+<li>les émotions ;</li>
+<li>les connaissances ;</li>
+<li>les intentions ;</li>
+<li>les perceptions.</li>
+</ul>
+<h2 id="2031-lempathie-complexe" class="entry-title hc-1">❤️ 20.31 L'empathie complexe</h2>
+<p>L'empathie peut mobiliser plusieurs processus.</p>
+<p>Elle peut notamment comprendre la compréhension de l'état mental d'une autre personne et la capacité à partager ou reconnaître certains aspects de son état émotionnel.</p>
+<h2 id="2032-la-contagion-emotionnelle-sociale" class="entry-title hc-2">🔄 20.32 La contagion émotionnelle sociale</h2>
+<p>Les émotions peuvent se transmettre entre individus par différents signaux sociaux.</p>
+<p>Les expressions faciales, la voix, le comportement ou le contexte peuvent contribuer à cette transmission.</p>
+<h2 id="2033-linfluence-reciproque" class="entry-title hc-3">🧠 20.33 L'influence réciproque</h2>
+<p>Les individus influencent leur environnement social tout en étant eux-mêmes influencés par celui-ci.</p>
+<p>Le comportement d'une personne peut modifier la réaction d'une autre, qui peut ensuite modifier le comportement initial.</p>
+<h2 id="2034-linteraction-individu-environnement" class="entry-title hc-4">🌐 20.34 L'interaction individu environnement</h2>
+<p>Le fonctionnement psychologique dépend à la fois des caractéristiques individuelles et du contexte.</p>
+<p>Un même comportement peut avoir une signification différente selon :</p>
+<ul>
+<li>l'environnement ;</li>
+<li>la culture ;</li>
+<li>les relations ;</li>
+<li>les attentes ;</li>
+<li>les expériences précédentes.</li>
+</ul>
+<h2 id="2035-les-differences-individuelles" class="entry-title hc-5">🧠 20.35 Les différences individuelles</h2>
+<p>Deux personnes peuvent réagir différemment à une même situation.</p>
+<p>Ces différences peuvent être influencées par :</p>
+<ul>
+<li>l'histoire personnelle ;</li>
+<li>les apprentissages ;</li>
+<li>la personnalité ;</li>
+<li>les attentes ;</li>
+<li>le contexte ;</li>
+<li>les facteurs biologiques.</li>
+</ul>
+<h2 id="2036-linteraction-cerveau-comportement" class="entry-title hc-1">🔬 20.36 L'interaction cerveau comportement</h2>
+<p>Le comportement dépend du fonctionnement cérébral, mais le cerveau est également influencé par l'expérience et l'environnement.</p>
+<p>Les apprentissages peuvent modifier certaines connexions et certains fonctionnements neuronaux.</p>
+<h2 id="2037-la-plasticite-cerebrale" class="entry-title hc-2">🧠 20.37 La plasticité cérébrale</h2>
+<p>La plasticité cérébrale correspond à la capacité du système nerveux à modifier certaines de ses structures et fonctions en réponse à l'expérience, à l'apprentissage ou à certaines situations.</p>
+<p>Elle constitue un mécanisme important de l'apprentissage et de l'adaptation.</p>
+<h2 id="2038-les-systemes-dynamiques-psychologiques" class="entry-title hc-3">🔄 20.38 Les systèmes dynamiques psychologiques</h2>
+<p>Le fonctionnement psychologique peut être considéré comme un système dynamique dans lequel plusieurs variables évoluent et s'influencent mutuellement.</p>
+<p>Les émotions, pensées, comportements, relations et sensations peuvent ainsi changer au cours du temps.</p>
+<h2 id="2039-le-caractere-multifactoriel-du-fonctionnement-psychologique" class="entry-title hc-4">🧩 20.39 Le caractère multifactoriel du fonctionnement psychologique</h2>
+<p>Un phénomène psychologique peut résulter de l'interaction de nombreux facteurs.</p>
+<p>Il est donc souvent impossible de réduire une expérience complexe à une seule cause.</p>
+<p>Cette approche multifactorielle est particulièrement importante dans l'étude des comportements humains.</p>
+<h2 id="2040-pourquoi-etudier-les-phenomenes-psychologiques-complexes" class="entry-title hc-5">🔬 20.40 Pourquoi étudier les phénomènes psychologiques complexes ?</h2>
+<p>Les phénomènes complexes permettent de comprendre que le fonctionnement psychologique ne peut pas toujours être expliqué par un seul mécanisme.</p>
+<p>La perception influence les émotions, les émotions influencent l'attention, l'attention influence la mémoire, la mémoire influence les pensées et les pensées peuvent modifier les comportements.</p>
+<p>La psychologie étudie donc non seulement chaque processus individuellement, mais également <strong>les interactions entre ces processus</strong>.</p>
+<hr />
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>Le fonctionnement psychologique humain est <strong>multidimensionnel et dynamique</strong>.</p>
+<p>Une émotion peut modifier l'attention, l'attention peut influencer la perception, la perception peut modifier les pensées, les pensées peuvent influencer les comportements et les comportements peuvent à leur tour modifier l'environnement.</p>
+<p>Cette interaction permanente explique pourquoi les phénomènes psychologiques complexes sont rarement réductibles à une seule cause.</p>
+<p>L'étude de ces interactions constitue donc une étape essentielle pour comprendre le fonctionnement global de l'être humain.</p>
+<hr />
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Phénomènes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="phenomenes-les-phenomenes-de-la-perception.html"><span class="similar-icon">🔮</span>Les phénomènes de la perception</a><a class="similar-item" href="phenomenes-les-phenomenes-de-la-memoire.html"><span class="similar-icon">🔮</span>Les phénomènes de la mémoire</a><a class="similar-item" href="phenomenes-les-phenomenes-lies-aux-pensees.html"><span class="similar-icon">🔮</span>Les phénomènes liés aux pensées</a></div>
+    </div>
+    <a class="back-link" href="../categorie/phenomenes.html">← Retour à « Phénomènes psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

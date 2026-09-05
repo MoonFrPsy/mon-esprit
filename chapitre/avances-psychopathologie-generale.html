@@ -2,12 +2,1254 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/avances-psychopathologie-generale/">
-<link rel="canonical" href="/chapitre/avances-psychopathologie-generale/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/avances-psychopathologie-generale/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psychopathologie générale — Mon Esprit</title>
+<meta name="description" content="Psychopathologie générale, dans la catégorie Concepts avancés de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/avances-psychopathologie-generale/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#91-quest-ce-que-la-psychopathologie">🩺 9.1 Qu'est-ce que la psychopathologie ?</a></li><li><a href="#92-symptome-signe-syndrome-et-trouble">🔎 9.2 Symptôme, signe, syndrome et trouble</a></li><li><a href="#93-la-souffrance-psychologique">🧠 9.3 La souffrance psychologique</a></li><li><a href="#94-lalteration-du-fonctionnement">⚙️ 9.4 L'altération du fonctionnement</a></li><li><a href="#95-normalite-et-psychopathologie">📏 9.5 Normalité et psychopathologie</a></li><li><a href="#96-limportance-du-contexte">🌍 9.6 L'importance du contexte</a></li><li><a href="#97-les-facteurs-biologiques">🧬 9.7 Les facteurs biologiques</a></li><li><a href="#98-les-facteurs-cognitifs">🧠 9.8 Les facteurs cognitifs</a></li><li><a href="#99-les-facteurs-emotionnels">❤️ 9.9 Les facteurs émotionnels</a></li><li><a href="#910-les-facteurs-comportementaux">🧩 9.10 Les facteurs comportementaux</a></li><li><a href="#911-les-facteurs-de-maintien">🔄 9.11 Les facteurs de maintien</a></li><li><a href="#912-les-facteurs-de-vulnerabilite">🌱 9.12 Les facteurs de vulnérabilité</a></li><li><a href="#913-les-facteurs-precipitants">⚡ 9.13 Les facteurs précipitants</a></li><li><a href="#914-les-facteurs-de-protection">🛡️ 9.14 Les facteurs de protection</a></li><li><a href="#915-le-modele-vulnerabilite-stress">🧠 9.15 Le modèle vulnérabilité stress</a></li><li><a href="#916-le-modele-biopsychosocial">🧬 9.16 Le modèle biopsychosocial</a><ul class="sidebar-sublist"><li><a href="#biologique">🧬 Biologique</a></li><li><a href="#psychologique">🧠 Psychologique</a></li><li><a href="#social">🧑‍🤝‍🧑 Social</a></li></ul></li><li><a href="#917-les-modeles-transdiagnostiques">🔄 9.17 Les modèles transdiagnostiques</a></li><li><a href="#918-les-modeles-categoriels">📦 9.18 Les modèles catégoriels</a></li><li><a href="#919-les-modeles-dimensionnels">📊 9.19 Les modèles dimensionnels</a></li><li><a href="#920-categories-et-dimensions">🧩 9.20 Catégories et dimensions</a></li><li><a href="#921-la-comorbidite">🧠 9.21 La comorbidité</a></li><li><a href="#922-le-diagnostic-differentiel">🔀 9.22 Le diagnostic différentiel</a></li><li><a href="#923-le-role-de-levaluation-clinique">🩺 9.23 Le rôle de l'évaluation clinique</a></li><li><a href="#924-levolution-dans-le-temps">🕰️ 9.24 L'évolution dans le temps</a></li><li><a href="#925-la-trajectoire-psychopathologique">📈 9.25 La trajectoire psychopathologique</a></li><li><a href="#926-les-interactions-entre-symptomes">🔄 9.26 Les interactions entre symptômes</a></li><li><a href="#927-les-symptomes-transdiagnostiques">🧠 9.27 Les symptômes transdiagnostiques</a></li><li><a href="#928-le-role-de-la-personnalite">🪞 9.28 Le rôle de la personnalité</a></li><li><a href="#929-le-role-des-mecanismes-de-defense">🧠 9.29 Le rôle des mécanismes de défense</a></li><li><a href="#930-le-role-des-strategies-dadaptation">🧩 9.30 Le rôle des stratégies d'adaptation</a></li><li><a href="#931-la-deregulation-emotionnelle">🧠 9.31 La dérégulation émotionnelle</a></li><li><a href="#932-les-cycles-psychopathologiques">🔄 9.32 Les cycles psychopathologiques</a></li><li><a href="#933-les-interactions-entre-symptomes-et-environnement">🧠 9.33 Les interactions entre symptômes et environnement</a></li><li><a href="#934-les-facteurs-genetiques-et-environnementaux">🧬 9.34 Les facteurs génétiques et environnementaux</a></li><li><a href="#935-la-plasticite-et-la-psychopathologie">🧠 9.35 La plasticité et la psychopathologie</a></li><li><a href="#936-la-culture-et-la-psychopathologie">🌍 9.36 La culture et la psychopathologie</a></li><li><a href="#937-psychopathologie-et-cerveau">🧠 9.37 Psychopathologie et cerveau</a></li><li><a href="#938-psychopathologie-et-diagnostic">⚖️ 9.38 Psychopathologie et diagnostic</a></li><li><a href="#939-les-limites-de-la-psychopathologie">🔬 9.39 Les limites de la psychopathologie</a></li><li><a href="#940-pourquoi-etudier-la-psychopathologie-generale">🌌 9.40 Pourquoi étudier la psychopathologie générale ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Psychopathologie générale',
+        category: 'Concepts avancés',
+        icon: '🔬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/avances.html">🔬 Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Psychopathologie générale</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-avances)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>La psychopathologie est l'étude des <strong>manifestations psychologiques problématiques</strong>, de leur organisation, de leur évolution et des mécanismes susceptibles de les expliquer.</p>
+<p>Elle s'intéresse notamment aux :</p>
+<ul>
+<li>symptômes</li>
+<li>signes cliniques</li>
+<li>syndromes</li>
+<li>troubles psychiques</li>
+<li>mécanismes psychologiques</li>
+<li>facteurs de vulnérabilité</li>
+<li>facteurs de maintien</li>
+<li>facteurs de protection</li>
+<li>interactions entre cognition, émotions, comportements et environnement</li>
+</ul>
+<p>La psychopathologie ne consiste pas simplement à dresser une liste de troubles.</p>
+<p>Elle cherche à comprendre <strong>comment un fonctionnement psychologique particulier apparaît, comment il s'organise, comment il évolue et comment différents phénomènes peuvent s'influencer mutuellement</strong>.</p>
+<p>Un même symptôme peut apparaître dans plusieurs troubles, et un même trouble peut présenter des manifestations très différentes selon les individus.</p>
+<hr />
+<h2 id="91-quest-ce-que-la-psychopathologie" class="entry-title hc-1">🩺 9.1 Qu'est-ce que la psychopathologie ?</h2>
+<p>La psychopathologie étudie les phénomènes psychologiques lorsqu'ils deviennent particulièrement perturbateurs, persistants, atypiques ou associés à une souffrance ou une altération importante du fonctionnement.</p>
+<p>Elle se situe à l'intersection de plusieurs domaines :</p>
+<p><strong>psychologie + psychiatrie + neurosciences + médecine + sciences sociales</strong></p>
+<p>Elle cherche notamment à comprendre :</p>
+<p><strong>qu'est-ce qui se manifeste ?</strong></p>
+<p><strong>comment cela fonctionne ?</strong></p>
+<p><strong>dans quel contexte ?</strong></p>
+<p><strong>depuis quand ?</strong></p>
+<p><strong>comment cela évolue ?</strong></p>
+<p><strong>quels mécanismes peuvent participer au phénomène ?</strong></p>
+<hr />
+<h2 id="92-symptome-signe-syndrome-et-trouble" class="entry-title hc-2">🔎 9.2 Symptôme, signe, syndrome et trouble</h2>
+<p>Ces termes ne sont pas strictement équivalents.</p>
+<p>Un <strong>symptôme</strong> correspond à une manifestation rapportée ou vécue par une personne.</p>
+<p>Un <strong>signe clinique</strong> correspond à un élément observable ou évalué par un professionnel.</p>
+<p>Un <strong>syndrome</strong> correspond à un ensemble organisé de manifestations qui tendent à apparaître ensemble.</p>
+<p>Un <strong>trouble</strong> correspond à une organisation clinique répondant à certains critères diagnostiques selon une classification donnée.</p>
+<p>Ainsi :</p>
+<p><strong>symptôme ≠ syndrome ≠ trouble</strong></p>
+<p>Un symptôme isolé ne permet généralement pas de conclure à la présence d'un trouble précis.</p>
+<hr />
+<h2 id="93-la-souffrance-psychologique" class="entry-title hc-3">🧠 9.3 La souffrance psychologique</h2>
+<p>La souffrance psychologique correspond à une expérience subjective de détresse, de mal-être ou de difficulté émotionnelle ou cognitive.</p>
+<p>Elle peut prendre différentes formes :</p>
+<ul>
+<li>tristesse</li>
+<li>anxiété</li>
+<li>peur</li>
+<li>colère</li>
+<li>sentiment de vide</li>
+<li>honte</li>
+<li>confusion</li>
+<li>détresse relationnelle</li>
+</ul>
+<p>La souffrance est importante en clinique, mais elle ne constitue pas à elle seule un diagnostic.</p>
+<hr />
+<h2 id="94-lalteration-du-fonctionnement" class="entry-title hc-4">⚙️ 9.4 L'altération du fonctionnement</h2>
+<p>Un autre élément important en psychopathologie concerne le fonctionnement quotidien.</p>
+<p>Un phénomène psychologique peut affecter :</p>
+<ul>
+<li>les relations</li>
+<li>les études</li>
+<li>le travail</li>
+<li>le sommeil</li>
+<li>l'autonomie</li>
+<li>la concentration</li>
+<li>la prise de décision</li>
+<li>les activités quotidiennes</li>
+</ul>
+<p>La présence d'une difficulté n'implique toutefois pas automatiquement qu'un trouble soit présent.</p>
+<p>L'évaluation porte sur l'ensemble du fonctionnement.</p>
+<hr />
+<h2 id="95-normalite-et-psychopathologie" class="entry-title hc-5">📏 9.5 Normalité et psychopathologie</h2>
+<p>La frontière entre fonctionnement habituel et psychopathologie n'est pas toujours une ligne simple.</p>
+<p>Une émotion intense, une pensée inhabituelle ou un comportement particulier peuvent apparaître ponctuellement chez une personne sans constituer un trouble.</p>
+<p>L'évaluation prend notamment en compte :</p>
+<p><strong>intensité + durée + fréquence + contexte + rigidité + souffrance + retentissement</strong></p>
+<p>Une réaction peut être inhabituelle sans être nécessairement pathologique.</p>
+<hr />
+<h2 id="96-limportance-du-contexte" class="entry-title hc-1">🌍 9.6 L'importance du contexte</h2>
+<p>Un comportement ne peut pas toujours être interprété indépendamment de son contexte.</p>
+<p>Une réaction peut être parfaitement compréhensible dans certaines circonstances et problématique dans d'autres.</p>
+<p>Le contexte comprend notamment :</p>
+<ul>
+<li>situation actuelle</li>
+<li>environnement social</li>
+<li>histoire personnelle</li>
+<li>culture</li>
+<li>âge</li>
+<li>événements récents</li>
+<li>état physique</li>
+<li>ressources disponibles</li>
+</ul>
+<p>La psychopathologie nécessite donc une analyse contextualisée.</p>
+<hr />
+<h2 id="97-les-facteurs-biologiques" class="entry-title hc-2">🧬 9.7 Les facteurs biologiques</h2>
+<p>Les facteurs biologiques peuvent participer à certains fonctionnements psychopathologiques.</p>
+<p>Ils peuvent concerner :</p>
+<ul>
+<li>génétique</li>
+<li>développement cérébral</li>
+<li>fonctionnement neuronal</li>
+<li>systèmes hormonaux</li>
+<li>neurotransmission</li>
+<li>sommeil</li>
+<li>état physiologique</li>
+</ul>
+<p>Cependant, l'existence d'un facteur biologique ne signifie généralement pas qu'il constitue à lui seul une cause suffisante.</p>
+<p>Les phénomènes psychologiques sont souvent multifactoriels.</p>
+<hr />
+<h2 id="98-les-facteurs-cognitifs" class="entry-title hc-3">🧠 9.8 Les facteurs cognitifs</h2>
+<p>Les processus cognitifs peuvent également participer à la psychopathologie.</p>
+<p>Ils comprennent notamment :</p>
+<ul>
+<li>attention</li>
+<li>mémoire</li>
+<li>interprétation</li>
+<li>croyances</li>
+<li>raisonnement</li>
+<li>métacognition</li>
+<li>attentes</li>
+<li>perception du risque</li>
+</ul>
+<p>Certaines configurations cognitives peuvent contribuer à maintenir certains symptômes.</p>
+<hr />
+<h2 id="99-les-facteurs-emotionnels" class="entry-title hc-4">❤️ 9.9 Les facteurs émotionnels</h2>
+<p>Les émotions occupent une place centrale dans de nombreux modèles psychopathologiques.</p>
+<p>Les difficultés peuvent concerner :</p>
+<ul>
+<li>intensité émotionnelle</li>
+<li>régulation</li>
+<li>reconnaissance</li>
+<li>expression</li>
+<li>évitement</li>
+<li>persistance</li>
+<li>réactivité</li>
+</ul>
+<p>Une émotion n'est cependant pas pathologique simplement parce qu'elle est forte.</p>
+<p>Le contexte et le fonctionnement global restent essentiels.</p>
+<hr />
+<h2 id="910-les-facteurs-comportementaux" class="entry-title hc-5">🧩 9.10 Les facteurs comportementaux</h2>
+<p>Les comportements peuvent participer à l'apparition ou au maintien de certaines difficultés.</p>
+<p>Un comportement peut produire une conséquence immédiate qui augmente sa probabilité de répétition.</p>
+<p>Par exemple :</p>
+<p><strong>anxiété → évitement → soulagement → répétition de l'évitement</strong></p>
+<p>Le comportement peut donc devenir une partie du mécanisme de maintien.</p>
+<hr />
+<h2 id="911-les-facteurs-de-maintien" class="entry-title hc-1">🔄 9.11 Les facteurs de maintien</h2>
+<p>Un facteur de maintien est un élément qui contribue à la persistance d'une difficulté une fois qu'elle est installée.</p>
+<p>Il peut s'agir de :</p>
+<ul>
+<li>évitement</li>
+<li>rumination</li>
+<li>comportements de sécurité</li>
+<li>isolement</li>
+<li>interprétations rigides</li>
+<li>manque de sommeil</li>
+<li>stress chronique</li>
+<li>interactions sociales problématiques</li>
+</ul>
+<p>Un facteur de maintien n'est pas nécessairement la cause initiale du problème.</p>
+<hr />
+<h2 id="912-les-facteurs-de-vulnerabilite" class="entry-title hc-2">🌱 9.12 Les facteurs de vulnérabilité</h2>
+<p>Une vulnérabilité correspond à une caractéristique pouvant augmenter la probabilité qu'une difficulté apparaisse dans certaines circonstances.</p>
+<p>Elle peut être :</p>
+<p><strong>biologique + psychologique + développementale + sociale</strong></p>
+<p>Une vulnérabilité n'est pas un destin.</p>
+<p>Elle signifie plutôt qu'un individu peut présenter une sensibilité particulière à certains facteurs.</p>
+<hr />
+<h2 id="913-les-facteurs-precipitants" class="entry-title hc-3">⚡ 9.13 Les facteurs précipitants</h2>
+<p>Un facteur précipitant correspond à un événement ou une modification pouvant contribuer au déclenchement d'un épisode ou d'une difficulté.</p>
+<p>Il peut s'agir de :</p>
+<ul>
+<li>événement stressant</li>
+<li>rupture</li>
+<li>perte</li>
+<li>conflit</li>
+<li>changement important</li>
+<li>maladie</li>
+<li>privation de sommeil</li>
+<li>consommation d'une substance</li>
+</ul>
+<p>Le facteur précipitant ne constitue pas nécessairement l'explication complète du phénomène.</p>
+<hr />
+<h2 id="914-les-facteurs-de-protection" class="entry-title hc-4">🛡️ 9.14 Les facteurs de protection</h2>
+<p>Les facteurs de protection sont des éléments pouvant réduire la probabilité de certaines conséquences négatives ou favoriser l'adaptation.</p>
+<p>Ils peuvent inclure :</p>
+<ul>
+<li>soutien social</li>
+<li>stabilité environnementale</li>
+<li>ressources personnelles</li>
+<li>stratégies d'adaptation</li>
+<li>accès aux soins</li>
+<li>relations sécurisantes</li>
+<li>capacités de résolution de problèmes</li>
+</ul>
+<p>Un facteur de protection ne garantit pas l'absence de difficulté.</p>
+<hr />
+<h2 id="915-le-modele-vulnerabilite-stress" class="entry-title hc-5">🧠 9.15 Le modèle vulnérabilité stress</h2>
+<p>Le modèle vulnérabilité-stress considère que certaines difficultés peuvent émerger de l'interaction entre une vulnérabilité préexistante et des facteurs de stress.</p>
+<p>Schéma simplifié :</p>
+<p><strong>vulnérabilité + stress → augmentation du risque de difficulté</strong></p>
+<p>Ce modèle évite une explication reposant sur une cause unique.</p>
+<p>Il souligne également qu'une même situation peut avoir des effets différents selon les caractéristiques individuelles.</p>
+<hr />
+<h2 id="916-le-modele-biopsychosocial" class="entry-title hc-1">🧬 9.16 Le modèle biopsychosocial</h2>
+<p>Le modèle biopsychosocial considère plusieurs niveaux simultanément.</p>
+<h3 id="biologique">🧬 Biologique</h3>
+<p>Génétique, cerveau, physiologie, sommeil, substances.</p>
+<h3 id="psychologique">🧠 Psychologique</h3>
+<p>Cognition, émotions, personnalité, apprentissage, comportements.</p>
+<h3 id="social">🧑‍🤝‍🧑 Social</h3>
+<p>Relations, environnement, culture, conditions de vie.</p>
+<p>Ces dimensions ne sont pas indépendantes.</p>
+<p>Elles peuvent continuellement s'influencer.</p>
+<hr />
+<h2 id="917-les-modeles-transdiagnostiques" class="entry-title hc-2">🔄 9.17 Les modèles transdiagnostiques</h2>
+<p>Un modèle transdiagnostique cherche à étudier des mécanismes présents dans plusieurs troubles différents.</p>
+<p>Par exemple, certains processus peuvent être observés dans plusieurs catégories cliniques :</p>
+<ul>
+<li>évitement</li>
+<li>rumination</li>
+<li>intolérance à l'incertitude</li>
+<li>dysrégulation émotionnelle</li>
+<li>biais attentionnels</li>
+<li>comportements de sécurité</li>
+</ul>
+<p>L'intérêt est d'étudier les mécanismes plutôt que uniquement les catégories diagnostiques.</p>
+<hr />
+<h2 id="918-les-modeles-categoriels" class="entry-title hc-3">📦 9.18 Les modèles catégoriels</h2>
+<p>Un modèle catégoriel classe les troubles dans différentes catégories.</p>
+<p>Cela permet notamment :</p>
+<ul>
+<li>d'organiser les diagnostics</li>
+<li>de communiquer entre professionnels</li>
+<li>d'étudier des groupes de patients</li>
+<li>de structurer certaines recherches</li>
+</ul>
+<p>Cependant, les catégories ne représentent pas nécessairement des frontières parfaitement nettes dans la réalité psychologique.</p>
+<hr />
+<h2 id="919-les-modeles-dimensionnels" class="entry-title hc-4">📊 9.19 Les modèles dimensionnels</h2>
+<p>Les modèles dimensionnels considèrent certains phénomènes comme pouvant varier selon un continuum.</p>
+<p>Par exemple :</p>
+<p><strong>faible ←────────→ élevé</strong></p>
+<p>Cela peut concerner :</p>
+<ul>
+<li>anxiété</li>
+<li>impulsivité</li>
+<li>détachement</li>
+<li>instabilité émotionnelle</li>
+<li>fonctionnement cognitif</li>
+</ul>
+<p>Une dimension peut donc être présente à différents niveaux sans que la frontière entre les niveaux soit toujours évidente.</p>
+<hr />
+<h2 id="920-categories-et-dimensions" class="entry-title hc-5">🧩 9.20 Catégories et dimensions</h2>
+<p>Les approches catégorielles et dimensionnelles peuvent être complémentaires.</p>
+<p>Une catégorie permet de répondre :</p>
+<p><strong>« Cette organisation clinique correspond-elle à un diagnostic donné ? »</strong></p>
+<p>Une approche dimensionnelle peut davantage répondre :</p>
+<p><strong>« À quel niveau certaines caractéristiques sont-elles présentes ? »</strong></p>
+<p>Ces deux perspectives peuvent apporter des informations différentes.</p>
+<hr />
+<h2 id="921-la-comorbidite" class="entry-title hc-1">🧠 9.21 La comorbidité</h2>
+<p>La comorbidité désigne la coexistence de plusieurs troubles ou problèmes cliniquement significatifs chez une même personne.</p>
+<p>Elle peut rendre l'analyse plus complexe.</p>
+<p>Par exemple :</p>
+<p><strong>symptôme A + symptôme B + symptôme C</strong></p>
+<p>peuvent appartenir à plusieurs ensembles diagnostiques différents.</p>
+<p>La présence de plusieurs difficultés ne signifie pas nécessairement qu'elles possèdent des causes totalement indépendantes.</p>
+<hr />
+<h2 id="922-le-diagnostic-differentiel" class="entry-title hc-2">🔀 9.22 Le diagnostic différentiel</h2>
+<p>Le diagnostic différentiel consiste à comparer plusieurs explications possibles lorsqu'une manifestation peut correspondre à différentes conditions.</p>
+<p>Un professionnel peut notamment chercher à distinguer :</p>
+<p><strong>trouble A ↔ trouble B ↔ effet d'une substance ↔ condition médicale ↔ réaction contextuelle</strong></p>
+<p>Cette démarche vise à éviter une interprétation trop rapide.</p>
+<hr />
+<h2 id="923-le-role-de-levaluation-clinique" class="entry-title hc-3">🩺 9.23 Le rôle de l'évaluation clinique</h2>
+<p>L'évaluation clinique permet de recueillir différentes informations.</p>
+<p>Elle peut inclure :</p>
+<ul>
+<li>entretien</li>
+<li>histoire personnelle</li>
+<li>évolution des symptômes</li>
+<li>fonctionnement actuel</li>
+<li>observation</li>
+<li>questionnaires</li>
+<li>tests psychologiques</li>
+<li>informations médicales pertinentes</li>
+</ul>
+<p>L'objectif est de construire une compréhension globale du fonctionnement.</p>
+<hr />
+<h2 id="924-levolution-dans-le-temps" class="entry-title hc-4">🕰️ 9.24 L'évolution dans le temps</h2>
+<p>La psychopathologie ne doit pas être étudiée uniquement à un instant donné.</p>
+<p>Il est important d'observer :</p>
+<p><strong>apparition → évolution → fluctuations → éventuelles périodes de rémission → éventuelles rechutes</strong></p>
+<p>Certains phénomènes sont très variables dans le temps.</p>
+<p>D'autres présentent une certaine stabilité.</p>
+<hr />
+<h2 id="925-la-trajectoire-psychopathologique" class="entry-title hc-5">📈 9.25 La trajectoire psychopathologique</h2>
+<p>Une trajectoire psychopathologique correspond à l'évolution d'un ensemble de manifestations au cours du temps.</p>
+<p>Elle peut être :</p>
+<ul>
+<li>continue</li>
+<li>intermittente</li>
+<li>fluctuante</li>
+<li>progressive</li>
+<li>récurrente</li>
+<li>dépendante du contexte</li>
+</ul>
+<p>Une trajectoire individuelle peut également différer fortement de celle d'une autre personne présentant des symptômes similaires.</p>
+<hr />
+<h2 id="926-les-interactions-entre-symptomes" class="entry-title hc-1">🔄 9.26 Les interactions entre symptômes</h2>
+<p>Les symptômes peuvent parfois s'influencer mutuellement.</p>
+<p>Exemple :</p>
+<p><strong>insomnie → fatigue → diminution de concentration → difficultés → stress → sommeil perturbé</strong></p>
+<p>Un système de rétroaction peut alors apparaître.</p>
+<p>Le symptôme initial n'est plus nécessairement le seul élément important.</p>
+<hr />
+<h2 id="927-les-symptomes-transdiagnostiques" class="entry-title hc-2">🧠 9.27 Les symptômes transdiagnostiques</h2>
+<p>Certains symptômes ou processus peuvent apparaître dans plusieurs troubles.</p>
+<p>Par exemple :</p>
+<ul>
+<li>troubles du sommeil</li>
+<li>difficultés de concentration</li>
+<li>fatigue</li>
+<li>irritabilité</li>
+<li>évitement</li>
+<li>ruminations</li>
+</ul>
+<p>Ils ne permettent donc pas nécessairement d'identifier un trouble précis à eux seuls.</p>
+<hr />
+<h2 id="928-le-role-de-la-personnalite" class="entry-title hc-3">🪞 9.28 Le rôle de la personnalité</h2>
+<p>La personnalité peut influencer la manière dont certaines difficultés sont vécues ou exprimées.</p>
+<p>Elle peut notamment intervenir dans :</p>
+<ul>
+<li>régulation émotionnelle</li>
+<li>impulsivité</li>
+<li>relations</li>
+<li>adaptation</li>
+<li>perception de soi</li>
+<li>réactions au stress</li>
+</ul>
+<p>Mais personnalité et psychopathologie ne sont pas synonymes.</p>
+<p>Un trait de personnalité n'est pas automatiquement un symptôme.</p>
+<hr />
+<h2 id="929-le-role-des-mecanismes-de-defense" class="entry-title hc-4">🧠 9.29 Le rôle des mécanismes de défense</h2>
+<p>Les mécanismes de défense peuvent être étudiés comme des processus participant à la manière dont certaines expériences psychologiques sont gérées.</p>
+<p>Ils peuvent influencer :</p>
+<ul>
+<li>perception de soi</li>
+<li>perception des autres</li>
+<li>émotions</li>
+<li>conflits psychiques</li>
+<li>comportements</li>
+</ul>
+<p>Cependant, les mécanismes de défense ne constituent pas à eux seuls des diagnostics.</p>
+<hr />
+<h2 id="930-le-role-des-strategies-dadaptation" class="entry-title hc-5">🧩 9.30 Le rôle des stratégies d'adaptation</h2>
+<p>Les stratégies d'adaptation, ou <strong>coping</strong>, correspondent aux moyens utilisés pour gérer les exigences d'une situation.</p>
+<p>Elles peuvent être :</p>
+<ul>
+<li>centrées sur le problème</li>
+<li>centrées sur l'émotion</li>
+<li>orientées vers le soutien social</li>
+<li>cognitives</li>
+<li>comportementales</li>
+</ul>
+<p>Une stratégie peut être efficace dans un contexte et moins adaptée dans un autre.</p>
+<hr />
+<h2 id="931-la-deregulation-emotionnelle" class="entry-title hc-1">🧠 9.31 La dérégulation émotionnelle</h2>
+<p>La dérégulation émotionnelle désigne des difficultés concernant la modulation des réponses émotionnelles.</p>
+<p>Elle peut concerner :</p>
+<ul>
+<li>intensité</li>
+<li>durée</li>
+<li>récupération</li>
+<li>expression</li>
+<li>impulsivité</li>
+<li>sensibilité aux déclencheurs</li>
+</ul>
+<p>Elle peut être observée dans différents contextes cliniques.</p>
+<p>Elle n'est donc pas synonyme d'un trouble particulier.</p>
+<hr />
+<h2 id="932-les-cycles-psychopathologiques" class="entry-title hc-2">🔄 9.32 Les cycles psychopathologiques</h2>
+<p>Certains fonctionnements peuvent former des cycles relativement stables.</p>
+<p>Exemple général :</p>
+<p><strong>déclencheur → interprétation → émotion → comportement → conséquence → nouvelle interprétation</strong></p>
+<p>La conséquence peut alors augmenter la probabilité que le cycle recommence.</p>
+<p>Comprendre ce cycle permet d'étudier les mécanismes de maintien.</p>
+<hr />
+<h2 id="933-les-interactions-entre-symptomes-et-environnement" class="entry-title hc-3">🧠 9.33 Les interactions entre symptômes et environnement</h2>
+<p>Les symptômes peuvent modifier l'environnement social.</p>
+<p>Par exemple :</p>
+<p><strong>difficulté psychologique → retrait → diminution des interactions → modification du soutien social</strong></p>
+<p>L'environnement peut ensuite influencer la difficulté initiale.</p>
+<p>On obtient :</p>
+<p><strong>individu ↔ environnement</strong></p>
+<p>Cette relation bidirectionnelle est importante dans de nombreux modèles contemporains.</p>
+<hr />
+<h2 id="934-les-facteurs-genetiques-et-environnementaux" class="entry-title hc-4">🧬 9.34 Les facteurs génétiques et environnementaux</h2>
+<p>Les caractéristiques psychologiques résultent rarement d'une opposition simple entre :</p>
+<p><strong>génétique OU environnement</strong></p>
+<p>Les facteurs biologiques et environnementaux peuvent interagir.</p>
+<p>Le développement dépend notamment de la manière dont certaines prédispositions rencontrent différents environnements et expériences.</p>
+<hr />
+<h2 id="935-la-plasticite-et-la-psychopathologie" class="entry-title hc-5">🧠 9.35 La plasticité et la psychopathologie</h2>
+<p>Le fonctionnement psychologique et cérébral possède une certaine plasticité.</p>
+<p>Cela signifie que les expériences, apprentissages et changements environnementaux peuvent modifier certains processus.</p>
+<p>La plasticité ne signifie cependant pas que tous les phénomènes sont facilement ou complètement modifiables.</p>
+<p>Elle souligne surtout que le fonctionnement psychologique n'est pas nécessairement entièrement figé.</p>
+<hr />
+<h2 id="936-la-culture-et-la-psychopathologie" class="entry-title hc-1">🌍 9.36 La culture et la psychopathologie</h2>
+<p>La culture influence la manière dont les expériences psychologiques sont :</p>
+<ul>
+<li>exprimées</li>
+<li>interprétées</li>
+<li>décrites</li>
+<li>comprises</li>
+<li>prises en charge</li>
+</ul>
+<p>Certaines manifestations peuvent également avoir des significations différentes selon les contextes culturels.</p>
+<p>L'évaluation psychopathologique doit donc tenir compte du contexte culturel.</p>
+<hr />
+<h2 id="937-psychopathologie-et-cerveau" class="entry-title hc-2">🧠 9.37 Psychopathologie et cerveau</h2>
+<p>Les neurosciences permettent d'étudier les relations entre fonctionnement cérébral et phénomènes psychologiques.</p>
+<p>Elles peuvent examiner notamment :</p>
+<ul>
+<li>attention</li>
+<li>mémoire</li>
+<li>émotions</li>
+<li>récompense</li>
+<li>inhibition</li>
+<li>perception</li>
+<li>prise de décision</li>
+</ul>
+<p>Cependant, identifier une corrélation cérébrale ne signifie pas automatiquement avoir découvert une cause unique d'un trouble.</p>
+<hr />
+<h2 id="938-psychopathologie-et-diagnostic" class="entry-title hc-3">⚖️ 9.38 Psychopathologie et diagnostic</h2>
+<p>Le diagnostic est un outil de classification et de communication clinique.</p>
+<p>Il peut permettre de :</p>
+<ul>
+<li>structurer l'évaluation</li>
+<li>organiser les informations</li>
+<li>faciliter la communication entre professionnels</li>
+<li>orienter certaines recherches</li>
+<li>contribuer à la planification des soins</li>
+</ul>
+<p>Mais un diagnostic ne décrit jamais à lui seul toute la complexité d'une personne.</p>
+<p>Deux personnes ayant le même diagnostic peuvent présenter des fonctionnements très différents.</p>
+<hr />
+<h2 id="939-les-limites-de-la-psychopathologie" class="entry-title hc-4">🔬 9.39 Les limites de la psychopathologie</h2>
+<p>La psychopathologie est confrontée à plusieurs difficultés.</p>
+<p>Les phénomènes psychologiques sont :</p>
+<p><strong>complexes + variables + contextuels + multifactoriels</strong></p>
+<p>Les catégories diagnostiques sont des modèles permettant d'organiser cette complexité.</p>
+<p>Elles ne constituent pas nécessairement une représentation parfaite de la réalité psychologique.</p>
+<p>Il faut également éviter de transformer une description clinique en explication causale automatique.</p>
+<hr />
+<h2 id="940-pourquoi-etudier-la-psychopathologie-generale" class="entry-title hc-5">🌌 9.40 Pourquoi étudier la psychopathologie générale ?</h2>
+<p>La psychopathologie générale permet de comprendre comment les manifestations psychologiques peuvent être organisées et étudiées.</p>
+<p>Elle permet notamment de distinguer :</p>
+<p><strong>symptôme → syndrome → trouble</strong></p>
+<p>tout en intégrant :</p>
+<p><strong>vulnérabilités + facteurs précipitants + facteurs de maintien + facteurs de protection + contexte</strong></p>
+<p>Elle permet également de comprendre pourquoi une approche multifactorielle est nécessaire.</p>
+<p>Un trouble ou une difficulté psychologique ne peut généralement pas être expliqué par une seule variable.</p>
+<p>Le fonctionnement peut plutôt être représenté comme un système :</p>
+<p><strong>🧬 biologie</strong></p>
+<p>↕️</p>
+<p><strong>🧠 cognition</strong></p>
+<p>↕️</p>
+<p><strong>❤️ émotions</strong></p>
+<p>↕️</p>
+<p><strong>🎯 motivation</strong></p>
+<p>↕️</p>
+<p><strong>🧩 comportements</strong></p>
+<p>↕️</p>
+<p><strong>🧑‍🤝‍🧑 relations</strong></p>
+<p>↕️</p>
+<p><strong>🌍 environnement</strong></p>
+<p>Ces différents niveaux peuvent s'influencer dans le temps.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>La psychopathologie cherche à comprendre les fonctionnements psychologiques problématiques sans les réduire à une seule cause.</p>
+<p>Il faut distinguer :</p>
+<p>🩺 <strong>Symptôme</strong></p>
+<p>Manifestation particulière.</p>
+<p>🧩 <strong>Syndrome</strong></p>
+<p>Ensemble organisé de manifestations.</p>
+<p>📋 <strong>Trouble</strong></p>
+<p>Organisation clinique répondant à certains critères diagnostiques.</p>
+<p>La compréhension psychopathologique repose notamment sur :</p>
+<p>🧬 <strong>Vulnérabilités</strong></p>
+<p>⚡ <strong>Facteurs précipitants</strong></p>
+<p>🔄 <strong>Facteurs de maintien</strong></p>
+<p>🛡️ <strong>Facteurs de protection</strong></p>
+<p>🌍 <strong>Contexte</strong></p>
+<p>Elle utilise plusieurs modèles :</p>
+<p>📦 <strong>Modèles catégoriels</strong></p>
+<p>📊 <strong>Modèles dimensionnels</strong></p>
+<p>🔄 <strong>Modèles transdiagnostiques</strong></p>
+<p>🧬 <strong>Modèles biopsychosociaux</strong></p>
+<p>⚡ <strong>Modèles vulnérabilité-stress</strong></p>
+<p>Enfin, un diagnostic ne résume jamais entièrement une personne.</p>
+<p>La psychopathologie cherche justement à aller au-delà de l'étiquette diagnostique afin de comprendre <strong>les symptômes, les mécanismes, l'histoire, le contexte, les interactions et l'évolution du fonctionnement psychologique</strong>.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="avances-organisation-et-structures-psychopathologiques.html"><span class="similar-icon">🔬</span>Organisation et structures psychopathologiques</a><a class="similar-item" href="avances-personnalite-et-fonctionnement-pathologique.html"><span class="similar-icon">🔬</span>Personnalité et fonctionnement pathologique</a><a class="similar-item" href="avances-traumatisme-et-processus-dissociatifs.html"><span class="similar-icon">🔬</span>Traumatisme et processus dissociatifs</a></div>
+    </div>
+    <a class="back-link" href="../categorie/avances.html">← Retour à « Concepts avancés »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

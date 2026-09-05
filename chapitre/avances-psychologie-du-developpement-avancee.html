@@ -2,12 +2,1166 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/avances-psychologie-du-developpement-avancee/">
-<link rel="canonical" href="/chapitre/avances-psychologie-du-developpement-avancee/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/avances-psychologie-du-developpement-avancee/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psychologie du développement avancée — Mon Esprit</title>
+<meta name="description" content="Psychologie du développement avancée, dans la catégorie Concepts avancés de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/avances-psychologie-du-developpement-avancee/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#51-quest-ce-que-le-developpement-psychologique">🌱 5.1 Qu'est-ce que le développement psychologique ?</a></li><li><a href="#52-maturation-et-developpement">🧬 5.2 Maturation et développement</a></li><li><a href="#53-developpement-cognitif">🧠 5.3 Développement cognitif</a></li><li><a href="#54-le-developpement-precoce">👶 5.4 Le développement précoce</a></li><li><a href="#55-la-plasticite-cerebrale">🧠 5.5 La plasticité cérébrale</a></li><li><a href="#56-le-developpement-du-langage">🗣️ 5.6 Le développement du langage</a></li><li><a href="#57-le-developpement-de-la-memoire">🧠 5.7 Le développement de la mémoire</a></li><li><a href="#58-le-developpement-des-fonctions-executives">🎯 5.8 Le développement des fonctions exécutives</a></li><li><a href="#59-le-controle-inhibiteur">🧠 5.9 Le contrôle inhibiteur</a></li><li><a href="#510-la-flexibilite-cognitive">🔄 5.10 La flexibilité cognitive</a></li><li><a href="#511-le-developpement-emotionnel">❤️ 5.11 Le développement émotionnel</a></li><li><a href="#512-la-regulation-emotionnelle-au-cours-du-developpement">🌊 5.12 La régulation émotionnelle au cours du développement</a></li><li><a href="#513-la-regulation-interpersonnelle">🧑‍🤝‍🧑 5.13 La régulation interpersonnelle</a></li><li><a href="#514-lattachement">🧸 5.14 L'attachement</a></li><li><a href="#515-les-modeles-internes-operants">🧠 5.15 Les modèles internes opérants</a></li><li><a href="#516-le-developpement-du-soi">🪞 5.16 Le développement du soi</a></li><li><a href="#517-le-developpement-de-lidentite">👤 5.17 Le développement de l'identité</a></li><li><a href="#518-la-construction-narrative-de-lidentite">🧩 5.18 La construction narrative de l'identité</a></li><li><a href="#519-la-memoire-autobiographique-et-le-developpement">🧠 5.19 La mémoire autobiographique et le développement</a></li><li><a href="#520-ladolescence-comme-periode-de-transformation">🧑‍🎓 5.20 L'adolescence comme période de transformation</a></li><li><a href="#521-le-developpement-du-raisonnement">🧠 5.21 Le développement du raisonnement</a></li><li><a href="#522-le-developpement-de-la-prise-de-decision">🎯 5.22 Le développement de la prise de décision</a></li><li><a href="#523-le-developpement-de-la-cognition-sociale">👁️ 5.23 Le développement de la cognition sociale</a></li><li><a href="#524-la-theorie-de-lesprit">🧠 5.24 La théorie de l'esprit</a></li><li><a href="#525-la-comprehension-des-emotions-des-autres">🪞 5.25 La compréhension des émotions des autres</a></li><li><a href="#526-le-developpement-de-la-personnalite">🧩 5.26 Le développement de la personnalité</a></li><li><a href="#527-temperament-et-personnalite">🧬 5.27 Tempérament et personnalité</a></li><li><a href="#528-le-role-de-lenvironnement">🌍 5.28 Le rôle de l'environnement</a></li><li><a href="#529-interaction-entre-biologie-et-environnement">🧬 5.29 Interaction entre biologie et environnement</a></li><li><a href="#530-les-differences-individuelles">🧠 5.30 Les différences individuelles</a></li><li><a href="#531-les-periodes-sensibles">🔄 5.31 Les périodes sensibles</a></li><li><a href="#532-continuite-et-changement">🧠 5.32 Continuité et changement</a></li><li><a href="#533-developpement-et-evenements-de-vie">🌱 5.33 Développement et événements de vie</a></li><li><a href="#534-le-developpement-a-lage-adulte">🧠 5.34 Le développement à l'âge adulte</a></li><li><a href="#535-le-vieillissement-psychologique">👴 5.35 Le vieillissement psychologique</a></li><li><a href="#536-le-vieillissement-cognitif">🧠 5.36 Le vieillissement cognitif</a></li><li><a href="#537-le-developpement-emotionnel-au-cours-de-la-vie">❤️ 5.37 Le développement émotionnel au cours de la vie</a></li><li><a href="#538-le-developpement-comme-systeme-dynamique">🧩 5.38 Le développement comme système dynamique</a></li><li><a href="#539-peut-on-predire-le-developpement-psychologique">🔬 5.39 Peut-on prédire le développement psychologique ?</a></li><li><a href="#540-pourquoi-etudier-la-psychologie-du-developpement-avancee">🌌 5.40 Pourquoi étudier la psychologie du développement avancée ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Psychologie du développement avancée',
+        category: 'Concepts avancés',
+        icon: '🔬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/avances.html">🔬 Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Psychologie du développement avancée</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-avances)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>La psychologie du développement étudie les transformations psychologiques qui se produisent tout au long de la vie.</p>
+<p>Elle ne concerne donc pas uniquement l'enfance. Le développement peut être étudié avant la naissance, pendant l'enfance, l'adolescence, l'âge adulte et le vieillissement.</p>
+<p>Une approche avancée du développement cherche à comprendre <strong>comment les capacités psychologiques apparaissent, se transforment, se stabilisent ou parfois se modifient à nouveau</strong>.</p>
+<p>Le développement résulte de l'interaction entre de nombreux facteurs :</p>
+<p><strong>biologie ↔ maturation ↔ expériences ↔ apprentissage ↔ relations ↔ environnement ↔ culture ↔ événements de vie</strong></p>
+<p>Il n'existe donc pas une trajectoire psychologique unique valable pour tout le monde.</p>
+<hr />
+<h2 id="51-quest-ce-que-le-developpement-psychologique" class="entry-title hc-1">🌱 5.1 Qu'est-ce que le développement psychologique ?</h2>
+<p>Le développement psychologique correspond aux transformations relativement durables qui affectent le fonctionnement d'une personne au cours de sa vie.</p>
+<p>Il peut concerner :</p>
+<ul>
+<li>les capacités cognitives</li>
+<li>les émotions</li>
+<li>le langage</li>
+<li>la mémoire</li>
+<li>les relations sociales</li>
+<li>l'identité</li>
+<li>la personnalité</li>
+<li>la régulation comportementale</li>
+<li>les capacités d'adaptation</li>
+</ul>
+<p>Le développement ne signifie pas uniquement « devenir meilleur ».</p>
+<p>Certaines capacités apparaissent, d'autres se transforment et certaines peuvent diminuer avec l'âge ou certaines conditions.</p>
+<hr />
+<h2 id="52-maturation-et-developpement" class="entry-title hc-2">🧬 5.2 Maturation et développement</h2>
+<p>La maturation correspond aux changements liés notamment aux processus biologiques qui accompagnent le développement.</p>
+<p>Le développement psychologique ne dépend cependant pas uniquement de la maturation.</p>
+<p>Une capacité peut nécessiter à la fois :</p>
+<p><strong>maturation biologique + expérience + apprentissage + environnement</strong></p>
+<p>Par exemple, le développement du langage implique des capacités biologiques, mais également une exposition à une langue et des interactions sociales.</p>
+<hr />
+<h2 id="53-developpement-cognitif" class="entry-title hc-3">🧠 5.3 Développement cognitif</h2>
+<p>Le développement cognitif concerne l'évolution des capacités permettant notamment :</p>
+<ul>
+<li>comprendre</li>
+<li>apprendre</li>
+<li>mémoriser</li>
+<li>raisonner</li>
+<li>résoudre des problèmes</li>
+<li>planifier</li>
+<li>prendre des décisions</li>
+</ul>
+<p>Ces capacités ne se développent pas toutes au même rythme.</p>
+<p>Le développement cognitif est donc multidimensionnel.</p>
+<hr />
+<h2 id="54-le-developpement-precoce" class="entry-title hc-4">👶 5.4 Le développement précoce</h2>
+<p>Les premières années de la vie constituent une période de développement extrêmement importante.</p>
+<p>Le cerveau connaît alors de nombreuses transformations.</p>
+<p>Les interactions avec l'environnement permettent également l'acquisition progressive de nombreuses compétences.</p>
+<p>Cependant, parler d'une période « importante » ne signifie pas que tout est définitivement déterminé pendant l'enfance.</p>
+<p>Le cerveau et le fonctionnement psychologique continuent à évoluer après cette période.</p>
+<hr />
+<h2 id="55-la-plasticite-cerebrale" class="entry-title hc-5">🧠 5.5 La plasticité cérébrale</h2>
+<p>La plasticité cérébrale désigne la capacité du système nerveux à modifier son fonctionnement ou certaines de ses connexions en fonction notamment de l'expérience, de l'apprentissage ou de certaines modifications de l'environnement.</p>
+<p>Elle est particulièrement importante pendant le développement, mais elle existe également à l'âge adulte.</p>
+<p>La plasticité permet notamment de comprendre comment l'apprentissage peut modifier le fonctionnement cérébral.</p>
+<p>Elle ne signifie toutefois pas que le cerveau peut être transformé sans limites.</p>
+<hr />
+<h2 id="56-le-developpement-du-langage" class="entry-title hc-1">🗣️ 5.6 Le développement du langage</h2>
+<p>Le langage se développe progressivement à travers l'interaction entre capacités biologiques, apprentissage et environnement social.</p>
+<p>Le développement comprend notamment :</p>
+<p><strong>sons → mots → phrases → compréhension → communication complexe</strong></p>
+<p>Le langage joue ensuite un rôle majeur dans la pensée, les interactions sociales et la construction des représentations.</p>
+<p>Les trajectoires individuelles peuvent cependant être très différentes.</p>
+<hr />
+<h2 id="57-le-developpement-de-la-memoire" class="entry-title hc-2">🧠 5.7 Le développement de la mémoire</h2>
+<p>Les capacités mnésiques évoluent au cours du développement.</p>
+<p>Certaines formes de mémoire apparaissent très tôt, tandis que d'autres capacités deviennent progressivement plus complexes.</p>
+<p>La mémoire autobiographique explicite et la capacité à organiser des souvenirs en récits personnels se développent progressivement.</p>
+<p>Le développement de la mémoire participe également à la construction du sentiment de continuité personnelle.</p>
+<hr />
+<h2 id="58-le-developpement-des-fonctions-executives" class="entry-title hc-3">🎯 5.8 Le développement des fonctions exécutives</h2>
+<p>Les fonctions exécutives permettent notamment :</p>
+<ul>
+<li>inhiber certaines réponses</li>
+<li>maintenir une information en mémoire de travail</li>
+<li>changer de stratégie</li>
+<li>planifier</li>
+<li>contrôler certaines actions</li>
+<li>gérer plusieurs informations simultanément</li>
+</ul>
+<p>Elles se développent progressivement et continuent à se modifier pendant l'adolescence et le début de l'âge adulte.</p>
+<p>Le développement n'est cependant pas identique pour toutes les fonctions exécutives.</p>
+<hr />
+<h2 id="59-le-controle-inhibiteur" class="entry-title hc-4">🧠 5.9 Le contrôle inhibiteur</h2>
+<p>Le contrôle inhibiteur correspond à la capacité à empêcher ou interrompre une réponse automatique ou dominante lorsqu'une autre réponse est nécessaire.</p>
+<p>Chez l'enfant, cette capacité est encore en développement.</p>
+<p>Avec la maturation et l'apprentissage, le contrôle comportemental et cognitif devient généralement plus efficace.</p>
+<p>Cela ne signifie pas que les adultes contrôlent toujours leurs impulsions.</p>
+<p>Le contrôle inhibiteur dépend également du contexte, de la fatigue, du stress et de l'état émotionnel.</p>
+<hr />
+<h2 id="510-la-flexibilite-cognitive" class="entry-title hc-5">🔄 5.10 La flexibilité cognitive</h2>
+<p>La flexibilité cognitive correspond à la capacité à modifier une stratégie, une représentation ou une réponse lorsqu'une situation change.</p>
+<p>Elle permet notamment de :</p>
+<ul>
+<li>changer de point de vue</li>
+<li>abandonner une stratégie inefficace</li>
+<li>s'adapter à une nouvelle règle</li>
+<li>envisager plusieurs solutions</li>
+</ul>
+<p>La flexibilité se développe progressivement et reste influencée par les expériences.</p>
+<hr />
+<h2 id="511-le-developpement-emotionnel" class="entry-title hc-1">❤️ 5.11 Le développement émotionnel</h2>
+<p>Le développement émotionnel concerne l'évolution de la capacité à :</p>
+<ul>
+<li>identifier les émotions</li>
+<li>les différencier</li>
+<li>les exprimer</li>
+<li>les comprendre</li>
+<li>les réguler</li>
+<li>comprendre les émotions des autres</li>
+</ul>
+<p>Les émotions apparaissent très tôt dans la vie, mais leur compréhension et leur régulation deviennent progressivement plus complexes.</p>
+<hr />
+<h2 id="512-la-regulation-emotionnelle-au-cours-du-developpement" class="entry-title hc-2">🌊 5.12 La régulation émotionnelle au cours du développement</h2>
+<p>Un jeune enfant dépend davantage de son environnement pour réguler certaines émotions.</p>
+<p>Progressivement, les capacités d'autorégulation se développent.</p>
+<p>Cette évolution implique notamment :</p>
+<p><strong>régulation par l'environnement → régulation partagée → autorégulation plus autonome</strong></p>
+<p>Même à l'âge adulte, la régulation émotionnelle continue toutefois de dépendre des relations et du contexte.</p>
+<hr />
+<h2 id="513-la-regulation-interpersonnelle" class="entry-title hc-3">🧑‍🤝‍🧑 5.13 La régulation interpersonnelle</h2>
+<p>La régulation émotionnelle n'est pas toujours individuelle.</p>
+<p>Les relations peuvent participer à la diminution ou à l'augmentation de l'activation émotionnelle.</p>
+<p>Une personne peut par exemple rechercher :</p>
+<ul>
+<li>une présence rassurante</li>
+<li>une discussion</li>
+<li>un soutien</li>
+<li>une proximité physique</li>
+<li>une validation émotionnelle</li>
+</ul>
+<p>Cette dimension relationnelle participe au développement des stratégies de régulation.</p>
+<hr />
+<h2 id="514-lattachement" class="entry-title hc-4">🧸 5.14 L'attachement</h2>
+<p>La théorie de l'attachement étudie notamment la manière dont les relations précoces avec les figures importantes peuvent participer au développement des stratégies relationnelles.</p>
+<p>Les premières interactions peuvent influencer certaines attentes concernant :</p>
+<p><strong>sécurité → disponibilité → proximité → protection</strong></p>
+<p>Cependant, l'attachement ne constitue pas un destin psychologique fixe.</p>
+<p>Les expériences relationnelles ultérieures peuvent modifier certaines attentes et stratégies.</p>
+<hr />
+<h2 id="515-les-modeles-internes-operants" class="entry-title hc-5">🧠 5.15 Les modèles internes opérants</h2>
+<p>Le terme <strong>modèles internes opérants</strong> appartient à la théorie de l'attachement.</p>
+<p>Il désigne des représentations relativement générales concernant soi-même, les autres et les relations.</p>
+<p>Ces représentations peuvent influencer les attentes dans les situations relationnelles.</p>
+<p>Par exemple, une personne peut développer certaines attentes concernant la disponibilité des autres.</p>
+<p>Ces modèles peuvent évoluer grâce à de nouvelles expériences.</p>
+<hr />
+<h2 id="516-le-developpement-du-soi" class="entry-title hc-1">🪞 5.16 Le développement du soi</h2>
+<p>Le sentiment de soi se construit progressivement.</p>
+<p>Il comprend notamment :</p>
+<ul>
+<li>la distinction entre soi et les autres</li>
+<li>la reconnaissance de soi</li>
+<li>les préférences personnelles</li>
+<li>les capacités</li>
+<li>les caractéristiques personnelles</li>
+<li>les souvenirs autobiographiques</li>
+<li>les rôles sociaux</li>
+</ul>
+<p>Le soi devient progressivement plus complexe et différencié.</p>
+<hr />
+<h2 id="517-le-developpement-de-lidentite" class="entry-title hc-2">👤 5.17 Le développement de l'identité</h2>
+<p>L'identité correspond à la manière dont une personne organise certaines réponses à des questions telles que :</p>
+<p><strong>« Qui suis-je ? »</strong></p>
+<p><strong>« Qu'est-ce qui est important pour moi ? »</strong></p>
+<p><strong>« Quelle place ai-je parmi les autres ? »</strong></p>
+<p>L'identité se construit à travers les expériences personnelles, les relations, la culture, les valeurs et les choix.</p>
+<p>Elle peut également continuer à évoluer à l'âge adulte.</p>
+<hr />
+<h2 id="518-la-construction-narrative-de-lidentite" class="entry-title hc-3">🧩 5.18 La construction narrative de l'identité</h2>
+<p>Une partie de l'identité personnelle repose sur l'histoire que la personne construit concernant sa propre vie.</p>
+<p>Les souvenirs sont organisés sous forme de récits permettant notamment de relier :</p>
+<p><strong>passé → présent → futur</strong></p>
+<p>Cette construction narrative aide à donner une continuité à l'existence.</p>
+<p>Elle n'est cependant pas une reproduction parfaitement objective du passé.</p>
+<p>Les souvenirs autobiographiques sont reconstructifs.</p>
+<hr />
+<h2 id="519-la-memoire-autobiographique-et-le-developpement" class="entry-title hc-4">🧠 5.19 La mémoire autobiographique et le développement</h2>
+<p>La mémoire autobiographique permet de conserver des informations concernant les expériences personnelles.</p>
+<p>Elle participe notamment au sentiment :</p>
+<p><strong>« Cela m'est arrivé à moi. »</strong></p>
+<p>Elle joue donc un rôle important dans l'identité.</p>
+<p>Avec le développement, les souvenirs peuvent devenir plus organisés autour d'un récit personnel.</p>
+<p>Les capacités narratives, le langage et les interactions sociales contribuent à cette évolution.</p>
+<hr />
+<h2 id="520-ladolescence-comme-periode-de-transformation" class="entry-title hc-5">🧑‍🎓 5.20 L'adolescence comme période de transformation</h2>
+<p>L'adolescence constitue une période de transformations biologiques, cognitives, émotionnelles et sociales.</p>
+<p>Elle peut notamment être associée à :</p>
+<ul>
+<li>une évolution de l'identité</li>
+<li>une autonomie croissante</li>
+<li>une importance accrue des relations avec les pairs</li>
+<li>des transformations émotionnelles</li>
+<li>une évolution des capacités de raisonnement</li>
+</ul>
+<p>Il est toutefois incorrect de considérer l'adolescence comme une période nécessairement « instable » pour tout le monde.</p>
+<p>Les trajectoires individuelles sont très différentes.</p>
+<hr />
+<h2 id="521-le-developpement-du-raisonnement" class="entry-title hc-1">🧠 5.21 Le développement du raisonnement</h2>
+<p>Les capacités de raisonnement deviennent progressivement plus complexes.</p>
+<p>Le développement peut notamment concerner la capacité à :</p>
+<ul>
+<li>manipuler des concepts abstraits</li>
+<li>envisager plusieurs hypothèses</li>
+<li>raisonner sur des situations hypothétiques</li>
+<li>considérer différents points de vue</li>
+<li>anticiper certaines conséquences</li>
+</ul>
+<p>Ces capacités dépendent également de l'expérience et du contexte.</p>
+<hr />
+<h2 id="522-le-developpement-de-la-prise-de-decision" class="entry-title hc-2">🎯 5.22 Le développement de la prise de décision</h2>
+<p>La prise de décision évolue avec le développement.</p>
+<p>Elle implique notamment :</p>
+<p><strong>évaluation → anticipation → comparaison → choix → conséquences</strong></p>
+<p>Les capacités cognitives deviennent progressivement plus complexes.</p>
+<p>Cependant, la prise de décision dépend également des émotions, des récompenses, de la pression sociale et du contexte.</p>
+<p>Une capacité cognitive élevée ne garantit donc pas toujours une décision optimale.</p>
+<hr />
+<h2 id="523-le-developpement-de-la-cognition-sociale" class="entry-title hc-3">👁️ 5.23 Le développement de la cognition sociale</h2>
+<p>La cognition sociale concerne la compréhension des autres et des interactions sociales.</p>
+<p>Elle comprend notamment :</p>
+<ul>
+<li>comprendre les intentions</li>
+<li>reconnaître les émotions</li>
+<li>anticiper certaines réactions</li>
+<li>comprendre les normes sociales</li>
+<li>prendre en compte différents points de vue</li>
+</ul>
+<p>Ces capacités se développent progressivement et deviennent plus complexes avec l'expérience.</p>
+<hr />
+<h2 id="524-la-theorie-de-lesprit" class="entry-title hc-4">🧠 5.24 La théorie de l'esprit</h2>
+<p>La théorie de l'esprit désigne la capacité à attribuer des états mentaux à soi-même et aux autres.</p>
+<p>Cela implique de comprendre qu'une autre personne peut avoir :</p>
+<ul>
+<li>une croyance différente</li>
+<li>une intention différente</li>
+<li>une information différente</li>
+<li>une émotion différente</li>
+</ul>
+<p>Cette capacité apparaît progressivement au cours du développement.</p>
+<p>Elle continue ensuite à se complexifier avec l'expérience sociale.</p>
+<hr />
+<h2 id="525-la-comprehension-des-emotions-des-autres" class="entry-title hc-5">🪞 5.25 La compréhension des émotions des autres</h2>
+<p>La compréhension des émotions d'autrui évolue progressivement.</p>
+<p>Elle commence notamment par la reconnaissance de certaines expressions émotionnelles.</p>
+<p>Elle devient ensuite plus complexe lorsque la personne apprend à prendre en compte :</p>
+<p><strong>contexte + expression + situation + histoire + intentions</strong></p>
+<p>Une expression faciale seule ne permet donc pas toujours de déterminer précisément l'état émotionnel d'une personne.</p>
+<hr />
+<h2 id="526-le-developpement-de-la-personnalite" class="entry-title hc-1">🧩 5.26 Le développement de la personnalité</h2>
+<p>La personnalité présente certaines continuités au cours de la vie, mais elle n'est pas totalement fixe.</p>
+<p>Les traits peuvent progressivement se modifier.</p>
+<p>Certaines tendances deviennent généralement plus stables avec l'âge, tandis que des changements restent possibles.</p>
+<p>La personnalité résulte donc d'une interaction entre dispositions individuelles et expériences.</p>
+<hr />
+<h2 id="527-temperament-et-personnalite" class="entry-title hc-2">🧬 5.27 Tempérament et personnalité</h2>
+<p>Le tempérament désigne généralement des différences individuelles relativement précoces dans les tendances émotionnelles et comportementales.</p>
+<p>La personnalité est plus large.</p>
+<p>Elle comprend notamment :</p>
+<p><strong>tempérament + traits + expériences + apprentissages + représentations + identité</strong></p>
+<p>Le tempérament peut donc contribuer à la personnalité sans la déterminer entièrement.</p>
+<hr />
+<h2 id="528-le-role-de-lenvironnement" class="entry-title hc-3">🌍 5.28 Le rôle de l'environnement</h2>
+<p>Le développement se produit toujours dans un environnement.</p>
+<p>Celui-ci peut comprendre :</p>
+<ul>
+<li>famille</li>
+<li>école</li>
+<li>relations</li>
+<li>culture</li>
+<li>conditions sociales</li>
+<li>environnement physique</li>
+<li>événements de vie</li>
+</ul>
+<p>L'environnement peut favoriser certaines trajectoires ou créer certaines contraintes.</p>
+<p>Il n'agit cependant jamais indépendamment des caractéristiques individuelles.</p>
+<hr />
+<h2 id="529-interaction-entre-biologie-et-environnement" class="entry-title hc-4">🧬 5.29 Interaction entre biologie et environnement</h2>
+<p>L'opposition « nature contre environnement » est trop simpliste.</p>
+<p>Le développement résulte d'interactions complexes entre facteurs biologiques et environnementaux.</p>
+<p>Les caractéristiques biologiques peuvent influencer la manière dont une personne réagit à son environnement.</p>
+<p>Inversement, l'environnement peut influencer le développement biologique et psychologique.</p>
+<p>On parle souvent d'interactions <strong>gène-environnement</strong> ou de mécanismes développementaux complexes pour étudier ces relations.</p>
+<hr />
+<h2 id="530-les-differences-individuelles" class="entry-title hc-5">🧠 5.30 Les différences individuelles</h2>
+<p>Deux personnes vivant des expériences similaires peuvent évoluer différemment.</p>
+<p>Ces différences peuvent être liées notamment :</p>
+<ul>
+<li>au tempérament</li>
+<li>aux capacités cognitives</li>
+<li>aux expériences précédentes</li>
+<li>aux relations</li>
+<li>à la culture</li>
+<li>aux ressources disponibles</li>
+<li>aux stratégies d'adaptation</li>
+</ul>
+<p>Le développement doit donc être étudié en tenant compte de la variabilité individuelle.</p>
+<hr />
+<h2 id="531-les-periodes-sensibles" class="entry-title hc-1">🔄 5.31 Les périodes sensibles</h2>
+<p>Une période sensible correspond à une période pendant laquelle certaines expériences peuvent avoir une influence particulièrement importante sur le développement d'une capacité.</p>
+<p>Il ne faut pas confondre :</p>
+<p><strong>période sensible</strong></p>
+<p>et :</p>
+<p><strong>période critique</strong></p>
+<p>Une période critique implique une fenêtre temporelle beaucoup plus stricte.</p>
+<p>Toutes les capacités psychologiques ne possèdent pas de période critique clairement définie.</p>
+<hr />
+<h2 id="532-continuite-et-changement" class="entry-title hc-2">🧠 5.32 Continuité et changement</h2>
+<p>Le développement comporte simultanément :</p>
+<p><strong>continuité + changement</strong></p>
+<p>Certaines caractéristiques restent relativement stables.</p>
+<p>D'autres évoluent progressivement.</p>
+<p>Certaines transformations peuvent également apparaître rapidement à la suite d'événements importants.</p>
+<p>Le développement ne suit donc pas nécessairement une ligne parfaitement régulière.</p>
+<hr />
+<h2 id="533-developpement-et-evenements-de-vie" class="entry-title hc-3">🌱 5.33 Développement et événements de vie</h2>
+<p>Les événements importants peuvent influencer les trajectoires psychologiques.</p>
+<p>Ils peuvent comprendre :</p>
+<ul>
+<li>changement d'environnement</li>
+<li>nouvelles responsabilités</li>
+<li>relations importantes</li>
+<li>séparation</li>
+<li>réussite</li>
+<li>échec</li>
+<li>transition professionnelle</li>
+<li>changement social</li>
+</ul>
+<p>L'impact d'un événement dépend toutefois de sa signification pour la personne et des ressources disponibles.</p>
+<hr />
+<h2 id="534-le-developpement-a-lage-adulte" class="entry-title hc-4">🧠 5.34 Le développement à l'âge adulte</h2>
+<p>Le développement ne s'arrête pas à l'adolescence.</p>
+<p>À l'âge adulte, les personnes continuent à développer et modifier :</p>
+<ul>
+<li>leurs compétences</li>
+<li>leurs rôles sociaux</li>
+<li>leur identité</li>
+<li>leurs relations</li>
+<li>leurs stratégies d'adaptation</li>
+<li>certaines caractéristiques de personnalité</li>
+</ul>
+<p>Le développement adulte est donc également un domaine important de la psychologie.</p>
+<hr />
+<h2 id="535-le-vieillissement-psychologique" class="entry-title hc-5">👴 5.35 Le vieillissement psychologique</h2>
+<p>Le vieillissement entraîne des transformations dans plusieurs domaines.</p>
+<p>Certaines fonctions peuvent diminuer progressivement, tandis que d'autres connaissances ou compétences peuvent rester stables ou continuer à se développer.</p>
+<p>Il existe notamment une distinction entre différentes formes d'intelligence et de mémoire.</p>
+<p>Le vieillissement psychologique est donc beaucoup plus complexe que l'idée générale d'une « baisse des capacités ».</p>
+<hr />
+<h2 id="536-le-vieillissement-cognitif" class="entry-title hc-1">🧠 5.36 Le vieillissement cognitif</h2>
+<p>Certaines capacités cognitives peuvent être plus sensibles au vieillissement que d'autres.</p>
+<p>Les changements peuvent concerner notamment :</p>
+<ul>
+<li>vitesse de traitement</li>
+<li>mémoire de travail</li>
+<li>attention</li>
+<li>certaines fonctions exécutives</li>
+</ul>
+<p>D'autres capacités, comme certaines connaissances accumulées, peuvent rester relativement préservées.</p>
+<p>Il existe également d'importantes différences individuelles.</p>
+<hr />
+<h2 id="537-le-developpement-emotionnel-au-cours-de-la-vie" class="entry-title hc-2">❤️ 5.37 Le développement émotionnel au cours de la vie</h2>
+<p>Les émotions continuent à évoluer au cours de la vie.</p>
+<p>Les priorités, les stratégies de régulation et les expériences accumulées peuvent modifier la manière dont certaines émotions sont vécues.</p>
+<p>Le vieillissement n'implique donc pas nécessairement une diminution générale des émotions.</p>
+<p>Certaines recherches suggèrent notamment des modifications dans la régulation et dans la manière de traiter certaines informations émotionnelles.</p>
+<hr />
+<h2 id="538-le-developpement-comme-systeme-dynamique" class="entry-title hc-3">🧩 5.38 Le développement comme système dynamique</h2>
+<p>Le développement peut être considéré comme un système dynamique dans lequel plusieurs éléments s'influencent continuellement.</p>
+<p>Par exemple :</p>
+<p><strong>biologie → capacités → expériences → apprentissage → comportement → environnement → nouvelles expériences</strong></p>
+<p>Une petite modification dans un domaine peut parfois entraîner des changements dans d'autres domaines.</p>
+<p>Cette conception permet d'éviter une vision trop linéaire du développement.</p>
+<hr />
+<h2 id="539-peut-on-predire-le-developpement-psychologique" class="entry-title hc-4">🔬 5.39 Peut-on prédire le développement psychologique ?</h2>
+<p>Le développement peut être étudié statistiquement et certaines trajectoires peuvent être associées à des facteurs de risque ou de protection.</p>
+<p>Cependant, une trajectoire individuelle ne peut généralement pas être prédite avec une certitude absolue.</p>
+<p>Un facteur de risque augmente une probabilité sans déterminer automatiquement un résultat.</p>
+<p>De la même manière, un facteur protecteur peut réduire certains risques sans garantir une trajectoire particulière.</p>
+<p>Le développement humain reste donc probabiliste et multifactoriel.</p>
+<hr />
+<h2 id="540-pourquoi-etudier-la-psychologie-du-developpement-avancee" class="entry-title hc-5">🌌 5.40 Pourquoi étudier la psychologie du développement avancée ?</h2>
+<p>Étudier le développement permet de comprendre comment le fonctionnement psychologique se construit, se transforme et s'adapte au cours de la vie.</p>
+<p>Cela permet notamment de relier :</p>
+<p><strong>🧬 biologie</strong></p>
+<p><strong>🧠 cognition</strong></p>
+<p><strong>❤️ émotions</strong></p>
+<p><strong>🧑‍🤝‍🧑 relations</strong></p>
+<p><strong>🌍 environnement</strong></p>
+<p><strong>🪞 identité</strong></p>
+<p><strong>🧩 personnalité</strong></p>
+<p>Le développement n'est donc pas simplement une succession d'étapes.</p>
+<p>Il s'agit d'un processus complexe dans lequel les capacités psychologiques émergent et se transforment grâce à l'interaction permanente entre la personne et son environnement.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>Le développement psychologique concerne <strong>toute la durée de la vie</strong>, et pas uniquement l'enfance.</p>
+<p>Il dépend d'une interaction entre :</p>
+<p>🧬 <strong>Maturation biologique</strong></p>
+<p>🧠 <strong>Fonctionnement cognitif</strong></p>
+<p>❤️ <strong>Développement émotionnel</strong></p>
+<p>🧑‍🤝‍🧑 <strong>Relations sociales</strong></p>
+<p>🌍 <strong>Environnement</strong></p>
+<p>📚 <strong>Apprentissage</strong></p>
+<p>🪞 <strong>Construction de l'identité</strong></p>
+<p>🧩 <strong>Personnalité</strong></p>
+<p>Les trajectoires individuelles ne sont pas entièrement déterminées par un seul facteur.</p>
+<p>Il faut notamment retenir plusieurs distinctions importantes :</p>
+<p><strong>maturation ≠ développement</strong></p>
+<p><strong>tempérament ≠ personnalité</strong></p>
+<p><strong>période sensible ≠ période critique</strong></p>
+<p><strong>facteur de risque ≠ déterminisme</strong></p>
+<p><strong>stabilité ≠ immobilité</strong></p>
+<p><strong>développement ≠ progression constante</strong></p>
+<p>Le développement psychologique est un processus <strong>dynamique, multidimensionnel, probabiliste et évolutif</strong>, dans lequel les caractéristiques individuelles et l'environnement s'influencent continuellement.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="avances-cognition-et-fonctions-executives.html"><span class="similar-icon">🔬</span>Cognition et fonctions exécutives</a><a class="similar-item" href="avances-regulation-emotionnelle-avancee.html"><span class="similar-icon">🔬</span>Régulation émotionnelle avancée</a><a class="similar-item" href="avances-mecanismes-psychologiques-complexes.html"><span class="similar-icon">🔬</span>Mécanismes psychologiques complexes</a></div>
+    </div>
+    <a class="back-link" href="../categorie/avances.html">← Retour à « Concepts avancés »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

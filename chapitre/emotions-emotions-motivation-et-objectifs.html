@@ -2,12 +2,874 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/emotions-emotions-motivation-et-objectifs/">
-<link rel="canonical" href="/chapitre/emotions-emotions-motivation-et-objectifs/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/emotions-emotions-motivation-et-objectifs/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Émotions, motivation et objectifs — Mon Esprit</title>
+<meta name="description" content="Émotions, motivation et objectifs, dans la catégorie Émotions et comportements humains de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/emotions-emotions-motivation-et-objectifs/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#141-quest-ce-que-la-motivation">🎯 14.1 Qu'est-ce que la motivation ?</a></li><li><a href="#142-les-emotions-et-la-motivation">🧠 14.2 Les émotions et la motivation</a></li><li><a href="#143-la-recherche-de-recompense">🏆 14.3 La recherche de récompense</a></li><li><a href="#144-la-recherche-de-plaisir">⚡ 14.4 La recherche de plaisir</a></li><li><a href="#145-le-desir">🧠 14.5 Le désir</a></li><li><a href="#146-lanticipation-de-la-recompense">🔮 14.6 L'anticipation de la récompense</a></li><li><a href="#147-lerreur-de-prediction-de-recompense">🧪 14.7 L'erreur de prédiction de récompense</a></li><li><a href="#148-lapprentissage-par-recompense">🔄 14.8 L'apprentissage par récompense</a></li><li><a href="#149-le-renforcement-positif">➕ 14.9 Le renforcement positif</a></li><li><a href="#1410-la-motivation-intrinseque">🧠 14.10 La motivation intrinsèque</a></li><li><a href="#1411-la-motivation-extrinseque">🎁 14.11 La motivation extrinsèque</a></li><li><a href="#1412-motivation-intrinseque-et-extrinseque">⚖️ 14.12 Motivation intrinsèque et extrinsèque</a></li><li><a href="#1413-les-besoins-psychologiques">🧩 14.13 Les besoins psychologiques</a></li><li><a href="#1414-le-sentiment-de-competence">🛠️ 14.14 Le sentiment de compétence</a></li><li><a href="#1415-le-sentiment-dautonomie">🕊️ 14.15 Le sentiment d'autonomie</a></li><li><a href="#1416-la-motivation-sociale">🧑‍🤝‍🧑 14.16 La motivation sociale</a></li><li><a href="#1417-lattachement-et-les-objectifs">❤️ 14.17 L'attachement et les objectifs</a></li><li><a href="#1418-la-peur-comme-motivation">😨 14.18 La peur comme motivation</a></li><li><a href="#1419-la-colere-comme-motivation">😡 14.19 La colère comme motivation</a></li><li><a href="#1420-la-tristesse-et-la-motivation">😢 14.20 La tristesse et la motivation</a></li><li><a href="#1421-la-joie-et-la-motivation">😄 14.21 La joie et la motivation</a></li><li><a href="#1422-la-poursuite-dun-objectif">🏁 14.22 La poursuite d'un objectif</a></li><li><a href="#1423-les-objectifs-a-court-terme">📌 14.23 Les objectifs à court terme</a></li><li><a href="#1424-les-objectifs-a-long-terme">🗓️ 14.24 Les objectifs à long terme</a></li><li><a href="#1425-la-perseverance">⏳ 14.25 La persévérance</a></li><li><a href="#1426-les-obstacles-et-la-motivation">🚧 14.26 Les obstacles et la motivation</a></li><li><a href="#1427-le-sentiment-defficacite-personnelle">🧠 14.27 Le sentiment d'efficacité personnelle</a></li><li><a href="#1428-lechec-et-la-motivation">🔄 14.28 L'échec et la motivation</a></li><li><a href="#1429-la-reussite-et-la-motivation">🏆 14.29 La réussite et la motivation</a></li><li><a href="#1430-lengagement">🔥 14.30 L'engagement</a></li><li><a href="#1431-la-motivation-et-lattention">🧠 14.31 La motivation et l'attention</a></li><li><a href="#1432-la-motivation-et-les-pensees">💭 14.32 La motivation et les pensées</a></li><li><a href="#1433-la-motivation-et-la-memoire">🧠 14.33 La motivation et la mémoire</a></li><li><a href="#1434-le-conflit-entre-objectifs">⚖️ 14.34 Le conflit entre objectifs</a></li><li><a href="#1435-lambivalence-motivationnelle">🔀 14.35 L'ambivalence motivationnelle</a></li><li><a href="#1436-la-procrastination">🛑 14.36 La procrastination</a></li><li><a href="#1437-la-gratification-differee">🍬 14.37 La gratification différée</a></li><li><a href="#1438-les-attentes-et-la-motivation">🔮 14.38 Les attentes et la motivation</a></li><li><a href="#1439-les-differences-individuelles">🧩 14.39 Les différences individuelles</a></li><li><a href="#1440-pourquoi-etudier-les-emotions-la-motivation-et-les-objectifs">🔬 14.40 Pourquoi étudier les émotions, la motivation et les objectifs ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Émotions, motivation et objectifs',
+        category: 'Émotions et comportements humains',
+        icon: '❤️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/emotions.html">❤️ Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Émotions, motivation et objectifs</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-emotions)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Les émotions jouent un rôle important dans la motivation et dans la manière dont les individus poursuivent leurs objectifs. Elles peuvent augmenter ou diminuer l'envie d'agir, modifier la valeur accordée à une récompense et influencer la persévérance.</p>
+<p>La motivation ne dépend cependant pas uniquement des émotions. Elle résulte de l'interaction entre les besoins, les objectifs, les récompenses, les attentes, les expériences passées et le contexte.</p>
+<h2 id="141-quest-ce-que-la-motivation" class="entry-title hc-1">🎯 14.1 Qu'est-ce que la motivation ?</h2>
+<p>La motivation désigne l'ensemble des processus qui orientent et soutiennent un comportement vers un objectif ou une conséquence recherchée.</p>
+<p>Elle influence notamment le choix d'une action, l'effort fourni et la persévérance.</p>
+<h2 id="142-les-emotions-et-la-motivation" class="entry-title hc-2">🧠 14.2 Les émotions et la motivation</h2>
+<p>Les émotions peuvent modifier la motivation.</p>
+<p>Une émotion agréable peut augmenter l'envie de poursuivre une activité, tandis qu'une émotion désagréable peut favoriser l'évitement ou la recherche d'une solution.</p>
+<h2 id="143-la-recherche-de-recompense" class="entry-title hc-3">🏆 14.3 La recherche de récompense</h2>
+<p>Les individus peuvent être motivés par l'obtention d'une récompense.</p>
+<p>La récompense peut être matérielle, sociale, émotionnelle ou liée au sentiment de réussite.</p>
+<h2 id="144-la-recherche-de-plaisir" class="entry-title hc-4">⚡ 14.4 La recherche de plaisir</h2>
+<p>Le plaisir anticipé peut augmenter la motivation à réaliser une action.</p>
+<p>L'attente d'une expérience agréable peut donc influencer le comportement avant même que la récompense soit obtenue.</p>
+<h2 id="145-le-desir" class="entry-title hc-5">🧠 14.5 Le désir</h2>
+<p>Le désir correspond à une tendance à vouloir obtenir quelque chose.</p>
+<p>Il peut être influencé par les besoins, les attentes, les expériences passées et les mécanismes de récompense.</p>
+<h2 id="146-lanticipation-de-la-recompense" class="entry-title hc-1">🔮 14.6 L'anticipation de la récompense</h2>
+<p>Une récompense future peut influencer le comportement avant sa réception.</p>
+<p>L'anticipation permet notamment d'estimer ce qui pourrait être obtenu et de préparer une action.</p>
+<h2 id="147-lerreur-de-prediction-de-recompense" class="entry-title hc-2">🧪 14.7 L'erreur de prédiction de récompense</h2>
+<p>Le cerveau compare notamment les résultats obtenus avec ceux qui étaient attendus.</p>
+<p>Une récompense meilleure ou moins bonne que prévu peut modifier les attentes futures et l'apprentissage.</p>
+<h2 id="148-lapprentissage-par-recompense" class="entry-title hc-3">🔄 14.8 L'apprentissage par récompense</h2>
+<p>Les conséquences d'un comportement peuvent influencer la probabilité que ce comportement soit reproduit.</p>
+<p>Une conséquence positive peut notamment renforcer certaines actions.</p>
+<h2 id="149-le-renforcement-positif" class="entry-title hc-4">➕ 14.9 Le renforcement positif</h2>
+<p>Le renforcement positif correspond à l'augmentation de la probabilité d'un comportement lorsqu'une conséquence agréable ou recherchée suit ce comportement.</p>
+<p>Il s'agit d'un mécanisme important de l'apprentissage comportemental.</p>
+<h2 id="1410-la-motivation-intrinseque" class="entry-title hc-5">🧠 14.10 La motivation intrinsèque</h2>
+<p>La motivation intrinsèque correspond à une motivation liée à l'intérêt ou au plaisir associé à l'activité elle-même.</p>
+<p>L'action est alors réalisée notamment parce qu'elle est considérée comme intéressante ou satisfaisante.</p>
+<h2 id="1411-la-motivation-extrinseque" class="entry-title hc-1">🎁 14.11 La motivation extrinsèque</h2>
+<p>La motivation extrinsèque repose davantage sur des conséquences externes à l'activité.</p>
+<p>Une récompense, une reconnaissance ou l'évitement d'une conséquence désagréable peuvent notamment influencer le comportement.</p>
+<h2 id="1412-motivation-intrinseque-et-extrinseque" class="entry-title hc-2">⚖️ 14.12 Motivation intrinsèque et extrinsèque</h2>
+<p>Une même activité peut être motivée simultanément par des facteurs internes et externes.</p>
+<p>La distinction entre les deux formes n'est donc pas toujours absolue.</p>
+<h2 id="1413-les-besoins-psychologiques" class="entry-title hc-3">🧩 14.13 Les besoins psychologiques</h2>
+<p>Certains modèles de la motivation mettent en avant des besoins psychologiques fondamentaux.</p>
+<p>Ils peuvent notamment concerner l'autonomie, la compétence et les relations sociales.</p>
+<h2 id="1414-le-sentiment-de-competence" class="entry-title hc-4">🛠️ 14.14 Le sentiment de compétence</h2>
+<p>Le sentiment de compétence correspond à la perception de sa capacité à réussir une tâche ou à produire un résultat.</p>
+<p>Il peut influencer l'effort et la persévérance.</p>
+<h2 id="1415-le-sentiment-dautonomie" class="entry-title hc-5">🕊️ 14.15 Le sentiment d'autonomie</h2>
+<p>Le sentiment d'autonomie correspond notamment à la perception de pouvoir agir selon ses propres choix.</p>
+<p>Une plus grande autonomie perçue peut influencer l'engagement dans certaines activités.</p>
+<h2 id="1416-la-motivation-sociale" class="entry-title hc-1">🧑‍🤝‍🧑 14.16 La motivation sociale</h2>
+<p>Les interactions sociales peuvent constituer une importante source de motivation.</p>
+<p>La recherche d'appartenance, de reconnaissance ou de proximité peut influencer certains comportements.</p>
+<h2 id="1417-lattachement-et-les-objectifs" class="entry-title hc-2">❤️ 14.17 L'attachement et les objectifs</h2>
+<p>Les relations d'attachement peuvent influencer certains objectifs.</p>
+<p>La recherche de proximité, de sécurité ou de soutien peut notamment orienter les comportements sociaux.</p>
+<h2 id="1418-la-peur-comme-motivation" class="entry-title hc-3">😨 14.18 La peur comme motivation</h2>
+<p>La peur peut pousser à éviter une menace ou à rechercher davantage de sécurité.</p>
+<p>Elle peut donc orienter fortement le comportement.</p>
+<h2 id="1419-la-colere-comme-motivation" class="entry-title hc-4">😡 14.19 La colère comme motivation</h2>
+<p>La colère peut augmenter la motivation à agir lorsqu'une situation est perçue comme injuste ou comme une limite dépassée.</p>
+<p>Elle peut notamment favoriser les comportements visant à modifier une situation.</p>
+<h2 id="1420-la-tristesse-et-la-motivation" class="entry-title hc-5">😢 14.20 La tristesse et la motivation</h2>
+<p>La tristesse peut diminuer l'énergie consacrée à certaines activités.</p>
+<p>Elle peut également favoriser la recherche de soutien ou provoquer temporairement un retrait comportemental.</p>
+<h2 id="1421-la-joie-et-la-motivation" class="entry-title hc-1">😄 14.21 La joie et la motivation</h2>
+<p>La joie peut favoriser l'engagement dans certaines activités.</p>
+<p>Les émotions positives peuvent notamment être associées à une plus grande tendance à explorer ou à interagir avec l'environnement.</p>
+<h2 id="1422-la-poursuite-dun-objectif" class="entry-title hc-2">🏁 14.22 La poursuite d'un objectif</h2>
+<p>Un objectif fournit une direction au comportement.</p>
+<p>Il permet notamment de déterminer quelles actions sont pertinentes pour atteindre un résultat souhaité.</p>
+<h2 id="1423-les-objectifs-a-court-terme" class="entry-title hc-3">📌 14.23 Les objectifs à court terme</h2>
+<p>Les objectifs à court terme sont relativement proches dans le temps.</p>
+<p>Ils peuvent être plus faciles à représenter et fournir des récompenses plus rapidement.</p>
+<h2 id="1424-les-objectifs-a-long-terme" class="entry-title hc-4">🗓️ 14.24 Les objectifs à long terme</h2>
+<p>Les objectifs à long terme nécessitent généralement davantage de planification et de persévérance.</p>
+<p>La récompense étant éloignée, la motivation peut fluctuer au cours du temps.</p>
+<h2 id="1425-la-perseverance" class="entry-title hc-5">⏳ 14.25 La persévérance</h2>
+<p>La persévérance correspond à la tendance à maintenir un comportement malgré les difficultés ou les obstacles.</p>
+<p>Elle dépend notamment de la valeur accordée à l'objectif et des attentes concernant sa réussite.</p>
+<h2 id="1426-les-obstacles-et-la-motivation" class="entry-title hc-1">🚧 14.26 Les obstacles et la motivation</h2>
+<p>Les obstacles peuvent diminuer la motivation ou, dans certaines situations, augmenter l'engagement.</p>
+<p>La réaction dépend notamment de la difficulté perçue, du sentiment de contrôle et de la valeur de l'objectif.</p>
+<h2 id="1427-le-sentiment-defficacite-personnelle" class="entry-title hc-2">🧠 14.27 Le sentiment d'efficacité personnelle</h2>
+<p>Le sentiment d'efficacité personnelle correspond à la croyance qu'une personne peut réussir une action donnée.</p>
+<p>Cette perception peut influencer l'effort, la persévérance et les choix comportementaux.</p>
+<h2 id="1428-lechec-et-la-motivation" class="entry-title hc-3">🔄 14.28 L'échec et la motivation</h2>
+<p>Un échec peut modifier les attentes concernant une future réussite.</p>
+<p>Selon son interprétation, il peut entraîner une diminution de l'engagement ou conduire à une adaptation des stratégies utilisées.</p>
+<h2 id="1429-la-reussite-et-la-motivation" class="entry-title hc-4">🏆 14.29 La réussite et la motivation</h2>
+<p>Une réussite peut renforcer les attentes positives et augmenter l'engagement dans certaines situations.</p>
+<p>Elle peut également modifier la valeur accordée à l'objectif.</p>
+<h2 id="1430-lengagement" class="entry-title hc-5">🔥 14.30 L'engagement</h2>
+<p>L'engagement correspond au degré d'implication dans une activité ou dans la poursuite d'un objectif.</p>
+<p>Il peut varier selon l'intérêt, la difficulté, les récompenses et le contexte.</p>
+<h2 id="1431-la-motivation-et-lattention" class="entry-title hc-1">🧠 14.31 La motivation et l'attention</h2>
+<p>La motivation influence ce à quoi l'attention est dirigée.</p>
+<p>Les informations liées à un objectif important peuvent notamment être traitées comme davantage prioritaires.</p>
+<h2 id="1432-la-motivation-et-les-pensees" class="entry-title hc-2">💭 14.32 La motivation et les pensées</h2>
+<p>Les objectifs peuvent influencer les pensées et les interprétations.</p>
+<p>Lorsqu'un objectif devient important, les individus peuvent davantage remarquer les informations qui permettent de progresser vers celui-ci.</p>
+<h2 id="1433-la-motivation-et-la-memoire" class="entry-title hc-3">🧠 14.33 La motivation et la mémoire</h2>
+<p>La motivation peut influencer les informations auxquelles une personne prête attention et qu'elle mémorise.</p>
+<p>Les informations pertinentes pour un objectif peuvent bénéficier d'un traitement privilégié dans certaines situations.</p>
+<h2 id="1434-le-conflit-entre-objectifs" class="entry-title hc-4">⚖️ 14.34 Le conflit entre objectifs</h2>
+<p>Plusieurs objectifs peuvent être poursuivis simultanément.</p>
+<p>Lorsqu'ils sont incompatibles, un conflit motivationnel peut apparaître.</p>
+<h2 id="1435-lambivalence-motivationnelle" class="entry-title hc-5">🔀 14.35 L'ambivalence motivationnelle</h2>
+<p>L'ambivalence motivationnelle correspond à la coexistence de tendances opposées concernant une même action.</p>
+<p>Une personne peut simultanément vouloir réaliser une action et vouloir l'éviter.</p>
+<h2 id="1436-la-procrastination" class="entry-title hc-1">🛑 14.36 La procrastination</h2>
+<p>La procrastination correspond au report volontaire d'une action prévue malgré la possibilité que ce report entraîne des conséquences négatives.</p>
+<p>Les émotions, la difficulté perçue et la recherche de récompenses immédiates peuvent participer à ce phénomène.</p>
+<h2 id="1437-la-gratification-differee" class="entry-title hc-2">🍬 14.37 La gratification différée</h2>
+<p>La gratification différée correspond à la capacité à attendre une récompense future plutôt qu'à rechercher immédiatement une récompense plus petite.</p>
+<p>Elle implique notamment la représentation du futur et le contrôle comportemental.</p>
+<h2 id="1438-les-attentes-et-la-motivation" class="entry-title hc-3">🔮 14.38 Les attentes et la motivation</h2>
+<p>Les attentes concernant la réussite ou l'échec peuvent modifier l'engagement.</p>
+<p>Une faible probabilité perçue de réussite peut réduire la motivation, tandis qu'une attente de réussite peut la renforcer.</p>
+<h2 id="1439-les-differences-individuelles" class="entry-title hc-4">🧩 14.39 Les différences individuelles</h2>
+<p>La motivation varie fortement selon les individus.</p>
+<p>Les objectifs personnels, les expériences, les valeurs, les émotions, les capacités cognitives et le contexte peuvent tous influencer la motivation.</p>
+<h2 id="1440-pourquoi-etudier-les-emotions-la-motivation-et-les-objectifs" class="entry-title hc-5">🔬 14.40 Pourquoi étudier les émotions, la motivation et les objectifs ?</h2>
+<p>Les émotions participent à l'orientation du comportement, tandis que les objectifs donnent une direction à l'action.</p>
+<p>Le fonctionnement peut être représenté ainsi :</p>
+<p><strong>❤️ émotion → 🎯 motivation → 🧠 objectif → ⚡ action → 🏆 conséquence → ❤️ nouvelle émotion</strong></p>
+<p>Cette interaction permet de comprendre pourquoi les comportements humains peuvent changer en fonction des récompenses, des émotions, des attentes et des objectifs.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>La motivation ne correspond pas simplement à « avoir envie ».</p>
+<p>Elle implique plusieurs processus :</p>
+<p><strong>🎯 objectifs → 🧠 attentes → ❤️ émotions → 🏆 récompenses → ⚡ effort → 🔄 apprentissage</strong></p>
+<p>Les émotions peuvent augmenter, diminuer ou réorienter la motivation. Elles ne déterminent cependant pas automatiquement le comportement.</p>
+<p>La motivation dépend également du <strong>contexte, des besoins, des objectifs, des expériences passées, des récompenses attendues, du sentiment de compétence et des différences individuelles</strong>.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="emotions-emotions-et-prise-de-decision.html"><span class="similar-icon">❤️</span>Émotions et prise de décision</a><a class="similar-item" href="emotions-emotions-attention-et-perception.html"><span class="similar-icon">❤️</span>Émotions, attention et perception</a><a class="similar-item" href="emotions-emotions-memoire-et-apprentissage.html"><span class="similar-icon">❤️</span>Émotions, mémoire et apprentissage</a></div>
+    </div>
+    <a class="back-link" href="../categorie/emotions.html">← Retour à « Émotions et comportements humains »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

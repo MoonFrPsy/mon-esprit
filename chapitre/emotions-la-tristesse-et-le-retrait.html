@@ -2,12 +2,944 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/emotions-la-tristesse-et-le-retrait/">
-<link rel="canonical" href="/chapitre/emotions-la-tristesse-et-le-retrait/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/emotions-la-tristesse-et-le-retrait/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La tristesse et le retrait — Mon Esprit</title>
+<meta name="description" content="La tristesse et le retrait, dans la catégorie Émotions et comportements humains de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/emotions-la-tristesse-et-le-retrait/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#61-quest-ce-que-la-tristesse">😢 6.1 Qu'est-ce que la tristesse ?</a></li><li><a href="#62-les-declencheurs-de-la-tristesse">🌧️ 6.2 Les déclencheurs de la tristesse</a></li><li><a href="#63-la-perception-de-la-perte">💔 6.3 La perception de la perte</a></li><li><a href="#64-les-pertes-symboliques">🧩 6.4 Les pertes symboliques</a></li><li><a href="#65-les-pensees-liees-a-la-tristesse">🧠 6.5 Les pensées liées à la tristesse</a></li><li><a href="#66-la-tristesse-et-la-perception-du-temps">🕰️ 6.6 La tristesse et la perception du temps</a></li><li><a href="#67-les-sensations-corporelles">🫀 6.7 Les sensations corporelles</a></li><li><a href="#68-le-ralentissement-comportemental">🧍 6.8 Le ralentissement comportemental</a></li><li><a href="#69-le-retrait-social">🚪 6.9 Le retrait social</a></li><li><a href="#610-la-recherche-de-proximite">🫂 6.10 La recherche de proximité</a></li><li><a href="#611-la-recherche-de-soutien-social">💬 6.11 La recherche de soutien social</a></li><li><a href="#612-la-tristesse-et-lattention">🧠 6.12 La tristesse et l'attention</a></li><li><a href="#613-la-rumination">💭 6.13 La rumination</a></li><li><a href="#614-la-memoire-et-la-tristesse">🔄 6.14 La mémoire et la tristesse</a></li><li><a href="#615-la-congruence-emotionnelle">🧠 6.15 La congruence émotionnelle</a></li><li><a href="#616-la-tristesse-et-la-perception">👁️ 6.16 La tristesse et la perception</a></li><li><a href="#617-la-tristesse-et-la-motivation">🎯 6.17 La tristesse et la motivation</a></li><li><a href="#618-la-diminution-de-linteret">📉 6.18 La diminution de l'intérêt</a></li><li><a href="#619-le-retrait-comme-reduction-des-stimulations">🛑 6.19 Le retrait comme réduction des stimulations</a></li><li><a href="#620-le-retrait-prolonge">🔄 6.20 Le retrait prolongé</a></li><li><a href="#621-la-tristesse-et-la-prise-de-decision">🧠 6.21 La tristesse et la prise de décision</a></li><li><a href="#622-la-tristesse-apres-une-rupture">💕 6.22 La tristesse après une rupture</a></li><li><a href="#623-le-deuil">🧩 6.23 Le deuil</a></li><li><a href="#624-les-souvenirs-apres-une-perte">🧠 6.24 Les souvenirs après une perte</a></li><li><a href="#625-la-nostalgie">💭 6.25 La nostalgie</a></li><li><a href="#626-le-reconfort">🫂 6.26 Le réconfort</a></li><li><a href="#627-lexpression-de-la-tristesse">🗣️ 6.27 L'expression de la tristesse</a></li><li><a href="#628-la-contagion-emotionnelle">🧑‍🤝‍🧑 6.28 La contagion émotionnelle</a></li><li><a href="#629-lempathie-face-a-la-tristesse">🧠 6.29 L'empathie face à la tristesse</a></li><li><a href="#630-la-recuperation-emotionnelle">🌱 6.30 La récupération émotionnelle</a></li><li><a href="#631-ladaptation-a-une-perte">🔄 6.31 L'adaptation à une perte</a></li><li><a href="#632-lintegration-dun-evenement">🧠 6.32 L'intégration d'un événement</a></li><li><a href="#633-les-fluctuations-de-la-tristesse">🌊 6.33 Les fluctuations de la tristesse</a></li><li><a href="#634-la-coexistence-des-emotions">😊 6.34 La coexistence des émotions</a></li><li><a href="#635-tristesse-et-depression">⚖️ 6.35 Tristesse et dépression</a></li><li><a href="#636-la-tristesse-persistante">🧩 6.36 La tristesse persistante</a></li><li><a href="#637-le-retrait-et-le-fonctionnement-quotidien">🚪 6.37 Le retrait et le fonctionnement quotidien</a></li><li><a href="#638-la-tristesse-et-les-comportements">🧠 6.38 La tristesse et les comportements</a></li><li><a href="#639-la-fonction-possible-de-la-tristesse">🌱 6.39 La fonction possible de la tristesse</a></li><li><a href="#640-pourquoi-etudier-la-tristesse-et-le-retrait">🔬 6.40 Pourquoi étudier la tristesse et le retrait ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'La tristesse et le retrait',
+        category: 'Émotions et comportements humains',
+        icon: '❤️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/emotions.html">❤️ Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>La tristesse et le retrait</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-emotions)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>La tristesse est une émotion généralement associée à une perte, une déception, une séparation, un échec ou une situation vécue comme douloureuse.</p>
+<p>Elle peut modifier les pensées, les sensations corporelles, l'attention, la motivation et les comportements sociaux.</p>
+<p>Le retrait social peut accompagner la tristesse, mais il ne constitue pas une réaction systématique. Certaines personnes recherchent au contraire davantage de proximité et de soutien.</p>
+<h2 id="61-quest-ce-que-la-tristesse" class="entry-title hc-1">😢 6.1 Qu'est-ce que la tristesse ?</h2>
+<p>La tristesse est une émotion qui apparaît notamment lorsqu'une personne perçoit une perte, une déception ou une situation difficile.</p>
+<p>Son intensité peut aller d'une légère mélancolie à une tristesse très importante.</p>
+<h2 id="62-les-declencheurs-de-la-tristesse" class="entry-title hc-2">🌧️ 6.2 Les déclencheurs de la tristesse</h2>
+<p>La tristesse peut être déclenchée par :</p>
+<ul>
+<li>une perte ;</li>
+<li>une séparation ;</li>
+<li>un échec ;</li>
+<li>une déception ;</li>
+<li>un changement important ;</li>
+<li>un souvenir ;</li>
+<li>une situation douloureuse.</li>
+</ul>
+<h2 id="63-la-perception-de-la-perte" class="entry-title hc-3">💔 6.3 La perception de la perte</h2>
+<p>La tristesse est souvent liée à la perception qu'une situation importante a été perdue ou ne correspond plus aux attentes.</p>
+<p>Cette perte peut être concrète ou symbolique.</p>
+<h2 id="64-les-pertes-symboliques" class="entry-title hc-4">🧩 6.4 Les pertes symboliques</h2>
+<p>Une perte ne concerne pas nécessairement une personne.</p>
+<p>Elle peut également concerner :</p>
+<ul>
+<li>un projet ;</li>
+<li>une relation ;</li>
+<li>une possibilité ;</li>
+<li>une période de vie ;</li>
+<li>une représentation de soi ;</li>
+<li>une attente concernant l'avenir.</li>
+</ul>
+<h2 id="65-les-pensees-liees-a-la-tristesse" class="entry-title hc-5">🧠 6.5 Les pensées liées à la tristesse</h2>
+<p>La tristesse peut favoriser des pensées orientées vers :</p>
+<ul>
+<li>ce qui a été perdu ;</li>
+<li>les souvenirs ;</li>
+<li>les regrets ;</li>
+<li>les conséquences d'un événement ;</li>
+<li>ce qui aurait pu être différent.</li>
+</ul>
+<h2 id="66-la-tristesse-et-la-perception-du-temps" class="entry-title hc-1">🕰️ 6.6 La tristesse et la perception du temps</h2>
+<p>La tristesse peut influencer la perception subjective du temps.</p>
+<p>Une période difficile peut sembler particulièrement longue sur le moment, tandis qu'une période passée peut être vécue différemment lorsqu'elle est regardée rétrospectivement.</p>
+<h2 id="67-les-sensations-corporelles" class="entry-title hc-2">🫀 6.7 Les sensations corporelles</h2>
+<p>La tristesse peut s'accompagner de différentes sensations :</p>
+<ul>
+<li>fatigue ;</li>
+<li>lourdeur corporelle ;</li>
+<li>diminution de l'énergie ;</li>
+<li>ralentissement ;</li>
+<li>modifications du sommeil ;</li>
+<li>modifications de l'appétit.</li>
+</ul>
+<p>Ces manifestations varient selon les individus.</p>
+<h2 id="68-le-ralentissement-comportemental" class="entry-title hc-3">🧍 6.8 Le ralentissement comportemental</h2>
+<p>Certaines personnes peuvent réduire leur activité lorsqu'elles ressentent une tristesse importante.</p>
+<p>Les mouvements, les interactions ou certaines activités peuvent devenir moins fréquents.</p>
+<h2 id="69-le-retrait-social" class="entry-title hc-4">🚪 6.9 Le retrait social</h2>
+<p>Le retrait social correspond à une diminution des interactions avec les autres.</p>
+<p>Il peut apparaître temporairement lors d'une période de tristesse.</p>
+<h2 id="610-la-recherche-de-proximite" class="entry-title hc-5">🫂 6.10 La recherche de proximité</h2>
+<p>Le retrait n'est cependant pas la seule réaction possible.</p>
+<p>Certaines personnes recherchent davantage :</p>
+<ul>
+<li>de présence ;</li>
+<li>de soutien ;</li>
+<li>de contact ;</li>
+<li>de réconfort ;</li>
+<li>de compréhension.</li>
+</ul>
+<h2 id="611-la-recherche-de-soutien-social" class="entry-title hc-1">💬 6.11 La recherche de soutien social</h2>
+<p>La tristesse peut favoriser la recherche de soutien auprès d'autres personnes.</p>
+<p>La présence sociale peut notamment réduire le sentiment d'isolement.</p>
+<h2 id="612-la-tristesse-et-lattention" class="entry-title hc-2">🧠 6.12 La tristesse et l'attention</h2>
+<p>L'état émotionnel peut influencer les informations auxquelles l'attention se dirige.</p>
+<p>La tristesse peut notamment favoriser l'attention portée à certaines informations correspondant à l'état émotionnel.</p>
+<h2 id="613-la-rumination" class="entry-title hc-3">💭 6.13 La rumination</h2>
+<p>La rumination correspond à la répétition de pensées centrées sur une difficulté, une perte ou un état émotionnel.</p>
+<p>Elle peut maintenir l'attention sur la situation et prolonger certains états émotionnels lorsqu'elle devient répétitive.</p>
+<h2 id="614-la-memoire-et-la-tristesse" class="entry-title hc-4">🔄 6.14 La mémoire et la tristesse</h2>
+<p>Les émotions peuvent influencer la mémoire.</p>
+<p>La tristesse peut faciliter l'accès à certains souvenirs ou informations correspondant à l'état émotionnel présent.</p>
+<h2 id="615-la-congruence-emotionnelle" class="entry-title hc-5">🧠 6.15 La congruence émotionnelle</h2>
+<p>La congruence émotionnelle correspond au fait que l'état émotionnel actuel peut influencer la facilité avec laquelle certaines informations émotionnellement similaires sont accessibles.</p>
+<p>Un état triste peut ainsi favoriser l'accès à certaines pensées ou certains souvenirs tristes.</p>
+<h2 id="616-la-tristesse-et-la-perception" class="entry-title hc-1">👁️ 6.16 La tristesse et la perception</h2>
+<p>L'état émotionnel peut influencer la manière dont certaines informations sont perçues ou interprétées.</p>
+<p>La même situation peut ainsi être vécue différemment selon l'état émotionnel.</p>
+<h2 id="617-la-tristesse-et-la-motivation" class="entry-title hc-2">🎯 6.17 La tristesse et la motivation</h2>
+<p>La tristesse peut être associée à une diminution de la motivation pour certaines activités.</p>
+<p>Cette diminution varie cependant selon les personnes et les situations.</p>
+<h2 id="618-la-diminution-de-linteret" class="entry-title hc-3">📉 6.18 La diminution de l'intérêt</h2>
+<p>Certaines activités habituellement appréciées peuvent temporairement sembler moins intéressantes pendant une période de tristesse.</p>
+<p>Cette expérience ne signifie pas automatiquement qu'un trouble psychologique est présent.</p>
+<h2 id="619-le-retrait-comme-reduction-des-stimulations" class="entry-title hc-4">🛑 6.19 Le retrait comme réduction des stimulations</h2>
+<p>Le retrait peut permettre de réduire temporairement certaines stimulations extérieures.</p>
+<p>Il peut ainsi avoir différentes fonctions selon la situation et la personne.</p>
+<h2 id="620-le-retrait-prolonge" class="entry-title hc-5">🔄 6.20 Le retrait prolongé</h2>
+<p>Lorsque le retrait devient très important ou durable, il peut réduire les interactions sociales et certaines activités.</p>
+<p>Cela peut contribuer à maintenir certains états émotionnels difficiles.</p>
+<h2 id="621-la-tristesse-et-la-prise-de-decision" class="entry-title hc-1">🧠 6.21 La tristesse et la prise de décision</h2>
+<p>La tristesse peut influencer la manière dont les situations sont évaluées.</p>
+<p>Les décisions peuvent notamment être influencées par une attention plus importante portée aux pertes ou par une diminution temporaire de la motivation.</p>
+<h2 id="622-la-tristesse-apres-une-rupture" class="entry-title hc-2">💕 6.22 La tristesse après une rupture</h2>
+<p>Une rupture peut provoquer plusieurs émotions simultanément ou successivement.</p>
+<p>Elle peut notamment être associée à :</p>
+<ul>
+<li>la tristesse ;</li>
+<li>la colère ;</li>
+<li>la nostalgie ;</li>
+<li>la culpabilité ;</li>
+<li>la peur ;</li>
+<li>le soulagement ;</li>
+<li>le sentiment de vide.</li>
+</ul>
+<h2 id="623-le-deuil" class="entry-title hc-3">🧩 6.23 Le deuil</h2>
+<p>Le deuil désigne le processus psychologique et social associé à une perte importante, notamment après le décès d'une personne.</p>
+<p>Les réactions au deuil sont très variables et ne suivent pas nécessairement une succession d'étapes fixes.</p>
+<h2 id="624-les-souvenirs-apres-une-perte" class="entry-title hc-4">🧠 6.24 Les souvenirs après une perte</h2>
+<p>Après une perte importante, certains souvenirs peuvent devenir particulièrement accessibles.</p>
+<p>Ils peuvent provoquer de la tristesse, mais également des émotions positives associées aux moments vécus.</p>
+<h2 id="625-la-nostalgie" class="entry-title hc-5">💭 6.25 La nostalgie</h2>
+<p>La nostalgie est une émotion complexe associant souvent des sentiments positifs liés au passé à la conscience que cette période est terminée.</p>
+<p>Elle peut donc contenir simultanément une dimension agréable et une dimension triste.</p>
+<h2 id="626-le-reconfort" class="entry-title hc-1">🫂 6.26 Le réconfort</h2>
+<p>Le réconfort correspond à une diminution possible de la détresse émotionnelle grâce à une présence, une interaction ou une expérience perçue comme rassurante.</p>
+<p>Il peut être social, affectif ou contextuel.</p>
+<h2 id="627-lexpression-de-la-tristesse" class="entry-title hc-2">🗣️ 6.27 L'expression de la tristesse</h2>
+<p>La tristesse peut être communiquée par :</p>
+<ul>
+<li>les expressions faciales ;</li>
+<li>la voix ;</li>
+<li>les paroles ;</li>
+<li>la posture ;</li>
+<li>les comportements.</li>
+</ul>
+<p>Les autres personnes peuvent alors détecter l'état émotionnel et adapter leur comportement.</p>
+<h2 id="628-la-contagion-emotionnelle" class="entry-title hc-3">🧑‍🤝‍🧑 6.28 La contagion émotionnelle</h2>
+<p>Les émotions peuvent influencer les personnes présentes dans le même environnement.</p>
+<p>La tristesse d'une personne peut ainsi modifier l'état émotionnel d'autres personnes dans certaines situations.</p>
+<h2 id="629-lempathie-face-a-la-tristesse" class="entry-title hc-4">🧠 6.29 L'empathie face à la tristesse</h2>
+<p>Observer une personne triste peut provoquer une réponse émotionnelle chez autrui.</p>
+<p>Cette réaction peut favoriser la compréhension de l'état de l'autre et certains comportements de soutien.</p>
+<h2 id="630-la-recuperation-emotionnelle" class="entry-title hc-5">🌱 6.30 La récupération émotionnelle</h2>
+<p>Après une expérience triste, l'état émotionnel peut progressivement évoluer.</p>
+<p>La récupération varie selon :</p>
+<ul>
+<li>l'événement ;</li>
+<li>sa durée ;</li>
+<li>son importance ;</li>
+<li>le contexte ;</li>
+<li>les ressources disponibles ;</li>
+<li>les interactions sociales.</li>
+</ul>
+<h2 id="631-ladaptation-a-une-perte" class="entry-title hc-1">🔄 6.31 L'adaptation à une perte</h2>
+<p>L'adaptation correspond à la manière dont le fonctionnement psychologique évolue après un événement important.</p>
+<p>S'adapter ne signifie pas nécessairement oublier l'événement ou ne plus ressentir de tristesse.</p>
+<h2 id="632-lintegration-dun-evenement" class="entry-title hc-2">🧠 6.32 L'intégration d'un événement</h2>
+<p>Avec le temps, un événement peut progressivement être intégré dans la représentation personnelle de l'histoire vécue.</p>
+<p>Il peut rester émotionnellement important tout en devenant moins perturbant au quotidien.</p>
+<h2 id="633-les-fluctuations-de-la-tristesse" class="entry-title hc-3">🌊 6.33 Les fluctuations de la tristesse</h2>
+<p>La tristesse n'est pas nécessairement constante.</p>
+<p>Elle peut augmenter ou diminuer selon :</p>
+<ul>
+<li>les souvenirs ;</li>
+<li>les interactions ;</li>
+<li>les événements ;</li>
+<li>l'environnement ;</li>
+<li>la fatigue ;</li>
+<li>le contexte.</li>
+</ul>
+<h2 id="634-la-coexistence-des-emotions" class="entry-title hc-4">😊 6.34 La coexistence des émotions</h2>
+<p>Une personne peut ressentir de la tristesse et de la joie au même moment ou à des moments très proches.</p>
+<p>Les émotions positives et négatives ne s'excluent donc pas toujours.</p>
+<h2 id="635-tristesse-et-depression" class="entry-title hc-5">⚖️ 6.35 Tristesse et dépression</h2>
+<p>La tristesse est une émotion normale.</p>
+<p>La dépression correspond à un trouble psychique caractérisé par un ensemble de symptômes persistants et cliniquement significatifs.</p>
+<p>Ressentir de la tristesse ne signifie donc pas automatiquement être dépressif.</p>
+<h2 id="636-la-tristesse-persistante" class="entry-title hc-1">🧩 6.36 La tristesse persistante</h2>
+<p>Une tristesse particulièrement intense ou durable, surtout lorsqu'elle s'accompagne de difficultés importantes dans le fonctionnement quotidien, peut constituer un phénomène clinique nécessitant une évaluation plus approfondie.</p>
+<p>La durée, l'intensité et les conséquences sont importantes pour l'interprétation.</p>
+<h2 id="637-le-retrait-et-le-fonctionnement-quotidien" class="entry-title hc-2">🚪 6.37 Le retrait et le fonctionnement quotidien</h2>
+<p>Le retrait peut devenir problématique lorsqu'il empêche durablement certaines activités ou interactions importantes.</p>
+<p>Le contexte reste essentiel pour comprendre sa signification.</p>
+<h2 id="638-la-tristesse-et-les-comportements" class="entry-title hc-3">🧠 6.38 La tristesse et les comportements</h2>
+<p>La tristesse peut influencer les comportements, mais elle ne produit pas une réaction unique.</p>
+<p>Elle peut conduire au retrait, à la recherche de soutien, à la réflexion, à la diminution d'activité ou à d'autres comportements.</p>
+<h2 id="639-la-fonction-possible-de-la-tristesse" class="entry-title hc-4">🌱 6.39 La fonction possible de la tristesse</h2>
+<p>La tristesse peut signaler qu'une situation importante a changé ou qu'une perte doit être intégrée.</p>
+<p>Elle peut également favoriser certaines formes de réflexion et de recherche de soutien social.</p>
+<h2 id="640-pourquoi-etudier-la-tristesse-et-le-retrait" class="entry-title hc-5">🔬 6.40 Pourquoi étudier la tristesse et le retrait ?</h2>
+<p>La tristesse permet d'observer les interactions entre :</p>
+<p><strong>perte → interprétation → émotion → pensées → sensations → motivation → comportement → relations</strong></p>
+<p>Elle montre également que le retrait n'est pas une réaction obligatoire et que la recherche de proximité constitue une autre réponse possible.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>La tristesse est une <strong>émotion normale</strong> pouvant apparaître après une perte, une séparation, une déception ou une situation difficile.</p>
+<p>Elle peut influencer :</p>
+<p><strong>😢 émotion → 💭 pensées → 🫀 sensations → 🎯 motivation → 🧍 comportement → 🧑‍🤝‍🧑 relations</strong></p>
+<p>Le retrait social peut accompagner la tristesse, mais il ne constitue pas une réaction obligatoire. Certaines personnes recherchent au contraire davantage de proximité et de soutien.</p>
+<p>Enfin, <strong>tristesse et dépression ne sont pas synonymes</strong>. La tristesse est une émotion, tandis que la dépression correspond à un ensemble de symptômes formant un trouble psychique lorsqu'ils répondent à des critères cliniques.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="emotions-joie-plaisir-et-recompense.html"><span class="similar-icon">❤️</span>Joie, plaisir et récompense</a><a class="similar-item" href="emotions-honte-culpabilite-et-embarras.html"><span class="similar-icon">❤️</span>Honte, culpabilité et embarras</a><a class="similar-item" href="emotions-amour-attachement-et-comportements.html"><span class="similar-icon">❤️</span>Amour, attachement et comportements</a></div>
+    </div>
+    <a class="back-link" href="../categorie/emotions.html">← Retour à « Émotions et comportements humains »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

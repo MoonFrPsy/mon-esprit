@@ -2,12 +2,896 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/emotions-joie-plaisir-et-recompense/">
-<link rel="canonical" href="/chapitre/emotions-joie-plaisir-et-recompense/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/emotions-joie-plaisir-et-recompense/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joie, plaisir et récompense — Mon Esprit</title>
+<meta name="description" content="Joie, plaisir et récompense, dans la catégorie Émotions et comportements humains de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/emotions-joie-plaisir-et-recompense/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#71-quest-ce-que-la-joie">😄 7.1 Qu'est-ce que la joie ?</a></li><li><a href="#72-la-fonction-de-la-joie">✨ 7.2 La fonction de la joie</a></li><li><a href="#73-le-plaisir">😊 7.3 Le plaisir</a></li><li><a href="#74-la-recompense">🎯 7.4 La récompense</a></li><li><a href="#75-le-systeme-de-recompense">🧠 7.5 Le système de récompense</a></li><li><a href="#76-la-dopamine">🧬 7.6 La dopamine</a></li><li><a href="#77-lanticipation-de-la-recompense">🔮 7.7 L'anticipation de la récompense</a></li><li><a href="#78-la-recompense-obtenue">🎁 7.8 La récompense obtenue</a></li><li><a href="#79-lerreur-de-prediction-de-recompense">📈 7.9 L'erreur de prédiction de récompense</a></li><li><a href="#710-lapprentissage-par-recompense">🔄 7.10 L'apprentissage par récompense</a></li><li><a href="#711-le-renforcement-positif">🧠 7.11 Le renforcement positif</a></li><li><a href="#712-la-motivation">🎯 7.12 La motivation</a></li><li><a href="#713-la-motivation-intrinseque">🔥 7.13 La motivation intrinsèque</a></li><li><a href="#714-la-motivation-extrinseque">🎁 7.14 La motivation extrinsèque</a></li><li><a href="#715-plaisir-et-motivation">⚖️ 7.15 Plaisir et motivation</a></li><li><a href="#716-le-desir">🧠 7.16 Le désir</a></li><li><a href="#717-vouloir-et-aimer">🍫 7.17 Vouloir et aimer</a></li><li><a href="#718-lanticipation-du-plaisir">🔮 7.18 L'anticipation du plaisir</a></li><li><a href="#719-les-attentes-concernant-le-plaisir">🧠 7.19 Les attentes concernant le plaisir</a></li><li><a href="#720-lecart-entre-plaisir-attendu-et-plaisir-reel">📊 7.20 L'écart entre plaisir attendu et plaisir réel</a></li><li><a href="#721-lhabituation">🔄 7.21 L'habituation</a></li><li><a href="#722-ladaptation-hedonique">🔥 7.22 L'adaptation hédonique</a></li><li><a href="#723-la-joie-et-les-emotions-positives">😊 7.23 La joie et les émotions positives</a></li><li><a href="#724-la-satisfaction">🧠 7.24 La satisfaction</a></li><li><a href="#725-la-fierte">🏆 7.25 La fierté</a></li><li><a href="#726-la-gratitude">💕 7.26 La gratitude</a></li><li><a href="#727-le-rire-et-lamusement">😆 7.27 Le rire et l'amusement</a></li><li><a href="#728-la-joie-partagee">🧑‍🤝‍🧑 7.28 La joie partagée</a></li><li><a href="#729-la-communication-de-la-joie">🗣️ 7.29 La communication de la joie</a></li><li><a href="#730-la-contagion-emotionnelle-positive">🔄 7.30 La contagion émotionnelle positive</a></li><li><a href="#731-la-joie-et-lattention">🧠 7.31 La joie et l'attention</a></li><li><a href="#732-la-joie-et-la-pensee">💭 7.32 La joie et la pensée</a></li><li><a href="#733-la-joie-et-la-memoire">🧠 7.33 La joie et la mémoire</a></li><li><a href="#734-la-joie-et-les-objectifs">🎯 7.34 La joie et les objectifs</a></li><li><a href="#735-la-recompense-et-le-comportement">🏃 7.35 La récompense et le comportement</a></li><li><a href="#736-les-recompenses-repetees">🔁 7.36 Les récompenses répétées</a></li><li><a href="#737-la-recompense-variable">🎲 7.37 La récompense variable</a></li><li><a href="#738-les-differences-individuelles">🧠 7.38 Les différences individuelles</a></li><li><a href="#739-joie-plaisir-et-comportement">⚖️ 7.39 Joie, plaisir et comportement</a></li><li><a href="#740-pourquoi-etudier-la-joie-le-plaisir-et-la-recompense">🔬 7.40 Pourquoi étudier la joie, le plaisir et la récompense ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Joie, plaisir et récompense',
+        category: 'Émotions et comportements humains',
+        icon: '❤️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/emotions.html">❤️ Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Joie, plaisir et récompense</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-emotions)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>La joie est une émotion généralement associée à une expérience agréable, à l'accomplissement d'un objectif, à une interaction positive ou à la présence d'un événement considéré comme favorable.</p>
+<p>Elle est étroitement liée au plaisir, à la motivation et aux systèmes de récompense, mais ces notions ne sont pas identiques.</p>
+<p>La joie peut influencer les pensées, l'attention, la mémoire, les comportements et les interactions sociales.</p>
+<h2 id="71-quest-ce-que-la-joie" class="entry-title hc-1">😄 7.1 Qu'est-ce que la joie ?</h2>
+<p>La joie est une émotion généralement associée à une expérience positive ou à la perception qu'une situation correspond favorablement aux attentes.</p>
+<p>Elle peut être légère, intense, brève ou relativement durable.</p>
+<h2 id="72-la-fonction-de-la-joie" class="entry-title hc-2">✨ 7.2 La fonction de la joie</h2>
+<p>La joie peut favoriser l'approche de situations ou d'activités associées à des expériences positives.</p>
+<p>Elle peut également faciliter certaines interactions sociales et renforcer certains comportements.</p>
+<h2 id="73-le-plaisir" class="entry-title hc-3">😊 7.3 Le plaisir</h2>
+<p>Le plaisir correspond à l'expérience subjective agréable associée à une activité, une sensation, un événement ou une récompense.</p>
+<p>Il peut être physique, sensoriel, émotionnel ou intellectuel.</p>
+<h2 id="74-la-recompense" class="entry-title hc-4">🎯 7.4 La récompense</h2>
+<p>Une récompense est un événement ou une conséquence qui augmente généralement la valeur subjective d'un comportement ou la probabilité qu'il soit reproduit.</p>
+<p>La perception d'une récompense dépend toutefois du contexte et des différences individuelles.</p>
+<h2 id="75-le-systeme-de-recompense" class="entry-title hc-5">🧠 7.5 Le système de récompense</h2>
+<p>Le cerveau possède plusieurs réseaux impliqués dans l'apprentissage, la motivation et la réponse aux récompenses.</p>
+<p>Le système de récompense ne correspond pas à une seule zone du cerveau.</p>
+<h2 id="76-la-dopamine" class="entry-title hc-1">🧬 7.6 La dopamine</h2>
+<p>La dopamine participe notamment à différents processus liés à la motivation, à l'apprentissage par renforcement et à l'anticipation de certaines récompenses.</p>
+<p>Elle ne doit pas être considérée comme une simple « molécule du plaisir ».</p>
+<h2 id="77-lanticipation-de-la-recompense" class="entry-title hc-2">🔮 7.7 L'anticipation de la récompense</h2>
+<p>Une récompense peut influencer le comportement avant même qu'elle soit obtenue.</p>
+<p>L'anticipation d'un résultat agréable peut augmenter la motivation à effectuer certaines actions.</p>
+<h2 id="78-la-recompense-obtenue" class="entry-title hc-3">🎁 7.8 La récompense obtenue</h2>
+<p>La réception d'une récompense fournit des informations permettant notamment de comparer le résultat obtenu avec ce qui était attendu.</p>
+<p>Cette comparaison participe à certains mécanismes d'apprentissage.</p>
+<h2 id="79-lerreur-de-prediction-de-recompense" class="entry-title hc-4">📈 7.9 L'erreur de prédiction de récompense</h2>
+<p>L'erreur de prédiction correspond à une différence entre une récompense attendue et une récompense réellement obtenue.</p>
+<p>Elle peut contribuer à modifier les attentes futures.</p>
+<h2 id="710-lapprentissage-par-recompense" class="entry-title hc-5">🔄 7.10 L'apprentissage par récompense</h2>
+<p>Lorsqu'un comportement est régulièrement suivi d'une conséquence positive, la probabilité de reproduire ce comportement peut augmenter.</p>
+<p>Ce mécanisme constitue une base importante de l'apprentissage par renforcement.</p>
+<h2 id="711-le-renforcement-positif" class="entry-title hc-1">🧠 7.11 Le renforcement positif</h2>
+<p>Le renforcement positif correspond à l'ajout d'une conséquence qui augmente la probabilité qu'un comportement soit reproduit.</p>
+<p>Il ne signifie pas simplement « faire quelque chose de positif ».</p>
+<h2 id="712-la-motivation" class="entry-title hc-2">🎯 7.12 La motivation</h2>
+<p>La motivation correspond aux processus qui influencent l'orientation, l'intensité et la persistance d'un comportement vers un objectif.</p>
+<p>Elle peut être influencée par les récompenses, les besoins, les attentes et le contexte.</p>
+<h2 id="713-la-motivation-intrinseque" class="entry-title hc-3">🔥 7.13 La motivation intrinsèque</h2>
+<p>La motivation intrinsèque correspond à une motivation liée à l'intérêt ou au plaisir associé à l'activité elle-même.</p>
+<p>L'activité est alors réalisée sans que la récompense extérieure soit nécessairement la principale raison d'agir.</p>
+<h2 id="714-la-motivation-extrinseque" class="entry-title hc-4">🎁 7.14 La motivation extrinsèque</h2>
+<p>La motivation extrinsèque est davantage liée aux conséquences externes d'une activité.</p>
+<p>Elle peut notamment être associée à :</p>
+<ul>
+<li>une récompense ;</li>
+<li>une reconnaissance ;</li>
+<li>une note ;</li>
+<li>un avantage ;</li>
+<li>l'évitement d'une conséquence négative.</li>
+</ul>
+<h2 id="715-plaisir-et-motivation" class="entry-title hc-5">⚖️ 7.15 Plaisir et motivation</h2>
+<p>Le plaisir et la motivation sont liés mais différents.</p>
+<p>Une activité peut être agréable sans provoquer une forte motivation à la répéter, et une personne peut être fortement motivée par un objectif qui n'est pas particulièrement plaisant.</p>
+<h2 id="716-le-desir" class="entry-title hc-1">🧠 7.16 Le désir</h2>
+<p>Le désir correspond à une tendance psychologique orientée vers l'obtention d'un objet, d'une expérience ou d'un résultat.</p>
+<p>Le désir et le plaisir peuvent fonctionner différemment.</p>
+<h2 id="717-vouloir-et-aimer" class="entry-title hc-2">🍫 7.17 Vouloir et aimer</h2>
+<p>Certains modèles distinguent le fait de <strong>vouloir</strong> une récompense et le fait de <strong>l'apprécier</strong> lorsqu'elle est obtenue.</p>
+<p>Une personne peut donc rechercher fortement quelque chose sans que son expérience réelle soit aussi agréable qu'attendu.</p>
+<h2 id="718-lanticipation-du-plaisir" class="entry-title hc-3">🔮 7.18 L'anticipation du plaisir</h2>
+<p>Imaginer une expérience agréable peut produire une réponse émotionnelle avant que l'expérience ne se produise réellement.</p>
+<p>Cette anticipation peut contribuer à la motivation.</p>
+<h2 id="719-les-attentes-concernant-le-plaisir" class="entry-title hc-4">🧠 7.19 Les attentes concernant le plaisir</h2>
+<p>Le plaisir attendu peut influencer les décisions et les comportements.</p>
+<p>Les attentes peuvent toutefois être différentes de l'expérience réellement vécue.</p>
+<h2 id="720-lecart-entre-plaisir-attendu-et-plaisir-reel" class="entry-title hc-5">📊 7.20 L'écart entre plaisir attendu et plaisir réel</h2>
+<p>Une activité peut être beaucoup plus agréable ou beaucoup moins agréable que prévu.</p>
+<p>Cet écart fournit de nouvelles informations susceptibles de modifier les attentes futures.</p>
+<h2 id="721-lhabituation" class="entry-title hc-1">🔄 7.21 L'habituation</h2>
+<p>Lorsqu'un même stimulus agréable est présenté de nombreuses fois, sa réponse subjective peut diminuer.</p>
+<p>Ce phénomène est appelé habituation.</p>
+<h2 id="722-ladaptation-hedonique" class="entry-title hc-2">🔥 7.22 L'adaptation hédonique</h2>
+<p>L'adaptation hédonique désigne la tendance à revenir progressivement vers un niveau émotionnel relativement habituel après certains changements positifs ou négatifs.</p>
+<p>Elle ne signifie pas que toutes les émotions disparaissent avec le temps.</p>
+<h2 id="723-la-joie-et-les-emotions-positives" class="entry-title hc-3">😊 7.23 La joie et les émotions positives</h2>
+<p>La joie fait partie des émotions positives, mais elle n'est pas la seule.</p>
+<p>D'autres expériences positives peuvent inclure :</p>
+<ul>
+<li>la gratitude ;</li>
+<li>la fierté ;</li>
+<li>l'intérêt ;</li>
+<li>l'amusement ;</li>
+<li>la satisfaction ;</li>
+<li>l'attachement.</li>
+</ul>
+<h2 id="724-la-satisfaction" class="entry-title hc-4">🧠 7.24 La satisfaction</h2>
+<p>La satisfaction correspond à l'évaluation positive d'un résultat, d'une situation ou d'une expérience.</p>
+<p>Elle peut apparaître lorsqu'un résultat correspond aux attentes ou les dépasse.</p>
+<h2 id="725-la-fierte" class="entry-title hc-5">🏆 7.25 La fierté</h2>
+<p>La fierté peut apparaître lorsqu'une personne évalue positivement une réalisation ou une caractéristique personnelle.</p>
+<p>Elle peut contribuer à renforcer certains comportements ou objectifs.</p>
+<h2 id="726-la-gratitude" class="entry-title hc-1">💕 7.26 La gratitude</h2>
+<p>La gratitude correspond à une réponse émotionnelle associée à la reconnaissance d'un bénéfice reçu ou d'une contribution positive.</p>
+<p>Elle peut également avoir une dimension sociale importante.</p>
+<h2 id="727-le-rire-et-lamusement" class="entry-title hc-2">😆 7.27 Le rire et l'amusement</h2>
+<p>L'amusement peut provoquer le rire, mais rire et amusement ne sont pas synonymes.</p>
+<p>Le rire peut également avoir des fonctions sociales et apparaître dans différents états émotionnels.</p>
+<h2 id="728-la-joie-partagee" class="entry-title hc-3">🧑‍🤝‍🧑 7.28 La joie partagée</h2>
+<p>Les émotions positives peuvent être partagées avec d'autres personnes.</p>
+<p>Une expérience positive collective peut renforcer certains liens sociaux et favoriser la proximité.</p>
+<h2 id="729-la-communication-de-la-joie" class="entry-title hc-4">🗣️ 7.29 La communication de la joie</h2>
+<p>La joie peut être communiquée par :</p>
+<ul>
+<li>les expressions faciales ;</li>
+<li>la voix ;</li>
+<li>les gestes ;</li>
+<li>les paroles ;</li>
+<li>le comportement.</li>
+</ul>
+<p>Ces signaux permettent aux autres personnes de détecter certains états émotionnels.</p>
+<h2 id="730-la-contagion-emotionnelle-positive" class="entry-title hc-5">🔄 7.30 La contagion émotionnelle positive</h2>
+<p>L'état émotionnel positif d'une personne peut influencer celui des personnes présentes autour d'elle.</p>
+<p>Ce phénomène peut participer à la création d'une atmosphère émotionnelle collective.</p>
+<h2 id="731-la-joie-et-lattention" class="entry-title hc-1">🧠 7.31 La joie et l'attention</h2>
+<p>Les émotions positives peuvent influencer la manière dont l'attention est orientée.</p>
+<p>Dans certaines conditions, elles peuvent favoriser une attention plus large portée aux informations disponibles.</p>
+<h2 id="732-la-joie-et-la-pensee" class="entry-title hc-2">💭 7.32 La joie et la pensée</h2>
+<p>Certains états émotionnels positifs peuvent influencer la flexibilité cognitive, l'exploration des idées et certaines formes de créativité.</p>
+<p>Ces effets dépendent toutefois du contexte et du niveau d'activation émotionnelle.</p>
+<h2 id="733-la-joie-et-la-memoire" class="entry-title hc-3">🧠 7.33 La joie et la mémoire</h2>
+<p>Les émotions peuvent influencer l'encodage et la récupération des souvenirs.</p>
+<p>Les événements émotionnellement positifs peuvent être particulièrement mémorisés dans certaines conditions.</p>
+<h2 id="734-la-joie-et-les-objectifs" class="entry-title hc-4">🎯 7.34 La joie et les objectifs</h2>
+<p>La réussite d'un objectif peut provoquer de la joie et renforcer la motivation à poursuivre certaines activités.</p>
+<p>La réussite peut également modifier les attentes concernant les objectifs futurs.</p>
+<h2 id="735-la-recompense-et-le-comportement" class="entry-title hc-5">🏃 7.35 La récompense et le comportement</h2>
+<p>Les conséquences positives peuvent renforcer certains comportements.</p>
+<p>Cependant, le renforcement dépend de la manière dont la conséquence est vécue et de son importance pour l'individu.</p>
+<h2 id="736-les-recompenses-repetees" class="entry-title hc-1">🔁 7.36 Les récompenses répétées</h2>
+<p>Une récompense répétée ne produit pas nécessairement toujours le même effet.</p>
+<p>L'habitude, les attentes, le contexte et la valeur subjective peuvent modifier la réponse.</p>
+<h2 id="737-la-recompense-variable" class="entry-title hc-2">🎲 7.37 La récompense variable</h2>
+<p>Lorsqu'une récompense apparaît de manière imprévisible, son caractère incertain peut influencer fortement certains comportements d'approche et de répétition.</p>
+<p>Ce principe est notamment étudié dans les recherches sur l'apprentissage et les comportements répétitifs.</p>
+<h2 id="738-les-differences-individuelles" class="entry-title hc-3">🧠 7.38 Les différences individuelles</h2>
+<p>La même récompense peut provoquer des réactions très différentes selon les personnes.</p>
+<p>Les préférences, les expériences passées, les objectifs, le contexte et l'état émotionnel influencent notamment la valeur attribuée à une récompense.</p>
+<h2 id="739-joie-plaisir-et-comportement" class="entry-title hc-4">⚖️ 7.39 Joie, plaisir et comportement</h2>
+<p>La joie et le plaisir peuvent favoriser certains comportements d'approche, mais ils ne déterminent pas automatiquement les actions.</p>
+<p>Les décisions dépendent également des objectifs, des contraintes, des habitudes et du contexte.</p>
+<h2 id="740-pourquoi-etudier-la-joie-le-plaisir-et-la-recompense" class="entry-title hc-5">🔬 7.40 Pourquoi étudier la joie, le plaisir et la récompense ?</h2>
+<p>Ces phénomènes permettent d'observer les relations entre :</p>
+<p><strong>expérience → plaisir → récompense → motivation → comportement → apprentissage</strong></p>
+<p>Ils permettent également de comprendre comment les expériences positives influencent les comportements futurs.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>La joie, le plaisir et la récompense sont étroitement liés mais correspondent à des phénomènes différents.</p>
+<p><strong>😊 joie → 🍫 plaisir → 🎁 récompense → 🎯 motivation → 🏃 comportement → 🧠 apprentissage</strong></p>
+<p>Le cerveau ne possède pas une simple « zone du plaisir ». Les expériences de récompense impliquent plusieurs réseaux cérébraux et différents neurotransmetteurs.</p>
+<p>La dopamine participe notamment à la motivation, à l'apprentissage et à l'anticipation des récompenses, mais elle ne peut pas être réduite à une simple « molécule du bonheur ».</p>
+<p>Enfin, une récompense n'a pas la même valeur pour tout le monde : <strong>le contexte, les expériences passées, les attentes et les différences individuelles influencent fortement la manière dont elle est vécue.</strong></p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="emotions-honte-culpabilite-et-embarras.html"><span class="similar-icon">❤️</span>Honte, culpabilité et embarras</a><a class="similar-item" href="emotions-amour-attachement-et-comportements.html"><span class="similar-icon">❤️</span>Amour, attachement et comportements</a><a class="similar-item" href="emotions-emotions-et-relations-sociales.html"><span class="similar-icon">❤️</span>Émotions et relations sociales</a></div>
+    </div>
+    <a class="back-link" href="../categorie/emotions.html">← Retour à « Émotions et comportements humains »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

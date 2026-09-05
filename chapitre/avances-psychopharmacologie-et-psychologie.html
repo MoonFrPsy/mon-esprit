@@ -2,12 +2,1251 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/avances-psychopharmacologie-et-psychologie/">
-<link rel="canonical" href="/chapitre/avances-psychopharmacologie-et-psychologie/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/avances-psychopharmacologie-et-psychologie/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psychopharmacologie et psychologie — Mon Esprit</title>
+<meta name="description" content="Psychopharmacologie et psychologie, dans la catégorie Concepts avancés de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/avances-psychopharmacologie-et-psychologie/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#151-quest-ce-que-la-psychopharmacologie">💊 15.1 Qu'est-ce que la psychopharmacologie ?</a></li><li><a href="#152-quest-ce-quun-psychotrope">🧠 15.2 Qu'est-ce qu'un psychotrope ?</a></li><li><a href="#153-pharmacodynamie-et-pharmacocinetique">🧪 15.3 Pharmacodynamie et pharmacocinétique</a><ul class="sidebar-sublist"><li><a href="#pharmacodynamie">Pharmacodynamie</a></li><li><a href="#pharmacocinetique">Pharmacocinétique</a></li></ul></li><li><a href="#154-les-recepteurs">🧬 15.4 Les récepteurs</a></li><li><a href="#155-les-neurotransmetteurs">⚡ 15.5 Les neurotransmetteurs</a></li><li><a href="#156-la-dopamine">🧠 15.6 La dopamine</a></li><li><a href="#157-la-serotonine">❤️ 15.7 La sérotonine</a></li><li><a href="#158-la-noradrenaline">⚡ 15.8 La noradrénaline</a></li><li><a href="#159-le-gaba">🧘 15.9 Le GABA</a></li><li><a href="#1510-le-glutamate">🔥 15.10 Le glutamate</a></li><li><a href="#1511-les-antidepresseurs">🧠 15.11 Les antidépresseurs</a></li><li><a href="#1512-pourquoi-leffet-dun-antidepresseur-nest-pas-immediat">🔄 15.12 Pourquoi l'effet d'un antidépresseur n'est pas immédiat ?</a></li><li><a href="#1513-les-anxiolytiques">🧠 15.13 Les anxiolytiques</a></li><li><a href="#1514-les-effets-sur-le-sommeil">😴 15.14 Les effets sur le sommeil</a></li><li><a href="#1515-les-antipsychotiques">🧠 15.15 Les antipsychotiques</a></li><li><a href="#1516-les-stabilisateurs-de-lhumeur">🌡️ 15.16 Les stabilisateurs de l'humeur</a></li><li><a href="#1517-les-medicaments-et-les-fonctions-cognitives">🎯 15.17 Les médicaments et les fonctions cognitives</a></li><li><a href="#1518-les-medicaments-et-les-emotions">🧠 15.18 Les médicaments et les émotions</a></li><li><a href="#1519-les-effets-secondaires">🔄 15.19 Les effets secondaires</a></li><li><a href="#1520-les-differences-individuelles">🧬 15.20 Les différences individuelles</a></li><li><a href="#1521-la-pharmacogenetique">🧬 15.21 La pharmacogénétique</a></li><li><a href="#1522-le-cerveau-sadapte-aux-medicaments">🧠 15.22 Le cerveau s'adapte aux médicaments</a></li><li><a href="#1523-la-tolerance">⚠️ 15.23 La tolérance</a></li><li><a href="#1524-la-dependance-physique">🔄 15.24 La dépendance physique</a></li><li><a href="#1525-laddiction-et-le-systeme-de-recompense">🧠 15.25 L'addiction et le système de récompense</a></li><li><a href="#1526-le-placebo">🧠 15.26 Le placebo</a></li><li><a href="#1527-le-nocebo">🔄 15.27 Le nocebo</a></li><li><a href="#1528-psychopharmacologie-et-therapie">🧠 15.28 Psychopharmacologie et thérapie</a></li><li><a href="#1529-les-traitements-combines">🧩 15.29 Les traitements combinés</a></li><li><a href="#1530-la-reponse-therapeutique">🧠 15.30 La réponse thérapeutique</a></li><li><a href="#1531-lefficacite-moyenne-et-la-reponse-individuelle">📊 15.31 L'efficacité moyenne et la réponse individuelle</a></li><li><a href="#1532-les-biais-dans-levaluation-des-traitements">🧠 15.32 Les biais dans l'évaluation des traitements</a></li><li><a href="#1533-les-essais-cliniques">🔬 15.33 Les essais cliniques</a></li><li><a href="#1534-correlation-biologique-et-mecanisme-psychologique">🧠 15.34 Corrélation biologique et mécanisme psychologique</a></li><li><a href="#1535-le-modele-biopsychosocial">🧬 15.35 Le modèle biopsychosocial</a><ul class="sidebar-sublist"><li><a href="#biologique">Biologique</a></li><li><a href="#psychologique">Psychologique</a></li><li><a href="#social">Social</a></li></ul></li><li><a href="#1536-les-interactions-cerveau-comportement">🔄 15.36 Les interactions cerveau comportement</a></li><li><a href="#1537-psychopharmacologie-et-neuroplasticite">🧠 15.37 Psychopharmacologie et neuroplasticité</a></li><li><a href="#1538-les-limites-de-la-psychopharmacologie">🩺 15.38 Les limites de la psychopharmacologie</a></li><li><a href="#1539-pourquoi-lautomedication-est-problematique">⚠️ 15.39 Pourquoi l'automédication est problématique</a></li><li><a href="#1540-pourquoi-etudier-la-psychopharmacologie-et-la-psychologie">🔬 15.40 Pourquoi étudier la psychopharmacologie et la psychologie ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Psychopharmacologie et psychologie',
+        category: 'Concepts avancés',
+        icon: '🔬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/avances.html">🔬 Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Psychopharmacologie et psychologie</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-avances)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>La psychopharmacologie étudie les effets des substances psychoactives et des médicaments sur le système nerveux et le fonctionnement psychologique.</p>
+<p>Elle s'intéresse notamment à la manière dont certaines substances peuvent modifier :</p>
+<ul>
+<li>humeur</li>
+<li>anxiété</li>
+<li>attention</li>
+<li>sommeil</li>
+<li>perception</li>
+<li>motivation</li>
+<li>impulsivité</li>
+<li>mémoire</li>
+<li>comportement</li>
+<li>activation physiologique</li>
+</ul>
+<p>La psychopharmacologie se situe donc à l'intersection de plusieurs domaines :</p>
+<p><strong>🧬 biologie + 🧠 neurosciences + 💊 pharmacologie + ❤️ psychologie + 🩺 psychiatrie</strong></p>
+<p>Un médicament psychotrope ne « corrige » pas directement une pensée ou un comportement comme on modifierait un paramètre informatique. Il agit sur des mécanismes biologiques qui peuvent ensuite influencer différents processus psychologiques.</p>
+<hr />
+<h2 id="151-quest-ce-que-la-psychopharmacologie" class="entry-title hc-1">💊 15.1 Qu'est-ce que la psychopharmacologie ?</h2>
+<p>La psychopharmacologie étudie les interactions entre les substances psychoactives et le système nerveux.</p>
+<p>Elle cherche notamment à comprendre :</p>
+<p><strong>substance → système biologique → modification du fonctionnement cérébral → effets psychologiques et comportementaux</strong></p>
+<p>Elle concerne les médicaments utilisés en psychiatrie, mais également d'autres substances capables de modifier l'activité du cerveau.</p>
+<hr />
+<h2 id="152-quest-ce-quun-psychotrope" class="entry-title hc-2">🧠 15.2 Qu'est-ce qu'un psychotrope ?</h2>
+<p>Un psychotrope est une substance capable de modifier certains processus du système nerveux central et donc potentiellement l'expérience psychologique ou le comportement.</p>
+<p>Les psychotropes comprennent différentes catégories de médicaments.</p>
+<p>Par exemple :</p>
+<ul>
+<li>antidépresseurs</li>
+<li>anxiolytiques</li>
+<li>antipsychotiques</li>
+<li>stabilisateurs de l'humeur</li>
+<li>certains médicaments utilisés dans les troubles de l'attention</li>
+</ul>
+<p>Le terme « psychotrope » ne signifie donc pas nécessairement « médicament contre la dépression ».</p>
+<hr />
+<h2 id="153-pharmacodynamie-et-pharmacocinetique" class="entry-title hc-3">🧪 15.3 Pharmacodynamie et pharmacocinétique</h2>
+<p>Deux notions sont fondamentales.</p>
+<h3 id="pharmacodynamie">Pharmacodynamie</h3>
+<p>Elle étudie :</p>
+<p><strong>ce que le médicament fait à l'organisme</strong></p>
+<p>Elle concerne notamment les récepteurs, les neurotransmetteurs et les mécanismes biologiques.</p>
+<h3 id="pharmacocinetique">Pharmacocinétique</h3>
+<p>Elle étudie :</p>
+<p><strong>ce que l'organisme fait au médicament</strong></p>
+<p>Elle concerne notamment :</p>
+<ul>
+<li>absorption</li>
+<li>distribution</li>
+<li>métabolisme</li>
+<li>élimination</li>
+</ul>
+<p>Ces deux dimensions permettent de comprendre pourquoi la dose, le moment de prise et la durée du traitement peuvent modifier les effets.</p>
+<hr />
+<h2 id="154-les-recepteurs" class="entry-title hc-4">🧬 15.4 Les récepteurs</h2>
+<p>Les médicaments peuvent agir sur différents récepteurs présents sur les neurones.</p>
+<p>Un médicament peut notamment :</p>
+<ul>
+<li>stimuler un récepteur</li>
+<li>bloquer un récepteur</li>
+<li>modifier son activité</li>
+<li>modifier indirectement la disponibilité d'un neurotransmetteur</li>
+</ul>
+<p>L'effet dépend donc du système biologique ciblé.</p>
+<hr />
+<h2 id="155-les-neurotransmetteurs" class="entry-title hc-5">⚡ 15.5 Les neurotransmetteurs</h2>
+<p>Les neurotransmetteurs permettent la communication entre neurones.</p>
+<p>Parmi ceux fréquemment étudiés en psychopharmacologie :</p>
+<ul>
+<li>dopamine</li>
+<li>sérotonine</li>
+<li>noradrénaline</li>
+<li>GABA</li>
+<li>glutamate</li>
+<li>acétylcholine</li>
+</ul>
+<p>Cependant, une même substance peut agir sur plusieurs systèmes simultanément.</p>
+<p>Il est donc généralement trop simpliste de dire :</p>
+<p><strong>« ce médicament augmente X, donc il produit forcément Y ».</strong></p>
+<hr />
+<h2 id="156-la-dopamine" class="entry-title hc-1">🧠 15.6 La dopamine</h2>
+<p>La dopamine intervient dans plusieurs circuits cérébraux.</p>
+<p>Elle participe notamment à :</p>
+<ul>
+<li>motivation</li>
+<li>apprentissage par renforcement</li>
+<li>mouvement</li>
+<li>anticipation de récompense</li>
+<li>attribution de saillance</li>
+</ul>
+<p>Son rôle dépend fortement du circuit concerné.</p>
+<p>La dopamine ne peut donc pas être considérée simplement comme :</p>
+<p><strong>« la molécule du plaisir »</strong></p>
+<hr />
+<h2 id="157-la-serotonine" class="entry-title hc-2">❤️ 15.7 La sérotonine</h2>
+<p>La sérotonine intervient dans de nombreux processus biologiques.</p>
+<p>Elle participe notamment à :</p>
+<ul>
+<li>humeur</li>
+<li>sommeil</li>
+<li>appétit</li>
+<li>cognition</li>
+<li>régulation émotionnelle</li>
+</ul>
+<p>Les médicaments agissant sur les systèmes sérotoninergiques peuvent modifier plusieurs processus simultanément.</p>
+<p>La relation entre sérotonine et troubles psychologiques est donc beaucoup plus complexe que l'idée d'un simple « manque ».</p>
+<hr />
+<h2 id="158-la-noradrenaline" class="entry-title hc-3">⚡ 15.8 La noradrénaline</h2>
+<p>La noradrénaline intervient notamment dans :</p>
+<ul>
+<li>vigilance</li>
+<li>attention</li>
+<li>activation</li>
+<li>réponse au stress</li>
+<li>traitement de certaines informations</li>
+</ul>
+<p>Les systèmes noradrénergiques participent donc à la régulation de l'état d'activation général.</p>
+<hr />
+<h2 id="159-le-gaba" class="entry-title hc-4">🧘 15.9 Le GABA</h2>
+<p>Le GABA constitue un neurotransmetteur inhibiteur majeur du système nerveux central.</p>
+<p>Certains médicaments augmentent indirectement ou directement certains effets liés au système GABAergique.</p>
+<p>Cela peut notamment produire :</p>
+<ul>
+<li>diminution de l'activation</li>
+<li>sédation</li>
+<li>relaxation</li>
+<li>réduction de certaines manifestations anxieuses</li>
+</ul>
+<p>Les effets dépendent cependant du médicament et du récepteur concerné.</p>
+<hr />
+<h2 id="1510-le-glutamate" class="entry-title hc-5">🔥 15.10 Le glutamate</h2>
+<p>Le glutamate est un neurotransmetteur excitateur majeur.</p>
+<p>Il participe notamment à :</p>
+<ul>
+<li>apprentissage</li>
+<li>mémoire</li>
+<li>plasticité cérébrale</li>
+<li>transmission de l'information</li>
+</ul>
+<p>Son fonctionnement est particulièrement complexe.</p>
+<p>Une activité glutamatergique excessive ou insuffisamment régulée peut également être impliquée dans différents processus pathologiques.</p>
+<hr />
+<h2 id="1511-les-antidepresseurs" class="entry-title hc-1">🧠 15.11 Les antidépresseurs</h2>
+<p>Les antidépresseurs regroupent plusieurs classes de médicaments.</p>
+<p>Ils peuvent agir notamment sur les systèmes :</p>
+<ul>
+<li>sérotoninergique</li>
+<li>noradrénergique</li>
+<li>dopaminergique</li>
+<li>autres systèmes selon la molécule</li>
+</ul>
+<p>Ils sont principalement utilisés dans différents troubles dépressifs, mais certaines molécules peuvent également être utilisées dans certains troubles anxieux ou autres indications.</p>
+<hr />
+<h2 id="1512-pourquoi-leffet-dun-antidepresseur-nest-pas-immediat" class="entry-title hc-2">🔄 15.12 Pourquoi l'effet d'un antidépresseur n'est pas immédiat ?</h2>
+<p>L'effet pharmacologique initial peut apparaître avant certains changements cliniques observables.</p>
+<p>Le fonctionnement cérébral implique des processus d'adaptation progressifs.</p>
+<p>Ces changements peuvent notamment concerner :</p>
+<ul>
+<li>récepteurs</li>
+<li>circuits neuronaux</li>
+<li>expression de certains gènes</li>
+<li>plasticité</li>
+<li>traitement émotionnel</li>
+</ul>
+<p>Le délai clinique ne correspond donc pas nécessairement au temps nécessaire pour que la molécule soit simplement présente dans l'organisme.</p>
+<hr />
+<h2 id="1513-les-anxiolytiques" class="entry-title hc-3">🧠 15.13 Les anxiolytiques</h2>
+<p>Les anxiolytiques sont des médicaments utilisés pour réduire certaines manifestations anxieuses.</p>
+<p>Différentes classes existent et leurs mécanismes sont différents.</p>
+<p>Certains peuvent notamment agir rapidement sur l'activation physiologique.</p>
+<p>D'autres traitements utilisés dans les troubles anxieux peuvent avoir un effet plus progressif.</p>
+<p>La notion d'« anxiolytique » désigne donc une fonction clinique et non un mécanisme unique.</p>
+<hr />
+<h2 id="1514-les-effets-sur-le-sommeil" class="entry-title hc-4">😴 15.14 Les effets sur le sommeil</h2>
+<p>Certains psychotropes peuvent modifier :</p>
+<ul>
+<li>endormissement</li>
+<li>durée du sommeil</li>
+<li>architecture du sommeil</li>
+<li>réveils nocturnes</li>
+<li>somnolence diurne</li>
+</ul>
+<p>Un même médicament peut donc avoir des effets différents selon la personne, la dose et le moment de prise.</p>
+<hr />
+<h2 id="1515-les-antipsychotiques" class="entry-title hc-5">🧠 15.15 Les antipsychotiques</h2>
+<p>Les antipsychotiques sont principalement utilisés dans différents troubles psychotiques, mais certaines molécules possèdent également d'autres indications.</p>
+<p>Ils agissent sur plusieurs systèmes neurobiologiques, notamment les systèmes dopaminergiques.</p>
+<p>Ils peuvent influencer différents symptômes et processus.</p>
+<p>Ils peuvent également provoquer des effets indésirables, parfois importants, ce qui nécessite une surveillance médicale.</p>
+<hr />
+<h2 id="1516-les-stabilisateurs-de-lhumeur" class="entry-title hc-1">🌡️ 15.16 Les stabilisateurs de l'humeur</h2>
+<p>Les stabilisateurs de l'humeur regroupent plusieurs traitements dont les mécanismes sont différents.</p>
+<p>Ils peuvent être utilisés notamment dans certains troubles de l'humeur.</p>
+<p>Leur objectif clinique peut concerner :</p>
+<ul>
+<li>réduction de certaines fluctuations pathologiques</li>
+<li>prévention de certains épisodes</li>
+<li>stabilisation du fonctionnement émotionnel</li>
+</ul>
+<p>Le terme ne désigne donc pas une seule substance ou un mécanisme unique.</p>
+<hr />
+<h2 id="1517-les-medicaments-et-les-fonctions-cognitives" class="entry-title hc-2">🎯 15.17 Les médicaments et les fonctions cognitives</h2>
+<p>Certains médicaments peuvent influencer :</p>
+<ul>
+<li>attention</li>
+<li>mémoire</li>
+<li>vitesse de traitement</li>
+<li>vigilance</li>
+<li>inhibition</li>
+<li>planification</li>
+</ul>
+<p>Ces effets peuvent être recherchés dans certaines situations ou apparaître comme effets secondaires.</p>
+<p>L'effet cognitif dépend du médicament, de la dose, du contexte et des caractéristiques individuelles.</p>
+<hr />
+<h2 id="1518-les-medicaments-et-les-emotions" class="entry-title hc-3">🧠 15.18 Les médicaments et les émotions</h2>
+<p>Les psychotropes peuvent modifier certains aspects du traitement émotionnel.</p>
+<p>Ils peuvent notamment influencer :</p>
+<ul>
+<li>intensité émotionnelle</li>
+<li>réactivité</li>
+<li>anxiété</li>
+<li>irritabilité</li>
+<li>perception de certaines informations émotionnelles</li>
+</ul>
+<p>Cela ne signifie pas nécessairement qu'ils « suppriment les émotions ».</p>
+<p>Le fonctionnement émotionnel humain est beaucoup trop complexe pour être réduit à une seule variable biologique.</p>
+<hr />
+<h2 id="1519-les-effets-secondaires" class="entry-title hc-4">🔄 15.19 Les effets secondaires</h2>
+<p>Un médicament peut produire des effets recherchés et des effets indésirables.</p>
+<p>Les effets secondaires varient selon :</p>
+<ul>
+<li>molécule</li>
+<li>dose</li>
+<li>durée</li>
+<li>interactions</li>
+<li>âge</li>
+<li>métabolisme</li>
+<li>caractéristiques individuelles</li>
+</ul>
+<p>Ils peuvent concerner :</p>
+<ul>
+<li>système digestif</li>
+<li>sommeil</li>
+<li>vigilance</li>
+<li>poids</li>
+<li>sexualité</li>
+<li>motricité</li>
+<li>système cardiovasculaire</li>
+<li>fonctionnement cognitif</li>
+</ul>
+<hr />
+<h2 id="1520-les-differences-individuelles" class="entry-title hc-5">🧬 15.20 Les différences individuelles</h2>
+<p>Deux personnes recevant le même médicament peuvent ressentir des effets différents.</p>
+<p>Cela peut être lié à :</p>
+<ul>
+<li>génétique</li>
+<li>métabolisme</li>
+<li>âge</li>
+<li>autres médicaments</li>
+<li>état physiologique</li>
+<li>troubles associés</li>
+<li>attentes</li>
+<li>environnement</li>
+</ul>
+<p>La réponse pharmacologique est donc en partie individualisée.</p>
+<hr />
+<h2 id="1521-la-pharmacogenetique" class="entry-title hc-1">🧬 15.21 La pharmacogénétique</h2>
+<p>La pharmacogénétique étudie l'influence des variations génétiques sur la réponse aux médicaments.</p>
+<p>Certaines variations génétiques peuvent modifier :</p>
+<ul>
+<li>métabolisme</li>
+<li>concentration du médicament</li>
+<li>efficacité</li>
+<li>risque d'effets indésirables</li>
+</ul>
+<p>Elle constitue un domaine de recherche important pour aller vers des traitements davantage personnalisés.</p>
+<hr />
+<h2 id="1522-le-cerveau-sadapte-aux-medicaments" class="entry-title hc-2">🧠 15.22 Le cerveau s'adapte aux médicaments</h2>
+<p>Le cerveau est un système dynamique.</p>
+<p>Lorsqu'une substance modifie durablement certains signaux biologiques, l'organisme peut développer des mécanismes d'adaptation.</p>
+<p>Ces adaptations peuvent contribuer à :</p>
+<ul>
+<li>tolérance</li>
+<li>modification de la sensibilité des récepteurs</li>
+<li>changement de réponse au médicament</li>
+</ul>
+<p>Cela participe à la complexité de certains traitements au long cours.</p>
+<hr />
+<h2 id="1523-la-tolerance" class="entry-title hc-3">⚠️ 15.23 La tolérance</h2>
+<p>La tolérance correspond à une diminution de l'effet obtenu après une exposition répétée à une substance, pouvant conduire à une augmentation de la quantité nécessaire pour obtenir un effet similaire.</p>
+<p>Elle ne concerne pas tous les médicaments de la même manière.</p>
+<p>Elle doit être distinguée de :</p>
+<p><strong>dépendance</strong></p>
+<p><strong>addiction</strong></p>
+<p><strong>résistance thérapeutique</strong></p>
+<p>Ces concepts ne sont pas synonymes.</p>
+<hr />
+<h2 id="1524-la-dependance-physique" class="entry-title hc-4">🔄 15.24 La dépendance physique</h2>
+<p>Une dépendance physique peut apparaître lorsque l'organisme s'adapte à la présence d'une substance.</p>
+<p>Un arrêt brutal peut alors provoquer des symptômes de sevrage.</p>
+<p>La dépendance physique ne signifie pas automatiquement qu'une personne présente une addiction.</p>
+<p>Cette distinction est particulièrement importante en pharmacologie.</p>
+<hr />
+<h2 id="1525-laddiction-et-le-systeme-de-recompense" class="entry-title hc-5">🧠 15.25 L'addiction et le système de récompense</h2>
+<p>L'addiction implique des processus complexes liés notamment :</p>
+<ul>
+<li>récompense</li>
+<li>motivation</li>
+<li>apprentissage</li>
+<li>habitudes</li>
+<li>impulsivité</li>
+<li>contrôle inhibiteur</li>
+<li>contexte</li>
+</ul>
+<p>Elle ne peut pas être expliquée uniquement par une recherche de plaisir.</p>
+<p>Les mécanismes d'apprentissage et de renforcement jouent également un rôle majeur.</p>
+<hr />
+<h2 id="1526-le-placebo" class="entry-title hc-1">🧠 15.26 Le placebo</h2>
+<p>L'effet placebo désigne des changements observés après l'administration d'un traitement attribuables notamment aux attentes, au contexte thérapeutique et à d'autres mécanismes psychobiologiques, plutôt qu'à l'action spécifique du principe actif.</p>
+<p>Il peut impliquer :</p>
+<p><strong>attente → interprétation → activité cérébrale → réponse physiologique ou subjective</strong></p>
+<p>L'effet placebo ne signifie donc pas que les symptômes sont « imaginaires ».</p>
+<hr />
+<h2 id="1527-le-nocebo" class="entry-title hc-2">🔄 15.27 Le nocebo</h2>
+<p>Le phénomène nocebo correspond à une aggravation ou à l'apparition de symptômes associée notamment à des attentes négatives ou au contexte de traitement.</p>
+<p>Par exemple, l'anticipation d'un effet secondaire peut influencer l'expérience subjective de certaines sensations.</p>
+<p>Cela montre l'interaction entre :</p>
+<p><strong>attentes + perception corporelle + émotions + cerveau</strong></p>
+<hr />
+<h2 id="1528-psychopharmacologie-et-therapie" class="entry-title hc-3">🧠 15.28 Psychopharmacologie et thérapie</h2>
+<p>La psychopharmacologie et la psychothérapie ne reposent pas sur les mêmes mécanismes.</p>
+<p>Un médicament agit principalement sur des mécanismes biologiques.</p>
+<p>Une psychothérapie peut agir notamment à travers :</p>
+<ul>
+<li>apprentissage</li>
+<li>exposition</li>
+<li>restructuration cognitive</li>
+<li>régulation émotionnelle</li>
+<li>relation thérapeutique</li>
+<li>changement comportemental</li>
+</ul>
+<p>Dans certaines situations cliniques, plusieurs approches peuvent être utilisées simultanément.</p>
+<hr />
+<h2 id="1529-les-traitements-combines" class="entry-title hc-4">🧩 15.29 Les traitements combinés</h2>
+<p>Dans certains troubles, une combinaison de plusieurs interventions peut être envisagée.</p>
+<p>Cela peut comprendre :</p>
+<p><strong>médicament + psychothérapie + interventions comportementales + accompagnement psychosocial</strong></p>
+<p>L'objectif dépend du trouble, de sa sévérité, des symptômes et du contexte clinique.</p>
+<p>Il n'existe pas une combinaison universellement optimale pour toutes les personnes.</p>
+<hr />
+<h2 id="1530-la-reponse-therapeutique" class="entry-title hc-5">🧠 15.30 La réponse thérapeutique</h2>
+<p>La réponse à un traitement peut être :</p>
+<ul>
+<li>importante</li>
+<li>partielle</li>
+<li>faible</li>
+<li>absente</li>
+<li>accompagnée d'effets indésirables</li>
+</ul>
+<p>L'efficacité moyenne observée dans les études ne signifie donc pas qu'une personne donnée aura exactement la même réponse.</p>
+<p>Les résultats individuels peuvent varier considérablement.</p>
+<hr />
+<h2 id="1531-lefficacite-moyenne-et-la-reponse-individuelle" class="entry-title hc-1">📊 15.31 L'efficacité moyenne et la réponse individuelle</h2>
+<p>Une étude peut montrer qu'un traitement est efficace en moyenne dans un groupe.</p>
+<p>Cela ne signifie pas :</p>
+<p><strong>« ce traitement fonctionnera forcément pour chaque personne »</strong></p>
+<p>Les statistiques décrivent des populations.</p>
+<p>La clinique doit ensuite prendre en compte les caractéristiques individuelles.</p>
+<hr />
+<h2 id="1532-les-biais-dans-levaluation-des-traitements" class="entry-title hc-2">🧠 15.32 Les biais dans l'évaluation des traitements</h2>
+<p>L'évaluation des médicaments doit tenir compte de plusieurs phénomènes :</p>
+<ul>
+<li>placebo</li>
+<li>attentes</li>
+<li>biais de sélection</li>
+<li>biais d'observation</li>
+<li>régression vers la moyenne</li>
+<li>évolution naturelle des symptômes</li>
+</ul>
+<p>C'est pourquoi les essais contrôlés et randomisés sont particulièrement importants pour déterminer l'efficacité spécifique d'un traitement.</p>
+<hr />
+<h2 id="1533-les-essais-cliniques" class="entry-title hc-3">🔬 15.33 Les essais cliniques</h2>
+<p>Les essais cliniques permettent de comparer différents traitements ou un traitement avec une condition contrôle.</p>
+<p>Ils peuvent notamment étudier :</p>
+<p><strong>efficacité</strong></p>
+<p><strong>tolérance</strong></p>
+<p><strong>effets indésirables</strong></p>
+<p><strong>dose</strong></p>
+<p><strong>durée</strong></p>
+<p><strong>population concernée</strong></p>
+<p>Les résultats doivent ensuite être interprétés à partir de l'ensemble des données disponibles.</p>
+<hr />
+<h2 id="1534-correlation-biologique-et-mecanisme-psychologique" class="entry-title hc-4">🧠 15.34 Corrélation biologique et mécanisme psychologique</h2>
+<p>Le fait qu'un médicament modifie une activité cérébrale ne signifie pas nécessairement que cette activité explique entièrement le trouble traité.</p>
+<p>Un trouble psychologique peut résulter de multiples interactions.</p>
+<p>On peut donc avoir :</p>
+<p><strong>mécanisme biologique modifié → amélioration clinique</strong></p>
+<p>sans que cela signifie :</p>
+<p><strong>un seul mécanisme biologique = cause unique du trouble</strong></p>
+<hr />
+<h2 id="1535-le-modele-biopsychosocial" class="entry-title hc-5">🧬 15.35 Le modèle biopsychosocial</h2>
+<p>La psychopharmacologie peut être intégrée au modèle biopsychosocial.</p>
+<h3 id="biologique">Biologique</h3>
+<ul>
+<li>génétique</li>
+<li>neurotransmission</li>
+<li>fonctionnement cérébral</li>
+<li>physiologie</li>
+</ul>
+<h3 id="psychologique">Psychologique</h3>
+<ul>
+<li>pensées</li>
+<li>émotions</li>
+<li>apprentissages</li>
+<li>comportements</li>
+<li>croyances</li>
+</ul>
+<h3 id="social">Social</h3>
+<ul>
+<li>relations</li>
+<li>environnement</li>
+<li>conditions de vie</li>
+<li>contexte culturel</li>
+</ul>
+<p>Les trois niveaux peuvent s'influencer mutuellement.</p>
+<hr />
+<h2 id="1536-les-interactions-cerveau-comportement" class="entry-title hc-1">🔄 15.36 Les interactions cerveau comportement</h2>
+<p>Le cerveau influence le comportement.</p>
+<p>Mais le comportement influence également le cerveau.</p>
+<p>L'apprentissage, l'expérience et l'environnement peuvent modifier certains réseaux neuronaux.</p>
+<p>On obtient donc une relation dynamique :</p>
+<p><strong>cerveau → comportement → expérience → adaptation cérébrale → nouveau comportement</strong></p>
+<p>Cette boucle est fondamentale pour comprendre pourquoi les médicaments ne constituent pas toujours la seule variable importante dans l'évolution clinique.</p>
+<hr />
+<h2 id="1537-psychopharmacologie-et-neuroplasticite" class="entry-title hc-2">🧠 15.37 Psychopharmacologie et neuroplasticité</h2>
+<p>Certains traitements peuvent modifier indirectement les conditions biologiques dans lesquelles la plasticité cérébrale se produit.</p>
+<p>Cependant, la plasticité dépend également de :</p>
+<ul>
+<li>apprentissage</li>
+<li>environnement</li>
+<li>expérience</li>
+<li>activité</li>
+<li>comportement</li>
+</ul>
+<p>Cela permet notamment de comprendre pourquoi l'amélioration clinique peut être influencée par plusieurs facteurs simultanément.</p>
+<hr />
+<h2 id="1538-les-limites-de-la-psychopharmacologie" class="entry-title hc-3">🩺 15.38 Les limites de la psychopharmacologie</h2>
+<p>Les médicaments peuvent être très utiles dans certaines situations, mais ils possèdent également des limites.</p>
+<p>Ils ne permettent pas nécessairement de modifier directement :</p>
+<ul>
+<li>histoire personnelle</li>
+<li>environnement</li>
+<li>relations</li>
+<li>habitudes</li>
+<li>croyances</li>
+<li>expériences d'apprentissage</li>
+</ul>
+<p>Ils peuvent cependant modifier certains symptômes ou processus biologiques et ainsi créer des conditions favorables à d'autres changements.</p>
+<hr />
+<h2 id="1539-pourquoi-lautomedication-est-problematique" class="entry-title hc-4">⚠️ 15.39 Pourquoi l'automédication est problématique</h2>
+<p>Les psychotropes peuvent avoir des effets importants sur le système nerveux.</p>
+<p>L'utilisation sans évaluation médicale peut exposer à :</p>
+<ul>
+<li>interactions médicamenteuses</li>
+<li>effets indésirables</li>
+<li>surdosage</li>
+<li>dépendance pour certaines substances</li>
+<li>sevrage</li>
+<li>aggravation de certains symptômes</li>
+</ul>
+<p>La prescription, l'adaptation des doses et l'arrêt de certains traitements nécessitent donc un encadrement médical approprié.</p>
+<hr />
+<h2 id="1540-pourquoi-etudier-la-psychopharmacologie-et-la-psychologie" class="entry-title hc-5">🔬 15.40 Pourquoi étudier la psychopharmacologie et la psychologie ?</h2>
+<p>La psychopharmacologie permet de comprendre les interactions entre :</p>
+<p><strong>🧬 biologie</strong></p>
+<p><strong>🧠 cerveau</strong></p>
+<p><strong>💊 médicaments</strong></p>
+<p><strong>❤️ émotions</strong></p>
+<p><strong>🧠 cognition</strong></p>
+<p><strong>🎯 comportement</strong></p>
+<p><strong>🌍 environnement</strong></p>
+<p>Elle montre surtout qu'un traitement psychotrope ne peut pas être compris uniquement à travers le neurotransmetteur qu'il influence.</p>
+<p>Un médicament agit dans un système biologique complexe, tandis que les effets psychologiques dépendent également de la personne, de son histoire, de son contexte, de ses attentes et des autres interventions éventuelles.</p>
+<p>La psychopharmacologie permet ainsi de faire le lien entre <strong>mécanismes biologiques et fonctionnement psychologique</strong>, tout en conservant une vision multifactorielle des troubles et de leurs traitements.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>💊 <strong>Un psychotrope est une substance capable de modifier certains processus du système nerveux.</strong></p>
+<p>🧠 <strong>Les médicaments n'agissent pas sur une seule fonction psychologique isolée.</strong></p>
+<p>🧬 <strong>Les neurotransmetteurs ont plusieurs fonctions et agissent dans différents circuits.</strong></p>
+<p>🔄 <strong>Le cerveau s'adapte aux traitements et aux substances.</strong></p>
+<p>⚠️ <strong>Tolérance, dépendance et addiction sont des notions différentes.</strong></p>
+<p>🧠 <strong>Le placebo et le nocebo montrent l'importance des attentes et du contexte dans l'expérience subjective.</strong></p>
+<p>📊 <strong>L'efficacité moyenne d'un traitement ne permet pas de prédire exactement la réponse d'une personne particulière.</strong></p>
+<p>🧩 <strong>La psychopharmacologie n'explique pas à elle seule les troubles psychologiques.</strong></p>
+<p>Le fonctionnement psychologique peut être compris à travers plusieurs niveaux :</p>
+<p><strong>🧬 biologie → 🧠 cerveau → 💭 cognition → ❤️ émotions → 🎯 comportement → 🧑‍🤝‍🧑 environnement</strong></p>
+<p>Ces niveaux s'influencent continuellement.</p>
+<p>Enfin, la psychopharmacologie doit être distinguée d'une vision simpliste selon laquelle chaque trouble correspondrait à un « manque » d'une substance précise.</p>
+<p>Les troubles psychologiques sont généralement <strong>multifactoriels</strong>, et leur compréhension nécessite d'intégrer les dimensions biologiques, psychologiques et sociales.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="avances-evaluation-psychologique-et-clinique.html"><span class="similar-icon">🔬</span>Évaluation psychologique et clinique</a><a class="similar-item" href="avances-diagnostic-et-raisonnement-clinique.html"><span class="similar-icon">🔬</span>Diagnostic et raisonnement clinique</a><a class="similar-item" href="avances-processus-therapeutiques.html"><span class="similar-icon">🔬</span>Processus thérapeutiques</a></div>
+    </div>
+    <a class="back-link" href="../categorie/avances.html">← Retour à « Concepts avancés »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

@@ -2,12 +2,889 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/justice-personnalite-et-criminalite/">
-<link rel="canonical" href="/chapitre/justice-personnalite-et-criminalite/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/justice-personnalite-et-criminalite/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personnalité et criminalité — Mon Esprit</title>
+<meta name="description" content="Personnalité et criminalité, dans la catégorie Psychologie, justice et criminologie de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/justice-personnalite-et-criminalite/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#51-la-personnalite">🧠 5.1 LA PERSONNALITÉ</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#52-la-personnalite-antisociale">🧠 5.2 LA PERSONNALITÉ ANTISOCIALE</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#53-la-psychopathie">🧠 5.3 LA PSYCHOPATHIE</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#54-le-narcissisme">🧠 5.4 LE NARCISSISME</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#55-lempathie">🧠 5.5 L'EMPATHIE</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#56-la-culpabilite">🧠 5.6 LA CULPABILITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#57-le-remords">🧠 5.7 LE REMORDS</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#58-la-manipulation">🧠 5.8 LA MANIPULATION</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#59-le-mensonge">🧠 5.9 LE MENSONGE</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li><li><a href="#a-retenir_8">📌 À RETENIR</a></li></ul></li><li><a href="#510-la-regulation-emotionnelle">🧠 5.10 LA RÉGULATION ÉMOTIONNELLE</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li><li><a href="#a-retenir_9">📌 À RETENIR</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Personnalité et criminalité',
+        category: 'Psychologie, justice et criminologie',
+        icon: '⚖️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/justice.html">⚖️ Psychologie, justice et criminologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Personnalité et criminalité</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-justice)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <blockquote>
+<p>Comprendre les liens possibles entre certains traits de personnalité, certains fonctionnements psychologiques et les comportements criminels, tout en évitant les raccourcis entre trouble psychologique, personnalité et dangerosité.
+</p>
+</blockquote>
+<h2 id="51-la-personnalite" class="entry-title hc-1">🧠 5.1 LA PERSONNALITÉ</h2>
+<h3 id="definition">🔎 DÉFINITION</h3>
+<p>La personnalité correspond à l'ensemble relativement stable des façons de penser, de ressentir, de percevoir et de se comporter qui caractérisent une personne.</p>
+<h3 id="explication">🧠 EXPLICATION</h3>
+<p>La personnalité se construit progressivement au cours du développement et résulte de l'interaction entre différents éléments biologiques, psychologiques et environnementaux.</p>
+<p>Elle influence notamment la manière dont une personne réagit aux situations, établit des relations, gère ses émotions et prend des décisions.</p>
+<p>La personnalité ne permet cependant pas de déterminer à elle seule si une personne adoptera un comportement criminel. Deux personnes présentant des traits similaires peuvent avoir des comportements très différents selon leur environnement, leur histoire et les situations rencontrées.</p>
+<h3 id="exemple">💬 EXEMPLE</h3>
+<p>Une personne peut être naturellement très impulsive sans commettre d'infraction, tandis qu'une autre présentant une impulsivité similaire peut rencontrer davantage de difficultés dans certaines situations.</p>
+<h3 id="a-retenir">📌 À RETENIR</h3>
+<p>La personnalité influence les comportements, mais elle ne permet pas de prédire à elle seule la criminalité.</p>
+<hr />
+<h2 id="52-la-personnalite-antisociale" class="entry-title hc-2">🧠 5.2 LA PERSONNALITÉ ANTISOCIALE</h2>
+<h3 id="definition_1">🔎 DÉFINITION</h3>
+<p>La personnalité antisociale désigne un fonctionnement caractérisé notamment par un mépris persistant des droits d'autrui, des règles sociales et des normes de comportement.</p>
+<h3 id="explication_1">🧠 EXPLICATION</h3>
+<p>Dans le domaine clinique, le trouble de la personnalité antisociale est associé à différents comportements et attitudes pouvant inclure la tromperie, l'impulsivité, l'irresponsabilité, l'agressivité ou le non-respect répété des normes.</p>
+<p>Cependant, présenter un trouble de la personnalité antisociale ne signifie pas automatiquement être violent ou criminel.</p>
+<p>La criminalité dépend de nombreux facteurs et ne peut pas être expliquée par un diagnostic isolé.</p>
+<p>Il est également important de distinguer le terme clinique de personnalité antisociale du sens courant du mot « antisocial », qui peut simplement désigner une personne ayant peu de contacts sociaux.</p>
+<h3 id="exemple_1">💬 EXEMPLE</h3>
+<p>Une personne présentant un fonctionnement antisocial peut avoir des difficultés répétées à respecter certaines règles et obligations, sans que cela signifie nécessairement qu'elle commettra des actes violents.</p>
+<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<p>La personnalité antisociale est une notion clinique précise et ne doit pas être assimilée automatiquement à la violence ou à la criminalité.</p>
+<hr />
+<h2 id="53-la-psychopathie" class="entry-title hc-3">🧠 5.3 LA PSYCHOPATHIE</h2>
+<h3 id="definition_2">🔎 DÉFINITION</h3>
+<p>La psychopathie est un construit psychologique utilisé principalement dans la recherche et certains contextes médico-légaux pour décrire un ensemble de caractéristiques liées notamment à l'empathie, aux émotions, aux relations interpersonnelles et aux comportements antisociaux.</p>
+<h3 id="explication_2">🧠 EXPLICATION</h3>
+<p>La psychopathie peut comprendre différentes caractéristiques : faible empathie, superficialité émotionnelle, tendance à manipuler, recherche de stimulation, irresponsabilité ou faible sentiment de culpabilité.</p>
+<p>Elle ne correspond cependant pas simplement à « quelqu'un qui ne ressent aucune émotion ».</p>
+<p>La psychopathie n'est pas non plus synonyme de meurtrier ou de personne forcément dangereuse.</p>
+<p>Les caractéristiques psychopathiques peuvent varier en intensité et doivent être évaluées à partir d'un ensemble d'informations plutôt qu'à partir d'un comportement isolé.</p>
+<h3 id="exemple_2">💬 EXEMPLE</h3>
+<p>Une personne peut présenter certains traits associés à la psychopathie, comme une tendance à manipuler ou une faible empathie, sans nécessairement commettre des actes criminels graves.</p>
+<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<p>La psychopathie est un concept complexe qui ne doit pas être confondu avec la violence, le meurtre ou l'absence totale d'émotions.</p>
+<hr />
+<h2 id="54-le-narcissisme" class="entry-title hc-4">🧠 5.4 LE NARCISSISME</h2>
+<h3 id="definition_3">🔎 DÉFINITION</h3>
+<p>Le narcissisme désigne un ensemble de caractéristiques liées notamment à l'importance accordée à soi-même, au besoin de reconnaissance et à la perception de sa propre valeur.</p>
+<h3 id="explication_3">🧠 EXPLICATION</h3>
+<p>Certaines caractéristiques narcissiques peuvent exister chez de nombreuses personnes sans constituer un trouble psychologique.</p>
+<p>Le trouble de la personnalité narcissique correspond à une organisation plus persistante et plus importante, associée notamment à un besoin marqué d'admiration, à un sentiment de supériorité ou d'importance et à certaines difficultés relationnelles.</p>
+<p>Le narcissisme ne signifie pas automatiquement agressivité ou criminalité.</p>
+<p>Dans certaines situations, cependant, une forte sensibilité à la critique ou au sentiment d'humiliation peut contribuer à des réactions émotionnelles importantes.</p>
+<h3 id="exemple_3">💬 EXEMPLE</h3>
+<p>Une personne ayant des traits narcissiques peut vivre une critique comme une attaque importante contre son image et réagir de manière particulièrement défensive.</p>
+<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<p>Le narcissisme existe sur un continuum et ne permet pas, à lui seul, de prédire un comportement criminel.</p>
+<hr />
+<h2 id="55-lempathie" class="entry-title hc-5">🧠 5.5 L'EMPATHIE</h2>
+<h3 id="definition_4">🔎 DÉFINITION</h3>
+<p>L'empathie désigne la capacité à comprendre ou à percevoir les émotions, pensées ou expériences d'une autre personne.</p>
+<h3 id="explication_4">🧠 EXPLICATION</h3>
+<p>L'empathie comprend notamment une dimension cognitive et une dimension affective.</p>
+<p>L'empathie cognitive correspond à la capacité à comprendre ce qu'une autre personne peut penser ou ressentir. L'empathie affective concerne davantage la capacité à ressentir ou partager, dans une certaine mesure, l'état émotionnel d'autrui.</p>
+<p>Ces deux dimensions ne sont pas toujours présentes au même niveau.</p>
+<p>Une personne peut comprendre parfaitement ce qu'une autre ressent sans ressentir elle-même la même émotion.</p>
+<p>Certaines difficultés d'empathie peuvent être observées dans différents fonctionnements psychologiques, mais elles ne suffisent pas à expliquer la criminalité.</p>
+<h3 id="exemple_4">💬 EXEMPLE</h3>
+<p>Une personne peut comprendre qu'un individu est triste et savoir pourquoi il l'est, tout en ressentant personnellement très peu d'émotion face à cette situation.</p>
+<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<p>L'empathie possède plusieurs dimensions et son niveau ne permet pas, à lui seul, de déterminer si une personne sera criminelle.</p>
+<hr />
+<h2 id="56-la-culpabilite" class="entry-title hc-1">🧠 5.6 LA CULPABILITÉ</h2>
+<h3 id="definition_5">🔎 DÉFINITION</h3>
+<p>La culpabilité est une émotion ou un état psychologique pouvant apparaître lorsqu'une personne considère avoir transgressé une règle, causé un préjudice ou agi contrairement à ses valeurs.</p>
+<h3 id="explication_5">🧠 EXPLICATION</h3>
+<p>La culpabilité peut jouer un rôle dans la régulation du comportement.</p>
+<p>Lorsqu'une personne estime avoir causé du tort, la culpabilité peut favoriser la reconnaissance de la responsabilité, les excuses ou la volonté de réparer.</p>
+<p>Cependant, la culpabilité n'est pas identique chez tout le monde. Elle peut être influencée par les valeurs personnelles, l'éducation, les expériences et le contexte.</p>
+<p>Une personne qui ne manifeste pas de culpabilité visible n'est pas nécessairement dépourvue de conscience morale. Les émotions internes ne sont pas toujours facilement observables.</p>
+<h3 id="exemple_5">💬 EXEMPLE</h3>
+<p>Après avoir blessé quelqu'un verbalement, une personne peut ressentir de la culpabilité et chercher ensuite à présenter des excuses ou à réparer la situation.</p>
+<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<p>La culpabilité peut contribuer à réguler les comportements, mais son expression varie fortement d'une personne à l'autre.</p>
+<hr />
+<h2 id="57-le-remords" class="entry-title hc-2">🧠 5.7 LE REMORDS</h2>
+<h3 id="definition_6">🔎 DÉFINITION</h3>
+<p>Le remords correspond à un état émotionnel marqué par la conscience d'avoir commis une action considérée comme mauvaise ou préjudiciable, accompagné d'un sentiment de regret.</p>
+<h3 id="explication_6">🧠 EXPLICATION</h3>
+<p>Le remords implique généralement une évaluation négative de son propre comportement.</p>
+<p>Il peut conduire une personne à regretter son acte, à reconnaître le préjudice causé ou à chercher à réparer certaines conséquences.</p>
+<p>Le remords ne se manifeste pas nécessairement de manière visible. Certaines personnes peuvent ressentir fortement du regret sans l'exprimer de manière évidente.</p>
+<p>À l'inverse, une expression émotionnelle importante ne permet pas nécessairement de déterminer avec certitude la profondeur du remords.</p>
+<h3 id="exemple_6">💬 EXEMPLE</h3>
+<p>Une personne peut regretter profondément une action commise plusieurs années auparavant et ressentir encore de la culpabilité lorsqu'elle y repense.</p>
+<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<p>L'absence apparente de remords ne permet pas, à elle seule, de conclure qu'une personne est dépourvue de conscience morale ou qu'elle est dangereuse.</p>
+<hr />
+<h2 id="58-la-manipulation" class="entry-title hc-3">🧠 5.8 LA MANIPULATION</h2>
+<h3 id="definition_7">🔎 DÉFINITION</h3>
+<p>La manipulation désigne l'utilisation de stratégies visant à influencer les pensées, les émotions ou les comportements d'une autre personne, parfois dans son intérêt propre et au détriment de celle-ci.</p>
+<h3 id="explication_7">🧠 EXPLICATION</h3>
+<p>La manipulation peut prendre de nombreuses formes.</p>
+<p>Elle peut impliquer la tromperie, la culpabilisation, la flatterie excessive, la pression émotionnelle ou la présentation volontairement biaisée d'une situation.</p>
+<p>Il est important de distinguer influence et manipulation. Toute influence sociale n'est pas manipulatrice.</p>
+<p>La manipulation peut également être observée dans des contextes très différents et n'est pas exclusivement liée à la criminalité ou à la psychopathie.</p>
+<h3 id="exemple_7">💬 EXEMPLE</h3>
+<p>Une personne peut volontairement faire culpabiliser quelqu'un afin de l'amener à accepter une demande qu'il aurait normalement refusée.</p>
+<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<p>La manipulation implique une forme d'influence stratégique, mais elle n'est pas propre aux personnes criminelles ou psychopathiques.</p>
+<hr />
+<h2 id="59-le-mensonge" class="entry-title hc-4">🧠 5.9 LE MENSONGE</h2>
+<h3 id="definition_8">🔎 DÉFINITION</h3>
+<p>Le mensonge consiste à communiquer volontairement une information que l'on sait fausse ou trompeuse, généralement dans le but d'influencer la perception ou le comportement d'une autre personne.</p>
+<h3 id="explication_8">🧠 EXPLICATION</h3>
+<p>Les individus peuvent mentir pour de nombreuses raisons : éviter une conséquence, protéger quelqu'un, obtenir un avantage, préserver leur image ou dissimuler une information.</p>
+<p>Le mensonge peut être plus ou moins complexe et plus ou moins intentionnel.</p>
+<p>Il est également important de distinguer mensonge et erreur. Une personne qui affirme quelque chose de faux parce qu'elle croit sincèrement que c'est vrai ne ment pas nécessairement.</p>
+<p>Les comportements non verbaux, comme éviter le regard ou paraître nerveux, ne permettent pas à eux seuls d'identifier de manière fiable un mensonge.</p>
+<h3 id="exemple_8">💬 EXEMPLE</h3>
+<p>Une personne peut donner volontairement une fausse explication pour éviter de révéler qu'elle a oublié une tâche importante.</p>
+<h3 id="a-retenir_8">📌 À RETENIR</h3>
+<p>Mentir implique généralement une intention de tromper, et aucun comportement isolé ne permet de détecter de manière certaine un mensonge.</p>
+<hr />
+<h2 id="510-la-regulation-emotionnelle" class="entry-title hc-5">🧠 5.10 LA RÉGULATION ÉMOTIONNELLE</h2>
+<h3 id="definition_9">🔎 DÉFINITION</h3>
+<p>La régulation émotionnelle désigne l'ensemble des processus permettant à une personne de reconnaître, moduler et gérer ses émotions afin d'adapter son comportement à une situation.</p>
+<h3 id="explication_9">🧠 EXPLICATION</h3>
+<p>Réguler une émotion ne signifie pas supprimer ou empêcher toutes les émotions.</p>
+<p>Il s'agit plutôt de pouvoir modifier la manière dont une émotion est exprimée ou gérée.</p>
+<p>Une personne peut ressentir une colère très importante tout en réussissant à éviter une réaction agressive immédiate. À l'inverse, certaines difficultés de régulation peuvent favoriser des réactions rapides ou disproportionnées dans certaines situations.</p>
+<p>La régulation émotionnelle dépend notamment de l'expérience, des capacités cognitives, du contexte et des stratégies utilisées pour faire face aux émotions.</p>
+<h3 id="exemple_9">💬 EXEMPLE</h3>
+<p>Une personne très en colère peut ressentir une forte envie de réagir immédiatement, mais prendre du recul avant d'agir afin d'éviter une conséquence qu'elle pourrait regretter.</p>
+<h3 id="a-retenir_9">📌 À RETENIR</h3>
+<p>La régulation émotionnelle permet de gérer l'intensité et l'expression des émotions sans nécessiter leur suppression.</p>
+<hr />
+<h1 id="en-pratique">🧩 EN PRATIQUE</h1>
+<p>La personnalité peut contribuer à comprendre certains comportements, mais elle ne constitue jamais une explication unique de la criminalité.</p>
+<p>Des caractéristiques comme l'impulsivité, une faible empathie, certaines difficultés de régulation émotionnelle ou certains traits antisociaux peuvent être associés à différents comportements dans certaines circonstances. Leur présence ne permet cependant pas de prédire automatiquement qu'une personne commettra une infraction.</p>
+<p>Il est également essentiel de distinguer <strong>trait de personnalité, trouble de la personnalité et comportement criminel</strong>. Ces notions ne sont pas équivalentes.</p>
+<p>Une personne présentant un trouble psychologique n'est pas nécessairement dangereuse, tout comme une personne criminelle ne présente pas nécessairement un trouble mental.</p>
+<p>L'analyse psychologique cherche donc à considérer l'ensemble du fonctionnement d'une personne, son histoire, son environnement et les circonstances dans lesquelles les comportements apparaissent.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Psychologie, justice et criminologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="justice-l-influence-des-groupes.html"><span class="similar-icon">⚖️</span>L'influence des groupes</a><a class="similar-item" href="justice-la-psychologie-des-victimes.html"><span class="similar-icon">⚖️</span>La psychologie des victimes</a><a class="similar-item" href="justice-le-profilage-et-l-analyse-criminelle.html"><span class="similar-icon">⚖️</span>Le profilage et l'analyse criminelle</a></div>
+    </div>
+    <a class="back-link" href="../categorie/justice.html">← Retour à « Psychologie, justice et criminologie »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

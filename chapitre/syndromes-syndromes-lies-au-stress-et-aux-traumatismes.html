@@ -2,12 +2,1104 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/syndromes-syndromes-lies-au-stress-et-aux-traumatismes/">
-<link rel="canonical" href="/chapitre/syndromes-syndromes-lies-au-stress-et-aux-traumatismes/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/syndromes-syndromes-lies-au-stress-et-aux-traumatismes/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syndromes liés au stress et aux traumatismes — Mon Esprit</title>
+<meta name="description" content="Syndromes liés au stress et aux traumatismes, dans la catégorie Syndromes psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/syndromes-syndromes-lies-au-stress-et-aux-traumatismes/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#51-le-syndrome-du-survivant">⚡ 5.1 Le syndrome du survivant</a><ul class="sidebar-sublist"><li><a href="#definition">🧠 Définition</a></li><li><a href="#manifestations-possibles">🔎 Manifestations possibles</a></li><li><a href="#mecanismes-psychologiques">🧩 Mécanismes psychologiques</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#52-le-trouble-de-stress-aigu">⚡ 5.2 Le trouble de stress aigu</a><ul class="sidebar-sublist"><li><a href="#definition_1">🧠 Définition</a></li><li><a href="#manifestations-possibles_1">🔎 Manifestations possibles</a></li><li><a href="#duree">⏳ Durée</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_1">🛠️ Prise en charge</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#53-le-trouble-de-stress-posttraumatique-tspt">⚡ 5.3 Le trouble de stress posttraumatique (TSPT)</a><ul class="sidebar-sublist"><li><a href="#definition_2">🧠 Définition</a></li><li><a href="#les-grandes-categories-de-symptomes">🧠 Les grandes catégories de symptômes</a></li><li><a href="#mecanismes">🧬 Mécanismes</a></li><li><a href="#diagnostic_2">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_2">🛠️ Prise en charge</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#54-le-syndrome-de-stockholm">⚡ 5.4 Le syndrome de Stockholm</a><ul class="sidebar-sublist"><li><a href="#definition_3">🧠 Définition</a></li><li><a href="#manifestations-decrites">🔎 Manifestations décrites</a></li><li><a href="#explication-possible">🧠 Explication possible</a></li><li><a href="#statut-scientifique">⚠️ Statut scientifique</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#55-le-syndrome-de-la-cabane">⚡ 5.5 Le syndrome de la cabane</a><ul class="sidebar-sublist"><li><a href="#definition_4">🧠 Définition</a></li><li><a href="#manifestations-possibles_2">🔎 Manifestations possibles</a></li><li><a href="#mecanisme">🧠 Mécanisme</a></li><li><a href="#statut">⚠️ Statut</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#56-le-syndrome-de-paris">🌍 5.6 Le syndrome de Paris</a><ul class="sidebar-sublist"><li><a href="#definition_5">🧠 Définition</a></li><li><a href="#manifestations-rapportees">🔎 Manifestations rapportées</a></li><li><a href="#explication-possible_1">🧠 Explication possible</a></li><li><a href="#statut_1">⚠️ Statut</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#57-le-syndrome-de-jerusalem">🕊️ 5.7 Le syndrome de Jérusalem</a><ul class="sidebar-sublist"><li><a href="#definition_6">🧠 Définition</a></li><li><a href="#manifestations-possibles_3">🔎 Manifestations possibles</a></li><li><a href="#facteurs-possibles">🧠 Facteurs possibles</a></li><li><a href="#statut_2">⚠️ Statut</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#58-le-syndrome-de-stendhal">🎨 5.8 Le syndrome de Stendhal</a><ul class="sidebar-sublist"><li><a href="#definition_7">🧠 Définition</a></li><li><a href="#manifestations-possibles_4">🔎 Manifestations possibles</a></li><li><a href="#explication-possible_2">🧠 Explication possible</a></li><li><a href="#statut_3">⚠️ Statut</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#59-lepuisement-professionnel-burnout">💼 5.9 L'épuisement professionnel Burnout</a><ul class="sidebar-sublist"><li><a href="#definition_8">🧠 Définition</a></li><li><a href="#1-epuisement">🔥 1. Épuisement</a></li><li><a href="#2-distance-mentale">🧊 2. Distance mentale</a></li><li><a href="#3-diminution-de-lefficacite">📉 3. Diminution de l'efficacité</a></li><li><a href="#facteurs-favorisant">🧬 Facteurs favorisant</a></li><li><a href="#diagnostic_3">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_3">🛠️ Prise en charge</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#510-le-stress-traumatique-secondaire">🧠 5.10 Le stress traumatique secondaire</a><ul class="sidebar-sublist"><li><a href="#definition_9">🧠 Définition</a></li><li><a href="#manifestations-possibles_5">🔎 Manifestations possibles</a></li><li><a href="#difference-avec-le-traumatisme-direct">🧠 Différence avec le traumatisme direct</a></li><li><a href="#prise-en-charge_4">🩺 Prise en charge</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Syndromes liés au stress et aux traumatismes',
+        category: 'Syndromes psychologiques',
+        icon: '🧬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/syndromes.html">🧬 Syndromes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Syndromes liés au stress et aux traumatismes</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-syndromes)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>⚠️ Plusieurs termes de cette partie sont des notions populaires ou descriptives et ne constituent pas des diagnostics psychiatriques officiels.</p>
+<p>Cette partie regroupe différents syndromes, troubles et phénomènes psychologiques pouvant apparaître après un événement traumatique, une situation de menace, une période de stress intense ou une exposition prolongée à des facteurs de pression psychologique.</p>
+<h1 id="51-le-syndrome-du-survivant" class="entry-title hc-1">⚡ 5.1  Le syndrome du survivant</h1>
+<h2 id="definition">🧠 Définition</h2>
+<p>Le syndrome du survivant désigne un ensemble de réactions psychologiques pouvant apparaître chez une personne ayant survécu à un événement dans lequel d'autres personnes ont été gravement blessées ou sont décédées.</p>
+<p>Il est notamment associé aux catastrophes, accidents, guerres, attentats ou autres événements collectifs traumatiques.</p>
+<p>Une caractéristique fréquente est la présence d'une <strong>culpabilité du survivant</strong> : la personne peut avoir le sentiment qu'elle n'aurait pas dû survivre alors que d'autres n'ont pas survécu.</p>
+<h2 id="manifestations-possibles">🔎 Manifestations possibles</h2>
+<p>Culpabilité d'avoir survécu
+Sentiment d'injustice
+Tristesse persistante
+Pensées répétitives concernant les personnes décédées
+Impression de ne pas mériter de vivre
+Anxiété
+Irritabilité
+Troubles du sommeil
+Isolement social
+Difficultés à ressentir du plaisir
+Pensées intrusives concernant l'événement
+Sentiment de responsabilité excessive</p>
+<h2 id="mecanismes-psychologiques">🧩 Mécanismes psychologiques</h2>
+<p>La personne peut chercher à comprendre pourquoi elle a survécu alors que d'autres personnes sont mortes.</p>
+<p>Le cerveau peut également reconstruire l'événement en recherchant des décisions ou des actions qui auraient prétendument pu changer son déroulement.</p>
+<p>Cette recherche de responsabilité peut conduire à une culpabilité importante, même lorsque la personne n'avait objectivement aucun contrôle sur la situation.</p>
+<h2 id="diagnostic">🩺 Diagnostic</h2>
+<p>Le syndrome du survivant n'est généralement pas considéré comme un diagnostic psychiatrique autonome.</p>
+<p>Il peut cependant apparaître dans le contexte :</p>
+<p>d'un trouble de stress posttraumatique ;
+d'un trouble dépressif ;
+d'un trouble anxieux ;
+d'un deuil compliqué ou prolongé.</p>
+<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
+<p>La prise en charge dépend des symptômes présents.</p>
+<p>Elle peut notamment comprendre :</p>
+<p>psychothérapie ;
+accompagnement après traumatisme ;
+traitement des troubles anxieux ou dépressifs associés ;
+travail autour de la culpabilité ;
+soutien social et familial.</p>
+<h2 id="a-retenir">📌 À retenir</h2>
+<p>Le syndrome du survivant décrit principalement les conséquences psychologiques possibles du fait d'avoir survécu à un événement traumatique impliquant la mort ou la souffrance d'autres personnes.</p>
+<h1 id="52-le-trouble-de-stress-aigu" class="entry-title hc-2">⚡ 5.2  Le trouble de stress aigu</h1>
+<h2 id="definition_1">🧠 Définition</h2>
+<p>Le trouble de stress aigu correspond à une réaction psychotraumatique pouvant apparaître rapidement après l'exposition à un événement traumatique.</p>
+<p>Il peut survenir après avoir vécu directement un événement menaçant, avoir été témoin d'un événement grave ou avoir été confronté aux conséquences traumatiques d'un événement.</p>
+<h2 id="manifestations-possibles_1">🔎 Manifestations possibles</h2>
+<h3 id="reviviscences">🧠 Reviviscences</h3>
+<p>Souvenirs intrusifs
+Images involontaires
+Cauchemars
+Flashbacks
+Impression de revivre l'événement</p>
+<h3 id="anxiete">😰 Anxiété</h3>
+<p>Peur intense
+Hypervigilance
+Nervosité
+Sursauts exagérés
+Difficultés à se détendre</p>
+<h3 id="evitement">🧍 Évitement</h3>
+<p>Évitement des lieux associés au traumatisme
+Évitement des conversations
+Refus de penser à l'événement
+Évitement de certaines personnes ou situations</p>
+<h3 id="dissociation">🌫️ Dissociation</h3>
+<p>Impression d'être détaché de soi
+Sensation d'irréalité
+Impression que le monde semble irréel
+Difficulté à se souvenir de certains éléments de l'événement</p>
+<h2 id="duree">⏳ Durée</h2>
+<p>Le trouble de stress aigu se situe dans une période relativement proche du traumatisme.</p>
+<p>Lorsque les symptômes persistent audelà de la période correspondant au trouble de stress aigu, une évolution vers un trouble de stress posttraumatique peut être envisagée selon les critères diagnostiques.</p>
+<h2 id="diagnostic_1">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur :</p>
+<p>la nature de l'événement vécu ;
+les symptômes présents ;
+leur intensité ;
+leur durée ;
+leur impact sur le fonctionnement quotidien.</p>
+<h2 id="prise-en-charge_1">🛠️ Prise en charge</h2>
+<p>La prise en charge peut inclure :</p>
+<p>soutien psychologique ;
+psychothérapie centrée sur le traumatisme ;
+surveillance de l'évolution des symptômes ;
+prise en charge des troubles associés.</p>
+<h2 id="a-retenir_1">📌 À retenir</h2>
+<p>Le trouble de stress aigu correspond à une réaction psychotraumatique précoce après un événement traumatique.</p>
+<h1 id="53-le-trouble-de-stress-posttraumatique-tspt" class="entry-title hc-3">⚡ 5.3  Le trouble de stress posttraumatique (TSPT)</h1>
+<h2 id="definition_2">🧠 Définition</h2>
+<p>Le trouble de stress posttraumatique, ou <strong><a class="gloss-link" href="troubles-partie-10-troubles-lies-aux-traumatismes-et-au-stress.html#101-le-trouble-de-stress-post-traumatique-tspt" title="Voir la définition de TSPT">TSPT</a></strong>, est un trouble psychique pouvant apparaître après l'exposition à un événement traumatique.</p>
+<p>Le traumatisme peut notamment être lié à :</p>
+<p>une violence physique ;
+une agression sexuelle ;
+une guerre ;
+un attentat ;
+un accident grave ;
+une catastrophe ;
+certaines formes de violence répétée.</p>
+<h2 id="les-grandes-categories-de-symptomes">🧠 Les grandes catégories de symptômes</h2>
+<h3 id="1-reviviscence">🔥 1. Reviviscence</h3>
+<p>L'événement peut continuer à être vécu psychologiquement comme s'il était encore présent.</p>
+<p>Exemples :</p>
+<p>flashbacks ;
+cauchemars ;
+souvenirs intrusifs ;
+réactions émotionnelles intenses face à des rappels du traumatisme.</p>
+<h3 id="2-evitement">🚪 2. Évitement</h3>
+<p>Certaines situations, personnes, lieux ou discussions peuvent être évités afin de ne pas réveiller les souvenirs traumatiques.</p>
+<h3 id="3-hyperactivation">⚠️ 3. Hyperactivation</h3>
+<p>Le système d'alerte reste particulièrement actif.</p>
+<p>Cela peut provoquer :</p>
+<p>hypervigilance ;
+irritabilité ;
+troubles du sommeil ;
+difficultés de concentration ;
+réactions de sursaut importantes.</p>
+<h3 id="4-modifications-cognitives-et-emotionnelles">🌫️ 4. Modifications cognitives et émotionnelles</h3>
+<p>Peuvent notamment apparaître :</p>
+<p>pensées négatives persistantes ;
+sentiment de culpabilité ;
+honte ;
+détachement émotionnel ;
+perte d'intérêt ;
+difficultés relationnelles ;
+vision négative de soi ou du monde.</p>
+<h2 id="mecanismes">🧬 Mécanismes</h2>
+<p>Le traumatisme peut modifier durablement les mécanismes de détection de la menace et de traitement des souvenirs.</p>
+<p>Certains éléments associés au traumatisme peuvent ensuite être interprétés comme des signaux de danger alors qu'ils ne représentent plus réellement une menace.</p>
+<h2 id="diagnostic_2">🩺 Diagnostic</h2>
+<p>Le diagnostic repose sur des critères cliniques précis concernant :</p>
+<p>l'exposition à un traumatisme ;
+la nature des symptômes ;
+leur durée ;
+leur intensité ;
+leurs conséquences sur le fonctionnement quotidien.</p>
+<h2 id="prise-en-charge_2">🛠️ Prise en charge</h2>
+<p>Les traitements peuvent notamment inclure :</p>
+<p>thérapies cognitivocomportementales centrées sur le traumatisme ;
+EMDR ;
+thérapies d'exposition ;
+autres psychothérapies spécialisées ;
+médicaments dans certaines situations.</p>
+<h2 id="a-retenir_2">📌 À retenir</h2>
+<p>Le TSPT est une réaction psychotraumatique durable pouvant toucher la mémoire, les émotions, les pensées, le comportement et le système d'alerte.</p>
+<h1 id="54-le-syndrome-de-stockholm" class="entry-title hc-4">⚡ 5.4  Le syndrome de Stockholm</h1>
+<h2 id="definition_3">🧠 Définition</h2>
+<p>Le syndrome de Stockholm est un terme utilisé pour décrire une situation dans laquelle une personne retenue captive ou soumise à une menace peut développer des sentiments positifs, de l'attachement ou une identification envers son agresseur ou ravisseur.</p>
+<h2 id="manifestations-decrites">🔎 Manifestations décrites</h2>
+<p>Le phénomène peut notamment être associé à :</p>
+<p>sympathie envers l'agresseur ;
+défense de celuici ;
+minimisation de la violence subie ;
+sentiment de gratitude envers de petites marques de gentillesse ;
+méfiance envers les personnes extérieures ;
+attachement émotionnel au ravisseur.</p>
+<h2 id="explication-possible">🧠 Explication possible</h2>
+<p>Dans une situation de danger extrême et de dépendance totale, l'attention peut se focaliser sur les comportements permettant de maintenir un sentiment minimal de sécurité.</p>
+<p>Une petite marque de gentillesse peut alors prendre une importance psychologique considérable.</p>
+<h2 id="statut-scientifique">⚠️ Statut scientifique</h2>
+<p>Le syndrome de Stockholm n'est <strong>pas un diagnostic officiel</strong> reconnu comme trouble psychiatrique autonome dans les principales classifications diagnostiques.</p>
+<p>Le terme reste néanmoins utilisé dans les médias et dans certaines discussions autour des situations de captivité ou de violence.</p>
+<h2 id="a-retenir_3">📌 À retenir</h2>
+<p>Le syndrome de Stockholm est un terme descriptif controversé, et non un diagnostic psychiatrique officiel.</p>
+<h1 id="55-le-syndrome-de-la-cabane" class="entry-title hc-5">⚡ 5.5  Le syndrome de la cabane</h1>
+<h2 id="definition_4">🧠 Définition</h2>
+<p>Le syndrome de la cabane désigne un ensemble de difficultés psychologiques associées au fait de rester longtemps dans un environnement isolé ou protégé et d'éprouver ensuite des difficultés à retourner dans le monde extérieur.</p>
+<p>Le terme a notamment été largement utilisé pendant et après les périodes de confinement liées à la pandémie de COVID19.</p>
+<h2 id="manifestations-possibles_2">🔎 Manifestations possibles</h2>
+<p>peur de sortir ;
+anxiété dans les lieux publics ;
+besoin de rester chez soi ;
+perte d'habitude des interactions sociales ;
+fatigue après des interactions ;
+sentiment de sécurité uniquement à domicile ;
+difficulté à reprendre une activité extérieure.</p>
+<h2 id="mecanisme">🧠 Mécanisme</h2>
+<p>Un environnement peut devenir progressivement associé à la sécurité.</p>
+<p>À l'inverse, l'extérieur peut être associé à :</p>
+<p>l'incertitude ;
+la menace ;
+la stimulation ;
+les interactions sociales ;
+les obligations.</p>
+<p>Plus l'évitement se prolonge, plus le retour à l'extérieur peut devenir difficile.</p>
+<h2 id="statut">⚠️ Statut</h2>
+<p>Le syndrome de la cabane n'est pas un diagnostic psychiatrique officiel.</p>
+<p>Les symptômes peuvent cependant être associés à différents troubles anxieux ou à des phénomènes d'évitement.</p>
+<h2 id="a-retenir_4">📌 À retenir</h2>
+<p>Le syndrome de la cabane décrit surtout une difficulté à retrouver une vie extérieure après une longue période d'isolement ou de retrait.</p>
+<h1 id="56-le-syndrome-de-paris" class="entry-title hc-1">🌍 5.6  Le syndrome de Paris</h1>
+<h2 id="definition_5">🧠 Définition</h2>
+<p>Le syndrome de Paris désigne un phénomène décrit chez certaines personnes visitant Paris et ressentant une détresse psychologique importante lorsque la réalité de la ville ne correspond pas à leurs attentes ou à l'image idéalisée qu'elles en avaient.</p>
+<p>Le terme est particulièrement associé aux visiteurs provenant de cultures très éloignées de la culture française.</p>
+<h2 id="manifestations-rapportees">🔎 Manifestations rapportées</h2>
+<p>Dans les descriptions du phénomène, peuvent apparaître :</p>
+<p>anxiété intense ;
+confusion ;
+sentiment de déception ;
+désorientation ;
+symptômes dissociatifs ;
+hallucinations dans certains cas ;
+sentiment de persécution ;
+réactions physiques liées au stress.</p>
+<h2 id="explication-possible_1">🧠 Explication possible</h2>
+<p>Le phénomène peut être favorisé par un décalage important entre :</p>
+<p><strong>Image idéalisée → réalité vécue</strong></p>
+<p>Ce décalage peut être accentué par :</p>
+<p>fatigue ;
+barrière linguistique ;
+choc culturel ;
+isolement ;
+stress du voyage ;
+attentes irréalistes.</p>
+<h2 id="statut_1">⚠️ Statut</h2>
+<p>Le syndrome de Paris n'est pas reconnu comme un diagnostic psychiatrique officiel.</p>
+<p>Il s'agit principalement d'un terme descriptif utilisé pour évoquer certaines réactions extrêmes liées au choc culturel.</p>
+<h2 id="a-retenir_5">📌 À retenir</h2>
+<p>Le syndrome de Paris illustre la manière dont un choc culturel important peut parfois provoquer une détresse psychologique.</p>
+<h1 id="57-le-syndrome-de-jerusalem" class="entry-title hc-2">🕊️ 5.7  Le syndrome de Jérusalem</h1>
+<h2 id="definition_6">🧠 Définition</h2>
+<p>Le syndrome de Jérusalem désigne un phénomène dans lequel certaines personnes visitant Jérusalem développent des idées religieuses ou mystiques particulièrement intenses.</p>
+<p>Dans les situations les plus extrêmes, ces manifestations peuvent prendre la forme d'un épisode psychotique.</p>
+<h2 id="manifestations-possibles_3">🔎 Manifestations possibles</h2>
+<p>Les descriptions du phénomène incluent :</p>
+<p>sentiment d'avoir une mission divine ;
+identification à un personnage religieux ;
+préoccupations religieuses extrêmes ;
+discours mystique ;
+comportement inhabituel ;
+isolement ;
+idées délirantes ;
+hallucinations dans certains cas.</p>
+<h2 id="facteurs-possibles">🧠 Facteurs possibles</h2>
+<p>Le phénomène peut être associé à :</p>
+<p>forte charge symbolique du lieu ;
+croyances religieuses préexistantes ;
+stress du voyage ;
+manque de sommeil ;
+vulnérabilité psychologique ;
+trouble psychiatrique préexistant.</p>
+<h2 id="statut_2">⚠️ Statut</h2>
+<p>Le syndrome de Jérusalem n'est pas considéré comme un diagnostic psychiatrique autonome.</p>
+<p>Il peut parfois correspondre à la manifestation d'un trouble psychotique sousjacent.</p>
+<h2 id="a-retenir_6">📌 À retenir</h2>
+<p>Le syndrome de Jérusalem décrit certaines manifestations psychologiques ou psychotiques associées au contexte particulier d'un séjour à Jérusalem.</p>
+<h1 id="58-le-syndrome-de-stendhal" class="entry-title hc-3">🎨 5.8  Le syndrome de Stendhal</h1>
+<h2 id="definition_7">🧠 Définition</h2>
+<p>Le syndrome de Stendhal désigne un ensemble de réactions physiques et psychologiques intenses pouvant être associées à une exposition importante à des œuvres d'art, à la beauté artistique ou à un environnement culturel particulièrement chargé.</p>
+<p>Le terme provient des descriptions de l'écrivain français Stendhal lors de son séjour à Florence.</p>
+<h2 id="manifestations-possibles_4">🔎 Manifestations possibles</h2>
+<p>Les réactions décrites peuvent comprendre :</p>
+<p>accélération du rythme cardiaque ;
+vertiges ;
+confusion ;
+émotion très intense ;
+sensation de malaise ;
+désorientation ;
+anxiété ;
+impression d'être submergé par les œuvres.</p>
+<p>Dans des descriptions extrêmes, des symptômes psychiatriques plus importants ont également été rapportés.</p>
+<h2 id="explication-possible_2">🧠 Explication possible</h2>
+<p>Une stimulation émotionnelle extrêmement forte peut provoquer une activation importante du système nerveux.</p>
+<p>Le contexte peut également jouer un rôle :</p>
+<p>fatigue ;
+accumulation de visites ;
+forte attente ;
+environnement culturel intense ;
+surcharge émotionnelle.</p>
+<h2 id="statut_3">⚠️ Statut</h2>
+<p>Le syndrome de Stendhal n'est pas reconnu comme un diagnostic psychiatrique officiel.</p>
+<p>Il s'agit principalement d'une notion descriptive et culturelle.</p>
+<h2 id="a-retenir_7">📌 À retenir</h2>
+<p>Le syndrome de Stendhal décrit une réaction émotionnelle et parfois physique très intense face à l'art ou à un environnement culturel fortement stimulant.</p>
+<h1 id="59-lepuisement-professionnel-burnout" class="entry-title hc-4">💼 5.9  L'épuisement professionnel  Burnout</h1>
+<h2 id="definition_8">🧠 Définition</h2>
+<p>L'épuisement professionnel, couramment appelé <strong>burnout</strong>, correspond à un phénomène lié au stress chronique dans le contexte professionnel.</p>
+<p>Il se caractérise principalement par un épuisement important, une distance mentale accrue visàvis du travail et une diminution du sentiment d'efficacité professionnelle.</p>
+<h2 id="1-epuisement">🔥 1. Épuisement</h2>
+<p>La personne peut ressentir :</p>
+<p>fatigue persistante ;
+manque d'énergie ;
+difficultés à récupérer ;
+épuisement émotionnel ;
+difficultés de concentration.</p>
+<h2 id="2-distance-mentale">🧊 2. Distance mentale</h2>
+<p>Peuvent apparaître :</p>
+<p>détachement du travail ;
+cynisme ;
+irritabilité ;
+perte d'intérêt ;
+sentiment de fonctionner « automatiquement ».</p>
+<h2 id="3-diminution-de-lefficacite">📉 3. Diminution de l'efficacité</h2>
+<p>Cela peut se manifester par :</p>
+<p>difficultés à accomplir les tâches ;
+baisse de concentration ;
+sentiment d'inefficacité ;
+baisse de motivation ;
+augmentation des erreurs.</p>
+<h2 id="facteurs-favorisant">🧬 Facteurs favorisant</h2>
+<p>Le burnout peut être favorisé par :</p>
+<p>surcharge de travail ;
+manque de contrôle ;
+horaires excessifs ;
+pression constante ;
+manque de reconnaissance ;
+conflits professionnels ;
+manque de soutien ;
+déséquilibre entre efforts et récompenses.</p>
+<h2 id="diagnostic_3">🩺 Diagnostic</h2>
+<p>Le burnout n'est pas classé comme un trouble mental dans la CIM11.</p>
+<p>Il est plutôt décrit comme un <strong>phénomène lié au contexte professionnel</strong>, résultant d'un stress chronique au travail qui n'a pas été correctement géré.</p>
+<h2 id="prise-en-charge_3">🛠️ Prise en charge</h2>
+<p>La prise en charge peut nécessiter :</p>
+<p>réduction ou adaptation de la charge professionnelle ;
+repos ;
+accompagnement psychologique ;
+amélioration des conditions de travail ;
+traitement d'éventuels troubles associés ;
+réorganisation progressive de l'activité.</p>
+<h2 id="a-retenir_8">📌 À retenir</h2>
+<p>Le burnout est principalement lié au <strong>stress professionnel chronique</strong> et se caractérise par l'épuisement, la distance mentale visàvis du travail et une diminution de l'efficacité professionnelle.</p>
+<h1 id="510-le-stress-traumatique-secondaire" class="entry-title hc-5">🧠 5.10  Le stress traumatique secondaire</h1>
+<h2 id="definition_9">🧠 Définition</h2>
+<p>Le stress traumatique secondaire correspond à des réactions traumatiques pouvant apparaître chez une personne exposée indirectement aux traumatismes vécus par d'autres.</p>
+<p>Il peut notamment concerner :</p>
+<p>professionnels de santé ;
+psychologues ;
+travailleurs sociaux ;
+secouristes ;
+policiers ;
+pompiers ;
+aidants ;
+personnes régulièrement exposées aux récits traumatiques.</p>
+<h2 id="manifestations-possibles_5">🔎 Manifestations possibles</h2>
+<p>cauchemars ;
+pensées intrusives ;
+anxiété ;
+hypervigilance ;
+fatigue émotionnelle ;
+irritabilité ;
+évitement ;
+sentiment d'impuissance ;
+difficultés de concentration.</p>
+<h2 id="difference-avec-le-traumatisme-direct">🧠 Différence avec le traumatisme direct</h2>
+<h3 id="traumatisme-direct">Traumatisme direct</h3>
+<p>La personne vit ellemême l'événement traumatique.</p>
+<h3 id="traumatisme-secondaire">Traumatisme secondaire</h3>
+<p>La personne est exposée au traumatisme d'une autre personne ou à ses conséquences.</p>
+<h2 id="prise-en-charge_4">🩺 Prise en charge</h2>
+<p>Elle peut comprendre :</p>
+<p>soutien psychologique ;
+supervision professionnelle ;
+repos ;
+limitation de l'exposition lorsque cela est possible ;
+techniques de gestion du stress ;
+psychothérapie si les symptômes deviennent importants.</p>
+<h2 id="a-retenir_9">📌 À retenir</h2>
+<p>Le stress traumatique secondaire montre qu'une exposition indirecte répétée à des expériences traumatiques peut également avoir des conséquences psychologiques importantes.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Syndromes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="syndromes-syndromes-relationnels-et-sociaux.html"><span class="similar-icon">🧬</span>Syndromes relationnels et sociaux</a><a class="similar-item" href="syndromes-syndromes-culturels.html"><span class="similar-icon">🧬</span>Syndromes culturels</a><a class="similar-item" href="syndromes-syndromes-lies-au-corps.html"><span class="similar-icon">🧬</span>Syndromes liés au corps</a></div>
+    </div>
+    <a class="back-link" href="../categorie/syndromes.html">← Retour à « Syndromes psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

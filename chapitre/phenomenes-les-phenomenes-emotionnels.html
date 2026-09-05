@@ -2,12 +2,1053 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/phenomenes-les-phenomenes-emotionnels/">
-<link rel="canonical" href="/chapitre/phenomenes-les-phenomenes-emotionnels/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/phenomenes-les-phenomenes-emotionnels/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les phénomènes émotionnels — Mon Esprit</title>
+<meta name="description" content="Les phénomènes émotionnels, dans la catégorie Phénomènes psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/phenomenes-les-phenomenes-emotionnels/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#41-lemotion">❤️ 4.1 L'émotion</a></li><li><a href="#42-lactivation-emotionnelle">🌡️ 4.2 L'activation émotionnelle</a></li><li><a href="#43-la-reactivite-emotionnelle">⚡ 4.3 La réactivité émotionnelle</a></li><li><a href="#44-la-regulation-emotionnelle">🌊 4.4 La régulation émotionnelle</a></li><li><a href="#45-la-contagion-emotionnelle">🔄 4.5 La contagion émotionnelle</a></li><li><a href="#46-le-mimetisme-emotionnel">🪞 4.6 Le mimétisme émotionnel</a></li><li><a href="#47-lanxiete-anticipatoire">😰 4.7 L'anxiété anticipatoire</a></li><li><a href="#48-la-peur">😨 4.8 La peur</a></li><li><a href="#49-la-reaction-de-gel">🧊 4.9 La réaction de gel</a></li><li><a href="#410-la-colere">😡 4.10 La colère</a></li><li><a href="#411-la-tristesse">😢 4.11 La tristesse</a></li><li><a href="#412-la-joie">😊 4.12 La joie</a></li><li><a href="#413-la-honte">😳 4.13 La honte</a></li><li><a href="#414-la-culpabilite">⚖️ 4.14 La culpabilité</a></li><li><a href="#415-le-regret">💔 4.15 Le regret</a></li><li><a href="#416-lambivalence-emotionnelle">🌫️ 4.16 L'ambivalence émotionnelle</a></li><li><a href="#417-le-melange-emotionnel">🔀 4.17 Le mélange émotionnel</a></li><li><a href="#418-letiquetage-emotionnel">🧠 4.18 L'étiquetage émotionnel</a></li><li><a href="#419-la-granularite-emotionnelle">🗣️ 4.19 La granularité émotionnelle</a></li><li><a href="#420-lalexithymie">🌡️ 4.20 L'alexithymie</a></li><li><a href="#421-le-debordement-emotionnel">🔥 4.21 Le débordement émotionnel</a></li><li><a href="#422-lengourdissement-emotionnel">🧊 4.22 L'engourdissement émotionnel</a></li><li><a href="#423-la-labilite-emotionnelle">🌊 4.23 La labilité émotionnelle</a></li><li><a href="#424-les-fluctuations-emotionnelles">🎢 4.24 Les fluctuations émotionnelles</a></li><li><a href="#425-leffet-des-emotions-sur-la-memoire">🧠 4.25 L'effet des émotions sur la mémoire</a></li><li><a href="#426-leffet-des-emotions-sur-lattention">👁️ 4.26 L'effet des émotions sur l'attention</a></li><li><a href="#427-leffet-des-emotions-sur-la-perception">🧠 4.27 L'effet des émotions sur la perception</a></li><li><a href="#428-le-biais-emotionnel">⚖️ 4.28 Le biais émotionnel</a></li><li><a href="#429-la-congruence-emotionnelle">🌧️ 4.29 La congruence émotionnelle</a></li><li><a href="#430-la-reevaluation-emotionnelle">🔄 4.30 La réévaluation émotionnelle</a></li><li><a href="#431-la-suppression-emotionnelle">🧩 4.31 La suppression émotionnelle</a></li><li><a href="#432-lexpression-emotionnelle">🎭 4.32 L'expression émotionnelle</a></li><li><a href="#433-la-conscience-emotionnelle">🧠 4.33 La conscience émotionnelle</a></li><li><a href="#434-lempathie-emotionnelle">❤️ 4.34 L'empathie émotionnelle</a></li><li><a href="#435-lempathie-cognitive">🧠 4.35 L'empathie cognitive</a></li><li><a href="#436-la-regulation-emotionnelle-interpersonnelle">🌐 4.36 La régulation émotionnelle interpersonnelle</a></li><li><a href="#437-lescalade-emotionnelle">🔥 4.37 L'escalade émotionnelle</a></li><li><a href="#438-lhabituation-emotionnelle">🌱 4.38 L'habituation émotionnelle</a></li><li><a href="#439-le-conditionnement-emotionnel">🔁 4.39 Le conditionnement émotionnel</a></li><li><a href="#440-pourquoi-les-emotions-influencent-elles-autant-le-fonctionnement-psychologique">🧠 4.40 Pourquoi les émotions influencent-elles autant le fonctionnement psychologique ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Les phénomènes émotionnels',
+        category: 'Phénomènes psychologiques',
+        icon: '🔮'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/phenomenes.html">🔮 Phénomènes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Les phénomènes émotionnels</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-phenomenes)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <blockquote>
+<p>Les émotions constituent une partie essentielle du fonctionnement psychologique. Elles impliquent différentes réactions corporelles, cognitives et comportementales.
+</p>
+</blockquote>
+<p>Elles peuvent apparaître rapidement, être influencées par le contexte et modifier la perception, la mémoire, l'attention ou les décisions.</p>
+<p>Cette partie présente différents phénomènes associés aux émotions, depuis les réactions émotionnelles ordinaires jusqu'à certains phénomènes plus complexes.</p>
+<hr />
+<h2 id="41-lemotion" class="entry-title hc-1">❤️ 4.1 L'émotion</h2>
+<p>Une émotion est une réponse psychologique et physiologique à une situation, un événement, un souvenir ou un stimulus.</p>
+<p>Elle peut comprendre :</p>
+<ul>
+<li>une expérience subjective</li>
+<li>des réactions corporelles</li>
+<li>des modifications de l'attention</li>
+<li>des tendances comportementales</li>
+<li>des changements dans les pensées</li>
+</ul>
+<p>Les émotions fondamentales et leur classification exacte font encore l'objet de discussions scientifiques.</p>
+<hr />
+<h2 id="42-lactivation-emotionnelle" class="entry-title hc-2">🌡️ 4.2 L'activation émotionnelle</h2>
+<p>L'activation émotionnelle correspond au niveau d'intensité d'une réaction émotionnelle.</p>
+<p>Une émotion peut être très faible, modérée ou extrêmement intense.</p>
+<p>L'intensité émotionnelle ne dépend pas uniquement de l'événement lui-même. Elle peut également dépendre de l'interprétation de la situation, de l'état physique et du contexte.</p>
+<hr />
+<h2 id="43-la-reactivite-emotionnelle" class="entry-title hc-3">⚡ 4.3 La réactivité émotionnelle</h2>
+<p>La réactivité émotionnelle désigne la rapidité et l'intensité avec lesquelles une personne réagit à un événement émotionnel.</p>
+<p>Certaines personnes présentent des réactions très rapides et intenses, tandis que d'autres réagissent plus progressivement.</p>
+<p>La réactivité peut également varier selon les situations.</p>
+<hr />
+<h2 id="44-la-regulation-emotionnelle" class="entry-title hc-4">🌊 4.4 La régulation émotionnelle</h2>
+<p>La régulation émotionnelle désigne l'ensemble des processus permettant d'influencer l'intensité, la durée ou l'expression d'une émotion.</p>
+<p>Elle peut être volontaire ou automatique.</p>
+<p>Elle peut notamment impliquer :</p>
+<ul>
+<li>l'attention</li>
+<li>l'interprétation d'une situation</li>
+<li>l'expression émotionnelle</li>
+<li>la modification du comportement</li>
+<li>la réévaluation cognitive</li>
+</ul>
+<hr />
+<h2 id="45-la-contagion-emotionnelle" class="entry-title hc-5">🔄 4.5 La contagion émotionnelle</h2>
+<p>La contagion émotionnelle correspond au fait que l'état émotionnel d'une personne peut influencer celui d'autres personnes.</p>
+<p>Les expressions faciales, la voix, les comportements et le contexte social peuvent participer à cette transmission.</p>
+<p>Elle peut se produire sans intention consciente.</p>
+<hr />
+<h2 id="46-le-mimetisme-emotionnel" class="entry-title hc-1">🪞 4.6 Le mimétisme émotionnel</h2>
+<p>Le mimétisme émotionnel correspond à la tendance à reproduire certains comportements ou expressions observés chez d'autres personnes.</p>
+<p>Une expression faciale, une posture ou un ton de voix peut ainsi être partiellement reproduit automatiquement.</p>
+<p>Ce phénomène peut participer à la synchronisation sociale.</p>
+<hr />
+<h2 id="47-lanxiete-anticipatoire" class="entry-title hc-2">😰 4.7 L'anxiété anticipatoire</h2>
+<p>L'anxiété anticipatoire correspond à une réaction émotionnelle liée à l'attente d'un événement futur considéré comme potentiellement négatif.</p>
+<p>Elle peut apparaître avant :</p>
+<ul>
+<li>un examen</li>
+<li>une rencontre</li>
+<li>une décision</li>
+<li>une situation inconnue</li>
+<li>un événement important</li>
+</ul>
+<p>L'incertitude joue souvent un rôle important dans ce phénomène.</p>
+<hr />
+<h2 id="48-la-peur" class="entry-title hc-3">😨 4.8 La peur</h2>
+<p>La peur est une émotion associée à la détection d'une menace ou d'un danger potentiel.</p>
+<p>Elle peut provoquer différentes réactions :</p>
+<ul>
+<li>accélération du rythme cardiaque</li>
+<li>augmentation de la vigilance</li>
+<li>tension musculaire</li>
+<li>fuite</li>
+<li>immobilisation</li>
+<li>recherche de protection</li>
+</ul>
+<p>La peur peut être déclenchée par un danger réel ou perçu.</p>
+<hr />
+<h2 id="49-la-reaction-de-gel" class="entry-title hc-4">🧊 4.9 La réaction de gel</h2>
+<p>La réaction de gel, parfois appelée « freeze », correspond à une immobilisation ou à une réduction importante de l'action face à une situation perçue comme menaçante.</p>
+<p>Elle peut être observée dans certaines situations de peur intense ou de stress.</p>
+<p>Il s'agit d'une réponse comportementale et physiologique, et non d'un mécanisme de défense au sens strict.</p>
+<hr />
+<h2 id="410-la-colere" class="entry-title hc-5">😡 4.10 La colère</h2>
+<p>La colère est une émotion généralement associée à la perception d'une frustration, d'une injustice, d'une menace ou d'un obstacle.</p>
+<p>Elle peut entraîner :</p>
+<ul>
+<li>une augmentation de l'activation physiologique</li>
+<li>une attention accrue portée à l'obstacle</li>
+<li>une tendance à agir</li>
+<li>une modification de l'expression faciale</li>
+<li>une augmentation de la tension musculaire</li>
+</ul>
+<p>La colère n'entraîne pas nécessairement une agressivité.</p>
+<hr />
+<h2 id="411-la-tristesse" class="entry-title hc-1">😢 4.11 La tristesse</h2>
+<p>La tristesse est une émotion pouvant apparaître après une perte, une déception, une séparation ou une situation vécue comme négative.</p>
+<p>Elle peut modifier l'activité, l'attention, les interactions sociales et les comportements.</p>
+<p>La tristesse constitue une émotion normale et ne doit pas être confondue automatiquement avec la dépression.</p>
+<hr />
+<h2 id="412-la-joie" class="entry-title hc-2">😊 4.12 La joie</h2>
+<p>La joie correspond à un état émotionnel généralement associé à une expérience positive, à une satisfaction ou à l'obtention d'un résultat souhaité.</p>
+<p>Elle peut favoriser :</p>
+<ul>
+<li>l'approche</li>
+<li>l'interaction sociale</li>
+<li>l'exploration</li>
+<li>l'expression positive</li>
+<li>certaines formes de créativité</li>
+</ul>
+<hr />
+<h2 id="413-la-honte" class="entry-title hc-3">😳 4.13 La honte</h2>
+<p>La honte correspond à une émotion particulièrement liée à l'évaluation négative de soi.</p>
+<p>Elle peut apparaître lorsqu'une personne estime avoir transgressé une norme ou être devenue négativement visible aux yeux d'autrui.</p>
+<p>Elle peut provoquer une tendance à se cacher, éviter ou se retirer.</p>
+<hr />
+<h2 id="414-la-culpabilite" class="entry-title hc-4">⚖️ 4.14 La culpabilité</h2>
+<p>La culpabilité est une émotion associée à l'impression d'avoir fait quelque chose de répréhensible ou d'avoir causé un tort.</p>
+<p>Elle se distingue conceptuellement de la honte.</p>
+<p>La honte concerne davantage l'évaluation de soi, tandis que la culpabilité concerne davantage l'évaluation d'un comportement ou de ses conséquences.</p>
+<hr />
+<h2 id="415-le-regret" class="entry-title hc-5">💔 4.15 Le regret</h2>
+<p>Le regret apparaît lorsqu'une personne compare la réalité à une alternative qu'elle imagine comme meilleure.</p>
+<p>Il implique souvent une pensée du type :</p>
+<blockquote>
+<p>« Si j'avais fait autrement... »
+</p>
+</blockquote>
+<p>Le regret peut influencer les décisions futures et favoriser l'apprentissage.</p>
+<hr />
+<h2 id="416-lambivalence-emotionnelle" class="entry-title hc-1">🌫️ 4.16 L'ambivalence émotionnelle</h2>
+<p>L'ambivalence émotionnelle correspond à la présence simultanée de plusieurs émotions différentes concernant une même situation.</p>
+<p>Une personne peut par exemple ressentir simultanément :</p>
+<ul>
+<li>de la joie et de la peur</li>
+<li>de l'amour et de la colère</li>
+<li>du soulagement et de la tristesse</li>
+<li>de l'attachement et du rejet</li>
+</ul>
+<p>Les émotions ne sont donc pas nécessairement mutuellement exclusives.</p>
+<hr />
+<h2 id="417-le-melange-emotionnel" class="entry-title hc-2">🔀 4.17 Le mélange émotionnel</h2>
+<p>Plusieurs émotions peuvent apparaître en même temps et former une expérience émotionnelle complexe.</p>
+<p>Il peut alors être difficile d'identifier précisément une seule émotion dominante.</p>
+<p>Ce phénomène explique notamment pourquoi certaines expériences sont décrites comme « difficiles à mettre en mots ».</p>
+<hr />
+<h2 id="418-letiquetage-emotionnel" class="entry-title hc-3">🧠 4.18 L'étiquetage émotionnel</h2>
+<p>L'étiquetage émotionnel consiste à identifier et nommer une émotion.</p>
+<p>Mettre un mot sur une expérience émotionnelle peut faciliter sa compréhension et son observation.</p>
+<p>Les capacités d'identification émotionnelle varient cependant fortement selon les individus et les situations.</p>
+<hr />
+<h2 id="419-la-granularite-emotionnelle" class="entry-title hc-4">🗣️ 4.19 La granularité émotionnelle</h2>
+<p>La granularité émotionnelle désigne la capacité à différencier précisément différentes expériences émotionnelles.</p>
+<p>Une personne peut par exemple distinguer :</p>
+<ul>
+<li>irritation</li>
+<li>frustration</li>
+<li>colère</li>
+<li>exaspération</li>
+</ul>
+<p>plutôt que de regrouper toutes ces expériences sous le seul terme « colère ».</p>
+<p>Une granularité plus fine permet de décrire les expériences émotionnelles avec davantage de précision.</p>
+<hr />
+<h2 id="420-lalexithymie" class="entry-title hc-5">🌡️ 4.20 L'alexithymie</h2>
+<p>L'alexithymie désigne un ensemble de difficultés concernant notamment l'identification et la description des émotions.</p>
+<p>Elle peut notamment concerner :</p>
+<ul>
+<li>la difficulté à identifier ses émotions</li>
+<li>la difficulté à les décrire</li>
+<li>une tendance à se concentrer davantage sur les événements extérieurs que sur l'expérience intérieure</li>
+</ul>
+<p>L'alexithymie est généralement considérée comme une caractéristique ou un ensemble de traits plutôt que comme un diagnostic autonome universel.</p>
+<hr />
+<h2 id="421-le-debordement-emotionnel" class="entry-title hc-1">🔥 4.21 Le débordement émotionnel</h2>
+<p>Le débordement émotionnel correspond à une situation dans laquelle l'intensité d'une émotion devient difficile à gérer ou à contenir.</p>
+<p>Il peut s'accompagner de :</p>
+<ul>
+<li>pleurs</li>
+<li>agitation</li>
+<li>colère</li>
+<li>difficultés à réfléchir</li>
+<li>sentiment de perte de contrôle</li>
+<li>réactions corporelles importantes</li>
+</ul>
+<p>Il s'agit d'une description d'expérience et non d'un diagnostic spécifique.</p>
+<hr />
+<h2 id="422-lengourdissement-emotionnel" class="entry-title hc-2">🧊 4.22 L'engourdissement émotionnel</h2>
+<p>L'engourdissement émotionnel correspond à une diminution subjective de l'intensité ou de l'accès aux émotions.</p>
+<p>Une personne peut avoir l'impression de ne plus ressentir autant certaines émotions.</p>
+<p>Ce phénomène peut apparaître dans différents contextes psychologiques, neurologiques, médicamenteux ou liés au stress.</p>
+<hr />
+<h2 id="423-la-labilite-emotionnelle" class="entry-title hc-3">🌊 4.23 La labilité émotionnelle</h2>
+<p>La labilité émotionnelle correspond à des changements émotionnels rapides et parfois importants.</p>
+<p>L'humeur ou l'expression émotionnelle peut alors changer rapidement en réponse à différents événements.</p>
+<p>La labilité peut avoir différentes causes et doit être interprétée en fonction du contexte.</p>
+<hr />
+<h2 id="424-les-fluctuations-emotionnelles" class="entry-title hc-4">🎢 4.24 Les fluctuations émotionnelles</h2>
+<p>Les émotions peuvent naturellement varier au cours d'une journée.</p>
+<p>Le sommeil, la fatigue, l'environnement, les interactions sociales, les événements et l'état physiologique peuvent influencer ces variations.</p>
+<p>Une fluctuation émotionnelle n'est donc pas nécessairement anormale.</p>
+<hr />
+<h2 id="425-leffet-des-emotions-sur-la-memoire" class="entry-title hc-5">🧠 4.25 L'effet des émotions sur la mémoire</h2>
+<p>Les émotions peuvent influencer la manière dont les informations sont encodées, consolidées et récupérées.</p>
+<p>Les événements émotionnellement importants peuvent parfois être mieux mémorisés que des événements neutres.</p>
+<p>Cependant, une émotion intense ne garantit pas que tous les détails d'un souvenir seront correctement mémorisés.</p>
+<hr />
+<h2 id="426-leffet-des-emotions-sur-lattention" class="entry-title hc-1">👁️ 4.26 L'effet des émotions sur l'attention</h2>
+<p>Une émotion peut modifier les informations auxquelles l'attention est dirigée.</p>
+<p>Un stimulus associé à une menace peut notamment attirer rapidement l'attention.</p>
+<p>L'état émotionnel peut donc influencer ce qui est remarqué ou ignoré.</p>
+<hr />
+<h2 id="427-leffet-des-emotions-sur-la-perception" class="entry-title hc-2">🧠 4.27 L'effet des émotions sur la perception</h2>
+<p>Les émotions et les attentes peuvent influencer l'interprétation d'une situation perceptive.</p>
+<p>Un même stimulus peut être interprété différemment selon l'état émotionnel et le contexte.</p>
+<p>La perception n'est donc pas totalement indépendante de l'état psychologique.</p>
+<hr />
+<h2 id="428-le-biais-emotionnel" class="entry-title hc-3">⚖️ 4.28 Le biais émotionnel</h2>
+<p>Le biais émotionnel correspond à une influence des émotions sur le traitement de l'information.</p>
+<p>Un état émotionnel particulier peut favoriser certaines interprétations, certains souvenirs ou certaines évaluations.</p>
+<p>Par exemple, une humeur négative peut rendre certaines informations négatives plus accessibles.</p>
+<hr />
+<h2 id="429-la-congruence-emotionnelle" class="entry-title hc-4">🌧️ 4.29 La congruence émotionnelle</h2>
+<p>La congruence émotionnelle correspond au fait que l'état émotionnel actuel peut faciliter le traitement d'informations correspondant à cet état.</p>
+<p>Une personne triste peut ainsi avoir plus facilement accès à certains souvenirs ou pensées associés à la tristesse.</p>
+<p>Ce phénomène est notamment étudié dans les recherches sur l'humeur et la mémoire.</p>
+<hr />
+<h2 id="430-la-reevaluation-emotionnelle" class="entry-title hc-5">🔄 4.30 La réévaluation émotionnelle</h2>
+<p>La réévaluation émotionnelle consiste à modifier l'interprétation d'une situation afin de modifier l'expérience émotionnelle qui lui est associée.</p>
+<p>Par exemple, une situation initialement interprétée comme une menace peut être réinterprétée comme une difficulté temporaire.</p>
+<p>La réévaluation cognitive constitue l'une des stratégies étudiées dans la régulation émotionnelle.</p>
+<hr />
+<h2 id="431-la-suppression-emotionnelle" class="entry-title hc-1">🧩 4.31 La suppression émotionnelle</h2>
+<p>La suppression émotionnelle consiste à essayer de limiter l'expression visible d'une émotion.</p>
+<p>L'émotion elle-même peut cependant continuer à être ressentie intérieurement.</p>
+<p>La suppression de l'expression et la diminution réelle de l'émotion sont donc deux phénomènes différents.</p>
+<hr />
+<h2 id="432-lexpression-emotionnelle" class="entry-title hc-2">🎭 4.32 L'expression émotionnelle</h2>
+<p>L'expression émotionnelle correspond à la manière dont une émotion est communiquée ou manifestée.</p>
+<p>Elle peut passer par :</p>
+<ul>
+<li>le visage</li>
+<li>la voix</li>
+<li>les gestes</li>
+<li>la posture</li>
+<li>les paroles</li>
+<li>les comportements</li>
+</ul>
+<p>L'expression observable ne correspond pas toujours exactement à l'expérience intérieure.</p>
+<hr />
+<h2 id="433-la-conscience-emotionnelle" class="entry-title hc-3">🧠 4.33 La conscience émotionnelle</h2>
+<p>La conscience émotionnelle correspond à la capacité à remarquer et reconnaître son propre état émotionnel.</p>
+<p>Elle peut être plus ou moins précise selon les situations.</p>
+<p>Une personne peut ressentir une activation émotionnelle importante sans parvenir immédiatement à identifier ce qu'elle ressent.</p>
+<hr />
+<h2 id="434-lempathie-emotionnelle" class="entry-title hc-4">❤️ 4.34 L'empathie émotionnelle</h2>
+<p>L'empathie émotionnelle désigne la capacité à ressentir ou à partager, dans une certaine mesure, l'état émotionnel d'une autre personne.</p>
+<p>Elle se distingue de l'empathie cognitive, qui concerne davantage la compréhension du point de vue ou de l'état mental d'autrui.</p>
+<hr />
+<h2 id="435-lempathie-cognitive" class="entry-title hc-5">🧠 4.35 L'empathie cognitive</h2>
+<p>L'empathie cognitive correspond à la capacité à comprendre les pensées, intentions ou émotions d'une autre personne sans nécessairement ressentir la même émotion.</p>
+<p>Elle implique notamment l'interprétation des comportements et du contexte social.</p>
+<hr />
+<h2 id="436-la-regulation-emotionnelle-interpersonnelle" class="entry-title hc-1">🌐 4.36 La régulation émotionnelle interpersonnelle</h2>
+<p>La régulation émotionnelle interpersonnelle correspond à l'influence que les interactions avec d'autres personnes peuvent avoir sur les émotions.</p>
+<p>Une conversation, une présence rassurante, un soutien social ou une interaction conflictuelle peuvent modifier l'état émotionnel.</p>
+<p>La régulation émotionnelle n'est donc pas uniquement individuelle.</p>
+<hr />
+<h2 id="437-lescalade-emotionnelle" class="entry-title hc-2">🔥 4.37 L'escalade émotionnelle</h2>
+<p>L'escalade émotionnelle correspond à une augmentation progressive de l'intensité émotionnelle au cours d'une situation.</p>
+<p>Elle peut apparaître lors d'un conflit lorsque les réactions successives des personnes renforcent progressivement la tension.</p>
+<p>L'escalade peut également être influencée par les interprétations, les souvenirs et les attentes.</p>
+<hr />
+<h2 id="438-lhabituation-emotionnelle" class="entry-title hc-3">🌱 4.38 L'habituation émotionnelle</h2>
+<p>L'habituation correspond à une diminution progressive d'une réponse après des expositions répétées à un même stimulus, lorsque celui-ci cesse d'être nouveau ou particulièrement important.</p>
+<p>Elle peut concerner certaines réactions émotionnelles.</p>
+<p>Cependant, toutes les émotions ne diminuent pas nécessairement simplement par répétition.</p>
+<hr />
+<h2 id="439-le-conditionnement-emotionnel" class="entry-title hc-4">🔁 4.39 Le conditionnement émotionnel</h2>
+<p>Le conditionnement émotionnel correspond à l'apprentissage d'une réaction émotionnelle à partir d'une association entre différents stimuli ou événements.</p>
+<p>Un stimulus initialement neutre peut ainsi finir par provoquer une réaction émotionnelle après avoir été associé à un événement significatif.</p>
+<p>Ce phénomène est important dans l'étude de l'apprentissage de certaines peurs et réactions émotionnelles.</p>
+<hr />
+<h2 id="440-pourquoi-les-emotions-influencent-elles-autant-le-fonctionnement-psychologique" class="entry-title hc-5">🧠 4.40 Pourquoi les émotions influencent-elles autant le fonctionnement psychologique ?</h2>
+<p>Les émotions interagissent avec de nombreux processus psychologiques.</p>
+<p>Elles peuvent influencer :</p>
+<ul>
+<li>la perception</li>
+<li>l'attention</li>
+<li>la mémoire</li>
+<li>les pensées</li>
+<li>les décisions</li>
+<li>les comportements</li>
+<li>les relations sociales</li>
+<li>les réactions physiologiques</li>
+</ul>
+<p>Elles ne constituent donc pas un système séparé du reste du fonctionnement mental.</p>
+<hr />
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>❤️ Les émotions impliquent à la fois des réactions psychologiques, physiologiques et comportementales.</p>
+<p>🧠 Elles peuvent modifier la perception, l'attention, la mémoire, les pensées et les décisions.</p>
+<p>🌊 Une émotion peut varier en intensité et évoluer rapidement selon le contexte.</p>
+<p>🔄 La régulation émotionnelle permet d'influencer l'expérience ou l'expression des émotions.</p>
+<p>🧩 Certaines expériences émotionnelles sont complexes et peuvent combiner plusieurs émotions simultanément.</p>
+<p>👥 Les émotions sont également influencées par les interactions sociales et peuvent se transmettre entre individus.</p>
+<blockquote>
+<p>🔬 Un phénomène émotionnel isolé ne constitue pas automatiquement un signe de trouble psychologique. De nombreux phénomènes présentés ici font partie du fonctionnement psychologique ordinaire.
+</p>
+</blockquote>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Phénomènes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="phenomenes-les-phenomenes-lies-a-l-attention.html"><span class="similar-icon">🔮</span>Les phénomènes liés à l'attention</a><a class="similar-item" href="phenomenes-les-phenomenes-lies-a-la-conscience.html"><span class="similar-icon">🔮</span>Les phénomènes liés à la conscience</a><a class="similar-item" href="phenomenes-les-phenomenes-lies-a-l-identite-et-au-soi.html"><span class="similar-icon">🔮</span>Les phénomènes liés à l'identité et au soi</a></div>
+    </div>
+    <a class="back-link" href="../categorie/phenomenes.html">← Retour à « Phénomènes psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

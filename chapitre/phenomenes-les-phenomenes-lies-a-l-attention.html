@@ -2,12 +2,991 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/phenomenes-les-phenomenes-lies-a-l-attention/">
-<link rel="canonical" href="/chapitre/phenomenes-les-phenomenes-lies-a-l-attention/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/phenomenes-les-phenomenes-lies-a-l-attention/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les phénomènes liés à l'attention — Mon Esprit</title>
+<meta name="description" content="Les phénomènes liés à l'attention, dans la catégorie Phénomènes psychologiques de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/phenomenes-les-phenomenes-lies-a-l-attention/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#51-lattention">👁️ 5.1 L'attention</a></li><li><a href="#52-lattention-selective">🎯 5.2 L'attention sélective</a></li><li><a href="#53-lattention-divisee">🔀 5.3 L'attention divisée</a></li><li><a href="#54-le-multitache">🔄 5.4 Le multitâche</a></li><li><a href="#55-le-cout-du-changement-de-tache">🔁 5.5 Le coût du changement de tâche</a></li><li><a href="#56-lattention-soutenue">🎯 5.6 L'attention soutenue</a></li><li><a href="#57-la-vigilance">👀 5.7 La vigilance</a></li><li><a href="#58-la-cecite-attentionnelle">🕳️ 5.8 La cécité attentionnelle</a></li><li><a href="#59-la-cecite-au-changement">🔄 5.9 La cécité au changement</a></li><li><a href="#510-le-clignement-attentionnel">🧠 5.10 Le clignement attentionnel</a></li><li><a href="#511-leffet-de-clignement">👁️ 5.11 L'effet de clignement</a></li><li><a href="#512-leffet-cocktail-party">🍸 5.12 L'effet cocktail party</a></li><li><a href="#513-lattention-auditive-selective">🔊 5.13 L'attention auditive sélective</a></li><li><a href="#514-la-capture-attentionnelle">🧲 5.14 La capture attentionnelle</a></li><li><a href="#515-lattention-orientee-vers-la-menace">⚠️ 5.15 L'attention orientée vers la menace</a></li><li><a href="#516-le-biais-attentionnel">🧠 5.16 Le biais attentionnel</a></li><li><a href="#517-la-recherche-visuelle">🔎 5.17 La recherche visuelle</a></li><li><a href="#518-la-recherche-en-parallele">🌟 5.18 La recherche en parallèle</a></li><li><a href="#519-la-recherche-serielle">🧩 5.19 La recherche sérielle</a></li><li><a href="#520-le-modele-du-projecteur-attentionnel">🔦 5.20 Le modèle du projecteur attentionnel</a></li><li><a href="#521-lattention-spatiale">🔍 5.21 L'attention spatiale</a></li><li><a href="#522-lattention-ouverte-et-lattention-cachee">👁️ 5.22 L'attention ouverte et l'attention cachée</a></li><li><a href="#523-lorientation-volontaire-de-lattention">🧠 5.23 L'orientation volontaire de l'attention</a></li><li><a href="#524-lorientation-automatique-de-lattention">⚡ 5.24 L'orientation automatique de l'attention</a></li><li><a href="#525-linhibition-de-retour">🔄 5.25 L'inhibition de retour</a></li><li><a href="#526-lattention-endogene">🧠 5.26 L'attention endogène</a></li><li><a href="#527-lattention-exogene">⚡ 5.27 L'attention exogène</a></li><li><a href="#528-lamorcage-attentionnel">🧩 5.28 L'amorçage attentionnel</a></li><li><a href="#529-leffet-de-preparation">🧠 5.29 L'effet de préparation</a></li><li><a href="#530-leffet-de-la-fatigue-sur-lattention">😴 5.30 L'effet de la fatigue sur l'attention</a></li><li><a href="#531-les-interruptions-attentionnelles">📱 5.31 Les interruptions attentionnelles</a></li><li><a href="#532-la-fatigue-attentionnelle">🔔 5.32 La fatigue attentionnelle</a></li><li><a href="#533-lattention-et-la-memoire-de-travail">🧠 5.33 L'attention et la mémoire de travail</a></li><li><a href="#534-lattention-et-la-perception">🧩 5.34 L'attention et la perception</a></li><li><a href="#535-lattention-et-les-emotions">🧠 5.35 L'attention et les émotions</a></li><li><a href="#536-lattention-et-les-objectifs">🎯 5.36 L'attention et les objectifs</a></li><li><a href="#537-la-distraction">🌫️ 5.37 La distraction</a></li><li><a href="#538-la-distraction-interne">💭 5.38 La distraction interne</a></li><li><a href="#539-lerrance-mentale">🌐 5.39 L'errance mentale</a></li><li><a href="#540-lattention-et-la-conscience">🧠 5.40 L'attention et la conscience</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: "Les phénomènes liés à l'attention",
+        category: 'Phénomènes psychologiques',
+        icon: '🔮'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/phenomenes.html">🔮 Phénomènes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Les phénomènes liés à l'attention</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-phenomenes)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>L'attention permet de sélectionner certaines informations parmi l'immense quantité de stimuli présents dans l'environnement.</p>
+<p>Elle intervient dans la perception, la mémoire, l'apprentissage, la prise de décision et de nombreuses activités quotidiennes.</p>
+<blockquote>
+<p>L'attention n'est cependant pas illimitée. Elle peut être orientée, interrompue, divisée ou influencée par les attentes et les émotions.
+</p>
+</blockquote>
+<hr />
+<h2 id="51-lattention" class="entry-title hc-1">👁️ 5.1 L'attention</h2>
+<p>L'attention correspond à l'ensemble des processus permettant de sélectionner certaines informations et de mobiliser des ressources mentales pour les traiter.</p>
+<p>Elle permet notamment de se concentrer sur :</p>
+<ul>
+<li>une conversation</li>
+<li>une image</li>
+<li>un son</li>
+<li>une tâche</li>
+<li>une pensée</li>
+<li>une sensation</li>
+</ul>
+<hr />
+<h2 id="52-lattention-selective" class="entry-title hc-2">🎯 5.2 L'attention sélective</h2>
+<p>L'attention sélective consiste à privilégier certaines informations tout en réduisant le traitement d'autres informations présentes simultanément.</p>
+<p>Elle permet par exemple de se concentrer sur une conversation malgré la présence de plusieurs bruits autour.</p>
+<hr />
+<h2 id="53-lattention-divisee" class="entry-title hc-3">🔀 5.3 L'attention divisée</h2>
+<p>L'attention divisée correspond à la tentative de traiter plusieurs sources d'information ou plusieurs tâches en même temps.</p>
+<p>Cependant, lorsque plusieurs tâches nécessitent des ressources cognitives importantes, les performances peuvent diminuer.</p>
+<p>Le cerveau ne traite donc pas nécessairement plusieurs tâches complexes avec la même efficacité qu'une seule tâche.</p>
+<hr />
+<h2 id="54-le-multitache" class="entry-title hc-4">🔄 5.4 Le multitâche</h2>
+<p>Le multitâche consiste à réaliser plusieurs activités simultanément ou à alterner rapidement entre elles.</p>
+<p>Dans de nombreuses situations, ce qui semble être du multitâche correspond en réalité à des changements rapides d'attention.</p>
+<p>Ces changements peuvent entraîner une perte de temps et une augmentation des erreurs.</p>
+<hr />
+<h2 id="55-le-cout-du-changement-de-tache" class="entry-title hc-5">🔁 5.5 Le coût du changement de tâche</h2>
+<p>Le changement de tâche peut nécessiter un temps et des ressources mentales supplémentaires.</p>
+<p>Lorsqu'une personne passe d'une activité à une autre, elle doit réorienter son attention et parfois réactiver certaines règles ou informations.</p>
+<p>Ce phénomène est appelé coût du changement de tâche.</p>
+<hr />
+<h2 id="56-lattention-soutenue" class="entry-title hc-1">🎯 5.6 L'attention soutenue</h2>
+<p>L'attention soutenue correspond à la capacité à maintenir son attention sur une activité pendant une certaine durée.</p>
+<p>Elle est notamment nécessaire pour :</p>
+<ul>
+<li>lire</li>
+<li>surveiller un écran</li>
+<li>écouter un cours</li>
+<li>conduire</li>
+<li>effectuer une tâche répétitive</li>
+</ul>
+<p>La vigilance peut diminuer lorsque l'activité est longue ou monotone.</p>
+<hr />
+<h2 id="57-la-vigilance" class="entry-title hc-2">👀 5.7 La vigilance</h2>
+<p>La vigilance désigne la capacité à rester prêt à détecter l'apparition d'un événement pertinent.</p>
+<p>Elle est particulièrement importante lorsque les événements à détecter sont rares ou imprévisibles.</p>
+<p>Une vigilance prolongée peut cependant être mentalement fatigante.</p>
+<hr />
+<h2 id="58-la-cecite-attentionnelle" class="entry-title hc-3">🕳️ 5.8 La cécité attentionnelle</h2>
+<p>La cécité attentionnelle correspond au fait de ne pas remarquer un stimulus visible lorsqu'une personne concentre son attention sur autre chose.</p>
+<p>Un élément peut donc être présent dans le champ visuel sans être consciemment remarqué.</p>
+<p>Cela montre que voir un stimulus et lui accorder une attention consciente sont deux processus différents.</p>
+<hr />
+<h2 id="59-la-cecite-au-changement" class="entry-title hc-4">🔄 5.9 La cécité au changement</h2>
+<p>La cécité au changement correspond à une difficulté à détecter une modification visuelle pourtant importante lorsqu'elle survient dans certaines conditions.</p>
+<p>Une personne peut observer une scène avant et après une modification sans immédiatement remarquer ce qui a changé.</p>
+<hr />
+<h2 id="510-le-clignement-attentionnel" class="entry-title hc-5">🧠 5.10 Le clignement attentionnel</h2>
+<p>Le clignement attentionnel désigne une période très courte pendant laquelle la détection d'un second stimulus peut être moins efficace après la détection d'un premier stimulus.</p>
+<p>Il est particulièrement étudié dans les expériences où plusieurs informations apparaissent rapidement les unes après les autres.</p>
+<hr />
+<h2 id="511-leffet-de-clignement" class="entry-title hc-1">👁️ 5.11 L'effet de clignement</h2>
+<p>Lorsqu'une personne doit identifier plusieurs éléments présentés très rapidement, le traitement du premier élément peut temporairement réduire la capacité à identifier correctement le suivant.</p>
+<p>Ce phénomène illustre les limites temporelles de l'attention.</p>
+<hr />
+<h2 id="512-leffet-cocktail-party" class="entry-title hc-2">🍸 5.12 L'effet cocktail party</h2>
+<p>L'effet cocktail party désigne la capacité à suivre une conversation particulière dans un environnement contenant de nombreuses conversations et sources sonores.</p>
+<p>L'attention peut ainsi sélectionner une voix parmi plusieurs.</p>
+<p>Cependant, certains stimuli particulièrement importants, comme son propre prénom, peuvent attirer l'attention même lorsqu'ils ne sont pas au centre de l'écoute.</p>
+<hr />
+<h2 id="513-lattention-auditive-selective" class="entry-title hc-3">🔊 5.13 L'attention auditive sélective</h2>
+<p>L'attention auditive sélective consiste à privilégier certaines informations sonores parmi plusieurs sources simultanées.</p>
+<p>Elle permet notamment de suivre une voix particulière tout en réduisant le traitement conscient d'autres conversations.</p>
+<hr />
+<h2 id="514-la-capture-attentionnelle" class="entry-title hc-4">🧲 5.14 La capture attentionnelle</h2>
+<p>La capture attentionnelle correspond au fait qu'un stimulus attire automatiquement ou très fortement l'attention.</p>
+<p>Un élément peut capturer l'attention en raison de ses caractéristiques ou de son importance pour la personne.</p>
+<p>Un bruit soudain, un mouvement rapide ou un stimulus associé à une menace peuvent notamment provoquer une forte orientation attentionnelle.</p>
+<hr />
+<h2 id="515-lattention-orientee-vers-la-menace" class="entry-title hc-5">⚠️ 5.15 L'attention orientée vers la menace</h2>
+<p>Lorsqu'une personne perçoit une situation comme menaçante, certains stimuli associés au danger peuvent recevoir davantage d'attention.</p>
+<p>Ce phénomène est particulièrement étudié dans les recherches sur la peur, l'anxiété et la détection des menaces.</p>
+<hr />
+<h2 id="516-le-biais-attentionnel" class="entry-title hc-1">🧠 5.16 Le biais attentionnel</h2>
+<p>Un biais attentionnel correspond à une tendance systématique de l'attention à privilégier certaines catégories d'informations.</p>
+<p>L'attention peut par exemple être davantage orientée vers :</p>
+<ul>
+<li>les menaces</li>
+<li>les informations émotionnelles</li>
+<li>les récompenses</li>
+<li>les éléments correspondant aux attentes</li>
+</ul>
+<p>Les biais attentionnels peuvent varier selon le contexte.</p>
+<hr />
+<h2 id="517-la-recherche-visuelle" class="entry-title hc-2">🔎 5.17 La recherche visuelle</h2>
+<p>La recherche visuelle consiste à rechercher un élément particulier parmi plusieurs éléments présents dans une scène.</p>
+<p>Elle peut être relativement rapide lorsque l'élément recherché possède une caractéristique très distinctive.</p>
+<p>Elle devient généralement plus complexe lorsque les éléments se ressemblent.</p>
+<hr />
+<h2 id="518-la-recherche-en-parallele" class="entry-title hc-3">🌟 5.18 La recherche en parallèle</h2>
+<p>Dans certaines situations, un élément possédant une caractéristique très différente des autres peut être détecté rapidement parmi plusieurs éléments.</p>
+<p>Ce type de recherche est souvent décrit comme une recherche en parallèle.</p>
+<hr />
+<h2 id="519-la-recherche-serielle" class="entry-title hc-4">🧩 5.19 La recherche sérielle</h2>
+<p>Lorsque les éléments présents dans une scène sont relativement similaires, leur examen peut nécessiter davantage d'attention.</p>
+<p>La recherche peut alors devenir plus progressive et dépendre davantage du nombre d'éléments présents.</p>
+<hr />
+<h2 id="520-le-modele-du-projecteur-attentionnel" class="entry-title hc-5">🔦 5.20 Le modèle du projecteur attentionnel</h2>
+<p>Le modèle du projecteur décrit l'attention comme un faisceau pouvant être orienté vers une partie particulière de l'information.</p>
+<p>Les éléments situés dans la zone privilégiée bénéficient alors davantage de ressources attentionnelles.</p>
+<p>Ce modèle est une représentation théorique du fonctionnement attentionnel.</p>
+<hr />
+<h2 id="521-lattention-spatiale" class="entry-title hc-1">🔍 5.21 L'attention spatiale</h2>
+<p>L'attention spatiale correspond à l'orientation de l'attention vers une région particulière de l'espace.</p>
+<p>Elle peut être dirigée vers une zone sans nécessairement déplacer les yeux ou la tête.</p>
+<hr />
+<h2 id="522-lattention-ouverte-et-lattention-cachee" class="entry-title hc-2">👁️ 5.22 L'attention ouverte et l'attention cachée</h2>
+<p>L'attention ouverte correspond à une orientation de l'attention accompagnée d'un mouvement observable, comme tourner les yeux vers un objet.</p>
+<p>L'attention cachée correspond à une orientation mentale vers une information sans mouvement apparent des yeux ou de la tête.</p>
+<hr />
+<h2 id="523-lorientation-volontaire-de-lattention" class="entry-title hc-3">🧠 5.23 L'orientation volontaire de l'attention</h2>
+<p>L'attention peut être dirigée volontairement vers un élément.</p>
+<p>Par exemple, une personne peut décider de se concentrer sur une phrase précise lors d'une lecture.</p>
+<p>Cette orientation dépend des objectifs et des intentions.</p>
+<hr />
+<h2 id="524-lorientation-automatique-de-lattention" class="entry-title hc-4">⚡ 5.24 L'orientation automatique de l'attention</h2>
+<p>L'attention peut également être attirée automatiquement par certains événements.</p>
+<p>Un son soudain, une lumière inhabituelle ou un mouvement rapide peut provoquer une orientation attentionnelle sans décision consciente préalable.</p>
+<hr />
+<h2 id="525-linhibition-de-retour" class="entry-title hc-5">🔄 5.25 L'inhibition de retour</h2>
+<p>L'inhibition de retour est un phénomène dans lequel l'attention peut devenir temporairement moins susceptible de revenir vers une zone précédemment explorée.</p>
+<p>Ce mécanisme est étudié notamment dans la recherche visuelle.</p>
+<p>Il pourrait contribuer à favoriser l'exploration de nouvelles zones plutôt que de revenir constamment au même endroit.</p>
+<hr />
+<h2 id="526-lattention-endogene" class="entry-title hc-1">🧠 5.26 L'attention endogène</h2>
+<p>L'attention endogène correspond à une orientation volontaire de l'attention basée sur les objectifs, les attentes ou les intentions.</p>
+<p>Elle est généralement contrôlée de manière relativement volontaire.</p>
+<hr />
+<h2 id="527-lattention-exogene" class="entry-title hc-2">⚡ 5.27 L'attention exogène</h2>
+<p>L'attention exogène correspond à une orientation déclenchée par un événement extérieur particulièrement saillant.</p>
+<p>Elle peut être rapide et relativement automatique.</p>
+<hr />
+<h2 id="528-lamorcage-attentionnel" class="entry-title hc-3">🧩 5.28 L'amorçage attentionnel</h2>
+<p>L'exposition préalable à une information peut influencer la manière dont l'attention sera ensuite orientée.</p>
+<p>Une information déjà activée mentalement peut devenir plus facilement détectée ou traitée.</p>
+<p>Ce phénomène est lié aux mécanismes d'amorçage.</p>
+<hr />
+<h2 id="529-leffet-de-preparation" class="entry-title hc-4">🧠 5.29 L'effet de préparation</h2>
+<p>Lorsqu'une personne sait qu'elle doit rechercher une information particulière, son système attentionnel peut se préparer à détecter certains stimuli.</p>
+<p>Cette préparation influence la rapidité et parfois la précision de la détection.</p>
+<hr />
+<h2 id="530-leffet-de-la-fatigue-sur-lattention" class="entry-title hc-5">😴 5.30 L'effet de la fatigue sur l'attention</h2>
+<p>La fatigue peut réduire certaines capacités attentionnelles.</p>
+<p>Elle peut notamment entraîner :</p>
+<ul>
+<li>davantage d'erreurs</li>
+<li>des temps de réaction plus longs</li>
+<li>une diminution de la vigilance</li>
+<li>des difficultés à maintenir la concentration</li>
+</ul>
+<p>Le manque de sommeil constitue notamment un facteur important pouvant affecter l'attention.</p>
+<hr />
+<h2 id="531-les-interruptions-attentionnelles" class="entry-title hc-1">📱 5.31 Les interruptions attentionnelles</h2>
+<p>Une notification, un message ou un événement soudain peut interrompre une activité en cours.</p>
+<p>Même lorsque l'interruption est courte, revenir complètement à la tâche initiale peut nécessiter un effort mental.</p>
+<hr />
+<h2 id="532-la-fatigue-attentionnelle" class="entry-title hc-2">🔔 5.32 La fatigue attentionnelle</h2>
+<p>Une sollicitation prolongée de l'attention peut produire une sensation de fatigue mentale.</p>
+<p>Elle peut se manifester par :</p>
+<ul>
+<li>une difficulté à rester concentré</li>
+<li>une augmentation des erreurs</li>
+<li>une baisse de motivation</li>
+<li>une tendance à se distraire</li>
+</ul>
+<hr />
+<h2 id="533-lattention-et-la-memoire-de-travail" class="entry-title hc-3">🧠 5.33 L'attention et la mémoire de travail</h2>
+<p>L'attention et la mémoire de travail sont étroitement liées.</p>
+<p>L'attention contribue notamment à sélectionner les informations qui seront maintenues et manipulées temporairement.</p>
+<p>Une surcharge attentionnelle peut donc également perturber certaines tâches de mémoire de travail.</p>
+<hr />
+<h2 id="534-lattention-et-la-perception" class="entry-title hc-4">🧩 5.34 L'attention et la perception</h2>
+<p>L'attention influence la manière dont certaines informations perceptives sont traitées.</p>
+<p>Cependant, elle ne signifie pas que tout ce qui n'est pas au centre de l'attention disparaît complètement de la perception.</p>
+<p>Certains traitements peuvent continuer à se produire en dehors de l'attention consciente.</p>
+<hr />
+<h2 id="535-lattention-et-les-emotions" class="entry-title hc-5">🧠 5.35 L'attention et les émotions</h2>
+<p>Les émotions peuvent influencer l'orientation de l'attention.</p>
+<p>Un stimulus émotionnellement important peut attirer davantage l'attention qu'un stimulus neutre.</p>
+<p>L'influence fonctionne également dans l'autre sens : ce à quoi l'attention est dirigée peut modifier l'expérience émotionnelle.</p>
+<hr />
+<h2 id="536-lattention-et-les-objectifs" class="entry-title hc-1">🎯 5.36 L'attention et les objectifs</h2>
+<p>Les objectifs influencent fortement ce qui est sélectionné par l'attention.</p>
+<p>Une personne qui recherche une information précise dans une pièce ne prête pas nécessairement attention aux mêmes éléments qu'une personne qui cherche autre chose.</p>
+<p>L'attention dépend donc en partie de ce que l'on cherche à accomplir.</p>
+<hr />
+<h2 id="537-la-distraction" class="entry-title hc-2">🌫️ 5.37 La distraction</h2>
+<p>La distraction correspond à une orientation de l'attention vers une information qui détourne temporairement de la tâche initiale.</p>
+<p>Elle peut être provoquée par :</p>
+<ul>
+<li>un bruit</li>
+<li>une notification</li>
+<li>une pensée</li>
+<li>une personne</li>
+<li>un événement visuel</li>
+</ul>
+<p>La distraction peut être externe ou interne.</p>
+<hr />
+<h2 id="538-la-distraction-interne" class="entry-title hc-3">💭 5.38 La distraction interne</h2>
+<p>Une distraction peut provenir directement de l'activité mentale.</p>
+<p>Les souvenirs, préoccupations, pensées, images mentales ou scénarios futurs peuvent détourner l'attention d'une tâche extérieure.</p>
+<hr />
+<h2 id="539-lerrance-mentale" class="entry-title hc-4">🌐 5.39 L'errance mentale</h2>
+<p>L'errance mentale correspond à des périodes pendant lesquelles l'attention se détourne de la tâche en cours vers des pensées internes.</p>
+<p>Elle peut concerner :</p>
+<ul>
+<li>des souvenirs</li>
+<li>des projets</li>
+<li>des préoccupations</li>
+<li>des fantasmes</li>
+<li>des réflexions personnelles</li>
+</ul>
+<p>Elle n'est pas nécessairement négative et peut parfois être associée à la créativité ou à la planification.</p>
+<hr />
+<h2 id="540-lattention-et-la-conscience" class="entry-title hc-5">🧠 5.40 L'attention et la conscience</h2>
+<p>L'attention et la conscience sont fortement liées, mais elles ne sont pas exactement identiques.</p>
+<p>Une information peut recevoir différents niveaux de traitement attentionnel sans nécessairement devenir pleinement consciente.</p>
+<p>Les relations exactes entre attention et conscience constituent un sujet important de recherche en neurosciences cognitives.</p>
+<hr />
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>👁️ L'attention permet de sélectionner certaines informations parmi une quantité considérable de stimuli.</p>
+<p>🧠 Elle possède des limites et ne peut pas traiter efficacement toutes les informations simultanément.</p>
+<p>🎯 Les objectifs, les attentes, les émotions et l'environnement influencent ce qui attire ou maintient l'attention.</p>
+<p>🔄 L'attention peut être volontaire ou automatique, dirigée vers l'extérieur ou vers les pensées internes.</p>
+<p>🕳️ Ne pas remarquer une information ne signifie pas nécessairement qu'elle n'était pas visible.</p>
+<p>💭 L'errance mentale et la distraction font également partie du fonctionnement attentionnel normal.</p>
+<p>🔬 L'étude de l'attention permet notamment de comprendre les liens entre perception, mémoire, conscience, émotions et comportement.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Phénomènes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="phenomenes-les-phenomenes-lies-a-la-conscience.html"><span class="similar-icon">🔮</span>Les phénomènes liés à la conscience</a><a class="similar-item" href="phenomenes-les-phenomenes-lies-a-l-identite-et-au-soi.html"><span class="similar-icon">🔮</span>Les phénomènes liés à l'identité et au soi</a><a class="similar-item" href="phenomenes-les-phenomenes-sociaux.html"><span class="similar-icon">🔮</span>Les phénomènes sociaux</a></div>
+    </div>
+    <a class="back-link" href="../categorie/phenomenes.html">← Retour à « Phénomènes psychologiques »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>
