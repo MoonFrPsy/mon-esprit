@@ -2,12 +2,872 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/emotions-emotions-et-prise-de-decision/">
-<link rel="canonical" href="/chapitre/emotions-emotions-et-prise-de-decision/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/emotions-emotions-et-prise-de-decision/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Émotions et prise de décision — Mon Esprit</title>
+<meta name="description" content="Émotions et prise de décision, dans la catégorie Émotions et comportements humains de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/emotions-emotions-et-prise-de-decision/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#151-quest-ce-que-la-prise-de-decision">🧠 15.1 Qu'est-ce que la prise de décision ?</a></li><li><a href="#152-le-jugement">⚖️ 15.2 Le jugement</a></li><li><a href="#153-le-role-des-emotions-dans-les-decisions">❤️ 15.3 Le rôle des émotions dans les décisions</a></li><li><a href="#154-les-decisions-emotionnelles">⚡ 15.4 Les décisions émotionnelles</a></li><li><a href="#155-les-decisions-rationnelles">🧠 15.5 Les décisions rationnelles</a></li><li><a href="#156-linfluence-de-letat-emotionnel">🔥 15.6 L'influence de l'état émotionnel</a></li><li><a href="#157-la-peur-et-la-prise-de-decision">😨 15.7 La peur et la prise de décision</a></li><li><a href="#158-la-colere-et-la-prise-de-decision">😡 15.8 La colère et la prise de décision</a></li><li><a href="#159-la-tristesse-et-la-prise-de-decision">😢 15.9 La tristesse et la prise de décision</a></li><li><a href="#1510-la-joie-et-la-prise-de-decision">😄 15.10 La joie et la prise de décision</a></li><li><a href="#1511-lanxiete-et-la-decision">🧠 15.11 L'anxiété et la décision</a></li><li><a href="#1512-la-perception-du-risque">⚠️ 15.12 La perception du risque</a></li><li><a href="#1513-la-perception-de-la-probabilite">🎲 15.13 La perception de la probabilité</a></li><li><a href="#1514-le-biais-dancrage">🧲 15.14 Le biais d'ancrage</a></li><li><a href="#1515-le-biais-de-confirmation">🔎 15.15 Le biais de confirmation</a></li><li><a href="#1516-leffet-de-cadrage">🖼️ 15.16 L'effet de cadrage</a></li><li><a href="#1517-laversion-aux-pertes">💸 15.17 L'aversion aux pertes</a></li><li><a href="#1518-leffet-de-cout-irrecuperable">🔄 15.18 L'effet de coût irrécupérable</a></li><li><a href="#1519-le-biais-du-statu-quo">🚪 15.19 Le biais du statu quo</a></li><li><a href="#1520-linfluence-de-la-memoire">🧠 15.20 L'influence de la mémoire</a></li><li><a href="#1521-la-pensee-contrefactuelle">💭 15.21 La pensée contrefactuelle</a></li><li><a href="#1522-le-regret-decisionnel">😔 15.22 Le regret décisionnel</a></li><li><a href="#1523-lanticipation-des-consequences">🔮 15.23 L'anticipation des conséquences</a></li><li><a href="#1524-la-valeur-subjective">🎯 15.24 La valeur subjective</a></li><li><a href="#1525-la-recompense-attendue">🏆 15.25 La récompense attendue</a></li><li><a href="#1526-lescompte-temporel">⏳ 15.26 L'escompte temporel</a></li><li><a href="#1527-limpulsivite-decisionnelle">⚡ 15.27 L'impulsivité décisionnelle</a></li><li><a href="#1528-la-paralysie-decisionnelle">🛑 15.28 La paralysie décisionnelle</a></li><li><a href="#1529-le-changement-davis">🔄 15.29 Le changement d'avis</a></li><li><a href="#1530-lambivalence-decisionnelle">🧩 15.30 L'ambivalence décisionnelle</a></li><li><a href="#1531-la-decision-intuitive">🧠 15.31 La décision intuitive</a></li><li><a href="#1532-la-decision-deliberee">🐢 15.32 La décision délibérée</a></li><li><a href="#1533-decision-rapide-et-decision-lente">⚡ 15.33 Décision rapide et décision lente</a></li><li><a href="#1534-les-decisions-influencees-par-autrui">🧑‍🤝‍🧑 15.34 Les décisions influencées par autrui</a></li><li><a href="#1535-la-pression-sociale-dans-les-decisions">🗣️ 15.35 La pression sociale dans les décisions</a></li><li><a href="#1536-la-decision-collective">👥 15.36 La décision collective</a></li><li><a href="#1537-la-pensee-de-groupe">🧠 15.37 La pensée de groupe</a></li><li><a href="#1538-les-decisions-dans-lenvironnement-numerique">📱 15.38 Les décisions dans l'environnement numérique</a></li><li><a href="#1539-quand-les-emotions-perturbent-elles-la-decision">⚖️ 15.39 Quand les émotions perturbent-elles la décision ?</a></li><li><a href="#1540-pourquoi-etudier-les-emotions-et-la-prise-de-decision">🔬 15.40 Pourquoi étudier les émotions et la prise de décision ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Émotions et prise de décision',
+        category: 'Émotions et comportements humains',
+        icon: '❤️'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/emotions.html">❤️ Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Émotions et prise de décision</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-emotions)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Les émotions participent à la manière dont les individus évaluent les situations, interprètent les informations disponibles et choisissent entre différentes possibilités.</p>
+<p>Une décision n'est donc pas uniquement le résultat d'un raisonnement logique. Les émotions, les souvenirs, les objectifs, les récompenses attendues et la perception du risque peuvent également influencer le processus décisionnel.</p>
+<h2 id="151-quest-ce-que-la-prise-de-decision" class="entry-title hc-1">🧠 15.1 Qu'est-ce que la prise de décision ?</h2>
+<p>La prise de décision correspond au processus permettant de sélectionner une option parmi plusieurs possibilités.</p>
+<p>Elle peut être rapide et intuitive ou plus lente et réfléchie.</p>
+<h2 id="152-le-jugement" class="entry-title hc-2">⚖️ 15.2 Le jugement</h2>
+<p>Le jugement consiste à évaluer une situation, une personne, une option ou un événement.</p>
+<p>Cette évaluation peut influencer directement la décision qui suit.</p>
+<h2 id="153-le-role-des-emotions-dans-les-decisions" class="entry-title hc-3">❤️ 15.3 Le rôle des émotions dans les décisions</h2>
+<p>Les émotions fournissent notamment des informations sur la valeur subjective d'une situation.</p>
+<p>Elles peuvent rendre certaines options plus attractives, plus menaçantes ou moins importantes.</p>
+<h2 id="154-les-decisions-emotionnelles" class="entry-title hc-4">⚡ 15.4 Les décisions émotionnelles</h2>
+<p>Une décision émotionnelle est fortement influencée par l'état émotionnel présent.</p>
+<p>Cela ne signifie pas nécessairement qu'elle est irrationnelle.</p>
+<h2 id="155-les-decisions-rationnelles" class="entry-title hc-5">🧠 15.5 Les décisions rationnelles</h2>
+<p>Une décision dite rationnelle cherche généralement à comparer les informations disponibles et les conséquences possibles.</p>
+<p>Même dans ce type de décision, les émotions peuvent continuer à influencer l'évaluation des options.</p>
+<h2 id="156-linfluence-de-letat-emotionnel" class="entry-title hc-1">🔥 15.6 L'influence de l'état émotionnel</h2>
+<p>L'état émotionnel présent peut modifier la manière dont une situation est évaluée.</p>
+<p>Une même option peut sembler différente selon que l'individu ressent de la peur, de la colère, de la tristesse ou de l'enthousiasme.</p>
+<h2 id="157-la-peur-et-la-prise-de-decision" class="entry-title hc-2">😨 15.7 La peur et la prise de décision</h2>
+<p>La peur augmente généralement l'attention portée aux risques et aux menaces.</p>
+<p>Elle peut favoriser des décisions visant à réduire l'incertitude ou à éviter une conséquence négative.</p>
+<h2 id="158-la-colere-et-la-prise-de-decision" class="entry-title hc-3">😡 15.8 La colère et la prise de décision</h2>
+<p>La colère peut augmenter la perception de contrôle et favoriser certaines décisions orientées vers l'action.</p>
+<p>Elle peut également modifier l'évaluation des risques et des intentions d'autrui.</p>
+<h2 id="159-la-tristesse-et-la-prise-de-decision" class="entry-title hc-4">😢 15.9 La tristesse et la prise de décision</h2>
+<p>La tristesse peut modifier l'intérêt accordé aux récompenses et aux conséquences futures.</p>
+<p>Son influence dépend notamment de son intensité et du contexte.</p>
+<h2 id="1510-la-joie-et-la-prise-de-decision" class="entry-title hc-5">😄 15.10 La joie et la prise de décision</h2>
+<p>La joie peut favoriser certaines décisions d'approche et augmenter l'attention portée aux possibilités positives.</p>
+<p>Elle peut également influencer l'évaluation subjective des récompenses.</p>
+<h2 id="1511-lanxiete-et-la-decision" class="entry-title hc-1">🧠 15.11 L'anxiété et la décision</h2>
+<p>L'anxiété peut augmenter l'attention portée aux risques et aux possibilités négatives.</p>
+<p>Elle peut parfois conduire à rechercher davantage d'informations avant de choisir.</p>
+<h2 id="1512-la-perception-du-risque" class="entry-title hc-2">⚠️ 15.12 La perception du risque</h2>
+<p>Le risque n'est pas uniquement évalué à partir de données objectives.</p>
+<p>La manière dont un risque est ressenti peut également influencer son importance subjective.</p>
+<h2 id="1513-la-perception-de-la-probabilite" class="entry-title hc-3">🎲 15.13 La perception de la probabilité</h2>
+<p>Les individus ne représentent pas toujours les probabilités de manière parfaitement objective.</p>
+<p>Certains événements rares peuvent notamment recevoir une importance subjective supérieure ou inférieure à leur probabilité réelle.</p>
+<h2 id="1514-le-biais-dancrage" class="entry-title hc-4">🧲 15.14 Le biais d'ancrage</h2>
+<p>Le biais d'ancrage correspond à la tendance à être influencé par une information initiale lors d'une estimation ou d'une décision.</p>
+<p>L'information initiale peut servir de point de référence même lorsqu'elle n'est pas particulièrement pertinente.</p>
+<h2 id="1515-le-biais-de-confirmation" class="entry-title hc-5">🔎 15.15 Le biais de confirmation</h2>
+<p>Le biais de confirmation correspond à la tendance à rechercher, interpréter ou retenir plus facilement les informations compatibles avec une croyance existante.</p>
+<p>Il peut influencer l'évaluation des différentes options.</p>
+<h2 id="1516-leffet-de-cadrage" class="entry-title hc-1">🖼️ 15.16 L'effet de cadrage</h2>
+<p>L'effet de cadrage correspond au fait qu'une même information peut provoquer des décisions différentes selon la manière dont elle est présentée.</p>
+<p>La formulation d'un choix peut donc influencer son évaluation.</p>
+<h2 id="1517-laversion-aux-pertes" class="entry-title hc-2">💸 15.17 L'aversion aux pertes</h2>
+<p>L'aversion aux pertes correspond à la tendance à ressentir certaines pertes comme plus importantes que des gains équivalents.</p>
+<p>Elle peut influencer les choix lorsque des risques de perte sont présents.</p>
+<h2 id="1518-leffet-de-cout-irrecuperable" class="entry-title hc-3">🔄 15.18 L'effet de coût irrécupérable</h2>
+<p>L'effet de coût irrécupérable correspond à la tendance à continuer une décision en raison des ressources déjà investies.</p>
+<p>Le temps, l'argent ou les efforts déjà consacrés peuvent influencer la décision future alors qu'ils ne peuvent plus être récupérés.</p>
+<h2 id="1519-le-biais-du-statu-quo" class="entry-title hc-4">🚪 15.19 Le biais du statu quo</h2>
+<p>Le biais du statu quo correspond à une préférence pour le maintien de la situation actuelle.</p>
+<p>Modifier une situation peut être perçu comme plus coûteux ou plus risqué que de ne rien changer.</p>
+<h2 id="1520-linfluence-de-la-memoire" class="entry-title hc-5">🧠 15.20 L'influence de la mémoire</h2>
+<p>Les décisions s'appuient notamment sur les expériences passées.</p>
+<p>Les souvenirs d'événements positifs ou négatifs peuvent modifier les attentes concernant une situation future.</p>
+<h2 id="1521-la-pensee-contrefactuelle" class="entry-title hc-1">💭 15.21 La pensée contrefactuelle</h2>
+<p>La pensée contrefactuelle consiste à imaginer ce qui aurait pu se produire si une situation avait été différente.</p>
+<p>Elle peut influencer le regret, l'apprentissage et les décisions futures.</p>
+<h2 id="1522-le-regret-decisionnel" class="entry-title hc-2">😔 15.22 Le regret décisionnel</h2>
+<p>Le regret apparaît notamment lorsqu'une personne compare le résultat obtenu avec une autre possibilité imaginée.</p>
+<p>Il peut modifier les décisions futures.</p>
+<h2 id="1523-lanticipation-des-consequences" class="entry-title hc-3">🔮 15.23 L'anticipation des conséquences</h2>
+<p>Avant une décision, les individus peuvent imaginer différents résultats possibles.</p>
+<p>Cette anticipation influence notamment l'intérêt accordé aux différentes options.</p>
+<h2 id="1524-la-valeur-subjective" class="entry-title hc-4">🎯 15.24 La valeur subjective</h2>
+<p>La valeur d'une option ne dépend pas uniquement de ses caractéristiques objectives.</p>
+<p>Elle dépend également de ce qu'elle représente pour l'individu, de ses objectifs, de ses préférences et de son état émotionnel.</p>
+<h2 id="1525-la-recompense-attendue" class="entry-title hc-5">🏆 15.25 La récompense attendue</h2>
+<p>Une récompense future peut influencer fortement une décision présente.</p>
+<p>Plus une récompense est considérée comme importante ou attractive, plus elle peut orienter le choix.</p>
+<h2 id="1526-lescompte-temporel" class="entry-title hc-1">⏳ 15.26 L'escompte temporel</h2>
+<p>L'escompte temporel correspond à la diminution de la valeur subjective accordée à une récompense lorsqu'elle est éloignée dans le temps.</p>
+<p>Une récompense immédiate peut ainsi sembler plus attractive qu'une récompense plus importante mais différée.</p>
+<h2 id="1527-limpulsivite-decisionnelle" class="entry-title hc-2">⚡ 15.27 L'impulsivité décisionnelle</h2>
+<p>L'impulsivité décisionnelle correspond à une tendance à choisir rapidement, parfois au détriment de conséquences futures.</p>
+<p>Elle peut être influencée par les émotions et la recherche de récompenses immédiates.</p>
+<h2 id="1528-la-paralysie-decisionnelle" class="entry-title hc-3">🛑 15.28 La paralysie décisionnelle</h2>
+<p>Une quantité importante d'informations ou un grand nombre d'options peuvent rendre la décision plus difficile.</p>
+<p>Dans certaines situations, cette surcharge peut conduire à retarder ou éviter le choix.</p>
+<h2 id="1529-le-changement-davis" class="entry-title hc-4">🔄 15.29 Le changement d'avis</h2>
+<p>Les décisions peuvent évoluer lorsque de nouvelles informations apparaissent.</p>
+<p>Changer d'avis peut donc représenter une adaptation plutôt qu'une incohérence.</p>
+<h2 id="1530-lambivalence-decisionnelle" class="entry-title hc-5">🧩 15.30 L'ambivalence décisionnelle</h2>
+<p>L'ambivalence apparaît lorsque plusieurs options présentent simultanément des avantages et des inconvénients importants.</p>
+<p>Elle peut rendre le choix particulièrement difficile.</p>
+<h2 id="1531-la-decision-intuitive" class="entry-title hc-1">🧠 15.31 La décision intuitive</h2>
+<p>La décision intuitive repose largement sur des impressions rapides et sur des traitements qui ne sont pas entièrement conscients.</p>
+<p>Elle peut être efficace dans certaines situations familières.</p>
+<h2 id="1532-la-decision-deliberee" class="entry-title hc-2">🐢 15.32 La décision délibérée</h2>
+<p>La décision délibérée implique davantage de réflexion consciente.</p>
+<p>Elle peut notamment être utilisée lorsque la situation est nouvelle, complexe ou importante.</p>
+<h2 id="1533-decision-rapide-et-decision-lente" class="entry-title hc-3">⚡ 15.33 Décision rapide et décision lente</h2>
+<p>Les décisions rapides et lentes ne sont pas nécessairement opposées.</p>
+<p>Le cerveau peut alterner entre plusieurs modes de traitement selon les exigences de la situation.</p>
+<h2 id="1534-les-decisions-influencees-par-autrui" class="entry-title hc-4">🧑‍🤝‍🧑 15.34 Les décisions influencées par autrui</h2>
+<p>Les opinions, comportements et attentes des autres peuvent influencer les décisions.</p>
+<p>Cette influence peut être directe ou indirecte.</p>
+<h2 id="1535-la-pression-sociale-dans-les-decisions" class="entry-title hc-5">🗣️ 15.35 La pression sociale dans les décisions</h2>
+<p>La présence d'une pression sociale peut modifier les choix.</p>
+<p>Les individus peuvent notamment tenir compte du risque d'approbation, de rejet ou de jugement.</p>
+<h2 id="1536-la-decision-collective" class="entry-title hc-1">👥 15.36 La décision collective</h2>
+<p>Lorsqu'une décision est prise par plusieurs personnes, les opinions individuelles peuvent s'influencer mutuellement.</p>
+<p>Les discussions peuvent améliorer certaines décisions mais également produire des biais collectifs.</p>
+<h2 id="1537-la-pensee-de-groupe" class="entry-title hc-2">🧠 15.37 La pensée de groupe</h2>
+<p>La pensée de groupe correspond à une dynamique dans laquelle le désir d'accord au sein d'un groupe peut limiter l'examen critique des différentes possibilités.</p>
+<p>Elle peut influencer certaines décisions collectives.</p>
+<h2 id="1538-les-decisions-dans-lenvironnement-numerique" class="entry-title hc-3">📱 15.38 Les décisions dans l'environnement numérique</h2>
+<p>Les interfaces numériques peuvent influencer certains choix par la manière dont les informations sont présentées.</p>
+<p>Les notifications, recommandations, classements et mécanismes de récompense peuvent notamment attirer l'attention sur certaines options.</p>
+<h2 id="1539-quand-les-emotions-perturbent-elles-la-decision" class="entry-title hc-4">⚖️ 15.39 Quand les émotions perturbent-elles la décision ?</h2>
+<p>Les émotions ne rendent pas automatiquement une décision mauvaise.</p>
+<p>Elles peuvent devenir problématiques lorsqu'elles dominent fortement l'évaluation de la situation au point de limiter la prise en compte d'informations importantes ou des conséquences futures.</p>
+<h2 id="1540-pourquoi-etudier-les-emotions-et-la-prise-de-decision" class="entry-title hc-5">🔬 15.40 Pourquoi étudier les émotions et la prise de décision ?</h2>
+<p>Comprendre les décisions nécessite d'étudier l'interaction entre plusieurs processus :</p>
+<p><strong>❤️ émotion → 👀 perception → 🧠 interprétation → 💭 anticipation → ⚖️ évaluation → 🎯 choix → 🔄 conséquence</strong></p>
+<p>Les émotions ne sont donc pas simplement des obstacles au raisonnement. Elles participent au fonctionnement décisionnel et peuvent fournir des informations importantes sur les préférences, les objectifs et la valeur subjective des différentes options.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>La prise de décision est influencée par :</p>
+<p><strong>❤️ émotions → 🧠 pensées → 🧠 mémoire → 🎯 objectifs → ⚠️ perception du risque → 🏆 récompenses → 👥 influence sociale</strong></p>
+<p>Une décision émotionnelle n'est pas nécessairement une mauvaise décision, tout comme une décision réfléchie n'est pas automatiquement parfaite.</p>
+<p>Le fonctionnement décisionnel humain repose sur une interaction complexe entre <strong>émotions, cognition, expériences passées, attentes, contexte et conséquences anticipées</strong>.</p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="emotions-emotions-attention-et-perception.html"><span class="similar-icon">❤️</span>Émotions, attention et perception</a><a class="similar-item" href="emotions-emotions-memoire-et-apprentissage.html"><span class="similar-icon">❤️</span>Émotions, mémoire et apprentissage</a><a class="similar-item" href="emotions-emotions-intenses-et-debordement-emotionnel.html"><span class="similar-icon">❤️</span>Émotions intenses et débordement émotionnel</a></div>
+    </div>
+    <a class="back-link" href="../categorie/emotions.html">← Retour à « Émotions et comportements humains »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

@@ -2,12 +2,1043 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/mecanismes-les-mecanismes-lies-aux-pensees/">
-<link rel="canonical" href="/chapitre/mecanismes-les-mecanismes-lies-aux-pensees/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/mecanismes-les-mecanismes-lies-aux-pensees/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les mécanismes liés aux pensées — Mon Esprit</title>
+<meta name="description" content="Les mécanismes liés aux pensées, dans la catégorie Mécanismes de défense de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/mecanismes-les-mecanismes-lies-aux-pensees/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#41-la-compartimentation">🧠 4.1 La compartimentation</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#exemple">💭 Exemple</a></li><li><a href="#fonction">⚙️ Fonction</a></li></ul></li><li><a href="#42-la-minimisation">🪞 4.2 La minimisation</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#exemple_1">💭 Exemple</a></li><li><a href="#a-distinguer-du-deni">⚠️ À distinguer du déni</a></li></ul></li><li><a href="#43-la-devalorisation">🧠 4.3 La dévalorisation</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#exemple_2">💭 Exemple</a></li><li><a href="#fonction_1">🧩 Fonction</a></li></ul></li><li><a href="#44-lidealisation">🌟 4.4 L'idéalisation</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#exemple_3">💭 Exemple</a></li><li><a href="#relation-avec-la-devalorisation">🔄 Relation avec la dévalorisation</a></li></ul></li><li><a href="#45-lomnipotence">👑 4.5 L'omnipotence</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#exemple_4">💭 Exemple</a></li><li><a href="#fonction_2">🧠 Fonction</a></li></ul></li><li><a href="#46-la-fantaisie-comme-mecanisme-defensif">🎭 4.6 La fantaisie comme mécanisme défensif</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#exemple_5">💭 Exemple</a></li><li><a href="#important">⚠️ Important</a></li></ul></li><li><a href="#47-lintellectualisation">🧩 4.7 L'intellectualisation</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#exemple_6">💭 Exemple</a></li><li><a href="#fonction_3">🧠 Fonction</a></li></ul></li><li><a href="#48-la-rationalisation">🧮 4.8 La rationalisation</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#exemple_7">💭 Exemple</a></li><li><a href="#fonction_4">🧠 Fonction</a></li></ul></li><li><a href="#49-lannulation-retroactive">🔄 4.9 L'annulation rétroactive</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#exemple_8">💭 Exemple</a></li><li><a href="#fonction_5">🧠 Fonction</a></li></ul></li><li><a href="#410-la-pensee-magique">🧠 4.10 La pensée magique</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#exemple_9">💭 Exemple</a></li><li><a href="#important_1">⚠️ Important</a></li></ul></li><li><a href="#411-le-controle">🧱 4.11 Le contrôle</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#exemple_10">💭 Exemple</a></li><li><a href="#fonction_6">🧠 Fonction</a></li><li><a href="#a-distinguer">⚠️ À distinguer</a></li></ul></li><li><a href="#412-la-justification">🔍 4.12 La justification</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#exemple_11">💭 Exemple</a></li><li><a href="#a-retenir">🧠 À retenir</a></li></ul></li><li><a href="#413-la-projection">🪞 4.13 La projection</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#exemple_12">💭 Exemple</a></li><li><a href="#fonction_7">🧠 Fonction</a></li></ul></li><li><a href="#414-le-clivage">🧩 4.14 Le clivage</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#exemple_13">💭 Exemple</a></li><li><a href="#fonction_8">🧠 Fonction</a></li></ul></li><li><a href="#415-la-dissociation">🧠 4.15 La dissociation</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#exemple_14">💭 Exemple</a></li><li><a href="#important_2">⚠️ Important</a></li></ul></li><li><a href="#416-levitement-cognitif">🌫️ 4.16 L'évitement cognitif</a><ul class="sidebar-sublist"><li><a href="#definition_15">🔎 Définition</a></li><li><a href="#exemple_15">💭 Exemple</a></li><li><a href="#fonction_9">🧠 Fonction</a></li></ul></li><li><a href="#417-le-deplacement-de-la-pensee">🔀 4.17 Le déplacement de la pensée</a><ul class="sidebar-sublist"><li><a href="#definition_16">🔎 Définition</a></li><li><a href="#exemple_16">💭 Exemple</a></li></ul></li><li><a href="#418-la-formation-reactionnelle">🧠 4.18 La formation réactionnelle</a><ul class="sidebar-sublist"><li><a href="#definition_17">🔎 Définition</a></li><li><a href="#exemple_17">💭 Exemple</a></li><li><a href="#fonction_10">🧠 Fonction</a></li></ul></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Les mécanismes liés aux pensées',
+        category: 'Mécanismes de défense',
+        icon: '🧩'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/mecanismes.html">🧩 Mécanismes de défense</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Les mécanismes liés aux pensées</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-mecanismes)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <blockquote>
+<p>💭 Cette partie explore les mécanismes de défense qui interviennent principalement dans la manière dont une personne interprète, organise ou transforme mentalement une situation difficile.</p>
+<p>Certains de ces mécanismes sont des défenses psychodynamiques reconnues, tandis que d’autres correspondent davantage à des processus cognitifs ou à des notions utilisées en psychologie clinique.
+</p>
+</blockquote>
+<hr />
+<h2 id="41-la-compartimentation" class="entry-title hc-1">🧠 4.1 La compartimentation</h2>
+<h3 id="definition">🔎 Définition</h3>
+<p>La compartimentation consiste à séparer mentalement différentes idées, émotions, valeurs ou expériences afin qu'elles n'entrent pas directement en conflit.</p>
+<p>Une personne peut ainsi maintenir deux aspects contradictoires de sa vie sans ressentir immédiatement toute la tension créée par cette contradiction.</p>
+<h3 id="exemple">💭 Exemple</h3>
+<p>Une personne peut considérer qu'elle est très honnête tout en acceptant certains comportements malhonnêtes dans un contexte particulier, sans réellement confronter les deux aspects.</p>
+<h3 id="fonction">⚙️ Fonction</h3>
+<p>La compartimentation permet temporairement de réduire un conflit psychologique en maintenant certaines informations dans des « espaces » mentaux séparés.</p>
+<hr />
+<h2 id="42-la-minimisation" class="entry-title hc-2">🪞 4.2 La minimisation</h2>
+<h3 id="definition_1">🔎 Définition</h3>
+<p>La minimisation consiste à réduire l'importance, la gravité ou les conséquences d'une situation difficile.</p>
+<p>La personne peut reconnaître qu'un événement existe tout en lui attribuant une importance beaucoup plus faible qu'il n'en a réellement.</p>
+<h3 id="exemple_1">💭 Exemple</h3>
+<blockquote>
+<p>« Ce n'est pas si grave, tout le monde a des problèmes. »
+</p>
+</blockquote>
+<h3 id="a-distinguer-du-deni">⚠️ À distinguer du déni</h3>
+<p>Le déni peut consister à refuser une réalité.</p>
+<p>La minimisation reconnaît davantage cette réalité, mais en réduit l'importance.</p>
+<hr />
+<h2 id="43-la-devalorisation" class="entry-title hc-3">🧠 4.3 La dévalorisation</h2>
+<h3 id="definition_2">🔎 Définition</h3>
+<p>La dévalorisation consiste à diminuer mentalement la valeur d'une personne, d'un objet, d'une relation ou d'une réussite.</p>
+<p>Elle peut servir à réduire une déception, une frustration ou le sentiment d'avoir perdu quelque chose d'important.</p>
+<h3 id="exemple_2">💭 Exemple</h3>
+<p>Après une rupture, une personne peut progressivement considérer son ancien partenaire comme « sans intérêt » afin de rendre la séparation émotionnellement plus supportable.</p>
+<h3 id="fonction_1">🧩 Fonction</h3>
+<p>Elle peut protéger temporairement l'estime de soi ou réduire l'importance attribuée à une situation douloureuse.</p>
+<hr />
+<h2 id="44-lidealisation" class="entry-title hc-4">🌟 4.4 L'idéalisation</h2>
+<h3 id="definition_3">🔎 Définition</h3>
+<p>L'idéalisation consiste à attribuer à une personne ou à une situation des qualités exceptionnellement positives, parfois en minimisant ou en ignorant ses aspects négatifs.</p>
+<p>Elle peut être utilisée pour maintenir une représentation rassurante d'une personne ou d'une relation.</p>
+<h3 id="exemple_3">💭 Exemple</h3>
+<p>Considérer quelqu'un comme « parfait » malgré plusieurs comportements problématiques.</p>
+<h3 id="relation-avec-la-devalorisation">🔄 Relation avec la dévalorisation</h3>
+<p>L'idéalisation et la dévalorisation peuvent parfois fonctionner comme deux extrêmes opposés :</p>
+<p><strong>Idéalisation →</strong> « Cette personne est parfaite. »</p>
+<p><strong>Dévalorisation →</strong> « Cette personne ne vaut rien. »</p>
+<p>Ces représentations très polarisées peuvent être particulièrement visibles dans certaines difficultés relationnelles.</p>
+<hr />
+<h2 id="45-lomnipotence" class="entry-title hc-5">👑 4.5 L'omnipotence</h2>
+<h3 id="definition_4">🔎 Définition</h3>
+<p>L'omnipotence correspond à une tendance à se représenter comme ayant un contrôle, une capacité ou une puissance très importante.</p>
+<p>Dans certaines théories psychodynamiques, elle peut fonctionner comme une défense contre des sentiments d'impuissance, de vulnérabilité ou de dépendance.</p>
+<h3 id="exemple_4">💭 Exemple</h3>
+<blockquote>
+<p>« Si quelque chose tourne mal, c'est uniquement parce que je n'ai pas suffisamment contrôlé la situation. »
+</p>
+</blockquote>
+<h3 id="fonction_2">🧠 Fonction</h3>
+<p>Elle peut donner temporairement une impression de contrôle face à une situation vécue comme incertaine.</p>
+<hr />
+<h2 id="46-la-fantaisie-comme-mecanisme-defensif" class="entry-title hc-1">🎭 4.6 La fantaisie comme mécanisme défensif</h2>
+<h3 id="definition_5">🔎 Définition</h3>
+<p>La fantaisie peut être utilisée pour s'éloigner mentalement d'une réalité difficile et construire une situation imaginaire plus satisfaisante.</p>
+<p>Elle peut permettre d'imaginer une réussite, une relation, une revanche, une autre vie ou une résolution idéale.</p>
+<h3 id="exemple_5">💭 Exemple</h3>
+<p>Une personne confrontée à une situation frustrante imagine régulièrement un scénario dans lequel tout se déroule parfaitement.</p>
+<h3 id="important">⚠️ Important</h3>
+<p>La fantaisie est une capacité psychologique normale. Elle devient particulièrement pertinente dans l'étude des mécanismes de défense lorsqu'elle est utilisée de manière répétée pour éviter une réalité difficile.</p>
+<hr />
+<h2 id="47-lintellectualisation" class="entry-title hc-2">🧩 4.7 L'intellectualisation</h2>
+<h3 id="definition_6">🔎 Définition</h3>
+<p>L'intellectualisation consiste à privilégier l'analyse logique, théorique ou abstraite d'une situation afin de prendre de la distance avec son aspect émotionnel.</p>
+<h3 id="exemple_6">💭 Exemple</h3>
+<p>Après un événement douloureux, une personne peut chercher immédiatement à comprendre les mécanismes psychologiques, biologiques ou scientifiques impliqués plutôt que de reconnaître ce qu'elle ressent.</p>
+<h3 id="fonction_3">🧠 Fonction</h3>
+<p>Elle peut permettre de conserver une impression de contrôle lorsque les émotions deviennent difficiles à supporter.</p>
+<hr />
+<h2 id="48-la-rationalisation" class="entry-title hc-3">🧮 4.8 La rationalisation</h2>
+<h3 id="definition_7">🔎 Définition</h3>
+<p>La rationalisation consiste à construire après coup une explication logique ou acceptable pour justifier une pensée, une décision ou un comportement dont les véritables motivations peuvent être différentes.</p>
+<h3 id="exemple_7">💭 Exemple</h3>
+<p>Une personne refuse une opportunité parce qu'elle a peur d'échouer, puis explique :</p>
+<blockquote>
+<p>« De toute façon, cette opportunité n'était pas intéressante. »
+</p>
+</blockquote>
+<h3 id="fonction_4">🧠 Fonction</h3>
+<p>La rationalisation permet notamment de préserver une image cohérente de soi.</p>
+<hr />
+<h2 id="49-lannulation-retroactive" class="entry-title hc-4">🔄 4.9 L'annulation rétroactive</h2>
+<h3 id="definition_8">🔎 Définition</h3>
+<p>L'annulation rétroactive consiste à tenter de neutraliser psychologiquement une pensée, une action ou une émotion jugée inacceptable en réalisant ensuite un comportement censé la « corriger ».</p>
+<h3 id="exemple_8">💭 Exemple</h3>
+<p>Une personne se montre très agressive envers quelqu'un puis devient immédiatement excessivement gentille pour tenter d'effacer psychologiquement ce qu'elle vient de faire.</p>
+<h3 id="fonction_5">🧠 Fonction</h3>
+<p>Elle peut réduire temporairement la culpabilité ou l'anxiété associée à un comportement ou une pensée.</p>
+<hr />
+<h2 id="410-la-pensee-magique" class="entry-title hc-5">🧠 4.10 La pensée magique</h2>
+<h3 id="definition_9">🔎 Définition</h3>
+<p>La pensée magique correspond à la croyance selon laquelle une pensée, une action ou un symbole peut provoquer directement un événement sans relation causale réaliste.</p>
+<h3 id="exemple_9">💭 Exemple</h3>
+<blockquote>
+<p>« Si je pense à quelque chose de mauvais, cela risque de se produire. »
+</p>
+</blockquote>
+<h3 id="important_1">⚠️ Important</h3>
+<p>La pensée magique existe à différents degrés et peut apparaître dans le développement normal, certaines croyances culturelles ou certains troubles psychologiques.</p>
+<p>Elle n'est donc pas automatiquement un mécanisme de défense ni un signe de trouble mental.</p>
+<hr />
+<h2 id="411-le-controle" class="entry-title hc-1">🧱 4.11 Le contrôle</h2>
+<h3 id="definition_10">🔎 Définition</h3>
+<p>Le contrôle peut devenir une stratégie défensive lorsqu'une personne cherche à organiser ou maîtriser excessivement son environnement afin de réduire une sensation d'incertitude ou de vulnérabilité.</p>
+<h3 id="exemple_10">💭 Exemple</h3>
+<p>Une personne vérifie constamment tous les détails d'une situation parce qu'elle supporte difficilement l'idée qu'un événement puisse échapper à son contrôle.</p>
+<h3 id="fonction_6">🧠 Fonction</h3>
+<p>Le contrôle peut procurer une impression temporaire de sécurité.</p>
+<h3 id="a-distinguer">⚠️ À distinguer</h3>
+<p>Le besoin de contrôle peut être une caractéristique normale de la personnalité. Il devient particulièrement important lorsqu'il devient rigide, excessif ou source de souffrance.</p>
+<hr />
+<h2 id="412-la-justification" class="entry-title hc-2">🔍 4.12 La justification</h2>
+<h3 id="definition_11">🔎 Définition</h3>
+<p>La justification consiste à présenter des raisons permettant de rendre une décision ou un comportement plus acceptable, cohérent ou compréhensible.</p>
+<p>Elle est proche de la rationalisation, mais peut être utilisée de manière plus générale et consciente.</p>
+<h3 id="exemple_11">💭 Exemple</h3>
+<blockquote>
+<p>« Je n'ai pas répondu parce que j'étais occupé. »
+</p>
+</blockquote>
+<p>Cette explication peut être parfaitement réelle, mais dans certains cas la justification peut aussi masquer une autre motivation.</p>
+<h3 id="a-retenir">🧠 À retenir</h3>
+<p>Toute justification n'est pas une défense psychologique.</p>
+<hr />
+<h2 id="413-la-projection" class="entry-title hc-3">🪞 4.13 La projection</h2>
+<h3 id="definition_12">🔎 Définition</h3>
+<p>La projection consiste à attribuer à une autre personne des pensées, émotions, intentions ou impulsions qui appartiennent principalement à soi-même.</p>
+<h3 id="exemple_12">💭 Exemple</h3>
+<p>Une personne qui ressent de la jalousie peut être convaincue que c'est l'autre qui est constamment jaloux.</p>
+<h3 id="fonction_7">🧠 Fonction</h3>
+<p>Elle peut permettre de maintenir une image de soi plus acceptable en plaçant certains éléments psychiques à l'extérieur de soi.</p>
+<hr />
+<h2 id="414-le-clivage" class="entry-title hc-4">🧩 4.14 Le clivage</h2>
+<h3 id="definition_13">🔎 Définition</h3>
+<p>Le clivage consiste à maintenir séparées des représentations contradictoires d'une même personne, d'une situation ou de soi-même.</p>
+<p>Une personne peut ainsi percevoir quelque chose comme entièrement positif ou entièrement négatif sans parvenir momentanément à intégrer les deux aspects.</p>
+<h3 id="exemple_13">💭 Exemple</h3>
+<blockquote>
+<p>« Cette personne est incroyable, elle ne fait jamais rien de mal. »
+</p>
+</blockquote>
+<p>Puis, après une déception :</p>
+<blockquote>
+<p>« C'est la pire personne qui existe. »
+</p>
+</blockquote>
+<h3 id="fonction_8">🧠 Fonction</h3>
+<p>Le clivage peut réduire la complexité et la contradiction psychologique en séparant fortement les représentations.</p>
+<hr />
+<h2 id="415-la-dissociation" class="entry-title hc-5">🧠 4.15 La dissociation</h2>
+<h3 id="definition_14">🔎 Définition</h3>
+<p>La dissociation correspond à une perturbation ou une séparation entre certains éléments normalement intégrés de l'expérience psychique, comme les souvenirs, les émotions, les perceptions, l'identité ou la conscience.</p>
+<h3 id="exemple_14">💭 Exemple</h3>
+<p>Une personne peut avoir l'impression d'observer une situation comme si elle était extérieure à elle-même.</p>
+<h3 id="important_2">⚠️ Important</h3>
+<p>La dissociation existe sur un continuum. Certaines expériences dissociatives peuvent être brèves et relativement courantes, tandis que des formes importantes peuvent être associées à certains troubles psychologiques.</p>
+<hr />
+<h2 id="416-levitement-cognitif" class="entry-title hc-1">🌫️ 4.16 L'évitement cognitif</h2>
+<h3 id="definition_15">🔎 Définition</h3>
+<p>L'évitement cognitif consiste à détourner volontairement ou automatiquement son attention d'une pensée, d'une image mentale ou d'un sujet vécu comme inconfortable.</p>
+<h3 id="exemple_15">💭 Exemple</h3>
+<p>Une personne commence à penser à un événement douloureux puis se force immédiatement à penser à autre chose.</p>
+<h3 id="fonction_9">🧠 Fonction</h3>
+<p>Il peut réduire temporairement l'inconfort mental, mais peut aussi empêcher l'élaboration d'une expérience lorsqu'il devient systématique.</p>
+<hr />
+<h2 id="417-le-deplacement-de-la-pensee" class="entry-title hc-2">🔀 4.17 Le déplacement de la pensée</h2>
+<h3 id="definition_16">🔎 Définition</h3>
+<p>Le déplacement consiste à transférer une émotion, une tension ou une réaction liée à une source vers une autre cible jugée moins menaçante.</p>
+<p>Même s'il est principalement décrit comme un mécanisme émotionnel, il peut également influencer le contenu des pensées et les interprétations.</p>
+<h3 id="exemple_16">💭 Exemple</h3>
+<p>Après une journée très stressante, une personne peut être particulièrement irritée contre un proche pour un détail sans importance.</p>
+<hr />
+<h2 id="418-la-formation-reactionnelle" class="entry-title hc-3">🧠 4.18 La formation réactionnelle</h2>
+<h3 id="definition_17">🔎 Définition</h3>
+<p>La formation réactionnelle consiste à adopter ou exprimer une attitude qui s'oppose fortement à une émotion, une impulsion ou une pensée jugée inacceptable.</p>
+<h3 id="exemple_17">💭 Exemple</h3>
+<p>Une personne ressent une forte hostilité envers quelqu'un mais adopte avec cette personne une attitude extrêmement chaleureuse.</p>
+<h3 id="fonction_10">🧠 Fonction</h3>
+<p>Elle peut permettre de maintenir à distance une pensée ou une émotion vécue comme difficilement acceptable.</p>
+<hr />
+<h1 id="419-tableau-recapitulatif">📊 4.19 Tableau récapitulatif</h1>
+<table>
+<thead>
+<tr>
+<th>Mécanisme</th>
+<th>Fonction principale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🧩 Compartimentation</td>
+<td>Séparer mentalement des éléments contradictoires</td>
+</tr>
+<tr>
+<td>🔽 Minimisation</td>
+<td>Réduire l'importance d'une difficulté</td>
+</tr>
+<tr>
+<td>🪞 Dévalorisation</td>
+<td>Diminuer la valeur d'une personne ou situation</td>
+</tr>
+<tr>
+<td>🌟 Idéalisation</td>
+<td>Amplifier les qualités positives</td>
+</tr>
+<tr>
+<td>👑 Omnipotence</td>
+<td>Maintenir une impression de puissance ou de contrôle</td>
+</tr>
+<tr>
+<td>🎭 Fantaisie</td>
+<td>S'éloigner mentalement d'une réalité difficile</td>
+</tr>
+<tr>
+<td>🧮 Intellectualisation</td>
+<td>Transformer l'émotion en analyse abstraite</td>
+</tr>
+<tr>
+<td>🔎 Rationalisation</td>
+<td>Construire une explication acceptable</td>
+</tr>
+<tr>
+<td>🔄 Annulation rétroactive</td>
+<td>Tenter de neutraliser une action ou pensée</td>
+</tr>
+<tr>
+<td>🧱 Contrôle</td>
+<td>Réduire l'incertitude par la maîtrise</td>
+</tr>
+<tr>
+<td>🪞 Projection</td>
+<td>Attribuer à autrui certains éléments internes</td>
+</tr>
+<tr>
+<td>🧩 Clivage</td>
+<td>Séparer des représentations contradictoires</td>
+</tr>
+<tr>
+<td>🧠 Dissociation</td>
+<td>Séparer certains éléments de l'expérience psychique</td>
+</tr>
+<tr>
+<td>🌫️ Évitement cognitif</td>
+<td>Éloigner une pensée inconfortable</td>
+</tr>
+<tr>
+<td>🔀 Déplacement</td>
+<td>Transférer une réaction vers une autre cible</td>
+</tr>
+<tr>
+<td>🔄 Formation réactionnelle</td>
+<td>Adopter l'attitude opposée à une tendance interne</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="420-comment-differencier-ces-mecanismes">🧠 4.20 — Comment différencier ces mécanismes ?</h1>
+<p>Certains mécanismes peuvent sembler très proches.</p>
+<h3 id="deni-vs-minimisation">🔽 Déni vs minimisation</h3>
+<p><strong>Déni :</strong> « Cela n'existe pas. »</p>
+<p><strong>Minimisation :</strong> « Cela existe, mais ce n'est pas important. »</p>
+<h3 id="rationalisation-vs-justification">🔎 Rationalisation vs justification</h3>
+<p><strong>Rationalisation :</strong> construction d'une explication permettant de rendre acceptable un comportement ou une décision, parfois sans conscience de la véritable motivation.</p>
+<p><strong>Justification :</strong> explication donnée pour défendre ou rendre compréhensible une action, sans être nécessairement défensive.</p>
+<h3 id="idealisation-vs-devalorisation">🌟 Idéalisation vs dévalorisation</h3>
+<p><strong>Idéalisation :</strong> représentation excessivement positive.</p>
+<p><strong>Dévalorisation :</strong> représentation excessivement négative.</p>
+<h3 id="clivage-vs-compartimentation">🧩 Clivage vs compartimentation</h3>
+<p><strong>Clivage :</strong> séparation de représentations contradictoires, souvent avec une forte polarisation.</p>
+<p><strong>Compartimentation :</strong> maintien séparé de différentes informations ou expériences afin qu'elles ne se confrontent pas directement.</p>
+<h3 id="intellectualisation-vs-evitement-cognitif">🧠 Intellectualisation vs évitement cognitif</h3>
+<p><strong>Intellectualisation :</strong> analyser une situation pour prendre de la distance avec l'émotion.</p>
+<p><strong>Évitement cognitif :</strong> chercher à ne pas penser au contenu inconfortable.</p>
+<hr />
+<h1 id="a-retenir_1">📌 À RETENIR</h1>
+<p>🧠 Les mécanismes liés aux pensées montrent que la défense psychologique ne concerne pas uniquement les émotions.</p>
+<p>Ils peuvent modifier :</p>
+<ul>
+<li>🔎 la manière d'interpréter une situation ;</li>
+<li>🪞 l'image de soi ;</li>
+<li>👤 la représentation des autres ;</li>
+<li>🧩 la perception des contradictions ;</li>
+<li>🧠 la façon de traiter une pensée difficile ;</li>
+<li>⚖️ la manière de préserver un sentiment de cohérence ;</li>
+<li>🛡️ la façon de réduire temporairement une tension psychologique.</li>
+</ul>
+<p>⚠️ Un mécanisme de défense isolé n'indique pas nécessairement un problème psychologique. Ces processus peuvent être présents chez toute personne et prendre des formes très différentes selon le contexte.</p>
+<blockquote>
+<p>🧩 <strong>Comprendre un mécanisme de défense ne consiste pas à étiqueter un comportement, mais à comprendre la fonction psychologique qu'il peut remplir.</strong>
+</p>
+</blockquote>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Mécanismes de défense »</h2>
+      <div class="similar-list"><a class="similar-item" href="mecanismes-les-mecanismes-lies-a-l-identite.html"><span class="similar-icon">🧩</span>Les mécanismes liés à l'identité</a><a class="similar-item" href="mecanismes-les-mecanismes-dans-les-relations.html"><span class="similar-icon">🧩</span>Les mécanismes dans les relations</a><a class="similar-item" href="mecanismes-les-mecanismes-face-au-stress-et-aux-conflits.html"><span class="similar-icon">🧩</span>Les mécanismes face au stress et aux conflits</a></div>
+    </div>
+    <a class="back-link" href="../categorie/mecanismes.html">← Retour à « Mécanismes de défense »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>

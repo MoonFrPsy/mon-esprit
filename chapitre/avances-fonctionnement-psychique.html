@@ -2,12 +2,1167 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=/chapitre/avances-fonctionnement-psychique/">
-<link rel="canonical" href="/chapitre/avances-fonctionnement-psychique/">
-<title>Redirection…</title>
-<script>window.location.replace('/chapitre/avances-fonctionnement-psychique/');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonctionnement psychique — Mon Esprit</title>
+<meta name="description" content="Fonctionnement psychique, dans la catégorie Concepts avancés de l'encyclopédie Mon Esprit.">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<p>Cette page a déménagé. <a href="/chapitre/avances-fonctionnement-psychique/">Clique ici si tu n'es pas redirigé automatiquement.</a></p>
+<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="update-banner" id="update-banner" hidden data-count="27" data-titles='["Confirmations visuelles", "Nouveautés en fiches dépliables", "Catégorie masquée", "Entrées similaires", "Favoris"]'>
+  <a href="../nouveautes.html">
+    <span>🆕</span>
+    <span class="update-banner-text" id="update-banner-text">Confirmations visuelles</span>
+    <span class="update-banner-arrow">→</span>
+  </a>
+  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+</div>
+<div class="toast-container" id="toast-container" aria-live="polite"></div>
+<div class="floating-nav" id="floating-nav">
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
+  <a href="../index.html" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-title">Mon Esprit</a>
+    <nav class="site-nav">
+      <a href="../index.html#categories">Catégories</a>
+      <a href="../index.html#a-propos">À propos</a>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
+      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+    </nav>
+    <div class="site-search">
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <div class="search-results" id="search-results" hidden></div>
+    </div>
+  </div>
+</header>
+<div id="google_translate_element" style="display:none;"></div>
+
+<main class="container chapter-layout">
+  <aside class="chapter-sidebar">
+    <details open>
+      <summary class="sidebar-title">Dans ce chapitre</summary>
+      <ul class="sidebar-list"><li><a href="#21-quest-ce-que-le-fonctionnement-psychique">🧠 2.1 Qu'est-ce que le fonctionnement psychique ?</a></li><li><a href="#22-le-fonctionnement-psychique-comme-systeme">🧩 2.2 Le fonctionnement psychique comme système</a></li><li><a href="#23-les-processus-conscients">🧠 2.3 Les processus conscients</a></li><li><a href="#24-les-processus-non-conscients">🌑 2.4 Les processus non conscients</a></li><li><a href="#25-les-representations-mentales">🪞 2.5 Les représentations mentales</a></li><li><a href="#26-la-perception-et-linterpretation">🧠 2.6 La perception et l'interprétation</a></li><li><a href="#27-lattention-dans-le-fonctionnement-psychique">👁️ 2.7 L'attention dans le fonctionnement psychique</a></li><li><a href="#28-le-role-de-la-memoire">💾 2.8 Le rôle de la mémoire</a></li><li><a href="#29-les-pensees">💭 2.9 Les pensées</a></li><li><a href="#210-les-pensees-automatiques">🔄 2.10 Les pensées automatiques</a></li><li><a href="#211-les-emotions-dans-le-fonctionnement-psychique">❤️ 2.11 Les émotions dans le fonctionnement psychique</a></li><li><a href="#212-la-motivation">🎯 2.12 La motivation</a></li><li><a href="#213-les-objectifs-psychologiques">🧠 2.13 Les objectifs psychologiques</a></li><li><a href="#214-le-conflit-psychique">⚔️ 2.14 Le conflit psychique</a></li><li><a href="#215-lambivalence-psychologique">🔀 2.15 L'ambivalence psychologique</a></li><li><a href="#216-limage-de-soi">🪞 2.16 L'image de soi</a></li><li><a href="#217-le-concept-de-soi">🧩 2.17 Le concept de soi</a></li><li><a href="#218-la-metacognition">🧠 2.18 La métacognition</a></li><li><a href="#219-lintrospection">🪞 2.19 L'introspection</a></li><li><a href="#220-la-regulation-cognitive">🧠 2.20 La régulation cognitive</a></li><li><a href="#221-la-regulation-emotionnelle">❤️ 2.21 La régulation émotionnelle</a></li><li><a href="#222-les-mecanismes-de-defense">🛡️ 2.22 Les mécanismes de défense</a></li><li><a href="#223-les-strategies-dadaptation">🧩 2.23 Les stratégies d'adaptation</a></li><li><a href="#224-les-habitudes-psychologiques">🔄 2.24 Les habitudes psychologiques</a></li><li><a href="#225-les-automatismes">🧠 2.25 Les automatismes</a></li><li><a href="#226-linhibition">🚦 2.26 L'inhibition</a></li><li><a href="#227-la-flexibilite-psychologique">🔄 2.27 La flexibilité psychologique</a></li><li><a href="#228-la-rigidite-psychologique">🧱 2.28 La rigidité psychologique</a></li><li><a href="#229-ladaptation-psychologique">🧠 2.29 L'adaptation psychologique</a></li><li><a href="#230-linfluence-de-lenvironnement">🌍 2.30 L'influence de l'environnement</a></li><li><a href="#231-les-interactions-sociales">🧑‍🤝‍🧑 2.31 Les interactions sociales</a></li><li><a href="#232-la-cognition-sociale">🧠 2.32 La cognition sociale</a></li><li><a href="#233-les-representations-de-soi-et-des-autres">🪞 2.33 Les représentations de soi et des autres</a></li><li><a href="#234-les-boucles-de-retroaction">🔁 2.34 Les boucles de rétroaction</a></li><li><a href="#235-les-interactions-entre-cognition-et-emotion">🧠 2.35 Les interactions entre cognition et émotion</a></li><li><a href="#236-les-interactions-entre-cerveau-et-corps">🫀 2.36 Les interactions entre cerveau et corps</a></li><li><a href="#237-les-differences-individuelles">🧩 2.37 Les différences individuelles</a></li><li><a href="#238-le-fonctionnement-psychique-evolue-t-il">🔄 2.38 Le fonctionnement psychique évolue-t-il ?</a></li><li><a href="#239-peut-on-comprendre-completement-le-fonctionnement-psychique">🧠 2.39 Peut-on comprendre complètement le fonctionnement psychique ?</a></li><li><a href="#240-pourquoi-etudier-le-fonctionnement-psychique">🌌 2.40 Pourquoi étudier le fonctionnement psychique ?</a></li></ul>
+    </details>
+  </aside>
+  <div class="prose prose-wide">
+    <script>
+      window.__chapterMeta = {
+        title: 'Fonctionnement psychique',
+        category: 'Concepts avancés',
+        icon: '🔬'
+      };
+    </script>
+    <div class="article-header">
+      <span class="category"><a href="../categorie/avances.html">🔬 Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <h1>Fonctionnement psychique</h1>
+    </div>
+    <div id="resume-banner"></div>
+    
+    <div class="cat-banner chapter-banner" style="--accent:var(--acc-avances)">
+      <svg class="cat-banner-icon" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg>
+    </div>
+    <div class="article-body">
+      <p>Le fonctionnement psychique désigne l'ensemble des processus par lesquels une personne perçoit son environnement, traite les informations, ressent des émotions, forme des représentations, construit des pensées, prend des décisions et adapte son comportement.</p>
+<p>Il ne correspond pas à une seule fonction du cerveau ou à un mécanisme unique. Il résulte de l'interaction permanente entre de nombreux processus.</p>
+<p>Une situation extérieure peut être perçue, interprétée et mémorisée. Cette interprétation peut provoquer une émotion, modifier l'attention, influencer les pensées et conduire à un comportement. Le comportement produit ensuite de nouvelles conséquences qui peuvent modifier les émotions, les représentations et les interprétations futures.</p>
+<p>Le fonctionnement psychique peut donc être considéré comme <strong>dynamique</strong>, <strong>multifactoriel</strong> et <strong>évolutif</strong>.</p>
+<hr />
+<h2 id="21-quest-ce-que-le-fonctionnement-psychique" class="entry-title hc-1">🧠 2.1 Qu'est-ce que le fonctionnement psychique ?</h2>
+<p>Le fonctionnement psychique correspond à la manière dont différents processus mentaux et émotionnels s'organisent et interagissent.</p>
+<p>Il comprend notamment :</p>
+<ul>
+<li>la perception</li>
+<li>l'attention</li>
+<li>la mémoire</li>
+<li>les pensées</li>
+<li>les émotions</li>
+<li>les motivations</li>
+<li>les représentations mentales</li>
+<li>la conscience</li>
+<li>les comportements</li>
+<li>les relations avec les autres</li>
+<li>la perception de soi</li>
+</ul>
+<p>Ces processus ne fonctionnent pas indépendamment.</p>
+<p>Par exemple, une même situation peut être perçue différemment selon les souvenirs disponibles, l'état émotionnel, les attentes ou le contexte.</p>
+<hr />
+<h2 id="22-le-fonctionnement-psychique-comme-systeme" class="entry-title hc-2">🧩 2.2 Le fonctionnement psychique comme système</h2>
+<p>Le fonctionnement psychique peut être envisagé comme un système composé de plusieurs éléments qui s'influencent mutuellement.</p>
+<p>Une émotion peut modifier l'attention.</p>
+<p>L'attention peut modifier ce qui est mémorisé.</p>
+<p>La mémoire peut influencer l'interprétation d'une nouvelle situation.</p>
+<p>Cette interprétation peut provoquer une nouvelle émotion.</p>
+<p>On obtient alors une boucle :</p>
+<p><strong>Perception → interprétation → émotion → pensée → comportement → conséquence → nouvelle perception</strong></p>
+<p>Cette organisation explique pourquoi il est souvent difficile de déterminer une cause unique à un phénomène psychologique.</p>
+<hr />
+<h2 id="23-les-processus-conscients" class="entry-title hc-3">🧠 2.3 Les processus conscients</h2>
+<p>Les processus conscients correspondent aux contenus mentaux dont une personne peut avoir une expérience consciente à un moment donné.</p>
+<p>Il peut s'agir :</p>
+<ul>
+<li>d'une pensée</li>
+<li>d'une sensation</li>
+<li>d'une émotion</li>
+<li>d'une perception</li>
+<li>d'un souvenir</li>
+<li>d'une intention</li>
+</ul>
+<p>La conscience possède toutefois une capacité limitée.</p>
+<p>Il n'est pas possible de maintenir simultanément une attention consciente complète sur une quantité illimitée d'informations.</p>
+<p>Une grande partie du traitement de l'information se déroule donc sans accès conscient permanent.</p>
+<hr />
+<h2 id="24-les-processus-non-conscients" class="entry-title hc-4">🌑 2.4 Les processus non conscients</h2>
+<p>De nombreux processus psychologiques peuvent se produire sans être directement accessibles à la conscience.</p>
+<p>Cela peut concerner certains traitements perceptifs, automatismes, associations, habitudes, apprentissages ou processus de récupération de mémoire.</p>
+<p>Le terme « inconscient » peut toutefois avoir des significations différentes selon les modèles psychologiques.</p>
+<p>En psychologie cognitive, il peut simplement désigner un traitement auquel la personne n'a pas accès consciemment.</p>
+<p>Dans les approches psychodynamiques, l'inconscient possède une signification théorique plus large et peut notamment concerner des conflits, représentations ou motivations non conscients.</p>
+<p>Il est donc important de ne pas considérer toutes les utilisations du terme comme équivalentes.</p>
+<hr />
+<h2 id="25-les-representations-mentales" class="entry-title hc-5">🪞 2.5 Les représentations mentales</h2>
+<p>Une représentation mentale correspond à une manière dont une information, une personne, un objet, une situation ou soi-même est représenté psychologiquement.</p>
+<p>Ces représentations peuvent être liées à :</p>
+<ul>
+<li>des souvenirs</li>
+<li>des connaissances</li>
+<li>des images mentales</li>
+<li>des croyances</li>
+<li>des attentes</li>
+<li>des concepts</li>
+<li>des représentations de soi et des autres</li>
+</ul>
+<p>Elles permettent notamment d'interpréter des situations qui ne sont pas entièrement nouvelles.</p>
+<p>Une personne ne réagit donc pas uniquement à ce qui se trouve objectivement devant elle, mais également à la manière dont cette situation est représentée et interprétée.</p>
+<hr />
+<h2 id="26-la-perception-et-linterpretation" class="entry-title hc-1">🧠 2.6 La perception et l'interprétation</h2>
+<p>La perception ne consiste pas simplement à enregistrer passivement la réalité.</p>
+<p>Le cerveau sélectionne et organise les informations sensorielles disponibles.</p>
+<p>Les attentes, les connaissances antérieures et le contexte peuvent également influencer l'interprétation perceptive.</p>
+<p>Cela signifie qu'une même information sensorielle peut parfois recevoir des interprétations différentes selon le contexte.</p>
+<p>La perception constitue donc une interaction entre les informations provenant de l'environnement et les processus internes permettant de les interpréter.</p>
+<hr />
+<h2 id="27-lattention-dans-le-fonctionnement-psychique" class="entry-title hc-2">👁️ 2.7 L'attention dans le fonctionnement psychique</h2>
+<p>L'attention permet de sélectionner certaines informations parmi l'ensemble des informations disponibles.</p>
+<p>Elle joue donc un rôle central dans le fonctionnement psychique.</p>
+<p>Ce qui reçoit davantage d'attention peut être traité plus profondément ou avoir davantage de chances d'être mémorisé.</p>
+<p>L'état émotionnel peut également modifier l'orientation de l'attention.</p>
+<p>Par exemple, lorsqu'une situation est perçue comme menaçante, certains éléments associés à cette menace peuvent capter plus facilement l'attention.</p>
+<hr />
+<h2 id="28-le-role-de-la-memoire" class="entry-title hc-3">💾 2.8 Le rôle de la mémoire</h2>
+<p>La mémoire permet de conserver et de récupérer des informations issues d'expériences antérieures.</p>
+<p>Elle influence le fonctionnement psychique parce que les expériences passées peuvent servir à interpréter les situations présentes.</p>
+<p>Une situation actuelle peut ainsi activer des souvenirs, des connaissances ou des associations.</p>
+<p>La mémoire n'est cependant pas une reproduction parfaite du passé.</p>
+<p>Le rappel d'un événement peut être influencé par le contexte actuel, les connaissances acquises depuis l'événement et la manière dont la récupération se produit.</p>
+<hr />
+<h2 id="29-les-pensees" class="entry-title hc-4">💭 2.9 Les pensées</h2>
+<p>Les pensées correspondent à différents contenus et processus cognitifs.</p>
+<p>Elles peuvent prendre la forme de :</p>
+<ul>
+<li>raisonnements</li>
+<li>interprétations</li>
+<li>souvenirs</li>
+<li>anticipations</li>
+<li>jugements</li>
+<li>images mentales</li>
+<li>scénarios</li>
+<li>associations d'idées</li>
+</ul>
+<p>Certaines pensées sont intentionnelles et peuvent être volontairement développées.</p>
+<p>D'autres peuvent apparaître automatiquement sans avoir été consciemment recherchées.</p>
+<p>Le fonctionnement de la pensée dépend notamment de l'attention, de la mémoire, des émotions et du contexte.</p>
+<hr />
+<h2 id="210-les-pensees-automatiques" class="entry-title hc-5">🔄 2.10 Les pensées automatiques</h2>
+<p>Une pensée automatique est une pensée ou une interprétation qui apparaît rapidement, parfois sans réflexion consciente préalable.</p>
+<p>Elle peut être déclenchée par une situation, un souvenir, une sensation ou une association.</p>
+<p>Les pensées automatiques peuvent être très rapides et difficiles à remarquer précisément.</p>
+<p>Elles ne sont pas nécessairement négatives ou problématiques.</p>
+<p>Une grande partie du fonctionnement quotidien repose sur des traitements rapides qui évitent de devoir analyser consciemment chaque situation.</p>
+<hr />
+<h2 id="211-les-emotions-dans-le-fonctionnement-psychique" class="entry-title hc-1">❤️ 2.11 Les émotions dans le fonctionnement psychique</h2>
+<p>Les émotions participent à l'organisation du comportement et à l'évaluation des situations.</p>
+<p>Elles peuvent modifier :</p>
+<ul>
+<li>l'attention</li>
+<li>la mémoire</li>
+<li>la perception</li>
+<li>la motivation</li>
+<li>les décisions</li>
+<li>les comportements</li>
+<li>les interactions sociales</li>
+</ul>
+<p>Une émotion ne constitue donc pas simplement une sensation interne.</p>
+<p>Elle peut modifier temporairement la manière dont différentes informations sont traitées.</p>
+<hr />
+<h2 id="212-la-motivation" class="entry-title hc-2">🎯 2.12 La motivation</h2>
+<p>La motivation correspond aux processus qui orientent et maintiennent certains comportements vers un objectif ou une conséquence recherchée.</p>
+<p>Elle peut être influencée par :</p>
+<ul>
+<li>les besoins</li>
+<li>les récompenses</li>
+<li>les émotions</li>
+<li>les valeurs</li>
+<li>les objectifs</li>
+<li>les attentes</li>
+<li>les expériences précédentes</li>
+</ul>
+<p>La motivation n'est pas toujours consciente.</p>
+<p>Certains comportements peuvent être fortement influencés par des habitudes ou des récompenses sans faire l'objet d'une réflexion explicite.</p>
+<hr />
+<h2 id="213-les-objectifs-psychologiques" class="entry-title hc-3">🧠 2.13 Les objectifs psychologiques</h2>
+<p>Les objectifs permettent d'orienter le comportement vers un résultat souhaité.</p>
+<p>Ils peuvent être immédiats ou à long terme.</p>
+<p>Plusieurs objectifs peuvent également exister simultanément.</p>
+<p>Une personne peut par exemple vouloir obtenir une récompense tout en souhaitant éviter une conséquence négative.</p>
+<p>Le fonctionnement psychique doit alors gérer un conflit entre différentes tendances comportementales.</p>
+<hr />
+<h2 id="214-le-conflit-psychique" class="entry-title hc-4">⚔️ 2.14 Le conflit psychique</h2>
+<p>Un conflit psychique peut apparaître lorsque plusieurs tendances, objectifs, besoins ou représentations sont difficilement compatibles.</p>
+<p>Par exemple :</p>
+<p><strong>vouloir se rapprocher → vouloir se protéger</strong></p>
+<p>ou :</p>
+<p><strong>rechercher une récompense immédiate → poursuivre un objectif à long terme</strong></p>
+<p>Le conflit peut provoquer une ambivalence, une hésitation ou une tension psychologique.</p>
+<p>Dans certaines approches psychodynamiques, le concept de conflit psychique possède une signification plus spécifique et concerne notamment l'opposition entre différentes forces ou motivations psychiques.</p>
+<hr />
+<h2 id="215-lambivalence-psychologique" class="entry-title hc-5">🔀 2.15 L'ambivalence psychologique</h2>
+<p>L'ambivalence correspond à la coexistence de tendances, émotions ou évaluations contradictoires concernant un même objet, une même personne ou une même situation.</p>
+<p>Une personne peut par exemple ressentir simultanément de l'attachement et de la colère.</p>
+<p>L'ambivalence n'est pas nécessairement pathologique.</p>
+<p>Elle peut simplement refléter la complexité d'une situation.</p>
+<p>Les objets psychologiques importants sont rarement associés à une seule émotion ou à une seule représentation.</p>
+<hr />
+<h2 id="216-limage-de-soi" class="entry-title hc-1">🪞 2.16 L'image de soi</h2>
+<p>L'image de soi correspond à la manière dont une personne se représente elle-même.</p>
+<p>Elle peut inclure des caractéristiques physiques, psychologiques, sociales, relationnelles et comportementales.</p>
+<p>Cette représentation n'est pas toujours identique à la manière dont les autres perçoivent la personne.</p>
+<p>Elle peut également changer selon le contexte.</p>
+<p>L'image de soi peut être influencée par les expériences passées, les comparaisons sociales, les interactions et les souvenirs autobiographiques.</p>
+<hr />
+<h2 id="217-le-concept-de-soi" class="entry-title hc-2">🧩 2.17 Le concept de soi</h2>
+<p>Le concept de soi correspond à l'ensemble organisé des connaissances et représentations qu'une personne possède à propos d'elle-même.</p>
+<p>Il peut inclure :</p>
+<p><strong>« Je suis... »</strong></p>
+<p>suivi de caractéristiques, rôles, valeurs, compétences, relations ou appartenances.</p>
+<p>Le concept de soi évolue au cours de la vie.</p>
+<p>Certaines caractéristiques restent relativement stables tandis que d'autres sont modifiées par les expériences et les changements de contexte.</p>
+<hr />
+<h2 id="218-la-metacognition" class="entry-title hc-3">🧠 2.18 La métacognition</h2>
+<p>La métacognition correspond à la capacité à réfléchir sur ses propres processus cognitifs.</p>
+<p>Elle peut concerner la connaissance de ses capacités mais aussi la surveillance de son propre fonctionnement mental.</p>
+<p>Par exemple :</p>
+<p>« Je sais que j'ai du mal à me concentrer lorsque plusieurs informations arrivent en même temps. »</p>
+<p>La métacognition permet donc d'observer partiellement son propre fonctionnement cognitif.</p>
+<p>Elle joue notamment un rôle dans l'apprentissage, la résolution de problèmes et la régulation des stratégies cognitives.</p>
+<hr />
+<h2 id="219-lintrospection" class="entry-title hc-4">🪞 2.19 L'introspection</h2>
+<p>L'introspection correspond à l'observation ou à l'examen de ses propres expériences mentales.</p>
+<p>Elle peut concerner les pensées, émotions, sensations ou intentions.</p>
+<p>Cependant, l'accès introspectif n'est pas parfait.</p>
+<p>Une personne peut avoir accès à certains aspects de son expérience sans avoir conscience de tous les processus qui ont contribué à cette expérience.</p>
+<p>L'introspection constitue donc une source d'information importante mais limitée sur le fonctionnement psychique.</p>
+<hr />
+<h2 id="220-la-regulation-cognitive" class="entry-title hc-5">🧠 2.20 La régulation cognitive</h2>
+<p>La régulation cognitive désigne les processus permettant notamment de modifier, organiser ou contrôler certaines activités mentales.</p>
+<p>Elle peut concerner :</p>
+<ul>
+<li>l'attention</li>
+<li>les pensées</li>
+<li>les stratégies de résolution de problèmes</li>
+<li>la planification</li>
+<li>l'inhibition</li>
+<li>la flexibilité cognitive</li>
+</ul>
+<p>Elle permet notamment d'adapter le fonctionnement mental aux objectifs et aux exigences d'une situation.</p>
+<hr />
+<h2 id="221-la-regulation-emotionnelle" class="entry-title hc-1">❤️ 2.21 La régulation émotionnelle</h2>
+<p>La régulation émotionnelle désigne les processus permettant d'influencer les émotions.</p>
+<p>Elle peut agir sur :</p>
+<ul>
+<li>leur intensité</li>
+<li>leur durée</li>
+<li>leur expression</li>
+<li>leur déclenchement</li>
+<li>leur interprétation</li>
+</ul>
+<p>Réguler une émotion ne signifie pas nécessairement la supprimer.</p>
+<p>Il peut également s'agir de modifier la manière dont elle est comprise ou exprimée.</p>
+<p>Différentes stratégies peuvent être utilisées selon le contexte.</p>
+<hr />
+<h2 id="222-les-mecanismes-de-defense" class="entry-title hc-2">🛡️ 2.22 Les mécanismes de défense</h2>
+<p>Les mécanismes de défense sont des processus psychologiques décrits principalement dans les modèles psychodynamiques.</p>
+<p>Ils permettent notamment de gérer certains conflits, tensions ou expériences psychologiques difficiles.</p>
+<p>Parmi les mécanismes fréquemment étudiés figurent le déni, la projection, le déplacement, la rationalisation, le refoulement ou encore la sublimation.</p>
+<p>Ils peuvent être relativement adaptatifs ou devenir problématiques lorsqu'ils sont extrêmement rigides, fréquents ou inadaptés au contexte.</p>
+<p>Le concept de défense doit cependant être distingué d'un diagnostic psychiatrique.</p>
+<hr />
+<h2 id="223-les-strategies-dadaptation" class="entry-title hc-3">🧩 2.23 Les stratégies d'adaptation</h2>
+<p>Les stratégies d'adaptation, souvent regroupées sous le terme de <strong>coping</strong>, désignent les moyens utilisés pour faire face à une situation difficile ou exigeante.</p>
+<p>Elles peuvent être orientées vers :</p>
+<ul>
+<li>la résolution du problème</li>
+<li>la régulation émotionnelle</li>
+<li>la recherche de soutien</li>
+<li>la modification de la situation</li>
+<li>l'acceptation</li>
+<li>la réorganisation des priorités</li>
+</ul>
+<p>Le coping est généralement étudié comme un processus d'adaptation plutôt que comme un mécanisme inconscient.</p>
+<p>Il est donc important de le distinguer des mécanismes de défense.</p>
+<hr />
+<h2 id="224-les-habitudes-psychologiques" class="entry-title hc-4">🔄 2.24 Les habitudes psychologiques</h2>
+<p>Certaines réponses psychologiques deviennent progressivement automatisées lorsqu'elles sont répétées.</p>
+<p>Une manière de penser, d'interpréter une situation ou de réagir émotionnellement peut ainsi devenir habituelle.</p>
+<p>Les habitudes peuvent faciliter le fonctionnement quotidien puisqu'elles réduisent la quantité de traitement nécessaire.</p>
+<p>Elles peuvent toutefois devenir moins adaptées lorsque le contexte change.</p>
+<hr />
+<h2 id="225-les-automatismes" class="entry-title hc-5">🧠 2.25 Les automatismes</h2>
+<p>Un automatisme est une réponse qui peut être produite avec relativement peu de contrôle conscient.</p>
+<p>Les automatismes peuvent être cognitifs, perceptifs, émotionnels ou comportementaux.</p>
+<p>Ils permettent d'effectuer de nombreuses tâches sans mobiliser constamment une attention consciente importante.</p>
+<p>Cependant, certains automatismes peuvent entrer en conflit avec des objectifs conscients.</p>
+<p>Le fonctionnement psychique doit alors mobiliser des mécanismes de contrôle et d'inhibition.</p>
+<hr />
+<h2 id="226-linhibition" class="entry-title hc-1">🚦 2.26 L'inhibition</h2>
+<p>L'inhibition correspond à la capacité à réduire ou empêcher une réponse qui n'est pas adaptée à la situation ou qui entre en conflit avec un objectif.</p>
+<p>Elle peut concerner une pensée, une réponse motrice, une impulsion ou une information.</p>
+<p>L'inhibition constitue une composante importante des fonctions exécutives.</p>
+<p>Elle permet notamment de ne pas répondre automatiquement à chaque stimulus présent dans l'environnement.</p>
+<hr />
+<h2 id="227-la-flexibilite-psychologique" class="entry-title hc-2">🔄 2.27 La flexibilité psychologique</h2>
+<p>La flexibilité psychologique correspond à la capacité à modifier son fonctionnement lorsque les circonstances changent.</p>
+<p>Elle peut concerner :</p>
+<ul>
+<li>les pensées</li>
+<li>les stratégies</li>
+<li>les émotions</li>
+<li>les comportements</li>
+<li>les objectifs</li>
+</ul>
+<p>Une personne flexible n'utilise pas nécessairement toujours la même stratégie.</p>
+<p>Elle peut modifier son approche lorsqu'une stratégie précédente ne fonctionne plus.</p>
+<p>La flexibilité constitue donc une composante importante de l'adaptation.</p>
+<hr />
+<h2 id="228-la-rigidite-psychologique" class="entry-title hc-3">🧱 2.28 La rigidité psychologique</h2>
+<p>La rigidité psychologique correspond à une difficulté à modifier certaines manières de penser, ressentir ou agir malgré un changement de contexte.</p>
+<p>Elle peut concerner les croyances, les comportements, les habitudes ou les stratégies d'adaptation.</p>
+<p>La rigidité n'est cependant pas automatiquement pathologique.</p>
+<p>Une certaine stabilité est nécessaire au fonctionnement psychologique.</p>
+<p>Elle devient surtout problématique lorsqu'elle empêche fortement l'adaptation aux situations nouvelles.</p>
+<hr />
+<h2 id="229-ladaptation-psychologique" class="entry-title hc-4">🧠 2.29 L'adaptation psychologique</h2>
+<p>L'adaptation correspond à la capacité à ajuster le fonctionnement aux exigences de l'environnement.</p>
+<p>Elle peut nécessiter :</p>
+<p><strong>percevoir → comprendre → évaluer → décider → agir → observer les conséquences → ajuster</strong></p>
+<p>L'adaptation n'implique pas toujours de modifier l'environnement.</p>
+<p>Elle peut également consister à modifier son comportement, ses attentes, ses stratégies ou ses objectifs.</p>
+<hr />
+<h2 id="230-linfluence-de-lenvironnement" class="entry-title hc-5">🌍 2.30 L'influence de l'environnement</h2>
+<p>Le fonctionnement psychique ne peut pas être compris indépendamment de l'environnement.</p>
+<p>Les relations sociales, les expériences, les contraintes, les ressources disponibles, le contexte culturel et les événements de vie peuvent influencer les processus psychologiques.</p>
+<p>L'environnement peut également être modifié par les comportements.</p>
+<p>Il existe donc une influence dans les deux directions :</p>
+<p><strong>individu ↔ environnement</strong></p>
+<hr />
+<h2 id="231-les-interactions-sociales" class="entry-title hc-1">🧑‍🤝‍🧑 2.31 Les interactions sociales</h2>
+<p>Les interactions avec les autres peuvent modifier les pensées, émotions et comportements.</p>
+<p>Une interaction peut notamment fournir :</p>
+<ul>
+<li>des informations</li>
+<li>du soutien</li>
+<li>une récompense</li>
+<li>une menace</li>
+<li>une validation</li>
+<li>une critique</li>
+<li>une nouvelle perspective</li>
+</ul>
+<p>Les processus sociaux participent donc directement au fonctionnement psychique.</p>
+<hr />
+<h2 id="232-la-cognition-sociale" class="entry-title hc-2">🧠 2.32 La cognition sociale</h2>
+<p>La cognition sociale correspond à l'ensemble des processus permettant notamment de comprendre et d'interpréter les autres et les situations sociales.</p>
+<p>Elle comprend notamment :</p>
+<ul>
+<li>la perception sociale</li>
+<li>les attributions</li>
+<li>les inférences sur les intentions</li>
+<li>la prise de perspective</li>
+<li>les représentations des autres</li>
+<li>la compréhension des normes sociales</li>
+</ul>
+<p>Elle joue un rôle important dans les relations interpersonnelles.</p>
+<hr />
+<h2 id="233-les-representations-de-soi-et-des-autres" class="entry-title hc-3">🪞 2.33 Les représentations de soi et des autres</h2>
+<p>Le fonctionnement psychique comprend des représentations de soi mais également des représentations des autres.</p>
+<p>Ces représentations peuvent influencer les attentes relationnelles et les interprétations.</p>
+<p>Une personne peut par exemple développer certaines attentes concernant la manière dont les autres vont réagir.</p>
+<p>Ces représentations ne sont pas nécessairement conscientes et peuvent évoluer grâce aux nouvelles expériences.</p>
+<hr />
+<h2 id="234-les-boucles-de-retroaction" class="entry-title hc-4">🔁 2.34 Les boucles de rétroaction</h2>
+<p>Une boucle de rétroaction apparaît lorsqu'un processus influence un autre processus qui finit par revenir influencer le premier.</p>
+<p>Par exemple :</p>
+<p><strong>émotion → comportement → conséquence → nouvelle émotion</strong></p>
+<p>Ou :</p>
+<p><strong>pensée → émotion → comportement → nouvelle expérience → nouvelle pensée</strong></p>
+<p>Ces boucles permettent de comprendre pourquoi certains fonctionnements peuvent se maintenir dans le temps.</p>
+<p>Elles peuvent également contribuer à expliquer comment certains changements psychologiques apparaissent.</p>
+<hr />
+<h2 id="235-les-interactions-entre-cognition-et-emotion" class="entry-title hc-5">🧠 2.35 Les interactions entre cognition et émotion</h2>
+<p>La cognition et les émotions ne fonctionnent pas comme deux systèmes complètement séparés.</p>
+<p>Les émotions peuvent influencer l'attention, la mémoire et les décisions.</p>
+<p>Les processus cognitifs peuvent également influencer les émotions en modifiant l'interprétation d'une situation.</p>
+<p>On peut donc représenter leur interaction ainsi :</p>
+<p><strong>situation → interprétation → émotion → traitement de l'information → nouvelle interprétation</strong></p>
+<hr />
+<h2 id="236-les-interactions-entre-cerveau-et-corps" class="entry-title hc-1">🫀 2.36 Les interactions entre cerveau et corps</h2>
+<p>Le fonctionnement psychique implique également des interactions constantes entre cerveau et organisme.</p>
+<p>Les émotions peuvent s'accompagner de modifications physiologiques.</p>
+<p>Les sensations corporelles peuvent ensuite être perçues et interprétées par le cerveau.</p>
+<p>Cette interaction concerne notamment :</p>
+<ul>
+<li>le rythme cardiaque</li>
+<li>la respiration</li>
+<li>la tension musculaire</li>
+<li>la température</li>
+<li>les sensations digestives</li>
+</ul>
+<p>Une sensation corporelle n'est toutefois pas automatiquement d'origine psychologique.</p>
+<p>Les causes peuvent être biologiques, psychologiques, environnementales ou multiples.</p>
+<hr />
+<h2 id="237-les-differences-individuelles" class="entry-title hc-2">🧩 2.37 Les différences individuelles</h2>
+<p>Deux individus exposés à une même situation peuvent présenter des réactions très différentes.</p>
+<p>Ces différences peuvent être liées à :</p>
+<ul>
+<li>la personnalité</li>
+<li>les expériences antérieures</li>
+<li>les apprentissages</li>
+<li>les attentes</li>
+<li>les connaissances</li>
+<li>les ressources disponibles</li>
+<li>le contexte</li>
+<li>certains facteurs biologiques</li>
+</ul>
+<p>Il est donc difficile de déduire le fonctionnement psychologique d'une personne uniquement à partir d'une réaction isolée.</p>
+<hr />
+<h2 id="238-le-fonctionnement-psychique-evolue-t-il" class="entry-title hc-3">🔄 2.38 Le fonctionnement psychique évolue-t-il ?</h2>
+<p>Oui.</p>
+<p>Le fonctionnement psychique peut évoluer tout au long de la vie.</p>
+<p>Les expériences, les apprentissages, les relations, les changements environnementaux et le développement biologique peuvent modifier certains processus.</p>
+<p>Certaines caractéristiques peuvent rester relativement stables tandis que d'autres changent considérablement.</p>
+<p>Le fonctionnement psychique doit donc être considéré comme <strong>relativement organisé mais capable d'évolution</strong>.</p>
+<hr />
+<h2 id="239-peut-on-comprendre-completement-le-fonctionnement-psychique" class="entry-title hc-4">🧠 2.39 Peut-on comprendre complètement le fonctionnement psychique ?</h2>
+<p>Il est peu probable qu'un seul modèle puisse expliquer l'ensemble du fonctionnement psychique.</p>
+<p>Le fonctionnement humain possède plusieurs niveaux qui interagissent.</p>
+<p>Une explication uniquement biologique serait insuffisante pour décrire toutes les dimensions d'une relation sociale.</p>
+<p>Une explication uniquement cognitive ne suffirait pas non plus à décrire toutes les interactions entre cerveau, corps, environnement et histoire personnelle.</p>
+<p>La compréhension psychologique nécessite donc souvent de croiser plusieurs niveaux d'analyse.</p>
+<hr />
+<h2 id="240-pourquoi-etudier-le-fonctionnement-psychique" class="entry-title hc-5">🌌 2.40 Pourquoi étudier le fonctionnement psychique ?</h2>
+<p>Étudier le fonctionnement psychique permet de comprendre comment les différents processus psychologiques s'articulent.</p>
+<p>Une émotion ne doit pas être étudiée indépendamment de la cognition.</p>
+<p>Une pensée ne doit pas nécessairement être séparée de la mémoire.</p>
+<p>Un comportement peut être influencé par une émotion, une habitude, un objectif, une récompense ou une interaction sociale.</p>
+<p>Le fonctionnement psychique peut donc être compris comme un <strong>ensemble dynamique de processus en interaction permanente</strong>.</p>
+<p>Cette perspective permet de dépasser les explications trop simples et de mieux comprendre pourquoi les réactions humaines peuvent varier selon les individus et selon les situations.</p>
+<h1 id="a-retenir">📌 À RETENIR</h1>
+<p>Le fonctionnement psychique correspond à l'organisation et aux interactions entre de nombreux processus :</p>
+<p><strong>Perception → attention → mémoire → pensée → émotion → motivation → décision → comportement → environnement</strong></p>
+<p>Ces processus ne fonctionnent pas séparément.</p>
+<p>Le fonctionnement psychique est :</p>
+<p>🧩 <strong>Complexe</strong>, car il implique de nombreux processus.</p>
+<p>🔄 <strong>Dynamique</strong>, car les processus s'influencent continuellement.</p>
+<p>🌍 <strong>Contextuel</strong>, car l'environnement influence les réactions.</p>
+<p>🧠 <strong>Multiniveau</strong>, car les dimensions biologiques, cognitives, émotionnelles, comportementales et sociales peuvent interagir.</p>
+<p>🌱 <strong>Évolutif</strong>, car certaines caractéristiques du fonctionnement peuvent changer avec les expériences et le développement.</p>
+<p>Il est également important de distinguer plusieurs notions souvent confondues :</p>
+<p><strong>Mécanisme de défense ≠ stratégie de coping ≠ automatisme ≠ émotion ≠ comportement ≠ diagnostic.</strong></p>
+<p>Comprendre le fonctionnement psychique consiste finalement à étudier <strong>les relations entre tous ces éléments plutôt que de les considérer comme des phénomènes isolés.</strong></p>
+    </div>
+    
+    <div class="similar-block">
+      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="avances-structure-de-la-personnalite.html"><span class="similar-icon">🔬</span>Structure de la personnalité</a><a class="similar-item" href="avances-psychodynamique-et-inconscient.html"><span class="similar-icon">🔬</span>Psychodynamique et inconscient</a><a class="similar-item" href="avances-psychologie-du-developpement-avancee.html"><span class="similar-icon">🔬</span>Psychologie du développement avancée</a></div>
+    </div>
+    <a class="back-link" href="../categorie/avances.html">← Retour à « Concepts avancés »</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-disclaimer">Les contenus de ce site sont proposés à titre informatif et éducatif : ils présentent des connaissances générales en psychologie et peuvent être simplifiés, résumés ou reformulés pour en faciliter la lecture. Ils ne remplacent ni un diagnostic, ni un avis, ni un accompagnement par un professionnel de santé qualifié. L'auteur de ce site ne saurait être tenu responsable de l'usage fait des informations qu'il contient ni des décisions prises sur cette base. Ce site est une initiative personnelle et non commerciale.</p>
+    <p>&copy; 2026 Moon. Tous droits réservés. — <a href="../nouveautes.html" class="footer-changelog-link">Nouveautés du site</a></p>
+  </div>
+</footer>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'fr', includedLanguages: 'en', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+</script>
+<script>
+(function () {
+  // Bannière "nouveauté" : affichée si la personne n'a pas encore vu
+  // la dernière mise à jour listée dans le journal, mémorisée ensuite.
+  // Le texte tourne parmi les dernières nouveautés toutes les 10 secondes.
+  var banner = document.getElementById('update-banner');
+  if (!banner) return;
+  var currentCount = parseInt(banner.getAttribute('data-count'), 10) || 0;
+  var seenCount = parseInt(localStorage.getItem('mon-esprit-updates-seen') || '0', 10);
+  if (currentCount > seenCount) {
+    banner.hidden = false;
+  }
+
+  var textEl = document.getElementById('update-banner-text');
+  var titles = [];
+  try { titles = JSON.parse(banner.getAttribute('data-titles')) || []; } catch (e) {}
+  if (textEl && titles.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % titles.length;
+      textEl.classList.add('fading');
+      setTimeout(function () {
+        textEl.textContent = titles[idx];
+        textEl.classList.remove('fading');
+      }, 350);
+    }, 10000);
+  }
+
+  var closeBtn = document.getElementById('update-banner-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      banner.hidden = true;
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+  var link = banner.querySelector('a');
+  if (link) {
+    link.addEventListener('click', function () {
+      localStorage.setItem('mon-esprit-updates-seen', String(currentCount));
+    });
+  }
+})();
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+// Notification "toast" discrète, réutilisée par plusieurs boutons.
+function showToast(msg) {
+  var container = document.getElementById('toast-container');
+  if (!container) return;
+  var t = document.createElement('div');
+  t.className = 'toast';
+  t.textContent = msg;
+  container.appendChild(t);
+  requestAnimationFrame(function () { t.classList.add('show'); });
+  setTimeout(function () {
+    t.classList.remove('show');
+    setTimeout(function () { t.remove(); }, 300);
+  }, 2200);
+}
+</script>
+<script>
+(function () {
+  // Thème clair/sombre, mémorisé pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var saved = localStorage.getItem('mon-esprit-theme');
+  if (saved === 'light') {
+    root.setAttribute('data-theme', 'light');
+    btn.textContent = '☀️';
+  }
+  btn.addEventListener('click', function () {
+    var isLight = root.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('mon-esprit-theme', 'dark');
+      btn.textContent = '🌙';
+      showToast('🌙 Thème sombre activé');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('mon-esprit-theme', 'light');
+      btn.textContent = '☀️';
+      showToast('☀️ Thème clair activé');
+    }
+  });
+})();
+
+(function () {
+  // Police adaptée dyslexie, mémorisée pour les prochaines visites.
+  var root = document.documentElement;
+  var btn = document.getElementById('dyslexia-toggle');
+  if (!btn) return;
+  if (localStorage.getItem('mon-esprit-dyslexia') === '1') {
+    root.classList.add('dyslexia-font');
+    btn.classList.add('active');
+  }
+  btn.addEventListener('click', function () {
+    var on = root.classList.toggle('dyslexia-font');
+    btn.classList.toggle('active', on);
+    localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
+    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+  });
+})();
+</script>
+<script>
+(function () {
+  // Bascule FR/EN fiable via cookie Google Translate + rechargement.
+  // (L'ancienne méthode par sélecteur caché ne revenait pas toujours au
+  // français correctement — celle-ci fonctionne dans les deux sens et
+  // garde la langue choisie quand on change de page.)
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+
+  function getCookie(name) {
+    var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setCookie(name, value, days) {
+    var expires = '';
+    if (days) {
+      var d = new Date();
+      d.setTime(d.getTime() + days * 864e5);
+      expires = '; expires=' + d.toUTCString();
+    }
+    document.cookie = name + '=' + value + expires + '; path=/';
+  }
+  function eraseCookie(name) {
+    document.cookie = name + '=; Max-Age=-1; path=/';
+    document.cookie = name + '=; Max-Age=-1; path=/; domain=' + window.location.hostname;
+  }
+
+  var current = getCookie('googtrans');
+  var isEnglish = current === '/fr/en';
+  btn.textContent = isEnglish ? 'FR' : 'EN';
+
+  btn.addEventListener('click', function () {
+    if (isEnglish) {
+      eraseCookie('googtrans');
+    } else {
+      setCookie('googtrans', '/fr/en', 1);
+    }
+    window.location.reload();
+  });
+})();
+
+// ---------------------------------------------------------------
+// Historique de lecture + reprise de lecture (localStorage, propre
+// à cet appareil/navigateur — ne se synchronise pas ailleurs)
+// ---------------------------------------------------------------
+(function () {
+  var STORAGE_KEY = 'mon-esprit-history';
+  var MAX_ENTRIES = 30;
+
+  function loadHistory() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) { return []; }
+  }
+  function saveHistory(list) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : enregistre la visite + repère
+  // l'entrée en cours de lecture + affiche la bannière de reprise ---
+  if (window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    var history = loadHistory();
+    var existing = history.find(function (h) { return h.url === path; });
+    var record = existing || { url: path, title: meta.title, category: meta.category, icon: meta.icon };
+    record.title = meta.title;
+    record.category = meta.category;
+    record.icon = meta.icon;
+    record.timestamp = Date.now();
+
+    // Bannière "reprendre ici" si une position était enregistrée
+    if (existing && existing.lastEntryId && existing.lastEntryName) {
+      var banner = document.getElementById('resume-banner');
+      if (banner) {
+        var a = document.createElement('a');
+        a.href = '#' + existing.lastEntryId;
+        a.textContent = 'Reprendre ici →';
+        var box = document.createElement('div');
+        box.className = 'resume-callout';
+        box.textContent = 'Tu t\'étais arrêté à : ';
+        var strong = document.createElement('strong');
+        strong.textContent = existing.lastEntryName;
+        box.appendChild(strong);
+        box.appendChild(document.createTextNode(' — '));
+        box.appendChild(a);
+        banner.appendChild(box);
+      }
+    }
+
+    // Retire cette page si elle existait déjà plus bas, la remet en tête
+    history = history.filter(function (h) { return h.url !== path; });
+    history.unshift(record);
+    if (history.length > MAX_ENTRIES) history = history.slice(0, MAX_ENTRIES);
+    saveHistory(history);
+
+    // Repère l'entrée actuellement lue pendant le défilement
+    var headings = document.querySelectorAll('.article-body .entry-title[id]');
+    if (headings.length && 'IntersectionObserver' in window) {
+      var currentId = null, currentName = null;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            currentId = e.target.id;
+            currentName = e.target.textContent.trim();
+          }
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      headings.forEach(function (h) { observer.observe(h); });
+
+      window.addEventListener('beforeunload', function () {
+        if (!currentId) return;
+        var list = loadHistory();
+        var rec = list.find(function (h) { return h.url === path; });
+        if (rec) {
+          rec.lastEntryId = currentId;
+          rec.lastEntryName = currentName;
+          saveHistory(list);
+        }
+      });
+    }
+  }
+
+  // --- Sur la page d'accueil : affiche les derniers chapitres vus ---
+  var box = document.getElementById('reading-history');
+  if (box) {
+    var list = loadHistory();
+    if (list.length > 0) {
+      box.hidden = false;
+      var listEl = box.querySelector('.history-list');
+      var moreBtn = box.querySelector('.history-more');
+      var BASE = 3;
+
+      function render(showAll) {
+        listEl.innerHTML = '';
+        var shown = showAll ? list : list.slice(0, BASE);
+        shown.forEach(function (h) {
+          var a = document.createElement('a');
+          a.className = 'history-item';
+          a.href = h.url;
+          a.innerHTML = '<span class="history-icon">' + h.icon + '</span>' +
+            '<span><span class="history-title">' + h.title + '</span>' +
+            '<span class="history-cat">' + h.category + '</span></span>';
+          listEl.appendChild(a);
+        });
+        moreBtn.hidden = list.length <= BASE;
+      }
+      render(false);
+      var expanded = false;
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render(expanded);
+        moreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// Favoris : bouton étoile sur les chapitres, mémorisé pour les
+// prochaines visites, avec une liste dédiée sur l'accueil.
+// ---------------------------------------------------------------
+(function () {
+  var FAV_KEY = 'mon-esprit-favorites';
+  function loadFavorites() {
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveFavorites(list) {
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+
+  // --- Sur une page de chapitre : bouton étoile ---
+  var favBtn = document.getElementById('favorite-btn');
+  if (favBtn && window.__chapterMeta) {
+    var path = window.location.pathname;
+    var meta = window.__chapterMeta;
+    function refreshBtn() {
+      var isFav = loadFavorites().some(function (f) { return f.url === path; });
+      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.classList.toggle('is-favorite', isFav);
+      favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
+    }
+    favBtn.addEventListener('click', function () {
+      var favorites = loadFavorites();
+      var idx = favorites.findIndex(function (f) { return f.url === path; });
+      if (idx === -1) {
+        favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
+        showToast('⭐ Ajouté aux favoris');
+      } else {
+        favorites.splice(idx, 1);
+        showToast('⭐ Retiré des favoris');
+      }
+      saveFavorites(favorites);
+      refreshBtn();
+    });
+    refreshBtn();
+  }
+
+  // --- Sur l'accueil : liste des favoris ---
+  var favSection = document.getElementById('favorites-section');
+  if (favSection) {
+    var favorites = loadFavorites();
+    if (favorites.length > 0) {
+      favSection.hidden = false;
+      var favList = document.getElementById('favorites-list');
+      favorites.forEach(function (f) {
+        var a = document.createElement('a');
+        a.className = 'history-item';
+        a.href = f.url;
+        a.innerHTML = '<span class="history-icon">' + f.icon + '</span>' +
+          '<span><span class="history-title">' + f.title + '</span>' +
+          '<span class="history-cat">' + f.category + '</span></span>';
+        favList.appendChild(a);
+      });
+    }
+  }
+})();
+
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// ---------------------------------------------------------------
+// Boutons flottants Accueil / Retour (masqués sur l'accueil lui-même)
+// ---------------------------------------------------------------
+(function () {
+  var nav = document.getElementById('floating-nav');
+  if (!nav) return;
+  var path = window.location.pathname;
+  if (path === '/' || /\/index\.html$/.test(path) || /\/$/.test(path)) {
+    nav.hidden = true;
+    return;
+  }
+  var backBtn = document.getElementById('nav-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = document.querySelector('.back-link') ? document.querySelector('.back-link').href : '../index.html';
+    });
+  }
+})();
+
+// Recherche sur tout le site (index chargé une seule fois, résultats
+// en direct pendant la frappe). L'index est un fichier JSON séparé,
+// généré au moment de la création du site.
+// ---------------------------------------------------------------
+(function () {
+  var input = document.getElementById('site-search-input');
+  var box = document.getElementById('search-results');
+  if (!input || !box) return;
+  var index = null;
+  var indexPromise = null;
+
+  function loadIndex() {
+    if (!indexPromise) {
+      indexPromise = fetch('../search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { index = data; })
+        .catch(function () { index = []; });
+    }
+    return indexPromise;
+  }
+
+  function normalize(s) {
+    return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function runSearch(query) {
+    var terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length || !index) return [];
+    var results = [];
+    for (var i = 0; i < index.length; i++) {
+      var item = index[i];
+      var hay = normalize(item.title + ' ' + item.chapter + ' ' + item.category + ' ' + item.snippet);
+      var matchAll = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (matchAll) {
+        var titleNorm = normalize(item.title);
+        var score = titleNorm.indexOf(normalize(query)) === 0 ? 0
+                  : titleNorm.indexOf(terms[0]) !== -1 ? 1 : 2;
+        results.push({ item: item, score: score });
+      }
+      if (results.length > 200) break;
+    }
+    results.sort(function (a, b) { return a.score - b.score; });
+    return results.slice(0, 8).map(function (r) { return r.item; });
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  function render(results, query) {
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.hidden = false;
+      return;
+    }
+    box.innerHTML = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="../' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    box.hidden = false;
+  }
+
+  input.addEventListener('focus', loadIndex);
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (e.target !== input && !box.contains(e.target)) box.hidden = true;
+  });
+})();
+
+// ---------------------------------------------------------------
+// Apparition en fondu des cartes/listes quand elles entrent dans
+// l'écran (accueil, pages de catégorie). Ignoré si la personne
+// préfère moins d'animations, ou si son navigateur est trop ancien.
+// ---------------------------------------------------------------
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  if (!els.length) return;
+  els.forEach(function (el, i) {
+    el.classList.add('reveal-on-scroll');
+    el.style.transitionDelay = Math.min(i * 40, 400) + 'ms';
+  });
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+
+// ---------------------------------------------------------------
+// Formulaire de contact : envoi en arrière-plan (sans quitter la
+// page) + message de confirmation clair, succès ou erreur, avec une
+// limite d'un envoi toutes les 5 minutes pour éviter les rafales.
+// ---------------------------------------------------------------
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var button = form.querySelector('button[type="submit"]');
+  var COOLDOWN_MS = 5 * 60 * 1000;
+  var COOLDOWN_KEY = 'mon-esprit-last-contact';
+
+  function remainingCooldown() {
+    var last = parseInt(localStorage.getItem(COOLDOWN_KEY) || '0', 10);
+    var left = COOLDOWN_MS - (Date.now() - last);
+    return left > 0 ? left : 0;
+  }
+
+  function applyCooldownState() {
+    var left = remainingCooldown();
+    if (left > 0) {
+      var minutes = Math.ceil(left / 60000);
+      button.disabled = true;
+      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.className = 'form-status form-status-wait';
+      status.hidden = false;
+      setTimeout(applyCooldownState, 15000);
+    } else {
+      button.disabled = false;
+    }
+  }
+  applyCooldownState();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (remainingCooldown() > 0) return;
+
+    button.disabled = true;
+    button.textContent = 'Envoi en cours...';
+    status.hidden = true;
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.className = 'form-status form-status-ok';
+        form.reset();
+        try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
+      } else {
+        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.className = 'form-status form-status-error';
+      }
+      status.hidden = false;
+    }).catch(function () {
+      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.className = 'form-status form-status-error';
+      status.hidden = false;
+    }).finally(function () {
+      button.textContent = 'Envoyer';
+      applyCooldownState();
+    });
+  });
+})();
+</script>
+<script>
+(function () {
+  // Traînée fluide colorée façon encre dans l'eau : un système de
+  // particules qui se mélangent, ondulent, ralentissent puis se
+  // dissipent. Le point du curseur reste net et discret par-dessus.
+  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
+  // utilité sans curseur réel) et si la personne préfère moins d'animations.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  var canvas = document.getElementById('fluid-cursor');
+  if (!canvas || !canvas.getContext) return;
+  var ctx = canvas.getContext('2d');
+  var W, H;
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var particles = [];
+  var MAX_PARTICLES = 170;
+  var lastX = W / 2, lastY = H / 3;
+  var cursorX = lastX, cursorY = lastY;
+  var cursorVisible = false;
+  var hue = 190;
+
+  function spawnAlong(x0, y0, x1, y1, speed) {
+    var dist = Math.hypot(x1 - x0, y1 - y0);
+    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
+    for (var i = 0; i < steps; i++) {
+      if (particles.length >= MAX_PARTICLES) particles.shift();
+      var t = i / steps;
+      hue += 0.55;
+      // Oscille dans la gamme de couleurs déjà utilisée sur le site
+      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
+      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
+      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
+      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
+      particles.push({
+        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
+        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
+        vx: Math.cos(angle) * mag,
+        vy: Math.sin(angle) * mag,
+        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
+        life: 1,
+        decay: 0.006 + Math.random() * 0.006,
+        hue: h,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function onMove(x, y) {
+    var speed = Math.hypot(x - lastX, y - lastY);
+    spawnAlong(lastX, lastY, x, y, speed);
+    lastX = x; lastY = y;
+    cursorX = x; cursorY = y;
+    cursorVisible = true;
+  }
+
+  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  window.addEventListener('mouseleave', function () { cursorVisible = false; });
+
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.wobble += 0.05;
+      p.vx += Math.cos(p.wobble) * 0.05;
+      p.vy += Math.sin(p.wobble) * 0.05;
+      p.vx *= 0.965;
+      p.vy *= 0.965;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life -= p.decay;
+      p.r *= 0.992;
+
+      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
+
+      var alpha = p.life * 0.22;
+      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
+      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
+      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (cursorVisible) {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.beginPath();
+      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,0.95)';
+      ctx.shadowColor = 'rgba(190,205,255,0.95)';
+      ctx.shadowBlur = 9;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+// Empêche le clic droit (frein basique, pas une vraie protection)
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
+
+// Empêche le copier-coller (Ctrl+C, menu Édition...) — même logique,
+// un frein basique qui ne bloque pas l'affichage du code source
+document.addEventListener('copy', function (e) {
+  e.preventDefault();
+});
+</script>
 </body>
 </html>
