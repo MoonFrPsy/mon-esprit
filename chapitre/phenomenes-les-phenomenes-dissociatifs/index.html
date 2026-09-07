@@ -10,7 +10,7 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<canvas id="fluid-cursor" aria-hidden="true"></canvas>
+<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="34" data-titles='["Deux chapitres enfin réparés", "Page « À propos de moi »", "Des adresses plus propres", "Vrai logo du site", "Petit logo"]'>
   <a href="/nouveautes/">
     <span>🆕</span>
@@ -810,7 +810,7 @@ function showToast(msg) {
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (!('IntersectionObserver' in window)) return;
-  var els = document.querySelectorAll('.cat-card, .chapter-item');
+  var els = document.querySelectorAll('.cat-card, .chapter-item, .about-block, .similar-block, .contact-block');
   if (!els.length) return;
   els.forEach(function (el, i) {
     el.classList.add('reveal-on-scroll');
@@ -897,116 +897,19 @@ function showToast(msg) {
 </script>
 <script>
 (function () {
-  // Traînée fluide colorée façon encre dans l'eau : un système de
-  // particules qui se mélangent, ondulent, ralentissent puis se
-  // dissipent. Le point du curseur reste net et discret par-dessus.
-  // Uniquement sur ordinateur (souris) : désactivé sur tactile (aucune
-  // utilité sans curseur réel) et si la personne préfère moins d'animations.
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (window.matchMedia('(pointer: coarse)').matches) return;
-  var canvas = document.getElementById('fluid-cursor');
-  if (!canvas || !canvas.getContext) return;
-  var ctx = canvas.getContext('2d');
-  var W, H;
-  function resize() {
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  var particles = [];
-  var MAX_PARTICLES = 170;
-  var lastX = W / 2, lastY = H / 3;
-  var cursorX = lastX, cursorY = lastY;
-  var cursorVisible = false;
-  var hue = 190;
-
-  function spawnAlong(x0, y0, x1, y1, speed) {
-    var dist = Math.hypot(x1 - x0, y1 - y0);
-    var steps = Math.min(Math.max(Math.floor(dist / 6), 1), 16);
-    for (var i = 0; i < steps; i++) {
-      if (particles.length >= MAX_PARTICLES) particles.shift();
-      var t = i / steps;
-      hue += 0.55;
-      // Oscille dans la gamme de couleurs déjà utilisée sur le site
-      // (turquoise → cyan → violet → rose), plutôt qu'un arc-en-ciel complet
-      var h = 160 + (Math.sin(hue * 0.012) * 0.5 + 0.5) * 190;
-      var angle = Math.atan2(y1 - y0, x1 - x0) + (Math.random() - 0.5) * 1.1;
-      var mag = Math.min(speed * 0.09, 2.6) + Math.random() * 0.45;
-      particles.push({
-        x: x0 + (x1 - x0) * t + (Math.random() - 0.5) * 4,
-        y: y0 + (y1 - y0) * t + (Math.random() - 0.5) * 4,
-        vx: Math.cos(angle) * mag,
-        vy: Math.sin(angle) * mag,
-        r: 10 + Math.random() * 15 + Math.min(speed * 0.35, 13),
-        life: 1,
-        decay: 0.006 + Math.random() * 0.006,
-        hue: h,
-        wobble: Math.random() * Math.PI * 2
-      });
-    }
-  }
-
-  function onMove(x, y) {
-    var speed = Math.hypot(x - lastX, y - lastY);
-    spawnAlong(lastX, lastY, x, y, speed);
-    lastX = x; lastY = y;
-    cursorX = x; cursorY = y;
-    cursorVisible = true;
-  }
-
-  window.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); }, { passive: true });
-  window.addEventListener('touchmove', function (e) {
-    if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
-  }, { passive: true });
-  window.addEventListener('mouseleave', function () { cursorVisible = false; });
-
-  function frame() {
-    ctx.clearRect(0, 0, W, H);
-    ctx.globalCompositeOperation = 'lighter';
-
-    for (var i = particles.length - 1; i >= 0; i--) {
-      var p = particles[i];
-      p.wobble += 0.05;
-      p.vx += Math.cos(p.wobble) * 0.05;
-      p.vy += Math.sin(p.wobble) * 0.05;
-      p.vx *= 0.965;
-      p.vy *= 0.965;
-      p.x += p.vx;
-      p.y += p.vy;
-      p.life -= p.decay;
-      p.r *= 0.992;
-
-      if (p.life <= 0 || p.r < 1) { particles.splice(i, 1); continue; }
-
-      var alpha = p.life * 0.22;
-      var grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
-      grad.addColorStop(0, 'hsla(' + p.hue + ',72%,64%,' + alpha + ')');
-      grad.addColorStop(0.55, 'hsla(' + (p.hue + 22) + ',68%,55%,' + (alpha * 0.45) + ')');
-      grad.addColorStop(1, 'hsla(' + p.hue + ',72%,58%,0)');
-      ctx.fillStyle = grad;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-
-    if (cursorVisible) {
-      ctx.globalCompositeOperation = 'source-over';
-      ctx.beginPath();
-      ctx.arc(cursorX, cursorY, 3.5, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(255,255,255,0.95)';
-      ctx.shadowColor = 'rgba(190,205,255,0.95)';
-      ctx.shadowBlur = 9;
-      ctx.fill();
-      ctx.shadowBlur = 0;
-    }
-
-    requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
+  // Ombre douce sous le header une fois qu'on a un peu défilé, pour
+  // renforcer l'effet de profondeur (le header flotte au-dessus du
+  // contenu plutôt que de rester posé bord à bord).
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  var onScroll = function () {
+    header.classList.toggle('is-scrolled', window.scrollY > 8);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 })();
-
+</script>
+<script>
 // Empêche le clic droit (frein basique, pas une vraie protection)
 document.addEventListener('contextmenu', function (e) {
   e.preventDefault();
