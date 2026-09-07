@@ -1035,20 +1035,6 @@ function showToast(msg) {
 })();
 </script>
 <script>
-(function () {
-  // Ombre douce sous le header une fois qu'on a un peu défilé, pour
-  // renforcer l'effet de profondeur (le header flotte au-dessus du
-  // contenu plutôt que de rester posé bord à bord).
-  var header = document.querySelector('.site-header');
-  if (!header) return;
-  var onScroll = function () {
-    header.classList.toggle('is-scrolled', window.scrollY > 8);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
-})();
-</script>
-<script>
 // Empêche le clic droit (frein basique, pas une vraie protection)
 document.addEventListener('contextmenu', function (e) {
   e.preventDefault();
