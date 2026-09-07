@@ -542,7 +542,7 @@ h1, h2, h3 {
   gap: 0.6rem;
   padding: 2rem;
   background: linear-gradient(160deg, var(--bg-raised), var(--bg));
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line));
   border-radius: 18px;
   text-decoration: none;
   color: inherit;
@@ -554,6 +554,15 @@ h1, h2, h3 {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               border-color 0.4s ease,
               box-shadow 0.4s ease;
+}
+
+.cat-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 70%, transparent), transparent);
+  opacity: 0.6;
 }
 
 .cat-card::before {
