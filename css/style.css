@@ -451,25 +451,6 @@ h1, h2, h3 {
   align-items: center;
   gap: 2.5rem;
   flex-wrap: wrap;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: -80px;
-  left: -160px;
-  width: 480px;
-  height: 480px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--clay) 10%, transparent), transparent 70%);
-  animation: heroGlowFloat 9s ease-in-out infinite;
-  pointer-events: none;
-  z-index: -1;
-}
-
-@keyframes heroGlowFloat {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(35px, 25px) scale(1.12); }
 }
 
 .hero-text { flex: 1 1 360px; }
@@ -489,7 +470,6 @@ h1, h2, h3 {
 
 @media (prefers-reduced-motion: reduce) {
   .fade-in-up { opacity: 1; animation: none; }
-  .hero::before { animation: none; }
 }
 
 .hero h1 {
@@ -502,13 +482,6 @@ h1, h2, h3 {
   max-width: 56ch;
   color: var(--ink-soft);
   font-size: 1.15rem;
-}
-
-.hero-illustration {
-  flex: 1 1 300px;
-  max-width: 360px;
-  height: auto;
-  margin: 0 auto;
 }
 
 /* ---------- Bandeau de statistiques ---------- */
@@ -546,48 +519,6 @@ h1, h2, h3 {
 
 @media (max-width: 800px) {
   .hero { flex-direction: column; }
-  .hero-illustration { max-width: 280px; order: -1; }
-}
-
-/* Le réseau de nœuds pulse doucement plutôt que de se déplacer,
-   pour ne jamais se détacher visuellement des traits qui le relient */
-/* Le réseau tourne lentement en bloc (traits + points ensemble, donc
-   jamais décroché), pendant que chaque point pulse individuellement */
-.hero-network {
-  transform-box: view-box;
-  transform-origin: 220px 190px;
-  animation: network-spin 90s linear infinite;
-}
-
-@keyframes network-spin {
-  to { transform: rotate(360deg); }
-}
-
-.hero-illustration circle {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-.hero-illustration circle:nth-of-type(-n+3) {
-  animation: node-glow-breathe 6s ease-in-out infinite;
-}
-
-.hero-illustration circle:nth-of-type(n+4) {
-  animation: node-pulse 3.6s ease-in-out infinite;
-}
-
-.hero-illustration circle:nth-of-type(3n+4) { animation-delay: -0.2s; animation-duration: 3s; }
-.hero-illustration circle:nth-of-type(3n+5) { animation-delay: -1.4s; animation-duration: 4.2s; }
-.hero-illustration circle:nth-of-type(3n+6) { animation-delay: -2.3s; animation-duration: 3.6s; }
-
-@keyframes node-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.22); }
-}
-
-@keyframes node-glow-breathe {
-  0%, 100% { opacity: 0.1; }
-  50% { opacity: 0.24; }
 }
 
 /* ---------- Category grid (homepage) ---------- */
