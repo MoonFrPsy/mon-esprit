@@ -146,6 +146,179 @@ body {
   .floating-nav-btn { width: 40px; height: 40px; font-size: 1.05rem; }
 }
 
+/* ---------- Chatbot flottant ---------- */
+
+.chat-toggle {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 25;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--clay);
+  color: var(--bg);
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 10px 28px -6px color-mix(in srgb, var(--clay) 55%, transparent);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.chat-toggle:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 14px 32px -6px color-mix(in srgb, var(--clay) 65%, transparent);
+}
+
+.chat-window {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 50;
+  width: 360px;
+  max-width: calc(100vw - 2.5rem);
+  height: 520px;
+  max-height: calc(100vh - 2.5rem);
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -16px rgba(0,0,0,0.55);
+  animation: fadeInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chat-header {
+  background: linear-gradient(160deg, var(--bg-raised-2), var(--bg-raised));
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  color: var(--title);
+  border-bottom: 1px solid var(--line);
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.chat-header button:hover { color: var(--clay); }
+
+.chat-disclaimer {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  padding: 0.6rem 1.1rem;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--clay) 6%, transparent);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chat-message {
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  max-width: 88%;
+}
+
+.chat-message-bot {
+  background: var(--bg-raised-2);
+  color: var(--ink);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-message-user {
+  background: var(--clay);
+  color: var(--bg);
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-message-sources {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.chat-message-sources a {
+  font-size: 0.78rem;
+  color: var(--clay);
+  text-decoration: none;
+}
+
+.chat-message-sources a:hover { text-decoration: underline; }
+
+.chat-message-loading {
+  align-self: flex-start;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.chat-input-row input {
+  flex: 1;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.92rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.chat-input-row input:focus {
+  outline: none;
+  border-color: var(--clay);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--clay) 18%, transparent);
+}
+
+.chat-input-row button {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--clay);
+  color: var(--bg);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chat-input-row button:hover { transform: scale(1.06); }
+.chat-input-row button:disabled { opacity: 0.5; cursor: default; transform: none; }
+
+@media (max-width: 640px) {
+  .chat-toggle { left: 0.85rem; bottom: 0.85rem; width: 48px; height: 48px; font-size: 1.25rem; }
+  .chat-window { left: 0.6rem; bottom: 0.6rem; width: calc(100vw - 1.2rem); height: calc(100vh - 1.2rem); }
+}
+
 .site-header {
   position: relative;
   z-index: 20;

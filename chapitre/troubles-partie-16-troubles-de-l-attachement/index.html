@@ -11,10 +11,10 @@
 </head>
 <body>
 <div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
-<div class="update-banner" id="update-banner" hidden data-count="37" data-titles='["Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine", "Deux chapitres enfin réparés", "Page « À propos de moi »"]'>
+<div class="update-banner" id="update-banner" hidden data-count="38" data-titles='["Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine", "Deux chapitres enfin réparés"]'>
   <a href="/nouveautes/">
     <span>🆕</span>
-    <span class="update-banner-text" id="update-banner-text">Un nouveau logo</span>
+    <span class="update-banner-text" id="update-banner-text">Un assistant pour discuter avec le site</span>
     <span class="update-banner-arrow">→</span>
   </a>
   <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
@@ -24,6 +24,24 @@
   <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
   <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
 </div>
+
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+
+<div class="chat-window" id="chat-window" hidden>
+  <div class="chat-header">
+    <span>💬 Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+  </div>
+  <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
+  <div class="chat-messages" id="chat-messages">
+    <div class="chat-message chat-message-bot">Bonjour ! Pose-moi une question sur un trouble, une émotion, ou un concept de psychologie, et je te répondrai en me basant sur le contenu du site.</div>
+  </div>
+  <form class="chat-input-row" id="chat-form">
+    <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
+    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+  </form>
+</div>
+
 <header class="site-header">
   <div class="container">
     <a href="/" class="site-title">
@@ -1335,6 +1353,89 @@ function showToast(msg) {
       button.textContent = 'Envoyer';
       applyCooldownState();
     });
+  });
+})();
+</script>
+<script>
+(function () {
+  var toggle = document.getElementById('chat-toggle');
+  var win = document.getElementById('chat-window');
+  var closeBtn = document.getElementById('chat-close');
+  var form = document.getElementById('chat-form');
+  var input = document.getElementById('chat-input');
+  var messages = document.getElementById('chat-messages');
+  var sendBtn = document.getElementById('chat-send');
+  if (!toggle || !win || !form) return;
+
+  function scrollToBottom() {
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function addMessage(text, who) {
+    var div = document.createElement('div');
+    div.className = 'chat-message chat-message-' + who;
+    div.textContent = text;
+    messages.appendChild(div);
+    scrollToBottom();
+    return div;
+  }
+
+  function addSources(sources) {
+    if (!sources || !sources.length) return;
+    var wrap = document.createElement('div');
+    wrap.className = 'chat-message-sources';
+    sources.slice(0, 3).forEach(function (s) {
+      if (!s.url) return;
+      var a = document.createElement('a');
+      a.href = s.url;
+      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      wrap.appendChild(a);
+    });
+    messages.appendChild(wrap);
+    scrollToBottom();
+  }
+
+  toggle.addEventListener('click', function () {
+    win.hidden = !win.hidden;
+    if (!win.hidden) input.focus();
+  });
+  closeBtn.addEventListener('click', function () { win.hidden = true; });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var question = input.value.trim();
+    if (!question) return;
+    addMessage(question, 'user');
+    input.value = '';
+    sendBtn.disabled = true;
+
+    var loading = document.createElement('div');
+    loading.className = 'chat-message-loading';
+    loading.textContent = 'L’assistant réfléchit…';
+    messages.appendChild(loading);
+    scrollToBottom();
+
+    fetch('https://chat.monesprit.fr/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: question })
+    })
+      .then(function (r) {
+        if (!r.ok) throw new Error('bad status');
+        return r.json();
+      })
+      .then(function (data) {
+        loading.remove();
+        addMessage(data.answer || 'Je n’ai pas pu trouver de réponse.', 'bot');
+        addSources(data.sources);
+      })
+      .catch(function () {
+        loading.remove();
+        addMessage('L’assistant est momentanément indisponible. Réessaie plus tard.', 'bot');
+      })
+      .finally(function () {
+        sendBtn.disabled = false;
+      });
   });
 })();
 </script>
