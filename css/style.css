@@ -804,7 +804,11 @@ h1, h2, h3 {
 }
 
 .hero-sub {
-  padding-bottom: 2rem;
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.5rem 2rem;
+  box-sizing: border-box;
 }
 
 .hero-sub .category {
