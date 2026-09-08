@@ -768,7 +768,7 @@ h1, h2, h3 {
 
 .cat-badge-new {
   display: inline-block;
-  background: var(--accent);
+  background: var(--clay);
   color: var(--bg);
   font-size: 0.62rem;
   font-weight: 700;
