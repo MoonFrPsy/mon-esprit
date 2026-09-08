@@ -98,6 +98,21 @@
 
 <style>
 .legacy-troubles-partie-1-troubles-anxieux {
+  --paper: #14211C;
+  --paper-raised: #1B2A24;
+  --ink: #EDE8DB;
+  --ink-soft: #AEB8AC;
+  --ink-faint: #75837A;
+  --accent: #8FB0C0;
+  --accent-deep: #C9A86A;
+  --accent-tint: #22302A;
+  --warn: #C9A86A;
+  --warn-tint: #2B2417;
+  --help-tint: #1F2B24;
+  --avoid-tint: #2B221C;
+  --line: #2A3A33;
+}
+html[data-theme="light"] .legacy-troubles-partie-1-troubles-anxieux {
     --paper: #F1F1EC;
     --paper-raised: #FBFBF8;
     --ink: #20302B;
@@ -129,8 +144,7 @@
     position:absolute; left:-9999px; top:0;
     background:var(--ink); color:var(--paper-raised); padding: 10px 16px;
     z-index: 100;
-  }.legacy-troubles-partie-1-troubles-anxieux .skip-link:focus { left: 12px; top: 12px; }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Layout shell ---------- */
-  .shell {
+  }.legacy-troubles-partie-1-troubles-anxieux .skip-link:focus { left: 12px; top: 12px; }.legacy-troubles-partie-1-troubles-anxieux .shell {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 24px;
@@ -141,8 +155,7 @@
   }
 
   @media (max-width: 900px){.legacy-troubles-partie-1-troubles-anxieux .shell { grid-template-columns: 1fr; gap: 0; }
-  }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Header / hero ---------- */
-  header.hero {
+  }.legacy-troubles-partie-1-troubles-anxieux header.hero {
     max-width: 980px;
     margin: 0 auto;
     padding: 72px 24px 40px;
@@ -168,15 +181,13 @@
     background: var(--line);
     max-width: 980px;
     margin: 40px auto 0;
-  }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Crisis / resources box ---------- */
-  .crisis {
+  }.legacy-troubles-partie-1-troubles-anxieux .crisis {
     max-width: 980px;
     margin: 28px auto 0;
     background: var(--warn-tint);
     border-left: 3px solid var(--warn);
     padding: 20px 26px;
-  }.legacy-troubles-partie-1-troubles-anxieux .crisis p { margin: 6px 0; font-size: 16px; color: var(--ink); }.legacy-troubles-partie-1-troubles-anxieux .crisis strong { font-family:'Fraunces', serif; font-weight: 600; }.legacy-troubles-partie-1-troubles-anxieux .crisis .lines { margin-top: 10px; }.legacy-troubles-partie-1-troubles-anxieux .crisis .lines span { display: inline-block; margin-right: 18px; font-size: 15px; color: var(--ink-soft); }.legacy-troubles-partie-1-troubles-anxieux /* ---------- TOC ---------- */
-  nav.toc {
+  }.legacy-troubles-partie-1-troubles-anxieux .crisis p { margin: 6px 0; font-size: 16px; color: var(--ink); }.legacy-troubles-partie-1-troubles-anxieux .crisis strong { font-family:'Fraunces', serif; font-weight: 600; }.legacy-troubles-partie-1-troubles-anxieux .crisis .lines { margin-top: 10px; }.legacy-troubles-partie-1-troubles-anxieux .crisis .lines span { display: inline-block; margin-right: 18px; font-size: 15px; color: var(--ink-soft); }.legacy-troubles-partie-1-troubles-anxieux nav.toc {
     position: sticky;
     top: 32px;
     align-self: start;
@@ -200,8 +211,7 @@
   }.legacy-troubles-partie-1-troubles-anxieux nav.toc a:hover { color: var(--ink); border-left-color: var(--accent); }.legacy-troubles-partie-1-troubles-anxieux nav.toc .num { color: var(--accent-deep); margin-right: 6px; font-family:'Fraunces',serif; }
 
   @media (max-width: 900px){.legacy-troubles-partie-1-troubles-anxieux nav.toc { position: static; padding: 0 0 8px; margin: 0 0 12px; }.legacy-troubles-partie-1-troubles-anxieux nav.toc ol { border-left:none; columns: 2; column-gap: 20px; }.legacy-troubles-partie-1-troubles-anxieux nav.toc a { border-left:none; padding-left: 0; }
-  }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Chapter sections ---------- */
-  main { min-width: 0; padding-bottom: 80px; }.legacy-troubles-partie-1-troubles-anxieux section.chapter {
+  }.legacy-troubles-partie-1-troubles-anxieux main { min-width: 0; padding-bottom: 80px; }.legacy-troubles-partie-1-troubles-anxieux section.chapter {
     max-width: var(--max);
     padding: 56px 24px 0;
     margin: 0 auto;
@@ -225,8 +235,7 @@
   }.legacy-troubles-partie-1-troubles-anxieux p.definition strong { font-weight: 600; }.legacy-troubles-partie-1-troubles-anxieux h3 {
     font-size: 20px;
     margin: 32px 0 12px;
-  }.legacy-troubles-partie-1-troubles-anxieux ul, .legacy-troubles-partie-1-troubles-anxieux ol.plain { padding-left: 22px; margin: 10px 0; }.legacy-troubles-partie-1-troubles-anxieux li { margin: 4px 0; }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Stats block ---------- */
-  .stats {
+  }.legacy-troubles-partie-1-troubles-anxieux ul, .legacy-troubles-partie-1-troubles-anxieux ol.plain { padding-left: 22px; margin: 10px 0; }.legacy-troubles-partie-1-troubles-anxieux li { margin: 4px 0; }.legacy-troubles-partie-1-troubles-anxieux .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 16px;
@@ -241,8 +250,7 @@
     font-size: 26px;
     color: var(--accent-deep);
     margin-bottom: 4px;
-  }.legacy-troubles-partie-1-troubles-anxieux .stat .d { font-size: 14px; color: var(--ink-soft); line-height: 1.4; }.legacy-troubles-partie-1-troubles-anxieux .stats-caption { font-size: 14.5px; color: var(--ink-faint); font-style: italic; margin: 6px 0 0; }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Help / avoid boxes ---------- */
-  .help-grid {
+  }.legacy-troubles-partie-1-troubles-anxieux .stat .d { font-size: 14px; color: var(--ink-soft); line-height: 1.4; }.legacy-troubles-partie-1-troubles-anxieux .stats-caption { font-size: 14.5px; color: var(--ink-faint); font-style: italic; margin: 6px 0 0; }.legacy-troubles-partie-1-troubles-anxieux .help-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -258,8 +266,7 @@
     font-weight: 600;
     margin: 0 0 8px;
     color: var(--ink);
-  }.legacy-troubles-partie-1-troubles-anxieux .help-box ul, .legacy-troubles-partie-1-troubles-anxieux .avoid-box ul { margin: 0; padding-left: 18px; font-size: 15px; color: var(--ink-soft); }.legacy-troubles-partie-1-troubles-anxieux .help-box li, .legacy-troubles-partie-1-troubles-anxieux .avoid-box li { margin: 5px 0; }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Idée reçue ---------- */
-  .idee-recue {
+  }.legacy-troubles-partie-1-troubles-anxieux .help-box ul, .legacy-troubles-partie-1-troubles-anxieux .avoid-box ul { margin: 0; padding-left: 18px; font-size: 15px; color: var(--ink-soft); }.legacy-troubles-partie-1-troubles-anxieux .help-box li, .legacy-troubles-partie-1-troubles-anxieux .avoid-box li { margin: 5px 0; }.legacy-troubles-partie-1-troubles-anxieux .idee-recue {
     margin: 22px 0;
     padding: 14px 18px;
     border-left: 2px solid var(--ink-faint);
@@ -267,8 +274,7 @@
     font-style: italic;
     color: var(--ink);
     margin: 0 0 6px;
-  }.legacy-troubles-partie-1-troubles-anxieux .idee-recue p:last-child { margin: 0; color: var(--ink-soft); font-size: 16.5px; }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Example ---------- */
-  .example {
+  }.legacy-troubles-partie-1-troubles-anxieux .idee-recue p:last-child { margin: 0; color: var(--ink-soft); font-size: 16.5px; }.legacy-troubles-partie-1-troubles-anxieux .example {
     margin: 22px 0;
     padding: 16px 18px;
     background: var(--paper-raised);
@@ -280,8 +286,7 @@
     letter-spacing: 0.04em;
     color: var(--ink-faint);
     margin-bottom: 8px;
-  }.legacy-troubles-partie-1-troubles-anxieux .example p { font-size: 16.5px; color: var(--ink-soft); }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Retain ---------- */
-  .retain {
+  }.legacy-troubles-partie-1-troubles-anxieux .example p { font-size: 16.5px; color: var(--ink-soft); }.legacy-troubles-partie-1-troubles-anxieux .retain {
     margin: 26px 0 8px;
     padding: 18px 20px;
     background: var(--accent-tint);
@@ -290,8 +295,7 @@
     font-size: 16px;
     font-weight: 600;
     margin: 0 0 8px;
-  }.legacy-troubles-partie-1-troubles-anxieux .retain ul { margin: 0; padding-left: 18px; font-size: 16px; }.legacy-troubles-partie-1-troubles-anxieux .retain li { margin: 5px 0; }.legacy-troubles-partie-1-troubles-anxieux /* ---------- Footer ---------- */
-  footer {
+  }.legacy-troubles-partie-1-troubles-anxieux .retain ul { margin: 0; padding-left: 18px; font-size: 16px; }.legacy-troubles-partie-1-troubles-anxieux .retain li { margin: 5px 0; }.legacy-troubles-partie-1-troubles-anxieux footer {
     max-width: var(--max);
     margin: 40px auto 100px;
     padding: 24px;
@@ -301,21 +305,6 @@
     color: var(--ink-soft);
   }.legacy-troubles-partie-1-troubles-anxieux footer p { margin: 8px 0; }
 
-html[data-theme="dark"] .legacy-troubles-partie-1-troubles-anxieux {
-  --paper: #14211C;
-  --paper-raised: #1B2A24;
-  --ink: #EDE8DB;
-  --ink-soft: #AEB8AC;
-  --ink-faint: #75837A;
-  --accent: #8FB0C0;
-  --accent-deep: #C9A86A;
-  --accent-tint: #22302A;
-  --warn: #C9A86A;
-  --warn-tint: #2B2417;
-  --help-tint: #1F2B24;
-  --avoid-tint: #2B221C;
-  --line: #2A3A33;
-}
 </style>
 <div class="legacy-troubles-partie-1-troubles-anxieux">
 <header class="hero">
