@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#11-la-place-de-la-psychologie-dans-la-justice">1.1 LA PLACE DE LA PSYCHOLOGIE DANS LA JUSTICE</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li></ul></li><li><a href="#12-lexpertise-psychologique">1.2 L'EXPERTISE PSYCHOLOGIQUE</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#13-levaluation-psychologique">1.3 L'ÉVALUATION PSYCHOLOGIQUE</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li></ul></li><li><a href="#14-le-discernement">1.4 LE DISCERNEMENT</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#15-la-responsabilite">1.5 LA RESPONSABILITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li></ul></li><li><a href="#16-la-dangerosite">1.6 LA DANGEROSITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#17-la-recidive">1.7 LA RÉCIDIVE</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#18-le-role-du-psychologue-dans-la-justice">1.8 LE RÔLE DU PSYCHOLOGUE DANS LA JUSTICE</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li></ul></li><li><a href="#19-les-limites-de-la-psychologie-judiciaire">1.9 LES LIMITES DE LA PSYCHOLOGIE JUDICIAIRE</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li></ul></li><li><a href="#110-psychologie-criminologie-et-justice">1.10 PSYCHOLOGIE, CRIMINOLOGIE ET JUSTICE</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#11-la-place-de-la-psychologie-dans-la-justice">1.1 LA PLACE DE LA PSYCHOLOGIE DANS LA JUSTICE</a><ul class="sidebar-sublist"><li><a href="#definition">DÉFINITION</a></li><li><a href="#explication">EXPLICATION</a></li></ul></li><li><a href="#12-lexpertise-psychologique">1.2 L'EXPERTISE PSYCHOLOGIQUE</a><ul class="sidebar-sublist"><li><a href="#definition_1">DÉFINITION</a></li><li><a href="#explication_1">EXPLICATION</a></li><li><a href="#exemple">EXEMPLE</a></li><li><a href="#a-retenir">À RETENIR</a></li></ul></li><li><a href="#13-levaluation-psychologique">1.3 L'ÉVALUATION PSYCHOLOGIQUE</a><ul class="sidebar-sublist"><li><a href="#definition_2">DÉFINITION</a></li><li><a href="#explication_2">EXPLICATION</a></li></ul></li><li><a href="#14-le-discernement">1.4 LE DISCERNEMENT</a><ul class="sidebar-sublist"><li><a href="#definition_3">DÉFINITION</a></li><li><a href="#explication_3">EXPLICATION</a></li><li><a href="#exemple_1">EXEMPLE</a></li><li><a href="#a-retenir_1">À RETENIR</a></li></ul></li><li><a href="#15-la-responsabilite">1.5 LA RESPONSABILITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_4">DÉFINITION</a></li><li><a href="#explication_4">EXPLICATION</a></li></ul></li><li><a href="#16-la-dangerosite">1.6 LA DANGEROSITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_5">DÉFINITION</a></li><li><a href="#explication_5">EXPLICATION</a></li><li><a href="#exemple_2">EXEMPLE</a></li><li><a href="#a-retenir_2">À RETENIR</a></li></ul></li><li><a href="#17-la-recidive">1.7 LA RÉCIDIVE</a><ul class="sidebar-sublist"><li><a href="#definition_6">DÉFINITION</a></li><li><a href="#explication_6">EXPLICATION</a></li><li><a href="#a-retenir_3">À RETENIR</a></li></ul></li><li><a href="#18-le-role-du-psychologue-dans-la-justice">1.8 LE RÔLE DU PSYCHOLOGUE DANS LA JUSTICE</a><ul class="sidebar-sublist"><li><a href="#definition_7">DÉFINITION</a></li><li><a href="#explication_7">EXPLICATION</a></li></ul></li><li><a href="#19-les-limites-de-la-psychologie-judiciaire">1.9 LES LIMITES DE LA PSYCHOLOGIE JUDICIAIRE</a><ul class="sidebar-sublist"><li><a href="#definition_8">DÉFINITION</a></li><li><a href="#explication_8">EXPLICATION</a></li></ul></li><li><a href="#110-psychologie-criminologie-et-justice">1.10 PSYCHOLOGIE, CRIMINOLOGIE ET JUSTICE</a><ul class="sidebar-sublist"><li><a href="#definition_9">DÉFINITION</a></li><li><a href="#explication_9">EXPLICATION</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Organisation du lexique — la psychologie et la justice',
         category: 'Psychologie, justice et criminologie',
-        icon: '⚖️'
+        icon: 'O'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/justice/">⚖️ Psychologie, justice et criminologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/justice/">Psychologie, justice et criminologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Organisation du lexique — la psychologie et la justice</h1>
     </div>
     <div id="resume-banner"></div>
@@ -108,17 +123,17 @@
 <hr />
 <h2 id="11-la-place-de-la-psychologie-dans-la-justice" class="entry-title hc-1">1.1 LA PLACE DE LA PSYCHOLOGIE DANS LA JUSTICE</h2>
 <p>Comprendre comment les connaissances psychologiques peuvent être utilisées dans le domaine judiciaire et quelles sont leurs limites.</p>
-<h3 id="definition">🔎 DÉFINITION</h3>
+<h3 id="definition">DÉFINITION</h3>
 <p>La psychologie judiciaire correspond à l'application de connaissances issues de la psychologie dans des situations liées au système de justice.</p>
 <p>Elle permet notamment d'étudier le fonctionnement psychologique, les comportements, les capacités cognitives et certaines conséquences psychologiques pouvant être pertinentes dans une procédure judiciaire.</p>
-<h3 id="explication">🧠 EXPLICATION</h3>
+<h3 id="explication">EXPLICATION</h3>
 <p>La psychologie peut intervenir dans différentes situations : expertise, évaluation psychologique, accompagnement des victimes, analyse de certains comportements ou encore étude de facteurs associés au risque de récidive.</p>
 <p>Cependant, la psychologie ne remplace pas la justice. Le psychologue apporte un éclairage spécialisé sur les aspects psychologiques d'une situation, tandis que les décisions juridiques relèvent des autorités compétentes.</p>
 <hr />
 <h2 id="12-lexpertise-psychologique" class="entry-title hc-2">1.2 L'EXPERTISE PSYCHOLOGIQUE</h2>
-<h3 id="definition_1">🔎 DÉFINITION</h3>
+<h3 id="definition_1">DÉFINITION</h3>
 <p>L'expertise psychologique est une évaluation réalisée par un psychologue dans le cadre d'une procédure judiciaire afin d'apporter un éclairage professionnel sur une ou plusieurs questions psychologiques.</p>
-<h3 id="explication_1">🧠 EXPLICATION</h3>
+<h3 id="explication_1">EXPLICATION</h3>
 <p>L'expert peut utiliser différents moyens pour recueillir des informations :</p>
 <ul>
 <li>entretiens psychologiques ;</li>
@@ -130,16 +145,16 @@
 <li>étude de certains traits de personnalité.</li>
 </ul>
 <p>L'objectif n'est pas de déterminer directement la culpabilité d'une personne, mais d'apporter des éléments psychologiques utiles à la compréhension d'une situation.</p>
-<h3 id="exemple">💬 EXEMPLE</h3>
+<h3 id="exemple">EXEMPLE</h3>
 <p>Une expertise peut être réalisée afin d'évaluer certains aspects du fonctionnement psychologique d'une personne impliquée dans une procédure judiciaire.</p>
 <p>Le psychologue présente ensuite ses observations et ses conclusions dans le cadre de la mission qui lui a été confiée.</p>
-<h3 id="a-retenir">📌 À RETENIR</h3>
+<h3 id="a-retenir">À RETENIR</h3>
 <p>L'expert psychologue <strong>éclaire la justice sans se substituer au juge</strong>.</p>
 <hr />
 <h2 id="13-levaluation-psychologique" class="entry-title hc-3">1.3 L'ÉVALUATION PSYCHOLOGIQUE</h2>
-<h3 id="definition_2">🔎 DÉFINITION</h3>
+<h3 id="definition_2">DÉFINITION</h3>
 <p>L'évaluation psychologique désigne une démarche permettant de recueillir et d'analyser des informations concernant le fonctionnement psychologique d'une personne.</p>
-<h3 id="explication_2">🧠 EXPLICATION</h3>
+<h3 id="explication_2">EXPLICATION</h3>
 <p>Elle peut porter sur différents domaines :</p>
 <p><strong>Les capacités cognitives</strong></p>
 <p>Attention, mémoire, raisonnement, compréhension et autres fonctions mentales.</p>
@@ -152,34 +167,34 @@
 <p>Une évaluation psychologique ne repose donc pas nécessairement sur un seul test. Plusieurs informations peuvent être croisées afin d'obtenir une compréhension plus complète.</p>
 <hr />
 <h2 id="14-le-discernement" class="entry-title hc-4">1.4 LE DISCERNEMENT</h2>
-<h3 id="definition_3">🔎 DÉFINITION</h3>
+<h3 id="definition_3">DÉFINITION</h3>
 <p>Le discernement désigne la capacité d'une personne à comprendre la nature et la portée de ses actes et, selon le contexte, à exercer un certain contrôle sur son comportement.</p>
-<h3 id="explication_3">🧠 EXPLICATION</h3>
+<h3 id="explication_3">EXPLICATION</h3>
 <p>Dans le domaine judiciaire, cette notion peut devenir importante lorsqu'il est nécessaire d'examiner l'état psychologique d'une personne au moment des faits.</p>
 <p>Le discernement ne peut cependant pas être déterminé uniquement par la présence d'un trouble psychologique.</p>
 <p>Une personne présentant un trouble mental peut conserver certaines capacités de compréhension et de contrôle.</p>
 <p>À l'inverse, certaines situations psychiques peuvent profondément modifier la perception de la réalité, le jugement ou le contrôle du comportement.</p>
 <p>L'analyse doit donc porter sur la situation précise et sur l'état psychologique de la personne au moment concerné.</p>
-<h3 id="exemple_1">💬 EXEMPLE</h3>
+<h3 id="exemple_1">EXEMPLE</h3>
 <p>La présence d'un trouble psychologique ne signifie pas automatiquement qu'une personne était privée de discernement au moment d'un acte.</p>
-<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<h3 id="a-retenir_1">À RETENIR</h3>
 <p>Le discernement doit être étudié <strong>dans un contexte précis</strong>, et non déduit simplement d'un diagnostic.</p>
 <hr />
 <h2 id="15-la-responsabilite" class="entry-title hc-5">1.5 LA RESPONSABILITÉ</h2>
-<h3 id="definition_4">🔎 DÉFINITION</h3>
+<h3 id="definition_4">DÉFINITION</h3>
 <p>La responsabilité pénale est une notion juridique permettant de déterminer dans quelles conditions une personne peut être tenue responsable d'une infraction.</p>
-<h3 id="explication_4">🧠 EXPLICATION</h3>
+<h3 id="explication_4">EXPLICATION</h3>
 <p>La responsabilité appartient principalement au domaine juridique.</p>
 <p>La psychologie peut toutefois fournir des informations permettant d'éclairer certaines questions concernant le fonctionnement psychologique d'une personne.</p>
 <p>Il faut donc distinguer :</p>
-<p>🧠 <strong>Le fonctionnement psychologique</strong>, étudié par la psychologie.</p>
-<p>⚖️ <strong>La responsabilité juridique</strong>, déterminée dans le cadre du droit.</p>
+<p><strong>Le fonctionnement psychologique</strong>, étudié par la psychologie.</p>
+<p><strong>La responsabilité juridique</strong>, déterminée dans le cadre du droit.</p>
 <p>Un psychologue peut ainsi apporter une analyse spécialisée sans décider lui-même de la responsabilité juridique.</p>
 <hr />
 <h2 id="16-la-dangerosite" class="entry-title hc-1">1.6 LA DANGEROSITÉ</h2>
-<h3 id="definition_5">🔎 DÉFINITION</h3>
+<h3 id="definition_5">DÉFINITION</h3>
 <p>La dangerosité est une notion utilisée pour évoquer l'existence potentielle d'un risque de comportements dangereux ou de nouvelles infractions.</p>
-<h3 id="explication_5">🧠 EXPLICATION</h3>
+<h3 id="explication_5">EXPLICATION</h3>
 <p>L'évaluation du risque est complexe et ne permet jamais de prédire avec certitude le comportement futur d'une personne.</p>
 <p>Différents éléments peuvent être étudiés :</p>
 <ul>
@@ -195,15 +210,15 @@
 <li>facteurs de protection.</li>
 </ul>
 <p>Un facteur de risque augmente statistiquement la probabilité d'un comportement dans certaines circonstances. Il ne signifie pas qu'un comportement se produira nécessairement.</p>
-<h3 id="exemple_2">💬 EXEMPLE</h3>
+<h3 id="exemple_2">EXEMPLE</h3>
 <p>Une personne ayant déjà présenté des comportements violents peut présenter certains facteurs associés à un risque plus important de récidive. Cela ne signifie pas qu'elle commettra forcément une nouvelle violence.</p>
-<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<h3 id="a-retenir_2">À RETENIR</h3>
 <p><strong>Risque ne signifie pas certitude.</strong></p>
 <hr />
 <h2 id="17-la-recidive" class="entry-title hc-2">1.7 LA RÉCIDIVE</h2>
-<h3 id="definition_6">🔎 DÉFINITION</h3>
+<h3 id="definition_6">DÉFINITION</h3>
 <p>La récidive désigne le fait qu'une personne commette à nouveau une infraction dans les conditions définies par le cadre juridique applicable.</p>
-<h3 id="explication_6">🧠 EXPLICATION</h3>
+<h3 id="explication_6">EXPLICATION</h3>
 <p>La récidive peut être influencée par de nombreux facteurs.</p>
 <p>Elle peut notamment être étudiée à travers :</p>
 <ul>
@@ -218,25 +233,25 @@
 <li>les facteurs de protection.</li>
 </ul>
 <p>Il n'existe donc pas une cause unique permettant d'expliquer la récidive.</p>
-<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<h3 id="a-retenir_3">À RETENIR</h3>
 <p>La récidive résulte généralement de <strong>l'interaction de plusieurs facteurs individuels, sociaux et environnementaux</strong>.</p>
 <hr />
 <h2 id="18-le-role-du-psychologue-dans-la-justice" class="entry-title hc-3">1.8 LE RÔLE DU PSYCHOLOGUE DANS LA JUSTICE</h2>
-<h3 id="definition_7">🔎 DÉFINITION</h3>
+<h3 id="definition_7">DÉFINITION</h3>
 <p>Le psychologue intervenant dans le domaine judiciaire utilise ses connaissances professionnelles pour analyser certains aspects psychologiques pertinents dans le cadre d'une procédure.</p>
-<h3 id="explication_7">🧠 EXPLICATION</h3>
+<h3 id="explication_7">EXPLICATION</h3>
 <p>Selon sa fonction et la mission qui lui est confiée, il peut notamment :</p>
-<p>🧠 <strong>Évaluer</strong> le fonctionnement psychologique.</p>
-<p>🔎 <strong>Analyser</strong> certains comportements ou éléments psychologiques.</p>
-<p>📚 <strong>Interpréter</strong> les résultats d'entretiens ou d'outils psychologiques.</p>
-<p>⚖️ <strong>Éclairer</strong> certaines questions judiciaires.</p>
-<p>💬 <strong>Présenter</strong> ses conclusions dans un cadre professionnel défini.</p>
+<p><strong>Évaluer</strong> le fonctionnement psychologique.</p>
+<p><strong>Analyser</strong> certains comportements ou éléments psychologiques.</p>
+<p><strong>Interpréter</strong> les résultats d'entretiens ou d'outils psychologiques.</p>
+<p><strong>Éclairer</strong> certaines questions judiciaires.</p>
+<p><strong>Présenter</strong> ses conclusions dans un cadre professionnel défini.</p>
 <p>Son rôle reste limité à son domaine de compétence.</p>
 <hr />
 <h2 id="19-les-limites-de-la-psychologie-judiciaire" class="entry-title hc-4">1.9 LES LIMITES DE LA PSYCHOLOGIE JUDICIAIRE</h2>
-<h3 id="definition_8">🔎 DÉFINITION</h3>
+<h3 id="definition_8">DÉFINITION</h3>
 <p>Les limites de la psychologie judiciaire correspondent aux contraintes liées aux méthodes utilisées, à la complexité du comportement humain et à l'incertitude inhérente à certaines évaluations.</p>
-<h3 id="explication_8">🧠 EXPLICATION</h3>
+<h3 id="explication_8">EXPLICATION</h3>
 <p>La psychologie ne permet pas de tout déterminer avec certitude.</p>
 <p>Un test psychologique ne révèle pas toute la personnalité d'une personne.</p>
 <p>Un diagnostic ne permet pas de prédire automatiquement un comportement criminel.</p>
@@ -245,31 +260,58 @@
 <p>Les conclusions psychologiques doivent donc toujours être interprétées dans leur contexte.</p>
 <hr />
 <h2 id="110-psychologie-criminologie-et-justice" class="entry-title hc-5">1.10 PSYCHOLOGIE, CRIMINOLOGIE ET JUSTICE</h2>
-<h3 id="definition_9">🔎 DÉFINITION</h3>
+<h3 id="definition_9">DÉFINITION</h3>
 <p>La psychologie, la criminologie et la justice sont trois domaines distincts qui peuvent se compléter dans l'étude des comportements et des phénomènes criminels.</p>
-<h3 id="explication_9">🧠 EXPLICATION</h3>
+<h3 id="explication_9">EXPLICATION</h3>
 <p><strong>La psychologie</strong> étudie notamment les pensées, les émotions, les comportements et le fonctionnement psychologique.</p>
 <p><strong>La criminologie</strong> étudie les phénomènes liés à la criminalité, aux infractions, à leurs causes possibles, à leurs conséquences et aux réponses sociales.</p>
 <p><strong>La justice</strong> constitue le cadre juridique dans lequel les infractions sont définies, les responsabilités examinées et les décisions rendues.</p>
 <p>Ces domaines peuvent donc collaborer tout en conservant leurs propres méthodes et objectifs.</p>
 <hr />
-<h1 id="a-retenir_4">📌 À RETENIR</h1>
-<p>🧠 La psychologie peut apporter un éclairage spécialisé au système judiciaire.</p>
-<p>⚖️ L'expertise psychologique permet d'analyser certains aspects du fonctionnement d'une personne dans un cadre judiciaire.</p>
-<p>🔎 Une évaluation psychologique repose sur différentes sources d'informations et ne se limite pas nécessairement à un test.</p>
-<p>🧩 Le discernement concerne notamment la compréhension et le contrôle des actes dans une situation donnée.</p>
-<p>⚖️ La responsabilité juridique et le fonctionnement psychologique sont deux notions différentes.</p>
-<p>🔎 La dangerosité et le risque de récidive ne peuvent pas être prédits avec une certitude absolue.</p>
-<p>📚 La psychologie judiciaire possède des limites et ses conclusions doivent être interprétées dans leur contexte.</p>
+<h1 id="a-retenir_4">À RETENIR</h1>
+<p>La psychologie peut apporter un éclairage spécialisé au système judiciaire.</p>
+<p>L'expertise psychologique permet d'analyser certains aspects du fonctionnement d'une personne dans un cadre judiciaire.</p>
+<p>Une évaluation psychologique repose sur différentes sources d'informations et ne se limite pas nécessairement à un test.</p>
+<p>Le discernement concerne notamment la compréhension et le contrôle des actes dans une situation donnée.</p>
+<p>La responsabilité juridique et le fonctionnement psychologique sont deux notions différentes.</p>
+<p>La dangerosité et le risque de récidive ne peuvent pas être prédits avec une certitude absolue.</p>
+<p>La psychologie judiciaire possède des limites et ses conclusions doivent être interprétées dans leur contexte.</p>
 <blockquote>
-<p>⚠️ Les notions présentées dans cette partie ont un objectif informatif et pédagogique. Elles ne permettent pas, à elles seules, d'établir un diagnostic, de déterminer la culpabilité d'une personne ou de prédire avec certitude son comportement futur.
+<p>Les notions présentées dans cette partie ont un objectif informatif et pédagogique. Elles ne permettent pas, à elles seules, d'établir un diagnostic, de déterminer la culpabilité d'une personne ou de prédire avec certitude son comportement futur.
 </p>
 </blockquote>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Psychologie, justice et criminologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-la-memoire-la-perception-et-les-temoignages/"><span class="similar-icon">⚖️</span>La mémoire, la perception et les témoignages</a><a class="similar-item" href="/chapitre/justice-les-interrogatoires-et-les-faux-aveux/"><span class="similar-icon">⚖️</span>Les interrogatoires et les faux aveux</a><a class="similar-item" href="/chapitre/justice-comprendre-le-comportement-criminel/"><span class="similar-icon">⚖️</span>Comprendre le comportement criminel</a></div>
+      <h2>Autres chapitres de « Psychologie, justice et criminologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-la-memoire-la-perception-et-les-temoignages/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>La mémoire, la perception et les témoignages</a><a class="similar-item" href="/chapitre/justice-les-interrogatoires-et-les-faux-aveux/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>Les interrogatoires et les faux aveux</a><a class="similar-item" href="/chapitre/justice-comprendre-le-comportement-criminel/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>Comprendre le comportement criminel</a></div>
     </div>
     <a class="back-link" href="/categorie/justice/">← Retour à « Psychologie, justice et criminologie »</a>
   </div>
@@ -355,23 +397,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -389,7 +433,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -569,9 +613,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -580,10 +626,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -690,7 +736,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -730,8 +776,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -762,7 +808,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -817,7 +863,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -841,17 +887,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -893,7 +939,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

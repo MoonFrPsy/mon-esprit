@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#41-lemotion">❤️ 4.1 L'émotion</a></li><li><a href="#42-lactivation-emotionnelle">🌡️ 4.2 L'activation émotionnelle</a></li><li><a href="#43-la-reactivite-emotionnelle">⚡ 4.3 La réactivité émotionnelle</a></li><li><a href="#44-la-regulation-emotionnelle">🌊 4.4 La régulation émotionnelle</a></li><li><a href="#45-la-contagion-emotionnelle">🔄 4.5 La contagion émotionnelle</a></li><li><a href="#46-le-mimetisme-emotionnel">🪞 4.6 Le mimétisme émotionnel</a></li><li><a href="#47-lanxiete-anticipatoire">😰 4.7 L'anxiété anticipatoire</a></li><li><a href="#48-la-peur">😨 4.8 La peur</a></li><li><a href="#49-la-reaction-de-gel">🧊 4.9 La réaction de gel</a></li><li><a href="#410-la-colere">😡 4.10 La colère</a></li><li><a href="#411-la-tristesse">😢 4.11 La tristesse</a></li><li><a href="#412-la-joie">😊 4.12 La joie</a></li><li><a href="#413-la-honte">😳 4.13 La honte</a></li><li><a href="#414-la-culpabilite">⚖️ 4.14 La culpabilité</a></li><li><a href="#415-le-regret">💔 4.15 Le regret</a></li><li><a href="#416-lambivalence-emotionnelle">🌫️ 4.16 L'ambivalence émotionnelle</a></li><li><a href="#417-le-melange-emotionnel">🔀 4.17 Le mélange émotionnel</a></li><li><a href="#418-letiquetage-emotionnel">🧠 4.18 L'étiquetage émotionnel</a></li><li><a href="#419-la-granularite-emotionnelle">🗣️ 4.19 La granularité émotionnelle</a></li><li><a href="#420-lalexithymie">🌡️ 4.20 L'alexithymie</a></li><li><a href="#421-le-debordement-emotionnel">🔥 4.21 Le débordement émotionnel</a></li><li><a href="#422-lengourdissement-emotionnel">🧊 4.22 L'engourdissement émotionnel</a></li><li><a href="#423-la-labilite-emotionnelle">🌊 4.23 La labilité émotionnelle</a></li><li><a href="#424-les-fluctuations-emotionnelles">🎢 4.24 Les fluctuations émotionnelles</a></li><li><a href="#425-leffet-des-emotions-sur-la-memoire">🧠 4.25 L'effet des émotions sur la mémoire</a></li><li><a href="#426-leffet-des-emotions-sur-lattention">👁️ 4.26 L'effet des émotions sur l'attention</a></li><li><a href="#427-leffet-des-emotions-sur-la-perception">🧠 4.27 L'effet des émotions sur la perception</a></li><li><a href="#428-le-biais-emotionnel">⚖️ 4.28 Le biais émotionnel</a></li><li><a href="#429-la-congruence-emotionnelle">🌧️ 4.29 La congruence émotionnelle</a></li><li><a href="#430-la-reevaluation-emotionnelle">🔄 4.30 La réévaluation émotionnelle</a></li><li><a href="#431-la-suppression-emotionnelle">🧩 4.31 La suppression émotionnelle</a></li><li><a href="#432-lexpression-emotionnelle">🎭 4.32 L'expression émotionnelle</a></li><li><a href="#433-la-conscience-emotionnelle">🧠 4.33 La conscience émotionnelle</a></li><li><a href="#434-lempathie-emotionnelle">❤️ 4.34 L'empathie émotionnelle</a></li><li><a href="#435-lempathie-cognitive">🧠 4.35 L'empathie cognitive</a></li><li><a href="#436-la-regulation-emotionnelle-interpersonnelle">🌐 4.36 La régulation émotionnelle interpersonnelle</a></li><li><a href="#437-lescalade-emotionnelle">🔥 4.37 L'escalade émotionnelle</a></li><li><a href="#438-lhabituation-emotionnelle">🌱 4.38 L'habituation émotionnelle</a></li><li><a href="#439-le-conditionnement-emotionnel">🔁 4.39 Le conditionnement émotionnel</a></li><li><a href="#440-pourquoi-les-emotions-influencent-elles-autant-le-fonctionnement-psychologique">🧠 4.40 Pourquoi les émotions influencent-elles autant le fonctionnement psychologique ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#41-lemotion">4.1 L'émotion</a></li><li><a href="#42-lactivation-emotionnelle">4.2 L'activation émotionnelle</a></li><li><a href="#43-la-reactivite-emotionnelle">4.3 La réactivité émotionnelle</a></li><li><a href="#44-la-regulation-emotionnelle">4.4 La régulation émotionnelle</a></li><li><a href="#45-la-contagion-emotionnelle">4.5 La contagion émotionnelle</a></li><li><a href="#46-le-mimetisme-emotionnel">4.6 Le mimétisme émotionnel</a></li><li><a href="#47-lanxiete-anticipatoire">4.7 L'anxiété anticipatoire</a></li><li><a href="#48-la-peur">4.8 La peur</a></li><li><a href="#49-la-reaction-de-gel">4.9 La réaction de gel</a></li><li><a href="#410-la-colere">4.10 La colère</a></li><li><a href="#411-la-tristesse">4.11 La tristesse</a></li><li><a href="#412-la-joie">4.12 La joie</a></li><li><a href="#413-la-honte">4.13 La honte</a></li><li><a href="#414-la-culpabilite">4.14 La culpabilité</a></li><li><a href="#415-le-regret">4.15 Le regret</a></li><li><a href="#416-lambivalence-emotionnelle">4.16 L'ambivalence émotionnelle</a></li><li><a href="#417-le-melange-emotionnel">4.17 Le mélange émotionnel</a></li><li><a href="#418-letiquetage-emotionnel">4.18 L'étiquetage émotionnel</a></li><li><a href="#419-la-granularite-emotionnelle">4.19 La granularité émotionnelle</a></li><li><a href="#420-lalexithymie">4.20 L'alexithymie</a></li><li><a href="#421-le-debordement-emotionnel">4.21 Le débordement émotionnel</a></li><li><a href="#422-lengourdissement-emotionnel">4.22 L'engourdissement émotionnel</a></li><li><a href="#423-la-labilite-emotionnelle">4.23 La labilité émotionnelle</a></li><li><a href="#424-les-fluctuations-emotionnelles">4.24 Les fluctuations émotionnelles</a></li><li><a href="#425-leffet-des-emotions-sur-la-memoire">4.25 L'effet des émotions sur la mémoire</a></li><li><a href="#426-leffet-des-emotions-sur-lattention">4.26 L'effet des émotions sur l'attention</a></li><li><a href="#427-leffet-des-emotions-sur-la-perception">4.27 L'effet des émotions sur la perception</a></li><li><a href="#428-le-biais-emotionnel">4.28 Le biais émotionnel</a></li><li><a href="#429-la-congruence-emotionnelle">4.29 La congruence émotionnelle</a></li><li><a href="#430-la-reevaluation-emotionnelle">4.30 La réévaluation émotionnelle</a></li><li><a href="#431-la-suppression-emotionnelle">4.31 La suppression émotionnelle</a></li><li><a href="#432-lexpression-emotionnelle">4.32 L'expression émotionnelle</a></li><li><a href="#433-la-conscience-emotionnelle">4.33 La conscience émotionnelle</a></li><li><a href="#434-lempathie-emotionnelle">4.34 L'empathie émotionnelle</a></li><li><a href="#435-lempathie-cognitive">4.35 L'empathie cognitive</a></li><li><a href="#436-la-regulation-emotionnelle-interpersonnelle">4.36 La régulation émotionnelle interpersonnelle</a></li><li><a href="#437-lescalade-emotionnelle">4.37 L'escalade émotionnelle</a></li><li><a href="#438-lhabituation-emotionnelle">4.38 L'habituation émotionnelle</a></li><li><a href="#439-le-conditionnement-emotionnel">4.39 Le conditionnement émotionnel</a></li><li><a href="#440-pourquoi-les-emotions-influencent-elles-autant-le-fonctionnement-psychologique">4.40 Pourquoi les émotions influencent-elles autant le fonctionnement psychologique ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les phénomènes émotionnels',
         category: 'Phénomènes psychologiques',
-        icon: '🔮'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/phenomenes/">🔮 Phénomènes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/phenomenes/">Phénomènes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les phénomènes émotionnels</h1>
     </div>
     <div id="resume-banner"></div>
@@ -106,7 +121,7 @@
 <p>Elles peuvent apparaître rapidement, être influencées par le contexte et modifier la perception, la mémoire, l'attention ou les décisions.</p>
 <p>Cette partie présente différents phénomènes associés aux émotions, depuis les réactions émotionnelles ordinaires jusqu'à certains phénomènes plus complexes.</p>
 <hr />
-<h2 id="41-lemotion" class="entry-title hc-1">❤️ 4.1 L'émotion</h2>
+<h2 id="41-lemotion" class="entry-title hc-1">4.1 L'émotion</h2>
 <p>Une émotion est une réponse psychologique et physiologique à une situation, un événement, un souvenir ou un stimulus.</p>
 <p>Elle peut comprendre :</p>
 <ul>
@@ -118,17 +133,17 @@
 </ul>
 <p>Les émotions fondamentales et leur classification exacte font encore l'objet de discussions scientifiques.</p>
 <hr />
-<h2 id="42-lactivation-emotionnelle" class="entry-title hc-2">🌡️ 4.2 L'activation émotionnelle</h2>
+<h2 id="42-lactivation-emotionnelle" class="entry-title hc-2">4.2 L'activation émotionnelle</h2>
 <p>L'activation émotionnelle correspond au niveau d'intensité d'une réaction émotionnelle.</p>
 <p>Une émotion peut être très faible, modérée ou extrêmement intense.</p>
 <p>L'intensité émotionnelle ne dépend pas uniquement de l'événement lui-même. Elle peut également dépendre de l'interprétation de la situation, de l'état physique et du contexte.</p>
 <hr />
-<h2 id="43-la-reactivite-emotionnelle" class="entry-title hc-3">⚡ 4.3 La réactivité émotionnelle</h2>
+<h2 id="43-la-reactivite-emotionnelle" class="entry-title hc-3">4.3 La réactivité émotionnelle</h2>
 <p>La réactivité émotionnelle désigne la rapidité et l'intensité avec lesquelles une personne réagit à un événement émotionnel.</p>
 <p>Certaines personnes présentent des réactions très rapides et intenses, tandis que d'autres réagissent plus progressivement.</p>
 <p>La réactivité peut également varier selon les situations.</p>
 <hr />
-<h2 id="44-la-regulation-emotionnelle" class="entry-title hc-4">🌊 4.4 La régulation émotionnelle</h2>
+<h2 id="44-la-regulation-emotionnelle" class="entry-title hc-4">4.4 La régulation émotionnelle</h2>
 <p>La régulation émotionnelle désigne l'ensemble des processus permettant d'influencer l'intensité, la durée ou l'expression d'une émotion.</p>
 <p>Elle peut être volontaire ou automatique.</p>
 <p>Elle peut notamment impliquer :</p>
@@ -140,17 +155,17 @@
 <li>la réévaluation cognitive</li>
 </ul>
 <hr />
-<h2 id="45-la-contagion-emotionnelle" class="entry-title hc-5">🔄 4.5 La contagion émotionnelle</h2>
+<h2 id="45-la-contagion-emotionnelle" class="entry-title hc-5">4.5 La contagion émotionnelle</h2>
 <p>La contagion émotionnelle correspond au fait que l'état émotionnel d'une personne peut influencer celui d'autres personnes.</p>
 <p>Les expressions faciales, la voix, les comportements et le contexte social peuvent participer à cette transmission.</p>
 <p>Elle peut se produire sans intention consciente.</p>
 <hr />
-<h2 id="46-le-mimetisme-emotionnel" class="entry-title hc-1">🪞 4.6 Le mimétisme émotionnel</h2>
+<h2 id="46-le-mimetisme-emotionnel" class="entry-title hc-1">4.6 Le mimétisme émotionnel</h2>
 <p>Le mimétisme émotionnel correspond à la tendance à reproduire certains comportements ou expressions observés chez d'autres personnes.</p>
 <p>Une expression faciale, une posture ou un ton de voix peut ainsi être partiellement reproduit automatiquement.</p>
 <p>Ce phénomène peut participer à la synchronisation sociale.</p>
 <hr />
-<h2 id="47-lanxiete-anticipatoire" class="entry-title hc-2">😰 4.7 L'anxiété anticipatoire</h2>
+<h2 id="47-lanxiete-anticipatoire" class="entry-title hc-2">4.7 L'anxiété anticipatoire</h2>
 <p>L'anxiété anticipatoire correspond à une réaction émotionnelle liée à l'attente d'un événement futur considéré comme potentiellement négatif.</p>
 <p>Elle peut apparaître avant :</p>
 <ul>
@@ -162,7 +177,7 @@
 </ul>
 <p>L'incertitude joue souvent un rôle important dans ce phénomène.</p>
 <hr />
-<h2 id="48-la-peur" class="entry-title hc-3">😨 4.8 La peur</h2>
+<h2 id="48-la-peur" class="entry-title hc-3">4.8 La peur</h2>
 <p>La peur est une émotion associée à la détection d'une menace ou d'un danger potentiel.</p>
 <p>Elle peut provoquer différentes réactions :</p>
 <ul>
@@ -175,12 +190,12 @@
 </ul>
 <p>La peur peut être déclenchée par un danger réel ou perçu.</p>
 <hr />
-<h2 id="49-la-reaction-de-gel" class="entry-title hc-4">🧊 4.9 La réaction de gel</h2>
+<h2 id="49-la-reaction-de-gel" class="entry-title hc-4">4.9 La réaction de gel</h2>
 <p>La réaction de gel, parfois appelée « freeze », correspond à une immobilisation ou à une réduction importante de l'action face à une situation perçue comme menaçante.</p>
 <p>Elle peut être observée dans certaines situations de peur intense ou de stress.</p>
 <p>Il s'agit d'une réponse comportementale et physiologique, et non d'un mécanisme de défense au sens strict.</p>
 <hr />
-<h2 id="410-la-colere" class="entry-title hc-5">😡 4.10 La colère</h2>
+<h2 id="410-la-colere" class="entry-title hc-5">4.10 La colère</h2>
 <p>La colère est une émotion généralement associée à la perception d'une frustration, d'une injustice, d'une menace ou d'un obstacle.</p>
 <p>Elle peut entraîner :</p>
 <ul>
@@ -192,12 +207,12 @@
 </ul>
 <p>La colère n'entraîne pas nécessairement une agressivité.</p>
 <hr />
-<h2 id="411-la-tristesse" class="entry-title hc-1">😢 4.11 La tristesse</h2>
+<h2 id="411-la-tristesse" class="entry-title hc-1">4.11 La tristesse</h2>
 <p>La tristesse est une émotion pouvant apparaître après une perte, une déception, une séparation ou une situation vécue comme négative.</p>
 <p>Elle peut modifier l'activité, l'attention, les interactions sociales et les comportements.</p>
 <p>La tristesse constitue une émotion normale et ne doit pas être confondue automatiquement avec la dépression.</p>
 <hr />
-<h2 id="412-la-joie" class="entry-title hc-2">😊 4.12 La joie</h2>
+<h2 id="412-la-joie" class="entry-title hc-2">4.12 La joie</h2>
 <p>La joie correspond à un état émotionnel généralement associé à une expérience positive, à une satisfaction ou à l'obtention d'un résultat souhaité.</p>
 <p>Elle peut favoriser :</p>
 <ul>
@@ -208,17 +223,17 @@
 <li>certaines formes de créativité</li>
 </ul>
 <hr />
-<h2 id="413-la-honte" class="entry-title hc-3">😳 4.13 La honte</h2>
+<h2 id="413-la-honte" class="entry-title hc-3">4.13 La honte</h2>
 <p>La honte correspond à une émotion particulièrement liée à l'évaluation négative de soi.</p>
 <p>Elle peut apparaître lorsqu'une personne estime avoir transgressé une norme ou être devenue négativement visible aux yeux d'autrui.</p>
 <p>Elle peut provoquer une tendance à se cacher, éviter ou se retirer.</p>
 <hr />
-<h2 id="414-la-culpabilite" class="entry-title hc-4">⚖️ 4.14 La culpabilité</h2>
+<h2 id="414-la-culpabilite" class="entry-title hc-4">4.14 La culpabilité</h2>
 <p>La culpabilité est une émotion associée à l'impression d'avoir fait quelque chose de répréhensible ou d'avoir causé un tort.</p>
 <p>Elle se distingue conceptuellement de la honte.</p>
 <p>La honte concerne davantage l'évaluation de soi, tandis que la culpabilité concerne davantage l'évaluation d'un comportement ou de ses conséquences.</p>
 <hr />
-<h2 id="415-le-regret" class="entry-title hc-5">💔 4.15 Le regret</h2>
+<h2 id="415-le-regret" class="entry-title hc-5">4.15 Le regret</h2>
 <p>Le regret apparaît lorsqu'une personne compare la réalité à une alternative qu'elle imagine comme meilleure.</p>
 <p>Il implique souvent une pensée du type :</p>
 <blockquote>
@@ -227,7 +242,7 @@
 </blockquote>
 <p>Le regret peut influencer les décisions futures et favoriser l'apprentissage.</p>
 <hr />
-<h2 id="416-lambivalence-emotionnelle" class="entry-title hc-1">🌫️ 4.16 L'ambivalence émotionnelle</h2>
+<h2 id="416-lambivalence-emotionnelle" class="entry-title hc-1">4.16 L'ambivalence émotionnelle</h2>
 <p>L'ambivalence émotionnelle correspond à la présence simultanée de plusieurs émotions différentes concernant une même situation.</p>
 <p>Une personne peut par exemple ressentir simultanément :</p>
 <ul>
@@ -238,17 +253,17 @@
 </ul>
 <p>Les émotions ne sont donc pas nécessairement mutuellement exclusives.</p>
 <hr />
-<h2 id="417-le-melange-emotionnel" class="entry-title hc-2">🔀 4.17 Le mélange émotionnel</h2>
+<h2 id="417-le-melange-emotionnel" class="entry-title hc-2">4.17 Le mélange émotionnel</h2>
 <p>Plusieurs émotions peuvent apparaître en même temps et former une expérience émotionnelle complexe.</p>
 <p>Il peut alors être difficile d'identifier précisément une seule émotion dominante.</p>
 <p>Ce phénomène explique notamment pourquoi certaines expériences sont décrites comme « difficiles à mettre en mots ».</p>
 <hr />
-<h2 id="418-letiquetage-emotionnel" class="entry-title hc-3">🧠 4.18 L'étiquetage émotionnel</h2>
+<h2 id="418-letiquetage-emotionnel" class="entry-title hc-3">4.18 L'étiquetage émotionnel</h2>
 <p>L'étiquetage émotionnel consiste à identifier et nommer une émotion.</p>
 <p>Mettre un mot sur une expérience émotionnelle peut faciliter sa compréhension et son observation.</p>
 <p>Les capacités d'identification émotionnelle varient cependant fortement selon les individus et les situations.</p>
 <hr />
-<h2 id="419-la-granularite-emotionnelle" class="entry-title hc-4">🗣️ 4.19 La granularité émotionnelle</h2>
+<h2 id="419-la-granularite-emotionnelle" class="entry-title hc-4">4.19 La granularité émotionnelle</h2>
 <p>La granularité émotionnelle désigne la capacité à différencier précisément différentes expériences émotionnelles.</p>
 <p>Une personne peut par exemple distinguer :</p>
 <ul>
@@ -260,7 +275,7 @@
 <p>plutôt que de regrouper toutes ces expériences sous le seul terme « colère ».</p>
 <p>Une granularité plus fine permet de décrire les expériences émotionnelles avec davantage de précision.</p>
 <hr />
-<h2 id="420-lalexithymie" class="entry-title hc-5">🌡️ 4.20 L'alexithymie</h2>
+<h2 id="420-lalexithymie" class="entry-title hc-5">4.20 L'alexithymie</h2>
 <p>L'alexithymie désigne un ensemble de difficultés concernant notamment l'identification et la description des émotions.</p>
 <p>Elle peut notamment concerner :</p>
 <ul>
@@ -270,7 +285,7 @@
 </ul>
 <p>L'alexithymie est généralement considérée comme une caractéristique ou un ensemble de traits plutôt que comme un diagnostic autonome universel.</p>
 <hr />
-<h2 id="421-le-debordement-emotionnel" class="entry-title hc-1">🔥 4.21 Le débordement émotionnel</h2>
+<h2 id="421-le-debordement-emotionnel" class="entry-title hc-1">4.21 Le débordement émotionnel</h2>
 <p>Le débordement émotionnel correspond à une situation dans laquelle l'intensité d'une émotion devient difficile à gérer ou à contenir.</p>
 <p>Il peut s'accompagner de :</p>
 <ul>
@@ -283,57 +298,57 @@
 </ul>
 <p>Il s'agit d'une description d'expérience et non d'un diagnostic spécifique.</p>
 <hr />
-<h2 id="422-lengourdissement-emotionnel" class="entry-title hc-2">🧊 4.22 L'engourdissement émotionnel</h2>
+<h2 id="422-lengourdissement-emotionnel" class="entry-title hc-2">4.22 L'engourdissement émotionnel</h2>
 <p>L'engourdissement émotionnel correspond à une diminution subjective de l'intensité ou de l'accès aux émotions.</p>
 <p>Une personne peut avoir l'impression de ne plus ressentir autant certaines émotions.</p>
 <p>Ce phénomène peut apparaître dans différents contextes psychologiques, neurologiques, médicamenteux ou liés au stress.</p>
 <hr />
-<h2 id="423-la-labilite-emotionnelle" class="entry-title hc-3">🌊 4.23 La labilité émotionnelle</h2>
+<h2 id="423-la-labilite-emotionnelle" class="entry-title hc-3">4.23 La labilité émotionnelle</h2>
 <p>La labilité émotionnelle correspond à des changements émotionnels rapides et parfois importants.</p>
 <p>L'humeur ou l'expression émotionnelle peut alors changer rapidement en réponse à différents événements.</p>
 <p>La labilité peut avoir différentes causes et doit être interprétée en fonction du contexte.</p>
 <hr />
-<h2 id="424-les-fluctuations-emotionnelles" class="entry-title hc-4">🎢 4.24 Les fluctuations émotionnelles</h2>
+<h2 id="424-les-fluctuations-emotionnelles" class="entry-title hc-4">4.24 Les fluctuations émotionnelles</h2>
 <p>Les émotions peuvent naturellement varier au cours d'une journée.</p>
 <p>Le sommeil, la fatigue, l'environnement, les interactions sociales, les événements et l'état physiologique peuvent influencer ces variations.</p>
 <p>Une fluctuation émotionnelle n'est donc pas nécessairement anormale.</p>
 <hr />
-<h2 id="425-leffet-des-emotions-sur-la-memoire" class="entry-title hc-5">🧠 4.25 L'effet des émotions sur la mémoire</h2>
+<h2 id="425-leffet-des-emotions-sur-la-memoire" class="entry-title hc-5">4.25 L'effet des émotions sur la mémoire</h2>
 <p>Les émotions peuvent influencer la manière dont les informations sont encodées, consolidées et récupérées.</p>
 <p>Les événements émotionnellement importants peuvent parfois être mieux mémorisés que des événements neutres.</p>
 <p>Cependant, une émotion intense ne garantit pas que tous les détails d'un souvenir seront correctement mémorisés.</p>
 <hr />
-<h2 id="426-leffet-des-emotions-sur-lattention" class="entry-title hc-1">👁️ 4.26 L'effet des émotions sur l'attention</h2>
+<h2 id="426-leffet-des-emotions-sur-lattention" class="entry-title hc-1">4.26 L'effet des émotions sur l'attention</h2>
 <p>Une émotion peut modifier les informations auxquelles l'attention est dirigée.</p>
 <p>Un stimulus associé à une menace peut notamment attirer rapidement l'attention.</p>
 <p>L'état émotionnel peut donc influencer ce qui est remarqué ou ignoré.</p>
 <hr />
-<h2 id="427-leffet-des-emotions-sur-la-perception" class="entry-title hc-2">🧠 4.27 L'effet des émotions sur la perception</h2>
+<h2 id="427-leffet-des-emotions-sur-la-perception" class="entry-title hc-2">4.27 L'effet des émotions sur la perception</h2>
 <p>Les émotions et les attentes peuvent influencer l'interprétation d'une situation perceptive.</p>
 <p>Un même stimulus peut être interprété différemment selon l'état émotionnel et le contexte.</p>
 <p>La perception n'est donc pas totalement indépendante de l'état psychologique.</p>
 <hr />
-<h2 id="428-le-biais-emotionnel" class="entry-title hc-3">⚖️ 4.28 Le biais émotionnel</h2>
+<h2 id="428-le-biais-emotionnel" class="entry-title hc-3">4.28 Le biais émotionnel</h2>
 <p>Le biais émotionnel correspond à une influence des émotions sur le traitement de l'information.</p>
 <p>Un état émotionnel particulier peut favoriser certaines interprétations, certains souvenirs ou certaines évaluations.</p>
 <p>Par exemple, une humeur négative peut rendre certaines informations négatives plus accessibles.</p>
 <hr />
-<h2 id="429-la-congruence-emotionnelle" class="entry-title hc-4">🌧️ 4.29 La congruence émotionnelle</h2>
+<h2 id="429-la-congruence-emotionnelle" class="entry-title hc-4">4.29 La congruence émotionnelle</h2>
 <p>La congruence émotionnelle correspond au fait que l'état émotionnel actuel peut faciliter le traitement d'informations correspondant à cet état.</p>
 <p>Une personne triste peut ainsi avoir plus facilement accès à certains souvenirs ou pensées associés à la tristesse.</p>
 <p>Ce phénomène est notamment étudié dans les recherches sur l'humeur et la mémoire.</p>
 <hr />
-<h2 id="430-la-reevaluation-emotionnelle" class="entry-title hc-5">🔄 4.30 La réévaluation émotionnelle</h2>
+<h2 id="430-la-reevaluation-emotionnelle" class="entry-title hc-5">4.30 La réévaluation émotionnelle</h2>
 <p>La réévaluation émotionnelle consiste à modifier l'interprétation d'une situation afin de modifier l'expérience émotionnelle qui lui est associée.</p>
 <p>Par exemple, une situation initialement interprétée comme une menace peut être réinterprétée comme une difficulté temporaire.</p>
 <p>La réévaluation cognitive constitue l'une des stratégies étudiées dans la régulation émotionnelle.</p>
 <hr />
-<h2 id="431-la-suppression-emotionnelle" class="entry-title hc-1">🧩 4.31 La suppression émotionnelle</h2>
+<h2 id="431-la-suppression-emotionnelle" class="entry-title hc-1">4.31 La suppression émotionnelle</h2>
 <p>La suppression émotionnelle consiste à essayer de limiter l'expression visible d'une émotion.</p>
 <p>L'émotion elle-même peut cependant continuer à être ressentie intérieurement.</p>
 <p>La suppression de l'expression et la diminution réelle de l'émotion sont donc deux phénomènes différents.</p>
 <hr />
-<h2 id="432-lexpression-emotionnelle" class="entry-title hc-2">🎭 4.32 L'expression émotionnelle</h2>
+<h2 id="432-lexpression-emotionnelle" class="entry-title hc-2">4.32 L'expression émotionnelle</h2>
 <p>L'expression émotionnelle correspond à la manière dont une émotion est communiquée ou manifestée.</p>
 <p>Elle peut passer par :</p>
 <ul>
@@ -346,40 +361,40 @@
 </ul>
 <p>L'expression observable ne correspond pas toujours exactement à l'expérience intérieure.</p>
 <hr />
-<h2 id="433-la-conscience-emotionnelle" class="entry-title hc-3">🧠 4.33 La conscience émotionnelle</h2>
+<h2 id="433-la-conscience-emotionnelle" class="entry-title hc-3">4.33 La conscience émotionnelle</h2>
 <p>La conscience émotionnelle correspond à la capacité à remarquer et reconnaître son propre état émotionnel.</p>
 <p>Elle peut être plus ou moins précise selon les situations.</p>
 <p>Une personne peut ressentir une activation émotionnelle importante sans parvenir immédiatement à identifier ce qu'elle ressent.</p>
 <hr />
-<h2 id="434-lempathie-emotionnelle" class="entry-title hc-4">❤️ 4.34 L'empathie émotionnelle</h2>
+<h2 id="434-lempathie-emotionnelle" class="entry-title hc-4">4.34 L'empathie émotionnelle</h2>
 <p>L'empathie émotionnelle désigne la capacité à ressentir ou à partager, dans une certaine mesure, l'état émotionnel d'une autre personne.</p>
 <p>Elle se distingue de l'empathie cognitive, qui concerne davantage la compréhension du point de vue ou de l'état mental d'autrui.</p>
 <hr />
-<h2 id="435-lempathie-cognitive" class="entry-title hc-5">🧠 4.35 L'empathie cognitive</h2>
+<h2 id="435-lempathie-cognitive" class="entry-title hc-5">4.35 L'empathie cognitive</h2>
 <p>L'empathie cognitive correspond à la capacité à comprendre les pensées, intentions ou émotions d'une autre personne sans nécessairement ressentir la même émotion.</p>
 <p>Elle implique notamment l'interprétation des comportements et du contexte social.</p>
 <hr />
-<h2 id="436-la-regulation-emotionnelle-interpersonnelle" class="entry-title hc-1">🌐 4.36 La régulation émotionnelle interpersonnelle</h2>
+<h2 id="436-la-regulation-emotionnelle-interpersonnelle" class="entry-title hc-1">4.36 La régulation émotionnelle interpersonnelle</h2>
 <p>La régulation émotionnelle interpersonnelle correspond à l'influence que les interactions avec d'autres personnes peuvent avoir sur les émotions.</p>
 <p>Une conversation, une présence rassurante, un soutien social ou une interaction conflictuelle peuvent modifier l'état émotionnel.</p>
 <p>La régulation émotionnelle n'est donc pas uniquement individuelle.</p>
 <hr />
-<h2 id="437-lescalade-emotionnelle" class="entry-title hc-2">🔥 4.37 L'escalade émotionnelle</h2>
+<h2 id="437-lescalade-emotionnelle" class="entry-title hc-2">4.37 L'escalade émotionnelle</h2>
 <p>L'escalade émotionnelle correspond à une augmentation progressive de l'intensité émotionnelle au cours d'une situation.</p>
 <p>Elle peut apparaître lors d'un conflit lorsque les réactions successives des personnes renforcent progressivement la tension.</p>
 <p>L'escalade peut également être influencée par les interprétations, les souvenirs et les attentes.</p>
 <hr />
-<h2 id="438-lhabituation-emotionnelle" class="entry-title hc-3">🌱 4.38 L'habituation émotionnelle</h2>
+<h2 id="438-lhabituation-emotionnelle" class="entry-title hc-3">4.38 L'habituation émotionnelle</h2>
 <p>L'habituation correspond à une diminution progressive d'une réponse après des expositions répétées à un même stimulus, lorsque celui-ci cesse d'être nouveau ou particulièrement important.</p>
 <p>Elle peut concerner certaines réactions émotionnelles.</p>
 <p>Cependant, toutes les émotions ne diminuent pas nécessairement simplement par répétition.</p>
 <hr />
-<h2 id="439-le-conditionnement-emotionnel" class="entry-title hc-4">🔁 4.39 Le conditionnement émotionnel</h2>
+<h2 id="439-le-conditionnement-emotionnel" class="entry-title hc-4">4.39 Le conditionnement émotionnel</h2>
 <p>Le conditionnement émotionnel correspond à l'apprentissage d'une réaction émotionnelle à partir d'une association entre différents stimuli ou événements.</p>
 <p>Un stimulus initialement neutre peut ainsi finir par provoquer une réaction émotionnelle après avoir été associé à un événement significatif.</p>
 <p>Ce phénomène est important dans l'étude de l'apprentissage de certaines peurs et réactions émotionnelles.</p>
 <hr />
-<h2 id="440-pourquoi-les-emotions-influencent-elles-autant-le-fonctionnement-psychologique" class="entry-title hc-5">🧠 4.40 Pourquoi les émotions influencent-elles autant le fonctionnement psychologique ?</h2>
+<h2 id="440-pourquoi-les-emotions-influencent-elles-autant-le-fonctionnement-psychologique" class="entry-title hc-5">4.40 Pourquoi les émotions influencent-elles autant le fonctionnement psychologique ?</h2>
 <p>Les émotions interagissent avec de nombreux processus psychologiques.</p>
 <p>Elles peuvent influencer :</p>
 <ul>
@@ -394,22 +409,43 @@
 </ul>
 <p>Elles ne constituent donc pas un système séparé du reste du fonctionnement mental.</p>
 <hr />
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>❤️ Les émotions impliquent à la fois des réactions psychologiques, physiologiques et comportementales.</p>
-<p>🧠 Elles peuvent modifier la perception, l'attention, la mémoire, les pensées et les décisions.</p>
-<p>🌊 Une émotion peut varier en intensité et évoluer rapidement selon le contexte.</p>
-<p>🔄 La régulation émotionnelle permet d'influencer l'expérience ou l'expression des émotions.</p>
-<p>🧩 Certaines expériences émotionnelles sont complexes et peuvent combiner plusieurs émotions simultanément.</p>
-<p>👥 Les émotions sont également influencées par les interactions sociales et peuvent se transmettre entre individus.</p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p>Les émotions impliquent à la fois des réactions psychologiques, physiologiques et comportementales.</p>
+<p>Elles peuvent modifier la perception, l'attention, la mémoire, les pensées et les décisions.</p>
+<p>Une émotion peut varier en intensité et évoluer rapidement selon le contexte.</p>
+<p>La régulation émotionnelle permet d'influencer l'expérience ou l'expression des émotions.</p>
+<p>Certaines expériences émotionnelles sont complexes et peuvent combiner plusieurs émotions simultanément.</p>
+<p>Les émotions sont également influencées par les interactions sociales et peuvent se transmettre entre individus.</p>
 <blockquote>
-<p>🔬 Un phénomène émotionnel isolé ne constitue pas automatiquement un signe de trouble psychologique. De nombreux phénomènes présentés ici font partie du fonctionnement psychologique ordinaire.
+<p>Un phénomène émotionnel isolé ne constitue pas automatiquement un signe de trouble psychologique. De nombreux phénomènes présentés ici font partie du fonctionnement psychologique ordinaire.
 </p>
 </blockquote>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Phénomènes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-a-l-attention/"><span class="similar-icon">🔮</span>Les phénomènes liés à l'attention</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-a-la-conscience/"><span class="similar-icon">🔮</span>Les phénomènes liés à la conscience</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-a-l-identite-et-au-soi/"><span class="similar-icon">🔮</span>Les phénomènes liés à l'identité et au soi</a></div>
+      <h2>Autres chapitres de « Phénomènes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-a-l-attention/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes liés à l'attention</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-a-la-conscience/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes liés à la conscience</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-a-l-identite-et-au-soi/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes liés à l'identité et au soi</a></div>
     </div>
     <a class="back-link" href="/categorie/phenomenes/">← Retour à « Phénomènes psychologiques »</a>
   </div>
@@ -495,23 +531,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -529,7 +567,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -709,9 +747,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -720,10 +760,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -830,7 +870,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -870,8 +910,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -902,7 +942,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -957,7 +997,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -981,17 +1021,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1033,7 +1073,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

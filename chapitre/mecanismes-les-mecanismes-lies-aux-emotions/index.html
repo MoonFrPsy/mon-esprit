@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#31-la-repression-consciente">❤️ 3.1 LA RÉPRESSION CONSCIENTE</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#exemple">💭 Exemple</a></li><li><a href="#fonction">🧠 Fonction</a></li><li><a href="#a-distinguer-du-refoulement">⚠️ À distinguer du refoulement</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#32-le-refoulement-emotionnel">🌑 3.2 LE REFOULEMENT ÉMOTIONNEL</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#exemple_1">💭 Exemple</a></li><li><a href="#particularite">🧠 Particularité</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#33-lisolation-de-laffect">🎭 3.3 L'ISOLATION DE L'AFFECT</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#exemple_2">💭 Exemple</a></li><li><a href="#fonction-possible">🧠 Fonction possible</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#34-lintellectualisation">🧠 3.4 L'INTELLECTUALISATION</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#exemple_3">💭 Exemple</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#35-la-rationalisation">🧠 3.5 LA RATIONALISATION</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#exemple_4">💭 Exemple</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#36-le-deplacement-emotionnel">↔️ 3.6 LE DÉPLACEMENT ÉMOTIONNEL</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#exemple_5">💭 Exemple</a></li><li><a href="#fonction-possible_1">🧠 Fonction possible</a></li><li><a href="#consequence">⚠️ Conséquence</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#37-la-projection-emotionnelle">🪞 3.7 LA PROJECTION ÉMOTIONNELLE</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#exemple_6">💭 Exemple</a></li><li><a href="#fonction-possible_2">🧠 Fonction possible</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#38-la-formation-reactionnelle">🎭 3.8 LA FORMATION RÉACTIONNELLE</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#exemple_7">💭 Exemple</a></li><li><a href="#fonction-possible_3">🧠 Fonction possible</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#39-levitement-emotionnel">🚪 3.9 L'ÉVITEMENT ÉMOTIONNEL</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#exemples">💭 Exemples</a></li><li><a href="#fonctionnement-possible">🔄 Fonctionnement possible</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#310-lengourdissement-emotionnel">🧊 3.10 L'ENGOURDISSEMENT ÉMOTIONNEL</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#causes-possibles">🧠 Causes possibles</a></li><li><a href="#important">⚠️ Important</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#311-la-dissociation-emotionnelle">🌫️ 3.11 LA DISSOCIATION ÉMOTIONNELLE</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#exemple_8">💭 Exemple</a></li><li><a href="#contexte">🧠 Contexte</a></li><li><a href="#a-retenir_10">📌 À retenir</a></li></ul></li><li><a href="#312-la-sublimation">🎨 3.12 LA SUBLIMATION</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#exemples_1">💭 Exemples</a></li><li><a href="#particularite_1">🌱 Particularité</a></li><li><a href="#a-retenir_11">📌 À retenir</a></li></ul></li><li><a href="#313-lhumour">😂 3.13 L'HUMOUR</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#exemple_9">💭 Exemple</a></li><li><a href="#particularite_2">🌱 Particularité</a></li><li><a href="#limite">⚠️ Limite</a></li><li><a href="#a-retenir_12">📌 À retenir</a></li></ul></li><li><a href="#314-lanticipation">🔮 3.14 L'ANTICIPATION</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#exemple_10">💭 Exemple</a></li><li><a href="#particularite_3">🌱 Particularité</a></li><li><a href="#difference-avec-la-rumination">⚠️ Différence avec la rumination</a></li><li><a href="#a-retenir_13">📌 À retenir</a></li></ul></li><li><a href="#315-laffection-inhibee">🧠 3.15 L'AFFECTION INHIBÉE</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#exemple_11">💭 Exemple</a></li><li><a href="#important_1">⚠️ Important</a></li><li><a href="#a-retenir_14">📌 À retenir</a></li></ul></li><li><a href="#316-la-neutralisation">🧩 3.16 LA NEUTRALISATION</a><ul class="sidebar-sublist"><li><a href="#definition_15">🔎 Définition</a></li><li><a href="#exemple_12">💭 Exemple</a></li><li><a href="#a-distinguer">⚠️ À distinguer</a></li><li><a href="#a-retenir_15">📌 À retenir</a></li></ul></li><li><a href="#317-la-compensation">🪞 3.17 LA COMPENSATION</a><ul class="sidebar-sublist"><li><a href="#definition_16">🔎 Définition</a></li><li><a href="#exemple_13">💭 Exemple</a></li><li><a href="#important_2">⚠️ Important</a></li><li><a href="#a-retenir_16">📌 À retenir</a></li></ul></li><li><a href="#318-lascetisme">🌱 3.18 L'ASCÉTISME</a><ul class="sidebar-sublist"><li><a href="#definition_17">🔎 Définition</a></li><li><a href="#exemple_14">💭 Exemple</a></li><li><a href="#fonction-possible_4">🧠 Fonction possible</a></li><li><a href="#important_3">⚠️ Important</a></li><li><a href="#a-retenir_17">📌 À retenir</a></li></ul></li><li><a href="#319-comment-differencier-les-mecanismes-emotionnels">🧠 3.19 COMMENT DIFFÉRENCIER LES MÉCANISMES ÉMOTIONNELS ?</a></li><li><a href="#320-recapitulatif">📚 3.20 RÉCAPITULATIF</a><ul class="sidebar-sublist"><li><a href="#sur-la-conscience-de-lemotion">💭 Sur la conscience de l'émotion</a></li><li><a href="#sur-linterpretation">🧠 Sur l'interprétation</a></li><li><a href="#sur-lexpression">🎯 Sur l'expression</a></li><li><a href="#sur-le-contact-avec-lemotion">🚪 Sur le contact avec l'émotion</a></li><li><a href="#sur-la-transformation-de-lemotion">🌱 Sur la transformation de l'émotion</a></li></ul></li><li><a href="#a-retenir_18">📌 À RETENIR</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#31-la-repression-consciente">3.1 LA RÉPRESSION CONSCIENTE</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#fonction">Fonction</a></li><li><a href="#a-distinguer-du-refoulement">À distinguer du refoulement</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#32-le-refoulement-emotionnel">3.2 LE REFOULEMENT ÉMOTIONNEL</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#exemple_1">Exemple</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#33-lisolation-de-laffect">3.3 L'ISOLATION DE L'AFFECT</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#exemple_2">Exemple</a></li><li><a href="#fonction-possible">Fonction possible</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#34-lintellectualisation">3.4 L'INTELLECTUALISATION</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#exemple_3">Exemple</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#35-la-rationalisation">3.5 LA RATIONALISATION</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#exemple_4">Exemple</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#36-le-deplacement-emotionnel">3.6 LE DÉPLACEMENT ÉMOTIONNEL</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#exemple_5">Exemple</a></li><li><a href="#fonction-possible_1">Fonction possible</a></li><li><a href="#consequence">Conséquence</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#37-la-projection-emotionnelle">3.7 LA PROJECTION ÉMOTIONNELLE</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#exemple_6">Exemple</a></li><li><a href="#fonction-possible_2">Fonction possible</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#38-la-formation-reactionnelle">3.8 LA FORMATION RÉACTIONNELLE</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#exemple_7">Exemple</a></li><li><a href="#fonction-possible_3">Fonction possible</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#39-levitement-emotionnel">3.9 L'ÉVITEMENT ÉMOTIONNEL</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#fonctionnement-possible">Fonctionnement possible</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#310-lengourdissement-emotionnel">3.10 L'ENGOURDISSEMENT ÉMOTIONNEL</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#important">Important</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#311-la-dissociation-emotionnelle">3.11 LA DISSOCIATION ÉMOTIONNELLE</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#exemple_8">Exemple</a></li><li><a href="#contexte">Contexte</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#312-la-sublimation">3.12 LA SUBLIMATION</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemples_1">Exemples</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#313-lhumour">3.13 L'HUMOUR</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#exemple_9">Exemple</a></li><li><a href="#particularite_2">Particularité</a></li><li><a href="#limite">Limite</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#314-lanticipation">3.14 L'ANTICIPATION</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#exemple_10">Exemple</a></li><li><a href="#particularite_3">Particularité</a></li><li><a href="#difference-avec-la-rumination">Différence avec la rumination</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#315-laffection-inhibee">3.15 L'AFFECTION INHIBÉE</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#exemple_11">Exemple</a></li><li><a href="#important_1">Important</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#316-la-neutralisation">3.16 LA NEUTRALISATION</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#exemple_12">Exemple</a></li><li><a href="#a-distinguer">À distinguer</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#317-la-compensation">3.17 LA COMPENSATION</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#exemple_13">Exemple</a></li><li><a href="#important_2">Important</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#318-lascetisme">3.18 L'ASCÉTISME</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#exemple_14">Exemple</a></li><li><a href="#fonction-possible_4">Fonction possible</a></li><li><a href="#important_3">Important</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#319-comment-differencier-les-mecanismes-emotionnels">3.19 COMMENT DIFFÉRENCIER LES MÉCANISMES ÉMOTIONNELS ?</a></li><li><a href="#320-recapitulatif">3.20 RÉCAPITULATIF</a><ul class="sidebar-sublist"><li><a href="#sur-la-conscience-de-lemotion">Sur la conscience de l'émotion</a></li><li><a href="#sur-linterpretation">Sur l'interprétation</a></li><li><a href="#sur-lexpression">Sur l'expression</a></li><li><a href="#sur-le-contact-avec-lemotion">Sur le contact avec l'émotion</a></li><li><a href="#sur-la-transformation-de-lemotion">Sur la transformation de l'émotion</a></li></ul></li><li><a href="#a-retenir_18">À RETENIR</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les mécanismes liés aux émotions',
         category: 'Mécanismes de défense',
-        icon: '🧩'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/mecanismes/">🧩 Mécanismes de défense</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/mecanismes/">Mécanismes de défense</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les mécanismes liés aux émotions</h1>
     </div>
     <div id="resume-banner"></div>
@@ -96,66 +111,66 @@
     </div>
     <div class="article-body">
       <blockquote>
-<p>❤️ Les émotions peuvent parfois être difficiles à reconnaître, accepter ou exprimer. Certains mécanismes psychologiques peuvent alors modifier la manière dont elles sont ressenties, exprimées ou mises à distance.</p>
+<p>Les émotions peuvent parfois être difficiles à reconnaître, accepter ou exprimer. Certains mécanismes psychologiques peuvent alors modifier la manière dont elles sont ressenties, exprimées ou mises à distance.</p>
 <p>Cette partie présente différents mécanismes pouvant intervenir dans la gestion des émotions, notamment lorsqu'une émotion provoque une tension importante.
 </p>
 </blockquote>
 <hr />
-<h1 id="31-la-repression-consciente" class="entry-title hc-1">❤️ 3.1 LA RÉPRESSION CONSCIENTE</h1>
-<h3 id="definition">🔎 Définition</h3>
+<h1 id="31-la-repression-consciente" class="entry-title hc-1">3.1 LA RÉPRESSION CONSCIENTE</h1>
+<h3 id="definition">Définition</h3>
 <p>La <strong>répression consciente</strong>, parfois appelée <strong>suppression</strong>, consiste à décider volontairement de mettre temporairement une pensée ou une émotion de côté.</p>
 <p>La personne est généralement consciente de ce qu'elle ressent, mais choisit de ne pas s'y attarder immédiatement.</p>
-<h3 id="exemple">💭 Exemple</h3>
+<h3 id="exemple">Exemple</h3>
 <p>Une personne est très triste avant de commencer une journée importante et se dit :</p>
 <blockquote>
 <p>« Je vais mettre ça de côté pour aujourd'hui et j'y penserai ce soir. »
 </p>
 </blockquote>
-<h3 id="fonction">🧠 Fonction</h3>
+<h3 id="fonction">Fonction</h3>
 <p>Cette stratégie peut permettre de rester concentré sur une tâche lorsque le moment n'est pas favorable pour traiter l'émotion.</p>
-<h3 id="a-distinguer-du-refoulement">⚠️ À distinguer du refoulement</h3>
+<h3 id="a-distinguer-du-refoulement">À distinguer du refoulement</h3>
 <p><strong>Suppression :</strong></p>
-<p>→ mise à distance volontaire et consciente.</p>
+<p>mise à distance volontaire et consciente.</p>
 <p><strong>Refoulement :</strong></p>
-<p>→ processus décrit comme inconscient dans la théorie psychanalytique.</p>
-<h3 id="a-retenir">📌 À retenir</h3>
+<p>processus décrit comme inconscient dans la théorie psychanalytique.</p>
+<h3 id="a-retenir">À retenir</h3>
 <blockquote>
 <p>La suppression consiste à mettre volontairement une émotion ou une pensée de côté pendant un certain temps.
 </p>
 </blockquote>
 <hr />
-<h1 id="32-le-refoulement-emotionnel" class="entry-title hc-2">🌑 3.2 LE REFOULEMENT ÉMOTIONNEL</h1>
-<h3 id="definition_1">🔎 Définition</h3>
+<h1 id="32-le-refoulement-emotionnel" class="entry-title hc-2">3.2 LE REFOULEMENT ÉMOTIONNEL</h1>
+<h3 id="definition_1">Définition</h3>
 <p>Le <strong>refoulement</strong>, dans la théorie psychanalytique, peut concerner des contenus émotionnels considérés comme difficiles à accepter ou incompatibles avec le fonctionnement conscient.</p>
 <p>L'émotion ou le contenu psychique est alors maintenu hors de la conscience.</p>
-<h3 id="exemple_1">💭 Exemple</h3>
+<h3 id="exemple_1">Exemple</h3>
 <p>Une personne peut avoir des sentiments qu'elle éprouve comme inacceptables et ne pas parvenir à les reconnaître consciemment.</p>
-<h3 id="particularite">🧠 Particularité</h3>
+<h3 id="particularite">Particularité</h3>
 <p>Contrairement à la suppression, le processus n'est pas présenté comme une décision volontaire.</p>
-<h3 id="a-retenir_1">📌 À retenir</h3>
+<h3 id="a-retenir_1">À retenir</h3>
 <blockquote>
 <p>Le refoulement est un concept psychodynamique associé à la mise à distance inconsciente de certains contenus psychiques.
 </p>
 </blockquote>
 <hr />
-<h1 id="33-lisolation-de-laffect" class="entry-title hc-3">🎭 3.3 L'ISOLATION DE L'AFFECT</h1>
-<h3 id="definition_2">🔎 Définition</h3>
+<h1 id="33-lisolation-de-laffect" class="entry-title hc-3">3.3 L'ISOLATION DE L'AFFECT</h1>
+<h3 id="definition_2">Définition</h3>
 <p>L'<strong>isolation de l'affect</strong> consiste à séparer une expérience, une pensée ou un souvenir de l'émotion qui lui est normalement associée.</p>
 <p>La personne peut alors parler d'un événement important sans manifester l'émotion correspondante.</p>
-<h3 id="exemple_2">💭 Exemple</h3>
+<h3 id="exemple_2">Exemple</h3>
 <p>Une personne raconte un événement extrêmement douloureux de manière très factuelle, avec peu d'émotion visible ou ressentie.</p>
-<h3 id="fonction-possible">🧠 Fonction possible</h3>
+<h3 id="fonction-possible">Fonction possible</h3>
 <p>Cette séparation peut réduire temporairement l'intensité émotionnelle de l'expérience.</p>
-<h3 id="a-retenir_2">📌 À retenir</h3>
+<h3 id="a-retenir_2">À retenir</h3>
 <blockquote>
 <p>Le contenu reste accessible, mais l'émotion qui lui est associée est mise à distance.
 </p>
 </blockquote>
 <hr />
-<h1 id="34-lintellectualisation" class="entry-title hc-4">🧠 3.4 L'INTELLECTUALISATION</h1>
-<h3 id="definition_3">🔎 Définition</h3>
+<h1 id="34-lintellectualisation" class="entry-title hc-4">3.4 L'INTELLECTUALISATION</h1>
+<h3 id="definition_3">Définition</h3>
 <p>L'<strong>intellectualisation</strong> consiste à traiter une expérience émotionnelle principalement à travers l'analyse, la logique ou les explications abstraites.</p>
-<h3 id="exemple_3">💭 Exemple</h3>
+<h3 id="exemple_3">Exemple</h3>
 <p>Après une rupture, une personne analyse :</p>
 <ul>
 <li>les causes de la séparation ;</li>
@@ -164,95 +179,95 @@
 <li>les mécanismes psychologiques impliqués.</li>
 </ul>
 <p>Mais elle parle très peu de sa tristesse ou de sa peur.</p>
-<h3 id="a-retenir_3">📌 À retenir</h3>
+<h3 id="a-retenir_3">À retenir</h3>
 <blockquote>
 <p>L'intellectualisation peut permettre de prendre une distance mentale avec une émotion difficile.
 </p>
 </blockquote>
 <hr />
-<h1 id="35-la-rationalisation" class="entry-title hc-5">🧠 3.5 LA RATIONALISATION</h1>
-<h3 id="definition_4">🔎 Définition</h3>
+<h1 id="35-la-rationalisation" class="entry-title hc-5">3.5 LA RATIONALISATION</h1>
+<h3 id="definition_4">Définition</h3>
 <p>La <strong>rationalisation</strong> consiste à construire une explication logique ou acceptable permettant de donner du sens à une réaction émotionnelle ou à un comportement.</p>
-<h3 id="exemple_4">💭 Exemple</h3>
+<h3 id="exemple_4">Exemple</h3>
 <p>Une personne est profondément déçue de ne pas avoir été invitée à un événement et affirme :</p>
 <blockquote>
 <p>« De toute façon, je n'avais aucune envie d'y aller. »
 </p>
 </blockquote>
 <p>Cette explication peut réduire momentanément la déception.</p>
-<h3 id="a-retenir_4">📌 À retenir</h3>
+<h3 id="a-retenir_4">À retenir</h3>
 <blockquote>
 <p>La rationalisation permet de rendre une expérience émotionnellement difficile plus acceptable grâce à une justification.
 </p>
 </blockquote>
 <hr />
-<h1 id="36-le-deplacement-emotionnel" class="entry-title hc-1">↔️ 3.6 LE DÉPLACEMENT ÉMOTIONNEL</h1>
-<h3 id="definition_5">🔎 Définition</h3>
+<h1 id="36-le-deplacement-emotionnel" class="entry-title hc-1">3.6 LE DÉPLACEMENT ÉMOTIONNEL</h1>
+<h3 id="definition_5">Définition</h3>
 <p>Le <strong>déplacement</strong> consiste à transférer une émotion d'une source initiale vers une autre cible.</p>
-<h3 id="exemple_5">💭 Exemple</h3>
+<h3 id="exemple_5">Exemple</h3>
 <p>Une personne ressent une forte colère contre son supérieur mais ne peut pas l'exprimer directement. Elle rentre chez elle et devient particulièrement irritable avec son entourage.</p>
-<h3 id="fonction-possible_1">🧠 Fonction possible</h3>
+<h3 id="fonction-possible_1">Fonction possible</h3>
 <p>La tension émotionnelle trouve ainsi une autre voie d'expression.</p>
-<h3 id="consequence">⚠️ Conséquence</h3>
+<h3 id="consequence">Conséquence</h3>
 <p>La nouvelle cible de la colère peut ne pas être responsable de la situation initiale.</p>
-<h3 id="a-retenir_5">📌 À retenir</h3>
+<h3 id="a-retenir_5">À retenir</h3>
 <blockquote>
 <p>Le déplacement modifie principalement la cible vers laquelle l'émotion est dirigée.
 </p>
 </blockquote>
 <hr />
-<h1 id="37-la-projection-emotionnelle" class="entry-title hc-2">🪞 3.7 LA PROJECTION ÉMOTIONNELLE</h1>
-<h3 id="definition_6">🔎 Définition</h3>
+<h1 id="37-la-projection-emotionnelle" class="entry-title hc-2">3.7 LA PROJECTION ÉMOTIONNELLE</h1>
+<h3 id="definition_6">Définition</h3>
 <p>La <strong>projection</strong> peut concerner des émotions difficiles à reconnaître chez soi.</p>
 <p>Une personne peut alors attribuer à quelqu'un d'autre une émotion qu'elle éprouve elle-même.</p>
-<h3 id="exemple_6">💭 Exemple</h3>
+<h3 id="exemple_6">Exemple</h3>
 <p>Une personne ressent une forte hostilité envers quelqu'un mais affirme :</p>
 <blockquote>
 <p>« C'est lui qui me déteste. »
 </p>
 </blockquote>
-<h3 id="fonction-possible_2">🧠 Fonction possible</h3>
+<h3 id="fonction-possible_2">Fonction possible</h3>
 <p>Cela permet de percevoir l'émotion comme provenant de l'extérieur plutôt que de devoir la reconnaître comme faisant partie de son propre vécu.</p>
-<h3 id="a-retenir_6">📌 À retenir</h3>
+<h3 id="a-retenir_6">À retenir</h3>
 <blockquote>
 <p>La projection peut permettre de mettre à distance une émotion difficile à reconnaître comme sienne.
 </p>
 </blockquote>
 <hr />
-<h1 id="38-la-formation-reactionnelle" class="entry-title hc-3">🎭 3.8 LA FORMATION RÉACTIONNELLE</h1>
-<h3 id="definition_7">🔎 Définition</h3>
+<h1 id="38-la-formation-reactionnelle" class="entry-title hc-3">3.8 LA FORMATION RÉACTIONNELLE</h1>
+<h3 id="definition_7">Définition</h3>
 <p>La <strong>formation réactionnelle</strong> consiste à exprimer une émotion ou une attitude qui semble opposée à une tendance interne.</p>
-<h3 id="exemple_7">💭 Exemple</h3>
+<h3 id="exemple_7">Exemple</h3>
 <p>Une personne ressent une forte hostilité envers quelqu'un mais adopte envers cette personne une attitude excessivement chaleureuse.</p>
-<h3 id="fonction-possible_3">🧠 Fonction possible</h3>
+<h3 id="fonction-possible_3">Fonction possible</h3>
 <p>L'attitude opposée peut permettre de maintenir à distance l'émotion vécue comme difficile ou inacceptable.</p>
-<h3 id="a-retenir_7">📌 À retenir</h3>
+<h3 id="a-retenir_7">À retenir</h3>
 <blockquote>
 <p>La formation réactionnelle repose sur l'expression d'une réaction opposée à une tendance interne.
 </p>
 </blockquote>
 <hr />
-<h1 id="39-levitement-emotionnel" class="entry-title hc-4">🚪 3.9 L'ÉVITEMENT ÉMOTIONNEL</h1>
-<h3 id="definition_8">🔎 Définition</h3>
+<h1 id="39-levitement-emotionnel" class="entry-title hc-4">3.9 L'ÉVITEMENT ÉMOTIONNEL</h1>
+<h3 id="definition_8">Définition</h3>
 <p>L'<strong>évitement émotionnel</strong> consiste à chercher à ne pas ressentir, reconnaître ou confronter certaines émotions jugées trop difficiles.</p>
-<h3 id="exemples">💭 Exemples</h3>
+<h3 id="exemples">Exemples</h3>
 <ul>
 <li>éviter de parler d'un événement douloureux ;</li>
 <li>changer de sujet lorsqu'une émotion apparaît ;</li>
 <li>se distraire systématiquement pour ne pas ressentir ;</li>
 <li>éviter certaines situations qui déclenchent une émotion.</li>
 </ul>
-<h3 id="fonctionnement-possible">🔄 Fonctionnement possible</h3>
-<p><strong>Émotion → inconfort → évitement → soulagement → risque de renforcer l'évitement</strong></p>
+<h3 id="fonctionnement-possible">Fonctionnement possible</h3>
+<p><strong>Émotion  inconfort  évitement  soulagement  risque de renforcer l'évitement</strong></p>
 <p>Le soulagement immédiat peut rendre l'évitement plus probable à l'avenir.</p>
-<h3 id="a-retenir_8">📌 À retenir</h3>
+<h3 id="a-retenir_8">À retenir</h3>
 <blockquote>
 <p>L'évitement émotionnel peut diminuer une détresse immédiatement, mais son utilisation systématique peut empêcher l'expérience et l'intégration de certaines émotions.
 </p>
 </blockquote>
 <hr />
-<h1 id="310-lengourdissement-emotionnel" class="entry-title hc-5">🧊 3.10 L'ENGOURDISSEMENT ÉMOTIONNEL</h1>
-<h3 id="definition_9">🔎 Définition</h3>
+<h1 id="310-lengourdissement-emotionnel" class="entry-title hc-5">3.10 L'ENGOURDISSEMENT ÉMOTIONNEL</h1>
+<h3 id="definition_9">Définition</h3>
 <p>L'<strong>engourdissement émotionnel</strong> désigne une diminution importante de la capacité à ressentir ou identifier certaines émotions.</p>
 <p>Il peut donner l'impression d'être :</p>
 <ul>
@@ -261,7 +276,7 @@
 <li>indifférent ;</li>
 <li>« anesthésié » émotionnellement.</li>
 </ul>
-<h3 id="causes-possibles">🧠 Causes possibles</h3>
+<h3 id="causes-possibles">Causes possibles</h3>
 <p>Il peut apparaître dans différents contextes, notamment :</p>
 <ul>
 <li>stress important ;</li>
@@ -271,36 +286,36 @@
 <li>certaines réactions dissociatives ;</li>
 <li>effets de substances ou de médicaments.</li>
 </ul>
-<h3 id="important">⚠️ Important</h3>
+<h3 id="important">Important</h3>
 <p>L'engourdissement émotionnel n'est pas un mécanisme de défense spécifique dans toutes les classifications. Il s'agit avant tout d'un phénomène clinique pouvant avoir plusieurs explications.</p>
-<h3 id="a-retenir_9">📌 À retenir</h3>
+<h3 id="a-retenir_9">À retenir</h3>
 <blockquote>
 <p>L'engourdissement émotionnel correspond à une diminution du vécu émotionnel et peut avoir différentes origines.
 </p>
 </blockquote>
 <hr />
-<h1 id="311-la-dissociation-emotionnelle" class="entry-title hc-1">🌫️ 3.11 LA DISSOCIATION ÉMOTIONNELLE</h1>
-<h3 id="definition_10">🔎 Définition</h3>
+<h1 id="311-la-dissociation-emotionnelle" class="entry-title hc-1">3.11 LA DISSOCIATION ÉMOTIONNELLE</h1>
+<h3 id="definition_10">Définition</h3>
 <p>La <strong>dissociation émotionnelle</strong> désigne une forme de détachement ou de séparation par rapport à l'expérience émotionnelle.</p>
 <p>Une personne peut avoir conscience d'un événement sans avoir l'impression de ressentir pleinement l'émotion qui devrait normalement lui être associée.</p>
-<h3 id="exemple_8">💭 Exemple</h3>
+<h3 id="exemple_8">Exemple</h3>
 <p>Une personne vit une situation extrêmement stressante et décrit ensuite :</p>
 <blockquote>
 <p>« Je savais que c'était grave, mais je ne ressentais absolument rien. »
 </p>
 </blockquote>
-<h3 id="contexte">🧠 Contexte</h3>
+<h3 id="contexte">Contexte</h3>
 <p>Des phénomènes dissociatifs peuvent notamment apparaître lors de situations extrêmement stressantes ou traumatiques.</p>
-<h3 id="a-retenir_10">📌 À retenir</h3>
+<h3 id="a-retenir_10">À retenir</h3>
 <blockquote>
 <p>La dissociation peut modifier l'intégration habituelle des émotions et de l'expérience.
 </p>
 </blockquote>
 <hr />
-<h1 id="312-la-sublimation" class="entry-title hc-2">🎨 3.12 LA SUBLIMATION</h1>
-<h3 id="definition_11">🔎 Définition</h3>
+<h1 id="312-la-sublimation" class="entry-title hc-2">3.12 LA SUBLIMATION</h1>
+<h3 id="definition_11">Définition</h3>
 <p>La <strong>sublimation</strong> est un mécanisme issu de la théorie psychanalytique dans lequel une impulsion ou une énergie psychique est transformée en activité socialement valorisée.</p>
-<h3 id="exemples_1">💭 Exemples</h3>
+<h3 id="exemples_1">Exemples</h3>
 <p>Une personne ressentant une forte tension peut investir cette énergie dans :</p>
 <ul>
 <li>le sport ;</li>
@@ -310,49 +325,49 @@
 <li>le travail ;</li>
 <li>un projet personnel.</li>
 </ul>
-<h3 id="particularite_1">🌱 Particularité</h3>
+<h3 id="particularite_1">Particularité</h3>
 <p>La sublimation est généralement considérée comme une défense relativement adaptative.</p>
-<h3 id="a-retenir_11">📌 À retenir</h3>
+<h3 id="a-retenir_11">À retenir</h3>
 <blockquote>
 <p>La sublimation transforme une tension ou une impulsion en une activité constructive ou socialement valorisée.
 </p>
 </blockquote>
 <hr />
-<h1 id="313-lhumour" class="entry-title hc-3">😂 3.13 L'HUMOUR</h1>
-<h3 id="definition_12">🔎 Définition</h3>
+<h1 id="313-lhumour" class="entry-title hc-3">3.13 L'HUMOUR</h1>
+<h3 id="definition_12">Définition</h3>
 <p>L'<strong>humour</strong> peut être utilisé comme mécanisme de défense lorsqu'il permet de prendre une certaine distance avec une situation difficile tout en reconnaissant, au moins partiellement, son aspect émotionnel.</p>
-<h3 id="exemple_9">💭 Exemple</h3>
+<h3 id="exemple_9">Exemple</h3>
 <p>Une personne confrontée à une situation stressante utilise l'humour pour en parler sans être complètement submergée par l'émotion.</p>
-<h3 id="particularite_2">🌱 Particularité</h3>
+<h3 id="particularite_2">Particularité</h3>
 <p>L'humour est souvent considéré comme une défense relativement adaptative lorsqu'il permet de gérer une difficulté sans nier complètement la réalité.</p>
-<h3 id="limite">⚠️ Limite</h3>
+<h3 id="limite">Limite</h3>
 <p>L'humour peut également devenir une manière d'éviter systématiquement toute expression émotionnelle.</p>
-<h3 id="a-retenir_12">📌 À retenir</h3>
+<h3 id="a-retenir_12">À retenir</h3>
 <blockquote>
 <p>L'humour peut permettre de réduire la tension émotionnelle tout en maintenant un certain contact avec la réalité.
 </p>
 </blockquote>
 <hr />
-<h1 id="314-lanticipation" class="entry-title hc-4">🔮 3.14 L'ANTICIPATION</h1>
-<h3 id="definition_13">🔎 Définition</h3>
+<h1 id="314-lanticipation" class="entry-title hc-4">3.14 L'ANTICIPATION</h1>
+<h3 id="definition_13">Définition</h3>
 <p>L'<strong>anticipation</strong> consiste à imaginer ou préparer mentalement une situation future afin de mieux gérer les émotions et difficultés susceptibles d'apparaître.</p>
-<h3 id="exemple_10">💭 Exemple</h3>
+<h3 id="exemple_10">Exemple</h3>
 <p>Avant une conversation difficile, une personne réfléchit aux différentes réactions possibles et prépare ce qu'elle souhaite dire.</p>
-<h3 id="particularite_3">🌱 Particularité</h3>
+<h3 id="particularite_3">Particularité</h3>
 <p>L'anticipation est généralement considérée comme une défense relativement mature lorsqu'elle permet de se préparer sans générer une inquiétude excessive.</p>
-<h3 id="difference-avec-la-rumination">⚠️ Différence avec la rumination</h3>
+<h3 id="difference-avec-la-rumination">Différence avec la rumination</h3>
 <p><strong>Anticipation :</strong></p>
-<p>→ préparation orientée vers l'action.</p>
+<p>préparation orientée vers l'action.</p>
 <p><strong>Rumination :</strong></p>
-<p>→ répétition mentale souvent centrée sur le problème et pouvant rester improductive.</p>
-<h3 id="a-retenir_13">📌 À retenir</h3>
+<p>répétition mentale souvent centrée sur le problème et pouvant rester improductive.</p>
+<h3 id="a-retenir_13">À retenir</h3>
 <blockquote>
 <p>L'anticipation peut transformer une inquiétude en préparation concrète.
 </p>
 </blockquote>
 <hr />
-<h1 id="315-laffection-inhibee" class="entry-title hc-5">🧠 3.15 L'AFFECTION INHIBÉE</h1>
-<h3 id="definition_14">🔎 Définition</h3>
+<h1 id="315-laffection-inhibee" class="entry-title hc-5">3.15 L'AFFECTION INHIBÉE</h1>
+<h3 id="definition_14">Définition</h3>
 <p>L'<strong>inhibition affective</strong> correspond à une difficulté à exprimer ou manifester certaines émotions, même lorsqu'elles sont présentes.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -362,60 +377,60 @@
 <li>l'affection ;</li>
 <li>la joie.</li>
 </ul>
-<h3 id="exemple_11">💭 Exemple</h3>
+<h3 id="exemple_11">Exemple</h3>
 <p>Une personne ressent une profonde tristesse mais reste incapable de pleurer ou d'en parler.</p>
-<h3 id="important_1">⚠️ Important</h3>
+<h3 id="important_1">Important</h3>
 <p>L'inhibition affective n'est pas nécessairement une défense consciente ou inconsciente unique. Elle peut avoir de nombreuses origines psychologiques, sociales ou biologiques.</p>
-<h3 id="a-retenir_14">📌 À retenir</h3>
+<h3 id="a-retenir_14">À retenir</h3>
 <blockquote>
 <p>Une émotion peut être présente sans être facilement exprimée extérieurement.
 </p>
 </blockquote>
 <hr />
-<h1 id="316-la-neutralisation" class="entry-title hc-1">🧩 3.16 LA NEUTRALISATION</h1>
-<h3 id="definition_15">🔎 Définition</h3>
+<h1 id="316-la-neutralisation" class="entry-title hc-1">3.16 LA NEUTRALISATION</h1>
+<h3 id="definition_15">Définition</h3>
 <p>La <strong>neutralisation</strong> désigne un processus visant à réduire ou annuler psychologiquement l'impact d'une pensée, d'une émotion ou d'une action.</p>
 <p>Dans les approches psychodynamiques, elle peut être considérée comme un processus défensif.</p>
-<h3 id="exemple_12">💭 Exemple</h3>
+<h3 id="exemple_12">Exemple</h3>
 <p>Après avoir ressenti une forte agressivité, une personne cherche immédiatement à faire quelque chose qui lui donne l'impression d'avoir « réparé » ou compensé cette émotion.</p>
-<h3 id="a-distinguer">⚠️ À distinguer</h3>
+<h3 id="a-distinguer">À distinguer</h3>
 <p>La neutralisation psychodynamique ne doit pas être confondue automatiquement avec les compulsions du trouble obsessionnel-compulsif.</p>
-<h3 id="a-retenir_15">📌 À retenir</h3>
+<h3 id="a-retenir_15">À retenir</h3>
 <blockquote>
 <p>La neutralisation vise à réduire symboliquement ou psychologiquement l'effet d'une expérience difficile.
 </p>
 </blockquote>
 <hr />
-<h1 id="317-la-compensation" class="entry-title hc-2">🪞 3.17 LA COMPENSATION</h1>
-<h3 id="definition_16">🔎 Définition</h3>
+<h1 id="317-la-compensation" class="entry-title hc-2">3.17 LA COMPENSATION</h1>
+<h3 id="definition_16">Définition</h3>
 <p>La <strong>compensation</strong> consiste à développer ou mettre fortement en avant certaines qualités, activités ou réussites afin de contrebalancer un sentiment de faiblesse, d'insuffisance ou d'échec dans un autre domaine.</p>
-<h3 id="exemple_13">💭 Exemple</h3>
+<h3 id="exemple_13">Exemple</h3>
 <p>Une personne qui se sent très peu sûre d'elle dans un domaine cherche constamment à démontrer ses compétences dans un autre.</p>
-<h3 id="important_2">⚠️ Important</h3>
+<h3 id="important_2">Important</h3>
 <p>La compensation n'est pas nécessairement pathologique.</p>
 <p>Développer une compétence après une difficulté peut être une stratégie saine. Le concept devient défensif lorsqu'il sert principalement à protéger une image de soi fragilisée.</p>
-<h3 id="a-retenir_16">📌 À retenir</h3>
+<h3 id="a-retenir_16">À retenir</h3>
 <blockquote>
 <p>La compensation peut protéger l'estime de soi en mettant l'accent sur d'autres aspects valorisés.
 </p>
 </blockquote>
 <hr />
-<h1 id="318-lascetisme" class="entry-title hc-3">🌱 3.18 L'ASCÉTISME</h1>
-<h3 id="definition_17">🔎 Définition</h3>
+<h1 id="318-lascetisme" class="entry-title hc-3">3.18 L'ASCÉTISME</h1>
+<h3 id="definition_17">Définition</h3>
 <p>Dans certaines classifications psychodynamiques, l'<strong>ascétisme</strong> désigne une tendance à limiter ou renoncer à certaines expériences plaisantes afin de contrôler des émotions, désirs ou impulsions perçus comme difficiles.</p>
-<h3 id="exemple_14">💭 Exemple</h3>
+<h3 id="exemple_14">Exemple</h3>
 <p>Une personne peut volontairement se priver de certaines satisfactions parce qu'elle ressent un besoin important de contrôler ses envies.</p>
-<h3 id="fonction-possible_4">🧠 Fonction possible</h3>
+<h3 id="fonction-possible_4">Fonction possible</h3>
 <p>La restriction peut procurer un sentiment de contrôle face à une tension interne.</p>
-<h3 id="important_3">⚠️ Important</h3>
+<h3 id="important_3">Important</h3>
 <p>L'ascétisme peut avoir différentes significations selon les contextes culturels, philosophiques ou religieux. Ici, il est utilisé dans son sens psychodynamique.</p>
-<h3 id="a-retenir_17">📌 À retenir</h3>
+<h3 id="a-retenir_17">À retenir</h3>
 <blockquote>
 <p>Dans le contexte des défenses, l'ascétisme consiste notamment à réduire certaines satisfactions pour contrôler une tension interne.
 </p>
 </blockquote>
 <hr />
-<h1 id="319-comment-differencier-les-mecanismes-emotionnels" class="entry-title hc-4">🧠 3.19 COMMENT DIFFÉRENCIER LES MÉCANISMES ÉMOTIONNELS ?</h1>
+<h1 id="319-comment-differencier-les-mecanismes-emotionnels" class="entry-title hc-4">3.19 COMMENT DIFFÉRENCIER LES MÉCANISMES ÉMOTIONNELS ?</h1>
 <p>Plusieurs mécanismes peuvent sembler très proches.</p>
 <table>
 <thead>
@@ -426,83 +441,83 @@
 </thead>
 <tbody>
 <tr>
-<td>🌑 Refoulement</td>
+<td>Refoulement</td>
 <td>Maintenir un contenu hors de la conscience</td>
 </tr>
 <tr>
-<td>🧠 Intellectualisation</td>
+<td>Intellectualisation</td>
 <td>Remplacer le vécu émotionnel par l'analyse</td>
 </tr>
 <tr>
-<td>💭 Rationalisation</td>
+<td>Rationalisation</td>
 <td>Donner une justification acceptable</td>
 </tr>
 <tr>
-<td>↔️ Déplacement</td>
+<td>Déplacement</td>
 <td>Transférer l'émotion vers une autre cible</td>
 </tr>
 <tr>
-<td>🪞 Projection</td>
+<td>Projection</td>
 <td>Attribuer certains éléments de soi à autrui</td>
 </tr>
 <tr>
-<td>🎭 Formation réactionnelle</td>
+<td>Formation réactionnelle</td>
 <td>Exprimer l'opposé d'une tendance</td>
 </tr>
 <tr>
-<td>🚪 Évitement</td>
+<td>Évitement</td>
 <td>Échapper au contact avec l'expérience</td>
 </tr>
 <tr>
-<td>🌫️ Dissociation</td>
+<td>Dissociation</td>
 <td>Modifier l'intégration de l'expérience</td>
 </tr>
 <tr>
-<td>🎨 Sublimation</td>
+<td>Sublimation</td>
 <td>Transformer une impulsion en activité valorisée</td>
 </tr>
 <tr>
-<td>😂 Humour</td>
+<td>Humour</td>
 <td>Prendre une distance avec l'émotion</td>
 </tr>
 <tr>
-<td>🔮 Anticipation</td>
+<td>Anticipation</td>
 <td>Préparer psychologiquement une situation future</td>
 </tr>
 <tr>
-<td>🪞 Compensation</td>
+<td>Compensation</td>
 <td>Protéger l'image de soi par un autre domaine</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h1 id="320-recapitulatif" class="entry-title hc-5">📚 3.20 RÉCAPITULATIF</h1>
+<h1 id="320-recapitulatif" class="entry-title hc-5">3.20 RÉCAPITULATIF</h1>
 <p>Les mécanismes liés aux émotions peuvent agir sur différents aspects du vécu psychologique :</p>
-<h3 id="sur-la-conscience-de-lemotion">💭 Sur la conscience de l'émotion</h3>
+<h3 id="sur-la-conscience-de-lemotion">Sur la conscience de l'émotion</h3>
 <ul>
 <li>refoulement ;</li>
 <li>suppression ;</li>
 <li>isolation de l'affect.</li>
 </ul>
-<h3 id="sur-linterpretation">🧠 Sur l'interprétation</h3>
+<h3 id="sur-linterpretation">Sur l'interprétation</h3>
 <ul>
 <li>rationalisation ;</li>
 <li>intellectualisation ;</li>
 <li>projection.</li>
 </ul>
-<h3 id="sur-lexpression">🎯 Sur l'expression</h3>
+<h3 id="sur-lexpression">Sur l'expression</h3>
 <ul>
 <li>déplacement ;</li>
 <li>formation réactionnelle ;</li>
 <li>inhibition affective.</li>
 </ul>
-<h3 id="sur-le-contact-avec-lemotion">🚪 Sur le contact avec l'émotion</h3>
+<h3 id="sur-le-contact-avec-lemotion">Sur le contact avec l'émotion</h3>
 <ul>
 <li>évitement ;</li>
 <li>dissociation ;</li>
 <li>engourdissement émotionnel.</li>
 </ul>
-<h3 id="sur-la-transformation-de-lemotion">🌱 Sur la transformation de l'émotion</h3>
+<h3 id="sur-la-transformation-de-lemotion">Sur la transformation de l'émotion</h3>
 <ul>
 <li>sublimation ;</li>
 <li>humour ;</li>
@@ -510,22 +525,31 @@
 <li>compensation.</li>
 </ul>
 <hr />
-<h1 id="a-retenir_18" class="entry-title hc-1">📌 À RETENIR</h1>
-<p>❤️ Les émotions peuvent être <strong>reconnues, déplacées, transformées, mises à distance ou séparées de leur expression</strong>.</p>
-<p>🧠 Les mécanismes de défense ne fonctionnent pas tous de la même manière.</p>
-<p>⚖️ Une stratégie peut être utile dans une situation et devenir problématique lorsqu'elle est utilisée de manière excessive ou rigide.</p>
-<p>🌑 Certains mécanismes, comme le refoulement, sont principalement issus des théories psychodynamiques.</p>
-<p>🔎 Un même comportement peut avoir des significations différentes selon le contexte.</p>
-<p>🩺 Aucun mécanisme de défense pris isolément ne permet de poser un diagnostic.</p>
+<h1 id="a-retenir_18" class="entry-title hc-1">À RETENIR</h1>
+<p>Les émotions peuvent être <strong>reconnues, déplacées, transformées, mises à distance ou séparées de leur expression</strong>.</p>
+<p>Les mécanismes de défense ne fonctionnent pas tous de la même manière.</p>
+<p>Une stratégie peut être utile dans une situation et devenir problématique lorsqu'elle est utilisée de manière excessive ou rigide.</p>
+<p>Certains mécanismes, comme le refoulement, sont principalement issus des théories psychodynamiques.</p>
+<p>Un même comportement peut avoir des significations différentes selon le contexte.</p>
+<p>Aucun mécanisme de défense pris isolément ne permet de poser un diagnostic.</p>
 <blockquote>
-<p>🧩 <strong>Comprendre les mécanismes de défense permet surtout d'observer comment le fonctionnement psychologique cherche à gérer une émotion ou une tension difficile.</strong>
+<p><strong>Comprendre les mécanismes de défense permet surtout d'observer comment le fonctionnement psychologique cherche à gérer une émotion ou une tension difficile.</strong>
 </p>
 </blockquote>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Mécanismes de défense »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-lies-aux-pensees/"><span class="similar-icon">🧩</span>Les mécanismes liés aux pensées</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-lies-a-l-identite/"><span class="similar-icon">🧩</span>Les mécanismes liés à l'identité</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-dans-les-relations/"><span class="similar-icon">🧩</span>Les mécanismes dans les relations</a></div>
+      <h2>Autres chapitres de « Mécanismes de défense »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-lies-aux-pensees/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Les mécanismes liés aux pensées</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-lies-a-l-identite/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Les mécanismes liés à l'identité</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-dans-les-relations/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Les mécanismes dans les relations</a></div>
     </div>
     <a class="back-link" href="/categorie/mecanismes/">← Retour à « Mécanismes de défense »</a>
   </div>
@@ -611,23 +635,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -645,7 +671,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -825,9 +851,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -836,10 +864,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -946,7 +974,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -986,8 +1014,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1018,7 +1046,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1073,7 +1101,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1097,17 +1125,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1149,7 +1177,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

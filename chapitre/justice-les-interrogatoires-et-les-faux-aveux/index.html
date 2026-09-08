@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#31-la-psychologie-des-interrogatoires">🧠 3.1 LA PSYCHOLOGIE DES INTERROGATOIRES</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#32-la-pression-psychologique">🧠 3.2 LA PRESSION PSYCHOLOGIQUE</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#33-la-suggestibilite-et-linfluence">🧠 3.3 LA SUGGESTIBILITÉ ET L'INFLUENCE</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#34-lautorite-et-lobeissance">🧠 3.4 L'AUTORITÉ ET L'OBÉISSANCE</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#35-les-aveux">🧠 3.5 LES AVEUX</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#36-les-faux-aveux">🧠 3.6 LES FAUX AVEUX</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#37-les-facteurs-individuels">🧠 3.7 LES FACTEURS INDIVIDUELS</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#38-les-facteurs-situationnels">🧠 3.8 LES FACTEURS SITUATIONNELS</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#39-les-consequences-des-faux-aveux">🧠 3.9 LES CONSÉQUENCES DES FAUX AVEUX</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li><li><a href="#a-retenir_8">📌 À RETENIR</a></li></ul></li><li><a href="#310-les-limites-des-interrogatoires">🧠 3.10 LES LIMITES DES INTERROGATOIRES</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li><li><a href="#a-retenir_9">📌 À RETENIR</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#31-la-psychologie-des-interrogatoires">3.1 LA PSYCHOLOGIE DES INTERROGATOIRES</a><ul class="sidebar-sublist"><li><a href="#definition">DÉFINITION</a></li><li><a href="#explication">EXPLICATION</a></li><li><a href="#exemple">EXEMPLE</a></li><li><a href="#a-retenir">À RETENIR</a></li></ul></li><li><a href="#32-la-pression-psychologique">3.2 LA PRESSION PSYCHOLOGIQUE</a><ul class="sidebar-sublist"><li><a href="#definition_1">DÉFINITION</a></li><li><a href="#explication_1">EXPLICATION</a></li><li><a href="#exemple_1">EXEMPLE</a></li><li><a href="#a-retenir_1">À RETENIR</a></li></ul></li><li><a href="#33-la-suggestibilite-et-linfluence">3.3 LA SUGGESTIBILITÉ ET L'INFLUENCE</a><ul class="sidebar-sublist"><li><a href="#definition_2">DÉFINITION</a></li><li><a href="#explication_2">EXPLICATION</a></li><li><a href="#exemple_2">EXEMPLE</a></li><li><a href="#a-retenir_2">À RETENIR</a></li></ul></li><li><a href="#34-lautorite-et-lobeissance">3.4 L'AUTORITÉ ET L'OBÉISSANCE</a><ul class="sidebar-sublist"><li><a href="#definition_3">DÉFINITION</a></li><li><a href="#explication_3">EXPLICATION</a></li><li><a href="#exemple_3">EXEMPLE</a></li><li><a href="#a-retenir_3">À RETENIR</a></li></ul></li><li><a href="#35-les-aveux">3.5 LES AVEUX</a><ul class="sidebar-sublist"><li><a href="#definition_4">DÉFINITION</a></li><li><a href="#explication_4">EXPLICATION</a></li><li><a href="#exemple_4">EXEMPLE</a></li><li><a href="#a-retenir_4">À RETENIR</a></li></ul></li><li><a href="#36-les-faux-aveux">3.6 LES FAUX AVEUX</a><ul class="sidebar-sublist"><li><a href="#definition_5">DÉFINITION</a></li><li><a href="#explication_5">EXPLICATION</a></li><li><a href="#exemple_5">EXEMPLE</a></li><li><a href="#a-retenir_5">À RETENIR</a></li></ul></li><li><a href="#37-les-facteurs-individuels">3.7 LES FACTEURS INDIVIDUELS</a><ul class="sidebar-sublist"><li><a href="#definition_6">DÉFINITION</a></li><li><a href="#explication_6">EXPLICATION</a></li><li><a href="#exemple_6">EXEMPLE</a></li><li><a href="#a-retenir_6">À RETENIR</a></li></ul></li><li><a href="#38-les-facteurs-situationnels">3.8 LES FACTEURS SITUATIONNELS</a><ul class="sidebar-sublist"><li><a href="#definition_7">DÉFINITION</a></li><li><a href="#explication_7">EXPLICATION</a></li><li><a href="#exemple_7">EXEMPLE</a></li><li><a href="#a-retenir_7">À RETENIR</a></li></ul></li><li><a href="#39-les-consequences-des-faux-aveux">3.9 LES CONSÉQUENCES DES FAUX AVEUX</a><ul class="sidebar-sublist"><li><a href="#definition_8">DÉFINITION</a></li><li><a href="#explication_8">EXPLICATION</a></li><li><a href="#exemple_8">EXEMPLE</a></li><li><a href="#a-retenir_8">À RETENIR</a></li></ul></li><li><a href="#310-les-limites-des-interrogatoires">3.10 LES LIMITES DES INTERROGATOIRES</a><ul class="sidebar-sublist"><li><a href="#definition_9">DÉFINITION</a></li><li><a href="#explication_9">EXPLICATION</a></li><li><a href="#exemple_9">EXEMPLE</a></li><li><a href="#a-retenir_9">À RETENIR</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les interrogatoires et les faux aveux',
         category: 'Psychologie, justice et criminologie',
-        icon: '⚖️'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/justice/">⚖️ Psychologie, justice et criminologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/justice/">Psychologie, justice et criminologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les interrogatoires et les faux aveux</h1>
     </div>
     <div id="resume-banner"></div>
@@ -105,132 +120,132 @@
 <p>Comprendre les mécanismes psychologiques pouvant intervenir lors des interrogatoires, ainsi que les facteurs susceptibles d'influencer les déclarations d'une personne et de conduire, dans certains cas, à des aveux inexacts.
 </p>
 </blockquote>
-<h2 id="31-la-psychologie-des-interrogatoires" class="entry-title hc-1">🧠 3.1 LA PSYCHOLOGIE DES INTERROGATOIRES</h2>
-<h3 id="definition">🔎 DÉFINITION</h3>
+<h2 id="31-la-psychologie-des-interrogatoires" class="entry-title hc-1">3.1 LA PSYCHOLOGIE DES INTERROGATOIRES</h2>
+<h3 id="definition">DÉFINITION</h3>
 <p>La psychologie des interrogatoires étudie les processus psychologiques pouvant influencer les comportements, les réponses, les souvenirs et les décisions d'une personne lorsqu'elle est interrogée dans un contexte judiciaire ou policier.</p>
-<h3 id="explication">🧠 EXPLICATION</h3>
+<h3 id="explication">EXPLICATION</h3>
 <p>Un interrogatoire constitue une situation particulière dans laquelle plusieurs facteurs peuvent modifier la manière dont une personne réfléchit et communique.</p>
 <p>Le stress, l'anxiété, la fatigue, la peur des conséquences, la présence d'une figure d'autorité ou encore la manière dont les questions sont formulées peuvent avoir une influence sur les réponses.</p>
 <p>Une personne interrogée peut également chercher à réduire son malaise ou à mettre fin à une situation qu'elle perçoit comme difficile. Dans certaines circonstances, cela peut favoriser des réponses rapides ou une acceptation de certaines propositions sans que celles-ci correspondent nécessairement à la réalité.</p>
 <p>L'étude psychologique des interrogatoires cherche donc notamment à comprendre comment le contexte peut influencer les déclarations.</p>
-<h3 id="exemple">💬 EXEMPLE</h3>
+<h3 id="exemple">EXEMPLE</h3>
 <p>Une personne très stressée peut avoir des difficultés à se souvenir précisément de la chronologie d'un événement et fournir une réponse hésitante alors qu'elle essaie sincèrement de se rappeler les faits.</p>
-<h3 id="a-retenir">📌 À RETENIR</h3>
+<h3 id="a-retenir">À RETENIR</h3>
 <p>Une déclaration produite pendant un interrogatoire dépend à la fois des souvenirs de la personne et du contexte psychologique dans lequel elle est interrogée.</p>
 <hr />
-<h2 id="32-la-pression-psychologique" class="entry-title hc-2">🧠 3.2 LA PRESSION PSYCHOLOGIQUE</h2>
-<h3 id="definition_1">🔎 DÉFINITION</h3>
+<h2 id="32-la-pression-psychologique" class="entry-title hc-2">3.2 LA PRESSION PSYCHOLOGIQUE</h2>
+<h3 id="definition_1">DÉFINITION</h3>
 <p>La pression psychologique désigne l'ensemble des contraintes émotionnelles, cognitives ou sociales pouvant affecter la manière dont une personne pense, décide ou répond dans une situation donnée.</p>
-<h3 id="explication_1">🧠 EXPLICATION</h3>
+<h3 id="explication_1">EXPLICATION</h3>
 <p>Une situation d'interrogatoire peut provoquer de l'incertitude, de l'anxiété ou une forte tension émotionnelle.</p>
 <p>Lorsque cette pression devient importante, les capacités d'attention, de raisonnement et de prise de décision peuvent être perturbées. Une personne peut alors privilégier une solution permettant de réduire immédiatement son inconfort plutôt qu'une réponse réfléchie sur le long terme.</p>
 <p>La pression psychologique n'a cependant pas le même effet sur tout le monde. L'âge, la personnalité, la fatigue, les expériences précédentes et les capacités de compréhension peuvent modifier la manière dont elle est vécue.</p>
-<h3 id="exemple_1">💬 EXEMPLE</h3>
+<h3 id="exemple_1">EXEMPLE</h3>
 <p>Une personne particulièrement anxieuse peut chercher rapidement à mettre fin à une situation stressante et accepter une formulation proposée par son interlocuteur sans avoir pleinement réfléchi à ses implications.</p>
-<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<h3 id="a-retenir_1">À RETENIR</h3>
 <p>La pression psychologique peut modifier les décisions et les déclarations, mais ses effets varient considérablement selon les individus et les situations.</p>
 <hr />
-<h2 id="33-la-suggestibilite-et-linfluence" class="entry-title hc-3">🧠 3.3 LA SUGGESTIBILITÉ ET L'INFLUENCE</h2>
-<h3 id="definition_2">🔎 DÉFINITION</h3>
+<h2 id="33-la-suggestibilite-et-linfluence" class="entry-title hc-3">3.3 LA SUGGESTIBILITÉ ET L'INFLUENCE</h2>
+<h3 id="definition_2">DÉFINITION</h3>
 <p>La suggestibilité correspond à la tendance d'une personne à être influencée par des informations, des suggestions ou des formulations extérieures dans sa perception, ses souvenirs ou ses réponses.</p>
-<h3 id="explication_2">🧠 EXPLICATION</h3>
+<h3 id="explication_2">EXPLICATION</h3>
 <p>La suggestibilité peut concerner la mémoire comme les déclarations produites lors d'un interrogatoire.</p>
 <p>Une personne peut progressivement intégrer une information suggérée à son propre souvenir, notamment lorsque ses souvenirs sont incomplets ou incertains.</p>
 <p>Ce phénomène ne signifie pas nécessairement qu'une personne ment volontairement. Elle peut être sincèrement convaincue que ce qu'elle affirme est exact.</p>
 <p>La suggestibilité est influencée par différents facteurs, notamment l'âge, la confiance en soi, la situation émotionnelle, la fatigue et le contexte social.</p>
-<h3 id="exemple_2">💬 EXEMPLE</h3>
+<h3 id="exemple_2">EXEMPLE</h3>
 <p>Après avoir entendu plusieurs fois qu'un événement aurait eu lieu d'une certaine manière, une personne peut finir par rapporter cette version comme si elle provenait de son propre souvenir.</p>
-<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<h3 id="a-retenir_2">À RETENIR</h3>
 <p>Une personne influençable peut produire une déclaration inexacte tout en étant sincèrement convaincue de dire la vérité.</p>
 <hr />
-<h2 id="34-lautorite-et-lobeissance" class="entry-title hc-4">🧠 3.4 L'AUTORITÉ ET L'OBÉISSANCE</h2>
-<h3 id="definition_3">🔎 DÉFINITION</h3>
+<h2 id="34-lautorite-et-lobeissance" class="entry-title hc-4">3.4 L'AUTORITÉ ET L'OBÉISSANCE</h2>
+<h3 id="definition_3">DÉFINITION</h3>
 <p>L'autorité désigne une position perçue comme légitime ou supérieure, tandis que l'obéissance correspond au fait d'adapter son comportement à une demande provenant de cette autorité.</p>
-<h3 id="explication_3">🧠 EXPLICATION</h3>
+<h3 id="explication_3">EXPLICATION</h3>
 <p>La présence d'une figure d'autorité peut modifier le comportement d'une personne.</p>
 <p>Dans certaines situations, un individu peut accorder davantage de crédibilité aux affirmations d'une personne considérée comme experte ou autoritaire. Il peut également être davantage disposé à suivre une demande ou à accepter une interprétation proposée.</p>
 <p>Cependant, l'obéissance n'est jamais automatique. Les individus peuvent résister, remettre en question les demandes ou refuser de suivre une autorité.</p>
 <p>Les recherches en psychologie sociale montrent que le contexte, la perception de la légitimité de l'autorité et les caractéristiques individuelles peuvent influencer ces comportements.</p>
-<h3 id="exemple_3">💬 EXEMPLE</h3>
+<h3 id="exemple_3">EXEMPLE</h3>
 <p>Une personne interrogée peut considérer que l'enquêteur possède davantage d'informations qu'elle et accorder une importance excessive à certaines affirmations formulées pendant l'entretien.</p>
-<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<h3 id="a-retenir_3">À RETENIR</h3>
 <p>La perception de l'autorité peut influencer les comportements et les réponses, sans pour autant déterminer automatiquement les décisions d'une personne.</p>
 <hr />
-<h2 id="35-les-aveux" class="entry-title hc-5">🧠 3.5 LES AVEUX</h2>
-<h3 id="definition_4">🔎 DÉFINITION</h3>
+<h2 id="35-les-aveux" class="entry-title hc-5">3.5 LES AVEUX</h2>
+<h3 id="definition_4">DÉFINITION</h3>
 <p>Un aveu correspond à une déclaration par laquelle une personne reconnaît avoir participé à un acte ou avoir commis un comportement qui lui est reproché.</p>
-<h3 id="explication_4">🧠 EXPLICATION</h3>
+<h3 id="explication_4">EXPLICATION</h3>
 <p>Un aveu peut constituer un élément important dans une enquête, mais sa présence ne garantit pas à elle seule l'exactitude de la déclaration.</p>
 <p>Les circonstances dans lesquelles l'aveu apparaît sont importantes pour comprendre sa signification. La personne peut être certaine de ce qu'elle affirme, avoir une mémoire imparfaite ou avoir été influencée par différents facteurs.</p>
 <p>L'analyse psychologique cherche notamment à comprendre les conditions dans lesquelles une personne en vient à reconnaître ou à accepter certains faits.</p>
-<h3 id="exemple_4">💬 EXEMPLE</h3>
+<h3 id="exemple_4">EXEMPLE</h3>
 <p>Une personne peut reconnaître certains faits parce qu'elle souhaite expliquer sa participation réelle à un événement. Dans un autre contexte, une personne peut également faire une déclaration inexacte sous l'influence de facteurs psychologiques ou situationnels.</p>
-<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<h3 id="a-retenir_4">À RETENIR</h3>
 <p>Un aveu constitue une déclaration importante, mais il doit être interprété en tenant compte de son contexte et des autres éléments disponibles.</p>
 <hr />
-<h2 id="36-les-faux-aveux" class="entry-title hc-1">🧠 3.6 LES FAUX AVEUX</h2>
-<h3 id="definition_5">🔎 DÉFINITION</h3>
+<h2 id="36-les-faux-aveux" class="entry-title hc-1">3.6 LES FAUX AVEUX</h2>
+<h3 id="definition_5">DÉFINITION</h3>
 <p>Un faux aveu est une déclaration dans laquelle une personne reconnaît une implication ou un acte qui ne correspond pas à la réalité.</p>
-<h3 id="explication_5">🧠 EXPLICATION</h3>
+<h3 id="explication_5">EXPLICATION</h3>
 <p>Les faux aveux peuvent prendre différentes formes.</p>
 <p>Certains peuvent être produits volontairement pour différentes raisons. D'autres peuvent apparaître dans un contexte d'influence, de pression, de confusion ou de vulnérabilité psychologique.</p>
 <p>Plusieurs facteurs peuvent interagir : caractéristiques individuelles, stress, fatigue, suggestibilité, contexte social et dynamique de l'interrogatoire.</p>
 <p>Un faux aveu ne signifie donc pas nécessairement que la personne cherche simplement à tromper les enquêteurs.</p>
-<h3 id="exemple_5">💬 EXEMPLE</h3>
+<h3 id="exemple_5">EXEMPLE</h3>
 <p>Une personne peut finir par accepter une version des faits qu'elle ne reconnaissait pas initialement, notamment si elle devient très incertaine concernant ses propres souvenirs.</p>
-<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<h3 id="a-retenir_5">À RETENIR</h3>
 <p>Les faux aveux peuvent résulter de l'interaction entre des facteurs individuels et des facteurs liés à la situation.</p>
 <hr />
-<h2 id="37-les-facteurs-individuels" class="entry-title hc-2">🧠 3.7 LES FACTEURS INDIVIDUELS</h2>
-<h3 id="definition_6">🔎 DÉFINITION</h3>
+<h2 id="37-les-facteurs-individuels" class="entry-title hc-2">3.7 LES FACTEURS INDIVIDUELS</h2>
+<h3 id="definition_6">DÉFINITION</h3>
 <p>Les facteurs individuels sont les caractéristiques propres à une personne pouvant modifier sa manière de réagir à une situation d'interrogatoire.</p>
-<h3 id="explication_6">🧠 EXPLICATION</h3>
+<h3 id="explication_6">EXPLICATION</h3>
 <p>Les personnes ne réagissent pas toutes de la même manière face au stress, à l'autorité ou à l'incertitude.</p>
 <p>L'âge, les capacités de compréhension, la suggestibilité, l'anxiété, la fatigue, certaines difficultés cognitives ou encore la capacité à résister à une pression peuvent influencer les réactions.</p>
 <p>Ces caractéristiques ne permettent cependant pas de prédire automatiquement le comportement d'une personne. Elles doivent être considérées avec l'ensemble du contexte.</p>
-<h3 id="exemple_6">💬 EXEMPLE</h3>
+<h3 id="exemple_6">EXEMPLE</h3>
 <p>Deux personnes placées dans une situation similaire peuvent réagir très différemment : l'une peut rester très ferme dans ses réponses tandis que l'autre peut devenir rapidement confuse ou influençable.</p>
-<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<h3 id="a-retenir_6">À RETENIR</h3>
 <p>Les caractéristiques individuelles peuvent modifier la manière dont une personne réagit à un interrogatoire, sans déterminer à elles seules son comportement.</p>
 <hr />
-<h2 id="38-les-facteurs-situationnels" class="entry-title hc-3">🧠 3.8 LES FACTEURS SITUATIONNELS</h2>
-<h3 id="definition_7">🔎 DÉFINITION</h3>
+<h2 id="38-les-facteurs-situationnels" class="entry-title hc-3">3.8 LES FACTEURS SITUATIONNELS</h2>
+<h3 id="definition_7">DÉFINITION</h3>
 <p>Les facteurs situationnels sont les caractéristiques de l'environnement ou du contexte pouvant influencer les pensées et les comportements d'une personne.</p>
-<h3 id="explication_7">🧠 EXPLICATION</h3>
+<h3 id="explication_7">EXPLICATION</h3>
 <p>Dans le cadre d'un interrogatoire, différents éléments peuvent contribuer à créer une situation psychologiquement difficile.</p>
 <p>La durée de l'entretien, la fatigue, le stress, l'incertitude, l'environnement, la perception des conséquences ou encore l'importance accordée à l'autorité peuvent influencer la manière dont une personne répond.</p>
 <p>Ces facteurs ne fonctionnent pas isolément. Leur influence peut être renforcée ou réduite par les caractéristiques individuelles de la personne interrogée.</p>
-<h3 id="exemple_7">💬 EXEMPLE</h3>
+<h3 id="exemple_7">EXEMPLE</h3>
 <p>Une personne fatiguée après une longue période d'incertitude peut avoir davantage de difficultés à maintenir son attention et à organiser précisément ses souvenirs.</p>
-<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<h3 id="a-retenir_7">À RETENIR</h3>
 <p>Le contexte d'un interrogatoire peut modifier la manière dont une personne réfléchit, se souvient et répond.</p>
 <hr />
-<h2 id="39-les-consequences-des-faux-aveux" class="entry-title hc-4">🧠 3.9 LES CONSÉQUENCES DES FAUX AVEUX</h2>
-<h3 id="definition_8">🔎 DÉFINITION</h3>
+<h2 id="39-les-consequences-des-faux-aveux" class="entry-title hc-4">3.9 LES CONSÉQUENCES DES FAUX AVEUX</h2>
+<h3 id="definition_8">DÉFINITION</h3>
 <p>Les conséquences des faux aveux correspondent aux effets qu'une déclaration inexacte peut avoir sur une personne, une enquête ou une procédure judiciaire.</p>
-<h3 id="explication_8">🧠 EXPLICATION</h3>
+<h3 id="explication_8">EXPLICATION</h3>
 <p>Un faux aveu peut influencer la manière dont les autres éléments d'une affaire sont interprétés.</p>
 <p>Lorsqu'une personne est considérée comme ayant reconnu les faits, certaines informations peuvent être interprétées à travers cette déclaration. Cela peut contribuer à renforcer certaines hypothèses et modifier l'orientation d'une enquête.</p>
 <p>Sur le plan individuel, un faux aveu peut également avoir des conséquences psychologiques, sociales et judiciaires importantes.</p>
-<h3 id="exemple_8">💬 EXEMPLE</h3>
+<h3 id="exemple_8">EXEMPLE</h3>
 <p>Si une personne reconnaît un acte qu'elle n'a pas commis, les enquêteurs peuvent être amenés à accorder davantage d'attention aux éléments qui semblent confirmer cette déclaration et à négliger certains éléments contradictoires.</p>
-<h3 id="a-retenir_8">📌 À RETENIR</h3>
+<h3 id="a-retenir_8">À RETENIR</h3>
 <p>Un faux aveu peut influencer non seulement la personne qui le produit, mais également l'interprétation des autres éléments d'une affaire.</p>
 <hr />
-<h2 id="310-les-limites-des-interrogatoires" class="entry-title hc-5">🧠 3.10 LES LIMITES DES INTERROGATOIRES</h2>
-<h3 id="definition_9">🔎 DÉFINITION</h3>
+<h2 id="310-les-limites-des-interrogatoires" class="entry-title hc-5">3.10 LES LIMITES DES INTERROGATOIRES</h2>
+<h3 id="definition_9">DÉFINITION</h3>
 <p>Les limites des interrogatoires désignent les difficultés qui empêchent de considérer une déclaration comme une représentation nécessairement parfaite ou objective de la réalité.</p>
-<h3 id="explication_9">🧠 EXPLICATION</h3>
+<h3 id="explication_9">EXPLICATION</h3>
 <p>Une personne peut hésiter sans mentir, se contredire sans chercher à tromper ou oublier certains détails sans cacher volontairement une information.</p>
 <p>De la même manière, une personne peut sembler extrêmement convaincante tout en étant dans l'erreur.</p>
 <p>Les interrogatoires doivent donc être considérés comme des situations dans lesquelles la mémoire, les émotions, la perception, la pression et les interactions sociales peuvent intervenir.</p>
 <p>Une déclaration ne doit pas être interprétée indépendamment de son contexte et des autres éléments disponibles.</p>
-<h3 id="exemple_9">💬 EXEMPLE</h3>
+<h3 id="exemple_9">EXEMPLE</h3>
 <p>Un témoin qui donne deux versions légèrement différentes d'un événement n'est pas nécessairement en train de mentir. Les différences peuvent notamment provenir du fonctionnement normal de la mémoire.</p>
-<h3 id="a-retenir_9">📌 À RETENIR</h3>
+<h3 id="a-retenir_9">À RETENIR</h3>
 <p>Une contradiction, une hésitation ou un aveu ne constitue pas, à lui seul, une preuve certaine de mensonge ou de culpabilité.</p>
 <hr />
-<h1 id="en-pratique">🧩 EN PRATIQUE</h1>
+<h1 id="en-pratique">EN PRATIQUE</h1>
 <p>Les interrogatoires constituent des situations complexes dans lesquelles plusieurs facteurs psychologiques peuvent intervenir simultanément.</p>
 <p>Le stress, la fatigue, l'autorité perçue, la suggestibilité, les souvenirs incomplets ou encore la volonté de réduire une situation inconfortable peuvent influencer les déclarations d'une personne.</p>
 <p>Une déclaration peut donc être sincère tout en étant inexacte. À l'inverse, une personne peut également modifier volontairement ses propos pour différentes raisons.</p>
@@ -239,8 +254,35 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Psychologie, justice et criminologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-comprendre-le-comportement-criminel/"><span class="similar-icon">⚖️</span>Comprendre le comportement criminel</a><a class="similar-item" href="/chapitre/justice-personnalite-et-criminalite/"><span class="similar-icon">⚖️</span>Personnalité et criminalité</a><a class="similar-item" href="/chapitre/justice-l-influence-des-groupes/"><span class="similar-icon">⚖️</span>L'influence des groupes</a></div>
+      <h2>Autres chapitres de « Psychologie, justice et criminologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-comprendre-le-comportement-criminel/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>Comprendre le comportement criminel</a><a class="similar-item" href="/chapitre/justice-personnalite-et-criminalite/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>Personnalité et criminalité</a><a class="similar-item" href="/chapitre/justice-l-influence-des-groupes/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>L'influence des groupes</a></div>
     </div>
     <a class="back-link" href="/categorie/justice/">← Retour à « Psychologie, justice et criminologie »</a>
   </div>
@@ -326,23 +368,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -360,7 +404,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -540,9 +584,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -551,10 +597,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -661,7 +707,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -701,8 +747,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -733,7 +779,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -788,7 +834,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -812,17 +858,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -864,7 +910,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

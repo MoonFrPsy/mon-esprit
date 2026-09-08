@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#131-le-trouble-lie-a-lusage-dalcool">🧠 13.1 Le trouble lié à l'usage d'alcool</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#consequences-possibles">Conséquences possibles</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#132-le-trouble-lie-a-lusage-du-cannabis">🧠 13.2 Le trouble lié à l'usage du cannabis</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#133-le-trouble-lie-a-lusage-de-stimulants">🧠 13.3 Le trouble lié à l'usage de stimulants</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#134-le-trouble-lie-a-lusage-de-cocaine">🧠 13.4 Le trouble lié à l'usage de cocaïne</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#consequences-possibles_1">Conséquences possibles</a></li></ul></li><li><a href="#135-le-trouble-lie-a-lusage-damphetamines">🧠 13.5 Le trouble lié à l'usage d'amphétamines</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#136-le-trouble-lie-a-lusage-dopioides">🧠 13.6 Le trouble lié à l'usage d'opioïdes</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#137-le-trouble-lie-a-lusage-de-sedatifs-hypnotiques-ou-anxiolytiques">🧠 13.7 Le trouble lié à l'usage de sédatifs, hypnotiques ou anxiolytiques</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#138-le-trouble-lie-a-lusage-de-tabac">🧠 13.8 Le trouble lié à l'usage de tabac</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#139-le-trouble-lie-a-lusage-dautres-substances">🧠 13.9 Le trouble lié à l'usage d'autres substances</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#1310-le-trouble-lie-a-plusieurs-substances">🧠 13.10 Le trouble lié à plusieurs substances</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1311-lintoxication">🧠 13.11 L'intoxication</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1312-le-sevrage">🧠 13.12 Le sevrage</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1313-la-tolerance">🧠 13.13 La tolérance</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1314-la-dependance-physique">🧠 13.14 La dépendance physique</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1315-la-dependance-psychologique">🧠 13.15 La dépendance psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_11">Manifestations</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1316-le-craving">🧠 13.16 Le craving</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#declencheurs-possibles">Déclencheurs possibles</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1317-la-rechute">🧠 13.17 La rechute</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1318-le-trouble-du-jeu-dargent-et-de-hasard">🧠 13.18 Le trouble du jeu d'argent et de hasard</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#manifestations_12">Manifestations</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1319-laddiction-comportementale">🧠 13.19 L'addiction comportementale</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1320-le-trouble-du-jeu-video">🧠 13.20 Le trouble du jeu vidéo</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#manifestations_13">Manifestations</a></li><li><a href="#classification">Classification</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1321-lutilisation-problematique-dinternet">🧠 13.21 L'utilisation problématique d'Internet</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1322-les-achats-compulsifs">🧠 13.22 Les achats compulsifs</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations_14">Manifestations</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1323-le-comportement-sexuel-compulsif">🧠 13.23 Le comportement sexuel compulsif</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations_15">Manifestations</a></li><li><a href="#classification_1">Classification</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1324-laddiction-au-travail">🧠 13.24 L'addiction au travail</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#manifestations-possibles_2">Manifestations possibles</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1325-les-mecanismes-de-renforcement-dans-les-addictions">🧠 13.25 Les mécanismes de renforcement dans les addictions</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1326-les-facteurs-de-risque-des-addictions">🧠 13.26 Les facteurs de risque des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#facteurs-possibles">Facteurs possibles</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1327-les-consequences-sociales-des-addictions">🧠 13.27 Les conséquences sociales des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#consequences-possibles_2">Conséquences possibles</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1328-les-consequences-psychologiques-des-addictions">🧠 13.28 Les conséquences psychologiques des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#manifestations-possibles_3">Manifestations possibles</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1329-les-troubles-mentaux-associes-aux-addictions">🧠 13.29 Les troubles mentaux associés aux addictions</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#exemples_1">Exemples</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1330-la-comorbidite">🧠 13.30 La comorbidité</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#dans-les-addictions">Dans les addictions</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1331-la-prevention-des-addictions">🧠 13.31 La prévention des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_30">Définition</a></li><li><a href="#moyens-possibles">Moyens possibles</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li><li><a href="#1332-la-prise-en-charge-des-addictions">🧠 13.32 La prise en charge des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_31">Définition</a></li><li><a href="#approches-possibles">Approches possibles</a></li><li><a href="#a-retenir_30">À retenir</a></li></ul></li><li><a href="#1333-la-reduction-des-risques">🧠 13.33 La réduction des risques</a><ul class="sidebar-sublist"><li><a href="#definition_32">Définition</a></li><li><a href="#objectifs">Objectifs</a></li><li><a href="#a-retenir_31">À retenir</a></li></ul></li><li><a href="#1334-le-processus-de-recuperation">🧠 13.34 Le processus de récupération</a><ul class="sidebar-sublist"><li><a href="#definition_33">Définition</a></li><li><a href="#particularites">Particularités</a></li><li><a href="#a-retenir_32">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#131-le-trouble-lie-a-lusage-dalcool">13.1 Le trouble lié à l'usage d'alcool</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#consequences-possibles">Conséquences possibles</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#132-le-trouble-lie-a-lusage-du-cannabis">13.2 Le trouble lié à l'usage du cannabis</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#133-le-trouble-lie-a-lusage-de-stimulants">13.3 Le trouble lié à l'usage de stimulants</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#134-le-trouble-lie-a-lusage-de-cocaine">13.4 Le trouble lié à l'usage de cocaïne</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#consequences-possibles_1">Conséquences possibles</a></li></ul></li><li><a href="#135-le-trouble-lie-a-lusage-damphetamines">13.5 Le trouble lié à l'usage d'amphétamines</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#136-le-trouble-lie-a-lusage-dopioides">13.6 Le trouble lié à l'usage d'opioïdes</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#137-le-trouble-lie-a-lusage-de-sedatifs-hypnotiques-ou-anxiolytiques">13.7 Le trouble lié à l'usage de sédatifs, hypnotiques ou anxiolytiques</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#138-le-trouble-lie-a-lusage-de-tabac">13.8 Le trouble lié à l'usage de tabac</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#139-le-trouble-lie-a-lusage-dautres-substances">13.9 Le trouble lié à l'usage d'autres substances</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#1310-le-trouble-lie-a-plusieurs-substances">13.10 Le trouble lié à plusieurs substances</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1311-lintoxication">13.11 L'intoxication</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1312-le-sevrage">13.12 Le sevrage</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1313-la-tolerance">13.13 La tolérance</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1314-la-dependance-physique">13.14 La dépendance physique</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1315-la-dependance-psychologique">13.15 La dépendance psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_11">Manifestations</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1316-le-craving">13.16 Le craving</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#declencheurs-possibles">Déclencheurs possibles</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1317-la-rechute">13.17 La rechute</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1318-le-trouble-du-jeu-dargent-et-de-hasard">13.18 Le trouble du jeu d'argent et de hasard</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#manifestations_12">Manifestations</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1319-laddiction-comportementale">13.19 L'addiction comportementale</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1320-le-trouble-du-jeu-video">13.20 Le trouble du jeu vidéo</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#manifestations_13">Manifestations</a></li><li><a href="#classification">Classification</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1321-lutilisation-problematique-dinternet">13.21 L'utilisation problématique d'Internet</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1322-les-achats-compulsifs">13.22 Les achats compulsifs</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations_14">Manifestations</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1323-le-comportement-sexuel-compulsif">13.23 Le comportement sexuel compulsif</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations_15">Manifestations</a></li><li><a href="#classification_1">Classification</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1324-laddiction-au-travail">13.24 L'addiction au travail</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#manifestations-possibles_2">Manifestations possibles</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1325-les-mecanismes-de-renforcement-dans-les-addictions">13.25 Les mécanismes de renforcement dans les addictions</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1326-les-facteurs-de-risque-des-addictions">13.26 Les facteurs de risque des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#facteurs-possibles">Facteurs possibles</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1327-les-consequences-sociales-des-addictions">13.27 Les conséquences sociales des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#consequences-possibles_2">Conséquences possibles</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1328-les-consequences-psychologiques-des-addictions">13.28 Les conséquences psychologiques des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#manifestations-possibles_3">Manifestations possibles</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1329-les-troubles-mentaux-associes-aux-addictions">13.29 Les troubles mentaux associés aux addictions</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#exemples_1">Exemples</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1330-la-comorbidite">13.30 La comorbidité</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#dans-les-addictions">Dans les addictions</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1331-la-prevention-des-addictions">13.31 La prévention des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_30">Définition</a></li><li><a href="#moyens-possibles">Moyens possibles</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li><li><a href="#1332-la-prise-en-charge-des-addictions">13.32 La prise en charge des addictions</a><ul class="sidebar-sublist"><li><a href="#definition_31">Définition</a></li><li><a href="#approches-possibles">Approches possibles</a></li><li><a href="#a-retenir_30">À retenir</a></li></ul></li><li><a href="#1333-la-reduction-des-risques">13.33 La réduction des risques</a><ul class="sidebar-sublist"><li><a href="#definition_32">Définition</a></li><li><a href="#objectifs">Objectifs</a></li><li><a href="#a-retenir_31">À retenir</a></li></ul></li><li><a href="#1334-le-processus-de-recuperation">13.34 Le processus de récupération</a><ul class="sidebar-sublist"><li><a href="#definition_33">Définition</a></li><li><a href="#particularites">Particularités</a></li><li><a href="#a-retenir_32">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Partie 13 — Troubles liés aux substances et aux addictions',
         category: 'Troubles psychologiques',
-        icon: '🩺'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/troubles/">Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Partie 13 — Troubles liés aux substances et aux addictions</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,7 +113,7 @@
     </svg>
     </div>
     <div class="article-body">
-      <h1 id="131-le-trouble-lie-a-lusage-dalcool" class="entry-title hc-1">🧠 13.1  Le trouble lié à l'usage d'alcool</h1>
+      <h1 id="131-le-trouble-lie-a-lusage-dalcool" class="entry-title hc-1">13.1  Le trouble lié à l'usage d'alcool</h1>
 <h2 id="definition">Définition</h2>
 <p>Le <strong>trouble lié à l'usage d'alcool</strong> correspond à une utilisation problématique de l'alcool entraînant une souffrance ou des difficultés importantes dans la vie quotidienne.</p>
 <h2 id="manifestations">Manifestations</h2>
@@ -126,7 +141,7 @@
 <h2 id="a-retenir">À retenir</h2>
 <p>La présence d'une consommation d'alcool ne signifie pas automatiquement qu'il existe un trouble. C'est notamment le caractère problématique et les conséquences de la consommation qui sont évalués.</p>
 <hr />
-<h1 id="132-le-trouble-lie-a-lusage-du-cannabis" class="entry-title hc-2">🧠 13.2 Le trouble lié à l'usage du cannabis</h1>
+<h1 id="132-le-trouble-lie-a-lusage-du-cannabis" class="entry-title hc-2">13.2 Le trouble lié à l'usage du cannabis</h1>
 <h2 id="definition_1">Définition</h2>
 <p>Le <strong>trouble lié à l'usage du cannabis</strong> correspond à une consommation de cannabis entraînant des difficultés importantes ou une perte de contrôle.</p>
 <h2 id="manifestations_1">Manifestations</h2>
@@ -144,7 +159,7 @@
 <h2 id="a-retenir_1">À retenir</h2>
 <p>La consommation de cannabis n'implique pas systématiquement la présence d'un trouble.</p>
 <hr />
-<h1 id="133-le-trouble-lie-a-lusage-de-stimulants" class="entry-title hc-3">🧠 13.3 Le trouble lié à l'usage de stimulants</h1>
+<h1 id="133-le-trouble-lie-a-lusage-de-stimulants" class="entry-title hc-3">13.3 Le trouble lié à l'usage de stimulants</h1>
 <h2 id="definition_2">Définition</h2>
 <p>Les <strong>stimulants</strong> sont des substances pouvant augmenter l'activité du système nerveux central.</p>
 <p>Un trouble lié à leur usage peut apparaître lorsque leur consommation devient problématique.</p>
@@ -163,7 +178,7 @@
 <h2 id="a-retenir_2">À retenir</h2>
 <p>Les troubles liés aux stimulants peuvent concerner différentes substances et leur intensité varie selon les personnes.</p>
 <hr />
-<h1 id="134-le-trouble-lie-a-lusage-de-cocaine" class="entry-title hc-4">🧠 13.4 Le trouble lié à l'usage de cocaïne</h1>
+<h1 id="134-le-trouble-lie-a-lusage-de-cocaine" class="entry-title hc-4">13.4 Le trouble lié à l'usage de cocaïne</h1>
 <h2 id="definition_3">Définition</h2>
 <p>Le <strong>trouble lié à l'usage de cocaïne</strong> correspond à une utilisation problématique de cocaïne entraînant une perte de contrôle ou des conséquences importantes.</p>
 <h2 id="manifestations_3">Manifestations</h2>
@@ -185,7 +200,7 @@
 <li>problèmes financiers ou sociaux.</li>
 </ul>
 <hr />
-<h1 id="135-le-trouble-lie-a-lusage-damphetamines" class="entry-title hc-5">🧠 13.5 Le trouble lié à l'usage d'amphétamines</h1>
+<h1 id="135-le-trouble-lie-a-lusage-damphetamines" class="entry-title hc-5">13.5 Le trouble lié à l'usage d'amphétamines</h1>
 <h2 id="definition_4">Définition</h2>
 <p>Le trouble lié à l'usage d'amphétamines correspond à une utilisation problématique de substances de type amphétaminique.</p>
 <h2 id="manifestations_4">Manifestations</h2>
@@ -202,7 +217,7 @@
 <h2 id="a-retenir_3">À retenir</h2>
 <p>Les amphétamines peuvent avoir des effets importants sur la vigilance, l'énergie et le fonctionnement cardiovasculaire et neurologique.</p>
 <hr />
-<h1 id="136-le-trouble-lie-a-lusage-dopioides" class="entry-title hc-1">🧠 13.6 Le trouble lié à l'usage d'opioïdes</h1>
+<h1 id="136-le-trouble-lie-a-lusage-dopioides" class="entry-title hc-1">13.6 Le trouble lié à l'usage d'opioïdes</h1>
 <h2 id="definition_5">Définition</h2>
 <p>Le <strong>trouble lié à l'usage d'opioïdes</strong> correspond à une utilisation problématique de substances opioïdes.</p>
 <p>Les opioïdes comprennent notamment certains médicaments antalgiques et d'autres substances de cette famille.</p>
@@ -218,7 +233,7 @@
 <h2 id="a-retenir_4">À retenir</h2>
 <p>Les opioïdes peuvent entraîner une dépendance et présentent notamment un risque important de surdose.</p>
 <hr />
-<h1 id="137-le-trouble-lie-a-lusage-de-sedatifs-hypnotiques-ou-anxiolytiques" class="entry-title hc-2">🧠 13.7 Le trouble lié à l'usage de sédatifs, hypnotiques ou anxiolytiques</h1>
+<h1 id="137-le-trouble-lie-a-lusage-de-sedatifs-hypnotiques-ou-anxiolytiques" class="entry-title hc-2">13.7 Le trouble lié à l'usage de sédatifs, hypnotiques ou anxiolytiques</h1>
 <h2 id="definition_6">Définition</h2>
 <p>Ce trouble correspond à une utilisation problématique de médicaments ou substances ayant des effets dépresseurs sur le système nerveux central.</p>
 <h2 id="manifestations_6">Manifestations</h2>
@@ -233,7 +248,7 @@
 <h2 id="a-retenir_5">À retenir</h2>
 <p>Certains médicaments peuvent provoquer une dépendance physique et psychologique lorsqu'ils sont utilisés de manière prolongée ou inappropriée.</p>
 <hr />
-<h1 id="138-le-trouble-lie-a-lusage-de-tabac" class="entry-title hc-3">🧠 13.8 Le trouble lié à l'usage de tabac</h1>
+<h1 id="138-le-trouble-lie-a-lusage-de-tabac" class="entry-title hc-3">13.8 Le trouble lié à l'usage de tabac</h1>
 <h2 id="definition_7">Définition</h2>
 <p>Le <strong>trouble lié à l'usage de tabac</strong> correspond à une utilisation problématique de produits contenant de la nicotine.</p>
 <h2 id="manifestations_7">Manifestations</h2>
@@ -248,7 +263,7 @@
 <h2 id="a-retenir_6">À retenir</h2>
 <p>La nicotine possède un potentiel de dépendance important.</p>
 <hr />
-<h1 id="139-le-trouble-lie-a-lusage-dautres-substances" class="entry-title hc-4">🧠 13.9  Le trouble lié à l'usage d'autres substances</h1>
+<h1 id="139-le-trouble-lie-a-lusage-dautres-substances" class="entry-title hc-4">13.9  Le trouble lié à l'usage d'autres substances</h1>
 <h2 id="definition_8">Définition</h2>
 <p>Des troubles liés à l'utilisation problématique peuvent également concerner d'autres substances psychoactives.</p>
 <h2 id="manifestations_8">Manifestations</h2>
@@ -265,7 +280,7 @@
 <h2 id="a-retenir_7">À retenir</h2>
 <p>La classification diagnostique prévoit différentes catégories selon la substance concernée.</p>
 <hr />
-<h1 id="1310-le-trouble-lie-a-plusieurs-substances" class="entry-title hc-5">🧠 13.10 Le trouble lié à plusieurs substances</h1>
+<h1 id="1310-le-trouble-lie-a-plusieurs-substances" class="entry-title hc-5">13.10 Le trouble lié à plusieurs substances</h1>
 <h2 id="definition_9">Définition</h2>
 <p>Certaines personnes utilisent plusieurs substances différentes.</p>
 <p>Cette situation peut rendre l'évaluation plus complexe car les effets et les conséquences des différentes substances peuvent se combiner.</p>
@@ -279,7 +294,7 @@
 <h2 id="a-retenir_8">À retenir</h2>
 <p>La consommation de plusieurs substances nécessite une évaluation individuelle et précise.</p>
 <hr />
-<h1 id="1311-lintoxication" class="entry-title hc-1">🧠 13.11 L'intoxication</h1>
+<h1 id="1311-lintoxication" class="entry-title hc-1">13.11 L'intoxication</h1>
 <h2 id="definition_10">Définition</h2>
 <p>L'<strong>intoxication</strong> correspond à un état temporaire résultant de l'utilisation récente d'une substance et entraînant des modifications du comportement, des émotions, de la perception ou du fonctionnement physique.</p>
 <h2 id="manifestations_9">Manifestations</h2>
@@ -295,7 +310,7 @@
 <h2 id="a-retenir_9">À retenir</h2>
 <p>L'intoxication est un état lié aux effets immédiats ou relativement immédiats d'une substance.</p>
 <hr />
-<h1 id="1312-le-sevrage" class="entry-title hc-2">🧠 13.12 Le sevrage</h1>
+<h1 id="1312-le-sevrage" class="entry-title hc-2">13.12 Le sevrage</h1>
 <h2 id="definition_11">Définition</h2>
 <p>Le <strong>sevrage</strong> correspond à un ensemble de symptômes pouvant apparaître lorsqu'une personne réduit ou arrête une substance après une consommation suffisamment importante ou prolongée.</p>
 <h2 id="manifestations_10">Manifestations</h2>
@@ -313,20 +328,20 @@
 <h2 id="a-retenir_10">À retenir</h2>
 <p>Les symptômes de sevrage varient fortement selon la substance et la personne.</p>
 <hr />
-<h1 id="1313-la-tolerance" class="entry-title hc-3">🧠 13.13 La tolérance</h1>
+<h1 id="1313-la-tolerance" class="entry-title hc-3">13.13 La tolérance</h1>
 <h2 id="definition_12">Définition</h2>
 <p>La <strong>tolérance</strong> correspond à une diminution de l'effet obtenu avec une même quantité d'une substance, pouvant conduire la personne à augmenter les doses pour rechercher les mêmes effets.</p>
 <h2 id="a-retenir_11">À retenir</h2>
 <p>La tolérance peut apparaître avec certaines substances mais sa présence seule ne suffit pas à établir un trouble lié à l'usage d'une substance.</p>
 <hr />
-<h1 id="1314-la-dependance-physique" class="entry-title hc-4">🧠 13.14 La dépendance physique</h1>
+<h1 id="1314-la-dependance-physique" class="entry-title hc-4">13.14 La dépendance physique</h1>
 <h2 id="definition_13">Définition</h2>
 <p>La <strong>dépendance physique</strong> correspond à une adaptation de l'organisme à une substance.</p>
 <p>Lorsque la substance est diminuée ou arrêtée, un syndrome de sevrage peut apparaître.</p>
 <h2 id="a-retenir_12">À retenir</h2>
 <p>La dépendance physique n'est pas exactement la même chose que l'addiction. Une dépendance physique peut notamment apparaître avec certains médicaments utilisés correctement.</p>
 <hr />
-<h1 id="1315-la-dependance-psychologique" class="entry-title hc-5">🧠 13.15  La dépendance psychologique</h1>
+<h1 id="1315-la-dependance-psychologique" class="entry-title hc-5">13.15  La dépendance psychologique</h1>
 <h2 id="definition_14">Définition</h2>
 <p>La <strong>dépendance psychologique</strong> correspond notamment au sentiment qu'une personne a besoin d'une substance pour obtenir un certain état émotionnel ou pour fonctionner comme elle le souhaite.</p>
 <h2 id="manifestations_11">Manifestations</h2>
@@ -340,7 +355,7 @@
 <h2 id="a-retenir_13">À retenir</h2>
 <p>La dépendance psychologique peut participer au maintien d'une consommation problématique.</p>
 <hr />
-<h1 id="1316-le-craving" class="entry-title hc-1">🧠 13.16 Le craving</h1>
+<h1 id="1316-le-craving" class="entry-title hc-1">13.16 Le craving</h1>
 <h2 id="definition_15">Définition</h2>
 <p>Le <strong>craving</strong> désigne une envie intense de consommer une substance.</p>
 <h2 id="declencheurs-possibles">Déclencheurs possibles</h2>
@@ -357,7 +372,7 @@
 <h2 id="a-retenir_14">À retenir</h2>
 <p>Le craving est un élément important dans les troubles liés à l'utilisation de substances.</p>
 <hr />
-<h1 id="1317-la-rechute" class="entry-title hc-2">🧠 13.17 La rechute</h1>
+<h1 id="1317-la-rechute" class="entry-title hc-2">13.17 La rechute</h1>
 <h2 id="definition_16">Définition</h2>
 <p>Une <strong>rechute</strong> correspond à la reprise d'une consommation problématique après une période de réduction ou d'arrêt.</p>
 <h2 id="particularite">Particularité</h2>
@@ -373,7 +388,7 @@
 <h2 id="a-retenir_15">À retenir</h2>
 <p>La prévention de la rechute constitue souvent un élément important de la prise en charge des addictions.</p>
 <hr />
-<h1 id="1318-le-trouble-du-jeu-dargent-et-de-hasard" class="entry-title hc-3">🧠 13.18 Le trouble du jeu d'argent et de hasard</h1>
+<h1 id="1318-le-trouble-du-jeu-dargent-et-de-hasard" class="entry-title hc-3">13.18 Le trouble du jeu d'argent et de hasard</h1>
 <h2 id="definition_17">Définition</h2>
 <p>Le <strong>trouble du jeu d'argent et de hasard</strong> correspond à un comportement de jeu persistant et problématique entraînant des conséquences importantes.</p>
 <h2 id="manifestations_12">Manifestations</h2>
@@ -390,7 +405,7 @@
 <h2 id="a-retenir_16">À retenir</h2>
 <p>Il s'agit d'une <strong>addiction comportementale reconnue</strong>, même si aucune substance n'est consommée.</p>
 <hr />
-<h1 id="1319-laddiction-comportementale" class="entry-title hc-4">🧠 13.19 L'addiction comportementale</h1>
+<h1 id="1319-laddiction-comportementale" class="entry-title hc-4">13.19 L'addiction comportementale</h1>
 <h2 id="definition_18">Définition</h2>
 <p>Une <strong>addiction comportementale</strong> correspond à un comportement pouvant devenir répétitif, difficile à contrôler et continuer malgré des conséquences négatives.</p>
 <h2 id="exemples">Exemples</h2>
@@ -405,7 +420,7 @@
 <h2 id="a-retenir_17">À retenir</h2>
 <p>Toutes ces conduites ne sont pas reconnues comme des troubles psychiatriques indépendants dans toutes les classifications.</p>
 <hr />
-<h1 id="1320-le-trouble-du-jeu-video" class="entry-title hc-5">🧠 13.20 Le trouble du jeu vidéo</h1>
+<h1 id="1320-le-trouble-du-jeu-video" class="entry-title hc-5">13.20 Le trouble du jeu vidéo</h1>
 <h2 id="definition_19">Définition</h2>
 <p>Le <strong>trouble du jeu vidéo</strong> correspond à un comportement de jeu vidéo persistant ou récurrent associé à une perte de contrôle et à une priorité croissante donnée au jeu.</p>
 <h2 id="manifestations_13">Manifestations</h2>
@@ -422,7 +437,7 @@
 <h2 id="a-retenir_18">À retenir</h2>
 <p>Jouer beaucoup ne suffit pas à établir un diagnostic. La perte de contrôle et les conséquences sur la vie quotidienne sont essentielles.</p>
 <hr />
-<h1 id="1321-lutilisation-problematique-dinternet" class="entry-title hc-1">🧠 13.21 L'utilisation problématique d'Internet</h1>
+<h1 id="1321-lutilisation-problematique-dinternet" class="entry-title hc-1">13.21 L'utilisation problématique d'Internet</h1>
 <h2 id="definition_20">Définition</h2>
 <p>L'<strong>utilisation problématique d'Internet</strong> désigne une utilisation excessive ou difficile à contrôler pouvant provoquer des conséquences négatives.</p>
 <h2 id="manifestations-possibles_1">Manifestations possibles</h2>
@@ -436,7 +451,7 @@
 </ul>
 <h2 id="a-retenir_19">À retenir</h2>
 <p>L'utilisation problématique d'Internet est étudiée en psychologie, mais toutes ses formes ne constituent pas un diagnostic indépendant reconnu.</p>
-<h1 id="1322-les-achats-compulsifs" class="entry-title hc-2">🧠 13.22 Les achats compulsifs</h1>
+<h1 id="1322-les-achats-compulsifs" class="entry-title hc-2">13.22 Les achats compulsifs</h1>
 <h2 id="definition_21">Définition</h2>
 <p>Les <strong>achats compulsifs</strong> correspondent à une tendance répétée à effectuer des achats difficiles à contrôler, parfois utilisés pour modifier temporairement l'état émotionnel.</p>
 <h2 id="manifestations_14">Manifestations</h2>
@@ -452,7 +467,7 @@
 <h2 id="a-retenir_20">À retenir</h2>
 <p>Les achats compulsifs sont étudiés comme comportement problématique, mais leur statut diagnostique varie selon les classifications.</p>
 <hr />
-<h1 id="1323-le-comportement-sexuel-compulsif" class="entry-title hc-3">🧠 13.23 Le comportement sexuel compulsif</h1>
+<h1 id="1323-le-comportement-sexuel-compulsif" class="entry-title hc-3">13.23 Le comportement sexuel compulsif</h1>
 <h2 id="definition_22">Définition</h2>
 <p>Le <strong>comportement sexuel compulsif</strong> correspond à des comportements sexuels persistants et difficiles à contrôler malgré leurs conséquences négatives.</p>
 <h2 id="manifestations_15">Manifestations</h2>
@@ -467,7 +482,7 @@
 <h2 id="a-retenir_21">À retenir</h2>
 <p>Une libido élevée ne signifie pas automatiquement qu'une personne présente un trouble. C'est principalement la perte de contrôle et les conséquences qui sont importantes.</p>
 <hr />
-<h1 id="1324-laddiction-au-travail" class="entry-title hc-4">🧠 13.24 L'addiction au travail</h1>
+<h1 id="1324-laddiction-au-travail" class="entry-title hc-4">13.24 L'addiction au travail</h1>
 <h2 id="definition_23">Définition</h2>
 <p>L'<strong>addiction au travail</strong>, souvent appelée workaholisme, désigne une tendance excessive et difficile à contrôler à travailler.</p>
 <h2 id="manifestations-possibles_2">Manifestations possibles</h2>
@@ -481,7 +496,7 @@
 <h2 id="a-retenir_22">À retenir</h2>
 <p>Le fait de beaucoup travailler ne suffit pas à définir une addiction. La perte de contrôle et les conséquences négatives sont importantes.</p>
 <hr />
-<h1 id="1325-les-mecanismes-de-renforcement-dans-les-addictions" class="entry-title hc-5">🧠 13.25 Les mécanismes de renforcement dans les addictions</h1>
+<h1 id="1325-les-mecanismes-de-renforcement-dans-les-addictions" class="entry-title hc-5">13.25 Les mécanismes de renforcement dans les addictions</h1>
 <h2 id="definition_24">Définition</h2>
 <p>Les comportements addictifs peuvent être renforcés par les effets qu'ils produisent.</p>
 <p>Le <strong>renforcement positif</strong> correspond notamment au fait qu'un comportement apporte une sensation recherchée.</p>
@@ -491,7 +506,7 @@
 <h2 id="a-retenir_23">À retenir</h2>
 <p>Ces mécanismes peuvent participer au maintien d'un comportement addictif.</p>
 <hr />
-<h1 id="1326-les-facteurs-de-risque-des-addictions" class="entry-title hc-1">🧠 13.26 Les facteurs de risque des addictions</h1>
+<h1 id="1326-les-facteurs-de-risque-des-addictions" class="entry-title hc-1">13.26 Les facteurs de risque des addictions</h1>
 <h2 id="definition_25">Définition</h2>
 <p>Les addictions résultent généralement de l'interaction de plusieurs facteurs.</p>
 <h2 id="facteurs-possibles">Facteurs possibles</h2>
@@ -509,7 +524,7 @@
 <h2 id="a-retenir_24">À retenir</h2>
 <p>Il n'existe généralement pas une seule cause expliquant l'apparition d'une addiction.</p>
 <hr />
-<h1 id="1327-les-consequences-sociales-des-addictions" class="entry-title hc-2">🧠 13.27 Les conséquences sociales des addictions</h1>
+<h1 id="1327-les-consequences-sociales-des-addictions" class="entry-title hc-2">13.27 Les conséquences sociales des addictions</h1>
 <h2 id="definition_26">Définition</h2>
 <p>Les troubles liés aux substances et certaines addictions comportementales peuvent avoir des conséquences importantes sur les relations et la vie sociale.</p>
 <h2 id="consequences-possibles_2">Conséquences possibles</h2>
@@ -524,7 +539,7 @@
 <h2 id="a-retenir_25">À retenir</h2>
 <p>Les conséquences sociales peuvent être importantes même lorsque la personne ne reconnaît pas immédiatement l'existence d'un problème.</p>
 <hr />
-<h1 id="1328-les-consequences-psychologiques-des-addictions" class="entry-title hc-3">🧠 13.28 Les conséquences psychologiques des addictions</h1>
+<h1 id="1328-les-consequences-psychologiques-des-addictions" class="entry-title hc-3">13.28 Les conséquences psychologiques des addictions</h1>
 <h2 id="definition_27">Définition</h2>
 <p>Les addictions peuvent être associées à différentes difficultés psychologiques.</p>
 <h2 id="manifestations-possibles_3">Manifestations possibles</h2>
@@ -540,7 +555,7 @@
 <h2 id="a-retenir_26">À retenir</h2>
 <p>Une addiction peut coexister avec un autre trouble psychologique, mais cela ne signifie pas nécessairement que l'un est directement responsable de l'autre.</p>
 <hr />
-<h1 id="1329-les-troubles-mentaux-associes-aux-addictions" class="entry-title hc-4">🧠 13.29 Les troubles mentaux associés aux addictions</h1>
+<h1 id="1329-les-troubles-mentaux-associes-aux-addictions" class="entry-title hc-4">13.29 Les troubles mentaux associés aux addictions</h1>
 <h2 id="definition_28">Définition</h2>
 <p>Une personne présentant un trouble lié à une substance peut également présenter un autre trouble psychologique.</p>
 <p>Cette situation est parfois appelée <strong>comorbidité</strong>.</p>
@@ -557,7 +572,7 @@
 <h2 id="a-retenir_27">À retenir</h2>
 <p>La présence simultanée de plusieurs troubles nécessite une évaluation globale.</p>
 <hr />
-<h1 id="1330-la-comorbidite" class="entry-title hc-5">🧠 13.30 La comorbidité</h1>
+<h1 id="1330-la-comorbidite" class="entry-title hc-5">13.30 La comorbidité</h1>
 <h2 id="definition_29">Définition</h2>
 <p>La <strong>comorbidité</strong> correspond à la présence simultanée de plusieurs troubles ou problèmes de santé chez une même personne.</p>
 <h2 id="dans-les-addictions">Dans les addictions</h2>
@@ -571,7 +586,7 @@
 <h2 id="a-retenir_28">À retenir</h2>
 <p>Identifier les différents problèmes présents permet d'adapter la prise en charge.</p>
 <hr />
-<h1 id="1331-la-prevention-des-addictions" class="entry-title hc-1">🧠 13.31 La prévention des addictions</h1>
+<h1 id="1331-la-prevention-des-addictions" class="entry-title hc-1">13.31 La prévention des addictions</h1>
 <h2 id="definition_30">Définition</h2>
 <p>La <strong>prévention</strong> vise à réduire la probabilité qu'un comportement addictif apparaisse ou s'aggrave.</p>
 <h2 id="moyens-possibles">Moyens possibles</h2>
@@ -586,7 +601,7 @@
 <h2 id="a-retenir_29">À retenir</h2>
 <p>La prévention peut intervenir avant l'apparition d'un trouble ou lorsqu'un comportement commence à devenir problématique.</p>
 <hr />
-<h1 id="1332-la-prise-en-charge-des-addictions" class="entry-title hc-2">🧠 13.32 La prise en charge des addictions</h1>
+<h1 id="1332-la-prise-en-charge-des-addictions" class="entry-title hc-2">13.32 La prise en charge des addictions</h1>
 <h2 id="definition_31">Définition</h2>
 <p>La prise en charge dépend de la substance ou du comportement concerné et de la situation de la personne.</p>
 <h2 id="approches-possibles">Approches possibles</h2>
@@ -602,7 +617,7 @@
 <h2 id="a-retenir_30">À retenir</h2>
 <p>Il n'existe pas une seule méthode adaptée à toutes les addictions.</p>
 <hr />
-<h1 id="1333-la-reduction-des-risques" class="entry-title hc-3">🧠 13.33 La réduction des risques</h1>
+<h1 id="1333-la-reduction-des-risques" class="entry-title hc-3">13.33 La réduction des risques</h1>
 <h2 id="definition_32">Définition</h2>
 <p>La <strong>réduction des risques</strong> vise à diminuer les conséquences négatives associées à une consommation ou à un comportement lorsqu'un arrêt immédiat n'est pas possible ou accepté.</p>
 <h2 id="objectifs">Objectifs</h2>
@@ -616,7 +631,7 @@
 <h2 id="a-retenir_31">À retenir</h2>
 <p>La réduction des risques ne signifie pas nécessairement encourager la consommation. Elle cherche principalement à limiter les dommages.</p>
 <hr />
-<h1 id="1334-le-processus-de-recuperation" class="entry-title hc-4">🧠 13.34 Le processus de récupération</h1>
+<h1 id="1334-le-processus-de-recuperation" class="entry-title hc-4">13.34 Le processus de récupération</h1>
 <h2 id="definition_33">Définition</h2>
 <p>La <strong>récupération</strong> correspond au processus par lequel une personne réduit ou arrête un comportement problématique et retrouve progressivement un fonctionnement satisfaisant.</p>
 <h2 id="particularites">Particularités</h2>
@@ -633,8 +648,26 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-14-troubles-neurocognitifs/"><span class="similar-icon">🩺</span>Partie 14 — Troubles neurocognitifs</a><a class="similar-item" href="/chapitre/troubles-partie-15-troubles-disruptifs-du-controle-des-impulsions-et-des-conduites/"><span class="similar-icon">🩺</span>Partie 15 — Troubles disruptifs, du contrôle des impulsions et des conduites</a><a class="similar-item" href="/chapitre/troubles-partie-16-troubles-de-l-attachement/"><span class="similar-icon">🩺</span>Partie 16 — Troubles de l'attachement</a></div>
+      <h2>Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-14-troubles-neurocognitifs/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 14 — Troubles neurocognitifs</a><a class="similar-item" href="/chapitre/troubles-partie-15-troubles-disruptifs-du-controle-des-impulsions-et-des-conduites/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 15 — Troubles disruptifs, du contrôle des impulsions et des conduites</a><a class="similar-item" href="/chapitre/troubles-partie-16-troubles-de-l-attachement/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 16 — Troubles de l'attachement</a></div>
     </div>
     <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
   </div>
@@ -720,23 +753,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -754,7 +789,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -934,9 +969,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -945,10 +982,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -1055,7 +1092,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1095,8 +1132,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1127,7 +1164,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1182,7 +1219,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1206,17 +1243,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1258,7 +1295,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

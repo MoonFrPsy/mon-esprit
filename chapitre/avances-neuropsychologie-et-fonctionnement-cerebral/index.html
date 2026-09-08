@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#141-quest-ce-que-la-neuropsychologie">🧬 14.1 Qu'est-ce que la neuropsychologie ?</a></li><li><a href="#142-le-cerveau-comme-systeme">🧠 14.2 Le cerveau comme système</a></li><li><a href="#143-les-reseaux-cerebraux">🔗 14.3 Les réseaux cérébraux</a></li><li><a href="#144-la-specialisation-fonctionnelle">🧠 14.4 La spécialisation fonctionnelle</a></li><li><a href="#145-la-communication-entre-les-regions-cerebrales">🔄 14.5 La communication entre les régions cérébrales</a></li><li><a href="#146-les-neurones">⚡ 14.6 Les neurones</a></li><li><a href="#147-les-neurotransmetteurs">🧪 14.7 Les neurotransmetteurs</a></li><li><a href="#148-la-dopamine">🧠 14.8 La dopamine</a></li><li><a href="#149-la-serotonine">❤️ 14.9 La sérotonine</a></li><li><a href="#1410-la-noradrenaline">⚡ 14.10 La noradrénaline</a></li><li><a href="#1411-le-cortex-prefrontal">🧠 14.11 Le cortex préfrontal</a></li><li><a href="#1412-les-fonctions-executives-et-les-reseaux-frontaux">🧩 14.12 Les fonctions exécutives et les réseaux frontaux</a></li><li><a href="#1413-lhippocampe">🧠 14.13 L'hippocampe</a></li><li><a href="#1414-lamygdale">❤️ 14.14 L'amygdale</a></li><li><a href="#1415-le-systeme-limbique">🧠 14.15 Le système limbique</a></li><li><a href="#1416-les-systemes-sensoriels">👁️ 14.16 Les systèmes sensoriels</a></li><li><a href="#1417-la-perception-comme-construction-cerebrale">🧠 14.17 La perception comme construction cérébrale</a></li><li><a href="#1418-lattention">🧠 14.18 L'attention</a></li><li><a href="#1419-la-memoire">🔄 14.19 La mémoire</a></li><li><a href="#1420-le-langage">🗣️ 14.20 Le langage</a></li><li><a href="#1421-les-aphasies">🧠 14.21 Les aphasies</a></li><li><a href="#1422-la-prosopagnosie">👁️ 14.22 La prosopagnosie</a></li><li><a href="#1423-la-negligence-spatiale">🧭 14.23 La négligence spatiale</a></li><li><a href="#1424-le-syndrome-de-la-main-etrangere">✋ 14.24 Le syndrome de la main étrangère</a></li><li><a href="#1425-le-sentiment-dagentivite">🧠 14.25 Le sentiment d'agentivité</a></li><li><a href="#1426-le-sentiment-de-propriete-corporelle">🧍 14.26 Le sentiment de propriété corporelle</a></li><li><a href="#1427-la-conscience">🌌 14.27 La conscience</a></li><li><a href="#1428-le-soi-et-le-cerveau">🪞 14.28 Le soi et le cerveau</a></li><li><a href="#1429-le-cerveau-et-les-emotions">❤️ 14.29 Le cerveau et les émotions</a></li><li><a href="#1430-le-cerveau-et-le-corps">🫀 14.30 Le cerveau et le corps</a></li><li><a href="#1431-linteroception">🧠 14.31 L'interoception</a></li><li><a href="#1432-la-plasticite-cerebrale">🔄 14.32 La plasticité cérébrale</a></li><li><a href="#1433-la-plasticite-et-lapprentissage">🧠 14.33 La plasticité et l'apprentissage</a></li><li><a href="#1434-les-lesions-cerebrales">🩺 14.34 Les lésions cérébrales</a></li><li><a href="#1435-le-syndrome-de-korsakoff">🧠 14.35 Le syndrome de Korsakoff</a></li><li><a href="#1436-la-recuperation-apres-une-lesion">🧩 14.36 La récupération après une lésion</a></li><li><a href="#1437-comment-etudier-le-cerveau">🔬 14.37 Comment étudier le cerveau ?</a></li><li><a href="#1438-pourquoi-une-correlation-cerebrale-ne-prouve-pas-une-cause">🧠 14.38 Pourquoi une corrélation cérébrale ne prouve pas une cause ?</a></li><li><a href="#1439-le-cerveau-la-psychologie-et-lenvironnement">🧬 14.39 Le cerveau, la psychologie et l'environnement</a></li><li><a href="#1440-pourquoi-etudier-la-neuropsychologie-et-le-fonctionnement-cerebral">🌌 14.40 Pourquoi étudier la neuropsychologie et le fonctionnement cérébral ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#141-quest-ce-que-la-neuropsychologie">14.1 Qu'est-ce que la neuropsychologie ?</a></li><li><a href="#142-le-cerveau-comme-systeme">14.2 Le cerveau comme système</a></li><li><a href="#143-les-reseaux-cerebraux">14.3 Les réseaux cérébraux</a></li><li><a href="#144-la-specialisation-fonctionnelle">14.4 La spécialisation fonctionnelle</a></li><li><a href="#145-la-communication-entre-les-regions-cerebrales">14.5 La communication entre les régions cérébrales</a></li><li><a href="#146-les-neurones">14.6 Les neurones</a></li><li><a href="#147-les-neurotransmetteurs">14.7 Les neurotransmetteurs</a></li><li><a href="#148-la-dopamine">14.8 La dopamine</a></li><li><a href="#149-la-serotonine">14.9 La sérotonine</a></li><li><a href="#1410-la-noradrenaline">14.10 La noradrénaline</a></li><li><a href="#1411-le-cortex-prefrontal">14.11 Le cortex préfrontal</a></li><li><a href="#1412-les-fonctions-executives-et-les-reseaux-frontaux">14.12 Les fonctions exécutives et les réseaux frontaux</a></li><li><a href="#1413-lhippocampe">14.13 L'hippocampe</a></li><li><a href="#1414-lamygdale">14.14 L'amygdale</a></li><li><a href="#1415-le-systeme-limbique">14.15 Le système limbique</a></li><li><a href="#1416-les-systemes-sensoriels">14.16 Les systèmes sensoriels</a></li><li><a href="#1417-la-perception-comme-construction-cerebrale">14.17 La perception comme construction cérébrale</a></li><li><a href="#1418-lattention">14.18 L'attention</a></li><li><a href="#1419-la-memoire">14.19 La mémoire</a></li><li><a href="#1420-le-langage">14.20 Le langage</a></li><li><a href="#1421-les-aphasies">14.21 Les aphasies</a></li><li><a href="#1422-la-prosopagnosie">14.22 La prosopagnosie</a></li><li><a href="#1423-la-negligence-spatiale">14.23 La négligence spatiale</a></li><li><a href="#1424-le-syndrome-de-la-main-etrangere">14.24 Le syndrome de la main étrangère</a></li><li><a href="#1425-le-sentiment-dagentivite">14.25 Le sentiment d'agentivité</a></li><li><a href="#1426-le-sentiment-de-propriete-corporelle">14.26 Le sentiment de propriété corporelle</a></li><li><a href="#1427-la-conscience">14.27 La conscience</a></li><li><a href="#1428-le-soi-et-le-cerveau">14.28 Le soi et le cerveau</a></li><li><a href="#1429-le-cerveau-et-les-emotions">14.29 Le cerveau et les émotions</a></li><li><a href="#1430-le-cerveau-et-le-corps">14.30 Le cerveau et le corps</a></li><li><a href="#1431-linteroception">14.31 L'interoception</a></li><li><a href="#1432-la-plasticite-cerebrale">14.32 La plasticité cérébrale</a></li><li><a href="#1433-la-plasticite-et-lapprentissage">14.33 La plasticité et l'apprentissage</a></li><li><a href="#1434-les-lesions-cerebrales">14.34 Les lésions cérébrales</a></li><li><a href="#1435-le-syndrome-de-korsakoff">14.35 Le syndrome de Korsakoff</a></li><li><a href="#1436-la-recuperation-apres-une-lesion">14.36 La récupération après une lésion</a></li><li><a href="#1437-comment-etudier-le-cerveau">14.37 Comment étudier le cerveau ?</a></li><li><a href="#1438-pourquoi-une-correlation-cerebrale-ne-prouve-pas-une-cause">14.38 Pourquoi une corrélation cérébrale ne prouve pas une cause ?</a></li><li><a href="#1439-le-cerveau-la-psychologie-et-lenvironnement">14.39 Le cerveau, la psychologie et l'environnement</a></li><li><a href="#1440-pourquoi-etudier-la-neuropsychologie-et-le-fonctionnement-cerebral">14.40 Pourquoi étudier la neuropsychologie et le fonctionnement cérébral ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Neuropsychologie et fonctionnement cérébral',
         category: 'Concepts avancés',
-        icon: '🔬'
+        icon: 'N'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/avances/">🔬 Concepts avancés</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/avances/">Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Neuropsychologie et fonctionnement cérébral</h1>
     </div>
     <div id="resume-banner"></div>
@@ -122,13 +137,13 @@
 <p>Cependant, le cerveau ne fonctionne pas comme une collection de petites zones indépendantes.</p>
 <p>Les fonctions psychologiques reposent généralement sur des <strong>réseaux cérébraux distribués</strong>, qui communiquent entre eux et interagissent avec le corps et l'environnement.</p>
 <hr />
-<h2 id="141-quest-ce-que-la-neuropsychologie" class="entry-title hc-1">🧬 14.1 Qu'est-ce que la neuropsychologie ?</h2>
+<h2 id="141-quest-ce-que-la-neuropsychologie" class="entry-title hc-1">14.1 Qu'est-ce que la neuropsychologie ?</h2>
 <p>La neuropsychologie est une discipline située à l'intersection de la psychologie et des neurosciences.</p>
 <p>Elle étudie notamment les relations entre :</p>
-<p><strong>🧠 cerveau ↔ cognition ↔ émotions ↔ comportement</strong></p>
+<p>** cerveau  cognition  émotions  comportement**</p>
 <p>Elle peut s'intéresser au fonctionnement cérébral normal mais également aux conséquences psychologiques de lésions ou de maladies neurologiques.</p>
 <hr />
-<h2 id="142-le-cerveau-comme-systeme" class="entry-title hc-2">🧠 14.2 Le cerveau comme système</h2>
+<h2 id="142-le-cerveau-comme-systeme" class="entry-title hc-2">14.2 Le cerveau comme système</h2>
 <p>Le cerveau fonctionne comme un système extrêmement complexe.</p>
 <p>Des milliards de neurones communiquent entre eux grâce à des signaux électriques et chimiques.</p>
 <p>Cette organisation permet notamment :</p>
@@ -143,13 +158,13 @@
 </ul>
 <p>Une fonction psychologique ne correspond généralement pas à un seul neurone ou à une seule région.</p>
 <hr />
-<h2 id="143-les-reseaux-cerebraux" class="entry-title hc-3">🔗 14.3 Les réseaux cérébraux</h2>
+<h2 id="143-les-reseaux-cerebraux" class="entry-title hc-3">14.3 Les réseaux cérébraux</h2>
 <p>Les régions cérébrales communiquent continuellement.</p>
 <p>Une fonction peut donc dépendre d'un réseau comprenant plusieurs régions.</p>
 <p>Une perturbation d'une région peut modifier le fonctionnement de plusieurs systèmes.</p>
 <p>Cela explique pourquoi une lésion localisée peut parfois provoquer des conséquences qui dépassent largement une seule capacité cognitive.</p>
 <hr />
-<h2 id="144-la-specialisation-fonctionnelle" class="entry-title hc-4">🧠 14.4 La spécialisation fonctionnelle</h2>
+<h2 id="144-la-specialisation-fonctionnelle" class="entry-title hc-4">14.4 La spécialisation fonctionnelle</h2>
 <p>Certaines régions cérébrales possèdent des rôles particulièrement importants dans certaines fonctions.</p>
 <p>Par exemple, certaines régions participent davantage à :</p>
 <ul>
@@ -162,13 +177,13 @@
 <p>Cependant, spécialisation ne signifie pas isolement.</p>
 <p>Une même fonction peut mobiliser plusieurs régions.</p>
 <hr />
-<h2 id="145-la-communication-entre-les-regions-cerebrales" class="entry-title hc-5">🔄 14.5 La communication entre les régions cérébrales</h2>
+<h2 id="145-la-communication-entre-les-regions-cerebrales" class="entry-title hc-5">14.5 La communication entre les régions cérébrales</h2>
 <p>Le fonctionnement psychologique dépend fortement de la communication entre les différentes structures cérébrales.</p>
 <p>Cette communication permet notamment de combiner :</p>
 <p><strong>information sensorielle + mémoire + émotion + objectif + décision</strong></p>
 <p>Une décision complexe nécessite donc généralement l'interaction de nombreux systèmes.</p>
 <hr />
-<h2 id="146-les-neurones" class="entry-title hc-1">⚡ 14.6 Les neurones</h2>
+<h2 id="146-les-neurones" class="entry-title hc-1">14.6 Les neurones</h2>
 <p>Les neurones sont des cellules spécialisées dans la transmission de signaux.</p>
 <p>Ils communiquent notamment grâce à :</p>
 <p><strong>signaux électriques</strong></p>
@@ -176,7 +191,7 @@
 <p><strong>neurotransmission chimique</strong></p>
 <p>Les réseaux neuronaux permettent la transmission et la transformation de l'information.</p>
 <hr />
-<h2 id="147-les-neurotransmetteurs" class="entry-title hc-2">🧪 14.7 Les neurotransmetteurs</h2>
+<h2 id="147-les-neurotransmetteurs" class="entry-title hc-2">14.7 Les neurotransmetteurs</h2>
 <p>Les neurotransmetteurs sont des substances chimiques permettant notamment la communication entre neurones.</p>
 <p>Parmi les neurotransmetteurs étudiés en neurosciences figurent :</p>
 <ul>
@@ -190,7 +205,7 @@
 <p>Ils participent à de nombreux processus.</p>
 <p>Cependant, il est incorrect de réduire une fonction psychologique complexe à un seul neurotransmetteur.</p>
 <hr />
-<h2 id="148-la-dopamine" class="entry-title hc-3">🧠 14.8 La dopamine</h2>
+<h2 id="148-la-dopamine" class="entry-title hc-3">14.8 La dopamine</h2>
 <p>La dopamine participe notamment à plusieurs processus :</p>
 <ul>
 <li>motivation</li>
@@ -202,7 +217,7 @@
 <p>Elle n'est donc pas simplement « le neurotransmetteur du plaisir ».</p>
 <p>Son rôle dépend des circuits dans lesquels elle agit et du contexte.</p>
 <hr />
-<h2 id="149-la-serotonine" class="entry-title hc-4">❤️ 14.9 La sérotonine</h2>
+<h2 id="149-la-serotonine" class="entry-title hc-4">14.9 La sérotonine</h2>
 <p>La sérotonine intervient dans différents processus biologiques et psychologiques, notamment :</p>
 <ul>
 <li>régulation de l'humeur</li>
@@ -215,7 +230,7 @@
 <p><strong>« manque de sérotonine = dépression »</strong></p>
 <p>Les troubles psychologiques sont multifactoriels.</p>
 <hr />
-<h2 id="1410-la-noradrenaline" class="entry-title hc-5">⚡ 14.10 La noradrénaline</h2>
+<h2 id="1410-la-noradrenaline" class="entry-title hc-5">14.10 La noradrénaline</h2>
 <p>La noradrénaline intervient notamment dans :</p>
 <ul>
 <li>vigilance</li>
@@ -226,7 +241,7 @@
 </ul>
 <p>Elle participe aux mécanismes permettant de rester attentif à des événements importants.</p>
 <hr />
-<h2 id="1411-le-cortex-prefrontal" class="entry-title hc-1">🧠 14.11 Le cortex préfrontal</h2>
+<h2 id="1411-le-cortex-prefrontal" class="entry-title hc-1">14.11 Le cortex préfrontal</h2>
 <p>Le cortex préfrontal participe à de nombreuses fonctions dites exécutives.</p>
 <p>Il est notamment impliqué dans :</p>
 <ul>
@@ -240,7 +255,7 @@
 <p>Il ne constitue cependant pas « le centre du cerveau ».</p>
 <p>Son fonctionnement dépend de nombreuses interactions avec d'autres régions.</p>
 <hr />
-<h2 id="1412-les-fonctions-executives-et-les-reseaux-frontaux" class="entry-title hc-2">🧩 14.12 Les fonctions exécutives et les réseaux frontaux</h2>
+<h2 id="1412-les-fonctions-executives-et-les-reseaux-frontaux" class="entry-title hc-2">14.12 Les fonctions exécutives et les réseaux frontaux</h2>
 <p>Les fonctions exécutives comprennent plusieurs capacités.</p>
 <p>On peut notamment citer :</p>
 <p><strong>inhibition</strong></p>
@@ -250,7 +265,7 @@
 <p><strong>surveillance des erreurs</strong></p>
 <p>Ces fonctions dépendent de réseaux comprenant notamment des régions frontales et leurs connexions avec d'autres systèmes cérébraux.</p>
 <hr />
-<h2 id="1413-lhippocampe" class="entry-title hc-3">🧠 14.13 L'hippocampe</h2>
+<h2 id="1413-lhippocampe" class="entry-title hc-3">14.13 L'hippocampe</h2>
 <p>L'hippocampe joue un rôle important dans plusieurs aspects de la mémoire.</p>
 <p>Il participe notamment à :</p>
 <ul>
@@ -261,7 +276,7 @@
 </ul>
 <p>Une atteinte hippocampique peut provoquer d'importantes difficultés de mémorisation.</p>
 <hr />
-<h2 id="1414-lamygdale" class="entry-title hc-4">❤️ 14.14 L'amygdale</h2>
+<h2 id="1414-lamygdale" class="entry-title hc-4">14.14 L'amygdale</h2>
 <p>L'amygdale participe notamment au traitement de certaines informations émotionnellement importantes.</p>
 <p>Elle est particulièrement étudiée dans :</p>
 <ul>
@@ -273,7 +288,7 @@
 <p>Elle ne doit cependant pas être considérée comme le simple « centre de la peur ».</p>
 <p>Son fonctionnement est beaucoup plus complexe.</p>
 <hr />
-<h2 id="1415-le-systeme-limbique" class="entry-title hc-5">🧠 14.15 Le système limbique</h2>
+<h2 id="1415-le-systeme-limbique" class="entry-title hc-5">14.15 Le système limbique</h2>
 <p>L'expression « système limbique » est historiquement utilisée pour désigner plusieurs structures cérébrales impliquées dans différents processus.</p>
 <p>Ces structures ont notamment été étudiées en relation avec :</p>
 <ul>
@@ -283,7 +298,7 @@
 </ul>
 <p>Cependant, les modèles modernes soulignent davantage les interactions entre réseaux cérébraux que l'idée d'un système émotionnel complètement isolé.</p>
 <hr />
-<h2 id="1416-les-systemes-sensoriels" class="entry-title hc-1">👁️ 14.16 Les systèmes sensoriels</h2>
+<h2 id="1416-les-systemes-sensoriels" class="entry-title hc-1">14.16 Les systèmes sensoriels</h2>
 <p>Le cerveau reçoit constamment des informations provenant des systèmes sensoriels :</p>
 <ul>
 <li>vision</li>
@@ -296,14 +311,14 @@
 </ul>
 <p>Ces informations sont transformées et intégrées afin de produire une expérience perceptive cohérente.</p>
 <hr />
-<h2 id="1417-la-perception-comme-construction-cerebrale" class="entry-title hc-2">🧠 14.17 La perception comme construction cérébrale</h2>
+<h2 id="1417-la-perception-comme-construction-cerebrale" class="entry-title hc-2">14.17 La perception comme construction cérébrale</h2>
 <p>Le cerveau ne reçoit pas simplement une copie du monde extérieur.</p>
 <p>Il combine :</p>
 <p><strong>informations sensorielles + contexte + attentes + mémoire</strong></p>
 <p>pour construire une interprétation perceptive.</p>
 <p>C'est pourquoi une même stimulation peut être vécue différemment selon le contexte.</p>
 <hr />
-<h2 id="1418-lattention" class="entry-title hc-3">🧠 14.18 L'attention</h2>
+<h2 id="1418-lattention" class="entry-title hc-3">14.18 L'attention</h2>
 <p>L'attention permet de sélectionner certaines informations parmi une quantité considérable de stimulations.</p>
 <p>Elle peut être :</p>
 <ul>
@@ -314,7 +329,7 @@
 </ul>
 <p>Le cerveau doit constamment déterminer quelles informations sont suffisamment importantes pour recevoir davantage de ressources.</p>
 <hr />
-<h2 id="1419-la-memoire" class="entry-title hc-4">🔄 14.19 La mémoire</h2>
+<h2 id="1419-la-memoire" class="entry-title hc-4">14.19 La mémoire</h2>
 <p>La mémoire repose sur plusieurs systèmes.</p>
 <p>On peut notamment distinguer :</p>
 <ul>
@@ -327,7 +342,7 @@
 <p>Il n'existe donc pas une seule « zone de la mémoire ».</p>
 <p>Différents réseaux cérébraux participent à différents aspects de la mémorisation.</p>
 <hr />
-<h2 id="1420-le-langage" class="entry-title hc-5">🗣️ 14.20 Le langage</h2>
+<h2 id="1420-le-langage" class="entry-title hc-5">14.20 Le langage</h2>
 <p>Le langage implique plusieurs fonctions :</p>
 <ul>
 <li>compréhension</li>
@@ -340,7 +355,7 @@
 <p>Certaines régions cérébrales sont particulièrement importantes dans le langage, notamment dans l'hémisphère dominant.</p>
 <p>Cependant, le langage repose sur un réseau distribué.</p>
 <hr />
-<h2 id="1421-les-aphasies" class="entry-title hc-1">🧠 14.21 Les aphasies</h2>
+<h2 id="1421-les-aphasies" class="entry-title hc-1">14.21 Les aphasies</h2>
 <p>Une aphasie correspond à un trouble acquis du langage lié à une atteinte cérébrale.</p>
 <p>Elle peut affecter :</p>
 <ul>
@@ -354,7 +369,7 @@
 <p>Il existe différents profils d'aphasie.</p>
 <p>Une difficulté à parler ne signifie donc pas nécessairement une perte générale de l'intelligence.</p>
 <hr />
-<h2 id="1422-la-prosopagnosie" class="entry-title hc-2">👁️ 14.22 La prosopagnosie</h2>
+<h2 id="1422-la-prosopagnosie" class="entry-title hc-2">14.22 La prosopagnosie</h2>
 <p>La prosopagnosie correspond à une difficulté importante à reconnaître les visages malgré une vision relativement préservée.</p>
 <p>La personne peut parfois reconnaître quelqu'un grâce à :</p>
 <ul>
@@ -365,27 +380,27 @@
 </ul>
 <p>Cela montre que reconnaître un visage constitue une fonction cognitive spécifique et complexe.</p>
 <hr />
-<h2 id="1423-la-negligence-spatiale" class="entry-title hc-3">🧭 14.23 La négligence spatiale</h2>
+<h2 id="1423-la-negligence-spatiale" class="entry-title hc-3">14.23 La négligence spatiale</h2>
 <p>La négligence spatiale correspond à une difficulté à prendre en compte certaines informations provenant d'une partie de l'espace.</p>
 <p>Elle est souvent observée après certaines lésions cérébrales.</p>
 <p>Il ne s'agit pas simplement d'un problème de vision.</p>
 <p>Le problème concerne notamment l'orientation et l'allocation de l'attention spatiale.</p>
 <hr />
-<h2 id="1424-le-syndrome-de-la-main-etrangere" class="entry-title hc-4">✋ 14.24 Le syndrome de la main étrangère</h2>
+<h2 id="1424-le-syndrome-de-la-main-etrangere" class="entry-title hc-4">14.24 Le syndrome de la main étrangère</h2>
 <p>Le syndrome de la main étrangère correspond à une perturbation rare dans laquelle une main peut produire des mouvements qui semblent échapper au contrôle volontaire habituel.</p>
 <p>La personne peut avoir l'impression :</p>
 <p><strong>« ce mouvement vient de ma main, mais je n'ai pas décidé de le faire »</strong></p>
 <p>Ce phénomène permet d'étudier le sentiment d'agentivité et les systèmes de contrôle moteur.</p>
 <hr />
-<h2 id="1425-le-sentiment-dagentivite" class="entry-title hc-5">🧠 14.25 Le sentiment d'agentivité</h2>
+<h2 id="1425-le-sentiment-dagentivite" class="entry-title hc-5">14.25 Le sentiment d'agentivité</h2>
 <p>L'agentivité correspond au sentiment d'être l'auteur d'une action.</p>
 <p>Le cerveau compare notamment :</p>
-<p><strong>intention → action → résultat attendu</strong></p>
+<p><strong>intention  action  résultat attendu</strong></p>
 <p>Lorsque ces éléments correspondent suffisamment, l'individu peut ressentir :</p>
 <p><strong>« c'est moi qui ai fait cela »</strong></p>
 <p>Des perturbations de ce système peuvent modifier l'expérience du contrôle.</p>
 <hr />
-<h2 id="1426-le-sentiment-de-propriete-corporelle" class="entry-title hc-1">🧍 14.26 Le sentiment de propriété corporelle</h2>
+<h2 id="1426-le-sentiment-de-propriete-corporelle" class="entry-title hc-1">14.26 Le sentiment de propriété corporelle</h2>
 <p>Le sentiment de propriété corporelle correspond à l'expérience subjective selon laquelle un corps ou une partie du corps appartient à soi.</p>
 <p>Les expériences de type <strong>rubber hand illusion</strong> montrent que cette perception peut être influencée par l'intégration multisensorielle.</p>
 <p>Le cerveau combine notamment :</p>
@@ -396,7 +411,7 @@
 </ul>
 <p>pour construire une représentation du corps.</p>
 <hr />
-<h2 id="1427-la-conscience" class="entry-title hc-2">🌌 14.27 La conscience</h2>
+<h2 id="1427-la-conscience" class="entry-title hc-2">14.27 La conscience</h2>
 <p>La conscience reste l'un des problèmes les plus complexes des neurosciences.</p>
 <p>Elle implique notamment :</p>
 <ul>
@@ -408,7 +423,7 @@
 </ul>
 <p>Il existe plusieurs théories scientifiques de la conscience, et aucune ne fournit actuellement une explication définitive de tous ses aspects.</p>
 <hr />
-<h2 id="1428-le-soi-et-le-cerveau" class="entry-title hc-3">🪞 14.28 Le soi et le cerveau</h2>
+<h2 id="1428-le-soi-et-le-cerveau" class="entry-title hc-3">14.28 Le soi et le cerveau</h2>
 <p>Le sentiment de soi repose sur l'interaction de nombreux processus :</p>
 <p><strong>mémoire autobiographique</strong></p>
 <p><strong>perception corporelle</strong></p>
@@ -419,7 +434,7 @@
 <p>Le « soi » ne correspond donc pas à une structure cérébrale unique.</p>
 <p>Il s'agit plutôt d'une construction dynamique issue de plusieurs systèmes.</p>
 <hr />
-<h2 id="1429-le-cerveau-et-les-emotions" class="entry-title hc-4">❤️ 14.29 Le cerveau et les émotions</h2>
+<h2 id="1429-le-cerveau-et-les-emotions" class="entry-title hc-4">14.29 Le cerveau et les émotions</h2>
 <p>Les émotions reposent sur l'interaction de nombreux systèmes cérébraux.</p>
 <p>Elles impliquent notamment :</p>
 <ul>
@@ -432,7 +447,7 @@
 </ul>
 <p>Il n'existe donc pas une seule « zone des émotions ».</p>
 <hr />
-<h2 id="1430-le-cerveau-et-le-corps" class="entry-title hc-5">🫀 14.30 Le cerveau et le corps</h2>
+<h2 id="1430-le-cerveau-et-le-corps" class="entry-title hc-5">14.30 Le cerveau et le corps</h2>
 <p>Le cerveau fonctionne en interaction permanente avec le corps.</p>
 <p>Les informations provenant du corps peuvent influencer :</p>
 <ul>
@@ -444,7 +459,7 @@
 </ul>
 <p>Cette communication est notamment étudiée à travers le concept d'<strong>interoception</strong>.</p>
 <hr />
-<h2 id="1431-linteroception" class="entry-title hc-1">🧠 14.31 L'interoception</h2>
+<h2 id="1431-linteroception" class="entry-title hc-1">14.31 L'interoception</h2>
 <p>L'interoception correspond à la perception et au traitement des signaux provenant de l'intérieur du corps.</p>
 <p>Cela peut concerner :</p>
 <ul>
@@ -456,7 +471,7 @@
 </ul>
 <p>Ces informations participent à la construction de l'état corporel subjectif.</p>
 <hr />
-<h2 id="1432-la-plasticite-cerebrale" class="entry-title hc-2">🔄 14.32 La plasticité cérébrale</h2>
+<h2 id="1432-la-plasticite-cerebrale" class="entry-title hc-2">14.32 La plasticité cérébrale</h2>
 <p>La plasticité cérébrale correspond à la capacité du système nerveux à modifier certaines de ses structures ou connexions en fonction :</p>
 <ul>
 <li>expérience</li>
@@ -467,13 +482,13 @@
 </ul>
 <p>Le cerveau n'est donc pas totalement figé.</p>
 <hr />
-<h2 id="1433-la-plasticite-et-lapprentissage" class="entry-title hc-3">🧠 14.33 La plasticité et l'apprentissage</h2>
+<h2 id="1433-la-plasticite-et-lapprentissage" class="entry-title hc-3">14.33 La plasticité et l'apprentissage</h2>
 <p>Lorsqu'une compétence est répétée, certains réseaux neuronaux peuvent être modifiés.</p>
 <p>L'apprentissage repose notamment sur des changements dans :</p>
 <p><strong>connexions + efficacité synaptique + organisation des réseaux</strong></p>
 <p>La répétition et la pratique peuvent donc modifier le fonctionnement cérébral.</p>
 <hr />
-<h2 id="1434-les-lesions-cerebrales" class="entry-title hc-4">🩺 14.34 Les lésions cérébrales</h2>
+<h2 id="1434-les-lesions-cerebrales" class="entry-title hc-4">14.34 Les lésions cérébrales</h2>
 <p>Une lésion cérébrale peut modifier certaines fonctions psychologiques.</p>
 <p>Les conséquences dépendent notamment :</p>
 <ul>
@@ -487,7 +502,7 @@
 </ul>
 <p>Deux lésions relativement proches peuvent donc produire des conséquences différentes.</p>
 <hr />
-<h2 id="1435-le-syndrome-de-korsakoff" class="entry-title hc-5">🧠 14.35 Le syndrome de Korsakoff</h2>
+<h2 id="1435-le-syndrome-de-korsakoff" class="entry-title hc-5">14.35 Le syndrome de Korsakoff</h2>
 <p>Le syndrome de Korsakoff constitue un exemple important en neuropsychologie.</p>
 <p>Il est notamment associé à une atteinte sévère de la mémoire, généralement dans le contexte d'une carence importante en thiamine.</p>
 <p>Il peut notamment entraîner :</p>
@@ -499,7 +514,7 @@
 </ul>
 <p>Il montre l'importance de certains réseaux cérébraux dans la mémoire.</p>
 <hr />
-<h2 id="1436-la-recuperation-apres-une-lesion" class="entry-title hc-1">🧩 14.36 La récupération après une lésion</h2>
+<h2 id="1436-la-recuperation-apres-une-lesion" class="entry-title hc-1">14.36 La récupération après une lésion</h2>
 <p>Une récupération fonctionnelle peut parfois apparaître après une lésion cérébrale.</p>
 <p>Elle peut dépendre de :</p>
 <ul>
@@ -511,7 +526,7 @@
 </ul>
 <p>La récupération n'est cependant pas toujours complète.</p>
 <hr />
-<h2 id="1437-comment-etudier-le-cerveau" class="entry-title hc-2">🔬 14.37 Comment étudier le cerveau ?</h2>
+<h2 id="1437-comment-etudier-le-cerveau" class="entry-title hc-2">14.37 Comment étudier le cerveau ?</h2>
 <p>Les neurosciences utilisent différentes méthodes.</p>
 <p>Parmi elles :</p>
 <p><strong>IRM structurelle</strong></p>
@@ -524,64 +539,100 @@
 <p>permettant notamment d'étudier certains aspects métaboliques ou moléculaires.</p>
 <p>Chaque méthode possède ses avantages et ses limites.</p>
 <hr />
-<h2 id="1438-pourquoi-une-correlation-cerebrale-ne-prouve-pas-une-cause" class="entry-title hc-3">🧠 14.38 Pourquoi une corrélation cérébrale ne prouve pas une cause ?</h2>
+<h2 id="1438-pourquoi-une-correlation-cerebrale-ne-prouve-pas-une-cause" class="entry-title hc-3">14.38 Pourquoi une corrélation cérébrale ne prouve pas une cause ?</h2>
 <p>Lorsqu'une activité cérébrale est associée à un comportement, cela ne signifie pas automatiquement que cette activité est la cause unique du comportement.</p>
 <p>On peut observer :</p>
-<p><strong>activité cérébrale ↔ comportement</strong></p>
+<p><strong>activité cérébrale  comportement</strong></p>
 <p>sans pouvoir conclure immédiatement :</p>
-<p><strong>activité cérébrale → comportement</strong></p>
+<p><strong>activité cérébrale  comportement</strong></p>
 <p>La causalité nécessite des méthodes adaptées et plusieurs niveaux de preuves.</p>
 <hr />
-<h2 id="1439-le-cerveau-la-psychologie-et-lenvironnement" class="entry-title hc-4">🧬 14.39 Le cerveau, la psychologie et l'environnement</h2>
+<h2 id="1439-le-cerveau-la-psychologie-et-lenvironnement" class="entry-title hc-4">14.39 Le cerveau, la psychologie et l'environnement</h2>
 <p>Le fonctionnement psychologique résulte de l'interaction entre plusieurs niveaux :</p>
-<p><strong>🧬 biologie</strong></p>
-<p><strong>🧠 cerveau</strong></p>
-<p><strong>🧠 cognition</strong></p>
-<p><strong>❤️ émotions</strong></p>
-<p><strong>🧑‍🤝‍🧑 relations</strong></p>
-<p><strong>🌍 environnement</strong></p>
-<p><strong>📚 expériences</strong></p>
+<p>** biologie**</p>
+<p>** cerveau**</p>
+<p>** cognition**</p>
+<p>** émotions**</p>
+<p><strong>‍‍ relations</strong></p>
+<p>** environnement**</p>
+<p>** expériences**</p>
 <p>Aucun de ces niveaux ne suffit généralement à expliquer seul un comportement humain complexe.</p>
 <p>La neuropsychologie permet donc de relier fonctionnement cérébral et fonctionnement psychologique sans réduire toute la psychologie au cerveau.</p>
 <hr />
-<h2 id="1440-pourquoi-etudier-la-neuropsychologie-et-le-fonctionnement-cerebral" class="entry-title hc-5">🌌 14.40 Pourquoi étudier la neuropsychologie et le fonctionnement cérébral ?</h2>
+<h2 id="1440-pourquoi-etudier-la-neuropsychologie-et-le-fonctionnement-cerebral" class="entry-title hc-5">14.40 Pourquoi étudier la neuropsychologie et le fonctionnement cérébral ?</h2>
 <p>La neuropsychologie permet de mieux comprendre les relations entre cerveau et fonctionnement psychologique.</p>
 <p>Elle permet notamment d'étudier :</p>
-<p><strong>🧠 cognition</strong></p>
-<p><strong>👁️ perception</strong></p>
-<p><strong>🧠 mémoire</strong></p>
-<p><strong>🗣️ langage</strong></p>
-<p><strong>❤️ émotions</strong></p>
-<p><strong>🎯 fonctions exécutives</strong></p>
-<p><strong>🪞 identité</strong></p>
-<p><strong>🧍 représentation corporelle</strong></p>
-<p><strong>🧑‍🤝‍🧑 cognition sociale</strong></p>
-<p><strong>🌌 conscience</strong></p>
+<p>** cognition**</p>
+<p>** perception**</p>
+<p>** mémoire**</p>
+<p>** langage**</p>
+<p>** émotions**</p>
+<p>** fonctions exécutives**</p>
+<p>** identité**</p>
+<p>** représentation corporelle**</p>
+<p><strong>‍‍ cognition sociale</strong></p>
+<p>** conscience**</p>
 <p>Elle montre surtout que le cerveau fonctionne comme un <strong>système dynamique de réseaux interconnectés</strong>, constamment influencé par le corps, l'expérience et l'environnement.</p>
 <p>Comprendre le cerveau permet donc d'approfondir la compréhension du fonctionnement psychologique, mais ne signifie pas que chaque phénomène psychologique possède une explication simple située dans une seule région cérébrale.</p>
-<h1 id="a-retenir">📌 À RETENIR</h1>
+<h1 id="a-retenir">À RETENIR</h1>
 <p>La neuropsychologie étudie les relations entre <strong>cerveau, cognition, émotions et comportement</strong>.</p>
 <p>Il faut retenir plusieurs principes essentiels :</p>
-<p>🧠 <strong>Une fonction psychologique n'est généralement pas localisée dans une seule zone.</strong></p>
+<p><strong>Une fonction psychologique n'est généralement pas localisée dans une seule zone.</strong></p>
 <p>Les fonctions complexes reposent sur des réseaux cérébraux qui interagissent.</p>
-<p>🧬 <strong>Les neurotransmetteurs ne correspondent pas à des fonctions psychologiques uniques.</strong></p>
+<p><strong>Les neurotransmetteurs ne correspondent pas à des fonctions psychologiques uniques.</strong></p>
 <p>La dopamine n'est pas simplement « le plaisir » et la sérotonine n'est pas simplement « le bonheur ».</p>
-<p>🔗 <strong>Le cerveau fonctionne en réseau.</strong></p>
+<p><strong>Le cerveau fonctionne en réseau.</strong></p>
 <p>Une région peut participer à plusieurs fonctions et une fonction peut dépendre de plusieurs régions.</p>
-<p>🫀 <strong>Le cerveau fonctionne avec le corps.</strong></p>
+<p><strong>Le cerveau fonctionne avec le corps.</strong></p>
 <p>Les signaux corporels participent notamment aux émotions, à la perception et au sentiment de soi.</p>
-<p>🔄 <strong>Le cerveau est plastique.</strong></p>
+<p><strong>Le cerveau est plastique.</strong></p>
 <p>L'apprentissage, l'expérience et certaines formes de rééducation peuvent modifier le fonctionnement des réseaux cérébraux.</p>
-<p>🧠 <strong>Une corrélation n'est pas automatiquement une causalité.</strong></p>
+<p><strong>Une corrélation n'est pas automatiquement une causalité.</strong></p>
 <p>Observer une association entre activité cérébrale et comportement ne permet pas à elle seule de déterminer une relation causale.</p>
-<p>🌍 <strong>Le fonctionnement psychologique est multifactoriel.</strong></p>
+<p><strong>Le fonctionnement psychologique est multifactoriel.</strong></p>
 <p><strong>biologie + cerveau + cognition + émotions + expériences + relations + environnement</strong></p>
 <p>La neuropsychologie permet ainsi de faire le lien entre plusieurs niveaux d'analyse sans réduire la complexité du fonctionnement humain à une seule région du cerveau ou à une seule substance chimique.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-psychopharmacologie-et-psychologie/"><span class="similar-icon">🔬</span>Psychopharmacologie et psychologie</a><a class="similar-item" href="/chapitre/avances-evaluation-psychologique-et-clinique/"><span class="similar-icon">🔬</span>Évaluation psychologique et clinique</a><a class="similar-item" href="/chapitre/avances-diagnostic-et-raisonnement-clinique/"><span class="similar-icon">🔬</span>Diagnostic et raisonnement clinique</a></div>
+      <h2>Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-psychopharmacologie-et-psychologie/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Psychopharmacologie et psychologie</a><a class="similar-item" href="/chapitre/avances-evaluation-psychologique-et-clinique/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Évaluation psychologique et clinique</a><a class="similar-item" href="/chapitre/avances-diagnostic-et-raisonnement-clinique/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Diagnostic et raisonnement clinique</a></div>
     </div>
     <a class="back-link" href="/categorie/avances/">← Retour à « Concepts avancés »</a>
   </div>
@@ -667,23 +718,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -701,7 +754,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -881,9 +934,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -892,10 +947,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -1002,7 +1057,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1042,8 +1097,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1074,7 +1129,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1129,7 +1184,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1153,17 +1208,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1205,7 +1260,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

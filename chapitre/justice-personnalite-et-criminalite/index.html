@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#51-la-personnalite">🧠 5.1 LA PERSONNALITÉ</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#52-la-personnalite-antisociale">🧠 5.2 LA PERSONNALITÉ ANTISOCIALE</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#53-la-psychopathie">🧠 5.3 LA PSYCHOPATHIE</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#54-le-narcissisme">🧠 5.4 LE NARCISSISME</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#55-lempathie">🧠 5.5 L'EMPATHIE</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#56-la-culpabilite">🧠 5.6 LA CULPABILITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#57-le-remords">🧠 5.7 LE REMORDS</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#58-la-manipulation">🧠 5.8 LA MANIPULATION</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#59-le-mensonge">🧠 5.9 LE MENSONGE</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li><li><a href="#a-retenir_8">📌 À RETENIR</a></li></ul></li><li><a href="#510-la-regulation-emotionnelle">🧠 5.10 LA RÉGULATION ÉMOTIONNELLE</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li><li><a href="#a-retenir_9">📌 À RETENIR</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#51-la-personnalite">5.1 LA PERSONNALITÉ</a><ul class="sidebar-sublist"><li><a href="#definition">DÉFINITION</a></li><li><a href="#explication">EXPLICATION</a></li><li><a href="#exemple">EXEMPLE</a></li><li><a href="#a-retenir">À RETENIR</a></li></ul></li><li><a href="#52-la-personnalite-antisociale">5.2 LA PERSONNALITÉ ANTISOCIALE</a><ul class="sidebar-sublist"><li><a href="#definition_1">DÉFINITION</a></li><li><a href="#explication_1">EXPLICATION</a></li><li><a href="#exemple_1">EXEMPLE</a></li><li><a href="#a-retenir_1">À RETENIR</a></li></ul></li><li><a href="#53-la-psychopathie">5.3 LA PSYCHOPATHIE</a><ul class="sidebar-sublist"><li><a href="#definition_2">DÉFINITION</a></li><li><a href="#explication_2">EXPLICATION</a></li><li><a href="#exemple_2">EXEMPLE</a></li><li><a href="#a-retenir_2">À RETENIR</a></li></ul></li><li><a href="#54-le-narcissisme">5.4 LE NARCISSISME</a><ul class="sidebar-sublist"><li><a href="#definition_3">DÉFINITION</a></li><li><a href="#explication_3">EXPLICATION</a></li><li><a href="#exemple_3">EXEMPLE</a></li><li><a href="#a-retenir_3">À RETENIR</a></li></ul></li><li><a href="#55-lempathie">5.5 L'EMPATHIE</a><ul class="sidebar-sublist"><li><a href="#definition_4">DÉFINITION</a></li><li><a href="#explication_4">EXPLICATION</a></li><li><a href="#exemple_4">EXEMPLE</a></li><li><a href="#a-retenir_4">À RETENIR</a></li></ul></li><li><a href="#56-la-culpabilite">5.6 LA CULPABILITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_5">DÉFINITION</a></li><li><a href="#explication_5">EXPLICATION</a></li><li><a href="#exemple_5">EXEMPLE</a></li><li><a href="#a-retenir_5">À RETENIR</a></li></ul></li><li><a href="#57-le-remords">5.7 LE REMORDS</a><ul class="sidebar-sublist"><li><a href="#definition_6">DÉFINITION</a></li><li><a href="#explication_6">EXPLICATION</a></li><li><a href="#exemple_6">EXEMPLE</a></li><li><a href="#a-retenir_6">À RETENIR</a></li></ul></li><li><a href="#58-la-manipulation">5.8 LA MANIPULATION</a><ul class="sidebar-sublist"><li><a href="#definition_7">DÉFINITION</a></li><li><a href="#explication_7">EXPLICATION</a></li><li><a href="#exemple_7">EXEMPLE</a></li><li><a href="#a-retenir_7">À RETENIR</a></li></ul></li><li><a href="#59-le-mensonge">5.9 LE MENSONGE</a><ul class="sidebar-sublist"><li><a href="#definition_8">DÉFINITION</a></li><li><a href="#explication_8">EXPLICATION</a></li><li><a href="#exemple_8">EXEMPLE</a></li><li><a href="#a-retenir_8">À RETENIR</a></li></ul></li><li><a href="#510-la-regulation-emotionnelle">5.10 LA RÉGULATION ÉMOTIONNELLE</a><ul class="sidebar-sublist"><li><a href="#definition_9">DÉFINITION</a></li><li><a href="#explication_9">EXPLICATION</a></li><li><a href="#exemple_9">EXEMPLE</a></li><li><a href="#a-retenir_9">À RETENIR</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Personnalité et criminalité',
         category: 'Psychologie, justice et criminologie',
-        icon: '⚖️'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/justice/">⚖️ Psychologie, justice et criminologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/justice/">Psychologie, justice et criminologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Personnalité et criminalité</h1>
     </div>
     <div id="resume-banner"></div>
@@ -105,137 +120,137 @@
 <p>Comprendre les liens possibles entre certains traits de personnalité, certains fonctionnements psychologiques et les comportements criminels, tout en évitant les raccourcis entre trouble psychologique, personnalité et dangerosité.
 </p>
 </blockquote>
-<h2 id="51-la-personnalite" class="entry-title hc-1">🧠 5.1 LA PERSONNALITÉ</h2>
-<h3 id="definition">🔎 DÉFINITION</h3>
+<h2 id="51-la-personnalite" class="entry-title hc-1">5.1 LA PERSONNALITÉ</h2>
+<h3 id="definition">DÉFINITION</h3>
 <p>La personnalité correspond à l'ensemble relativement stable des façons de penser, de ressentir, de percevoir et de se comporter qui caractérisent une personne.</p>
-<h3 id="explication">🧠 EXPLICATION</h3>
+<h3 id="explication">EXPLICATION</h3>
 <p>La personnalité se construit progressivement au cours du développement et résulte de l'interaction entre différents éléments biologiques, psychologiques et environnementaux.</p>
 <p>Elle influence notamment la manière dont une personne réagit aux situations, établit des relations, gère ses émotions et prend des décisions.</p>
 <p>La personnalité ne permet cependant pas de déterminer à elle seule si une personne adoptera un comportement criminel. Deux personnes présentant des traits similaires peuvent avoir des comportements très différents selon leur environnement, leur histoire et les situations rencontrées.</p>
-<h3 id="exemple">💬 EXEMPLE</h3>
+<h3 id="exemple">EXEMPLE</h3>
 <p>Une personne peut être naturellement très impulsive sans commettre d'infraction, tandis qu'une autre présentant une impulsivité similaire peut rencontrer davantage de difficultés dans certaines situations.</p>
-<h3 id="a-retenir">📌 À RETENIR</h3>
+<h3 id="a-retenir">À RETENIR</h3>
 <p>La personnalité influence les comportements, mais elle ne permet pas de prédire à elle seule la criminalité.</p>
 <hr />
-<h2 id="52-la-personnalite-antisociale" class="entry-title hc-2">🧠 5.2 LA PERSONNALITÉ ANTISOCIALE</h2>
-<h3 id="definition_1">🔎 DÉFINITION</h3>
+<h2 id="52-la-personnalite-antisociale" class="entry-title hc-2">5.2 LA PERSONNALITÉ ANTISOCIALE</h2>
+<h3 id="definition_1">DÉFINITION</h3>
 <p>La personnalité antisociale désigne un fonctionnement caractérisé notamment par un mépris persistant des droits d'autrui, des règles sociales et des normes de comportement.</p>
-<h3 id="explication_1">🧠 EXPLICATION</h3>
+<h3 id="explication_1">EXPLICATION</h3>
 <p>Dans le domaine clinique, le trouble de la personnalité antisociale est associé à différents comportements et attitudes pouvant inclure la tromperie, l'impulsivité, l'irresponsabilité, l'agressivité ou le non-respect répété des normes.</p>
 <p>Cependant, présenter un trouble de la personnalité antisociale ne signifie pas automatiquement être violent ou criminel.</p>
 <p>La criminalité dépend de nombreux facteurs et ne peut pas être expliquée par un diagnostic isolé.</p>
 <p>Il est également important de distinguer le terme clinique de personnalité antisociale du sens courant du mot « antisocial », qui peut simplement désigner une personne ayant peu de contacts sociaux.</p>
-<h3 id="exemple_1">💬 EXEMPLE</h3>
+<h3 id="exemple_1">EXEMPLE</h3>
 <p>Une personne présentant un fonctionnement antisocial peut avoir des difficultés répétées à respecter certaines règles et obligations, sans que cela signifie nécessairement qu'elle commettra des actes violents.</p>
-<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<h3 id="a-retenir_1">À RETENIR</h3>
 <p>La personnalité antisociale est une notion clinique précise et ne doit pas être assimilée automatiquement à la violence ou à la criminalité.</p>
 <hr />
-<h2 id="53-la-psychopathie" class="entry-title hc-3">🧠 5.3 LA PSYCHOPATHIE</h2>
-<h3 id="definition_2">🔎 DÉFINITION</h3>
+<h2 id="53-la-psychopathie" class="entry-title hc-3">5.3 LA PSYCHOPATHIE</h2>
+<h3 id="definition_2">DÉFINITION</h3>
 <p>La psychopathie est un construit psychologique utilisé principalement dans la recherche et certains contextes médico-légaux pour décrire un ensemble de caractéristiques liées notamment à l'empathie, aux émotions, aux relations interpersonnelles et aux comportements antisociaux.</p>
-<h3 id="explication_2">🧠 EXPLICATION</h3>
+<h3 id="explication_2">EXPLICATION</h3>
 <p>La psychopathie peut comprendre différentes caractéristiques : faible empathie, superficialité émotionnelle, tendance à manipuler, recherche de stimulation, irresponsabilité ou faible sentiment de culpabilité.</p>
 <p>Elle ne correspond cependant pas simplement à « quelqu'un qui ne ressent aucune émotion ».</p>
 <p>La psychopathie n'est pas non plus synonyme de meurtrier ou de personne forcément dangereuse.</p>
 <p>Les caractéristiques psychopathiques peuvent varier en intensité et doivent être évaluées à partir d'un ensemble d'informations plutôt qu'à partir d'un comportement isolé.</p>
-<h3 id="exemple_2">💬 EXEMPLE</h3>
+<h3 id="exemple_2">EXEMPLE</h3>
 <p>Une personne peut présenter certains traits associés à la psychopathie, comme une tendance à manipuler ou une faible empathie, sans nécessairement commettre des actes criminels graves.</p>
-<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<h3 id="a-retenir_2">À RETENIR</h3>
 <p>La psychopathie est un concept complexe qui ne doit pas être confondu avec la violence, le meurtre ou l'absence totale d'émotions.</p>
 <hr />
-<h2 id="54-le-narcissisme" class="entry-title hc-4">🧠 5.4 LE NARCISSISME</h2>
-<h3 id="definition_3">🔎 DÉFINITION</h3>
+<h2 id="54-le-narcissisme" class="entry-title hc-4">5.4 LE NARCISSISME</h2>
+<h3 id="definition_3">DÉFINITION</h3>
 <p>Le narcissisme désigne un ensemble de caractéristiques liées notamment à l'importance accordée à soi-même, au besoin de reconnaissance et à la perception de sa propre valeur.</p>
-<h3 id="explication_3">🧠 EXPLICATION</h3>
+<h3 id="explication_3">EXPLICATION</h3>
 <p>Certaines caractéristiques narcissiques peuvent exister chez de nombreuses personnes sans constituer un trouble psychologique.</p>
 <p>Le trouble de la personnalité narcissique correspond à une organisation plus persistante et plus importante, associée notamment à un besoin marqué d'admiration, à un sentiment de supériorité ou d'importance et à certaines difficultés relationnelles.</p>
 <p>Le narcissisme ne signifie pas automatiquement agressivité ou criminalité.</p>
 <p>Dans certaines situations, cependant, une forte sensibilité à la critique ou au sentiment d'humiliation peut contribuer à des réactions émotionnelles importantes.</p>
-<h3 id="exemple_3">💬 EXEMPLE</h3>
+<h3 id="exemple_3">EXEMPLE</h3>
 <p>Une personne ayant des traits narcissiques peut vivre une critique comme une attaque importante contre son image et réagir de manière particulièrement défensive.</p>
-<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<h3 id="a-retenir_3">À RETENIR</h3>
 <p>Le narcissisme existe sur un continuum et ne permet pas, à lui seul, de prédire un comportement criminel.</p>
 <hr />
-<h2 id="55-lempathie" class="entry-title hc-5">🧠 5.5 L'EMPATHIE</h2>
-<h3 id="definition_4">🔎 DÉFINITION</h3>
+<h2 id="55-lempathie" class="entry-title hc-5">5.5 L'EMPATHIE</h2>
+<h3 id="definition_4">DÉFINITION</h3>
 <p>L'empathie désigne la capacité à comprendre ou à percevoir les émotions, pensées ou expériences d'une autre personne.</p>
-<h3 id="explication_4">🧠 EXPLICATION</h3>
+<h3 id="explication_4">EXPLICATION</h3>
 <p>L'empathie comprend notamment une dimension cognitive et une dimension affective.</p>
 <p>L'empathie cognitive correspond à la capacité à comprendre ce qu'une autre personne peut penser ou ressentir. L'empathie affective concerne davantage la capacité à ressentir ou partager, dans une certaine mesure, l'état émotionnel d'autrui.</p>
 <p>Ces deux dimensions ne sont pas toujours présentes au même niveau.</p>
 <p>Une personne peut comprendre parfaitement ce qu'une autre ressent sans ressentir elle-même la même émotion.</p>
 <p>Certaines difficultés d'empathie peuvent être observées dans différents fonctionnements psychologiques, mais elles ne suffisent pas à expliquer la criminalité.</p>
-<h3 id="exemple_4">💬 EXEMPLE</h3>
+<h3 id="exemple_4">EXEMPLE</h3>
 <p>Une personne peut comprendre qu'un individu est triste et savoir pourquoi il l'est, tout en ressentant personnellement très peu d'émotion face à cette situation.</p>
-<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<h3 id="a-retenir_4">À RETENIR</h3>
 <p>L'empathie possède plusieurs dimensions et son niveau ne permet pas, à lui seul, de déterminer si une personne sera criminelle.</p>
 <hr />
-<h2 id="56-la-culpabilite" class="entry-title hc-1">🧠 5.6 LA CULPABILITÉ</h2>
-<h3 id="definition_5">🔎 DÉFINITION</h3>
+<h2 id="56-la-culpabilite" class="entry-title hc-1">5.6 LA CULPABILITÉ</h2>
+<h3 id="definition_5">DÉFINITION</h3>
 <p>La culpabilité est une émotion ou un état psychologique pouvant apparaître lorsqu'une personne considère avoir transgressé une règle, causé un préjudice ou agi contrairement à ses valeurs.</p>
-<h3 id="explication_5">🧠 EXPLICATION</h3>
+<h3 id="explication_5">EXPLICATION</h3>
 <p>La culpabilité peut jouer un rôle dans la régulation du comportement.</p>
 <p>Lorsqu'une personne estime avoir causé du tort, la culpabilité peut favoriser la reconnaissance de la responsabilité, les excuses ou la volonté de réparer.</p>
 <p>Cependant, la culpabilité n'est pas identique chez tout le monde. Elle peut être influencée par les valeurs personnelles, l'éducation, les expériences et le contexte.</p>
 <p>Une personne qui ne manifeste pas de culpabilité visible n'est pas nécessairement dépourvue de conscience morale. Les émotions internes ne sont pas toujours facilement observables.</p>
-<h3 id="exemple_5">💬 EXEMPLE</h3>
+<h3 id="exemple_5">EXEMPLE</h3>
 <p>Après avoir blessé quelqu'un verbalement, une personne peut ressentir de la culpabilité et chercher ensuite à présenter des excuses ou à réparer la situation.</p>
-<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<h3 id="a-retenir_5">À RETENIR</h3>
 <p>La culpabilité peut contribuer à réguler les comportements, mais son expression varie fortement d'une personne à l'autre.</p>
 <hr />
-<h2 id="57-le-remords" class="entry-title hc-2">🧠 5.7 LE REMORDS</h2>
-<h3 id="definition_6">🔎 DÉFINITION</h3>
+<h2 id="57-le-remords" class="entry-title hc-2">5.7 LE REMORDS</h2>
+<h3 id="definition_6">DÉFINITION</h3>
 <p>Le remords correspond à un état émotionnel marqué par la conscience d'avoir commis une action considérée comme mauvaise ou préjudiciable, accompagné d'un sentiment de regret.</p>
-<h3 id="explication_6">🧠 EXPLICATION</h3>
+<h3 id="explication_6">EXPLICATION</h3>
 <p>Le remords implique généralement une évaluation négative de son propre comportement.</p>
 <p>Il peut conduire une personne à regretter son acte, à reconnaître le préjudice causé ou à chercher à réparer certaines conséquences.</p>
 <p>Le remords ne se manifeste pas nécessairement de manière visible. Certaines personnes peuvent ressentir fortement du regret sans l'exprimer de manière évidente.</p>
 <p>À l'inverse, une expression émotionnelle importante ne permet pas nécessairement de déterminer avec certitude la profondeur du remords.</p>
-<h3 id="exemple_6">💬 EXEMPLE</h3>
+<h3 id="exemple_6">EXEMPLE</h3>
 <p>Une personne peut regretter profondément une action commise plusieurs années auparavant et ressentir encore de la culpabilité lorsqu'elle y repense.</p>
-<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<h3 id="a-retenir_6">À RETENIR</h3>
 <p>L'absence apparente de remords ne permet pas, à elle seule, de conclure qu'une personne est dépourvue de conscience morale ou qu'elle est dangereuse.</p>
 <hr />
-<h2 id="58-la-manipulation" class="entry-title hc-3">🧠 5.8 LA MANIPULATION</h2>
-<h3 id="definition_7">🔎 DÉFINITION</h3>
+<h2 id="58-la-manipulation" class="entry-title hc-3">5.8 LA MANIPULATION</h2>
+<h3 id="definition_7">DÉFINITION</h3>
 <p>La manipulation désigne l'utilisation de stratégies visant à influencer les pensées, les émotions ou les comportements d'une autre personne, parfois dans son intérêt propre et au détriment de celle-ci.</p>
-<h3 id="explication_7">🧠 EXPLICATION</h3>
+<h3 id="explication_7">EXPLICATION</h3>
 <p>La manipulation peut prendre de nombreuses formes.</p>
 <p>Elle peut impliquer la tromperie, la culpabilisation, la flatterie excessive, la pression émotionnelle ou la présentation volontairement biaisée d'une situation.</p>
 <p>Il est important de distinguer influence et manipulation. Toute influence sociale n'est pas manipulatrice.</p>
 <p>La manipulation peut également être observée dans des contextes très différents et n'est pas exclusivement liée à la criminalité ou à la psychopathie.</p>
-<h3 id="exemple_7">💬 EXEMPLE</h3>
+<h3 id="exemple_7">EXEMPLE</h3>
 <p>Une personne peut volontairement faire culpabiliser quelqu'un afin de l'amener à accepter une demande qu'il aurait normalement refusée.</p>
-<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<h3 id="a-retenir_7">À RETENIR</h3>
 <p>La manipulation implique une forme d'influence stratégique, mais elle n'est pas propre aux personnes criminelles ou psychopathiques.</p>
 <hr />
-<h2 id="59-le-mensonge" class="entry-title hc-4">🧠 5.9 LE MENSONGE</h2>
-<h3 id="definition_8">🔎 DÉFINITION</h3>
+<h2 id="59-le-mensonge" class="entry-title hc-4">5.9 LE MENSONGE</h2>
+<h3 id="definition_8">DÉFINITION</h3>
 <p>Le mensonge consiste à communiquer volontairement une information que l'on sait fausse ou trompeuse, généralement dans le but d'influencer la perception ou le comportement d'une autre personne.</p>
-<h3 id="explication_8">🧠 EXPLICATION</h3>
+<h3 id="explication_8">EXPLICATION</h3>
 <p>Les individus peuvent mentir pour de nombreuses raisons : éviter une conséquence, protéger quelqu'un, obtenir un avantage, préserver leur image ou dissimuler une information.</p>
 <p>Le mensonge peut être plus ou moins complexe et plus ou moins intentionnel.</p>
 <p>Il est également important de distinguer mensonge et erreur. Une personne qui affirme quelque chose de faux parce qu'elle croit sincèrement que c'est vrai ne ment pas nécessairement.</p>
 <p>Les comportements non verbaux, comme éviter le regard ou paraître nerveux, ne permettent pas à eux seuls d'identifier de manière fiable un mensonge.</p>
-<h3 id="exemple_8">💬 EXEMPLE</h3>
+<h3 id="exemple_8">EXEMPLE</h3>
 <p>Une personne peut donner volontairement une fausse explication pour éviter de révéler qu'elle a oublié une tâche importante.</p>
-<h3 id="a-retenir_8">📌 À RETENIR</h3>
+<h3 id="a-retenir_8">À RETENIR</h3>
 <p>Mentir implique généralement une intention de tromper, et aucun comportement isolé ne permet de détecter de manière certaine un mensonge.</p>
 <hr />
-<h2 id="510-la-regulation-emotionnelle" class="entry-title hc-5">🧠 5.10 LA RÉGULATION ÉMOTIONNELLE</h2>
-<h3 id="definition_9">🔎 DÉFINITION</h3>
+<h2 id="510-la-regulation-emotionnelle" class="entry-title hc-5">5.10 LA RÉGULATION ÉMOTIONNELLE</h2>
+<h3 id="definition_9">DÉFINITION</h3>
 <p>La régulation émotionnelle désigne l'ensemble des processus permettant à une personne de reconnaître, moduler et gérer ses émotions afin d'adapter son comportement à une situation.</p>
-<h3 id="explication_9">🧠 EXPLICATION</h3>
+<h3 id="explication_9">EXPLICATION</h3>
 <p>Réguler une émotion ne signifie pas supprimer ou empêcher toutes les émotions.</p>
 <p>Il s'agit plutôt de pouvoir modifier la manière dont une émotion est exprimée ou gérée.</p>
 <p>Une personne peut ressentir une colère très importante tout en réussissant à éviter une réaction agressive immédiate. À l'inverse, certaines difficultés de régulation peuvent favoriser des réactions rapides ou disproportionnées dans certaines situations.</p>
 <p>La régulation émotionnelle dépend notamment de l'expérience, des capacités cognitives, du contexte et des stratégies utilisées pour faire face aux émotions.</p>
-<h3 id="exemple_9">💬 EXEMPLE</h3>
+<h3 id="exemple_9">EXEMPLE</h3>
 <p>Une personne très en colère peut ressentir une forte envie de réagir immédiatement, mais prendre du recul avant d'agir afin d'éviter une conséquence qu'elle pourrait regretter.</p>
-<h3 id="a-retenir_9">📌 À RETENIR</h3>
+<h3 id="a-retenir_9">À RETENIR</h3>
 <p>La régulation émotionnelle permet de gérer l'intensité et l'expression des émotions sans nécessiter leur suppression.</p>
 <hr />
-<h1 id="en-pratique">🧩 EN PRATIQUE</h1>
+<h1 id="en-pratique">EN PRATIQUE</h1>
 <p>La personnalité peut contribuer à comprendre certains comportements, mais elle ne constitue jamais une explication unique de la criminalité.</p>
 <p>Des caractéristiques comme l'impulsivité, une faible empathie, certaines difficultés de régulation émotionnelle ou certains traits antisociaux peuvent être associés à différents comportements dans certaines circonstances. Leur présence ne permet cependant pas de prédire automatiquement qu'une personne commettra une infraction.</p>
 <p>Il est également essentiel de distinguer <strong>trait de personnalité, trouble de la personnalité et comportement criminel</strong>. Ces notions ne sont pas équivalentes.</p>
@@ -244,8 +259,35 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Psychologie, justice et criminologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-l-influence-des-groupes/"><span class="similar-icon">⚖️</span>L'influence des groupes</a><a class="similar-item" href="/chapitre/justice-la-psychologie-des-victimes/"><span class="similar-icon">⚖️</span>La psychologie des victimes</a><a class="similar-item" href="/chapitre/justice-le-profilage-et-l-analyse-criminelle/"><span class="similar-icon">⚖️</span>Le profilage et l'analyse criminelle</a></div>
+      <h2>Autres chapitres de « Psychologie, justice et criminologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-l-influence-des-groupes/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>L'influence des groupes</a><a class="similar-item" href="/chapitre/justice-la-psychologie-des-victimes/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>La psychologie des victimes</a><a class="similar-item" href="/chapitre/justice-le-profilage-et-l-analyse-criminelle/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>Le profilage et l'analyse criminelle</a></div>
     </div>
     <a class="back-link" href="/categorie/justice/">← Retour à « Psychologie, justice et criminologie »</a>
   </div>
@@ -331,23 +373,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -365,7 +409,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -545,9 +589,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -556,10 +602,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -666,7 +712,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -706,8 +752,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -738,7 +784,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -793,7 +839,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -817,17 +863,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -869,7 +915,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

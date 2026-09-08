@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#121-le-trouble-dinsomnie">🧠 12.1 Le trouble d'insomnie</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#consequences-possibles">Conséquences possibles</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#122-le-trouble-dhypersomnolence">🧠 12.2 Le trouble d'hypersomnolence</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#123-la-narcolepsie">🧠 12.3 La narcolepsie</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#la-cataplexie">La cataplexie</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#124-la-narcolepsie-de-type-1">🧠 12.4 La narcolepsie de type 1</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#125-la-narcolepsie-de-type-2">🧠 12.5 La narcolepsie de type 2</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#126-les-troubles-respiratoires-lies-au-sommeil">🧠 12.6 Les troubles respiratoires liés au sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#principaux-exemples">Principaux exemples</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#127-lapnee-obstructive-du-sommeil">🧠 12.7 L'apnée obstructive du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#consequences-possibles_1">Conséquences possibles</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#128-lapnee-centrale-du-sommeil">🧠 12.8 L'apnée centrale du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#129-les-troubles-du-rythme-circadien-veille-sommeil">🧠 12.9 Les troubles du rythme circadien veille-sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#principales-formes">Principales formes</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1210-le-trouble-du-rythme-veille-sommeil-retarde">🧠 12.10 Le trouble du rythme veille-sommeil retardé</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1211-le-trouble-du-rythme-veille-sommeil-avance">🧠 12.11 Le trouble du rythme veille-sommeil avancé</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1212-le-trouble-du-travail-poste">🧠 12.12 Le trouble du travail posté</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1213-le-trouble-lie-au-decalage-horaire">🧠 12.13 Le trouble lié au décalage horaire</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations_11">Manifestations</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1214-les-parasomnies">🧠 12.14 Les parasomnies</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1215-le-somnambulisme">🧠 12.15 Le somnambulisme</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_12">Manifestations</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1216-les-terreurs-nocturnes">🧠 12.16 Les terreurs nocturnes</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations_13">Manifestations</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1217-le-trouble-des-cauchemars">🧠 12.17 Le trouble des cauchemars</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#manifestations_14">Manifestations</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1218-le-trouble-du-comportement-en-sommeil-paradoxal">🧠 12.18 Le trouble du comportement en sommeil paradoxal</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#manifestations_15">Manifestations</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1219-la-paralysie-du-sommeil">🧠 12.19 La paralysie du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#manifestations_16">Manifestations</a></li><li><a href="#duree">Durée</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1220-les-hallucinations-liees-au-sommeil">🧠 12.20 Les hallucinations liées au sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#manifestations_17">Manifestations</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1221-le-syndrome-des-jambes-sans-repos">🧠 12.21 Le syndrome des jambes sans repos</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#manifestations_18">Manifestations</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1222-le-trouble-des-mouvements-periodiques-des-membres">🧠 12.22 Le trouble des mouvements périodiques des membres</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations_19">Manifestations</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1223-le-bruxisme-du-sommeil">🧠 12.23 Le bruxisme du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations_20">Manifestations</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1224-lenuresie-liee-au-sommeil">🧠 12.24 L'énurésie liée au sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#manifestations_21">Manifestations</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1225-les-troubles-du-sommeil-lies-a-une-substance-ou-a-un-medicament">🧠 12.25 Les troubles du sommeil liés à une substance ou à un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#manifestations_22">Manifestations</a></li><li><a href="#exemples-de-substances-pouvant-influencer-le-sommeil">Exemples de substances pouvant influencer le sommeil</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1226-les-troubles-du-sommeil-dus-a-une-autre-affection-medicale">🧠 12.26 Les troubles du sommeil dus à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#exemples_1">Exemples</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1227-la-dette-de-sommeil">🧠 12.27 La dette de sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#manifestations_23">Manifestations</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1228-la-privation-de-sommeil">🧠 12.28 La privation de sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#consequences-possibles_2">Conséquences possibles</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1229-le-sommeil-insuffisant-comportemental">🧠 12.29 Le sommeil insuffisant comportemental</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#exemples_2">Exemples</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1230-les-consequences-psychologiques-des-troubles-du-sommeil">🧠 12.30 Les conséquences psychologiques des troubles du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#consequences-possibles_3">Conséquences possibles</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#121-le-trouble-dinsomnie">12.1 Le trouble d'insomnie</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#consequences-possibles">Conséquences possibles</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#122-le-trouble-dhypersomnolence">12.2 Le trouble d'hypersomnolence</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#123-la-narcolepsie">12.3 La narcolepsie</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#la-cataplexie">La cataplexie</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#124-la-narcolepsie-de-type-1">12.4 La narcolepsie de type 1</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#125-la-narcolepsie-de-type-2">12.5 La narcolepsie de type 2</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#126-les-troubles-respiratoires-lies-au-sommeil">12.6 Les troubles respiratoires liés au sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#principaux-exemples">Principaux exemples</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#127-lapnee-obstructive-du-sommeil">12.7 L'apnée obstructive du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#consequences-possibles_1">Conséquences possibles</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#128-lapnee-centrale-du-sommeil">12.8 L'apnée centrale du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#129-les-troubles-du-rythme-circadien-veille-sommeil">12.9 Les troubles du rythme circadien veille-sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#principales-formes">Principales formes</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1210-le-trouble-du-rythme-veille-sommeil-retarde">12.10 Le trouble du rythme veille-sommeil retardé</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1211-le-trouble-du-rythme-veille-sommeil-avance">12.11 Le trouble du rythme veille-sommeil avancé</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1212-le-trouble-du-travail-poste">12.12 Le trouble du travail posté</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1213-le-trouble-lie-au-decalage-horaire">12.13 Le trouble lié au décalage horaire</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations_11">Manifestations</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1214-les-parasomnies">12.14 Les parasomnies</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1215-le-somnambulisme">12.15 Le somnambulisme</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_12">Manifestations</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1216-les-terreurs-nocturnes">12.16 Les terreurs nocturnes</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations_13">Manifestations</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1217-le-trouble-des-cauchemars">12.17 Le trouble des cauchemars</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#manifestations_14">Manifestations</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1218-le-trouble-du-comportement-en-sommeil-paradoxal">12.18 Le trouble du comportement en sommeil paradoxal</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#manifestations_15">Manifestations</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1219-la-paralysie-du-sommeil">12.19 La paralysie du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#manifestations_16">Manifestations</a></li><li><a href="#duree">Durée</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1220-les-hallucinations-liees-au-sommeil">12.20 Les hallucinations liées au sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#manifestations_17">Manifestations</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1221-le-syndrome-des-jambes-sans-repos">12.21 Le syndrome des jambes sans repos</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#manifestations_18">Manifestations</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1222-le-trouble-des-mouvements-periodiques-des-membres">12.22 Le trouble des mouvements périodiques des membres</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations_19">Manifestations</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1223-le-bruxisme-du-sommeil">12.23 Le bruxisme du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations_20">Manifestations</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1224-lenuresie-liee-au-sommeil">12.24 L'énurésie liée au sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#manifestations_21">Manifestations</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1225-les-troubles-du-sommeil-lies-a-une-substance-ou-a-un-medicament">12.25 Les troubles du sommeil liés à une substance ou à un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#manifestations_22">Manifestations</a></li><li><a href="#exemples-de-substances-pouvant-influencer-le-sommeil">Exemples de substances pouvant influencer le sommeil</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1226-les-troubles-du-sommeil-dus-a-une-autre-affection-medicale">12.26 Les troubles du sommeil dus à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#exemples_1">Exemples</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1227-la-dette-de-sommeil">12.27 La dette de sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#manifestations_23">Manifestations</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1228-la-privation-de-sommeil">12.28 La privation de sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#consequences-possibles_2">Conséquences possibles</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1229-le-sommeil-insuffisant-comportemental">12.29 Le sommeil insuffisant comportemental</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#exemples_2">Exemples</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1230-les-consequences-psychologiques-des-troubles-du-sommeil">12.30 Les conséquences psychologiques des troubles du sommeil</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#consequences-possibles_3">Conséquences possibles</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Partie 12 — Troubles du sommeil',
         category: 'Troubles psychologiques',
-        icon: '🩺'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/troubles/">Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Partie 12 — Troubles du sommeil</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,7 +113,7 @@
     </svg>
     </div>
     <div class="article-body">
-      <h1 id="121-le-trouble-dinsomnie" class="entry-title hc-1">🧠 12.1 Le trouble d'insomnie</h1>
+      <h1 id="121-le-trouble-dinsomnie" class="entry-title hc-1">12.1 Le trouble d'insomnie</h1>
 <h2 id="definition">Définition</h2>
 <p>Le <strong>trouble d'insomnie</strong> correspond à une difficulté persistante à s'endormir, à rester endormi ou à obtenir un sommeil suffisamment réparateur malgré des conditions permettant normalement de dormir.</p>
 <h2 id="manifestations">Manifestations</h2>
@@ -124,7 +139,7 @@
 <h2 id="a-retenir">À retenir</h2>
 <p>Une mauvaise nuit occasionnelle n'est pas nécessairement une insomnie. Le trouble implique une difficulté persistante ayant des conséquences sur le fonctionnement quotidien.</p>
 <hr />
-<h1 id="122-le-trouble-dhypersomnolence" class="entry-title hc-2">🧠 12.2  Le trouble d'hypersomnolence</h1>
+<h1 id="122-le-trouble-dhypersomnolence" class="entry-title hc-2">12.2  Le trouble d'hypersomnolence</h1>
 <h2 id="definition_1">Définition</h2>
 <p>Le <strong>trouble d'hypersomnolence</strong> se caractérise par une somnolence excessive pendant la journée malgré des périodes de sommeil qui peuvent être suffisamment longues.</p>
 <h2 id="manifestations_1">Manifestations</h2>
@@ -148,7 +163,7 @@
 <h2 id="a-retenir_1">À retenir</h2>
 <p>L'hypersomnolence correspond à une somnolence excessive et persistante, et pas simplement au fait d'aimer dormir longtemps.</p>
 <hr />
-<h1 id="123-la-narcolepsie" class="entry-title hc-3">🧠 12.3  La narcolepsie</h1>
+<h1 id="123-la-narcolepsie" class="entry-title hc-3">12.3  La narcolepsie</h1>
 <h2 id="definition_2">Définition</h2>
 <p>La <strong>narcolepsie</strong> est un trouble neurologique du sommeil caractérisé notamment par une somnolence diurne excessive et des épisodes incontrôlables d'endormissement.</p>
 <h2 id="manifestations_2">Manifestations</h2>
@@ -167,7 +182,7 @@
 <h2 id="a-retenir_2">À retenir</h2>
 <p>La narcolepsie est principalement un trouble neurologique du sommeil et ne doit pas être confondue avec une simple fatigue.</p>
 <hr />
-<h1 id="124-la-narcolepsie-de-type-1" class="entry-title hc-4">🧠 12.4 La narcolepsie de type 1</h1>
+<h1 id="124-la-narcolepsie-de-type-1" class="entry-title hc-4">12.4 La narcolepsie de type 1</h1>
 <h2 id="definition_3">Définition</h2>
 <p>La <strong>narcolepsie de type 1</strong> est une forme de narcolepsie généralement associée à la cataplexie et à une diminution de l'hypocrétine dans certaines situations.</p>
 <h2 id="manifestations_3">Manifestations</h2>
@@ -182,7 +197,7 @@
 <h2 id="a-retenir_3">À retenir</h2>
 <p>La présence de cataplexie constitue une caractéristique importante de cette forme de narcolepsie.</p>
 <hr />
-<h1 id="125-la-narcolepsie-de-type-2" class="entry-title hc-5">🧠 12.5 La narcolepsie de type 2</h1>
+<h1 id="125-la-narcolepsie-de-type-2" class="entry-title hc-5">12.5 La narcolepsie de type 2</h1>
 <h2 id="definition_4">Définition</h2>
 <p>La <strong>narcolepsie de type 2</strong> correspond à une forme de narcolepsie caractérisée par une somnolence diurne excessive et des anomalies du sommeil paradoxal, généralement sans cataplexie.</p>
 <h2 id="manifestations_4">Manifestations</h2>
@@ -197,7 +212,7 @@
 <h2 id="a-retenir_4">À retenir</h2>
 <p>La principale différence avec la narcolepsie de type 1 est notamment l'absence habituelle de cataplexie.</p>
 <hr />
-<h1 id="126-les-troubles-respiratoires-lies-au-sommeil" class="entry-title hc-1">🧠 12.6 Les troubles respiratoires liés au sommeil</h1>
+<h1 id="126-les-troubles-respiratoires-lies-au-sommeil" class="entry-title hc-1">12.6 Les troubles respiratoires liés au sommeil</h1>
 <h2 id="definition_5">Définition</h2>
 <p>Les <strong>troubles respiratoires liés au sommeil</strong> regroupent plusieurs troubles dans lesquels la respiration est perturbée pendant le sommeil.</p>
 <h2 id="principaux-exemples">Principaux exemples</h2>
@@ -220,7 +235,7 @@
 <h2 id="a-retenir_5">À retenir</h2>
 <p>Les troubles respiratoires du sommeil peuvent avoir des conséquences importantes sur la santé et nécessitent parfois une évaluation médicale spécialisée.</p>
 <hr />
-<h1 id="127-lapnee-obstructive-du-sommeil" class="entry-title hc-2">🧠 12.7 L'apnée obstructive du sommeil</h1>
+<h1 id="127-lapnee-obstructive-du-sommeil" class="entry-title hc-2">12.7 L'apnée obstructive du sommeil</h1>
 <h2 id="definition_6">Définition</h2>
 <p>L'<strong>apnée obstructive du sommeil</strong> correspond à des épisodes répétés pendant lesquels les voies respiratoires supérieures se ferment ou se rétrécissent suffisamment pour perturber la respiration pendant le sommeil.</p>
 <h2 id="manifestations_6">Manifestations</h2>
@@ -237,7 +252,7 @@
 <h2 id="a-retenir_6">À retenir</h2>
 <p>L'apnée obstructive est un trouble médical du sommeil et ne doit pas être considérée comme une simple mauvaise qualité de sommeil.</p>
 <hr />
-<h1 id="128-lapnee-centrale-du-sommeil" class="entry-title hc-3">🧠 12.8 L'apnée centrale du sommeil</h1>
+<h1 id="128-lapnee-centrale-du-sommeil" class="entry-title hc-3">12.8 L'apnée centrale du sommeil</h1>
 <h2 id="definition_7">Définition</h2>
 <p>L'<strong>apnée centrale du sommeil</strong> correspond à des épisodes pendant lesquels le cerveau ne génère temporairement pas correctement le signal nécessaire à la respiration.</p>
 <h2 id="manifestations_7">Manifestations</h2>
@@ -253,7 +268,7 @@
 <h2 id="a-retenir_7">À retenir</h2>
 <p>L'apnée centrale nécessite une évaluation médicale afin d'en rechercher la cause.</p>
 <hr />
-<h1 id="129-les-troubles-du-rythme-circadien-veille-sommeil" class="entry-title hc-4">🧠 12.9 Les troubles du rythme circadien veille-sommeil</h1>
+<h1 id="129-les-troubles-du-rythme-circadien-veille-sommeil" class="entry-title hc-4">12.9 Les troubles du rythme circadien veille-sommeil</h1>
 <h2 id="definition_8">Définition</h2>
 <p>Les <strong>troubles du rythme circadien veille-sommeil</strong> apparaissent lorsque l'horloge biologique de la personne est désynchronisée par rapport aux horaires souhaités ou nécessaires.</p>
 <h2 id="principales-formes">Principales formes</h2>
@@ -269,7 +284,7 @@
 <h2 id="a-retenir_8">À retenir</h2>
 <p>Le problème principal est le décalage entre le rythme biologique de la personne et les horaires auxquels elle doit dormir ou être éveillée.</p>
 <hr />
-<h1 id="1210-le-trouble-du-rythme-veille-sommeil-retarde" class="entry-title hc-5">🧠 12.10 Le trouble du rythme veille-sommeil retardé</h1>
+<h1 id="1210-le-trouble-du-rythme-veille-sommeil-retarde" class="entry-title hc-5">12.10 Le trouble du rythme veille-sommeil retardé</h1>
 <h2 id="definition_9">Définition</h2>
 <p>La personne s'endort et se réveille beaucoup plus tard que ce qui est habituellement attendu.</p>
 <h2 id="manifestations_8">Manifestations</h2>
@@ -283,7 +298,7 @@
 <h2 id="a-retenir_9">À retenir</h2>
 <p>Lorsque la personne peut suivre son propre rythme, son sommeil peut parfois être de durée et de qualité normales.</p>
 <hr />
-<h1 id="1211-le-trouble-du-rythme-veille-sommeil-avance" class="entry-title hc-1">🧠 12.11 Le trouble du rythme veille-sommeil avancé</h1>
+<h1 id="1211-le-trouble-du-rythme-veille-sommeil-avance" class="entry-title hc-1">12.11 Le trouble du rythme veille-sommeil avancé</h1>
 <h2 id="definition_10">Définition</h2>
 <p>Le <strong>trouble du rythme veille-sommeil avancé</strong> correspond à un rythme biologique décalé vers des horaires beaucoup plus précoces.</p>
 <h2 id="manifestations_9">Manifestations</h2>
@@ -297,7 +312,7 @@
 <h2 id="a-retenir_10">À retenir</h2>
 <p>Le problème vient principalement d'un rythme biologique avancé par rapport aux horaires sociaux habituels.</p>
 <hr />
-<h1 id="1212-le-trouble-du-travail-poste" class="entry-title hc-2">🧠 12.12 Le trouble du travail posté</h1>
+<h1 id="1212-le-trouble-du-travail-poste" class="entry-title hc-2">12.12 Le trouble du travail posté</h1>
 <h2 id="definition_11">Définition</h2>
 <p>Le <strong>trouble lié au travail posté</strong> peut apparaître lorsque les horaires professionnels perturbent fortement le rythme veille-sommeil.</p>
 <h2 id="manifestations_10">Manifestations</h2>
@@ -312,7 +327,7 @@
 <h2 id="a-retenir_11">À retenir</h2>
 <p>Les horaires nocturnes ou alternants peuvent perturber fortement l'horloge biologique.</p>
 <hr />
-<h1 id="1213-le-trouble-lie-au-decalage-horaire" class="entry-title hc-3">🧠 12.13 Le trouble lié au décalage horaire</h1>
+<h1 id="1213-le-trouble-lie-au-decalage-horaire" class="entry-title hc-3">12.13 Le trouble lié au décalage horaire</h1>
 <h2 id="definition_12">Définition</h2>
 <p>Le <strong>trouble lié au décalage horaire</strong>, ou jet lag, apparaît lorsque le rythme circadien est temporairement désynchronisé après un déplacement rapide entre plusieurs fuseaux horaires.</p>
 <h2 id="manifestations_11">Manifestations</h2>
@@ -327,7 +342,7 @@
 <h2 id="a-retenir_12">À retenir</h2>
 <p>Le décalage horaire est généralement temporaire et s'améliore lorsque l'organisme s'adapte au nouvel horaire.</p>
 <hr />
-<h1 id="1214-les-parasomnies" class="entry-title hc-4">🧠 12.14 Les parasomnies</h1>
+<h1 id="1214-les-parasomnies" class="entry-title hc-4">12.14 Les parasomnies</h1>
 <h2 id="definition_13">Définition</h2>
 <p>Les <strong>parasomnies</strong> regroupent des comportements ou expériences inhabituels qui surviennent pendant le sommeil ou lors des transitions entre sommeil et éveil.</p>
 <h2 id="exemples">Exemples</h2>
@@ -340,7 +355,7 @@
 <h2 id="a-retenir_13">À retenir</h2>
 <p>Une parasomnie ne correspond pas nécessairement à un trouble psychologique. Elle concerne principalement des phénomènes liés au sommeil.</p>
 <hr />
-<h1 id="1215-le-somnambulisme" class="entry-title hc-5">🧠 12.15 Le somnambulisme</h1>
+<h1 id="1215-le-somnambulisme" class="entry-title hc-5">12.15 Le somnambulisme</h1>
 <h2 id="definition_14">Définition</h2>
 <p>Le <strong>somnambulisme</strong> correspond à des épisodes durant lesquels une personne se lève ou réalise certaines activités alors qu'elle est encore dans un état de sommeil.</p>
 <h2 id="manifestations_12">Manifestations</h2>
@@ -354,7 +369,7 @@
 </ul>
 <h2 id="a-retenir_14">À retenir</h2>
 <p>Le somnambulisme survient principalement pendant certaines phases du sommeil et est particulièrement fréquent durant l'enfance.</p>
-<h1 id="1216-les-terreurs-nocturnes" class="entry-title hc-1">🧠 12.16 Les terreurs nocturnes</h1>
+<h1 id="1216-les-terreurs-nocturnes" class="entry-title hc-1">12.16 Les terreurs nocturnes</h1>
 <h2 id="definition_15">Définition</h2>
 <p>Les <strong>terreurs nocturnes</strong> sont des épisodes de réveil partiel accompagnés d'une forte réaction de peur.</p>
 <h2 id="manifestations_13">Manifestations</h2>
@@ -370,7 +385,7 @@
 <h2 id="a-retenir_15">À retenir</h2>
 <p>Les terreurs nocturnes sont différentes des cauchemars classiques.</p>
 <hr />
-<h1 id="1217-le-trouble-des-cauchemars" class="entry-title hc-2">🧠 12.17  Le trouble des cauchemars</h1>
+<h1 id="1217-le-trouble-des-cauchemars" class="entry-title hc-2">12.17  Le trouble des cauchemars</h1>
 <h2 id="definition_16">Définition</h2>
 <p>Le <strong>trouble des cauchemars</strong> implique des rêves répétés, particulièrement intenses et généralement désagréables, pouvant provoquer un réveil et une détresse importante.</p>
 <h2 id="manifestations_14">Manifestations</h2>
@@ -385,7 +400,7 @@
 <h2 id="a-retenir_16">À retenir</h2>
 <p>Faire occasionnellement un cauchemar est normal. Le trouble implique une fréquence ou une intensité suffisamment importante pour provoquer une détresse ou une perturbation du fonctionnement.</p>
 <hr />
-<h1 id="1218-le-trouble-du-comportement-en-sommeil-paradoxal" class="entry-title hc-3">🧠 12.18 Le trouble du comportement en sommeil paradoxal</h1>
+<h1 id="1218-le-trouble-du-comportement-en-sommeil-paradoxal" class="entry-title hc-3">12.18 Le trouble du comportement en sommeil paradoxal</h1>
 <h2 id="definition_17">Définition</h2>
 <p>Le <strong>trouble du comportement en sommeil paradoxal</strong> correspond à une perte de l'atonie musculaire normalement présente pendant le sommeil paradoxal.</p>
 <p>La personne peut alors réaliser physiquement certains éléments de ses rêves.</p>
@@ -401,7 +416,7 @@
 <h2 id="a-retenir_17">À retenir</h2>
 <p>Ce trouble est principalement neurologique et peut être associé à certaines maladies neurodégénératives.</p>
 <hr />
-<h1 id="1219-la-paralysie-du-sommeil" class="entry-title hc-4">🧠 12.19 La paralysie du sommeil</h1>
+<h1 id="1219-la-paralysie-du-sommeil" class="entry-title hc-4">12.19 La paralysie du sommeil</h1>
 <h2 id="definition_18">Définition</h2>
 <p>La <strong>paralysie du sommeil</strong> correspond à une incapacité temporaire à bouger ou à parler lors de l'endormissement ou du réveil.</p>
 <h2 id="manifestations_16">Manifestations</h2>
@@ -418,7 +433,7 @@
 <h2 id="a-retenir_18">À retenir</h2>
 <p>La paralysie du sommeil peut être très impressionnante mais n'est généralement pas dangereuse en elle-même.</p>
 <hr />
-<h1 id="1220-les-hallucinations-liees-au-sommeil" class="entry-title hc-5">🧠 12.20 Les hallucinations liées au sommeil</h1>
+<h1 id="1220-les-hallucinations-liees-au-sommeil" class="entry-title hc-5">12.20 Les hallucinations liées au sommeil</h1>
 <h2 id="definition_19">Définition</h2>
 <p>Les <strong>hallucinations hypnagogiques</strong> apparaissent principalement lors de l'endormissement.</p>
 <p>Les <strong>hallucinations hypnopompiques</strong> apparaissent principalement lors du réveil.</p>
@@ -433,7 +448,7 @@
 <h2 id="a-retenir_19">À retenir</h2>
 <p>Ces expériences peuvent survenir chez des personnes ne présentant aucun trouble psychotique.</p>
 <hr />
-<h1 id="1221-le-syndrome-des-jambes-sans-repos" class="entry-title hc-1">🧠 12.21 Le syndrome des jambes sans repos</h1>
+<h1 id="1221-le-syndrome-des-jambes-sans-repos" class="entry-title hc-1">12.21 Le syndrome des jambes sans repos</h1>
 <h2 id="definition_20">Définition</h2>
 <p>Le <strong>syndrome des jambes sans repos</strong> est un trouble neurologique caractérisé par un besoin difficilement contrôlable de bouger les jambes, souvent accompagné de sensations désagréables.</p>
 <h2 id="manifestations_18">Manifestations</h2>
@@ -456,7 +471,7 @@
 <h2 id="a-retenir_20">À retenir</h2>
 <p>Le syndrome des jambes sans repos est principalement un trouble neurologique et ne doit pas être confondu avec une simple agitation.</p>
 <hr />
-<h1 id="1222-le-trouble-des-mouvements-periodiques-des-membres" class="entry-title hc-2">🧠 12.22 Le trouble des mouvements périodiques des membres</h1>
+<h1 id="1222-le-trouble-des-mouvements-periodiques-des-membres" class="entry-title hc-2">12.22 Le trouble des mouvements périodiques des membres</h1>
 <h2 id="definition_21">Définition</h2>
 <p>Le <strong>trouble des mouvements périodiques des membres</strong> correspond à des mouvements involontaires et répétitifs des jambes ou parfois des bras pendant le sommeil.</p>
 <h2 id="manifestations_19">Manifestations</h2>
@@ -470,7 +485,7 @@
 <h2 id="a-retenir_21">À retenir</h2>
 <p>La personne peut ne pas être consciente de ses mouvements pendant la nuit.</p>
 <hr />
-<h1 id="1223-le-bruxisme-du-sommeil" class="entry-title hc-3">🧠 12.23 Le bruxisme du sommeil</h1>
+<h1 id="1223-le-bruxisme-du-sommeil" class="entry-title hc-3">12.23 Le bruxisme du sommeil</h1>
 <h2 id="definition_22">Définition</h2>
 <p>Le <strong>bruxisme du sommeil</strong> correspond au fait de serrer ou grincer involontairement des dents pendant le sommeil.</p>
 <h2 id="manifestations_20">Manifestations</h2>
@@ -485,7 +500,7 @@
 <h2 id="a-retenir_22">À retenir</h2>
 <p>Le bruxisme peut être influencé par plusieurs facteurs, notamment le stress, mais il ne s'explique pas uniquement par des causes psychologiques.</p>
 <hr />
-<h1 id="1224-lenuresie-liee-au-sommeil" class="entry-title hc-4">🧠 12.24 L'énurésie liée au sommeil</h1>
+<h1 id="1224-lenuresie-liee-au-sommeil" class="entry-title hc-4">12.24 L'énurésie liée au sommeil</h1>
 <h2 id="definition_23">Définition</h2>
 <p>L'<strong>énurésie</strong> correspond à des épisodes répétés d'émission d'urine involontaire, notamment pendant le sommeil, chez une personne ayant dépassé l'âge où cette situation est normalement attendue.</p>
 <h2 id="manifestations_21">Manifestations</h2>
@@ -498,7 +513,7 @@
 <h2 id="a-retenir_23">À retenir</h2>
 <p>L'énurésie peut avoir différentes causes et nécessite parfois une évaluation médicale.</p>
 <hr />
-<h1 id="1225-les-troubles-du-sommeil-lies-a-une-substance-ou-a-un-medicament" class="entry-title hc-5">🧠 12.25 Les troubles du sommeil liés à une substance ou à un médicament</h1>
+<h1 id="1225-les-troubles-du-sommeil-lies-a-une-substance-ou-a-un-medicament" class="entry-title hc-5">12.25 Les troubles du sommeil liés à une substance ou à un médicament</h1>
 <h2 id="definition_24">Définition</h2>
 <p>Certaines substances ou certains médicaments peuvent provoquer ou aggraver des difficultés de sommeil.</p>
 <h2 id="manifestations_22">Manifestations</h2>
@@ -522,7 +537,7 @@
 <h2 id="a-retenir_24">À retenir</h2>
 <p>Les troubles du sommeil peuvent parfois être directement liés à la consommation ou au sevrage d'une substance ou à un médicament.</p>
 <hr />
-<h1 id="1226-les-troubles-du-sommeil-dus-a-une-autre-affection-medicale" class="entry-title hc-1">🧠 12.26 Les troubles du sommeil dus à une autre affection médicale</h1>
+<h1 id="1226-les-troubles-du-sommeil-dus-a-une-autre-affection-medicale" class="entry-title hc-1">12.26 Les troubles du sommeil dus à une autre affection médicale</h1>
 <h2 id="definition_25">Définition</h2>
 <p>Certaines maladies médicales peuvent provoquer des perturbations importantes du sommeil.</p>
 <h2 id="exemples_1">Exemples</h2>
@@ -537,7 +552,7 @@
 <h2 id="a-retenir_25">À retenir</h2>
 <p>Avant de considérer une difficulté de sommeil comme purement psychologique, il peut être nécessaire de rechercher des causes médicales.</p>
 <hr />
-<h1 id="1227-la-dette-de-sommeil" class="entry-title hc-2">🧠 12.27 La dette de sommeil</h1>
+<h1 id="1227-la-dette-de-sommeil" class="entry-title hc-2">12.27 La dette de sommeil</h1>
 <h2 id="definition_26">Définition</h2>
 <p>La <strong>dette de sommeil</strong> correspond à l'accumulation d'un manque de sommeil par rapport aux besoins habituels d'une personne.</p>
 <h2 id="manifestations_23">Manifestations</h2>
@@ -553,7 +568,7 @@
 <h2 id="a-retenir_26">À retenir</h2>
 <p>La dette de sommeil est une notion liée au manque de sommeil et ne constitue pas en elle-même un diagnostic psychiatrique.</p>
 <hr />
-<h1 id="1228-la-privation-de-sommeil" class="entry-title hc-3">🧠 12.28 La privation de sommeil</h1>
+<h1 id="1228-la-privation-de-sommeil" class="entry-title hc-3">12.28 La privation de sommeil</h1>
 <h2 id="definition_27">Définition</h2>
 <p>La <strong>privation de sommeil</strong> correspond à une réduction importante de la quantité de sommeil obtenue.</p>
 <p>Elle peut être volontaire ou involontaire.</p>
@@ -570,7 +585,7 @@
 <h2 id="a-retenir_27">À retenir</h2>
 <p>La privation de sommeil peut aggraver certains problèmes psychologiques et physiques.</p>
 <hr />
-<h1 id="1229-le-sommeil-insuffisant-comportemental" class="entry-title hc-4">🧠 12.29 Le sommeil insuffisant comportemental</h1>
+<h1 id="1229-le-sommeil-insuffisant-comportemental" class="entry-title hc-4">12.29 Le sommeil insuffisant comportemental</h1>
 <h2 id="definition_28">Définition</h2>
 <p>Le <strong>sommeil insuffisant comportemental</strong> correspond notamment à une durée de sommeil insuffisante résultant d'habitudes ou de contraintes comportementales, plutôt que d'une incapacité physiologique à dormir.</p>
 <h2 id="exemples_2">Exemples</h2>
@@ -585,7 +600,7 @@
 <h2 id="a-retenir_28">À retenir</h2>
 <p>Dormir volontairement trop peu n'est pas nécessairement une insomnie.</p>
 <hr />
-<h1 id="1230-les-consequences-psychologiques-des-troubles-du-sommeil" class="entry-title hc-5">🧠 12.30 Les conséquences psychologiques des troubles du sommeil</h1>
+<h1 id="1230-les-consequences-psychologiques-des-troubles-du-sommeil" class="entry-title hc-5">12.30 Les conséquences psychologiques des troubles du sommeil</h1>
 <h2 id="definition_29">Définition</h2>
 <p>Les troubles du sommeil peuvent avoir des répercussions importantes sur le fonctionnement psychologique.</p>
 <h2 id="consequences-possibles_3">Conséquences possibles</h2>
@@ -604,8 +619,26 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-13-troubles-lies-aux-substances-et-aux-addictions/"><span class="similar-icon">🩺</span>Partie 13 — Troubles liés aux substances et aux addictions</a><a class="similar-item" href="/chapitre/troubles-partie-14-troubles-neurocognitifs/"><span class="similar-icon">🩺</span>Partie 14 — Troubles neurocognitifs</a><a class="similar-item" href="/chapitre/troubles-partie-15-troubles-disruptifs-du-controle-des-impulsions-et-des-conduites/"><span class="similar-icon">🩺</span>Partie 15 — Troubles disruptifs, du contrôle des impulsions et des conduites</a></div>
+      <h2>Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-13-troubles-lies-aux-substances-et-aux-addictions/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 13 — Troubles liés aux substances et aux addictions</a><a class="similar-item" href="/chapitre/troubles-partie-14-troubles-neurocognitifs/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 14 — Troubles neurocognitifs</a><a class="similar-item" href="/chapitre/troubles-partie-15-troubles-disruptifs-du-controle-des-impulsions-et-des-conduites/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 15 — Troubles disruptifs, du contrôle des impulsions et des conduites</a></div>
     </div>
     <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
   </div>
@@ -691,23 +724,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -725,7 +760,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -905,9 +940,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -916,10 +953,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -1026,7 +1063,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1066,8 +1103,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1098,7 +1135,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1153,7 +1190,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1177,17 +1214,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1229,7 +1266,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

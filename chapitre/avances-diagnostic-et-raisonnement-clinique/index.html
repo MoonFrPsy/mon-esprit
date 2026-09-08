@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#171-quest-ce-quun-diagnostic">🧠 17.1 Qu'est-ce qu'un diagnostic ?</a></li><li><a href="#172-les-systemes-diagnostiques">📚 17.2 Les systèmes diagnostiques</a></li><li><a href="#173-les-criteres-diagnostiques">🔎 17.3 Les critères diagnostiques</a></li><li><a href="#174-la-duree-des-symptomes">⏳ 17.4 La durée des symptômes</a></li><li><a href="#175-lintensite">📈 17.5 L'intensité</a></li><li><a href="#176-levolution-des-symptomes">🔄 17.6 L'évolution des symptômes</a></li><li><a href="#177-le-retentissement-fonctionnel">🧩 17.7 Le retentissement fonctionnel</a></li><li><a href="#178-la-souffrance-subjective">❤️ 17.8 La souffrance subjective</a></li><li><a href="#179-limportance-du-contexte">🌍 17.9 L'importance du contexte</a></li><li><a href="#1710-le-diagnostic-differentiel">🧠 17.10 Le diagnostic différentiel</a></li><li><a href="#1711-lhypothese-clinique">🔬 17.11 L'hypothèse clinique</a></li><li><a href="#1712-la-formulation-clinique">🧩 17.12 La formulation clinique</a></li><li><a href="#1713-les-facteurs-biologiques">🧬 17.13 Les facteurs biologiques</a></li><li><a href="#1714-les-facteurs-cognitifs">🧠 17.14 Les facteurs cognitifs</a></li><li><a href="#1715-les-facteurs-emotionnels">❤️ 17.15 Les facteurs émotionnels</a></li><li><a href="#1716-les-facteurs-comportementaux">🔁 17.16 Les facteurs comportementaux</a></li><li><a href="#1717-les-facteurs-de-maintien">🧩 17.17 Les facteurs de maintien</a></li><li><a href="#1718-les-facteurs-de-protection">🛡️ 17.18 Les facteurs de protection</a></li><li><a href="#1719-la-comorbidite">🧠 17.19 La comorbidité</a></li><li><a href="#1720-les-symptomes-transdiagnostiques">🔄 17.20 Les symptômes transdiagnostiques</a></li><li><a href="#1721-les-modeles-dimensionnels">📊 17.21 Les modèles dimensionnels</a></li><li><a href="#1722-les-modeles-categoriels">🗂️ 17.22 Les modèles catégoriels</a></li><li><a href="#1723-categories-et-dimensions">⚖️ 17.23 Catégories et dimensions</a></li><li><a href="#1724-le-jugement-clinique">🧠 17.24 Le jugement clinique</a></li><li><a href="#1725-les-biais-cognitifs-du-clinicien">⚠️ 17.25 Les biais cognitifs du clinicien</a></li><li><a href="#1726-le-biais-de-confirmation">🎯 17.26 Le biais de confirmation</a></li><li><a href="#1727-leffet-dancrage">⚓ 17.27 L'effet d'ancrage</a></li><li><a href="#1728-la-fermeture-prematuree">🚪 17.28 La fermeture prématurée</a></li><li><a href="#1729-le-diagnostic-comme-processus-evolutif">🧠 17.29 Le diagnostic comme processus évolutif</a></li><li><a href="#1730-le-diagnostic-et-les-donnees-scientifiques">🔬 17.30 Le diagnostic et les données scientifiques</a></li><li><a href="#1731-la-validite-diagnostique">🧠 17.31 La validité diagnostique</a></li><li><a href="#1732-lheterogeneite-clinique">🔄 17.32 L'hétérogénéité clinique</a></li><li><a href="#1733-lheterogeneite-des-mecanismes">🧩 17.33 L'hétérogénéité des mécanismes</a></li><li><a href="#1734-le-diagnostic-et-la-culture">🌍 17.34 Le diagnostic et la culture</a></li><li><a href="#1735-lage-et-le-developpement">👶 17.35 L'âge et le développement</a></li><li><a href="#1736-diagnostic-et-personnalite">🧠 17.36 Diagnostic et personnalité</a></li><li><a href="#1737-diagnostic-et-environnement">❤️ 17.37 Diagnostic et environnement</a></li><li><a href="#1738-diagnostic-et-prise-en-charge">🩺 17.38 Diagnostic et prise en charge</a></li><li><a href="#1739-les-limites-du-diagnostic">⚠️ 17.39 Les limites du diagnostic</a></li><li><a href="#1740-pourquoi-etudier-le-diagnostic-et-le-raisonnement-clinique">🔬 17.40 Pourquoi étudier le diagnostic et le raisonnement clinique ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#171-quest-ce-quun-diagnostic">17.1 Qu'est-ce qu'un diagnostic ?</a></li><li><a href="#172-les-systemes-diagnostiques">17.2 Les systèmes diagnostiques</a></li><li><a href="#173-les-criteres-diagnostiques">17.3 Les critères diagnostiques</a></li><li><a href="#174-la-duree-des-symptomes">17.4 La durée des symptômes</a></li><li><a href="#175-lintensite">17.5 L'intensité</a></li><li><a href="#176-levolution-des-symptomes">17.6 L'évolution des symptômes</a></li><li><a href="#177-le-retentissement-fonctionnel">17.7 Le retentissement fonctionnel</a></li><li><a href="#178-la-souffrance-subjective">17.8 La souffrance subjective</a></li><li><a href="#179-limportance-du-contexte">17.9 L'importance du contexte</a></li><li><a href="#1710-le-diagnostic-differentiel">17.10 Le diagnostic différentiel</a></li><li><a href="#1711-lhypothese-clinique">17.11 L'hypothèse clinique</a></li><li><a href="#1712-la-formulation-clinique">17.12 La formulation clinique</a></li><li><a href="#1713-les-facteurs-biologiques">17.13 Les facteurs biologiques</a></li><li><a href="#1714-les-facteurs-cognitifs">17.14 Les facteurs cognitifs</a></li><li><a href="#1715-les-facteurs-emotionnels">17.15 Les facteurs émotionnels</a></li><li><a href="#1716-les-facteurs-comportementaux">17.16 Les facteurs comportementaux</a></li><li><a href="#1717-les-facteurs-de-maintien">17.17 Les facteurs de maintien</a></li><li><a href="#1718-les-facteurs-de-protection">17.18 Les facteurs de protection</a></li><li><a href="#1719-la-comorbidite">17.19 La comorbidité</a></li><li><a href="#1720-les-symptomes-transdiagnostiques">17.20 Les symptômes transdiagnostiques</a></li><li><a href="#1721-les-modeles-dimensionnels">17.21 Les modèles dimensionnels</a></li><li><a href="#1722-les-modeles-categoriels">17.22 Les modèles catégoriels</a></li><li><a href="#1723-categories-et-dimensions">17.23 Catégories et dimensions</a></li><li><a href="#1724-le-jugement-clinique">17.24 Le jugement clinique</a></li><li><a href="#1725-les-biais-cognitifs-du-clinicien">17.25 Les biais cognitifs du clinicien</a></li><li><a href="#1726-le-biais-de-confirmation">17.26 Le biais de confirmation</a></li><li><a href="#1727-leffet-dancrage">17.27 L'effet d'ancrage</a></li><li><a href="#1728-la-fermeture-prematuree">17.28 La fermeture prématurée</a></li><li><a href="#1729-le-diagnostic-comme-processus-evolutif">17.29 Le diagnostic comme processus évolutif</a></li><li><a href="#1730-le-diagnostic-et-les-donnees-scientifiques">17.30 Le diagnostic et les données scientifiques</a></li><li><a href="#1731-la-validite-diagnostique">17.31 La validité diagnostique</a></li><li><a href="#1732-lheterogeneite-clinique">17.32 L'hétérogénéité clinique</a></li><li><a href="#1733-lheterogeneite-des-mecanismes">17.33 L'hétérogénéité des mécanismes</a></li><li><a href="#1734-le-diagnostic-et-la-culture">17.34 Le diagnostic et la culture</a></li><li><a href="#1735-lage-et-le-developpement">17.35 L'âge et le développement</a></li><li><a href="#1736-diagnostic-et-personnalite">17.36 Diagnostic et personnalité</a></li><li><a href="#1737-diagnostic-et-environnement">17.37 Diagnostic et environnement</a></li><li><a href="#1738-diagnostic-et-prise-en-charge">17.38 Diagnostic et prise en charge</a></li><li><a href="#1739-les-limites-du-diagnostic">17.39 Les limites du diagnostic</a></li><li><a href="#1740-pourquoi-etudier-le-diagnostic-et-le-raisonnement-clinique">17.40 Pourquoi étudier le diagnostic et le raisonnement clinique ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Diagnostic et raisonnement clinique',
         category: 'Concepts avancés',
-        icon: '🔬'
+        icon: 'D'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/avances/">🔬 Concepts avancés</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/avances/">Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Diagnostic et raisonnement clinique</h1>
     </div>
     <div id="resume-banner"></div>
@@ -122,10 +137,10 @@
 <li>les explications alternatives</li>
 </ul>
 <p>Le raisonnement clinique peut donc être représenté comme un processus :</p>
-<p><strong>observation → collecte d'informations → hypothèses → comparaison → vérification → formulation clinique</strong></p>
+<p><strong>observation  collecte d'informations  hypothèses  comparaison  vérification  formulation clinique</strong></p>
 <p>Le diagnostic constitue une partie de cette démarche, mais ne résume pas à lui seul le fonctionnement psychologique.</p>
 <hr />
-<h2 id="171-quest-ce-quun-diagnostic" class="entry-title hc-1">🧠 17.1 Qu'est-ce qu'un diagnostic ?</h2>
+<h2 id="171-quest-ce-quun-diagnostic" class="entry-title hc-1">17.1 Qu'est-ce qu'un diagnostic ?</h2>
 <p>Un diagnostic est une conclusion clinique permettant d'identifier une condition correspondant à un ensemble de critères définis.</p>
 <p>Les systèmes diagnostiques cherchent à fournir un langage commun entre professionnels.</p>
 <p>Ils permettent notamment de :</p>
@@ -138,7 +153,7 @@
 </ul>
 <p>Un diagnostic reste cependant une <strong>catégorisation clinique</strong>, et non une description exhaustive de toute une personne.</p>
 <hr />
-<h2 id="172-les-systemes-diagnostiques" class="entry-title hc-2">📚 17.2 Les systèmes diagnostiques</h2>
+<h2 id="172-les-systemes-diagnostiques" class="entry-title hc-2">17.2 Les systèmes diagnostiques</h2>
 <p>Les classifications diagnostiques proposent des critères permettant de définir différentes conditions.</p>
 <p>Parmi les systèmes utilisés internationalement figurent notamment :</p>
 <ul>
@@ -148,7 +163,7 @@
 <p>Ces systèmes évoluent avec les connaissances scientifiques.</p>
 <p>Les catégories diagnostiques ne sont donc pas immuables.</p>
 <hr />
-<h2 id="173-les-criteres-diagnostiques" class="entry-title hc-3">🔎 17.3 Les critères diagnostiques</h2>
+<h2 id="173-les-criteres-diagnostiques" class="entry-title hc-3">17.3 Les critères diagnostiques</h2>
 <p>Un trouble diagnostique est généralement défini par plusieurs critères.</p>
 <p>Ces critères peuvent concerner :</p>
 <ul>
@@ -162,13 +177,13 @@
 </ul>
 <p>Cela permet d'éviter de considérer automatiquement un phénomène isolé comme un trouble.</p>
 <hr />
-<h2 id="174-la-duree-des-symptomes" class="entry-title hc-4">⏳ 17.4 La durée des symptômes</h2>
+<h2 id="174-la-duree-des-symptomes" class="entry-title hc-4">17.4 La durée des symptômes</h2>
 <p>La durée constitue souvent une information importante.</p>
 <p>Une expérience psychologique temporaire peut être très différente d'un ensemble de symptômes persistants.</p>
 <p>Par exemple, une période de tristesse après un événement difficile ne signifie pas automatiquement qu'un trouble dépressif est présent.</p>
 <p>Le temps permet donc de distinguer certaines réactions transitoires de phénomènes plus durables.</p>
 <hr />
-<h2 id="175-lintensite" class="entry-title hc-5">📈 17.5 L'intensité</h2>
+<h2 id="175-lintensite" class="entry-title hc-5">17.5 L'intensité</h2>
 <p>Deux personnes peuvent présenter un même phénomène avec des intensités très différentes.</p>
 <p>L'évaluation peut donc chercher à déterminer :</p>
 <p><strong>combien ?</strong></p>
@@ -177,7 +192,7 @@
 <p><strong>avec quelles conséquences ?</strong></p>
 <p>L'intensité seule ne suffit cependant pas toujours à déterminer la présence d'un trouble.</p>
 <hr />
-<h2 id="176-levolution-des-symptomes" class="entry-title hc-1">🔄 17.6 L'évolution des symptômes</h2>
+<h2 id="176-levolution-des-symptomes" class="entry-title hc-1">17.6 L'évolution des symptômes</h2>
 <p>Les symptômes peuvent évoluer.</p>
 <p>Ils peuvent :</p>
 <ul>
@@ -190,7 +205,7 @@
 </ul>
 <p>La trajectoire dans le temps peut apporter des informations importantes pour comprendre le fonctionnement clinique.</p>
 <hr />
-<h2 id="177-le-retentissement-fonctionnel" class="entry-title hc-2">🧩 17.7 Le retentissement fonctionnel</h2>
+<h2 id="177-le-retentissement-fonctionnel" class="entry-title hc-2">17.7 Le retentissement fonctionnel</h2>
 <p>Le retentissement correspond à la manière dont les difficultés affectent le fonctionnement quotidien.</p>
 <p>Cela peut concerner :</p>
 <ul>
@@ -204,14 +219,14 @@
 </ul>
 <p>Deux personnes présentant des symptômes similaires peuvent avoir des niveaux de retentissement très différents.</p>
 <hr />
-<h2 id="178-la-souffrance-subjective" class="entry-title hc-3">❤️ 17.8 La souffrance subjective</h2>
+<h2 id="178-la-souffrance-subjective" class="entry-title hc-3">17.8 La souffrance subjective</h2>
 <p>La souffrance subjective correspond à l'expérience personnelle de détresse ou de difficulté.</p>
 <p>Elle constitue une dimension importante de l'évaluation.</p>
 <p>Cependant, souffrance et trouble diagnostique ne sont pas parfaitement synonymes.</p>
 <p>Une personne peut souffrir fortement sans nécessairement correspondre à une catégorie diagnostique précise.</p>
 <p>Inversement, certaines personnes peuvent présenter des difficultés importantes sans percevoir immédiatement leur caractère problématique.</p>
 <hr />
-<h2 id="179-limportance-du-contexte" class="entry-title hc-4">🌍 17.9 L'importance du contexte</h2>
+<h2 id="179-limportance-du-contexte" class="entry-title hc-4">17.9 L'importance du contexte</h2>
 <p>Un comportement ne peut pas toujours être interprété indépendamment de son contexte.</p>
 <p>Le même comportement peut avoir des significations différentes selon :</p>
 <ul>
@@ -224,7 +239,7 @@
 </ul>
 <p>Le contexte constitue donc une dimension essentielle du raisonnement clinique.</p>
 <hr />
-<h2 id="1710-le-diagnostic-differentiel" class="entry-title hc-5">🧠 17.10 Le diagnostic différentiel</h2>
+<h2 id="1710-le-diagnostic-differentiel" class="entry-title hc-5">17.10 Le diagnostic différentiel</h2>
 <p>Le diagnostic différentiel consiste à comparer plusieurs explications possibles.</p>
 <p>Par exemple, une difficulté de concentration peut être associée à :</p>
 <ul>
@@ -239,28 +254,24 @@
 </ul>
 <p>Le clinicien doit donc éviter de conclure trop rapidement.</p>
 <hr />
-<h2 id="1711-lhypothese-clinique" class="entry-title hc-1">🔬 17.11 L'hypothèse clinique</h2>
+<h2 id="1711-lhypothese-clinique" class="entry-title hc-1">17.11 L'hypothèse clinique</h2>
 <p>Une hypothèse clinique est une explication provisoire permettant d'organiser les informations.</p>
 <p>Elle peut prendre la forme :</p>
 <p><strong>« Cette hypothèse pourrait expliquer les manifestations observées. »</strong></p>
 <p>Elle doit ensuite être confrontée aux données disponibles.</p>
 <p>Une hypothèse clinique n'est donc pas automatiquement une certitude.</p>
 <hr />
-<h2 id="1712-la-formulation-clinique" class="entry-title hc-2">🧩 17.12 La formulation clinique</h2>
+<h2 id="1712-la-formulation-clinique" class="entry-title hc-2">17.12 La formulation clinique</h2>
 <p>La formulation clinique cherche à expliquer <strong>comment différents facteurs interagissent</strong>.</p>
 <p>Elle peut intégrer :</p>
 <p><strong>facteurs de vulnérabilité</strong></p>
-<p>↓</p>
 <p><strong>événements déclenchants</strong></p>
-<p>↓</p>
 <p><strong>réactions psychologiques</strong></p>
-<p>↓</p>
 <p><strong>comportements</strong></p>
-<p>↓</p>
 <p><strong>facteurs de maintien</strong></p>
 <p>La formulation va donc souvent au-delà du simple diagnostic.</p>
 <hr />
-<h2 id="1713-les-facteurs-biologiques" class="entry-title hc-3">🧬 17.13 Les facteurs biologiques</h2>
+<h2 id="1713-les-facteurs-biologiques" class="entry-title hc-3">17.13 Les facteurs biologiques</h2>
 <p>Certains facteurs biologiques peuvent contribuer à certaines manifestations psychologiques.</p>
 <p>Cela peut concerner :</p>
 <ul>
@@ -274,7 +285,7 @@
 </ul>
 <p>Un facteur biologique peut contribuer à une difficulté sans constituer nécessairement une cause unique.</p>
 <hr />
-<h2 id="1714-les-facteurs-cognitifs" class="entry-title hc-4">🧠 17.14 Les facteurs cognitifs</h2>
+<h2 id="1714-les-facteurs-cognitifs" class="entry-title hc-4">17.14 Les facteurs cognitifs</h2>
 <p>Le raisonnement clinique peut également examiner :</p>
 <ul>
 <li>croyances</li>
@@ -287,7 +298,7 @@
 </ul>
 <p>Ces processus peuvent participer au déclenchement ou au maintien de certaines difficultés.</p>
 <hr />
-<h2 id="1715-les-facteurs-emotionnels" class="entry-title hc-5">❤️ 17.15 Les facteurs émotionnels</h2>
+<h2 id="1715-les-facteurs-emotionnels" class="entry-title hc-5">17.15 Les facteurs émotionnels</h2>
 <p>Les émotions peuvent jouer plusieurs rôles.</p>
 <p>Elles peuvent être :</p>
 <ul>
@@ -299,14 +310,14 @@
 </ul>
 <p>Par exemple, une émotion intense peut conduire à un comportement d'évitement, lequel peut ensuite modifier l'émotion future.</p>
 <hr />
-<h2 id="1716-les-facteurs-comportementaux" class="entry-title hc-1">🔁 17.16 Les facteurs comportementaux</h2>
+<h2 id="1716-les-facteurs-comportementaux" class="entry-title hc-1">17.16 Les facteurs comportementaux</h2>
 <p>Les comportements jouent souvent un rôle central dans les cycles psychologiques.</p>
 <p>Un comportement peut réduire une difficulté à court terme tout en contribuant à son maintien à long terme.</p>
 <p>C'est notamment le principe du <strong>renforcement négatif</strong>.</p>
 <p>Exemple :</p>
-<p><strong>situation anxiogène → évitement → soulagement immédiat → augmentation de la probabilité d'éviter à nouveau</strong></p>
+<p><strong>situation anxiogène  évitement  soulagement immédiat  augmentation de la probabilité d'éviter à nouveau</strong></p>
 <hr />
-<h2 id="1717-les-facteurs-de-maintien" class="entry-title hc-2">🧩 17.17 Les facteurs de maintien</h2>
+<h2 id="1717-les-facteurs-de-maintien" class="entry-title hc-2">17.17 Les facteurs de maintien</h2>
 <p>Les facteurs de maintien sont les mécanismes qui contribuent à la persistance d'une difficulté.</p>
 <p>Ils peuvent être :</p>
 <ul>
@@ -319,7 +330,7 @@
 </ul>
 <p>Identifier les facteurs de maintien permet de comprendre pourquoi un problème persiste même lorsque l'événement initial a disparu.</p>
 <hr />
-<h2 id="1718-les-facteurs-de-protection" class="entry-title hc-3">🛡️ 17.18 Les facteurs de protection</h2>
+<h2 id="1718-les-facteurs-de-protection" class="entry-title hc-3">17.18 Les facteurs de protection</h2>
 <p>Les facteurs de protection correspondent aux éléments pouvant favoriser l'adaptation ou réduire certains risques.</p>
 <p>Ils peuvent inclure :</p>
 <ul>
@@ -333,7 +344,7 @@
 </ul>
 <p>Ils ne garantissent cependant pas l'absence de difficultés.</p>
 <hr />
-<h2 id="1719-la-comorbidite" class="entry-title hc-4">🧠 17.19 La comorbidité</h2>
+<h2 id="1719-la-comorbidite" class="entry-title hc-4">17.19 La comorbidité</h2>
 <p>La comorbidité correspond à la présence simultanée de plusieurs conditions diagnostiques ou problèmes cliniques.</p>
 <p>Par exemple, certaines personnes peuvent présenter simultanément :</p>
 <p><strong>anxiété + dépression</strong></p>
@@ -341,7 +352,7 @@
 <p><strong>trouble psychologique + trouble lié à l'utilisation d'une substance</strong></p>
 <p>La comorbidité complique souvent l'interprétation clinique.</p>
 <hr />
-<h2 id="1720-les-symptomes-transdiagnostiques" class="entry-title hc-5">🔄 17.20 Les symptômes transdiagnostiques</h2>
+<h2 id="1720-les-symptomes-transdiagnostiques" class="entry-title hc-5">17.20 Les symptômes transdiagnostiques</h2>
 <p>Certains processus apparaissent dans plusieurs troubles différents.</p>
 <p>On parle alors souvent de processus ou symptômes <strong>transdiagnostiques</strong>.</p>
 <p>Cela peut concerner :</p>
@@ -356,7 +367,7 @@
 </ul>
 <p>Cette observation a contribué au développement de modèles dépassant les catégories diagnostiques traditionnelles.</p>
 <hr />
-<h2 id="1721-les-modeles-dimensionnels" class="entry-title hc-1">📊 17.21 Les modèles dimensionnels</h2>
+<h2 id="1721-les-modeles-dimensionnels" class="entry-title hc-1">17.21 Les modèles dimensionnels</h2>
 <p>Les modèles dimensionnels considèrent certaines caractéristiques comme des continuums.</p>
 <p>Au lieu de simplement demander :</p>
 <p><strong>présent ou absent ?</strong></p>
@@ -365,12 +376,12 @@
 <p>Une caractéristique peut ainsi être faible, modérée ou élevée.</p>
 <p>Cette approche permet parfois de représenter davantage la variabilité entre les individus.</p>
 <hr />
-<h2 id="1722-les-modeles-categoriels" class="entry-title hc-2">🗂️ 17.22 Les modèles catégoriels</h2>
+<h2 id="1722-les-modeles-categoriels" class="entry-title hc-2">17.22 Les modèles catégoriels</h2>
 <p>Les modèles catégoriels regroupent certaines manifestations sous des catégories diagnostiques.</p>
 <p>Ils permettent notamment de déterminer si un ensemble de critères est suffisamment présent pour correspondre à une catégorie.</p>
 <p>Cette approche facilite la communication clinique, mais peut simplifier des réalités psychologiques très continues.</p>
 <hr />
-<h2 id="1723-categories-et-dimensions" class="entry-title hc-3">⚖️ 17.23 Catégories et dimensions</h2>
+<h2 id="1723-categories-et-dimensions" class="entry-title hc-3">17.23 Catégories et dimensions</h2>
 <p>Les approches catégorielles et dimensionnelles peuvent être complémentaires.</p>
 <p>Une catégorie peut fournir une information générale tandis que les dimensions décrivent :</p>
 <ul>
@@ -382,14 +393,14 @@
 </ul>
 <p>La psychologie clinique contemporaine utilise différentes façons d'articuler ces deux perspectives.</p>
 <hr />
-<h2 id="1724-le-jugement-clinique" class="entry-title hc-4">🧠 17.24 Le jugement clinique</h2>
+<h2 id="1724-le-jugement-clinique" class="entry-title hc-4">17.24 Le jugement clinique</h2>
 <p>Le jugement clinique correspond à l'utilisation raisonnée des informations disponibles.</p>
 <p>Il ne devrait pas simplement reposer sur une impression intuitive.</p>
 <p>Il implique idéalement :</p>
-<p><strong>données → hypothèses → confrontation aux données → conclusion provisoire</strong></p>
+<p><strong>données  hypothèses  confrontation aux données  conclusion provisoire</strong></p>
 <p>Le jugement clinique reste cependant susceptible d'erreurs.</p>
 <hr />
-<h2 id="1725-les-biais-cognitifs-du-clinicien" class="entry-title hc-5">⚠️ 17.25 Les biais cognitifs du clinicien</h2>
+<h2 id="1725-les-biais-cognitifs-du-clinicien" class="entry-title hc-5">17.25 Les biais cognitifs du clinicien</h2>
 <p>Les professionnels peuvent eux aussi être influencés par des biais.</p>
 <p>Par exemple :</p>
 <ul>
@@ -402,25 +413,25 @@
 </ul>
 <p>La formation clinique cherche notamment à apprendre à reconnaître ces erreurs potentielles.</p>
 <hr />
-<h2 id="1726-le-biais-de-confirmation" class="entry-title hc-1">🎯 17.26 Le biais de confirmation</h2>
+<h2 id="1726-le-biais-de-confirmation" class="entry-title hc-1">17.26 Le biais de confirmation</h2>
 <p>Le biais de confirmation correspond à la tendance à accorder davantage d'attention aux informations qui soutiennent une hypothèse déjà envisagée.</p>
 <p>En clinique, cela peut conduire à :</p>
-<p><strong>hypothèse → recherche sélective d'informations → confirmation apparente</strong></p>
+<p><strong>hypothèse  recherche sélective d'informations  confirmation apparente</strong></p>
 <p>Une démarche rigoureuse cherche donc également activement les éléments qui pourraient contredire l'hypothèse.</p>
 <hr />
-<h2 id="1727-leffet-dancrage" class="entry-title hc-2">⚓ 17.27 L'effet d'ancrage</h2>
+<h2 id="1727-leffet-dancrage" class="entry-title hc-2">17.27 L'effet d'ancrage</h2>
 <p>L'ancrage correspond à l'influence excessive d'une information initiale sur les jugements ultérieurs.</p>
 <p>En clinique, une première hypothèse peut parfois continuer à influencer l'interprétation des informations suivantes.</p>
 <p>Cela explique l'importance de réévaluer régulièrement les hypothèses.</p>
 <hr />
-<h2 id="1728-la-fermeture-prematuree" class="entry-title hc-3">🚪 17.28 La fermeture prématurée</h2>
+<h2 id="1728-la-fermeture-prematuree" class="entry-title hc-3">17.28 La fermeture prématurée</h2>
 <p>La fermeture prématurée correspond au fait d'arrêter trop tôt la recherche d'explications alternatives.</p>
 <p>Par exemple :</p>
-<p><strong>symptôme → première explication plausible → conclusion immédiate</strong></p>
+<p><strong>symptôme  première explication plausible  conclusion immédiate</strong></p>
 <p>Le problème est qu'une autre explication pourrait être plus pertinente.</p>
 <p>Un raisonnement clinique rigoureux cherche donc à maintenir plusieurs hypothèses suffisamment longtemps pour les comparer.</p>
 <hr />
-<h2 id="1729-le-diagnostic-comme-processus-evolutif" class="entry-title hc-4">🧠 17.29 Le diagnostic comme processus évolutif</h2>
+<h2 id="1729-le-diagnostic-comme-processus-evolutif" class="entry-title hc-4">17.29 Le diagnostic comme processus évolutif</h2>
 <p>Un diagnostic peut être réévalué.</p>
 <p>De nouvelles informations peuvent apparaître avec le temps.</p>
 <p>Une hypothèse initiale peut alors être :</p>
@@ -432,7 +443,7 @@
 </ul>
 <p>Le diagnostic clinique n'est donc pas nécessairement une conclusion figée pour toujours.</p>
 <hr />
-<h2 id="1730-le-diagnostic-et-les-donnees-scientifiques" class="entry-title hc-5">🔬 17.30 Le diagnostic et les données scientifiques</h2>
+<h2 id="1730-le-diagnostic-et-les-donnees-scientifiques" class="entry-title hc-5">17.30 Le diagnostic et les données scientifiques</h2>
 <p>Les classifications diagnostiques s'appuient sur des recherches scientifiques.</p>
 <p>Les chercheurs étudient notamment :</p>
 <ul>
@@ -445,7 +456,7 @@
 </ul>
 <p>Les systèmes diagnostiques évoluent lorsque les connaissances scientifiques progressent.</p>
 <hr />
-<h2 id="1731-la-validite-diagnostique" class="entry-title hc-1">🧠 17.31 La validité diagnostique</h2>
+<h2 id="1731-la-validite-diagnostique" class="entry-title hc-1">17.31 La validité diagnostique</h2>
 <p>Une question importante est :</p>
 <p><strong>« La catégorie diagnostique représente-t-elle réellement un phénomène cohérent ? »</strong></p>
 <p>Les chercheurs peuvent examiner :</p>
@@ -459,7 +470,7 @@
 </ul>
 <p>La validité d'une catégorie peut donc être étudiée sous plusieurs angles.</p>
 <hr />
-<h2 id="1732-lheterogeneite-clinique" class="entry-title hc-2">🔄 17.32 L'hétérogénéité clinique</h2>
+<h2 id="1732-lheterogeneite-clinique" class="entry-title hc-2">17.32 L'hétérogénéité clinique</h2>
 <p>Deux personnes portant le même diagnostic peuvent présenter des profils très différents.</p>
 <p>Elles peuvent différer concernant :</p>
 <ul>
@@ -473,16 +484,16 @@
 </ul>
 <p>Un diagnostic commun ne signifie donc pas fonctionnement identique.</p>
 <hr />
-<h2 id="1733-lheterogeneite-des-mecanismes" class="entry-title hc-3">🧩 17.33 L'hétérogénéité des mécanismes</h2>
+<h2 id="1733-lheterogeneite-des-mecanismes" class="entry-title hc-3">17.33 L'hétérogénéité des mécanismes</h2>
 <p>Un même symptôme peut également résulter de mécanismes différents.</p>
 <p>Par exemple, deux personnes peuvent présenter une insomnie :</p>
-<p><strong>personne A → stress</strong></p>
-<p><strong>personne B → habitudes de sommeil</strong></p>
-<p><strong>personne C → douleur</strong></p>
-<p><strong>personne D → activation émotionnelle</strong></p>
+<p><strong>personne A  stress</strong></p>
+<p><strong>personne B  habitudes de sommeil</strong></p>
+<p><strong>personne C  douleur</strong></p>
+<p><strong>personne D  activation émotionnelle</strong></p>
 <p>Le même symptôme visible peut donc avoir des mécanismes différents.</p>
 <hr />
-<h2 id="1734-le-diagnostic-et-la-culture" class="entry-title hc-4">🌍 17.34 Le diagnostic et la culture</h2>
+<h2 id="1734-le-diagnostic-et-la-culture" class="entry-title hc-4">17.34 Le diagnostic et la culture</h2>
 <p>Les normes culturelles influencent la manière dont certaines expériences sont exprimées et interprétées.</p>
 <p>Il est donc important de distinguer :</p>
 <p><strong>comportement inhabituel dans une culture</strong></p>
@@ -490,12 +501,12 @@
 <p><strong>manifestation psychopathologique</strong></p>
 <p>Une différence culturelle n'est pas automatiquement un symptôme.</p>
 <hr />
-<h2 id="1735-lage-et-le-developpement" class="entry-title hc-5">👶 17.35 L'âge et le développement</h2>
+<h2 id="1735-lage-et-le-developpement" class="entry-title hc-5">17.35 L'âge et le développement</h2>
 <p>Le comportement psychologique doit également être interprété selon l'âge et le niveau développemental.</p>
 <p>Une manifestation pouvant être inhabituelle chez un adulte peut être beaucoup plus fréquente à certains stades du développement.</p>
 <p>Le diagnostic doit donc tenir compte du développement psychologique.</p>
 <hr />
-<h2 id="1736-diagnostic-et-personnalite" class="entry-title hc-1">🧠 17.36 Diagnostic et personnalité</h2>
+<h2 id="1736-diagnostic-et-personnalite" class="entry-title hc-1">17.36 Diagnostic et personnalité</h2>
 <p>La personnalité peut influencer la manière dont les symptômes apparaissent.</p>
 <p>Deux personnes présentant un même trouble peuvent réagir très différemment en fonction de :</p>
 <ul>
@@ -507,7 +518,7 @@
 </ul>
 <p>Le diagnostic ne doit donc pas être étudié indépendamment du fonctionnement global.</p>
 <hr />
-<h2 id="1737-diagnostic-et-environnement" class="entry-title hc-2">❤️ 17.37 Diagnostic et environnement</h2>
+<h2 id="1737-diagnostic-et-environnement" class="entry-title hc-2">17.37 Diagnostic et environnement</h2>
 <p>L'environnement peut participer à l'apparition, au maintien ou à la diminution de certaines difficultés.</p>
 <p>Cela peut concerner :</p>
 <ul>
@@ -522,7 +533,7 @@
 </ul>
 <p>Le modèle biopsychosocial permet justement de considérer plusieurs niveaux simultanément.</p>
 <hr />
-<h2 id="1738-diagnostic-et-prise-en-charge" class="entry-title hc-3">🩺 17.38 Diagnostic et prise en charge</h2>
+<h2 id="1738-diagnostic-et-prise-en-charge" class="entry-title hc-3">17.38 Diagnostic et prise en charge</h2>
 <p>Le diagnostic peut aider à orienter une prise en charge.</p>
 <p>Cependant, deux personnes ayant le même diagnostic peuvent nécessiter des approches différentes.</p>
 <p>La prise en charge peut dépendre de :</p>
@@ -537,7 +548,7 @@
 </ul>
 <p>Le diagnostic constitue donc une information parmi d'autres.</p>
 <hr />
-<h2 id="1739-les-limites-du-diagnostic" class="entry-title hc-4">⚠️ 17.39 Les limites du diagnostic</h2>
+<h2 id="1739-les-limites-du-diagnostic" class="entry-title hc-4">17.39 Les limites du diagnostic</h2>
 <p>Le diagnostic possède plusieurs limites.</p>
 <p>Il peut parfois :</p>
 <ul>
@@ -551,22 +562,16 @@
 <p>Un diagnostic ne décrit donc jamais entièrement une personne.</p>
 <p>Il décrit une configuration clinique selon un système donné.</p>
 <hr />
-<h2 id="1740-pourquoi-etudier-le-diagnostic-et-le-raisonnement-clinique" class="entry-title hc-5">🔬 17.40 Pourquoi étudier le diagnostic et le raisonnement clinique ?</h2>
+<h2 id="1740-pourquoi-etudier-le-diagnostic-et-le-raisonnement-clinique" class="entry-title hc-5">17.40 Pourquoi étudier le diagnostic et le raisonnement clinique ?</h2>
 <p>Comprendre le diagnostic permet de comprendre comment la psychologie clinique passe de manifestations parfois dispersées à une <strong>hypothèse organisée du fonctionnement psychologique</strong>.</p>
 <p>Le raisonnement clinique repose notamment sur :</p>
-<p><strong>🗣️ collecte d'informations</strong></p>
-<p>↓</p>
-<p><strong>👁️ observation</strong></p>
-<p>↓</p>
-<p><strong>🧠 formulation d'hypothèses</strong></p>
-<p>↓</p>
-<p><strong>🔎 diagnostic différentiel</strong></p>
-<p>↓</p>
-<p><strong>📊 comparaison des données</strong></p>
-<p>↓</p>
-<p><strong>🔄 réévaluation</strong></p>
-<p>↓</p>
-<p><strong>🩺 formulation clinique</strong></p>
+<p>** collecte d'informations**</p>
+<p>** observation**</p>
+<p>** formulation d'hypothèses**</p>
+<p>** diagnostic différentiel**</p>
+<p>** comparaison des données**</p>
+<p>** réévaluation**</p>
+<p>** formulation clinique**</p>
 <p>Le diagnostic est donc davantage qu'une simple étiquette.</p>
 <p>Il constitue une manière de <strong>classer et communiquer certaines configurations cliniques</strong>, tandis que la formulation clinique cherche à comprendre les mécanismes et les interactions qui les sous-tendent.</p>
 <p>Une approche rigoureuse doit toujours conserver une certaine prudence :</p>
@@ -576,31 +581,67 @@
 <p><strong>une hypothèse ≠ une certitude</strong></p>
 <p><strong>une catégorie ≠ toute la réalité psychologique</strong></p>
 <p>L'étude du raisonnement clinique permet ainsi de comprendre pourquoi l'évaluation psychologique nécessite à la fois des connaissances scientifiques, une analyse structurée, la comparaison d'hypothèses et la prise en compte du contexte individuel.</p>
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🩺 <strong>Le diagnostic est une catégorisation clinique.</strong></p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p><strong>Le diagnostic est une catégorisation clinique.</strong></p>
 <p>Il permet d'identifier certaines configurations de symptômes selon des critères définis.</p>
-<p>🧠 <strong>Le raisonnement clinique est plus large que le diagnostic.</strong></p>
+<p><strong>Le raisonnement clinique est plus large que le diagnostic.</strong></p>
 <p>Il cherche à comprendre les symptômes, leur contexte, leur évolution et leurs mécanismes possibles.</p>
-<p>🔎 <strong>Le diagnostic différentiel est essentiel.</strong></p>
+<p><strong>Le diagnostic différentiel est essentiel.</strong></p>
 <p>Un même symptôme peut avoir plusieurs explications.</p>
-<p>📊 <strong>Les approches catégorielles et dimensionnelles sont complémentaires.</strong></p>
+<p><strong>Les approches catégorielles et dimensionnelles sont complémentaires.</strong></p>
 <p>Une catégorie peut identifier une configuration tandis qu'une approche dimensionnelle peut décrire son intensité et ses variations.</p>
-<p>🧩 <strong>La formulation clinique permet d'aller plus loin.</strong></p>
+<p><strong>La formulation clinique permet d'aller plus loin.</strong></p>
 <p>Elle cherche à comprendre les interactions entre vulnérabilités, événements, émotions, pensées, comportements, relations et facteurs environnementaux.</p>
-<p>⚠️ <strong>Le raisonnement clinique peut être influencé par des biais.</strong></p>
+<p><strong>Le raisonnement clinique peut être influencé par des biais.</strong></p>
 <p>Ancrage, confirmation, effet de halo et fermeture prématurée peuvent influencer les décisions.</p>
-<p>🔄 <strong>Les hypothèses peuvent évoluer.</strong></p>
+<p><strong>Les hypothèses peuvent évoluer.</strong></p>
 <p>Une conclusion clinique peut être réévaluée lorsque de nouvelles informations apparaissent.</p>
-<p>🌍 <strong>Le contexte est indispensable.</strong></p>
+<p><strong>Le contexte est indispensable.</strong></p>
 <p>Âge, culture, environnement, développement et situation personnelle peuvent modifier l'interprétation d'une manifestation.</p>
-<p>🧠 <strong>Deux personnes ayant le même diagnostic peuvent fonctionner très différemment.</strong></p>
+<p><strong>Deux personnes ayant le même diagnostic peuvent fonctionner très différemment.</strong></p>
 <p>Le diagnostic ne résume ni la personnalité, ni l'histoire, ni l'ensemble du fonctionnement psychologique.</p>
 <p>En définitive, le raisonnement clinique consiste moins à chercher immédiatement <strong>« quelle étiquette correspond ? »</strong> qu'à construire progressivement la meilleure compréhension possible à partir des données disponibles, tout en conservant la possibilité de remettre en question les premières hypothèses.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-processus-therapeutiques/"><span class="similar-icon">🔬</span>Processus thérapeutiques</a><a class="similar-item" href="/chapitre/avances-recherche-et-modeles-scientifiques/"><span class="similar-icon">🔬</span>Recherche et modèles scientifiques</a><a class="similar-item" href="/chapitre/avances-concepts-psychologiques-tres-avances/"><span class="similar-icon">🔬</span>Concepts psychologiques très avancés</a></div>
+      <h2>Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-processus-therapeutiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Processus thérapeutiques</a><a class="similar-item" href="/chapitre/avances-recherche-et-modeles-scientifiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Recherche et modèles scientifiques</a><a class="similar-item" href="/chapitre/avances-concepts-psychologiques-tres-avances/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Concepts psychologiques très avancés</a></div>
     </div>
     <a class="back-link" href="/categorie/avances/">← Retour à « Concepts avancés »</a>
   </div>
@@ -686,23 +727,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -720,7 +763,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -900,9 +943,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -911,10 +956,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -1021,7 +1066,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1061,8 +1106,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1093,7 +1138,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1148,7 +1193,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1172,17 +1217,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1224,7 +1269,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

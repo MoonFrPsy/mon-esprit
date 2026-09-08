@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#101-le-syndrome-amnesique">🧠 10.1 Le syndrome amnésique</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#deux-grandes-formes">🧩 Deux grandes formes</a></li><li><a href="#manifestations">🧠 Manifestations</a></li><li><a href="#causes-possibles">🧬 Causes possibles</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#102-le-syndrome-de-korsakoff">🍷 10.2 Le syndrome de Korsakoff</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#manifestations_1">🧠 Manifestations</a></li><li><a href="#confabulations">💭 Confabulations</a></li><li><a href="#causes">🧬 Causes</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#103-les-paramnesies">🧩 10.3 Les paramnésies</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#exemples">🧠 Exemples</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#104-la-paramnesie-reduplicative">🔄 10.4 La paramnésie réduplicative</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#exemple">🧠 Exemple</a></li><li><a href="#causes-possibles_1">🧬 Causes possibles</a></li><li><a href="#diagnostic_2">🩺 Diagnostic</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#105-la-cryptomnesie">🧠 10.5 La cryptomnésie</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#exemple_1">💭 Exemple</a></li><li><a href="#fonctionnement">🧠 Fonctionnement</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#106-les-faux-souvenirs">🧠 10.6 Les faux souvenirs</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#comment-apparaissent-ils">🧩 Comment apparaissent-ils ?</a></li><li><a href="#reconstruction">🧠 Reconstruction</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#107-le-deja-vu">🌀 10.7 Le déjà-vu</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#caracteristiques">🧠 Caractéristiques</a></li><li><a href="#explications-etudiees">🧬 Explications étudiées</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#108-le-jamais-vu">❓ 10.8 Le jamais-vu</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#exemple_2">🧠 Exemple</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#109-le-presque-vu">🔤 10.9 Le presque-vu</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#exemple_3">🧠 Exemple</a></li><li><a href="#particularite">🧩 Particularité</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#1010-la-confabulation">🧠 10.10 La confabulation</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#deux-formes-generales">🧩 Deux formes générales</a></li><li><a href="#causes-possibles_2">🧬 Causes possibles</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#1011-lamnesie-dissociative">🧠 10.11 L'amnésie dissociative</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#manifestations_2">🧠 Manifestations</a></li><li><a href="#particularite_1">🧩 Particularité</a></li><li><a href="#diagnostic_3">🩺 Diagnostic</a></li><li><a href="#a-retenir_10">📌 À retenir</a></li></ul></li><li><a href="#1012-lhypermnesie">🧠 10.12 L'hypermnésie</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#manifestations-possibles">🧩 Manifestations possibles</a></li><li><a href="#particularite_2">🧠 Particularité</a></li><li><a href="#a-retenir_11">📌 À retenir</a></li></ul></li><li><a href="#1013-lhyperthymesie">🧠 10.13 L'hyperthymésie</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#particularite_3">📅 Particularité</a></li><li><a href="#memoire-autobiographique">🧠 Mémoire autobiographique</a></li><li><a href="#a-retenir_12">📌 À retenir</a></li></ul></li><li><a href="#1014-la-memoire-photographique">🧠 10.14 La mémoire photographique</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#a-ne-pas-confondre">🧩 À ne pas confondre</a></li><li><a href="#a-retenir_13">📌 À retenir</a></li></ul></li><li><a href="#1015-les-souvenirs-flash">🧠 10.15 Les souvenirs flash</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#exemple_4">🧠 Exemple</a></li><li><a href="#precision-importante">⚠️ Précision importante</a></li><li><a href="#a-retenir_14">📌 À retenir</a></li></ul></li><li><a href="#a-retenir-partie-10">🧠 À RETENIR PARTIE 10</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#101-le-syndrome-amnesique">10.1 Le syndrome amnésique</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#deux-grandes-formes">Deux grandes formes</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#102-le-syndrome-de-korsakoff">10.2 Le syndrome de Korsakoff</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#confabulations">Confabulations</a></li><li><a href="#causes">Causes</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#103-les-paramnesies">10.3 Les paramnésies</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#104-la-paramnesie-reduplicative">10.4 La paramnésie réduplicative</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#105-la-cryptomnesie">10.5 La cryptomnésie</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#exemple_1">Exemple</a></li><li><a href="#fonctionnement">Fonctionnement</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#106-les-faux-souvenirs">10.6 Les faux souvenirs</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#comment-apparaissent-ils">Comment apparaissent-ils ?</a></li><li><a href="#reconstruction">Reconstruction</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#107-le-deja-vu">10.7 Le déjà-vu</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#caracteristiques">Caractéristiques</a></li><li><a href="#explications-etudiees">Explications étudiées</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#108-le-jamais-vu">10.8 Le jamais-vu</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#exemple_2">Exemple</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#109-le-presque-vu">10.9 Le presque-vu</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#exemple_3">Exemple</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1010-la-confabulation">10.10 La confabulation</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#deux-formes-generales">Deux formes générales</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1011-lamnesie-dissociative">10.11 L'amnésie dissociative</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1012-lhypermnesie">10.12 L'hypermnésie</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#particularite_2">Particularité</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1013-lhyperthymesie">10.13 L'hyperthymésie</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#particularite_3">Particularité</a></li><li><a href="#memoire-autobiographique">Mémoire autobiographique</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1014-la-memoire-photographique">10.14 La mémoire photographique</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#a-ne-pas-confondre">À ne pas confondre</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1015-les-souvenirs-flash">10.15 Les souvenirs flash</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#exemple_4">Exemple</a></li><li><a href="#precision-importante">Précision importante</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#a-retenir-partie-10">À RETENIR PARTIE 10</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Syndromes liés à la mémoire',
         category: 'Syndromes psychologiques',
-        icon: '🧬'
+        icon: 'S'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/syndromes/">🧬 Syndromes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/syndromes/">Syndromes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Syndromes liés à la mémoire</h1>
     </div>
     <div id="resume-banner"></div>
@@ -101,12 +116,12 @@
     <div class="article-body">
       <p>Cette partie regroupe différents syndromes, troubles et phénomènes concernant la mémoire : difficultés à former de nouveaux souvenirs, perte de souvenirs, souvenirs déformés, impressions de familiarité ou encore apparition de souvenirs dont l'origine est difficile à déterminer.</p>
 <blockquote>
-<p>⚠️ La mémoire est un système complexe. Une difficulté de mémoire n'indique pas nécessairement un trouble neurologique ou psychiatrique. Certains phénomènes présentés ici sont des symptômes ou des mécanismes cognitifs plutôt que des diagnostics officiels.
+<p>La mémoire est un système complexe. Une difficulté de mémoire n'indique pas nécessairement un trouble neurologique ou psychiatrique. Certains phénomènes présentés ici sont des symptômes ou des mécanismes cognitifs plutôt que des diagnostics officiels.
 </p>
 </blockquote>
 <hr />
-<h1 id="101-le-syndrome-amnesique" class="entry-title hc-1">🧠 10.1  Le syndrome amnésique</h1>
-<h2 id="definition">🔎 Définition</h2>
+<h1 id="101-le-syndrome-amnesique" class="entry-title hc-1">10.1  Le syndrome amnésique</h1>
+<h2 id="definition">Définition</h2>
 <p>Le <strong>syndrome amnésique</strong> correspond à une altération importante de la mémoire qui ne s'explique pas simplement par une distraction ordinaire.</p>
 <p>Il peut principalement toucher :</p>
 <ul>
@@ -115,13 +130,13 @@
 <li>ou les deux.</li>
 </ul>
 <p>La mémoire peut être perturbée alors que certaines autres capacités intellectuelles restent relativement préservées.</p>
-<h2 id="deux-grandes-formes">🧩 Deux grandes formes</h2>
+<h2 id="deux-grandes-formes">Deux grandes formes</h2>
 <h3 id="amnesie-anterograde">Amnésie antérograde</h3>
 <p>Difficulté à enregistrer ou apprendre de nouvelles informations après l'apparition du trouble.</p>
 <h3 id="amnesie-retrograde">Amnésie rétrograde</h3>
 <p>Perte ou difficulté à récupérer des souvenirs formés avant l'apparition du trouble.</p>
 <p>Les deux peuvent être présentes simultanément.</p>
-<h2 id="manifestations">🧠 Manifestations</h2>
+<h2 id="manifestations">Manifestations</h2>
 <ul>
 <li>oubli rapide des informations nouvelles ;</li>
 <li>répétition des mêmes questions ;</li>
@@ -129,7 +144,7 @@
 <li>oubli d'événements importants ;</li>
 <li>difficultés à se rappeler certaines périodes de vie.</li>
 </ul>
-<h2 id="causes-possibles">🧬 Causes possibles</h2>
+<h2 id="causes-possibles">Causes possibles</h2>
 <p>Le syndrome amnésique peut être associé à :</p>
 <ul>
 <li>lésions cérébrales ;</li>
@@ -141,7 +156,7 @@
 <li>maladies neurodégénératives ;</li>
 <li>carences nutritionnelles sévères.</li>
 </ul>
-<h2 id="diagnostic">🩺 Diagnostic</h2>
+<h2 id="diagnostic">Diagnostic</h2>
 <p>L'évaluation peut comprendre :</p>
 <ul>
 <li>entretien clinique ;</li>
@@ -150,14 +165,14 @@
 <li>bilan neuropsychologique ;</li>
 <li>imagerie cérébrale selon le contexte.</li>
 </ul>
-<h2 id="a-retenir">📌 À retenir</h2>
+<h2 id="a-retenir">À retenir</h2>
 <p>Le syndrome amnésique désigne une <strong>atteinte significative du fonctionnement de la mémoire</strong>, dont les causes peuvent être nombreuses.</p>
 <hr />
-<h1 id="102-le-syndrome-de-korsakoff" class="entry-title hc-2">🍷 10.2  Le syndrome de Korsakoff</h1>
-<h2 id="definition_1">🔎 Définition</h2>
+<h1 id="102-le-syndrome-de-korsakoff" class="entry-title hc-2">10.2  Le syndrome de Korsakoff</h1>
+<h2 id="definition_1">Définition</h2>
 <p>Le <strong>syndrome de Korsakoff</strong> est un syndrome neuropsychologique caractérisé principalement par une importante atteinte de la mémoire.</p>
 <p>Il est classiquement associé à une <strong>carence sévère en vitamine B1 (thiamine)</strong>, notamment dans certains contextes de consommation chronique d'alcool, mais d'autres causes peuvent provoquer une carence en thiamine.</p>
-<h2 id="manifestations_1">🧠 Manifestations</h2>
+<h2 id="manifestations_1">Manifestations</h2>
 <p>On peut notamment observer :</p>
 <ul>
 <li>difficulté à former de nouveaux souvenirs ;</li>
@@ -167,11 +182,11 @@
 <li>difficultés à récupérer certains souvenirs.</li>
 </ul>
 <p>Des <strong>confabulations</strong> peuvent également apparaître.</p>
-<h2 id="confabulations">💭 Confabulations</h2>
+<h2 id="confabulations">Confabulations</h2>
 <p>Une confabulation correspond à la production involontaire d'informations erronées ou de récits inexacts pour compléter des souvenirs manquants.</p>
 <p>Il ne s'agit pas nécessairement d'un mensonge volontaire.</p>
 <p>La personne peut croire sincèrement à ce qu'elle rapporte.</p>
-<h2 id="causes">🧬 Causes</h2>
+<h2 id="causes">Causes</h2>
 <p>La cause principale est une carence importante en thiamine.</p>
 <p>Elle peut être favorisée par :</p>
 <ul>
@@ -181,7 +196,7 @@
 <li>troubles de l'absorption ;</li>
 <li>situations médicales entraînant une carence nutritionnelle.</li>
 </ul>
-<h2 id="diagnostic_1">🩺 Diagnostic</h2>
+<h2 id="diagnostic_1">Diagnostic</h2>
 <p>Le diagnostic repose sur :</p>
 <ul>
 <li>observation clinique ;</li>
@@ -189,17 +204,17 @@
 <li>recherche d'une carence en thiamine ;</li>
 <li>recherche de la cause sous-jacente.</li>
 </ul>
-<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge">Prise en charge</h2>
 <p>La prise en charge repose notamment sur la correction rapide de la carence en vitamine B1 et sur le traitement de sa cause.</p>
 <p>Une rééducation cognitive peut également être utilisée.</p>
-<h2 id="a-retenir_1">📌 À retenir</h2>
+<h2 id="a-retenir_1">À retenir</h2>
 <p>Le syndrome de Korsakoff est principalement un <strong>syndrome neurologique lié à une atteinte importante de la mémoire</strong>, souvent associé à une carence sévère en thiamine.</p>
 <hr />
-<h1 id="103-les-paramnesies" class="entry-title hc-3">🧩 10.3  Les paramnésies</h1>
-<h2 id="definition_2">🔎 Définition</h2>
+<h1 id="103-les-paramnesies" class="entry-title hc-3">10.3  Les paramnésies</h1>
+<h2 id="definition_2">Définition</h2>
 <p>Le terme <strong>paramnésie</strong> désigne différents phénomènes dans lesquels un souvenir est vécu ou récupéré de manière déformée.</p>
 <p>La personne peut avoir une impression de familiarité, confondre l'origine d'un souvenir ou attribuer à un événement une histoire qui ne correspond pas exactement à la réalité.</p>
-<h2 id="exemples">🧠 Exemples</h2>
+<h2 id="exemples">Exemples</h2>
 <p>Les paramnésies peuvent inclure :</p>
 <ul>
 <li>déjà-vu ;</li>
@@ -208,21 +223,21 @@
 <li>confusion entre souvenirs ;</li>
 <li>attribution incorrecte de l'origine d'un souvenir.</li>
 </ul>
-<h2 id="a-retenir_2">📌 À retenir</h2>
+<h2 id="a-retenir_2">À retenir</h2>
 <p>La paramnésie désigne donc une <strong>déformation ou une perturbation de l'expérience mnésique</strong>.</p>
 <hr />
-<h1 id="104-la-paramnesie-reduplicative" class="entry-title hc-4">🔄 10.4  La paramnésie réduplicative</h1>
-<h2 id="definition_3">🔎 Définition</h2>
+<h1 id="104-la-paramnesie-reduplicative" class="entry-title hc-4">10.4  La paramnésie réduplicative</h1>
+<h2 id="definition_3">Définition</h2>
 <p>La <strong>paramnésie réduplicative</strong> est un phénomène neuropsychologique dans lequel une personne est convaincue qu'un lieu, une personne ou parfois un événement existe en double.</p>
 <p>Par exemple, un lieu réel peut être considéré comme ayant un second exemplaire ailleurs.</p>
-<h2 id="exemple">🧠 Exemple</h2>
+<h2 id="exemple">Exemple</h2>
 <p>Une personne hospitalisée peut être convaincue que :</p>
 <blockquote>
 <p>l'hôpital dans lequel elle se trouve est une copie d'un autre hôpital situé ailleurs.
 </p>
 </blockquote>
 <p>La conviction peut être extrêmement forte.</p>
-<h2 id="causes-possibles_1">🧬 Causes possibles</h2>
+<h2 id="causes-possibles_1">Causes possibles</h2>
 <p>Elle est principalement associée à certaines atteintes cérébrales, notamment :</p>
 <ul>
 <li>lésions de l'hémisphère droit ;</li>
@@ -230,7 +245,7 @@
 <li>accidents vasculaires cérébraux ;</li>
 <li>certaines maladies neurologiques.</li>
 </ul>
-<h2 id="diagnostic_2">🩺 Diagnostic</h2>
+<h2 id="diagnostic_2">Diagnostic</h2>
 <p>L'évaluation recherche :</p>
 <ul>
 <li>les troubles de mémoire ;</li>
@@ -238,31 +253,31 @@
 <li>les troubles de l'orientation ;</li>
 <li>les éventuelles lésions cérébrales.</li>
 </ul>
-<h2 id="a-retenir_3">📌 À retenir</h2>
+<h2 id="a-retenir_3">À retenir</h2>
 <p>La paramnésie réduplicative est principalement un <strong>phénomène neuropsychologique impliquant la reconnaissance et la représentation des lieux ou de la réalité</strong>.</p>
 <hr />
-<h1 id="105-la-cryptomnesie" class="entry-title hc-5">🧠 10.5  La cryptomnésie</h1>
-<h2 id="definition_4">🔎 Définition</h2>
+<h1 id="105-la-cryptomnesie" class="entry-title hc-5">10.5  La cryptomnésie</h1>
+<h2 id="definition_4">Définition</h2>
 <p>La <strong>cryptomnésie</strong> correspond à une situation dans laquelle une information précédemment mémorisée réapparaît à l'esprit sans que son origine soit reconnue.</p>
 <p>La personne peut alors avoir l'impression qu'il s'agit d'une idée nouvelle ou originale.</p>
-<h2 id="exemple_1">💭 Exemple</h2>
+<h2 id="exemple_1">Exemple</h2>
 <p>Une personne peut avoir lu une information plusieurs années auparavant, l'oublier consciemment, puis retrouver cette information plus tard et penser spontanément :</p>
 <blockquote>
 <p>« Je viens d'avoir cette idée. »
 </p>
 </blockquote>
 <p>Pourtant, l'information provenait d'un souvenir ancien.</p>
-<h2 id="fonctionnement">🧠 Fonctionnement</h2>
+<h2 id="fonctionnement">Fonctionnement</h2>
 <p>La cryptomnésie concerne principalement la <strong>mémoire de la source</strong>.</p>
 <p>Le contenu peut être récupéré alors que son origine est oubliée.</p>
-<h2 id="a-retenir_4">📌 À retenir</h2>
+<h2 id="a-retenir_4">À retenir</h2>
 <p>La cryptomnésie montre qu'un souvenir peut être conservé sans que sa <strong>source</strong> soit correctement identifiée.</p>
 <hr />
-<h1 id="106-les-faux-souvenirs" class="entry-title hc-1">🧠 10.6  Les faux souvenirs</h1>
-<h2 id="definition_5">🔎 Définition</h2>
+<h1 id="106-les-faux-souvenirs" class="entry-title hc-1">10.6  Les faux souvenirs</h1>
+<h2 id="definition_5">Définition</h2>
 <p>Un <strong>faux souvenir</strong> est un souvenir qui est vécu subjectivement comme réel mais qui contient des éléments inexacts ou qui concerne un événement qui n'a pas eu lieu comme il est mémorisé.</p>
 <p>La personne peut être sincèrement convaincue de l'exactitude de son souvenir.</p>
-<h2 id="comment-apparaissent-ils">🧩 Comment apparaissent-ils ?</h2>
+<h2 id="comment-apparaissent-ils">Comment apparaissent-ils ?</h2>
 <p>La mémoire humaine n'est pas un enregistrement vidéo.</p>
 <p>Lorsqu'un souvenir est rappelé, il peut être influencé par :</p>
 <ul>
@@ -273,23 +288,23 @@
 <li>les interprétations personnelles ;</li>
 <li>le temps écoulé.</li>
 </ul>
-<h2 id="reconstruction">🧠 Reconstruction</h2>
+<h2 id="reconstruction">Reconstruction</h2>
 <p>Le rappel d'un événement implique une reconstruction.</p>
 <p>Ainsi :</p>
-<p><strong>Événement → Encodage → Stockage → Rappel → Reconstruction</strong></p>
+<p><strong>Événement  Encodage  Stockage  Rappel  Reconstruction</strong></p>
 <p>Des modifications peuvent intervenir à différentes étapes.</p>
-<h2 id="a-retenir_5">📌 À retenir</h2>
+<h2 id="a-retenir_5">À retenir</h2>
 <p>Un faux souvenir n'est pas nécessairement un mensonge. Une personne peut être <strong>sincèrement convaincue</strong> qu'un événement s'est produit d'une certaine manière.</p>
 <hr />
-<h1 id="107-le-deja-vu" class="entry-title hc-2">🌀 10.7  Le déjà-vu</h1>
-<h2 id="definition_6">🔎 Définition</h2>
+<h1 id="107-le-deja-vu" class="entry-title hc-2">10.7  Le déjà-vu</h1>
+<h2 id="definition_6">Définition</h2>
 <p>Le <strong>déjà-vu</strong> est une impression soudaine de familiarité face à une situation pourtant vécue comme nouvelle.</p>
 <p>Une scène actuelle peut donner l'impression :</p>
 <blockquote>
 <p>« J'ai déjà vécu exactement ça. »
 </p>
 </blockquote>
-<h2 id="caracteristiques">🧠 Caractéristiques</h2>
+<h2 id="caracteristiques">Caractéristiques</h2>
 <p>Le phénomène est généralement :</p>
 <ul>
 <li>bref ;</li>
@@ -298,7 +313,7 @@
 <li>accompagné d'une forte impression de familiarité.</li>
 </ul>
 <p>La personne peut néanmoins savoir qu'elle ne reconnaît pas réellement la situation.</p>
-<h2 id="explications-etudiees">🧬 Explications étudiées</h2>
+<h2 id="explications-etudiees">Explications étudiées</h2>
 <p>Plusieurs mécanismes cognitifs et neurologiques sont étudiés.</p>
 <p>Le déjà-vu pourrait notamment être lié à une discordance temporaire entre :</p>
 <ul>
@@ -308,47 +323,47 @@
 <li>perception.</li>
 </ul>
 <p>Il peut également être observé dans certaines conditions neurologiques, notamment certaines formes d'épilepsie temporale.</p>
-<h2 id="a-retenir_6">📌 À retenir</h2>
+<h2 id="a-retenir_6">À retenir</h2>
 <p>Le déjà-vu correspond à une <strong>impression de familiarité inhabituelle face à une situation vécue comme nouvelle</strong>.</p>
 <hr />
-<h1 id="108-le-jamais-vu" class="entry-title hc-3">❓ 10.8  Le jamais-vu</h1>
-<h2 id="definition_7">🔎 Définition</h2>
+<h1 id="108-le-jamais-vu" class="entry-title hc-3">10.8  Le jamais-vu</h1>
+<h2 id="definition_7">Définition</h2>
 <p>Le <strong>jamais-vu</strong> est en quelque sorte l'expérience inverse du déjà-vu.</p>
 <p>Une situation, une personne ou un mot pourtant familier semble soudainement <strong>étrange ou totalement nouveau</strong>.</p>
-<h2 id="exemple_2">🧠 Exemple</h2>
+<h2 id="exemple_2">Exemple</h2>
 <p>Un mot très courant peut être regardé ou répété plusieurs fois jusqu'à donner l'impression qu'il devient étrange.</p>
 <p>La personne sait généralement qu'elle connaît le mot mais ressent momentanément une absence de familiarité.</p>
-<h2 id="a-retenir_7">📌 À retenir</h2>
-<p><strong>Déjà-vu → quelque chose de nouveau semble familier.</strong></p>
-<p><strong>Jamais-vu → quelque chose de familier semble nouveau.</strong></p>
+<h2 id="a-retenir_7">À retenir</h2>
+<p><strong>Déjà-vu  quelque chose de nouveau semble familier.</strong></p>
+<p><strong>Jamais-vu  quelque chose de familier semble nouveau.</strong></p>
 <hr />
-<h1 id="109-le-presque-vu" class="entry-title hc-4">🔤 10.9  Le presque-vu</h1>
-<h2 id="definition_8">🔎 Définition</h2>
+<h1 id="109-le-presque-vu" class="entry-title hc-4">10.9  Le presque-vu</h1>
+<h2 id="definition_8">Définition</h2>
 <p>Le <strong>presque-vu</strong> (<em>presque vu</em>, parfois rapproché du phénomène « tip-of-the-tongue » selon le contexte) désigne une situation dans laquelle une information semble sur le point d'être récupérée mais reste momentanément inaccessible.</p>
 <p>Le contenu semble « juste là », sans parvenir à être retrouvé immédiatement.</p>
-<h2 id="exemple_3">🧠 Exemple</h2>
+<h2 id="exemple_3">Exemple</h2>
 <p>Le nom d'un acteur est connu, mais impossible à retrouver pendant quelques secondes :</p>
 <blockquote>
 <p>« Je connais son nom… je l'ai presque… »
 </p>
 </blockquote>
 <p>Puis le nom revient spontanément quelques minutes plus tard.</p>
-<h2 id="particularite">🧩 Particularité</h2>
+<h2 id="particularite">Particularité</h2>
 <p>Le phénomène montre qu'une information peut être <strong>partiellement accessible</strong> sans être immédiatement récupérée.</p>
-<h2 id="a-retenir_8">📌 À retenir</h2>
+<h2 id="a-retenir_8">À retenir</h2>
 <p>Le presque-vu correspond à une <strong>difficulté temporaire de récupération d'une information connue</strong>.</p>
 <hr />
-<h1 id="1010-la-confabulation" class="entry-title hc-5">🧠 10.10  La confabulation</h1>
-<h2 id="definition_9">🔎 Définition</h2>
+<h1 id="1010-la-confabulation" class="entry-title hc-5">10.10  La confabulation</h1>
+<h2 id="definition_9">Définition</h2>
 <p>La <strong>confabulation</strong> correspond à la production involontaire de souvenirs ou d'informations incorrectes.</p>
 <p>La personne ne cherche pas nécessairement à tromper quelqu'un.</p>
 <p>Elle peut être convaincue de la réalité de ce qu'elle raconte.</p>
-<h2 id="deux-formes-generales">🧩 Deux formes générales</h2>
+<h2 id="deux-formes-generales">Deux formes générales</h2>
 <h3 id="confabulation-spontanee">Confabulation spontanée</h3>
 <p>Les informations incorrectes peuvent apparaître sans question particulière.</p>
 <h3 id="confabulation-provoquee">Confabulation provoquée</h3>
 <p>Elle apparaît principalement lorsqu'une personne tente de répondre à une question malgré une difficulté de mémoire.</p>
-<h2 id="causes-possibles_2">🧬 Causes possibles</h2>
+<h2 id="causes-possibles_2">Causes possibles</h2>
 <p>La confabulation peut notamment être associée à :</p>
 <ul>
 <li>syndrome de Korsakoff ;</li>
@@ -357,14 +372,14 @@
 <li>certaines maladies neurologiques ;</li>
 <li>troubles importants de la mémoire.</li>
 </ul>
-<h2 id="a-retenir_9">📌 À retenir</h2>
+<h2 id="a-retenir_9">À retenir</h2>
 <p>La confabulation est une <strong>production involontaire d'informations mnésiques incorrectes</strong>, souvent liée à une atteinte du fonctionnement de la mémoire.</p>
 <hr />
-<h1 id="1011-lamnesie-dissociative" class="entry-title hc-1">🧠 10.11  L'amnésie dissociative</h1>
-<h2 id="definition_10">🔎 Définition</h2>
+<h1 id="1011-lamnesie-dissociative" class="entry-title hc-1">10.11  L'amnésie dissociative</h1>
+<h2 id="definition_10">Définition</h2>
 <p>L'<strong>amnésie dissociative</strong> correspond à une incapacité à se rappeler des informations autobiographiques importantes, généralement associée à des événements ou expériences fortement stressants ou traumatiques.</p>
 <p>Elle ne correspond pas simplement à un oubli ordinaire.</p>
-<h2 id="manifestations_2">🧠 Manifestations</h2>
+<h2 id="manifestations_2">Manifestations</h2>
 <p>Elle peut concerner :</p>
 <ul>
 <li>certains événements précis ;</li>
@@ -372,10 +387,10 @@
 <li>des informations autobiographiques importantes ;</li>
 <li>parfois une période beaucoup plus large de l'histoire personnelle.</li>
 </ul>
-<h2 id="particularite_1">🧩 Particularité</h2>
+<h2 id="particularite_1">Particularité</h2>
 <p>Les souvenirs concernés sont principalement <strong>autobiographiques</strong>.</p>
 <p>Les capacités générales de mémoire ne sont pas nécessairement toutes altérées.</p>
-<h2 id="diagnostic_3">🩺 Diagnostic</h2>
+<h2 id="diagnostic_3">Diagnostic</h2>
 <p>L'évaluation clinique cherche notamment à distinguer cette amnésie :</p>
 <ul>
 <li>d'une maladie neurologique ;</li>
@@ -383,14 +398,14 @@
 <li>d'une autre cause médicale ;</li>
 <li>d'un oubli ordinaire.</li>
 </ul>
-<h2 id="a-retenir_10">📌 À retenir</h2>
+<h2 id="a-retenir_10">À retenir</h2>
 <p>L'amnésie dissociative est un <strong>trouble dissociatif</strong> dans lequel certains souvenirs autobiographiques importants deviennent temporairement ou durablement inaccessibles.</p>
 <hr />
-<h1 id="1012-lhypermnesie" class="entry-title hc-2">🧠 10.12  L'hypermnésie</h1>
-<h2 id="definition_11">🔎 Définition</h2>
+<h1 id="1012-lhypermnesie" class="entry-title hc-2">10.12  L'hypermnésie</h1>
+<h2 id="definition_11">Définition</h2>
 <p>L'<strong>hypermnésie</strong> désigne une augmentation inhabituelle de la capacité ou de l'accessibilité des souvenirs.</p>
 <p>Elle peut prendre différentes formes et ne signifie pas nécessairement qu'une personne possède une mémoire parfaite dans tous les domaines.</p>
-<h2 id="manifestations-possibles">🧩 Manifestations possibles</h2>
+<h2 id="manifestations-possibles">Manifestations possibles</h2>
 <p>Certaines personnes peuvent :</p>
 <ul>
 <li>se rappeler énormément de détails ;</li>
@@ -398,7 +413,7 @@
 <li>avoir des souvenirs autobiographiques particulièrement nombreux ;</li>
 <li>revivre certains souvenirs avec une grande précision.</li>
 </ul>
-<h2 id="particularite_2">🧠 Particularité</h2>
+<h2 id="particularite_2">Particularité</h2>
 <p>Une mémoire très développée dans un domaine ne signifie pas nécessairement que toutes les formes de mémoire sont supérieures.</p>
 <p>La mémoire comporte plusieurs systèmes :</p>
 <ul>
@@ -408,13 +423,13 @@
 <li>mémoire de travail ;</li>
 <li>mémoire autobiographique.</li>
 </ul>
-<h2 id="a-retenir_11">📌 À retenir</h2>
+<h2 id="a-retenir_11">À retenir</h2>
 <p>L'hypermnésie concerne une <strong>accessibilité ou une abondance inhabituelle de certains souvenirs</strong>, et non une mémoire parfaite dans tous les domaines.</p>
 <hr />
-<h1 id="1013-lhyperthymesie" class="entry-title hc-3">🧠 10.13  L'hyperthymésie</h1>
-<h2 id="definition_12">🔎 Définition</h2>
+<h1 id="1013-lhyperthymesie" class="entry-title hc-3">10.13  L'hyperthymésie</h1>
+<h2 id="definition_12">Définition</h2>
 <p>L'<strong>hyperthymésie</strong>, ou <strong>Highly Superior Autobiographical Memory (HSAM)</strong>, désigne une capacité exceptionnelle à se rappeler de nombreux événements autobiographiques avec une grande précision.</p>
-<h2 id="particularite_3">📅 Particularité</h2>
+<h2 id="particularite_3">Particularité</h2>
 <p>Les personnes présentant cette caractéristique peuvent parfois se souvenir d'un très grand nombre de journées de leur vie, notamment en associant :</p>
 <ul>
 <li>une date ;</li>
@@ -422,7 +437,7 @@
 <li>un lieu ;</li>
 <li>des activités réalisées ce jour-là.</li>
 </ul>
-<h2 id="memoire-autobiographique">🧠 Mémoire autobiographique</h2>
+<h2 id="memoire-autobiographique">Mémoire autobiographique</h2>
 <p>L'hyperthymésie concerne principalement la <strong>mémoire autobiographique</strong>.</p>
 <p>Elle ne signifie pas nécessairement :</p>
 <ul>
@@ -430,25 +445,25 @@
 <li>une mémoire photographique ;</li>
 <li>une capacité exceptionnelle à mémoriser tous les types d'informations.</li>
 </ul>
-<h2 id="a-retenir_12">📌 À retenir</h2>
+<h2 id="a-retenir_12">À retenir</h2>
 <p>L'hyperthymésie correspond à une <strong>capacité exceptionnelle de mémoire autobiographique</strong>, qui constitue un phénomène rare.</p>
 <hr />
-<h1 id="1014-la-memoire-photographique" class="entry-title hc-4">🧠 10.14  La mémoire photographique</h1>
-<h2 id="definition_13">🔎 Définition</h2>
+<h1 id="1014-la-memoire-photographique" class="entry-title hc-4">10.14  La mémoire photographique</h1>
+<h2 id="definition_13">Définition</h2>
 <p>L'expression <strong>« mémoire photographique »</strong> est très utilisée dans le langage courant pour désigner la capacité supposée de mémoriser une image avec une précision quasi parfaite.</p>
 <p>Cependant, l'existence d'une véritable mémoire photographique au sens populaire du terme n'est pas établie comme une capacité générale démontrée.</p>
-<h2 id="a-ne-pas-confondre">🧩 À ne pas confondre</h2>
+<h2 id="a-ne-pas-confondre">À ne pas confondre</h2>
 <p>Certaines personnes possèdent des capacités mnésiques exceptionnelles, mais cela ne signifie pas nécessairement qu'elles peuvent :</p>
 <ul>
 <li>mémoriser une page entière instantanément ;</li>
 <li>revoir mentalement une image exactement comme une photographie ;</li>
 <li>se souvenir de tout ce qu'elles ont vu.</li>
 </ul>
-<h2 id="a-retenir_13">📌 À retenir</h2>
+<h2 id="a-retenir_13">À retenir</h2>
 <p>La <strong>« mémoire photographique »</strong> est principalement une expression populaire. Elle ne correspond pas à un diagnostic clinique officiel.</p>
 <hr />
-<h1 id="1015-les-souvenirs-flash" class="entry-title hc-5">🧠 10.15  Les souvenirs flash</h1>
-<h2 id="definition_14">🔎 Définition</h2>
+<h1 id="1015-les-souvenirs-flash" class="entry-title hc-5">10.15  Les souvenirs flash</h1>
+<h2 id="definition_14">Définition</h2>
 <p>Un <strong>souvenir flash</strong> est un souvenir particulièrement vif et détaillé associé à un événement émotionnellement important ou surprenant.</p>
 <p>La personne peut avoir l'impression de se souvenir très précisément :</p>
 <ul>
@@ -457,37 +472,58 @@
 <li>de ce qu'elle ressentait ;</li>
 <li>de certaines informations autour de l'événement.</li>
 </ul>
-<h2 id="exemple_4">🧠 Exemple</h2>
+<h2 id="exemple_4">Exemple</h2>
 <p>Une personne peut conserver un souvenir extrêmement précis de l'endroit où elle se trouvait lorsqu'elle a appris une nouvelle importante.</p>
-<h2 id="precision-importante">⚠️ Précision importante</h2>
+<h2 id="precision-importante">Précision importante</h2>
 <p>Un souvenir vécu comme extrêmement précis n'est pas nécessairement totalement exact.</p>
 <p>La confiance dans un souvenir et son exactitude réelle sont deux choses différentes.</p>
-<h2 id="a-retenir_14">📌 À retenir</h2>
+<h2 id="a-retenir_14">À retenir</h2>
 <p>Les souvenirs flash sont <strong>très vivaces et fortement associés aux émotions</strong>, mais leur précision objective peut évoluer avec le temps.</p>
 <hr />
-<h1 id="a-retenir-partie-10" class="entry-title hc-1">🧠 À RETENIR  PARTIE 10</h1>
+<h1 id="a-retenir-partie-10" class="entry-title hc-1">À RETENIR  PARTIE 10</h1>
 <p>La mémoire n'est pas un système de stockage parfaitement fidèle.</p>
 <p>Elle comprend plusieurs étapes :</p>
-<p><strong>📥 Encodage</strong></p>
-<p>→ Les informations sont enregistrées.</p>
-<p><strong>💾 Stockage</strong></p>
-<p>→ Certaines informations sont conservées.</p>
-<p><strong>🔎 Récupération</strong></p>
-<p>→ Les informations sont rappelées.</p>
+<p>** Encodage**</p>
+<p>Les informations sont enregistrées.</p>
+<p>** Stockage**</p>
+<p>Certaines informations sont conservées.</p>
+<p>** Récupération**</p>
+<p>Les informations sont rappelées.</p>
 <p>À chacune de ces étapes, des erreurs peuvent apparaître.</p>
 <p>Ainsi, la mémoire peut être :</p>
-<p><strong>⬇️ diminuée</strong> → amnésie.</p>
-<p><strong>🔄 déformée</strong> → paramnésies, faux souvenirs.</p>
-<p><strong>❓ difficile à récupérer temporairement</strong> → presque-vu.</p>
-<p><strong>🌀 associée à une familiarité inhabituelle</strong> → déjà-vu / jamais-vu.</p>
-<p><strong>💭 reconstruite avec des informations incorrectes</strong> → confabulation.</p>
-<p><strong>⬆️ exceptionnellement accessible dans certains domaines</strong> → hypermnésie / hyperthymésie.</p>
+<p>** diminuée**  amnésie.</p>
+<p>** déformée**  paramnésies, faux souvenirs.</p>
+<p>** difficile à récupérer temporairement**  presque-vu.</p>
+<p>** associée à une familiarité inhabituelle**  déjà-vu / jamais-vu.</p>
+<p>** reconstruite avec des informations incorrectes**  confabulation.</p>
+<p>** exceptionnellement accessible dans certains domaines**  hypermnésie / hyperthymésie.</p>
 <p>La mémoire constitue donc moins une « archive » parfaite qu'un <strong>système dynamique de reconstruction des expériences passées</strong>.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Syndromes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-medicaux-avec-consequences-psychologiques/"><span class="similar-icon">🧬</span>Syndromes médicaux avec conséquences psychologiques</a><a class="similar-item" href="/chapitre/syndromes-phenomenes-psychologiques-modernes-syndromes/"><span class="similar-icon">🧬</span>Phénomènes psychologiques modernes (syndromes)</a><a class="similar-item" href="/chapitre/syndromes-syndromes-rares-et-phenomenes-particuliers/"><span class="similar-icon">🧬</span>Syndromes rares et phénomènes particuliers</a></div>
+      <h2>Autres chapitres de « Syndromes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-medicaux-avec-consequences-psychologiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes médicaux avec conséquences psychologiques</a><a class="similar-item" href="/chapitre/syndromes-phenomenes-psychologiques-modernes-syndromes/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Phénomènes psychologiques modernes (syndromes)</a><a class="similar-item" href="/chapitre/syndromes-syndromes-rares-et-phenomenes-particuliers/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes rares et phénomènes particuliers</a></div>
     </div>
     <a class="back-link" href="/categorie/syndromes/">← Retour à « Syndromes psychologiques »</a>
   </div>
@@ -573,23 +609,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -607,7 +645,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -787,9 +825,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -798,10 +838,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -908,7 +948,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -948,8 +988,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -980,7 +1020,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1035,7 +1075,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1059,17 +1099,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1111,7 +1151,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

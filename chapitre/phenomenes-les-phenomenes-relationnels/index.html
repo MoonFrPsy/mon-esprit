@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#91-lattachement">❤️ 9.1 L'attachement</a></li><li><a href="#92-le-besoin-de-proximite">🧸 9.2 Le besoin de proximité</a></li><li><a href="#93-le-sentiment-de-securite-relationnelle">🤝 9.3 Le sentiment de sécurité relationnelle</a></li><li><a href="#94-les-styles-dattachement">🧠 9.4 Les styles d'attachement</a></li><li><a href="#95-lattraction-interpersonnelle">💕 9.5 L'attraction interpersonnelle</a></li><li><a href="#96-lattraction-physique">✨ 9.6 L'attraction physique</a></li><li><a href="#97-lattraction-fondee-sur-la-similarite">🧠 9.7 L'attraction fondée sur la similarité</a></li><li><a href="#98-leffet-de-proximite">📍 9.8 L'effet de proximité</a></li><li><a href="#99-leffet-de-simple-exposition-dans-les-relations">🔁 9.9 L'effet de simple exposition dans les relations</a></li><li><a href="#910-le-mimetisme-relationnel">🪞 9.10 Le mimétisme relationnel</a></li><li><a href="#911-la-communication-interpersonnelle">🗣️ 9.11 La communication interpersonnelle</a></li><li><a href="#912-lecoute-active">👂 9.12 L'écoute active</a></li><li><a href="#913-la-prise-de-perspective">🧠 9.13 La prise de perspective</a></li><li><a href="#914-lempathie">❤️ 9.14 L'empathie</a></li><li><a href="#915-la-theorie-de-lesprit">🧠 9.15 La théorie de l'esprit</a></li><li><a href="#916-la-confiance">🤝 9.16 La confiance</a></li><li><a href="#917-la-confiance-relationnelle">🔐 9.17 La confiance relationnelle</a></li><li><a href="#918-la-reciprocite-relationnelle">🔄 9.18 La réciprocité relationnelle</a></li><li><a href="#919-le-soutien-social">🫂 9.19 Le soutien social</a></li><li><a href="#920-lauto-divulgation">💬 9.20 L'auto-divulgation</a></li><li><a href="#921-lintimite-psychologique">🔓 9.21 L'intimité psychologique</a></li><li><a href="#922-lamour">💞 9.22 L'amour</a></li><li><a href="#923-la-passion-amoureuse">🔥 9.23 La passion amoureuse</a></li><li><a href="#924-levolution-dune-relation">🌱 9.24 L'évolution d'une relation</a></li><li><a href="#925-la-jalousie">💚 9.25 La jalousie</a></li><li><a href="#926-le-sentiment-de-rejet">👀 9.26 Le sentiment de rejet</a></li><li><a href="#927-la-douleur-sociale">💔 9.27 La douleur sociale</a></li><li><a href="#928-lexclusion-sociale">🚪 9.28 L'exclusion sociale</a></li><li><a href="#929-le-conflit-relationnel">⚡ 9.29 Le conflit relationnel</a></li><li><a href="#930-lescalade-du-conflit">🔥 9.30 L'escalade du conflit</a></li><li><a href="#931-lattribution-dans-les-relations">🧠 9.31 L'attribution dans les relations</a></li><li><a href="#932-le-biais-dattribution-dans-les-relations">🔎 9.32 Le biais d'attribution dans les relations</a></li><li><a href="#933-les-attentes-relationnelles">🪞 9.33 Les attentes relationnelles</a></li><li><a href="#934-les-propheties-autorealisatrices-dans-les-relations">🔮 9.34 Les prophéties autoréalisatrices dans les relations</a></li><li><a href="#935-la-reparation-relationnelle">🧩 9.35 La réparation relationnelle</a></li><li><a href="#936-les-limites-relationnelles">🛡️ 9.36 Les limites relationnelles</a></li><li><a href="#937-la-dependance-relationnelle">🔄 9.37 La dépendance relationnelle</a></li><li><a href="#938-linterdependance">🧠 9.38 L'interdépendance</a></li><li><a href="#939-la-rupture-relationnelle">💔 9.39 La rupture relationnelle</a></li><li><a href="#940-pourquoi-etudier-les-phenomenes-relationnels">🔬 9.40 Pourquoi étudier les phénomènes relationnels ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#91-lattachement">9.1 L'attachement</a></li><li><a href="#92-le-besoin-de-proximite">9.2 Le besoin de proximité</a></li><li><a href="#93-le-sentiment-de-securite-relationnelle">9.3 Le sentiment de sécurité relationnelle</a></li><li><a href="#94-les-styles-dattachement">9.4 Les styles d'attachement</a></li><li><a href="#95-lattraction-interpersonnelle">9.5 L'attraction interpersonnelle</a></li><li><a href="#96-lattraction-physique">9.6 L'attraction physique</a></li><li><a href="#97-lattraction-fondee-sur-la-similarite">9.7 L'attraction fondée sur la similarité</a></li><li><a href="#98-leffet-de-proximite">9.8 L'effet de proximité</a></li><li><a href="#99-leffet-de-simple-exposition-dans-les-relations">9.9 L'effet de simple exposition dans les relations</a></li><li><a href="#910-le-mimetisme-relationnel">9.10 Le mimétisme relationnel</a></li><li><a href="#911-la-communication-interpersonnelle">9.11 La communication interpersonnelle</a></li><li><a href="#912-lecoute-active">9.12 L'écoute active</a></li><li><a href="#913-la-prise-de-perspective">9.13 La prise de perspective</a></li><li><a href="#914-lempathie">9.14 L'empathie</a></li><li><a href="#915-la-theorie-de-lesprit">9.15 La théorie de l'esprit</a></li><li><a href="#916-la-confiance">9.16 La confiance</a></li><li><a href="#917-la-confiance-relationnelle">9.17 La confiance relationnelle</a></li><li><a href="#918-la-reciprocite-relationnelle">9.18 La réciprocité relationnelle</a></li><li><a href="#919-le-soutien-social">9.19 Le soutien social</a></li><li><a href="#920-lauto-divulgation">9.20 L'auto-divulgation</a></li><li><a href="#921-lintimite-psychologique">9.21 L'intimité psychologique</a></li><li><a href="#922-lamour">9.22 L'amour</a></li><li><a href="#923-la-passion-amoureuse">9.23 La passion amoureuse</a></li><li><a href="#924-levolution-dune-relation">9.24 L'évolution d'une relation</a></li><li><a href="#925-la-jalousie">9.25 La jalousie</a></li><li><a href="#926-le-sentiment-de-rejet">9.26 Le sentiment de rejet</a></li><li><a href="#927-la-douleur-sociale">9.27 La douleur sociale</a></li><li><a href="#928-lexclusion-sociale">9.28 L'exclusion sociale</a></li><li><a href="#929-le-conflit-relationnel">9.29 Le conflit relationnel</a></li><li><a href="#930-lescalade-du-conflit">9.30 L'escalade du conflit</a></li><li><a href="#931-lattribution-dans-les-relations">9.31 L'attribution dans les relations</a></li><li><a href="#932-le-biais-dattribution-dans-les-relations">9.32 Le biais d'attribution dans les relations</a></li><li><a href="#933-les-attentes-relationnelles">9.33 Les attentes relationnelles</a></li><li><a href="#934-les-propheties-autorealisatrices-dans-les-relations">9.34 Les prophéties autoréalisatrices dans les relations</a></li><li><a href="#935-la-reparation-relationnelle">9.35 La réparation relationnelle</a></li><li><a href="#936-les-limites-relationnelles">9.36 Les limites relationnelles</a></li><li><a href="#937-la-dependance-relationnelle">9.37 La dépendance relationnelle</a></li><li><a href="#938-linterdependance">9.38 L'interdépendance</a></li><li><a href="#939-la-rupture-relationnelle">9.39 La rupture relationnelle</a></li><li><a href="#940-pourquoi-etudier-les-phenomenes-relationnels">9.40 Pourquoi étudier les phénomènes relationnels ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les phénomènes relationnels',
         category: 'Phénomènes psychologiques',
-        icon: '🔮'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/phenomenes/">🔮 Phénomènes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/phenomenes/">Phénomènes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les phénomènes relationnels</h1>
     </div>
     <div id="resume-banner"></div>
@@ -105,7 +120,7 @@
 <p>Ces phénomènes peuvent être observés dans les relations amicales, familiales, amoureuses, professionnelles ou sociales.
 </p>
 </blockquote>
-<h2 id="91-lattachement" class="entry-title hc-1">❤️ 9.1 L'attachement</h2>
+<h2 id="91-lattachement" class="entry-title hc-1">9.1 L'attachement</h2>
 <p>L'attachement désigne le lien affectif qui se construit entre une personne et une autre personne considérée comme importante.</p>
 <p>Il peut notamment apporter :</p>
 <ul>
@@ -116,7 +131,7 @@
 <li>sentiment de continuité relationnelle</li>
 </ul>
 <p>L'attachement joue un rôle important tout au long de la vie.</p>
-<h2 id="92-le-besoin-de-proximite" class="entry-title hc-2">🧸 9.2 Le besoin de proximité</h2>
+<h2 id="92-le-besoin-de-proximite" class="entry-title hc-2">9.2 Le besoin de proximité</h2>
 <p>Le besoin de proximité correspond à la tendance à rechercher la présence physique ou émotionnelle de personnes importantes.</p>
 <p>Il peut être particulièrement présent lors :</p>
 <ul>
@@ -125,7 +140,7 @@
 <li>d'une situation inconnue</li>
 <li>d'une difficulté émotionnelle</li>
 </ul>
-<h2 id="93-le-sentiment-de-securite-relationnelle" class="entry-title hc-3">🤝 9.3 Le sentiment de sécurité relationnelle</h2>
+<h2 id="93-le-sentiment-de-securite-relationnelle" class="entry-title hc-3">9.3 Le sentiment de sécurité relationnelle</h2>
 <p>Le sentiment de sécurité relationnelle correspond à l'impression qu'une relation est suffisamment stable et prévisible pour permettre une certaine confiance.</p>
 <p>Il peut faciliter :</p>
 <ul>
@@ -134,7 +149,7 @@
 <li>la demande de soutien</li>
 <li>la proximité</li>
 </ul>
-<h2 id="94-les-styles-dattachement" class="entry-title hc-4">🧠 9.4 Les styles d'attachement</h2>
+<h2 id="94-les-styles-dattachement" class="entry-title hc-4">9.4 Les styles d'attachement</h2>
 <p>Les recherches sur l'attachement décrivent différents profils ou dimensions concernant la manière dont les individus vivent la proximité et la sécurité relationnelles.</p>
 <p>Les modèles contemporains s'intéressent notamment à :</p>
 <ul>
@@ -143,7 +158,7 @@
 <li>la sécurité relationnelle</li>
 </ul>
 <p>Ces caractéristiques ne constituent pas nécessairement des catégories fixes.</p>
-<h2 id="95-lattraction-interpersonnelle" class="entry-title hc-5">💕 9.5 L'attraction interpersonnelle</h2>
+<h2 id="95-lattraction-interpersonnelle" class="entry-title hc-5">9.5 L'attraction interpersonnelle</h2>
 <p>L'attraction interpersonnelle correspond au fait d'éprouver une attirance ou une préférence pour une personne.</p>
 <p>Elle peut être influencée par :</p>
 <ul>
@@ -154,10 +169,10 @@
 <li>les expériences partagées</li>
 <li>les interactions précédentes</li>
 </ul>
-<h2 id="96-lattraction-physique" class="entry-title hc-1">✨ 9.6 L'attraction physique</h2>
+<h2 id="96-lattraction-physique" class="entry-title hc-1">9.6 L'attraction physique</h2>
 <p>L'attraction physique correspond à une forme d'attirance fondée notamment sur l'apparence ou certaines caractéristiques physiques.</p>
 <p>Elle peut participer à l'attraction globale mais ne constitue qu'un de ses nombreux facteurs.</p>
-<h2 id="97-lattraction-fondee-sur-la-similarite" class="entry-title hc-2">🧠 9.7 L'attraction fondée sur la similarité</h2>
+<h2 id="97-lattraction-fondee-sur-la-similarite" class="entry-title hc-2">9.7 L'attraction fondée sur la similarité</h2>
 <p>La similarité correspond au fait de partager certaines caractéristiques avec une autre personne.</p>
 <p>Les similarités peuvent concerner :</p>
 <ul>
@@ -168,13 +183,13 @@
 <li>la personnalité</li>
 </ul>
 <p>La similarité perçue peut favoriser l'attraction et la proximité.</p>
-<h2 id="98-leffet-de-proximite" class="entry-title hc-3">📍 9.8 L'effet de proximité</h2>
+<h2 id="98-leffet-de-proximite" class="entry-title hc-3">9.8 L'effet de proximité</h2>
 <p>L'effet de proximité correspond au fait que le fait de rencontrer fréquemment une personne peut augmenter la probabilité de développer une familiarité ou une préférence envers elle.</p>
 <p>La proximité géographique ou situationnelle facilite notamment les occasions d'interaction.</p>
-<h2 id="99-leffet-de-simple-exposition-dans-les-relations" class="entry-title hc-4">🔁 9.9 L'effet de simple exposition dans les relations</h2>
+<h2 id="99-leffet-de-simple-exposition-dans-les-relations" class="entry-title hc-4">9.9 L'effet de simple exposition dans les relations</h2>
 <p>Le fait d'être régulièrement exposé à une personne ou à un stimulus peut favoriser une préférence accrue pour celui-ci dans certaines conditions.</p>
 <p>Dans les relations, les rencontres répétées peuvent donc contribuer à augmenter la familiarité.</p>
-<h2 id="910-le-mimetisme-relationnel" class="entry-title hc-5">🪞 9.10 Le mimétisme relationnel</h2>
+<h2 id="910-le-mimetisme-relationnel" class="entry-title hc-5">9.10 Le mimétisme relationnel</h2>
 <p>Le mimétisme relationnel correspond à la tendance à reproduire certains comportements d'une personne avec laquelle une interaction est en cours.</p>
 <p>Cela peut concerner :</p>
 <ul>
@@ -184,7 +199,7 @@
 <li>certaines attitudes</li>
 </ul>
 <p>Il peut faciliter la synchronisation sociale.</p>
-<h2 id="911-la-communication-interpersonnelle" class="entry-title hc-1">🗣️ 9.11 La communication interpersonnelle</h2>
+<h2 id="911-la-communication-interpersonnelle" class="entry-title hc-1">9.11 La communication interpersonnelle</h2>
 <p>La communication interpersonnelle correspond à l'échange d'informations entre plusieurs individus.</p>
 <p>Elle comprend notamment :</p>
 <ul>
@@ -196,7 +211,7 @@
 <li>les silences</li>
 </ul>
 <p>La communication ne se limite donc pas au langage verbal.</p>
-<h2 id="912-lecoute-active" class="entry-title hc-2">👂 9.12 L'écoute active</h2>
+<h2 id="912-lecoute-active" class="entry-title hc-2">9.12 L'écoute active</h2>
 <p>L'écoute active correspond à une manière d'écouter visant à comprendre précisément ce que l'autre personne exprime.</p>
 <p>Elle peut notamment impliquer :</p>
 <ul>
@@ -206,10 +221,10 @@
 <li>la prise en compte des émotions</li>
 <li>la limitation des interruptions</li>
 </ul>
-<h2 id="913-la-prise-de-perspective" class="entry-title hc-3">🧠 9.13 La prise de perspective</h2>
+<h2 id="913-la-prise-de-perspective" class="entry-title hc-3">9.13 La prise de perspective</h2>
 <p>La prise de perspective correspond à la capacité à essayer de comprendre une situation du point de vue d'une autre personne.</p>
 <p>Elle ne signifie pas nécessairement être d'accord avec cette personne.</p>
-<h2 id="914-lempathie" class="entry-title hc-4">❤️ 9.14 L'empathie</h2>
+<h2 id="914-lempathie" class="entry-title hc-4">9.14 L'empathie</h2>
 <p>L'empathie correspond à la capacité à comprendre ou à ressentir certains aspects de l'expérience d'une autre personne.</p>
 <p>Elle peut comporter :</p>
 <ul>
@@ -217,7 +232,7 @@
 <li>une dimension émotionnelle</li>
 </ul>
 <p>L'empathie ne signifie pas nécessairement partager exactement la même émotion.</p>
-<h2 id="915-la-theorie-de-lesprit" class="entry-title hc-5">🧠 9.15 La théorie de l'esprit</h2>
+<h2 id="915-la-theorie-de-lesprit" class="entry-title hc-5">9.15 La théorie de l'esprit</h2>
 <p>La théorie de l'esprit désigne la capacité à attribuer à soi-même et aux autres des états mentaux tels que :</p>
 <ul>
 <li>pensées</li>
@@ -227,7 +242,7 @@
 <li>émotions</li>
 </ul>
 <p>Elle permet notamment de comprendre qu'une autre personne peut avoir une représentation différente de la réalité.</p>
-<h2 id="916-la-confiance" class="entry-title hc-1">🤝 9.16 La confiance</h2>
+<h2 id="916-la-confiance" class="entry-title hc-1">9.16 La confiance</h2>
 <p>La confiance correspond à une attente selon laquelle une autre personne adoptera un comportement relativement prévisible ou favorable dans une situation donnée.</p>
 <p>Elle se construit notamment à partir :</p>
 <ul>
@@ -236,7 +251,7 @@
 <li>de la communication</li>
 <li>de la cohérence des comportements</li>
 </ul>
-<h2 id="917-la-confiance-relationnelle" class="entry-title hc-2">🔐 9.17 La confiance relationnelle</h2>
+<h2 id="917-la-confiance-relationnelle" class="entry-title hc-2">9.17 La confiance relationnelle</h2>
 <p>La confiance relationnelle correspond à la confiance développée spécifiquement dans le cadre d'une relation.</p>
 <p>Elle peut être renforcée par :</p>
 <ul>
@@ -247,7 +262,7 @@
 <li>la cohérence</li>
 </ul>
 <p>Elle peut également être fragilisée par certaines expériences.</p>
-<h2 id="918-la-reciprocite-relationnelle" class="entry-title hc-3">🔄 9.18 La réciprocité relationnelle</h2>
+<h2 id="918-la-reciprocite-relationnelle" class="entry-title hc-3">9.18 La réciprocité relationnelle</h2>
 <p>La réciprocité correspond au fait que les comportements positifs peuvent être mutuellement renforcés dans une relation.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -257,7 +272,7 @@
 <li>l'écoute</li>
 <li>la confiance</li>
 </ul>
-<h2 id="919-le-soutien-social" class="entry-title hc-4">🫂 9.19 Le soutien social</h2>
+<h2 id="919-le-soutien-social" class="entry-title hc-4">9.19 Le soutien social</h2>
 <p>Le soutien social correspond aux ressources apportées par l'environnement relationnel.</p>
 <p>Il peut être :</p>
 <ul>
@@ -267,7 +282,7 @@
 <li>pratique</li>
 </ul>
 <p>La perception d'un soutien disponible peut également avoir une importance psychologique.</p>
-<h2 id="920-lauto-divulgation" class="entry-title hc-5">💬 9.20 L'auto-divulgation</h2>
+<h2 id="920-lauto-divulgation" class="entry-title hc-5">9.20 L'auto-divulgation</h2>
 <p>L'auto-divulgation correspond au fait de communiquer volontairement des informations personnelles à une autre personne.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -278,7 +293,7 @@
 <li>des difficultés</li>
 </ul>
 <p>Elle participe souvent au développement de l'intimité.</p>
-<h2 id="921-lintimite-psychologique" class="entry-title hc-1">🔓 9.21 L'intimité psychologique</h2>
+<h2 id="921-lintimite-psychologique" class="entry-title hc-1">9.21 L'intimité psychologique</h2>
 <p>L'intimité psychologique correspond au degré de proximité émotionnelle et personnelle présent dans une relation.</p>
 <p>Elle peut être favorisée par :</p>
 <ul>
@@ -288,7 +303,7 @@
 <li>la compréhension mutuelle</li>
 <li>le soutien</li>
 </ul>
-<h2 id="922-lamour" class="entry-title hc-2">💞 9.22 L'amour</h2>
+<h2 id="922-lamour" class="entry-title hc-2">9.22 L'amour</h2>
 <p>L'amour correspond à un ensemble complexe d'expériences affectives pouvant inclure :</p>
 <ul>
 <li>l'attachement</li>
@@ -298,7 +313,7 @@
 <li>l'engagement</li>
 </ul>
 <p>Sa forme et son expression peuvent varier considérablement selon les relations et les individus.</p>
-<h2 id="923-la-passion-amoureuse" class="entry-title hc-3">🔥 9.23 La passion amoureuse</h2>
+<h2 id="923-la-passion-amoureuse" class="entry-title hc-3">9.23 La passion amoureuse</h2>
 <p>La passion amoureuse correspond à une forme d'expérience amoureuse caractérisée notamment par une forte activation émotionnelle et une attirance importante.</p>
 <p>Elle peut s'accompagner :</p>
 <ul>
@@ -307,7 +322,7 @@
 <li>d'une forte motivation à maintenir le lien</li>
 <li>d'une intensité émotionnelle élevée</li>
 </ul>
-<h2 id="924-levolution-dune-relation" class="entry-title hc-4">🌱 9.24 L'évolution d'une relation</h2>
+<h2 id="924-levolution-dune-relation" class="entry-title hc-4">9.24 L'évolution d'une relation</h2>
 <p>Les relations évoluent au cours du temps.</p>
 <p>Elles peuvent passer par différentes phases :</p>
 <ul>
@@ -318,7 +333,7 @@
 <li>éloignement</li>
 </ul>
 <p>Il n'existe cependant pas de trajectoire unique applicable à toutes les relations.</p>
-<h2 id="925-la-jalousie" class="entry-title hc-5">💚 9.25 La jalousie</h2>
+<h2 id="925-la-jalousie" class="entry-title hc-5">9.25 La jalousie</h2>
 <p>La jalousie correspond à une réaction émotionnelle pouvant apparaître lorsqu'une relation importante semble menacée par une autre personne ou une situation.</p>
 <p>Elle peut inclure :</p>
 <ul>
@@ -329,10 +344,10 @@
 <li>comparaison</li>
 </ul>
 <p>La jalousie n'est pas exclusivement liée aux relations amoureuses.</p>
-<h2 id="926-le-sentiment-de-rejet" class="entry-title hc-1">👀 9.26 Le sentiment de rejet</h2>
+<h2 id="926-le-sentiment-de-rejet" class="entry-title hc-1">9.26 Le sentiment de rejet</h2>
 <p>Le sentiment de rejet correspond à l'expérience subjective d'être exclu, refusé ou insuffisamment accepté par une autre personne ou un groupe.</p>
 <p>Il peut apparaître même lorsque l'intention de rejeter n'était pas nécessairement présente.</p>
-<h2 id="927-la-douleur-sociale" class="entry-title hc-2">💔 9.27 La douleur sociale</h2>
+<h2 id="927-la-douleur-sociale" class="entry-title hc-2">9.27 La douleur sociale</h2>
 <p>La douleur sociale correspond à la souffrance psychologique associée à certaines expériences relationnelles telles que :</p>
 <ul>
 <li>le rejet</li>
@@ -341,7 +356,7 @@
 <li>la perte d'une relation</li>
 </ul>
 <p>Elle peut produire une expérience émotionnelle particulièrement intense.</p>
-<h2 id="928-lexclusion-sociale" class="entry-title hc-3">🚪 9.28 L'exclusion sociale</h2>
+<h2 id="928-lexclusion-sociale" class="entry-title hc-3">9.28 L'exclusion sociale</h2>
 <p>L'exclusion sociale correspond au fait d'être tenu à l'écart d'une interaction, d'un groupe ou d'une activité sociale.</p>
 <p>Elle peut être :</p>
 <ul>
@@ -351,10 +366,10 @@
 <li>implicite</li>
 </ul>
 <p>Ses effets peuvent dépendre de la durée et de l'importance de la relation concernée.</p>
-<h2 id="929-le-conflit-relationnel" class="entry-title hc-4">⚡ 9.29 Le conflit relationnel</h2>
+<h2 id="929-le-conflit-relationnel" class="entry-title hc-4">9.29 Le conflit relationnel</h2>
 <p>Un conflit relationnel apparaît lorsque les intérêts, attentes, besoins ou comportements de plusieurs personnes entrent en opposition.</p>
 <p>Un conflit peut être ponctuel sans nécessairement entraîner la rupture d'une relation.</p>
-<h2 id="930-lescalade-du-conflit" class="entry-title hc-5">🔥 9.30 L'escalade du conflit</h2>
+<h2 id="930-lescalade-du-conflit" class="entry-title hc-5">9.30 L'escalade du conflit</h2>
 <p>L'escalade du conflit correspond à une augmentation progressive de l'intensité d'un désaccord.</p>
 <p>Elle peut être favorisée par :</p>
 <ul>
@@ -364,7 +379,7 @@
 <li>l'augmentation de l'émotion</li>
 <li>les comportements hostiles</li>
 </ul>
-<h2 id="931-lattribution-dans-les-relations" class="entry-title hc-1">🧠 9.31 L'attribution dans les relations</h2>
+<h2 id="931-lattribution-dans-les-relations" class="entry-title hc-1">9.31 L'attribution dans les relations</h2>
 <p>L'attribution correspond à la manière dont une personne explique le comportement d'une autre personne.</p>
 <p>Par exemple, un comportement peut être interprété comme résultant :</p>
 <ul>
@@ -374,10 +389,10 @@
 <li>des circonstances</li>
 </ul>
 <p>Ces interprétations influencent les relations.</p>
-<h2 id="932-le-biais-dattribution-dans-les-relations" class="entry-title hc-2">🔎 9.32 Le biais d'attribution dans les relations</h2>
+<h2 id="932-le-biais-dattribution-dans-les-relations" class="entry-title hc-2">9.32 Le biais d'attribution dans les relations</h2>
 <p>Les personnes peuvent parfois interpréter les comportements des autres en accordant trop d'importance à leurs caractéristiques personnelles et pas assez au contexte.</p>
 <p>Cela peut favoriser certains malentendus.</p>
-<h2 id="933-les-attentes-relationnelles" class="entry-title hc-3">🪞 9.33 Les attentes relationnelles</h2>
+<h2 id="933-les-attentes-relationnelles" class="entry-title hc-3">9.33 Les attentes relationnelles</h2>
 <p>Les attentes relationnelles correspondent aux représentations concernant la manière dont une relation devrait fonctionner.</p>
 <p>Elles peuvent concerner :</p>
 <ul>
@@ -389,10 +404,10 @@
 <li>les limites</li>
 </ul>
 <p>Elles peuvent être influencées par les expériences antérieures.</p>
-<h2 id="934-les-propheties-autorealisatrices-dans-les-relations" class="entry-title hc-4">🔮 9.34 Les prophéties autoréalisatrices dans les relations</h2>
+<h2 id="934-les-propheties-autorealisatrices-dans-les-relations" class="entry-title hc-4">9.34 Les prophéties autoréalisatrices dans les relations</h2>
 <p>Une croyance concernant une relation peut parfois influencer les comportements de manière à augmenter la probabilité que le résultat attendu se produise.</p>
 <p>Par exemple, attendre systématiquement un rejet peut modifier la manière d'interagir avec l'autre.</p>
-<h2 id="935-la-reparation-relationnelle" class="entry-title hc-5">🧩 9.35 La réparation relationnelle</h2>
+<h2 id="935-la-reparation-relationnelle" class="entry-title hc-5">9.35 La réparation relationnelle</h2>
 <p>La réparation relationnelle correspond aux processus permettant de restaurer une relation après un conflit ou une blessure.</p>
 <p>Elle peut impliquer :</p>
 <ul>
@@ -402,7 +417,7 @@
 <li>une modification du comportement</li>
 <li>une reconstruction de la confiance</li>
 </ul>
-<h2 id="936-les-limites-relationnelles" class="entry-title hc-1">🛡️ 9.36 Les limites relationnelles</h2>
+<h2 id="936-les-limites-relationnelles" class="entry-title hc-1">9.36 Les limites relationnelles</h2>
 <p>Les limites relationnelles correspondent aux règles ou frontières qu'une personne établit concernant ce qu'elle accepte ou n'accepte pas dans une relation.</p>
 <p>Elles peuvent concerner :</p>
 <ul>
@@ -413,13 +428,13 @@
 <li>les comportements</li>
 </ul>
 <p>Les limites peuvent varier selon les relations.</p>
-<h2 id="937-la-dependance-relationnelle" class="entry-title hc-2">🔄 9.37 La dépendance relationnelle</h2>
+<h2 id="937-la-dependance-relationnelle" class="entry-title hc-2">9.37 La dépendance relationnelle</h2>
 <p>La dépendance relationnelle désigne une situation dans laquelle le bien-être ou le fonctionnement d'une personne peut devenir fortement lié à la présence, à l'approbation ou au soutien d'une autre personne.</p>
 <p>Le terme peut être utilisé dans différents contextes et ne constitue pas à lui seul un diagnostic.</p>
-<h2 id="938-linterdependance" class="entry-title hc-3">🧠 9.38 L'interdépendance</h2>
+<h2 id="938-linterdependance" class="entry-title hc-3">9.38 L'interdépendance</h2>
 <p>L'interdépendance correspond à une situation dans laquelle plusieurs personnes dépendent mutuellement les unes des autres pour certaines ressources, activités ou besoins.</p>
 <p>Dans une relation équilibrée, l'interdépendance peut coexister avec une certaine autonomie individuelle.</p>
-<h2 id="939-la-rupture-relationnelle" class="entry-title hc-4">💔 9.39 La rupture relationnelle</h2>
+<h2 id="939-la-rupture-relationnelle" class="entry-title hc-4">9.39 La rupture relationnelle</h2>
 <p>Une rupture relationnelle correspond à la fin ou à la transformation importante d'une relation.</p>
 <p>Elle peut provoquer différentes réactions :</p>
 <ul>
@@ -431,7 +446,7 @@
 <li>réorganisation des habitudes</li>
 </ul>
 <p>La réaction dépend notamment de l'importance de la relation et du contexte.</p>
-<h2 id="940-pourquoi-etudier-les-phenomenes-relationnels" class="entry-title hc-5">🔬 9.40 Pourquoi étudier les phénomènes relationnels ?</h2>
+<h2 id="940-pourquoi-etudier-les-phenomenes-relationnels" class="entry-title hc-5">9.40 Pourquoi étudier les phénomènes relationnels ?</h2>
 <p>L'étude des phénomènes relationnels permet de comprendre :</p>
 <ul>
 <li>comment les liens se forment</li>
@@ -445,20 +460,41 @@
 </ul>
 <p>Les relations constituent ainsi une dimension fondamentale de l'expérience humaine.</p>
 <hr />
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>💕 <strong>Les relations jouent un rôle majeur dans le fonctionnement psychologique.</strong> Elles peuvent influencer les émotions, les comportements, les pensées et le sentiment de sécurité.</p>
-<p>🧸 <strong>L'attachement constitue une dimension importante des relations humaines.</strong> Le besoin de proximité et de sécurité peut rester présent à différents moments de la vie.</p>
-<p>🧠 <strong>La confiance se construit progressivement</strong> à partir des expériences, de la fiabilité et de la cohérence des comportements.</p>
-<p>❤️ <strong>L'intimité repose notamment sur la confiance, l'auto-divulgation et la compréhension mutuelle.</strong></p>
-<p>💚 <strong>La jalousie et le sentiment de rejet sont des expériences relationnelles complexes</strong> qui peuvent apparaître dans différents types de relations.</p>
-<p>⚡ <strong>Les conflits ne signifient pas nécessairement qu'une relation est condamnée.</strong> Les relations peuvent également évoluer après un désaccord grâce à différents processus de réparation.</p>
-<p>🛡️ <strong>Les limites relationnelles permettent de définir les frontières d'une relation</strong>, tandis que l'interdépendance permet de comprendre comment les personnes peuvent avoir besoin les unes des autres tout en conservant une certaine autonomie.</p>
-<p>🔬 <strong>L'étude des relations permet de comprendre comment les individus se construisent et fonctionnent au contact des autres.</strong></p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p><strong>Les relations jouent un rôle majeur dans le fonctionnement psychologique.</strong> Elles peuvent influencer les émotions, les comportements, les pensées et le sentiment de sécurité.</p>
+<p><strong>L'attachement constitue une dimension importante des relations humaines.</strong> Le besoin de proximité et de sécurité peut rester présent à différents moments de la vie.</p>
+<p><strong>La confiance se construit progressivement</strong> à partir des expériences, de la fiabilité et de la cohérence des comportements.</p>
+<p><strong>L'intimité repose notamment sur la confiance, l'auto-divulgation et la compréhension mutuelle.</strong></p>
+<p><strong>La jalousie et le sentiment de rejet sont des expériences relationnelles complexes</strong> qui peuvent apparaître dans différents types de relations.</p>
+<p><strong>Les conflits ne signifient pas nécessairement qu'une relation est condamnée.</strong> Les relations peuvent également évoluer après un désaccord grâce à différents processus de réparation.</p>
+<p><strong>Les limites relationnelles permettent de définir les frontières d'une relation</strong>, tandis que l'interdépendance permet de comprendre comment les personnes peuvent avoir besoin les unes des autres tout en conservant une certaine autonomie.</p>
+<p><strong>L'étude des relations permet de comprendre comment les individus se construisent et fonctionnent au contact des autres.</strong></p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Phénomènes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-de-decision-et-de-jugement/"><span class="similar-icon">🔮</span>Les phénomènes de décision et de jugement</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-temps/"><span class="similar-icon">🔮</span>Les phénomènes liés au temps</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-sommeil-et-aux-reves/"><span class="similar-icon">🔮</span>Les phénomènes liés au sommeil et aux rêves</a></div>
+      <h2>Autres chapitres de « Phénomènes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-de-decision-et-de-jugement/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes de décision et de jugement</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-temps/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes liés au temps</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-sommeil-et-aux-reves/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes liés au sommeil et aux rêves</a></div>
     </div>
     <a class="back-link" href="/categorie/phenomenes/">← Retour à « Phénomènes psychologiques »</a>
   </div>
@@ -544,23 +580,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -578,7 +616,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -758,9 +796,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -769,10 +809,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -879,7 +919,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -919,8 +959,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -951,7 +991,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1006,7 +1046,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1030,17 +1070,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1082,7 +1122,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

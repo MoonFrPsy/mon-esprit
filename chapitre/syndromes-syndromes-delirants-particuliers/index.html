@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#31-le-syndrome-dekbom">🧠 3.1 Le syndrome d'Ekbom</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#32-le-syndrome-dothello">🧠 3.2 Le syndrome d'Othello</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#33-le-syndrome-de-clerambault">🧠 3.3 Le syndrome de Clérambault</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#34-le-delire-de-grandeur">🧠 3.4 Le délire de grandeur</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#causes-possibles_3">Causes possibles</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#35-le-delire-de-persecution">🧠 3.5 Le délire de persécution</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#causes-possibles_4">Causes possibles</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#36-le-delire-de-reference">🧠 3.6 Le délire de référence</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#causes-possibles_5">Causes possibles</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#37-le-delire-de-jalousie">🧠 3.7 Le délire de jalousie</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#causes-possibles_6">Causes possibles</a></li><li><a href="#diagnostic_6">Diagnostic</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#38-le-delire-somatique">🧠 3.8 Le délire somatique</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#causes-possibles_7">Causes possibles</a></li><li><a href="#diagnostic_7">Diagnostic</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#39-le-syndrome-de-reference-olfactive">🧠 3.9 Le syndrome de référence olfactive</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#causes-possibles_8">Causes possibles</a></li><li><a href="#diagnostic_8">Diagnostic</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#310-le-syndrome-de-munchhausen">🧠 3.10 Le syndrome de Münchhausen</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#causes-possibles_9">Causes possibles</a></li><li><a href="#diagnostic_9">Diagnostic</a></li><li><a href="#prise-en-charge_9">Prise en charge</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#311-le-trouble-factice-impose-a-autrui">🧠 3.11 Le trouble factice imposé à autrui</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#causes-possibles_10">Causes possibles</a></li><li><a href="#diagnostic_10">Diagnostic</a></li><li><a href="#prise-en-charge_10">Prise en charge</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#31-le-syndrome-dekbom">3.1 Le syndrome d'Ekbom</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#32-le-syndrome-dothello">3.2 Le syndrome d'Othello</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#33-le-syndrome-de-clerambault">3.3 Le syndrome de Clérambault</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#34-le-delire-de-grandeur">3.4 Le délire de grandeur</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#causes-possibles_3">Causes possibles</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#35-le-delire-de-persecution">3.5 Le délire de persécution</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#causes-possibles_4">Causes possibles</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#36-le-delire-de-reference">3.6 Le délire de référence</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#causes-possibles_5">Causes possibles</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#37-le-delire-de-jalousie">3.7 Le délire de jalousie</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#causes-possibles_6">Causes possibles</a></li><li><a href="#diagnostic_6">Diagnostic</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#38-le-delire-somatique">3.8 Le délire somatique</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#causes-possibles_7">Causes possibles</a></li><li><a href="#diagnostic_7">Diagnostic</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#39-le-syndrome-de-reference-olfactive">3.9 Le syndrome de référence olfactive</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#causes-possibles_8">Causes possibles</a></li><li><a href="#diagnostic_8">Diagnostic</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#310-le-syndrome-de-munchhausen">3.10 Le syndrome de Münchhausen</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#causes-possibles_9">Causes possibles</a></li><li><a href="#diagnostic_9">Diagnostic</a></li><li><a href="#prise-en-charge_9">Prise en charge</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#311-le-trouble-factice-impose-a-autrui">3.11 Le trouble factice imposé à autrui</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#causes-possibles_10">Causes possibles</a></li><li><a href="#diagnostic_10">Diagnostic</a></li><li><a href="#prise-en-charge_10">Prise en charge</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Syndromes délirants particuliers',
         category: 'Syndromes psychologiques',
-        icon: '🧬'
+        icon: 'S'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/syndromes/">🧬 Syndromes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/syndromes/">Syndromes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Syndromes délirants particuliers</h1>
     </div>
     <div id="resume-banner"></div>
@@ -100,7 +115,7 @@
     </div>
     <div class="article-body">
       <hr />
-<h1 id="31-le-syndrome-dekbom" class="entry-title hc-1">🧠 3.1 Le syndrome d'Ekbom</h1>
+<h1 id="31-le-syndrome-dekbom" class="entry-title hc-1">3.1 Le syndrome d'Ekbom</h1>
 <h2 id="definition">Définition</h2>
 <p>Le <strong>syndrome d'Ekbom</strong>, également appelé <strong>délire d'infestation</strong>, est un syndrome dans lequel une personne est convaincue que des parasites, insectes, organismes ou petits éléments étrangers infestent son corps ou sa peau.</p>
 <p>Cette conviction persiste généralement malgré l'absence de preuve médicale permettant de confirmer une infestation.</p>
@@ -145,7 +160,7 @@
 <h2 id="a-retenir">À retenir</h2>
 <p>Le syndrome d'Ekbom correspond à une conviction persistante d'être infesté par des organismes, souvent accompagnée de sensations cutanées et de lésions dues au grattage.</p>
 <hr />
-<h1 id="32-le-syndrome-dothello" class="entry-title hc-2">🧠 3.2 Le syndrome d'Othello</h1>
+<h1 id="32-le-syndrome-dothello" class="entry-title hc-2">3.2 Le syndrome d'Othello</h1>
 <h2 id="definition_1">Définition</h2>
 <p>Le <strong>syndrome d'Othello</strong> désigne une forme de <strong>jalousie délirante</strong> dans laquelle une personne est convaincue, sans preuves suffisantes, que son partenaire est infidèle.</p>
 <p>La conviction peut rester présente malgré les explications ou les éléments montrant qu'il n'existe pas d'infidélité.</p>
@@ -183,7 +198,7 @@
 <h2 id="a-retenir_1">À retenir</h2>
 <p>Le syndrome d'Othello correspond à une jalousie pathologique pouvant prendre la forme d'une conviction délirante d'infidélité.</p>
 <hr />
-<h1 id="33-le-syndrome-de-clerambault" class="entry-title hc-3">🧠 3.3 Le syndrome de Clérambault</h1>
+<h1 id="33-le-syndrome-de-clerambault" class="entry-title hc-3">3.3 Le syndrome de Clérambault</h1>
 <h2 id="definition_2">Définition</h2>
 <p>Le <strong>syndrome de Clérambault</strong>, également appelé <strong>érotomanie</strong>, est un syndrome délirant dans lequel une personne est convaincue qu'une autre personne est amoureuse d'elle.</p>
 <p>La personne concernée peut être une connaissance, une personne rencontrée occasionnellement ou parfois une personne inconnue ou difficilement accessible.</p>
@@ -224,7 +239,7 @@
 <h2 id="a-retenir_2">À retenir</h2>
 <p>Le syndrome de Clérambault se caractérise principalement par la conviction qu'une autre personne est amoureuse de soi malgré l'absence de preuves suffisantes.</p>
 <hr />
-<h1 id="34-le-delire-de-grandeur" class="entry-title hc-4">🧠 3.4 Le délire de grandeur</h1>
+<h1 id="34-le-delire-de-grandeur" class="entry-title hc-4">3.4 Le délire de grandeur</h1>
 <h2 id="definition_3">Définition</h2>
 <p>Le <strong>délire de grandeur</strong> correspond à une conviction excessive et persistante concernant sa propre importance, ses capacités, son identité ou son pouvoir.</p>
 <p>La croyance dépasse largement les faits et peut être maintenue malgré les éléments qui la contredisent.</p>
@@ -257,7 +272,7 @@
 <h2 id="a-retenir_3">À retenir</h2>
 <p>Le délire de grandeur est une croyance fortement exagérée concernant sa propre importance, son identité ou ses capacités.</p>
 <hr />
-<h1 id="35-le-delire-de-persecution" class="entry-title hc-5">🧠 3.5 Le délire de persécution</h1>
+<h1 id="35-le-delire-de-persecution" class="entry-title hc-5">3.5 Le délire de persécution</h1>
 <h2 id="definition_4">Définition</h2>
 <p>Le <strong>délire de persécution</strong> correspond à la conviction d'être suivi, surveillé, espionné, menacé, victime d'un complot ou volontairement maltraité.</p>
 <p>La personne peut interpréter des événements ordinaires comme des preuves de persécution.</p>
@@ -293,7 +308,7 @@
 <h2 id="a-retenir_4">À retenir</h2>
 <p>Le délire de persécution correspond à une conviction persistante d'être menacé, surveillé ou victime d'une action hostile.</p>
 <hr />
-<h1 id="36-le-delire-de-reference" class="entry-title hc-1">🧠 3.6 Le délire de référence</h1>
+<h1 id="36-le-delire-de-reference" class="entry-title hc-1">3.6 Le délire de référence</h1>
 <h2 id="definition_5">Définition</h2>
 <p>Le <strong>délire de référence</strong> correspond à la conviction que des événements, des conversations, des médias, des gestes ou des comportements ordinaires ont une signification particulière dirigée vers soi.</p>
 <h2 id="manifestations_5">Manifestations</h2>
@@ -314,7 +329,7 @@
 <h2 id="a-retenir_5">À retenir</h2>
 <p>Le délire de référence consiste à attribuer une signification personnelle particulière à des événements qui n'ont pas nécessairement de rapport avec soi.</p>
 <hr />
-<h1 id="37-le-delire-de-jalousie" class="entry-title hc-2">🧠 3.7 Le délire de jalousie</h1>
+<h1 id="37-le-delire-de-jalousie" class="entry-title hc-2">3.7 Le délire de jalousie</h1>
 <h2 id="definition_6">Définition</h2>
 <p>Le <strong>délire de jalousie</strong> est une conviction persistante et infondée selon laquelle un partenaire est infidèle.</p>
 <p>Il s'agit d'une forme particulière de délire pouvant entraîner une recherche constante de preuves.</p>
@@ -351,7 +366,7 @@
 <h2 id="a-retenir_6">À retenir</h2>
 <p>Le délire de jalousie se distingue d'une jalousie ordinaire par son caractère fixe, excessif et déconnecté des éléments disponibles.</p>
 <hr />
-<h1 id="38-le-delire-somatique" class="entry-title hc-3">🧠 3.8 Le délire somatique</h1>
+<h1 id="38-le-delire-somatique" class="entry-title hc-3">3.8 Le délire somatique</h1>
 <h2 id="definition_7">Définition</h2>
 <p>Le <strong>délire somatique</strong> correspond à une conviction fausse et persistante concernant son propre corps ou son fonctionnement physique.</p>
 <p>La personne peut être convaincue d'être atteinte d'une maladie grave malgré les examens médicaux ne confirmant pas cette maladie.</p>
@@ -380,7 +395,7 @@
 <h2 id="a-retenir_7">À retenir</h2>
 <p>Le délire somatique concerne des convictions persistantes et fausses portant sur le fonctionnement ou l'état du corps.</p>
 <hr />
-<h1 id="39-le-syndrome-de-reference-olfactive" class="entry-title hc-4">🧠 3.9 Le syndrome de référence olfactive</h1>
+<h1 id="39-le-syndrome-de-reference-olfactive" class="entry-title hc-4">3.9 Le syndrome de référence olfactive</h1>
 <h2 id="definition_8">Définition</h2>
 <p>Le <strong>syndrome de référence olfactive</strong> correspond à une préoccupation persistante ou à la conviction qu'une mauvaise odeur corporelle est émise, alors que les autres personnes ne la perçoivent généralement pas ou ne la considèrent pas comme problématique.</p>
 <p>Cette conviction peut entraîner une forte gêne sociale.</p>
@@ -409,7 +424,7 @@
 <h2 id="a-retenir_8">À retenir</h2>
 <p>Le syndrome de référence olfactive se caractérise par une préoccupation importante concernant une supposée mauvaise odeur corporelle.</p>
 <hr />
-<h1 id="310-le-syndrome-de-munchhausen" class="entry-title hc-5">🧠 3.10 Le syndrome de Münchhausen</h1>
+<h1 id="310-le-syndrome-de-munchhausen" class="entry-title hc-5">3.10 Le syndrome de Münchhausen</h1>
 <h2 id="definition_9">Définition</h2>
 <p>Le <strong>syndrome de Münchhausen</strong> est une appellation historique associée à une forme de <strong>trouble factice</strong> dans laquelle une personne provoque, exagère ou simule volontairement des symptômes afin d'adopter le rôle de malade.</p>
 <p>L'objectif principal n'est pas nécessairement d'obtenir un avantage matériel évident.</p>
@@ -446,7 +461,7 @@
 <h2 id="a-retenir_9">À retenir</h2>
 <p>Le syndrome de Münchhausen correspond à une forme de trouble factice caractérisée par la production ou la simulation volontaire de symptômes pour prendre le rôle de malade.</p>
 <hr />
-<h1 id="311-le-trouble-factice-impose-a-autrui" class="entry-title hc-1">🧠 3.11 Le trouble factice imposé à autrui</h1>
+<h1 id="311-le-trouble-factice-impose-a-autrui" class="entry-title hc-1">3.11 Le trouble factice imposé à autrui</h1>
 <h2 id="definition_10">Définition</h2>
 <p>Le <strong>trouble factice imposé à autrui</strong> correspond à une situation dans laquelle une personne provoque, fabrique ou falsifie volontairement des symptômes chez une autre personne afin que cette dernière soit considérée comme malade.</p>
 <p>La personne à l'origine des symptômes peut souvent être un proche ou une personne responsable des soins.</p>
@@ -478,8 +493,29 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Syndromes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-neuropsychologiques/"><span class="similar-icon">🧬</span>Syndromes neuropsychologiques</a><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-au-stress-et-aux-traumatismes/"><span class="similar-icon">🧬</span>Syndromes liés au stress et aux traumatismes</a><a class="similar-item" href="/chapitre/syndromes-syndromes-relationnels-et-sociaux/"><span class="similar-icon">🧬</span>Syndromes relationnels et sociaux</a></div>
+      <h2>Autres chapitres de « Syndromes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-neuropsychologiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes neuropsychologiques</a><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-au-stress-et-aux-traumatismes/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes liés au stress et aux traumatismes</a><a class="similar-item" href="/chapitre/syndromes-syndromes-relationnels-et-sociaux/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes relationnels et sociaux</a></div>
     </div>
     <a class="back-link" href="/categorie/syndromes/">← Retour à « Syndromes psychologiques »</a>
   </div>
@@ -565,23 +601,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -599,7 +637,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -779,9 +817,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -790,10 +830,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -900,7 +940,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -940,8 +980,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -972,7 +1012,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1027,7 +1067,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1051,17 +1091,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1103,7 +1143,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#31-une-histoire-differente-des-precedentes">🧠 3.1 Une histoire différente des précédentes</a></li><li><a href="#32-tout-commence-pendant-lenfance">🧒 3.2 Tout commence pendant l'enfance</a></li><li><a href="#33-le-souvenir-ne-disparait-pas-forcement">🧠 3.3 Le souvenir ne disparaît pas forcément</a></li><li><a href="#34-quand-le-passe-continue-a-influencer-le-present">🌪️ 3.4 Quand le passé continue à influencer le présent</a></li><li><a href="#35-le-cas-etudie-par-les-chercheurs">🔎 3.5 Le cas étudié par les chercheurs</a></li><li><a href="#36-pourquoi-travailler-sur-un-evenement-vieux-de-plusieurs-decennies">🧩 3.6 Pourquoi travailler sur un événement vieux de plusieurs décennies ?</a></li><li><a href="#37-la-memoire-traumatique-nest-pas-une-video">🧠 3.7 La mémoire traumatique n'est pas une vidéo</a></li><li><a href="#38-le-role-des-emotions">❤️ 3.8 Le rôle des émotions</a></li><li><a href="#39-hypervigilance">👁️ 3.9 Hypervigilance</a></li><li><a href="#310-le-cerveau-apprend-a-se-proteger">🧠 3.10 Le cerveau apprend à se protéger</a></li><li><a href="#311-levitement">🔄 3.11 L'évitement</a></li><li><a href="#312-pourquoi-levitement-peut-maintenir-la-peur">🧩 3.12 Pourquoi l'évitement peut maintenir la peur</a></li><li><a href="#313-la-concentration-peut-elle-aussi-etre-affectee">🧠 3.13 La concentration peut elle aussi être affectée</a></li><li><a href="#314-quand-le-systeme-dalerte-devient-couteux">🌪️ 3.14 Quand le système d'alerte devient coûteux</a></li><li><a href="#315-le-debut-du-travail-therapeutique">🧠 3.15 Le début du travail thérapeutique</a></li><li><a href="#316-lemdr">👁️ 3.16 L'EMDR</a></li><li><a href="#317-se-souvenir-sans-etre-replonge-dans-le-danger">🧩 3.17 Se souvenir sans être replongé dans le danger</a></li><li><a href="#318-le-role-du-retraitement">🔄 3.18 Le rôle du retraitement</a></li><li><a href="#319-une-histoire-qui-montre-que-le-cerveau-nest-pas-fige">🧠 3.19 Une histoire qui montre que le cerveau n'est pas figé</a></li><li><a href="#320-le-changement-nest-pas-un-effacement">🌱 3.20 Le changement n'est pas un effacement</a></li><li><a href="#321-le-cas-etudie-rapporte-des-changements-importants">🧠 3.21 Le cas étudié rapporte des changements importants</a></li><li><a href="#322-une-etude-de-cas-nest-pas-une-preuve-universelle">⚠️ 3.22 Une étude de cas n'est pas une preuve universelle</a></li><li><a href="#323-pourquoi-les-etudes-de-cas-restent-importantes">🔬 3.23 Pourquoi les études de cas restent importantes</a></li><li><a href="#324-le-traumatisme-nexplique-jamais-tout">🧩 3.24 Le traumatisme n'explique jamais tout</a></li><li><a href="#325-le-modele-biopsychosocial">🧠 3.25 Le modèle biopsychosocial</a><ul class="sidebar-sublist"><li><a href="#dimension-biologique">🧬 Dimension biologique</a></li><li><a href="#dimension-psychologique">🧠 Dimension psychologique</a></li><li><a href="#dimension-sociale">👥 Dimension sociale</a></li></ul></li><li><a href="#326-le-passe-influence-le-present-mais-le-present-influence-aussi-le-passe-psychologique">🔄 3.26 Le passé influence le présent, mais le présent influence aussi le passé psychologique</a></li><li><a href="#327-une-nouvelle-relation-avec-le-souvenir">🪞 3.27 Une nouvelle relation avec le souvenir</a></li><li><a href="#328-pourquoi-cette-histoire-est-importante">🌱 3.28 Pourquoi cette histoire est importante</a></li><li><a href="#329-le-cerveau-apprend-dans-les-deux-sens">🧠 3.29 Le cerveau apprend dans les deux sens</a></li><li><a href="#330-le-concept-dextinction">🔬 3.30 Le concept d'extinction</a></li><li><a href="#331-la-recuperation-nest-pas-toujours-lineaire">🧠 3.31 La récupération n'est pas toujours linéaire</a></li><li><a href="#332-pourquoi-certaines-personnes-recuperent-differemment">🌊 3.32 Pourquoi certaines personnes récupèrent différemment</a></li><li><a href="#333-la-resilience">🧩 3.33 La résilience</a></li><li><a href="#334-se-reconstruire-ne-signifie-pas-devenir-la-personne-davant">❤️ 3.34 Se reconstruire ne signifie pas devenir la personne d'avant</a></li><li><a href="#335-le-role-de-lidentite">🧠 3.35 Le rôle de l'identité</a></li><li><a href="#336-lhistoire-personnelle-comme-recit">🪞 3.36 L'histoire personnelle comme récit</a></li><li><a href="#337-une-histoire-ne-doit-pas-devenir-une-identite-entiere">🌱 3.37 Une histoire ne doit pas devenir une identité entière</a></li><li><a href="#338-ce-que-cette-histoire-montre-sur-la-psychotherapie">🔬 3.38 Ce que cette histoire montre sur la psychothérapie</a></li><li><a href="#339-ce-que-lon-peut-reellement-conclure">🧠 3.39 Ce que l'on peut réellement conclure</a></li><li><a href="#340-pourquoi-cette-histoire-est-importante-pour-la-psychologie">🌌 3.40 Pourquoi cette histoire est importante pour la psychologie</a></li><li><a href="#341-une-difference-fondamentale-avec-loubli">🔄 3.41 Une différence fondamentale avec l'oubli</a></li><li><a href="#342-le-cerveau-peut-apprendre-la-securite">🧠 3.42 Le cerveau peut apprendre la sécurité</a></li><li><a href="#343-le-changement-psychologique-peut-etre-progressif">🌱 3.43 Le changement psychologique peut être progressif</a></li><li><a href="#344-ce-que-cette-histoire-ne-promet-pas">❤️ 3.44 Ce que cette histoire ne promet pas</a></li><li><a href="#345-ce-que-lhistoire-montre-reellement">🧠 3.45 Ce que l'histoire montre réellement</a></li><li><a href="#346-une-derniere-reflexion">🌌 3.46 Une dernière réflexion</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#31-une-histoire-differente-des-precedentes">3.1 Une histoire différente des précédentes</a></li><li><a href="#32-tout-commence-pendant-lenfance">3.2 Tout commence pendant l'enfance</a></li><li><a href="#33-le-souvenir-ne-disparait-pas-forcement">3.3 Le souvenir ne disparaît pas forcément</a></li><li><a href="#34-quand-le-passe-continue-a-influencer-le-present">3.4 Quand le passé continue à influencer le présent</a></li><li><a href="#35-le-cas-etudie-par-les-chercheurs">3.5 Le cas étudié par les chercheurs</a></li><li><a href="#36-pourquoi-travailler-sur-un-evenement-vieux-de-plusieurs-decennies">3.6 Pourquoi travailler sur un événement vieux de plusieurs décennies ?</a></li><li><a href="#37-la-memoire-traumatique-nest-pas-une-video">3.7 La mémoire traumatique n'est pas une vidéo</a></li><li><a href="#38-le-role-des-emotions">3.8 Le rôle des émotions</a></li><li><a href="#39-hypervigilance">3.9 Hypervigilance</a></li><li><a href="#310-le-cerveau-apprend-a-se-proteger">3.10 Le cerveau apprend à se protéger</a></li><li><a href="#311-levitement">3.11 L'évitement</a></li><li><a href="#312-pourquoi-levitement-peut-maintenir-la-peur">3.12 Pourquoi l'évitement peut maintenir la peur</a></li><li><a href="#313-la-concentration-peut-elle-aussi-etre-affectee">3.13 La concentration peut elle aussi être affectée</a></li><li><a href="#314-quand-le-systeme-dalerte-devient-couteux">3.14 Quand le système d'alerte devient coûteux</a></li><li><a href="#315-le-debut-du-travail-therapeutique">3.15 Le début du travail thérapeutique</a></li><li><a href="#316-lemdr">3.16 L'EMDR</a></li><li><a href="#317-se-souvenir-sans-etre-replonge-dans-le-danger">3.17 Se souvenir sans être replongé dans le danger</a></li><li><a href="#318-le-role-du-retraitement">3.18 Le rôle du retraitement</a></li><li><a href="#319-une-histoire-qui-montre-que-le-cerveau-nest-pas-fige">3.19 Une histoire qui montre que le cerveau n'est pas figé</a></li><li><a href="#320-le-changement-nest-pas-un-effacement">3.20 Le changement n'est pas un effacement</a></li><li><a href="#321-le-cas-etudie-rapporte-des-changements-importants">3.21 Le cas étudié rapporte des changements importants</a></li><li><a href="#322-une-etude-de-cas-nest-pas-une-preuve-universelle">3.22 Une étude de cas n'est pas une preuve universelle</a></li><li><a href="#323-pourquoi-les-etudes-de-cas-restent-importantes">3.23 Pourquoi les études de cas restent importantes</a></li><li><a href="#324-le-traumatisme-nexplique-jamais-tout">3.24 Le traumatisme n'explique jamais tout</a></li><li><a href="#325-le-modele-biopsychosocial">3.25 Le modèle biopsychosocial</a><ul class="sidebar-sublist"><li><a href="#dimension-biologique">Dimension biologique</a></li><li><a href="#dimension-psychologique">Dimension psychologique</a></li><li><a href="#dimension-sociale">Dimension sociale</a></li></ul></li><li><a href="#326-le-passe-influence-le-present-mais-le-present-influence-aussi-le-passe-psychologique">3.26 Le passé influence le présent, mais le présent influence aussi le passé psychologique</a></li><li><a href="#327-une-nouvelle-relation-avec-le-souvenir">3.27 Une nouvelle relation avec le souvenir</a></li><li><a href="#328-pourquoi-cette-histoire-est-importante">3.28 Pourquoi cette histoire est importante</a></li><li><a href="#329-le-cerveau-apprend-dans-les-deux-sens">3.29 Le cerveau apprend dans les deux sens</a></li><li><a href="#330-le-concept-dextinction">3.30 Le concept d'extinction</a></li><li><a href="#331-la-recuperation-nest-pas-toujours-lineaire">3.31 La récupération n'est pas toujours linéaire</a></li><li><a href="#332-pourquoi-certaines-personnes-recuperent-differemment">3.32 Pourquoi certaines personnes récupèrent différemment</a></li><li><a href="#333-la-resilience">3.33 La résilience</a></li><li><a href="#334-se-reconstruire-ne-signifie-pas-devenir-la-personne-davant">3.34 Se reconstruire ne signifie pas devenir la personne d'avant</a></li><li><a href="#335-le-role-de-lidentite">3.35 Le rôle de l'identité</a></li><li><a href="#336-lhistoire-personnelle-comme-recit">3.36 L'histoire personnelle comme récit</a></li><li><a href="#337-une-histoire-ne-doit-pas-devenir-une-identite-entiere">3.37 Une histoire ne doit pas devenir une identité entière</a></li><li><a href="#338-ce-que-cette-histoire-montre-sur-la-psychotherapie">3.38 Ce que cette histoire montre sur la psychothérapie</a></li><li><a href="#339-ce-que-lon-peut-reellement-conclure">3.39 Ce que l'on peut réellement conclure</a></li><li><a href="#340-pourquoi-cette-histoire-est-importante-pour-la-psychologie">3.40 Pourquoi cette histoire est importante pour la psychologie</a></li><li><a href="#341-une-difference-fondamentale-avec-loubli">3.41 Une différence fondamentale avec l'oubli</a></li><li><a href="#342-le-cerveau-peut-apprendre-la-securite">3.42 Le cerveau peut apprendre la sécurité</a></li><li><a href="#343-le-changement-psychologique-peut-etre-progressif">3.43 Le changement psychologique peut être progressif</a></li><li><a href="#344-ce-que-cette-histoire-ne-promet-pas">3.44 Ce que cette histoire ne promet pas</a></li><li><a href="#345-ce-que-lhistoire-montre-reellement">3.45 Ce que l'histoire montre réellement</a></li><li><a href="#346-une-derniere-reflexion">3.46 Une dernière réflexion</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Quand tout semble impossible',
         category: 'Histoires vraies de psychologie',
-        icon: '📖'
+        icon: 'Q'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/histoires/">📖 Histoires vraies de psychologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/histoires/">Histoires vraies de psychologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Quand tout semble impossible</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,11 +113,11 @@
     <div class="article-body">
       <p>Une histoire vraie de traumatisme, de mémoire et de reconstruction psychologique</p>
 <blockquote>
-<p>⚠️ Cette histoire concerne un traumatisme vécu pendant l'enfance. Les détails sont présentés de manière non graphique afin de se concentrer sur les mécanismes psychologiques et sur le processus de reconstruction.
+<p>Cette histoire concerne un traumatisme vécu pendant l'enfance. Les détails sont présentés de manière non graphique afin de se concentrer sur les mécanismes psychologiques et sur le processus de reconstruction.
 </p>
 </blockquote>
 <hr />
-<h2 id="31-une-histoire-differente-des-precedentes" class="entry-title hc-1">🧠 3.1 Une histoire différente des précédentes</h2>
+<h2 id="31-une-histoire-differente-des-precedentes" class="entry-title hc-1">3.1 Une histoire différente des précédentes</h2>
 <p>Les deux premières histoires de cette catégorie concernaient des personnes dont le fonctionnement psychologique et cérébral a profondément marqué l'histoire des neurosciences.</p>
 <p>Phineas Gage avait montré qu'une atteinte cérébrale pouvait modifier certains aspects du comportement et de la personnalité.</p>
 <p>Henry Molaison, connu pendant des décennies sous les initiales H.M., avait montré qu'il était possible de perdre la capacité à former de nouveaux souvenirs tout en conservant d'autres formes d'apprentissage.</p>
@@ -113,7 +128,7 @@
 <p>L'histoire est celle d'un adulte dont le parcours clinique a fait l'objet d'une étude de cas publiée en 2006 par Robert D. Broad et Kathleen Wheeler.</p>
 <p>Le cas concernait notamment une dépression, une forte vigilance face aux menaces et des difficultés attentionnelles, avec un élément particulier dans l'histoire : une expérience médicale vécue pendant l'enfance.</p>
 <hr />
-<h2 id="32-tout-commence-pendant-lenfance" class="entry-title hc-2">🧒 3.2 Tout commence pendant l'enfance</h2>
+<h2 id="32-tout-commence-pendant-lenfance" class="entry-title hc-2">3.2 Tout commence pendant l'enfance</h2>
 <p>À l'âge de 8 ans, cette personne avait subi une intervention médicale, une amygdalectomie.</p>
 <p>Sur le plan médical, il s'agissait d'une intervention destinée à traiter un problème physique.</p>
 <p>Mais une expérience médicale vécue pendant l'enfance ne se résume pas toujours à ce qui apparaît dans le dossier médical.</p>
@@ -132,7 +147,7 @@
 <p>La réaction dépend de nombreux facteurs.</p>
 <p>L'âge, le contexte, le sentiment de sécurité, la douleur, la compréhension de ce qui se passe, les réactions des adultes et les caractéristiques individuelles peuvent tous modifier la manière dont une expérience est vécue.</p>
 <hr />
-<h2 id="33-le-souvenir-ne-disparait-pas-forcement" class="entry-title hc-3">🧠 3.3 Le souvenir ne disparaît pas forcément</h2>
+<h2 id="33-le-souvenir-ne-disparait-pas-forcement" class="entry-title hc-3">3.3 Le souvenir ne disparaît pas forcément</h2>
 <p>Pendant longtemps, une représentation simplifiée du traumatisme a consisté à imaginer qu'un souvenir traumatique restait simplement « stocké » dans le cerveau comme un fichier intact.</p>
 <p>La réalité psychologique est beaucoup plus complexe.</p>
 <p>Un souvenir autobiographique n'est pas uniquement une image du passé.</p>
@@ -151,7 +166,7 @@
 <p>Chez certaines personnes, l'événement restera un souvenir désagréable mais relativement intégré.</p>
 <p>Chez d'autres, certains éléments pourront continuer à déclencher une réaction émotionnelle importante longtemps après que le danger initial a disparu.</p>
 <hr />
-<h2 id="34-quand-le-passe-continue-a-influencer-le-present" class="entry-title hc-4">🌪️ 3.4 Quand le passé continue à influencer le présent</h2>
+<h2 id="34-quand-le-passe-continue-a-influencer-le-present" class="entry-title hc-4">3.4 Quand le passé continue à influencer le présent</h2>
 <p>C'est l'un des aspects les plus importants de cette histoire.</p>
 <p>Le traumatisme psychologique ne signifie pas nécessairement que la personne pense constamment à l'événement.</p>
 <p>Il peut parfois se manifester indirectement.</p>
@@ -170,14 +185,14 @@
 <p>Même lorsque la menace originale n'existe plus, certaines réactions peuvent continuer à être déclenchées.</p>
 <p>C'est l'une des raisons pour lesquelles un traumatisme peut produire des effets qui semblent parfois difficiles à comprendre de l'extérieur.</p>
 <hr />
-<h2 id="35-le-cas-etudie-par-les-chercheurs" class="entry-title hc-5">🔎 3.5 Le cas étudié par les chercheurs</h2>
+<h2 id="35-le-cas-etudie-par-les-chercheurs" class="entry-title hc-5">3.5 Le cas étudié par les chercheurs</h2>
 <p>À l'âge adulte, la personne décrite dans l'étude a recherché une aide psychothérapeutique notamment pour des symptômes dépressifs et des difficultés attentionnelles.</p>
 <p>Les auteurs ont alors identifié dans son histoire une expérience médicale vécue à l'âge de 8 ans comme un élément important du fonctionnement psychologique étudié.</p>
 <p>L'étude est particulière parce qu'elle ne s'est pas limitée à décrire un symptôme.</p>
 <p>Elle s'est intéressée à la manière dont une expérience ancienne pouvait continuer à avoir une influence sur le fonctionnement présent.</p>
 <p>Les auteurs ont notamment décrit un travail thérapeutique associant une approche psychodynamique et l'EMDR, avec un travail spécifique autour du souvenir de l'expérience médicale.</p>
 <hr />
-<h2 id="36-pourquoi-travailler-sur-un-evenement-vieux-de-plusieurs-decennies" class="entry-title hc-1">🧩 3.6 Pourquoi travailler sur un événement vieux de plusieurs décennies ?</h2>
+<h2 id="36-pourquoi-travailler-sur-un-evenement-vieux-de-plusieurs-decennies" class="entry-title hc-1">3.6 Pourquoi travailler sur un événement vieux de plusieurs décennies ?</h2>
 <p>Une question intéressante apparaît immédiatement :</p>
 <p><strong>Pourquoi revenir sur quelque chose qui s'est produit pendant l'enfance alors que des années ont passé ?</strong></p>
 <p>Parce que l'ancienneté d'un événement ne signifie pas nécessairement que toutes ses conséquences psychologiques ont disparu.</p>
@@ -191,7 +206,7 @@
 <p>L'événement ne peut évidemment pas être changé.</p>
 <p>Mais la manière dont il est représenté, interprété et associé à certaines réactions peut parfois évoluer.</p>
 <hr />
-<h2 id="37-la-memoire-traumatique-nest-pas-une-video" class="entry-title hc-2">🧠 3.7 La mémoire traumatique n'est pas une vidéo</h2>
+<h2 id="37-la-memoire-traumatique-nest-pas-une-video" class="entry-title hc-2">3.7 La mémoire traumatique n'est pas une vidéo</h2>
 <p>Il est important de corriger une idée très répandue.</p>
 <p>Un souvenir n'est pas nécessairement une reproduction exacte d'un événement.</p>
 <p>La mémoire humaine est reconstructive.</p>
@@ -208,7 +223,7 @@
 <p>Cela signifie qu'un souvenir peut changer au fil du temps sans que cela signifie nécessairement qu'il est entièrement faux.</p>
 <p>Cette particularité devient particulièrement importante lorsqu'il est question de souvenirs émotionnellement chargés.</p>
 <hr />
-<h2 id="38-le-role-des-emotions" class="entry-title hc-3">❤️ 3.8 Le rôle des émotions</h2>
+<h2 id="38-le-role-des-emotions" class="entry-title hc-3">3.8 Le rôle des émotions</h2>
 <p>Une expérience peut être enregistrée avec une forte charge émotionnelle.</p>
 <p>Dans une situation vécue comme menaçante, l'organisme peut mobiliser rapidement des mécanismes de survie.</p>
 <p>Le cerveau ne cherche alors pas uniquement à construire un récit parfaitement organisé.</p>
@@ -227,7 +242,7 @@
 </blockquote>
 <p>La connaissance consciente et la réaction émotionnelle ne sont donc pas toujours parfaitement synchronisées.</p>
 <hr />
-<h2 id="39-hypervigilance" class="entry-title hc-4">👁️ 3.9 Hypervigilance</h2>
+<h2 id="39-hypervigilance" class="entry-title hc-4">3.9 Hypervigilance</h2>
 <p>L'un des éléments importants décrits dans ce cas était une diminution de l'hypervigilance au cours du traitement.</p>
 <p>L'hypervigilance correspond à un état dans lequel l'attention est fortement orientée vers la détection potentielle d'une menace.</p>
 <p>Dans un environnement réellement dangereux, ce mécanisme peut être utile.</p>
@@ -242,17 +257,17 @@
 </ul>
 <p>Cela peut être extrêmement fatigant.</p>
 <hr />
-<h2 id="310-le-cerveau-apprend-a-se-proteger" class="entry-title hc-5">🧠 3.10 Le cerveau apprend à se protéger</h2>
+<h2 id="310-le-cerveau-apprend-a-se-proteger" class="entry-title hc-5">3.10 Le cerveau apprend à se protéger</h2>
 <p>Une réaction traumatique peut être comprise en partie comme une forme d'apprentissage.</p>
 <p>Le cerveau apprend des associations.</p>
 <p>Par exemple :</p>
-<p><strong>situation → danger → activation → protection</strong></p>
+<p><strong>situation  danger  activation  protection</strong></p>
 <p>Si une situation particulière est fortement associée à une menace, certains éléments de cette situation peuvent ensuite devenir des signaux d'alerte.</p>
 <p>Cette logique permet de comprendre pourquoi des réactions peuvent apparaître dans des contextes qui semblent objectivement peu dangereux.</p>
 <p>Le cerveau ne fait pas toujours une analyse philosophique de la situation.</p>
 <p>Il peut fonctionner à partir de probabilités et d'associations apprises.</p>
 <hr />
-<h2 id="311-levitement" class="entry-title hc-1">🔄 3.11 L'évitement</h2>
+<h2 id="311-levitement" class="entry-title hc-1">3.11 L'évitement</h2>
 <p>Une autre réaction fréquente dans les mécanismes traumatiques est l'évitement.</p>
 <p>Lorsqu'une personne rencontre quelque chose qui déclenche une émotion désagréable, l'éloignement peut immédiatement réduire cette émotion.</p>
 <p>Cela produit un phénomène particulièrement important :</p>
@@ -268,7 +283,7 @@
 <p>Il ne signifie pas que la personne choisit consciemment de maintenir son problème.</p>
 <p>Le comportement peut devenir progressivement automatique.</p>
 <hr />
-<h2 id="312-pourquoi-levitement-peut-maintenir-la-peur" class="entry-title hc-2">🧩 3.12 Pourquoi l'évitement peut maintenir la peur</h2>
+<h2 id="312-pourquoi-levitement-peut-maintenir-la-peur" class="entry-title hc-2">3.12 Pourquoi l'évitement peut maintenir la peur</h2>
 <p>Imaginons une situation fictive.</p>
 <p>Une personne associe une situation X à une menace.</p>
 <p>Elle rencontre X.</p>
@@ -282,7 +297,7 @@
 <p>L'évitement empêche donc parfois l'apprentissage de nouvelles informations.</p>
 <p>C'est une des raisons pour lesquelles certaines approches thérapeutiques accordent une place importante à la confrontation progressive et contrôlée avec ce qui est évité.</p>
 <hr />
-<h2 id="313-la-concentration-peut-elle-aussi-etre-affectee" class="entry-title hc-3">🧠 3.13 La concentration peut elle aussi être affectée</h2>
+<h2 id="313-la-concentration-peut-elle-aussi-etre-affectee" class="entry-title hc-3">3.13 La concentration peut elle aussi être affectée</h2>
 <p>Dans le cas étudié, l'amélioration de la capacité de concentration faisait partie des changements rapportés après le traitement.</p>
 <p>Cela peut sembler surprenant.</p>
 <p>Pourquoi un événement ancien pourrait-il avoir un rapport avec l'attention ?</p>
@@ -298,7 +313,7 @@
 <li>le niveau de stress.</li>
 </ul>
 <hr />
-<h2 id="314-quand-le-systeme-dalerte-devient-couteux" class="entry-title hc-4">🌪️ 3.14 Quand le système d'alerte devient coûteux</h2>
+<h2 id="314-quand-le-systeme-dalerte-devient-couteux" class="entry-title hc-4">3.14 Quand le système d'alerte devient coûteux</h2>
 <p>L'hypervigilance peut être utile pendant une période de danger.</p>
 <p>Mais lorsqu'elle devient chronique, elle peut avoir un coût.</p>
 <p>Rester constamment attentif aux menaces potentielles peut contribuer à :</p>
@@ -313,7 +328,7 @@
 <p>Le paradoxe est intéressant :</p>
 <p><strong>un mécanisme conçu pour protéger peut devenir une source de souffrance lorsqu'il reste activé trop longtemps.</strong></p>
 <hr />
-<h2 id="315-le-debut-du-travail-therapeutique" class="entry-title hc-5">🧠 3.15 Le début du travail thérapeutique</h2>
+<h2 id="315-le-debut-du-travail-therapeutique" class="entry-title hc-5">3.15 Le début du travail thérapeutique</h2>
 <p>Le traitement décrit dans cette étude combinait une psychothérapie d'orientation psychodynamique et l'EMDR.</p>
 <p>L'objectif n'était pas simplement de dire à la personne :</p>
 <blockquote>
@@ -325,7 +340,7 @@
 <p>Cette distinction est importante.</p>
 <p><strong>Comprendre intellectuellement quelque chose et le ressentir émotionnellement sont deux processus différents.</strong></p>
 <hr />
-<h2 id="316-lemdr" class="entry-title hc-1">👁️ 3.16 L'EMDR</h2>
+<h2 id="316-lemdr" class="entry-title hc-1">3.16 L'EMDR</h2>
 <p>L'EMDR signifie :</p>
 <p><strong>Eye Movement Desensitization and Reprocessing</strong></p>
 <p>En français :</p>
@@ -335,7 +350,7 @@
 <p>L'objectif général d'une thérapie centrée sur le traumatisme n'est pas de supprimer l'existence du souvenir.</p>
 <p>Il s'agit plutôt de permettre que ce souvenir soit moins fortement associé à une réaction de menace actuelle.</p>
 <hr />
-<h2 id="317-se-souvenir-sans-etre-replonge-dans-le-danger" class="entry-title hc-2">🧩 3.17 Se souvenir sans être replongé dans le danger</h2>
+<h2 id="317-se-souvenir-sans-etre-replonge-dans-le-danger" class="entry-title hc-2">3.17 Se souvenir sans être replongé dans le danger</h2>
 <p>Une différence essentielle peut être faite entre :</p>
 <p><strong>se souvenir d'un événement</strong></p>
 <p>et</p>
@@ -348,7 +363,7 @@
 <p>plutôt que :</p>
 <p><strong>une menace toujours active.</strong></p>
 <hr />
-<h2 id="318-le-role-du-retraitement" class="entry-title hc-3">🔄 3.18 Le rôle du retraitement</h2>
+<h2 id="318-le-role-du-retraitement" class="entry-title hc-3">3.18 Le rôle du retraitement</h2>
 <p>Dans les modèles contemporains du traumatisme, plusieurs mécanismes sont étudiés pour expliquer comment une thérapie peut modifier les réactions associées à un souvenir.</p>
 <p>Parmi eux :</p>
 <ul>
@@ -362,7 +377,7 @@
 <p>Il est donc préférable d'éviter l'idée simpliste selon laquelle les mouvements oculaires « effacent » un souvenir.</p>
 <p>Ce n'est pas ce que montre la science.</p>
 <hr />
-<h2 id="319-une-histoire-qui-montre-que-le-cerveau-nest-pas-fige" class="entry-title hc-4">🧠 3.19 Une histoire qui montre que le cerveau n'est pas figé</h2>
+<h2 id="319-une-histoire-qui-montre-que-le-cerveau-nest-pas-fige" class="entry-title hc-4">3.19 Une histoire qui montre que le cerveau n'est pas figé</h2>
 <p>Cette histoire rejoint un concept fondamental :</p>
 <p><strong>la plasticité psychologique et cérébrale.</strong></p>
 <p>Le fonctionnement humain n'est pas entièrement déterminé une fois pour toutes par les expériences passées.</p>
@@ -374,19 +389,19 @@
 <p>Cela ne signifie pas que toute souffrance peut disparaître complètement.</p>
 <p>Cela signifie plutôt que le fonctionnement psychologique possède une capacité de changement.</p>
 <hr />
-<h2 id="320-le-changement-nest-pas-un-effacement" class="entry-title hc-5">🌱 3.20 Le changement n'est pas un effacement</h2>
+<h2 id="320-le-changement-nest-pas-un-effacement" class="entry-title hc-5">3.20 Le changement n'est pas un effacement</h2>
 <p>Une erreur fréquente consiste à imaginer la guérison psychologique comme une suppression du passé.</p>
 <p>Mais le passé ne disparaît pas.</p>
 <p>Une personne peut conserver le souvenir d'un événement tout en étant beaucoup moins affectée par celui-ci.</p>
 <p>La reconstruction peut donc être comprise comme une transformation de la relation au souvenir.</p>
 <p>Avant :</p>
-<p><strong>souvenir → menace → activation</strong></p>
+<p><strong>souvenir  menace  activation</strong></p>
 <p>Après un changement thérapeutique :</p>
-<p><strong>souvenir → événement passé → activation beaucoup plus faible</strong></p>
+<p><strong>souvenir  événement passé  activation beaucoup plus faible</strong></p>
 <p>Le souvenir peut rester.</p>
 <p>Mais sa signification psychologique peut évoluer.</p>
 <hr />
-<h2 id="321-le-cas-etudie-rapporte-des-changements-importants" class="entry-title hc-1">🧠 3.21 Le cas étudié rapporte des changements importants</h2>
+<h2 id="321-le-cas-etudie-rapporte-des-changements-importants" class="entry-title hc-1">3.21 Le cas étudié rapporte des changements importants</h2>
 <p>Les auteurs de l'étude rapportent plusieurs améliorations après le travail thérapeutique.</p>
 <p>Ils décrivent notamment :</p>
 <ul>
@@ -399,7 +414,7 @@
 <p>Ce résultat est particulièrement intéressant parce qu'il montre que les conséquences d'une expérience ancienne peuvent parfois être modifiées même des années plus tard.</p>
 <p>Mais une précision scientifique est indispensable.</p>
 <hr />
-<h2 id="322-une-etude-de-cas-nest-pas-une-preuve-universelle" class="entry-title hc-2">⚠️ 3.22 Une étude de cas n'est pas une preuve universelle</h2>
+<h2 id="322-une-etude-de-cas-nest-pas-une-preuve-universelle" class="entry-title hc-2">3.22 Une étude de cas n'est pas une preuve universelle</h2>
 <p>Il s'agit d'une <strong>étude de cas individuelle</strong>.</p>
 <p>Cela signifie qu'elle permet d'observer très précisément le parcours d'une personne.</p>
 <p>Mais elle ne permet pas de conclure que le même traitement produira exactement les mêmes résultats chez toutes les personnes ayant vécu un traumatisme.</p>
@@ -414,7 +429,7 @@
 </ul>
 <p>Elle est donc extrêmement intéressante pour comprendre un parcours psychologique, mais elle doit être interprétée avec prudence.</p>
 <hr />
-<h2 id="323-pourquoi-les-etudes-de-cas-restent-importantes" class="entry-title hc-3">🔬 3.23 Pourquoi les études de cas restent importantes</h2>
+<h2 id="323-pourquoi-les-etudes-de-cas-restent-importantes" class="entry-title hc-3">3.23 Pourquoi les études de cas restent importantes</h2>
 <p>Malgré leurs limites, les études de cas ont une grande valeur.</p>
 <p>Elles permettent d'observer des phénomènes complexes dans leur contexte réel.</p>
 <p>Une étude statistique peut montrer qu'un traitement produit en moyenne une amélioration.</p>
@@ -431,7 +446,7 @@
 </ul>
 <p>Les deux types de recherche sont donc complémentaires.</p>
 <hr />
-<h2 id="324-le-traumatisme-nexplique-jamais-tout" class="entry-title hc-4">🧩 3.24 Le traumatisme n'explique jamais tout</h2>
+<h2 id="324-le-traumatisme-nexplique-jamais-tout" class="entry-title hc-4">3.24 Le traumatisme n'explique jamais tout</h2>
 <p>Il serait également incorrect de réduire toute la vie psychologique d'une personne à son traumatisme.</p>
 <p>Une personne possède toujours plusieurs dimensions :</p>
 <ul>
@@ -450,18 +465,18 @@
 <p>Un événement peut avoir une influence considérable sans devenir l'unique explication du fonctionnement psychologique.</p>
 <p>C'est une distinction essentielle.</p>
 <hr />
-<h2 id="325-le-modele-biopsychosocial" class="entry-title hc-5">🧠 3.25 Le modèle biopsychosocial</h2>
+<h2 id="325-le-modele-biopsychosocial" class="entry-title hc-5">3.25 Le modèle biopsychosocial</h2>
 <p>Cette histoire peut être comprise à travers une vision biopsychosociale.</p>
-<h3 id="dimension-biologique">🧬 Dimension biologique</h3>
+<h3 id="dimension-biologique">Dimension biologique</h3>
 <p>Le système nerveux et les mécanismes physiologiques participent aux réactions de stress et de menace.</p>
-<h3 id="dimension-psychologique">🧠 Dimension psychologique</h3>
+<h3 id="dimension-psychologique">Dimension psychologique</h3>
 <p>Les souvenirs, émotions, croyances, interprétations, apprentissages et comportements jouent un rôle.</p>
-<h3 id="dimension-sociale">👥 Dimension sociale</h3>
+<h3 id="dimension-sociale">Dimension sociale</h3>
 <p>Les relations, l'environnement et le sentiment de sécurité peuvent également modifier le fonctionnement psychologique.</p>
 <p>Ces dimensions ne fonctionnent pas séparément.</p>
 <p>Elles s'influencent mutuellement.</p>
 <hr />
-<h2 id="326-le-passe-influence-le-present-mais-le-present-influence-aussi-le-passe-psychologique" class="entry-title hc-1">🔄 3.26 Le passé influence le présent, mais le présent influence aussi le passé psychologique</h2>
+<h2 id="326-le-passe-influence-le-present-mais-le-present-influence-aussi-le-passe-psychologique" class="entry-title hc-1">3.26 Le passé influence le présent, mais le présent influence aussi le passé psychologique</h2>
 <p>Cette idée est particulièrement intéressante.</p>
 <p>Le passé biologique ne change pas.</p>
 <p>L'événement historique ne change pas.</p>
@@ -471,7 +486,7 @@
 <p>La personne adulte possède davantage de connaissances, de capacités de réflexion et de possibilités d'interprétation.</p>
 <p>Le souvenir peut donc rester le même événement historique tout en étant intégré différemment dans l'identité personnelle.</p>
 <hr />
-<h2 id="327-une-nouvelle-relation-avec-le-souvenir" class="entry-title hc-2">🪞 3.27 Une nouvelle relation avec le souvenir</h2>
+<h2 id="327-une-nouvelle-relation-avec-le-souvenir" class="entry-title hc-2">3.27 Une nouvelle relation avec le souvenir</h2>
 <p>La reconstruction psychologique peut être comprise comme une modification de la relation entre :</p>
 <p><strong>la personne</strong></p>
 <p>et</p>
@@ -484,7 +499,7 @@
 <p>mais plutôt :</p>
 <p><strong>« pouvoir se souvenir sans être entièrement dominé par la réaction associée au souvenir ».</strong></p>
 <hr />
-<h2 id="328-pourquoi-cette-histoire-est-importante" class="entry-title hc-3">🌱 3.28 Pourquoi cette histoire est importante</h2>
+<h2 id="328-pourquoi-cette-histoire-est-importante" class="entry-title hc-3">3.28 Pourquoi cette histoire est importante</h2>
 <p>Cette histoire apporte une idée différente de celles de Phineas Gage et d'H.M.</p>
 <p>Phineas Gage montre qu'une modification du cerveau peut modifier le comportement.</p>
 <p>H.M. montre qu'une modification du cerveau peut profondément modifier certains systèmes de mémoire.</p>
@@ -493,30 +508,30 @@
 <p>L'être humain n'est donc pas simplement la somme de ce qui lui est arrivé.</p>
 <p>Il existe également une capacité d'apprentissage, d'adaptation et de changement.</p>
 <hr />
-<h2 id="329-le-cerveau-apprend-dans-les-deux-sens" class="entry-title hc-4">🧠 3.29 Le cerveau apprend dans les deux sens</h2>
+<h2 id="329-le-cerveau-apprend-dans-les-deux-sens" class="entry-title hc-4">3.29 Le cerveau apprend dans les deux sens</h2>
 <p>Le cerveau peut apprendre qu'une situation est dangereuse.</p>
 <p>Mais il peut également apprendre qu'elle ne l'est plus.</p>
 <p>C'est une idée centrale dans de nombreux modèles de l'apprentissage émotionnel.</p>
 <p>Une première expérience peut produire :</p>
-<p><strong>danger → peur</strong></p>
+<p><strong>danger  peur</strong></p>
 <p>Mais de nouvelles expériences peuvent progressivement produire :</p>
-<p><strong>situation → sécurité</strong></p>
+<p><strong>situation  sécurité</strong></p>
 <p>Ces apprentissages peuvent entrer en compétition.</p>
 <p>Le cerveau ne remplace pas nécessairement instantanément l'ancien apprentissage.</p>
 <p>Il peut apprendre une nouvelle réponse qui vient progressivement modifier le fonctionnement global.</p>
 <hr />
-<h2 id="330-le-concept-dextinction" class="entry-title hc-5">🔬 3.30 Le concept d'extinction</h2>
+<h2 id="330-le-concept-dextinction" class="entry-title hc-5">3.30 Le concept d'extinction</h2>
 <p>En psychologie expérimentale, on parle notamment d'<strong>extinction</strong> lorsqu'une réponse apprise diminue après que le signal conditionné n'est plus suivi de l'événement attendu.</p>
 <p>Exemple simplifié :</p>
-<p><strong>Signal → danger</strong></p>
+<p><strong>Signal  danger</strong></p>
 <p>Après de nombreuses expériences sécurisées :</p>
-<p><strong>Signal → absence de danger</strong></p>
+<p><strong>Signal  absence de danger</strong></p>
 <p>La réponse de peur peut diminuer.</p>
 <p>Mais l'ancien apprentissage n'est pas forcément complètement détruit.</p>
 <p>C'est pourquoi une réaction peut parfois réapparaître dans certains contextes.</p>
 <p>Cela montre encore une fois que la psychologie fonctionne rarement comme un simple bouton « activé/désactivé ».</p>
 <hr />
-<h2 id="331-la-recuperation-nest-pas-toujours-lineaire" class="entry-title hc-1">🧠 3.31 La récupération n'est pas toujours linéaire</h2>
+<h2 id="331-la-recuperation-nest-pas-toujours-lineaire" class="entry-title hc-1">3.31 La récupération n'est pas toujours linéaire</h2>
 <p>Une autre idée importante est que le changement psychologique n'est pas nécessairement une ligne droite.</p>
 <p>Une personne peut :</p>
 <ul>
@@ -529,7 +544,7 @@
 <p>Une réapparition temporaire d'un symptôme ne signifie donc pas nécessairement que tous les changements précédents ont disparu.</p>
 <p>Le fonctionnement psychologique est dynamique.</p>
 <hr />
-<h2 id="332-pourquoi-certaines-personnes-recuperent-differemment" class="entry-title hc-2">🌊 3.32 Pourquoi certaines personnes récupèrent différemment</h2>
+<h2 id="332-pourquoi-certaines-personnes-recuperent-differemment" class="entry-title hc-2">3.32 Pourquoi certaines personnes récupèrent différemment</h2>
 <p>Les conséquences d'un traumatisme dépendent de nombreux facteurs.</p>
 <p>Parmi eux :</p>
 <ul>
@@ -547,7 +562,7 @@
 </ul>
 <p>Deux personnes peuvent donc vivre des événements comparables et développer des trajectoires très différentes.</p>
 <hr />
-<h2 id="333-la-resilience" class="entry-title hc-3">🧩 3.33 La résilience</h2>
+<h2 id="333-la-resilience" class="entry-title hc-3">3.33 La résilience</h2>
 <p>Le terme <strong>résilience</strong> est souvent utilisé pour désigner la capacité d'une personne à maintenir ou retrouver un fonctionnement relativement adapté malgré des expériences difficiles.</p>
 <p>Mais la résilience ne signifie pas :</p>
 <p><strong>« ne rien ressentir ».</strong></p>
@@ -557,7 +572,7 @@
 <p>Elle peut avoir connu plusieurs périodes difficiles.</p>
 <p>La résilience désigne davantage une trajectoire d'adaptation qu'une absence totale de souffrance.</p>
 <hr />
-<h2 id="334-se-reconstruire-ne-signifie-pas-devenir-la-personne-davant" class="entry-title hc-4">❤️ 3.34 Se reconstruire ne signifie pas devenir la personne d'avant</h2>
+<h2 id="334-se-reconstruire-ne-signifie-pas-devenir-la-personne-davant" class="entry-title hc-4">3.34 Se reconstruire ne signifie pas devenir la personne d'avant</h2>
 <p>Lorsqu'une personne traverse une expérience profondément perturbante, le changement peut parfois conduire à une nouvelle organisation de la vie psychologique.</p>
 <p>La reconstruction n'est donc pas forcément :</p>
 <p><strong>retour à l'état initial.</strong></p>
@@ -572,7 +587,7 @@
 <li>une identité personnelle différente.</li>
 </ul>
 <hr />
-<h2 id="335-le-role-de-lidentite" class="entry-title hc-5">🧠 3.35 Le rôle de l'identité</h2>
+<h2 id="335-le-role-de-lidentite" class="entry-title hc-5">3.35 Le rôle de l'identité</h2>
 <p>Les expériences traumatiques peuvent parfois influencer la manière dont une personne se représente elle-même.</p>
 <p>Elle peut se percevoir comme :</p>
 <ul>
@@ -587,7 +602,7 @@
 <p>Ces représentations peuvent devenir partie intégrante de l'identité.</p>
 <p>Le travail psychologique peut alors concerner non seulement le souvenir lui-même, mais aussi la signification que la personne lui donne.</p>
 <hr />
-<h2 id="336-lhistoire-personnelle-comme-recit" class="entry-title hc-1">🪞 3.36 L'histoire personnelle comme récit</h2>
+<h2 id="336-lhistoire-personnelle-comme-recit" class="entry-title hc-1">3.36 L'histoire personnelle comme récit</h2>
 <p>L'identité humaine est en partie organisée autour d'un récit autobiographique.</p>
 <p>Ce récit permet de répondre à des questions comme :</p>
 <p><strong>Qui suis-je ?</strong></p>
@@ -600,7 +615,7 @@
 <p>Une reconstruction psychologique peut permettre de remettre l'événement à sa place :</p>
 <p><strong>un élément important de l'histoire, mais pas nécessairement toute l'histoire.</strong></p>
 <hr />
-<h2 id="337-une-histoire-ne-doit-pas-devenir-une-identite-entiere" class="entry-title hc-2">🌱 3.37 Une histoire ne doit pas devenir une identité entière</h2>
+<h2 id="337-une-histoire-ne-doit-pas-devenir-une-identite-entiere" class="entry-title hc-2">3.37 Une histoire ne doit pas devenir une identité entière</h2>
 <p>Cette idée est probablement l'une des plus importantes de cette partie.</p>
 <p>Une personne peut avoir vécu un traumatisme sans que son identité entière soit définie par celui-ci.</p>
 <p>Elle peut être :</p>
@@ -611,7 +626,7 @@
 <p>L'événement fait partie de l'histoire.</p>
 <p>Il n'est pas nécessairement toute l'histoire.</p>
 <hr />
-<h2 id="338-ce-que-cette-histoire-montre-sur-la-psychotherapie" class="entry-title hc-3">🔬 3.38 Ce que cette histoire montre sur la psychothérapie</h2>
+<h2 id="338-ce-que-cette-histoire-montre-sur-la-psychotherapie" class="entry-title hc-3">3.38 Ce que cette histoire montre sur la psychothérapie</h2>
 <p>Cette étude permet également de comprendre quelque chose d'important sur les traitements psychologiques.</p>
 <p>Une thérapie ne consiste pas simplement à donner des conseils.</p>
 <p>Elle peut chercher à modifier différents processus :</p>
@@ -628,7 +643,7 @@
 <p>Différentes approches peuvent travailler sur différents mécanismes.</p>
 <p>C'est notamment pourquoi la recherche moderne étudie de plus en plus les mécanismes de changement plutôt que de considérer chaque thérapie comme un bloc totalement homogène.</p>
 <hr />
-<h2 id="339-ce-que-lon-peut-reellement-conclure" class="entry-title hc-4">🧠 3.39 Ce que l'on peut réellement conclure</h2>
+<h2 id="339-ce-que-lon-peut-reellement-conclure" class="entry-title hc-4">3.39 Ce que l'on peut réellement conclure</h2>
 <p>Le cas publié par Broad et Wheeler montre qu'un adulte ayant une histoire de traumatisme médical pendant l'enfance a présenté des améliorations importantes au cours d'un traitement combinant psychothérapie psychodynamique et EMDR.</p>
 <p>Les auteurs rapportent notamment une diminution de la dépression et de l'hypervigilance ainsi qu'une amélioration de la concentration et du fonctionnement général.</p>
 <p>Mais cette observation ne signifie pas que :</p>
@@ -636,7 +651,7 @@
 <p>Elle ne signifie pas non plus qu'une seule technique explique nécessairement tous les changements observés.</p>
 <p>Elle montre plutôt qu'un fonctionnement psychologique profondément influencé par une expérience ancienne peut parfois évoluer.</p>
 <hr />
-<h2 id="340-pourquoi-cette-histoire-est-importante-pour-la-psychologie" class="entry-title hc-5">🌌 3.40 Pourquoi cette histoire est importante pour la psychologie</h2>
+<h2 id="340-pourquoi-cette-histoire-est-importante-pour-la-psychologie" class="entry-title hc-5">3.40 Pourquoi cette histoire est importante pour la psychologie</h2>
 <p>Cette histoire pose une question fondamentale :</p>
 <p><strong>Est-on condamné à rester psychologiquement identique à cause de ce qui nous est arrivé ?</strong></p>
 <p>La réponse scientifique est plus nuancée que oui ou non.</p>
@@ -646,7 +661,7 @@
 <p>L'histoire humaine n'est donc pas uniquement une accumulation d'événements.</p>
 <p>Elle est aussi constituée de la manière dont ces événements sont progressivement intégrés.</p>
 <hr />
-<h2 id="341-une-difference-fondamentale-avec-loubli" class="entry-title hc-1">🔄 3.41 Une différence fondamentale avec l'oubli</h2>
+<h2 id="341-une-difference-fondamentale-avec-loubli" class="entry-title hc-1">3.41 Une différence fondamentale avec l'oubli</h2>
 <p>Il serait tentant de penser :</p>
 <p><strong>« Si je vais mieux, c'est que j'ai oublié. »</strong></p>
 <p>Mais ce n'est pas nécessairement le cas.</p>
@@ -657,7 +672,7 @@
 <p><strong>modification de la réaction au souvenir.</strong></p>
 <p>Cette distinction est essentielle pour comprendre la mémoire émotionnelle.</p>
 <hr />
-<h2 id="342-le-cerveau-peut-apprendre-la-securite" class="entry-title hc-2">🧠 3.42 Le cerveau peut apprendre la sécurité</h2>
+<h2 id="342-le-cerveau-peut-apprendre-la-securite" class="entry-title hc-2">3.42 Le cerveau peut apprendre la sécurité</h2>
 <p>Pendant un traumatisme, le système nerveux peut apprendre :</p>
 <p><strong>« cette situation représente une menace ».</strong></p>
 <p>Avec de nouvelles expériences et un environnement suffisamment sécurisé, il peut également apprendre :</p>
@@ -665,7 +680,7 @@
 <p>Ce deuxième apprentissage peut progressivement modifier les réactions.</p>
 <p>Cela constitue une illustration particulièrement claire de la plasticité du fonctionnement humain.</p>
 <hr />
-<h2 id="343-le-changement-psychologique-peut-etre-progressif" class="entry-title hc-3">🌱 3.43 Le changement psychologique peut être progressif</h2>
+<h2 id="343-le-changement-psychologique-peut-etre-progressif" class="entry-title hc-3">3.43 Le changement psychologique peut être progressif</h2>
 <p>Il n'existe pas nécessairement un instant précis où une personne passe soudainement de :</p>
 <p><strong>« je souffre »</strong></p>
 <p>à</p>
@@ -681,7 +696,7 @@
 </ul>
 <p>Au fil du temps, ces petits changements peuvent produire une modification importante du fonctionnement général.</p>
 <hr />
-<h2 id="344-ce-que-cette-histoire-ne-promet-pas" class="entry-title hc-4">❤️ 3.44 Ce que cette histoire ne promet pas</h2>
+<h2 id="344-ce-que-cette-histoire-ne-promet-pas" class="entry-title hc-4">3.44 Ce que cette histoire ne promet pas</h2>
 <p>Cette histoire ne doit pas être utilisée pour affirmer :</p>
 <p><strong>« tout traumatisme peut être guéri ».</strong></p>
 <p>La psychologie ne permet pas une telle généralisation.</p>
@@ -691,14 +706,14 @@
 <p>D'autres trouvent des moyens de vivre avec certaines séquelles sans que celles-ci disparaissent totalement.</p>
 <p>Chaque trajectoire est différente.</p>
 <hr />
-<h2 id="345-ce-que-lhistoire-montre-reellement" class="entry-title hc-5">🧠 3.45 Ce que l'histoire montre réellement</h2>
+<h2 id="345-ce-que-lhistoire-montre-reellement" class="entry-title hc-5">3.45 Ce que l'histoire montre réellement</h2>
 <p>Ce cas montre quelque chose de beaucoup plus précis et scientifiquement défendable :</p>
 <p><strong>un fonctionnement psychologique influencé par une expérience ancienne peut changer, parfois de manière importante, même lorsque l'expérience remonte à l'enfance.</strong></p>
 <p>Le cerveau et la psychologie ne sont donc pas des systèmes totalement figés.</p>
 <p>Ils sont influencés par le passé.</p>
 <p>Mais ils continuent également à apprendre.</p>
 <hr />
-<h2 id="346-une-derniere-reflexion" class="entry-title hc-1">🌌 3.46 Une dernière réflexion</h2>
+<h2 id="346-une-derniere-reflexion" class="entry-title hc-1">3.46 Une dernière réflexion</h2>
 <p>Un événement appartient au passé.</p>
 <p>Mais son influence psychologique peut continuer dans le présent.</p>
 <p>Et cette influence peut elle-même changer.</p>
@@ -711,22 +726,34 @@
 <p>Mais cela ne signifie pas nécessairement que la souffrance doit rester identique pour toujours.</p>
 <p>L'être humain est capable de conserver son histoire tout en changeant sa manière de la porter.</p>
 <hr />
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🧠 Un événement vécu pendant l'enfance peut parfois continuer à influencer le fonctionnement psychologique à l'âge adulte.</p>
-<p>🌪️ Le traumatisme peut se manifester par différents mécanismes : hypervigilance, évitement, réactions émotionnelles, difficultés attentionnelles ou associations de menace.</p>
-<p>🧩 Un souvenir traumatique n'est pas simplement une vidéo enregistrée dans le cerveau.</p>
-<p>❤️ Se souvenir d'un événement et réagir comme si le danger était encore présent sont deux choses différentes.</p>
-<p>🔄 Les mécanismes d'apprentissage permettent au cerveau et au fonctionnement psychologique d'intégrer de nouvelles informations.</p>
-<p>🌱 La reconstruction psychologique ne signifie pas nécessairement oublier le passé.</p>
-<p>🪞 Une personne peut intégrer une expérience difficile à son histoire sans que cette expérience définisse toute son identité.</p>
-<p>🔬 Les études de cas permettent de comprendre en profondeur certains parcours individuels, mais leurs résultats ne peuvent pas être généralisés automatiquement à tout le monde.</p>
-<p>🌌 Le changement psychologique peut être réel, progressif et parfois important, tout en restant individuel et non garanti.</p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p>Un événement vécu pendant l'enfance peut parfois continuer à influencer le fonctionnement psychologique à l'âge adulte.</p>
+<p>Le traumatisme peut se manifester par différents mécanismes : hypervigilance, évitement, réactions émotionnelles, difficultés attentionnelles ou associations de menace.</p>
+<p>Un souvenir traumatique n'est pas simplement une vidéo enregistrée dans le cerveau.</p>
+<p>Se souvenir d'un événement et réagir comme si le danger était encore présent sont deux choses différentes.</p>
+<p>Les mécanismes d'apprentissage permettent au cerveau et au fonctionnement psychologique d'intégrer de nouvelles informations.</p>
+<p>La reconstruction psychologique ne signifie pas nécessairement oublier le passé.</p>
+<p>Une personne peut intégrer une expérience difficile à son histoire sans que cette expérience définisse toute son identité.</p>
+<p>Les études de cas permettent de comprendre en profondeur certains parcours individuels, mais leurs résultats ne peuvent pas être généralisés automatiquement à tout le monde.</p>
+<p>Le changement psychologique peut être réel, progressif et parfois important, tout en restant individuel et non garanti.</p>
 <hr />
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Histoires vraies de psychologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/histoires-un-cerveau-qui-n-avait-pas-dit-son-dernier-mot/"><span class="similar-icon">📖</span>Un cerveau qui n'avait pas dit son dernier mot</a><a class="similar-item" href="/chapitre/histoires-l-histoire-qui-a-fait-naitre-l-effet-du-temoin/"><span class="similar-icon">📖</span>L'histoire qui a fait naître l'effet du témoin</a><a class="similar-item" href="/chapitre/histoires-une-histoire-qui-a-change-la-psychologie/"><span class="similar-icon">📖</span>Une histoire qui a changé la psychologie</a></div>
+      <h2>Autres chapitres de « Histoires vraies de psychologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/histoires-un-cerveau-qui-n-avait-pas-dit-son-dernier-mot/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg></span>Un cerveau qui n'avait pas dit son dernier mot</a><a class="similar-item" href="/chapitre/histoires-l-histoire-qui-a-fait-naitre-l-effet-du-temoin/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg></span>L'histoire qui a fait naître l'effet du témoin</a><a class="similar-item" href="/chapitre/histoires-une-histoire-qui-a-change-la-psychologie/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg></span>Une histoire qui a changé la psychologie</a></div>
     </div>
     <a class="back-link" href="/categorie/histoires/">← Retour à « Histoires vraies de psychologie »</a>
   </div>
@@ -812,23 +839,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -846,7 +875,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -1026,9 +1055,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -1037,10 +1068,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -1147,7 +1178,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1187,8 +1218,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1219,7 +1250,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1274,7 +1305,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1298,17 +1329,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1350,7 +1381,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#51-une-nuit-qui-allait-marquer-lhistoire-de-la-psychologie">🌃 5.1 Une nuit qui allait marquer l'histoire de la psychologie</a></li><li><a href="#52-lhistoire-des-38-temoins">📰 5.2 L'histoire des « 38 témoins »</a></li><li><a href="#53-une-histoire-beaucoup-plus-complexe">🔎 5.3 Une histoire beaucoup plus complexe</a></li><li><a href="#54-pourtant-quelque-chose-dimportant-est-ne-de-cette-histoire">🧠 5.4 Pourtant, quelque chose d'important est né de cette histoire</a></li><li><a href="#55-leffet-du-temoin">👥 5.5 L'effet du témoin</a></li><li><a href="#56-la-diffusion-de-responsabilite">⚖️ 5.6 La diffusion de responsabilité</a></li><li><a href="#57-si-personne-ne-reagit-peut-etre-que-ce-nest-pas-si-grave">🪞 5.7 « Si personne ne réagit, peut-être que ce n'est pas si grave »</a></li><li><a href="#58-une-boucle-sociale">🔄 5.8 Une boucle sociale</a></li><li><a href="#59-lambiguite-joue-un-role-essentiel">🧩 5.9 L'ambiguïté joue un rôle essentiel</a></li><li><a href="#510-le-cerveau-cherche-une-interpretation">🧠 5.10 Le cerveau cherche une interprétation</a></li><li><a href="#511-le-comportement-des-autres-devient-une-information">👀 5.11 Le comportement des autres devient une information</a></li><li><a href="#512-darley-et-latane-passent-a-lexperimentation">🧪 5.12 Darley et Latané passent à l'expérimentation</a></li><li><a href="#513-la-vitesse-dintervention">⏱️ 5.13 La vitesse d'intervention</a></li><li><a href="#514-le-processus-en-plusieurs-etapes">🧠 5.14 Le processus en plusieurs étapes</a></li><li><a href="#515-remarquer-nest-pas-comprendre">🚨 5.15 Remarquer n'est pas comprendre</a></li><li><a href="#516-la-responsabilite-devient-collective">⚖️ 5.16 La responsabilité devient collective</a></li><li><a href="#517-pourquoi-une-personne-peut-rester-passive">🧍 5.17 Pourquoi une personne peut rester passive</a></li><li><a href="#518-lempathie-nest-pas-suffisante">🧠 5.18 L'empathie n'est pas suffisante</a></li><li><a href="#519-lenvironnement-social-transforme-le-comportement">🌎 5.19 L'environnement social transforme le comportement</a></li><li><a href="#520-une-histoire-qui-a-change-la-psychologie-sociale">🔬 5.20 Une histoire qui a changé la psychologie sociale</a></li><li><a href="#521-ce-que-les-recherches-ont-reellement-montre">📚 5.21 Ce que les recherches ont réellement montré</a></li><li><a href="#522-il-nexiste-pas-un-seul-effet-du-temoin">🧩 5.22 Il n'existe pas un seul « effet du témoin »</a></li><li><a href="#523-la-psychologie-ne-juge-pas-seulement-le-comportement">🧠 5.23 La psychologie ne juge pas seulement le comportement</a></li><li><a href="#524-le-pouvoir-dune-histoire">📰 5.24 Le pouvoir d'une histoire</a></li><li><a href="#525-quand-une-histoire-devient-un-mythe-scientifique">⚠️ 5.25 Quand une histoire devient un mythe scientifique</a></li><li><a href="#526-la-psychologie-doit-elle-aussi-remettre-ses-histoires-en-question">🔎 5.26 La psychologie doit elle aussi remettre ses histoires en question</a></li><li><a href="#527-lindividu-nest-pas-simplement-bon-ou-mauvais">🧠 5.27 L'individu n'est pas simplement « bon » ou « mauvais »</a></li><li><a href="#528-quand-les-autres-peuvent-empecher-laction">🔄 5.28 Quand les autres peuvent empêcher l'action</a></li><li><a href="#529-le-role-des-temoins-actifs">🤝 5.29 Le rôle des témoins actifs</a></li><li><a href="#530-un-phenomene-qui-depasse-les-situations-criminelles">🌐 5.30 Un phénomène qui dépasse les situations criminelles</a></li><li><a href="#531-le-paradoxe-de-la-foule">🧠 5.31 Le paradoxe de la foule</a></li><li><a href="#532-pourquoi-cette-histoire-reste-importante">🔬 5.32 Pourquoi cette histoire reste importante</a></li><li><a href="#533-lune-des-grandes-lecons-de-la-psychologie-sociale">🧩 5.33 L'une des grandes leçons de la psychologie sociale</a></li><li><a href="#534-le-regard-des-autres">🪞 5.34 Le regard des autres</a></li><li><a href="#535-une-decision-psychologique-complexe">⚙️ 5.35 Une décision psychologique complexe</a></li><li><a href="#536-une-histoire-qui-enseigne-aussi-la-prudence-scientifique">📖 5.36 Une histoire qui enseigne aussi la prudence scientifique</a></li><li><a href="#537-ce-que-lon-peut-reellement-conclure">🔬 5.37 Ce que l'on peut réellement conclure</a></li><li><a href="#538-une-histoire-sur-la-responsabilite">🧠 5.38 Une histoire sur la responsabilité</a></li><li><a href="#539-de-la-tragedie-a-la-science">🌃 5.39 De la tragédie à la science</a></li><li><a href="#540-ce-que-cette-histoire-montre-reellement">🔎 5.40 Ce que cette histoire montre réellement</a></li><li><a href="#541-une-derniere-reflexion">📌 5.41 Une dernière réflexion</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#51-une-nuit-qui-allait-marquer-lhistoire-de-la-psychologie">5.1 Une nuit qui allait marquer l'histoire de la psychologie</a></li><li><a href="#52-lhistoire-des-38-temoins">5.2 L'histoire des « 38 témoins »</a></li><li><a href="#53-une-histoire-beaucoup-plus-complexe">5.3 Une histoire beaucoup plus complexe</a></li><li><a href="#54-pourtant-quelque-chose-dimportant-est-ne-de-cette-histoire">5.4 Pourtant, quelque chose d'important est né de cette histoire</a></li><li><a href="#55-leffet-du-temoin">5.5 L'effet du témoin</a></li><li><a href="#56-la-diffusion-de-responsabilite">5.6 La diffusion de responsabilité</a></li><li><a href="#57-si-personne-ne-reagit-peut-etre-que-ce-nest-pas-si-grave">5.7 « Si personne ne réagit, peut-être que ce n'est pas si grave »</a></li><li><a href="#58-une-boucle-sociale">5.8 Une boucle sociale</a></li><li><a href="#59-lambiguite-joue-un-role-essentiel">5.9 L'ambiguïté joue un rôle essentiel</a></li><li><a href="#510-le-cerveau-cherche-une-interpretation">5.10 Le cerveau cherche une interprétation</a></li><li><a href="#511-le-comportement-des-autres-devient-une-information">5.11 Le comportement des autres devient une information</a></li><li><a href="#512-darley-et-latane-passent-a-lexperimentation">5.12 Darley et Latané passent à l'expérimentation</a></li><li><a href="#513-la-vitesse-dintervention">5.13 La vitesse d'intervention</a></li><li><a href="#514-le-processus-en-plusieurs-etapes">5.14 Le processus en plusieurs étapes</a></li><li><a href="#515-remarquer-nest-pas-comprendre">5.15 Remarquer n'est pas comprendre</a></li><li><a href="#516-la-responsabilite-devient-collective">5.16 La responsabilité devient collective</a></li><li><a href="#517-pourquoi-une-personne-peut-rester-passive">5.17 Pourquoi une personne peut rester passive</a></li><li><a href="#518-lempathie-nest-pas-suffisante">5.18 L'empathie n'est pas suffisante</a></li><li><a href="#519-lenvironnement-social-transforme-le-comportement">5.19 L'environnement social transforme le comportement</a></li><li><a href="#520-une-histoire-qui-a-change-la-psychologie-sociale">5.20 Une histoire qui a changé la psychologie sociale</a></li><li><a href="#521-ce-que-les-recherches-ont-reellement-montre">5.21 Ce que les recherches ont réellement montré</a></li><li><a href="#522-il-nexiste-pas-un-seul-effet-du-temoin">5.22 Il n'existe pas un seul « effet du témoin »</a></li><li><a href="#523-la-psychologie-ne-juge-pas-seulement-le-comportement">5.23 La psychologie ne juge pas seulement le comportement</a></li><li><a href="#524-le-pouvoir-dune-histoire">5.24 Le pouvoir d'une histoire</a></li><li><a href="#525-quand-une-histoire-devient-un-mythe-scientifique">5.25 Quand une histoire devient un mythe scientifique</a></li><li><a href="#526-la-psychologie-doit-elle-aussi-remettre-ses-histoires-en-question">5.26 La psychologie doit elle aussi remettre ses histoires en question</a></li><li><a href="#527-lindividu-nest-pas-simplement-bon-ou-mauvais">5.27 L'individu n'est pas simplement « bon » ou « mauvais »</a></li><li><a href="#528-quand-les-autres-peuvent-empecher-laction">5.28 Quand les autres peuvent empêcher l'action</a></li><li><a href="#529-le-role-des-temoins-actifs">5.29 Le rôle des témoins actifs</a></li><li><a href="#530-un-phenomene-qui-depasse-les-situations-criminelles">5.30 Un phénomène qui dépasse les situations criminelles</a></li><li><a href="#531-le-paradoxe-de-la-foule">5.31 Le paradoxe de la foule</a></li><li><a href="#532-pourquoi-cette-histoire-reste-importante">5.32 Pourquoi cette histoire reste importante</a></li><li><a href="#533-lune-des-grandes-lecons-de-la-psychologie-sociale">5.33 L'une des grandes leçons de la psychologie sociale</a></li><li><a href="#534-le-regard-des-autres">5.34 Le regard des autres</a></li><li><a href="#535-une-decision-psychologique-complexe">5.35 Une décision psychologique complexe</a></li><li><a href="#536-une-histoire-qui-enseigne-aussi-la-prudence-scientifique">5.36 Une histoire qui enseigne aussi la prudence scientifique</a></li><li><a href="#537-ce-que-lon-peut-reellement-conclure">5.37 Ce que l'on peut réellement conclure</a></li><li><a href="#538-une-histoire-sur-la-responsabilite">5.38 Une histoire sur la responsabilité</a></li><li><a href="#539-de-la-tragedie-a-la-science">5.39 De la tragédie à la science</a></li><li><a href="#540-ce-que-cette-histoire-montre-reellement">5.40 Ce que cette histoire montre réellement</a></li><li><a href="#541-une-derniere-reflexion">5.41 Une dernière réflexion</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: "L'histoire qui a fait naître l'effet du témoin",
         category: 'Histoires vraies de psychologie',
-        icon: '📖'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/histoires/">📖 Histoires vraies de psychologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/histoires/">Histoires vraies de psychologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>L'histoire qui a fait naître l'effet du témoin</h1>
     </div>
     <div id="resume-banner"></div>
@@ -97,7 +112,7 @@
     </div>
     <div class="article-body">
       <p>Kitty Genovese : une affaire tragique qui a changé notre compréhension du comportement humain face à une urgence</p>
-<h2 id="51-une-nuit-qui-allait-marquer-lhistoire-de-la-psychologie" class="entry-title hc-1">🌃 5.1 Une nuit qui allait marquer l'histoire de la psychologie</h2>
+<h2 id="51-une-nuit-qui-allait-marquer-lhistoire-de-la-psychologie" class="entry-title hc-1">5.1 Une nuit qui allait marquer l'histoire de la psychologie</h2>
 <p>Le 13 mars 1964, Kitty Genovese, une jeune femme de 28 ans, rentrait chez elle dans le quartier de Kew Gardens, dans le Queens, à New York.</p>
 <p>Cette nuit-là, elle fut mortellement attaquée à proximité de son domicile.</p>
 <p>L'affaire devint rapidement l'une des histoires criminelles les plus célèbres des États-Unis. Mais ce qui allait particulièrement marquer la psychologie n'était pas seulement le crime lui-même.</p>
@@ -106,7 +121,7 @@
 <p>Cette question allait contribuer à donner naissance à l'un des phénomènes les plus connus de la psychologie sociale : <strong>l'effet du témoin</strong>.</p>
 <p>Mais avant de comprendre la psychologie derrière cette affaire, il faut revenir sur ce qui s'est réellement passé.</p>
 <hr />
-<h2 id="52-lhistoire-des-38-temoins" class="entry-title hc-2">📰 5.2 L'histoire des « 38 témoins »</h2>
+<h2 id="52-lhistoire-des-38-temoins" class="entry-title hc-2">5.2 L'histoire des « 38 témoins »</h2>
 <p>Quelques semaines après le meurtre, un article publié dans <em>The New York Times</em> rapporta une histoire particulièrement choquante.</p>
 <p>Selon le récit devenu célèbre, <strong>38 personnes auraient été témoins de l'agression depuis leurs appartements</strong>, mais aucune n'aurait appelé la police pendant l'attaque.</p>
 <p>L'histoire provoqua une immense réaction dans la société américaine.</p>
@@ -115,7 +130,7 @@
 <p>L'affaire fut rapidement utilisée comme exemple d'une supposée indifférence croissante dans les grandes villes.</p>
 <p>Mais cette version allait progressivement être remise en question.</p>
 <hr />
-<h2 id="53-une-histoire-beaucoup-plus-complexe" class="entry-title hc-3">🔎 5.3 Une histoire beaucoup plus complexe</h2>
+<h2 id="53-une-histoire-beaucoup-plus-complexe" class="entry-title hc-3">5.3 Une histoire beaucoup plus complexe</h2>
 <p>Les recherches historiques ultérieures ont montré que le récit des « 38 témoins passifs » ne correspondait pas parfaitement aux faits établis.</p>
 <p>L'American Psychological Association souligne notamment que plusieurs personnes auraient tenté d'aider, appelé la police ou réagi d'une manière ou d'une autre.</p>
 <p>Certains témoins n'avaient probablement pas une vision directe de l'agression.</p>
@@ -128,21 +143,21 @@
 <p>Cette formulation est devenue une sorte de mythe psychologique.</p>
 <p>Et cette nuance est essentielle.</p>
 <hr />
-<h2 id="54-pourtant-quelque-chose-dimportant-est-ne-de-cette-histoire" class="entry-title hc-4">🧠 5.4 Pourtant, quelque chose d'important est né de cette histoire</h2>
+<h2 id="54-pourtant-quelque-chose-dimportant-est-ne-de-cette-histoire" class="entry-title hc-4">5.4 Pourtant, quelque chose d'important est né de cette histoire</h2>
 <p>Même si le récit populaire était largement simplifié, l'affaire posa une question psychologique extrêmement intéressante.</p>
 <p><strong>Que fait une personne lorsqu'elle est témoin d'une urgence en présence d'autres personnes ?</strong></p>
 <p>Cette question intéressa particulièrement deux psychologues :</p>
 <p><strong>Bibb Latané</strong> et <strong>John Darley</strong>.</p>
 <p>Ils commencèrent à étudier expérimentalement les mécanismes qui peuvent expliquer pourquoi une personne intervient parfois rapidement alors qu'elle peut rester passive dans d'autres situations.</p>
 <hr />
-<h2 id="55-leffet-du-temoin" class="entry-title hc-5">👥 5.5 L'effet du témoin</h2>
+<h2 id="55-leffet-du-temoin" class="entry-title hc-5">5.5 L'effet du témoin</h2>
 <p>Le phénomène étudié fut appelé <strong>bystander effect</strong>, généralement traduit en français par <strong>effet du témoin</strong> ou <strong>effet spectateur</strong>.</p>
 <p>Il désigne la tendance observée dans certaines situations d'urgence à voir la probabilité qu'une personne intervienne diminuer lorsque d'autres témoins sont présents.</p>
 <p>L'idée semble paradoxale.</p>
 <p>On pourrait imaginer que plus il y a de personnes présentes, plus quelqu'un aura de chances d'aider.</p>
 <p>Mais psychologiquement, la présence des autres peut parfois produire l'effet inverse.</p>
 <hr />
-<h2 id="56-la-diffusion-de-responsabilite" class="entry-title hc-1">⚖️ 5.6 La diffusion de responsabilité</h2>
+<h2 id="56-la-diffusion-de-responsabilite" class="entry-title hc-1">5.6 La diffusion de responsabilité</h2>
 <p>L'un des mécanismes les plus importants est appelé <strong>diffusion de responsabilité</strong>.</p>
 <p>Lorsqu'une personne est seule face à une urgence, la responsabilité d'agir semble relativement claire.</p>
 <p>Il n'y a personne d'autre.</p>
@@ -152,7 +167,7 @@
 <p>Personne ne possède explicitement toute la responsabilité.</p>
 <p>Et chacun peut attendre qu'une autre personne agisse.</p>
 <hr />
-<h2 id="57-si-personne-ne-reagit-peut-etre-que-ce-nest-pas-si-grave" class="entry-title hc-2">🪞 5.7 « Si personne ne réagit, peut-être que ce n'est pas si grave »</h2>
+<h2 id="57-si-personne-ne-reagit-peut-etre-que-ce-nest-pas-si-grave" class="entry-title hc-2">5.7 « Si personne ne réagit, peut-être que ce n'est pas si grave »</h2>
 <p>Un autre mécanisme important concerne l'interprétation de la situation.</p>
 <p>Face à une situation ambiguë, une personne peut observer les réactions des autres afin de déterminer ce qui se passe.</p>
 <p>Si personne ne semble paniquer, elle peut conclure que la situation n'est peut-être pas réellement dangereuse.</p>
@@ -162,13 +177,13 @@
 <p>Les autres regardent également les autres.</p>
 <p>Et finalement, personne ne réagit.</p>
 <hr />
-<h2 id="58-une-boucle-sociale" class="entry-title hc-3">🔄 5.8 Une boucle sociale</h2>
+<h2 id="58-une-boucle-sociale" class="entry-title hc-3">5.8 Une boucle sociale</h2>
 <p>On peut représenter le mécanisme de manière très simple :</p>
-<p><strong>Une personne observe les autres → les autres semblent calmes → elle interprète la situation comme moins urgente → elle n'agit pas → les autres observent son absence de réaction → eux non plus n'agissent pas.</strong></p>
+<p><strong>Une personne observe les autres  les autres semblent calmes  elle interprète la situation comme moins urgente  elle n'agit pas  les autres observent son absence de réaction  eux non plus n'agissent pas.</strong></p>
 <p>Il peut alors se créer une véritable boucle sociale.</p>
 <p>L'inaction de chacun devient indirectement une information pour les autres.</p>
 <hr />
-<h2 id="59-lambiguite-joue-un-role-essentiel" class="entry-title hc-4">🧩 5.9 L'ambiguïté joue un rôle essentiel</h2>
+<h2 id="59-lambiguite-joue-un-role-essentiel" class="entry-title hc-4">5.9 L'ambiguïté joue un rôle essentiel</h2>
 <p>L'effet du témoin n'est pas simplement :</p>
 <p><strong>« Plus il y a de personnes, moins personne ne veut aider. »</strong></p>
 <p>La réalité est beaucoup plus complexe.</p>
@@ -177,7 +192,7 @@
 <p>Une personne qui tombe soudainement au sol peut être clairement en difficulté.</p>
 <p>Mais une dispute, des cris provenant d'un appartement ou une situation difficile à interpréter peuvent laisser davantage de place au doute.</p>
 <hr />
-<h2 id="510-le-cerveau-cherche-une-interpretation" class="entry-title hc-5">🧠 5.10 Le cerveau cherche une interprétation</h2>
+<h2 id="510-le-cerveau-cherche-une-interpretation" class="entry-title hc-5">5.10 Le cerveau cherche une interprétation</h2>
 <p>Dans une situation inhabituelle, l'être humain doit rapidement essayer de comprendre ce qui se passe.</p>
 <p>Est-ce dangereux ?</p>
 <p>Est-ce une dispute normale ?</p>
@@ -188,7 +203,7 @@
 <p>La psychologie sociale montre donc que le comportement humain ne dépend pas uniquement de la personnalité d'un individu.</p>
 <p><strong>La situation elle-même peut modifier profondément la manière dont une personne agit.</strong></p>
 <hr />
-<h2 id="511-le-comportement-des-autres-devient-une-information" class="entry-title hc-1">👀 5.11 Le comportement des autres devient une information</h2>
+<h2 id="511-le-comportement-des-autres-devient-une-information" class="entry-title hc-1">5.11 Le comportement des autres devient une information</h2>
 <p>Imagine une personne qui entend un bruit étrange dans la rue.</p>
 <p>Elle regarde autour d'elle.</p>
 <p>Dix personnes sont présentes.</p>
@@ -200,21 +215,21 @@
 <p>Personne n'a réellement conclu que tout allait bien.</p>
 <p>Mais chacun peut avoir utilisé l'absence de réaction des autres comme indice.</p>
 <hr />
-<h2 id="512-darley-et-latane-passent-a-lexperimentation" class="entry-title hc-2">🧪 5.12 Darley et Latané passent à l'expérimentation</h2>
+<h2 id="512-darley-et-latane-passent-a-lexperimentation" class="entry-title hc-2">5.12 Darley et Latané passent à l'expérimentation</h2>
 <p>Darley et Latané ne se sont pas contentés de réfléchir à l'affaire Genovese.</p>
 <p>Ils ont voulu tester expérimentalement les mécanismes de l'intervention.</p>
 <p>Dans leurs expériences, les participants étaient placés dans des situations où ils pensaient parfois être seuls ou en présence d'autres personnes.</p>
 <p>Les chercheurs pouvaient ainsi observer leur comportement lorsqu'une situation semblait nécessiter une intervention.</p>
 <p>Ces travaux ont permis de transformer une question sociale en véritable question scientifique.</p>
 <hr />
-<h2 id="513-la-vitesse-dintervention" class="entry-title hc-3">⏱️ 5.13 La vitesse d'intervention</h2>
+<h2 id="513-la-vitesse-dintervention" class="entry-title hc-3">5.13 La vitesse d'intervention</h2>
 <p>Un élément particulièrement intéressant était le temps nécessaire avant qu'une personne décide d'intervenir.</p>
 <p>Une personne seule pouvait souvent agir rapidement.</p>
 <p>Lorsque plusieurs témoins étaient supposés présents, l'intervention pouvait devenir plus lente.</p>
 <p>Cela montre que le phénomène ne concerne pas uniquement le fait d'aider ou de ne pas aider.</p>
 <p>Il peut également concerner <strong>la rapidité avec laquelle une décision est prise</strong>.</p>
 <hr />
-<h2 id="514-le-processus-en-plusieurs-etapes" class="entry-title hc-4">🧠 5.14 Le processus en plusieurs étapes</h2>
+<h2 id="514-le-processus-en-plusieurs-etapes" class="entry-title hc-4">5.14 Le processus en plusieurs étapes</h2>
 <p>L'intervention dans une situation d'urgence peut être considérée comme une succession de décisions.</p>
 <p>Une personne doit d'abord :</p>
 <ol>
@@ -227,14 +242,14 @@
 </ol>
 <p>À chacune de ces étapes, des facteurs sociaux peuvent intervenir.</p>
 <hr />
-<h2 id="515-remarquer-nest-pas-comprendre" class="entry-title hc-5">🚨 5.15 Remarquer n'est pas comprendre</h2>
+<h2 id="515-remarquer-nest-pas-comprendre" class="entry-title hc-5">5.15 Remarquer n'est pas comprendre</h2>
 <p>Être physiquement présent ne signifie pas nécessairement comprendre ce qui se passe.</p>
 <p>Une personne peut entendre un bruit sans identifier une urgence.</p>
 <p>Elle peut voir quelqu'un courir sans comprendre pourquoi.</p>
 <p>Elle peut entendre des cris sans savoir s'ils correspondent à une véritable situation dangereuse.</p>
 <p>Le comportement dépend donc en partie de <strong>l'interprétation de la situation</strong>.</p>
 <hr />
-<h2 id="516-la-responsabilite-devient-collective" class="entry-title hc-1">⚖️ 5.16 La responsabilité devient collective</h2>
+<h2 id="516-la-responsabilite-devient-collective" class="entry-title hc-1">5.16 La responsabilité devient collective</h2>
 <p>Lorsqu'une seule personne est présente, la question est relativement directe :</p>
 <p><strong>« Que vais-je faire ? »</strong></p>
 <p>Dans un groupe, une autre question apparaît :</p>
@@ -242,7 +257,7 @@
 <p>Cette différence peut sembler minuscule.</p>
 <p>Pourtant, elle peut modifier considérablement le comportement.</p>
 <hr />
-<h2 id="517-pourquoi-une-personne-peut-rester-passive" class="entry-title hc-2">🧍 5.17 Pourquoi une personne peut rester passive</h2>
+<h2 id="517-pourquoi-une-personne-peut-rester-passive" class="entry-title hc-2">5.17 Pourquoi une personne peut rester passive</h2>
 <p>Il serait trop simple de dire qu'une personne qui n'intervient pas est forcément indifférente.</p>
 <p>La passivité peut avoir plusieurs causes.</p>
 <p>Une personne peut :</p>
@@ -258,13 +273,13 @@
 </ul>
 <p>Le comportement observable ne permet donc pas toujours de connaître directement l'état psychologique d'une personne.</p>
 <hr />
-<h2 id="518-lempathie-nest-pas-suffisante" class="entry-title hc-3">🧠 5.18 L'empathie n'est pas suffisante</h2>
+<h2 id="518-lempathie-nest-pas-suffisante" class="entry-title hc-3">5.18 L'empathie n'est pas suffisante</h2>
 <p>On pourrait penser qu'une personne très empathique interviendra forcément.</p>
 <p>Ce n'est pas aussi simple.</p>
 <p>Même lorsqu'une personne ressent de l'empathie, elle doit encore interpréter correctement la situation, considérer qu'une intervention est nécessaire et décider qu'elle peut agir.</p>
 <p>Le comportement final dépend donc de plusieurs processus psychologiques.</p>
 <hr />
-<h2 id="519-lenvironnement-social-transforme-le-comportement" class="entry-title hc-4">🌎 5.19 L'environnement social transforme le comportement</h2>
+<h2 id="519-lenvironnement-social-transforme-le-comportement" class="entry-title hc-4">5.19 L'environnement social transforme le comportement</h2>
 <p>L'un des enseignements majeurs de cette histoire est que l'individu ne fonctionne jamais complètement isolément.</p>
 <p>La présence d'autres personnes peut modifier :</p>
 <ul>
@@ -276,21 +291,21 @@
 </ul>
 <p>Le comportement humain est donc en partie <strong>contextuel</strong>.</p>
 <hr />
-<h2 id="520-une-histoire-qui-a-change-la-psychologie-sociale" class="entry-title hc-5">🔬 5.20 Une histoire qui a changé la psychologie sociale</h2>
+<h2 id="520-une-histoire-qui-a-change-la-psychologie-sociale" class="entry-title hc-5">5.20 Une histoire qui a changé la psychologie sociale</h2>
 <p>L'affaire Genovese est devenue célèbre parce qu'elle semblait représenter un problème social extrêmement profond.</p>
 <p>Mais son véritable héritage scientifique vient surtout des recherches qu'elle a contribué à inspirer.</p>
 <p>Darley et Latané ont montré que le comportement d'aide pouvait être étudié expérimentalement.</p>
 <p>Cela a permis de développer toute une branche de recherche sur :</p>
 <p><strong>l'intervention des témoins.</strong></p>
 <hr />
-<h2 id="521-ce-que-les-recherches-ont-reellement-montre" class="entry-title hc-1">📚 5.21 Ce que les recherches ont réellement montré</h2>
+<h2 id="521-ce-que-les-recherches-ont-reellement-montre" class="entry-title hc-1">5.21 Ce que les recherches ont réellement montré</h2>
 <p>Les recherches sur l'effet du témoin ont confirmé l'existence de mécanismes de diffusion de responsabilité et d'influence sociale.</p>
 <p>Mais les résultats modernes sont plus nuancés que la version populaire du phénomène.</p>
 <p>Une méta-analyse portant sur de nombreuses études a notamment montré que la présence d'autres personnes pouvait ralentir l'intervention, mais que cet effet variait selon la situation.</p>
 <p>Lorsque l'urgence était claire, l'effet pouvait être beaucoup moins important.</p>
 <p>Cela signifie que le contexte est essentiel.</p>
 <hr />
-<h2 id="522-il-nexiste-pas-un-seul-effet-du-temoin" class="entry-title hc-2">🧩 5.22 Il n'existe pas un seul « effet du témoin »</h2>
+<h2 id="522-il-nexiste-pas-un-seul-effet-du-temoin" class="entry-title hc-2">5.22 Il n'existe pas un seul « effet du témoin »</h2>
 <p>Le comportement d'un témoin dépend de nombreuses variables.</p>
 <p>Par exemple :</p>
 <p><strong>Le nombre de témoins</strong></p>
@@ -304,7 +319,7 @@
 <p><strong>Le risque perçu</strong></p>
 <p>Si intervenir semble dangereux, la personne peut hésiter.</p>
 <hr />
-<h2 id="523-la-psychologie-ne-juge-pas-seulement-le-comportement" class="entry-title hc-3">🧠 5.23 La psychologie ne juge pas seulement le comportement</h2>
+<h2 id="523-la-psychologie-ne-juge-pas-seulement-le-comportement" class="entry-title hc-3">5.23 La psychologie ne juge pas seulement le comportement</h2>
 <p>L'affaire Genovese montre également une difficulté fondamentale de la psychologie :</p>
 <p><strong>observer un comportement ne suffit pas toujours à comprendre pourquoi il s'est produit.</strong></p>
 <p>Deux personnes peuvent rester silencieuses pour des raisons complètement différentes.</p>
@@ -314,7 +329,7 @@
 <p>Le comportement extérieur est identique.</p>
 <p>Le processus psychologique peut être complètement différent.</p>
 <hr />
-<h2 id="524-le-pouvoir-dune-histoire" class="entry-title hc-4">📰 5.24 Le pouvoir d'une histoire</h2>
+<h2 id="524-le-pouvoir-dune-histoire" class="entry-title hc-4">5.24 Le pouvoir d'une histoire</h2>
 <p>Pourquoi l'histoire des 38 témoins est-elle devenue aussi célèbre ?</p>
 <p>Parce qu'elle est extrêmement simple à raconter.</p>
 <p>Une victime.</p>
@@ -326,14 +341,14 @@
 <p><strong>« Comment autant de personnes ont-elles pu ne rien faire ? »</strong></p>
 <p>Une histoire aussi frappante peut facilement rester dans la mémoire collective.</p>
 <hr />
-<h2 id="525-quand-une-histoire-devient-un-mythe-scientifique" class="entry-title hc-5">⚠️ 5.25 Quand une histoire devient un mythe scientifique</h2>
+<h2 id="525-quand-une-histoire-devient-un-mythe-scientifique" class="entry-title hc-5">5.25 Quand une histoire devient un mythe scientifique</h2>
 <p>L'affaire Genovese constitue un excellent exemple de la manière dont une histoire peut être transformée en symbole.</p>
 <p>Au fil du temps, certaines versions ont simplifié les événements.</p>
 <p>La formule des « 38 témoins » est devenue beaucoup plus connue que les détails réels de l'enquête.</p>
 <p>Cela rappelle quelque chose d'essentiel :</p>
 <p><strong>Une histoire célèbre n'est pas nécessairement une description exacte de la réalité.</strong></p>
 <hr />
-<h2 id="526-la-psychologie-doit-elle-aussi-remettre-ses-histoires-en-question" class="entry-title hc-1">🔎 5.26 La psychologie doit elle aussi remettre ses histoires en question</h2>
+<h2 id="526-la-psychologie-doit-elle-aussi-remettre-ses-histoires-en-question" class="entry-title hc-1">5.26 La psychologie doit elle aussi remettre ses histoires en question</h2>
 <p>Ce cas est particulièrement intéressant pour une encyclopédie de psychologie.</p>
 <p>Il ne faut pas seulement apprendre les expériences et les théories.</p>
 <p>Il faut également apprendre à se demander :</p>
@@ -344,7 +359,7 @@
 <p><strong>Les recherches ultérieures ont-elles confirmé ou nuancé cette histoire ?</strong></p>
 <p>La psychologie scientifique nécessite donc également un esprit critique.</p>
 <hr />
-<h2 id="527-lindividu-nest-pas-simplement-bon-ou-mauvais" class="entry-title hc-2">🧠 5.27 L'individu n'est pas simplement « bon » ou « mauvais »</h2>
+<h2 id="527-lindividu-nest-pas-simplement-bon-ou-mauvais" class="entry-title hc-2">5.27 L'individu n'est pas simplement « bon » ou « mauvais »</h2>
 <p>L'histoire de Kitty Genovese pourrait facilement conduire à une conclusion simpliste :</p>
 <p><strong>« Les gens sont devenus égoïstes. »</strong></p>
 <p>Mais les recherches scientifiques montrent quelque chose de beaucoup plus complexe.</p>
@@ -361,7 +376,7 @@
 </ul>
 <p>La psychologie ne réduit donc pas l'action humaine à une seule caractéristique morale.</p>
 <hr />
-<h2 id="528-quand-les-autres-peuvent-empecher-laction" class="entry-title hc-3">🔄 5.28 Quand les autres peuvent empêcher l'action</h2>
+<h2 id="528-quand-les-autres-peuvent-empecher-laction" class="entry-title hc-3">5.28 Quand les autres peuvent empêcher l'action</h2>
 <p>La présence d'un groupe peut parfois réduire l'intervention.</p>
 <p>Mais elle peut également produire l'effet inverse.</p>
 <p>Les personnes présentes peuvent se coordonner.</p>
@@ -372,7 +387,7 @@
 <p>Le groupe n'est donc pas automatiquement un obstacle.</p>
 <p>Il peut aussi devenir une ressource.</p>
 <hr />
-<h2 id="529-le-role-des-temoins-actifs" class="entry-title hc-4">🤝 5.29 Le rôle des témoins actifs</h2>
+<h2 id="529-le-role-des-temoins-actifs" class="entry-title hc-4">5.29 Le rôle des témoins actifs</h2>
 <p>Les recherches contemporaines s'intéressent également aux <strong>témoins actifs</strong>.</p>
 <p>Une personne qui intervient peut influencer les autres.</p>
 <p>Son comportement fournit alors une nouvelle information :</p>
@@ -382,7 +397,7 @@
 <p>Elle peut favoriser l'inaction.</p>
 <p>Mais elle peut également favoriser l'action.</p>
 <hr />
-<h2 id="530-un-phenomene-qui-depasse-les-situations-criminelles" class="entry-title hc-5">🌐 5.30 Un phénomène qui dépasse les situations criminelles</h2>
+<h2 id="530-un-phenomene-qui-depasse-les-situations-criminelles" class="entry-title hc-5">5.30 Un phénomène qui dépasse les situations criminelles</h2>
 <p>L'effet du témoin ne concerne pas uniquement les agressions.</p>
 <p>Les mécanismes étudiés peuvent apparaître dans différentes situations :</p>
 <ul>
@@ -398,7 +413,7 @@
 <p>Le principe général reste similaire :</p>
 <p><strong>La présence d'autres personnes peut modifier la manière dont chacun interprète sa responsabilité et la situation.</strong></p>
 <hr />
-<h2 id="531-le-paradoxe-de-la-foule" class="entry-title hc-1">🧠 5.31 Le paradoxe de la foule</h2>
+<h2 id="531-le-paradoxe-de-la-foule" class="entry-title hc-1">5.31 Le paradoxe de la foule</h2>
 <p>On pourrait résumer le paradoxe ainsi :</p>
 <p><strong>Plus de personnes signifie potentiellement plus de ressources disponibles.</strong></p>
 <p>Mais cela peut aussi signifier :</p>
@@ -406,20 +421,20 @@
 <p>Une foule peut donc être simultanément <strong>une ressource</strong> et <strong>un obstacle</strong>.</p>
 <p>Tout dépend de la manière dont les individus se coordonnent.</p>
 <hr />
-<h2 id="532-pourquoi-cette-histoire-reste-importante" class="entry-title hc-2">🔬 5.32 Pourquoi cette histoire reste importante</h2>
+<h2 id="532-pourquoi-cette-histoire-reste-importante" class="entry-title hc-2">5.32 Pourquoi cette histoire reste importante</h2>
 <p>Plus de soixante ans après les événements, l'affaire continue d'être étudiée.</p>
 <p>Non seulement pour ce qu'elle raconte sur le comportement humain, mais également parce qu'elle montre comment une histoire peut influencer la science.</p>
 <p>Elle a contribué à attirer l'attention des psychologues sur une question devenue majeure :</p>
 <p><strong>Pourquoi les humains interviennent-ils parfois dans une urgence, et pourquoi hésitent-ils parfois ?</strong></p>
 <hr />
-<h2 id="533-lune-des-grandes-lecons-de-la-psychologie-sociale" class="entry-title hc-3">🧩 5.33 L'une des grandes leçons de la psychologie sociale</h2>
+<h2 id="533-lune-des-grandes-lecons-de-la-psychologie-sociale" class="entry-title hc-3">5.33 L'une des grandes leçons de la psychologie sociale</h2>
 <p>Cette histoire illustre une idée fondamentale :</p>
 <p><strong>Le comportement humain dépend de l'interaction entre la personne et son environnement social.</strong></p>
 <p>Une personne peut agir d'une manière dans une situation et différemment dans une autre.</p>
 <p>Cela ne signifie pas nécessairement qu'elle a changé de personnalité.</p>
 <p>Le contexte peut simplement avoir changé.</p>
 <hr />
-<h2 id="534-le-regard-des-autres" class="entry-title hc-4">🪞 5.34 Le regard des autres</h2>
+<h2 id="534-le-regard-des-autres" class="entry-title hc-4">5.34 Le regard des autres</h2>
 <p>La présence d'autrui peut également provoquer une autre forme d'hésitation :</p>
 <p><strong>« Et si je me trompais ? »</strong></p>
 <p>Une personne peut avoir peur d'intervenir alors que la situation n'est finalement pas ce qu'elle imaginait.</p>
@@ -427,31 +442,31 @@
 <p>L'individu ne pense plus seulement : <strong>« Que dois-je faire ? »</strong></p>
 <p>Il peut également penser : <strong>« Que vont penser les autres si je me trompe ? »</strong></p>
 <hr />
-<h2 id="535-une-decision-psychologique-complexe" class="entry-title hc-5">⚙️ 5.35 Une décision psychologique complexe</h2>
+<h2 id="535-une-decision-psychologique-complexe" class="entry-title hc-5">5.35 Une décision psychologique complexe</h2>
 <p>Intervenir dans une urgence peut sembler être une décision instantanée.</p>
 <p>En réalité, elle peut mobiliser plusieurs processus simultanément :</p>
-<p><strong>Perception → interprétation → évaluation du danger → responsabilité → décision → action.</strong></p>
+<p><strong>Perception  interprétation  évaluation du danger  responsabilité  décision  action.</strong></p>
 <p>Une difficulté à une seule étape peut modifier le comportement final.</p>
 <hr />
-<h2 id="536-une-histoire-qui-enseigne-aussi-la-prudence-scientifique" class="entry-title hc-1">📖 5.36 Une histoire qui enseigne aussi la prudence scientifique</h2>
+<h2 id="536-une-histoire-qui-enseigne-aussi-la-prudence-scientifique" class="entry-title hc-1">5.36 Une histoire qui enseigne aussi la prudence scientifique</h2>
 <p>L'affaire Kitty Genovese est particulièrement intéressante parce qu'elle contient deux histoires.</p>
 <p>La première est l'histoire médiatique : <strong>38 personnes auraient vu une femme être attaquée sans intervenir.</strong></p>
 <p>La seconde est l'histoire scientifique : <strong>cette affaire a contribué à inspirer des recherches sur les mécanismes psychologiques de l'intervention en présence d'autres personnes.</strong></p>
 <p>La deuxième histoire est beaucoup plus complexe que la première.</p>
 <hr />
-<h2 id="537-ce-que-lon-peut-reellement-conclure" class="entry-title hc-2">🔬 5.37 Ce que l'on peut réellement conclure</h2>
+<h2 id="537-ce-que-lon-peut-reellement-conclure" class="entry-title hc-2">5.37 Ce que l'on peut réellement conclure</h2>
 <p>On ne peut pas utiliser l'affaire Genovese pour affirmer que les humains sont naturellement indifférents à la souffrance.</p>
 <p>On ne peut pas non plus affirmer que toute foule empêche les secours.</p>
 <p>Les recherches montrent plutôt que certaines situations sociales peuvent influencer la probabilité et la rapidité d'une intervention.</p>
 <p>L'effet dépend du contexte.</p>
 <hr />
-<h2 id="538-une-histoire-sur-la-responsabilite" class="entry-title hc-3">🧠 5.38 Une histoire sur la responsabilité</h2>
+<h2 id="538-une-histoire-sur-la-responsabilite" class="entry-title hc-3">5.38 Une histoire sur la responsabilité</h2>
 <p>Au fond, l'histoire de Kitty Genovese a posé une question qui dépasse largement cette affaire :</p>
 <p><strong>Que se passe-t-il lorsque plusieurs personnes pensent qu'une situation relève de la responsabilité de quelqu'un d'autre ?</strong></p>
 <p>Cette question apparaît dans de nombreux contextes humains.</p>
 <p>Et elle montre à quel point la responsabilité n'est pas seulement une notion individuelle. Elle peut également être influencée par le groupe.</p>
 <hr />
-<h2 id="539-de-la-tragedie-a-la-science" class="entry-title hc-4">🌃 5.39 De la tragédie à la science</h2>
+<h2 id="539-de-la-tragedie-a-la-science" class="entry-title hc-4">5.39 De la tragédie à la science</h2>
 <p>Une tragédie réelle a donc contribué à provoquer une interrogation scientifique.</p>
 <p>Cette interrogation a donné naissance à des expériences.</p>
 <p>Ces expériences ont produit des concepts.</p>
@@ -459,7 +474,7 @@
 <p>Et ces recherches ont ensuite montré que l'histoire originale elle-même était beaucoup plus complexe qu'on ne le pensait.</p>
 <p>C'est précisément ce qui rend cette affaire fascinante pour l'étude de la psychologie.</p>
 <hr />
-<h2 id="540-ce-que-cette-histoire-montre-reellement" class="entry-title hc-5">🔎 5.40 Ce que cette histoire montre réellement</h2>
+<h2 id="540-ce-que-cette-histoire-montre-reellement" class="entry-title hc-5">5.40 Ce que cette histoire montre réellement</h2>
 <p>L'affaire Kitty Genovese ne doit pas être retenue uniquement comme l'histoire des « 38 témoins ».</p>
 <p>Elle peut être retenue comme une démonstration de plusieurs phénomènes :</p>
 <p><strong>Le comportement humain est influencé par le contexte.</strong></p>
@@ -470,26 +485,38 @@
 <p><strong>Une histoire médiatique peut être beaucoup plus simple que la réalité.</strong></p>
 <p><strong>La psychologie scientifique doit vérifier ses propres récits.</strong></p>
 <hr />
-<h2 id="541-une-derniere-reflexion" class="entry-title hc-1">📌 5.41 Une dernière réflexion</h2>
+<h2 id="541-une-derniere-reflexion" class="entry-title hc-1">5.41 Une dernière réflexion</h2>
 <p>L'histoire de Kitty Genovese est finalement moins simple que ce que la mémoire collective en a retenu.</p>
 <p>Elle ne raconte pas seulement une tragédie.</p>
 <p>Elle raconte également la manière dont une société construit une histoire, la manière dont cette histoire influence la science, puis la manière dont la science finit par revenir sur cette même histoire.</p>
 <p>C'est peut-être l'une des leçons les plus intéressantes de cette affaire :</p>
 <p><strong>En psychologie, comprendre un phénomène signifie parfois apprendre à remettre en question l'histoire qui nous a conduits à l'étudier.</strong></p>
 <hr />
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🧠 <strong>L'effet du témoin</strong> désigne la tendance observée dans certaines situations à ce que l'intervention individuelle soit moins rapide ou moins probable lorsque d'autres témoins sont présents.</p>
-<p>⚖️ <strong>La diffusion de responsabilité</strong> peut expliquer une partie de ce phénomène : lorsqu'une personne pense que plusieurs autres peuvent agir, son propre sentiment de responsabilité peut diminuer.</p>
-<p>👀 <strong>L'influence sociale</strong> joue également un rôle : les individus peuvent utiliser les réactions des autres pour interpréter une situation ambiguë.</p>
-<p>🚨 <strong>L'effet du témoin n'est pas automatique.</strong> Une urgence claire, une coordination entre témoins ou un sentiment élevé de responsabilité peuvent modifier fortement les comportements.</p>
-<p>📰 <strong>L'histoire des « 38 témoins » est largement simplifiée.</strong> Des recherches historiques ont montré que plusieurs éléments du récit populaire ne correspondaient pas parfaitement aux faits établis.</p>
-<p>🔬 <strong>L'affaire reste importante pour la psychologie</strong>, notamment parce qu'elle a contribué à inspirer les recherches de John Darley et Bibb Latané sur l'intervention des témoins.</p>
-<p>🧩 <strong>Le comportement humain dépend du contexte.</strong> Observer une personne passive ne permet pas nécessairement de connaître les raisons psychologiques qui expliquent cette passivité.</p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p><strong>L'effet du témoin</strong> désigne la tendance observée dans certaines situations à ce que l'intervention individuelle soit moins rapide ou moins probable lorsque d'autres témoins sont présents.</p>
+<p><strong>La diffusion de responsabilité</strong> peut expliquer une partie de ce phénomène : lorsqu'une personne pense que plusieurs autres peuvent agir, son propre sentiment de responsabilité peut diminuer.</p>
+<p><strong>L'influence sociale</strong> joue également un rôle : les individus peuvent utiliser les réactions des autres pour interpréter une situation ambiguë.</p>
+<p><strong>L'effet du témoin n'est pas automatique.</strong> Une urgence claire, une coordination entre témoins ou un sentiment élevé de responsabilité peuvent modifier fortement les comportements.</p>
+<p><strong>L'histoire des « 38 témoins » est largement simplifiée.</strong> Des recherches historiques ont montré que plusieurs éléments du récit populaire ne correspondaient pas parfaitement aux faits établis.</p>
+<p><strong>L'affaire reste importante pour la psychologie</strong>, notamment parce qu'elle a contribué à inspirer les recherches de John Darley et Bibb Latané sur l'intervention des témoins.</p>
+<p><strong>Le comportement humain dépend du contexte.</strong> Observer une personne passive ne permet pas nécessairement de connaître les raisons psychologiques qui expliquent cette passivité.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Histoires vraies de psychologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/histoires-une-histoire-qui-a-change-la-psychologie/"><span class="similar-icon">📖</span>Une histoire qui a changé la psychologie</a><a class="similar-item" href="/chapitre/histoires-quand-le-cerveau-et-la-psychologie-se-rencontrent/"><span class="similar-icon">📖</span>Quand le cerveau et la psychologie se rencontrent</a><a class="similar-item" href="/chapitre/histoires-quand-tout-semble-impossible/"><span class="similar-icon">📖</span>Quand tout semble impossible</a></div>
+      <h2>Autres chapitres de « Histoires vraies de psychologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/histoires-une-histoire-qui-a-change-la-psychologie/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg></span>Une histoire qui a changé la psychologie</a><a class="similar-item" href="/chapitre/histoires-quand-le-cerveau-et-la-psychologie-se-rencontrent/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg></span>Quand le cerveau et la psychologie se rencontrent</a><a class="similar-item" href="/chapitre/histoires-quand-tout-semble-impossible/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg></span>Quand tout semble impossible</a></div>
     </div>
     <a class="back-link" href="/categorie/histoires/">← Retour à « Histoires vraies de psychologie »</a>
   </div>
@@ -575,23 +602,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -609,7 +638,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -789,9 +818,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -800,10 +831,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -910,7 +941,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -950,8 +981,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -982,7 +1013,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1037,7 +1068,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1061,17 +1092,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1113,7 +1144,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

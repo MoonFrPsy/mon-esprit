@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#1-le-trouble-anxieux-generalise-tag">🧠 1. Le trouble anxieux généralisé (TAG)</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#comprendre-le-tag">🔎 Comprendre le TAG</a></li><li><a href="#manifestations-psychologiques">🧠 Manifestations psychologiques</a></li><li><a href="#manifestations-physiques">⚡ Manifestations physiques</a></li><li><a href="#manifestations-comportementales">🎯 Manifestations comportementales</a></li><li><a href="#des-degres-differents">🌗 Des degrés différents</a></li><li><a href="#causes-et-facteurs-de-risque">🧬 Causes et facteurs de risque</a></li><li><a href="#evolution">📈 Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne">🌍 Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#comment-aider-un-proche-qui-vit-avec-un-tag">🤝 Comment aider un proche qui vit avec un TAG</a></li><li><a href="#techniques-et-prise-en-charge">🛠️ Techniques et prise en charge</a></li><li><a href="#idees-recues">❌ Idées reçues</a></li><li><a href="#exemple-fictif-illustratif">📝 Exemple fictif (illustratif)</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#12-le-trouble-panique">🧠 1.2 Le trouble panique</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#quest-ce-quune-attaque-de-panique">⚡ Qu'est-ce qu'une attaque de panique ?</a></li><li><a href="#manifestations-psychologiques_1">🧠 Manifestations psychologiques</a></li><li><a href="#manifestations-physiques_1">❤️ Manifestations physiques</a></li><li><a href="#le-mecanisme-de-la-panique">🔄 Le mécanisme de la panique</a></li><li><a href="#peur-davoir-peur">😰 Peur d'avoir peur</a></li><li><a href="#changements-comportementaux">🚪 Changements comportementaux</a></li><li><a href="#relation-avec-lagoraphobie">🔗 Relation avec l'agoraphobie</a></li><li><a href="#causes-et-facteurs-de-risque_1">🧬 Causes et facteurs de risque</a></li><li><a href="#declencheurs-possibles">🧪 Déclencheurs possibles</a></li><li><a href="#evolution_1">📈 Évolution</a></li><li><a href="#consequences-sur-la-vie-quotidienne">🌍 Conséquences sur la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes_1">🔗 Troubles pouvant être associés</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#que-faire-pendant-une-attaque-de-panique">🆘 Que faire pendant une attaque de panique</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#comment-aider-un-proche-pendant-ou-apres-une-attaque">🤝 Comment aider un proche pendant ou après une attaque</a></li><li><a href="#idees-recues_1">❌ Idées reçues</a></li><li><a href="#exemple-fictif">📝 Exemple fictif</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#13-lagoraphobie">🧠 1.3 L'agoraphobie</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations-psychologiques_2">Manifestations psychologiques</a></li><li><a href="#manifestations-physiques_2">Manifestations physiques</a></li><li><a href="#evitement">Évitement</a></li><li><a href="#causes-et-facteurs-de-risque_2">Causes et facteurs de risque</a></li><li><a href="#evolution_2">Évolution</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#comment-aider-un-proche-agoraphobe">🤝 Comment aider un proche agoraphobe</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#14-le-trouble-danxiete-sociale">🧠 1.4 Le trouble d'anxiété sociale</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#situations-concernees">Situations concernées</a></li><li><a href="#manifestations-psychologiques_3">Manifestations psychologiques</a></li><li><a href="#manifestations-physiques_3">Manifestations physiques</a></li><li><a href="#comportements-devitement">Comportements d'évitement</a></li><li><a href="#causes-et-facteurs-de-risque_3">Causes et facteurs de risque</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#comment-aider-un-proche-anxieux-socialement">🤝 Comment aider un proche anxieux socialement</a></li><li><a href="#idees-recues_2">Idées reçues</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#15-les-phobies-specifiques">🧠 1.5 Les phobies spécifiques</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#reaction-phobique">Réaction phobique</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#developpement">Développement</a></li><li><a href="#evitement_1">Évitement</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#comment-aider-un-proche-phobique">🤝 Comment aider un proche phobique</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#16-le-trouble-danxiete-de-separation">🧠 1.6 Le trouble d’anxiété de séparation</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations-psychologiques_4">Manifestations psychologiques</a></li><li><a href="#manifestations-comportementales_1">Manifestations comportementales</a></li><li><a href="#manifestations-physiques_4">Manifestations physiques</a></li><li><a href="#causes-et-facteurs-de-risque_4">Causes et facteurs de risque</a></li><li><a href="#evolution_3">Évolution</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#comment-aider-un-proche-notamment-un-enfant-avec-ce-trouble">🤝 Comment aider un proche (notamment un enfant) avec ce trouble</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#17-le-mutisme-selectif">🧠 1.7 Le mutisme sélectif</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#manifestations-emotionnelles">Manifestations émotionnelles</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#causes">Causes</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#comment-aider-un-enfant-avec-un-mutisme-selectif">🤝 Comment aider un enfant avec un mutisme sélectif</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#18-les-troubles-anxieux-induits-par-une-substance-ou-un-medicament">🧠 1.8 Les troubles anxieux induits par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#substances-et-medicaments">Substances et médicaments</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#evolution_4">Évolution</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#19-le-trouble-anxieux-du-a-une-autre-affection-medicale">🧠 1.9 Le trouble anxieux dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#importance-du-diagnostic-differentiel">Importance du diagnostic différentiel</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#110-le-trouble-anxieux-specifie">🧠 1.10 Le trouble anxieux spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#pourquoi-cette-categorie-existe-t-elle">Pourquoi cette catégorie existe-t-elle ?</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#diagnostic_6">Diagnostic</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#111-le-trouble-anxieux-non-specifie">🧠 1.11 Le trouble anxieux non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#difference-avec-le-trouble-anxieux-specifie">Différence avec le trouble anxieux spécifié</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#diagnostic_7">Diagnostic</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#112-lanxiete-liee-a-des-situations-particulieres">🧠 1.12 L'anxiété liée à des situations particulières</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#reaction-normale-ou-trouble">Réaction normale ou trouble ?</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#113-les-attaques-de-panique-comme-phenomene-associe">🧠 1.13 Les attaques de panique comme phénomène associé</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#declencheur">Déclencheur</a></li><li><a href="#apres-lattaque">Après l'attaque</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#114-lanxiete-anticipatoire">🧠 1.14 L'anxiété anticipatoire</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#role-de-lanticipation">Rôle de l'anticipation</a></li><li><a href="#reduire-lanxiete-anticipatoire">🛠️ Réduire l'anxiété anticipatoire</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#115-lanxiete-et-levitement">🧠 1.15 L'anxiété et l'évitement</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#pourquoi-levitement-apparait-il">Pourquoi l'évitement apparaît-il ?</a></li><li><a href="#differentes-formes-devitement">Différentes formes d'évitement</a></li><li><a href="#consequences_2">Conséquences</a></li><li><a href="#prise-en-charge_9">Prise en charge</a></li><li><a href="#reduire-levitement-un-pas-a-la-fois">🛠️ Réduire l'évitement, un pas à la fois</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#1-le-trouble-anxieux-generalise-tag">1. Le trouble anxieux généralisé (TAG)</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#comprendre-le-tag">Comprendre le TAG</a></li><li><a href="#manifestations-psychologiques">Manifestations psychologiques</a></li><li><a href="#manifestations-physiques">Manifestations physiques</a></li><li><a href="#manifestations-comportementales">Manifestations comportementales</a></li><li><a href="#des-degres-differents">Des degrés différents</a></li><li><a href="#causes-et-facteurs-de-risque">Causes et facteurs de risque</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#consequences-dans-la-vie-quotidienne">Conséquences dans la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes">Troubles pouvant être associés</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#comment-aider-un-proche-qui-vit-avec-un-tag">Comment aider un proche qui vit avec un TAG</a></li><li><a href="#techniques-et-prise-en-charge">Techniques et prise en charge</a></li><li><a href="#idees-recues">Idées reçues</a></li><li><a href="#exemple-fictif-illustratif">Exemple fictif (illustratif)</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#12-le-trouble-panique">1.2 Le trouble panique</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#quest-ce-quune-attaque-de-panique">Qu'est-ce qu'une attaque de panique ?</a></li><li><a href="#manifestations-psychologiques_1">Manifestations psychologiques</a></li><li><a href="#manifestations-physiques_1">Manifestations physiques</a></li><li><a href="#le-mecanisme-de-la-panique">Le mécanisme de la panique</a></li><li><a href="#peur-davoir-peur">Peur d'avoir peur</a></li><li><a href="#changements-comportementaux">Changements comportementaux</a></li><li><a href="#relation-avec-lagoraphobie">Relation avec l'agoraphobie</a></li><li><a href="#causes-et-facteurs-de-risque_1">Causes et facteurs de risque</a></li><li><a href="#declencheurs-possibles">Déclencheurs possibles</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#consequences-sur-la-vie-quotidienne">Conséquences sur la vie quotidienne</a></li><li><a href="#troubles-pouvant-etre-associes_1">Troubles pouvant être associés</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#que-faire-pendant-une-attaque-de-panique">Que faire pendant une attaque de panique</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#comment-aider-un-proche-pendant-ou-apres-une-attaque">Comment aider un proche pendant ou après une attaque</a></li><li><a href="#idees-recues_1">Idées reçues</a></li><li><a href="#exemple-fictif">Exemple fictif</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#13-lagoraphobie">1.3 L'agoraphobie</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations-psychologiques_2">Manifestations psychologiques</a></li><li><a href="#manifestations-physiques_2">Manifestations physiques</a></li><li><a href="#evitement">Évitement</a></li><li><a href="#causes-et-facteurs-de-risque_2">Causes et facteurs de risque</a></li><li><a href="#evolution_2">Évolution</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#comment-aider-un-proche-agoraphobe">Comment aider un proche agoraphobe</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#14-le-trouble-danxiete-sociale">1.4 Le trouble d'anxiété sociale</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#situations-concernees">Situations concernées</a></li><li><a href="#manifestations-psychologiques_3">Manifestations psychologiques</a></li><li><a href="#manifestations-physiques_3">Manifestations physiques</a></li><li><a href="#comportements-devitement">Comportements d'évitement</a></li><li><a href="#causes-et-facteurs-de-risque_3">Causes et facteurs de risque</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#comment-aider-un-proche-anxieux-socialement">Comment aider un proche anxieux socialement</a></li><li><a href="#idees-recues_2">Idées reçues</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#15-les-phobies-specifiques">1.5 Les phobies spécifiques</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#reaction-phobique">Réaction phobique</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#developpement">Développement</a></li><li><a href="#evitement_1">Évitement</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#comment-aider-un-proche-phobique">Comment aider un proche phobique</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#16-le-trouble-danxiete-de-separation">1.6 Le trouble d’anxiété de séparation</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations-psychologiques_4">Manifestations psychologiques</a></li><li><a href="#manifestations-comportementales_1">Manifestations comportementales</a></li><li><a href="#manifestations-physiques_4">Manifestations physiques</a></li><li><a href="#causes-et-facteurs-de-risque_4">Causes et facteurs de risque</a></li><li><a href="#evolution_3">Évolution</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#comment-aider-un-proche-notamment-un-enfant-avec-ce-trouble">Comment aider un proche (notamment un enfant) avec ce trouble</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#17-le-mutisme-selectif">1.7 Le mutisme sélectif</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#manifestations-emotionnelles">Manifestations émotionnelles</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#causes">Causes</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#comment-aider-un-enfant-avec-un-mutisme-selectif">Comment aider un enfant avec un mutisme sélectif</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#18-les-troubles-anxieux-induits-par-une-substance-ou-un-medicament">1.8 Les troubles anxieux induits par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#substances-et-medicaments">Substances et médicaments</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#evolution_4">Évolution</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#19-le-trouble-anxieux-du-a-une-autre-affection-medicale">1.9 Le trouble anxieux dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#importance-du-diagnostic-differentiel">Importance du diagnostic différentiel</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#110-le-trouble-anxieux-specifie">1.10 Le trouble anxieux spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#pourquoi-cette-categorie-existe-t-elle">Pourquoi cette catégorie existe-t-elle ?</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#diagnostic_6">Diagnostic</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#111-le-trouble-anxieux-non-specifie">1.11 Le trouble anxieux non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#difference-avec-le-trouble-anxieux-specifie">Différence avec le trouble anxieux spécifié</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#diagnostic_7">Diagnostic</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#112-lanxiete-liee-a-des-situations-particulieres">1.12 L'anxiété liée à des situations particulières</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#reaction-normale-ou-trouble">Réaction normale ou trouble ?</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#113-les-attaques-de-panique-comme-phenomene-associe">1.13 Les attaques de panique comme phénomène associé</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#declencheur">Déclencheur</a></li><li><a href="#apres-lattaque">Après l'attaque</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#114-lanxiete-anticipatoire">1.14 L'anxiété anticipatoire</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#role-de-lanticipation">Rôle de l'anticipation</a></li><li><a href="#reduire-lanxiete-anticipatoire">Réduire l'anxiété anticipatoire</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#115-lanxiete-et-levitement">1.15 L'anxiété et l'évitement</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#pourquoi-levitement-apparait-il">Pourquoi l'évitement apparaît-il ?</a></li><li><a href="#differentes-formes-devitement">Différentes formes d'évitement</a></li><li><a href="#consequences_2">Conséquences</a></li><li><a href="#prise-en-charge_9">Prise en charge</a></li><li><a href="#reduire-levitement-un-pas-a-la-fois">Réduire l'évitement, un pas à la fois</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Partie 1 — Troubles anxieux',
         category: 'Troubles psychologiques',
-        icon: '🩺'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/troubles/">Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Partie 1 — Troubles anxieux</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,17 +113,17 @@
     </svg>
     </div>
     <div class="article-body">
-      <h1 id="1-le-trouble-anxieux-generalise-tag" class="entry-title hc-1">🧠 1. Le trouble anxieux généralisé (TAG)</h1>
+      <h1 id="1-le-trouble-anxieux-generalise-tag" class="entry-title hc-1">1. Le trouble anxieux généralisé (TAG)</h1>
 <h2 id="definition">Définition</h2>
 <p>Le <strong>trouble anxieux généralisé (<a class="gloss-link" href="#1-le-trouble-anxieux-generalise-tag" title="Voir la définition de TAG">TAG</a>)</strong> est un trouble anxieux caractérisé par une <strong>anxiété persistante</strong> et des <strong>inquiétudes excessives, difficiles à contrôler</strong>, qui portent sur <strong>plusieurs domaines</strong> du quotidien (études, travail, finances, santé, relations, famille, avenir…).</p>
 <p>Contrairement à une inquiétude ponctuelle face à une situation précise, l’anxiété du TAG tend à être <strong>diffuse, durable</strong> et envahissante. Elle peut retentir sur la concentration, le sommeil, les relations sociales, et la capacité à se détendre.</p>
 <hr />
-<h2 id="comprendre-le-tag">🔎 Comprendre le TAG</h2>
+<h2 id="comprendre-le-tag">Comprendre le TAG</h2>
 <p>S’inquiéter est normal : l’inquiétude aide parfois à anticiper un problème et à chercher des solutions.</p>
 <p>Dans le TAG, cependant, les préoccupations deviennent <strong>disproportionnées</strong>, <strong>répétitives</strong> et <strong>difficiles à interrompre</strong>. La personne peut passer beaucoup de temps à envisager des scénarios négatifs, même en l’absence de danger immédiat.</p>
 <p>L’anxiété peut aussi « <em>changer de thème</em> » : une inquiétude concernant les études peut laisser place à une inquiétude concernant la santé, puis la famille, etc. Il ne s’agit donc pas forcément d’une peur unique, mais d’un <strong>état d’inquiétude généralisé</strong>.</p>
 <hr />
-<h2 id="manifestations-psychologiques">🧠 Manifestations psychologiques</h2>
+<h2 id="manifestations-psychologiques">Manifestations psychologiques</h2>
 <p>Le TAG peut se manifester par :</p>
 <ul>
 <li>des inquiétudes fréquentes et envahissantes</li>
@@ -122,7 +137,7 @@
 </ul>
 <p>Certaines personnes recherchent régulièrement de la réassurance (questions répétées, besoin d’être rassuré) afin de diminuer temporairement l’inquiétude.</p>
 <hr />
-<h2 id="manifestations-physiques">⚡ Manifestations physiques</h2>
+<h2 id="manifestations-physiques">Manifestations physiques</h2>
 <p>L’anxiété prolongée peut s’accompagner de manifestations corporelles, par exemple :</p>
 <ul>
 <li>tension musculaire</li>
@@ -138,7 +153,7 @@
 </ul>
 <p>Toutes ces manifestations ne sont pas systématiquement présentes chez une même personne.</p>
 <hr />
-<h2 id="manifestations-comportementales">🎯 Manifestations comportementales</h2>
+<h2 id="manifestations-comportementales">Manifestations comportementales</h2>
 <p>L’anxiété peut aussi influencer les comportements. Par exemple :</p>
 <ul>
 <li>éviter des situations jugées inquiétantes</li>
@@ -150,11 +165,11 @@
 </ul>
 <p>Ces comportements peuvent apaiser à court terme, mais parfois renforcer l’anxiété sur le long terme.</p>
 <hr />
-<h2 id="des-degres-differents">🌗 Des degrés différents</h2>
+<h2 id="des-degres-differents">Des degrés différents</h2>
 <p>Le TAG ne se manifeste pas de la même façon chez tout le monde. Il existe une intensité variable : certaines personnes vivent une anxiété plutôt légère et gérable au quotidien, tandis que d’autres ressentent une inquiétude quasi permanente qui envahit une grande partie de la journée.</p>
 <p>La proportion de symptômes peut aussi beaucoup varier d’une personne à l’autre : certaines somatisent davantage (tensions, troubles digestifs, fatigue), d’autres restent surtout prises dans un flot de pensées, avec peu de manifestations physiques visibles. Ces différences ne signifient pas qu’une forme serait « moins grave » ou « plus grave » en soi : elles reflètent simplement la diversité des façons dont un même trouble peut s’exprimer d’une personne à l’autre.</p>
 <hr />
-<h2 id="causes-et-facteurs-de-risque">🧬 Causes et facteurs de risque</h2>
+<h2 id="causes-et-facteurs-de-risque">Causes et facteurs de risque</h2>
 <p>Le TAG n’a généralement pas une cause unique. Son apparition peut dépendre d’une combinaison de facteurs :</p>
 <h3 id="facteurs-biologiques">Facteurs biologiques</h3>
 <p>Certaines particularités du système nerveux et de la réponse au stress peuvent augmenter la vulnérabilité à l’anxiété.</p>
@@ -165,11 +180,11 @@
 <h3 id="facteurs-genetiques">Facteurs génétiques</h3>
 <p>Une vulnérabilité familiale aux troubles anxieux peut jouer un rôle, sans être déterminante à elle seule.</p>
 <hr />
-<h2 id="evolution">📈 Évolution</h2>
+<h2 id="evolution">Évolution</h2>
 <p>L’évolution du TAG varie selon les personnes. Les symptômes peuvent fluctuer au fil des périodes de vie, et être accentués lors de stress importants.</p>
 <p>Avec une prise en charge adaptée, il est souvent possible de <strong>réduire les symptômes</strong> et d’<strong>améliorer le fonctionnement au quotidien</strong>.</p>
 <hr />
-<h2 id="consequences-dans-la-vie-quotidienne">🌍 Conséquences dans la vie quotidienne</h2>
+<h2 id="consequences-dans-la-vie-quotidienne">Conséquences dans la vie quotidienne</h2>
 <p>Quand l’anxiété devient importante, elle peut impacter :</p>
 <p><strong>Études / travail :</strong> concentration diminuée, fatigue, peur de l’erreur.
 <strong>Sommeil :</strong> difficultés d’endormissement, pensées envahissantes le soir.
@@ -177,7 +192,7 @@
 <strong>Loisirs / quotidien :</strong> difficulté à profiter pleinement, tension persistante.</p>
 <p>L’intensité de ces conséquences varie d’une personne à l’autre.</p>
 <hr />
-<h2 id="troubles-pouvant-etre-associes">🔗 Troubles pouvant être associés</h2>
+<h2 id="troubles-pouvant-etre-associes">Troubles pouvant être associés</h2>
 <p>Le TAG peut coexister avec d’autres difficultés, notamment :</p>
 <ul>
 <li>d’autres troubles anxieux</li>
@@ -188,7 +203,7 @@
 </ul>
 <p>La présence d’anxiété ne signifie pas automatiquement qu’un autre trouble est présent.</p>
 <hr />
-<h2 id="diagnostic">🩺 Diagnostic</h2>
+<h2 id="diagnostic">Diagnostic</h2>
 <p>Le diagnostic est posé par un professionnel qualifié à partir :</p>
 <ul>
 <li>des symptômes (nature, fréquence, intensité)</li>
@@ -198,7 +213,7 @@
 </ul>
 <p>Une personne qui s’inquiète beaucoup ne présente donc pas nécessairement un TAG.</p>
 <hr />
-<h2 id="comment-aider-un-proche-qui-vit-avec-un-tag">🤝 Comment aider un proche qui vit avec un TAG</h2>
+<h2 id="comment-aider-un-proche-qui-vit-avec-un-tag">Comment aider un proche qui vit avec un TAG</h2>
 <p>Voir une personne proche s’inquiéter en permanence peut être déroutant, voire épuisant, pour son entourage. Comprendre ce qui aide réellement — et ce qui, malgré de bonnes intentions, peut involontairement entretenir le cycle anxieux — change beaucoup de choses.</p>
 <p><strong>Ce qui aide généralement :</strong></p>
 <ul>
@@ -216,7 +231,7 @@
 </ul>
 <p>Trouver le bon équilibre est difficile, et personne n’y parvient parfaitement du premier coup — l’intention d’écoute compte déjà énormément.</p>
 <hr />
-<h2 id="techniques-et-prise-en-charge">🛠️ Techniques et prise en charge</h2>
+<h2 id="techniques-et-prise-en-charge">Techniques et prise en charge</h2>
 <h3 id="a-court-terme-apaiser-une-montee-danxiete">À court terme : apaiser une montée d’anxiété</h3>
 <p>Ces techniques n’ont pas vocation à « soigner » le TAG à elles seules, mais peuvent aider à traverser un pic d’inquiétude :</p>
 <ul>
@@ -234,7 +249,7 @@
 </ul>
 <p>Comme pour toute démarche de ce type, le rythme et la combinaison d’approches gagnent à être ajustés avec un professionnel, plutôt que suivis de façon rigide.</p>
 <hr />
-<h2 id="idees-recues">❌ Idées reçues</h2>
+<h2 id="idees-recues">Idées reçues</h2>
 <h3 id="une-personne-anxieuse-manque-simplement-de-confiance-en-elle">« Une personne anxieuse manque simplement de confiance en elle. »</h3>
 <p>Pas forcément : l’anxiété est multifactorielle et ne se réduit pas à la confiance en soi.</p>
 <h3 id="il-suffit-darreter-dy-penser">« Il suffit d’arrêter d’y penser. »</h3>
@@ -242,26 +257,26 @@
 <h3 id="toutes-les-personnes-anxieuses-ont-un-tag">« Toutes les personnes anxieuses ont un TAG. »</h3>
 <p>Non : l’anxiété est une émotion normale. Le TAG correspond à des symptômes persistants et invalidants.</p>
 <hr />
-<h2 id="exemple-fictif-illustratif">📝 Exemple fictif (illustratif)</h2>
+<h2 id="exemple-fictif-illustratif">Exemple fictif (illustratif)</h2>
 <p>Une personne s’inquiète régulièrement de ses résultats alors qu’ils sont satisfaisants. Après cela, l’inquiétude se déplace vers sa santé, puis celle de sa famille, puis vers des événements futurs. Même rassurée, elle continue d’imaginer des scénarios négatifs, ce qui perturbe sa concentration et son sommeil.</p>
 <p>Cet exemple illustre des mécanismes possibles et <strong>ne permet pas d’établir un diagnostic</strong>.</p>
 <hr />
-<h2 id="a-retenir">📌 À retenir</h2>
+<h2 id="a-retenir">À retenir</h2>
 <p>Le TAG se caractérise notamment par :</p>
-<p><strong>→ des inquiétudes importantes et répétées</strong>
-<strong>→ plusieurs domaines de vie concernés</strong>
-<strong>→ une difficulté à contrôler ces inquiétudes</strong>
-<strong>→ des manifestations psychologiques et physiques</strong>
-<strong>→ un retentissement possible sur le quotidien</strong></p>
+<p>** des inquiétudes importantes et répétées<strong>
+** plusieurs domaines de vie concernés</strong>
+** une difficulté à contrôler ces inquiétudes<strong>
+** des manifestations psychologiques et physiques</strong>
+** un retentissement possible sur le quotidien**</p>
 <p>L’anxiété en elle-même est normale  c’est surtout <strong>son intensité, sa persistance, sa difficulté de contrôle et son impact</strong> qui peuvent faire évoquer un trouble anxieux</p>
-<h1 id="12-le-trouble-panique" class="entry-title hc-2">🧠 1.2  Le trouble panique</h1>
+<h1 id="12-le-trouble-panique" class="entry-title hc-2">1.2  Le trouble panique</h1>
 <h2 id="definition_1">Définition</h2>
 <p>Le <strong>trouble panique</strong> est un trouble anxieux caractérisé par la survenue répétée d'<strong>attaques de panique</strong>, accompagnées d'une inquiétude persistante concernant la possibilité qu'elles se reproduisent ou leurs conséquences.</p>
 <p>Une attaque de panique correspond à une période durant laquelle une <strong>peur ou une sensation de malaise très intense apparaît soudainement</strong>, parfois sans danger réel ou déclencheur clairement identifiable.</p>
 <p>L'attaque peut atteindre rapidement une forte intensité et provoquer des symptômes physiques, cognitifs et émotionnels importants.</p>
 <p>Une attaque de panique isolée ne signifie toutefois pas qu'une personne présente nécessairement un trouble panique.</p>
 <hr />
-<h2 id="quest-ce-quune-attaque-de-panique">⚡ Qu'est-ce qu'une attaque de panique ?</h2>
+<h2 id="quest-ce-quune-attaque-de-panique">Qu'est-ce qu'une attaque de panique ?</h2>
 <p>Une attaque de panique est un épisode soudain de peur intense ou de malaise qui peut apparaître dans différentes circonstances.</p>
 <p>Elle peut survenir :</p>
 <ul>
@@ -274,7 +289,7 @@
 <p>Durant l'épisode, la personne peut ressentir une impression de danger imminent alors qu'aucune menace immédiate n'est présente.</p>
 <p>L'intensité des sensations peut donner l'impression que quelque chose de grave est en train de se produire.</p>
 <hr />
-<h2 id="manifestations-psychologiques_1">🧠 Manifestations psychologiques</h2>
+<h2 id="manifestations-psychologiques_1">Manifestations psychologiques</h2>
 <p>Une attaque de panique peut provoquer :</p>
 <ul>
 <li>une peur intense</li>
@@ -289,7 +304,7 @@
 <p>La personne peut également interpréter certaines sensations physiques comme les signes d'un problème médical grave.</p>
 <p>Par exemple, une accélération du cœur peut être interprétée comme le signe d'un problème cardiaque, ce qui augmente encore davantage l'anxiété.</p>
 <hr />
-<h2 id="manifestations-physiques_1">❤️ Manifestations physiques</h2>
+<h2 id="manifestations-physiques_1">Manifestations physiques</h2>
 <p>Les symptômes physiques peuvent être particulièrement impressionnants.</p>
 <p>Ils peuvent comprendre :</p>
 <ul>
@@ -310,30 +325,24 @@
 </ul>
 <p>Tous les symptômes ne sont pas présents simultanément chez toutes les personnes.</p>
 <hr />
-<h2 id="le-mecanisme-de-la-panique">🔄 Le mécanisme de la panique</h2>
+<h2 id="le-mecanisme-de-la-panique">Le mécanisme de la panique</h2>
 <p>Une attaque de panique peut être comprise comme une <strong>boucle d'amplification</strong>.</p>
 <p>Une sensation corporelle apparaît.</p>
-<p>↓</p>
 <p>La personne remarque cette sensation.</p>
-<p>↓</p>
 <p>Elle l'interprète comme potentiellement dangereuse.</p>
-<p>↓</p>
 <p>Cette interprétation augmente la peur.</p>
-<p>↓</p>
 <p>La peur active davantage la réponse physiologique au stress.</p>
-<p>↓</p>
 <p>Les sensations corporelles deviennent plus fortes.</p>
-<p>↓</p>
 <p>La personne remarque encore davantage ces sensations.</p>
 <p>Cette boucle peut contribuer à l'intensification rapide de l'attaque.</p>
 <hr />
-<h2 id="peur-davoir-peur">😰 Peur d'avoir peur</h2>
+<h2 id="peur-davoir-peur">Peur d'avoir peur</h2>
 <p>Après plusieurs attaques, certaines personnes peuvent développer une <strong>peur persistante d'une nouvelle attaque</strong>.</p>
 <p>Elles peuvent commencer à surveiller leur corps afin de détecter le moindre signe annonciateur.</p>
 <p>Par exemple, une légère accélération cardiaque peut attirer immédiatement leur attention et être interprétée comme le début d'une nouvelle crise.</p>
 <p>Cette surveillance permanente peut elle-même augmenter l'anxiété.</p>
 <hr />
-<h2 id="changements-comportementaux">🚪 Changements comportementaux</h2>
+<h2 id="changements-comportementaux">Changements comportementaux</h2>
 <p>La peur d'une nouvelle attaque peut entraîner différentes modifications du comportement.</p>
 <p>Une personne peut notamment :</p>
 <ul>
@@ -348,7 +357,7 @@
 <p>Ces comportements peuvent procurer un sentiment de sécurité à court terme.</p>
 <p>Cependant, l'évitement peut également renforcer progressivement la peur de certaines situations.</p>
 <hr />
-<h2 id="relation-avec-lagoraphobie">🔗 Relation avec l'agoraphobie</h2>
+<h2 id="relation-avec-lagoraphobie">Relation avec l'agoraphobie</h2>
 <p>Le trouble panique et l'<strong>agoraphobie</strong> peuvent être associés, mais il s'agit de deux troubles distincts.</p>
 <p>Une personne présentant un trouble panique peut développer une peur de certaines situations parce qu'elle craint d'y avoir une nouvelle attaque.</p>
 <p>L'agoraphobie, quant à elle, concerne principalement une peur ou une anxiété importante liée à certaines situations dont il pourrait être difficile de s'échapper ou d'obtenir de l'aide en cas de symptômes.</p>
@@ -359,7 +368,7 @@
 <li>ou les deux.</li>
 </ul>
 <hr />
-<h2 id="causes-et-facteurs-de-risque_1">🧬 Causes et facteurs de risque</h2>
+<h2 id="causes-et-facteurs-de-risque_1">Causes et facteurs de risque</h2>
 <p>Le trouble panique ne possède généralement pas une cause unique.</p>
 <p>Plusieurs facteurs peuvent participer à son apparition.</p>
 <h3 id="facteurs-biologiques_1">Facteurs biologiques</h3>
@@ -372,7 +381,7 @@
 <p>Le risque peut être plus important chez certaines personnes ayant des antécédents familiaux de troubles anxieux ou de troubles paniques.</p>
 <p>Cela ne signifie toutefois pas qu'une personne ayant des antécédents familiaux développera nécessairement le trouble.</p>
 <hr />
-<h2 id="declencheurs-possibles">🧪 Déclencheurs possibles</h2>
+<h2 id="declencheurs-possibles">Déclencheurs possibles</h2>
 <p>Les attaques de panique peuvent être déclenchées ou favorisées par différentes situations.</p>
 <p>Par exemple :</p>
 <ul>
@@ -387,14 +396,14 @@
 <p>Cependant, certaines attaques apparaissent <strong>sans déclencheur évident</strong>.</p>
 <p>C'est notamment ce caractère parfois imprévisible qui peut favoriser la peur d'une nouvelle attaque.</p>
 <hr />
-<h2 id="evolution_1">📈 Évolution</h2>
+<h2 id="evolution_1">Évolution</h2>
 <p>L'évolution du trouble panique varie considérablement.</p>
 <p>Certaines personnes connaissent une période relativement courte de symptômes.</p>
 <p>Chez d'autres, les attaques peuvent se répéter sur une période prolongée et entraîner progressivement des comportements d'évitement.</p>
 <p>La peur des attaques peut parfois devenir plus handicapante que les attaques elles-mêmes, notamment lorsque la personne commence à modifier fortement son quotidien afin de les éviter.</p>
 <p>Une prise en charge adaptée peut cependant permettre de réduire considérablement les symptômes et les comportements d'évitement.</p>
 <hr />
-<h2 id="consequences-sur-la-vie-quotidienne">🌍 Conséquences sur la vie quotidienne</h2>
+<h2 id="consequences-sur-la-vie-quotidienne">Conséquences sur la vie quotidienne</h2>
 <p>Un trouble panique important peut avoir des conséquences sur :</p>
 <p><strong>Les études et le travail :</strong> difficultés de concentration, absences ou évitement de certaines situations.</p>
 <p><strong>Les déplacements :</strong> peur des transports ou de certains lieux.</p>
@@ -403,7 +412,7 @@
 <p><strong>L'autonomie :</strong> besoin d'être accompagné ou présence de comportements visant à se sentir davantage en sécurité.</p>
 <p>L'importance de ces conséquences varie d'une personne à l'autre.</p>
 <hr />
-<h2 id="troubles-pouvant-etre-associes_1">🔗 Troubles pouvant être associés</h2>
+<h2 id="troubles-pouvant-etre-associes_1">Troubles pouvant être associés</h2>
 <p>Le trouble panique peut être associé à d'autres troubles psychologiques, notamment :</p>
 <ul>
 <li>agoraphobie</li>
@@ -414,7 +423,7 @@
 </ul>
 <p>La présence d'une attaque de panique ne signifie cependant pas automatiquement qu'un autre trouble est présent.</p>
 <hr />
-<h2 id="diagnostic_1">🩺 Diagnostic</h2>
+<h2 id="diagnostic_1">Diagnostic</h2>
 <p>Le diagnostic est réalisé par un professionnel de santé qualifié.</p>
 <p>Il prend notamment en compte :</p>
 <ul>
@@ -429,7 +438,7 @@
 <p>Le professionnel doit également prendre en considération d'autres explications possibles aux symptômes.</p>
 <p>Certaines manifestations d'une attaque de panique peuvent en effet ressembler à celles de problèmes médicaux. Une première apparition de symptômes physiques importants, notamment une douleur thoracique ou une difficulté respiratoire inhabituelle, peut donc nécessiter une évaluation médicale.</p>
 <hr />
-<h2 id="que-faire-pendant-une-attaque-de-panique">🆘 Que faire pendant une attaque de panique</h2>
+<h2 id="que-faire-pendant-une-attaque-de-panique">Que faire pendant une attaque de panique</h2>
 <p>Au moment même d'une attaque, certains réflexes peuvent aider à en réduire l'intensité ou la durée, sans pour autant « guérir » le trouble :</p>
 <ul>
 <li><strong>Se rappeler que ça va passer.</strong> Une attaque de panique, aussi intense soit-elle, atteint un pic puis redescend généralement en quelques minutes. Se répéter « c'est désagréable mais ce n'est pas dangereux, ça va passer » aide à ne pas amplifier la panique par la peur de la panique elle-même.</li>
@@ -439,7 +448,7 @@
 </ul>
 <p>Ces techniques demandent de la pratique : elles sont rarement efficaces du premier coup et gagnent à être travaillées, idéalement avec un accompagnement professionnel.</p>
 <hr />
-<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge">Prise en charge</h2>
 <p>Le trouble panique peut être pris en charge de différentes manières.</p>
 <h3 id="psychotherapie">Psychothérapie</h3>
 <p>Certaines psychothérapies, notamment la <strong>thérapie cognitivo-comportementale (TCC)</strong>, peuvent être utilisées.</p>
@@ -455,7 +464,7 @@
 <p>Dans certaines situations, un professionnel de santé peut également proposer un traitement médicamenteux.</p>
 <p>Le choix du traitement dépend notamment de la situation individuelle, des symptômes et des éventuels autres troubles présents.</p>
 <hr />
-<h2 id="comment-aider-un-proche-pendant-ou-apres-une-attaque">🤝 Comment aider un proche pendant ou après une attaque</h2>
+<h2 id="comment-aider-un-proche-pendant-ou-apres-une-attaque">Comment aider un proche pendant ou après une attaque</h2>
 <p>Assister à l'attaque de panique d'un proche peut être impressionnant et donner l'impression qu'il faut « faire quelque chose » dans l'urgence. Quelques repères :</p>
 <p><strong>Pendant l'attaque :</strong></p>
 <ul>
@@ -471,7 +480,7 @@
 <li>Encourager, sans forcer, à en parler à un professionnel si les attaques se répètent.</li>
 </ul>
 <hr />
-<h2 id="idees-recues_1">❌ Idées reçues</h2>
+<h2 id="idees-recues_1">Idées reçues</h2>
 <h3 id="une-attaque-de-panique-est-imaginaire">« Une attaque de panique est imaginaire. »</h3>
 <p>Non. Les sensations ressenties sont <strong>réelles</strong>, même lorsqu'elles sont produites par une activation importante du système de réponse au stress.</p>
 <h3 id="une-attaque-de-panique-signifie-forcement-quon-a-un-trouble-panique">« Une attaque de panique signifie forcément qu'on a un trouble panique. »</h3>
@@ -481,7 +490,7 @@
 <h3 id="il-suffit-de-se-calmer">« Il suffit de se calmer. »</h3>
 <p>La volonté seule ne permet pas toujours d'interrompre immédiatement une attaque. Les mécanismes physiologiques et psychologiques impliqués peuvent être très puissants.</p>
 <hr />
-<h2 id="exemple-fictif">📝 Exemple fictif</h2>
+<h2 id="exemple-fictif">Exemple fictif</h2>
 <p>Une personne se trouve dans un magasin lorsqu'elle ressent soudainement son cœur accélérer.</p>
 <p>Elle commence à se concentrer sur cette sensation et pense qu'elle pourrait avoir un problème grave.</p>
 <p>Cette pensée augmente son anxiété. Son cœur accélère davantage, elle commence à transpirer et ressent des vertiges.</p>
@@ -489,16 +498,16 @@
 <p>Après l'épisode, elle reste inquiète et commence progressivement à éviter les magasins par peur que la situation se reproduise.</p>
 <p>Cet exemple illustre certains mécanismes possibles d'une attaque de panique et de la peur anticipatoire. Il ne permet évidemment pas d'établir un diagnostic.</p>
 <hr />
-<h2 id="a-retenir_1">📌 À retenir</h2>
+<h2 id="a-retenir_1">À retenir</h2>
 <p>Le trouble panique se caractérise principalement par :</p>
-<p><strong>→ des attaques de panique récurrentes</strong></p>
-<p><strong>→ une peur ou une inquiétude persistante concernant leur réapparition ou leurs conséquences</strong></p>
-<p><strong>→ des symptômes physiques et psychologiques parfois très intenses</strong></p>
-<p><strong>→ une possible modification des comportements</strong></p>
-<p><strong>→ des évitements pouvant progressivement limiter la vie quotidienne</strong></p>
+<p>** des attaques de panique récurrentes**</p>
+<p>** une peur ou une inquiétude persistante concernant leur réapparition ou leurs conséquences**</p>
+<p>** des symptômes physiques et psychologiques parfois très intenses**</p>
+<p>** une possible modification des comportements**</p>
+<p>** des évitements pouvant progressivement limiter la vie quotidienne**</p>
 <p>Une attaque de panique et un trouble panique ne sont pas synonymes. Une attaque peut être ponctuelle, tandis que le trouble panique implique un ensemble plus durable de symptômes et de conséquences.</p>
 <p>Le trouble panique est un trouble reconnu et <strong>des prises en charge efficaces existent</strong>.</p>
-<h1 id="13-lagoraphobie" class="entry-title hc-3">🧠 1.3  L'agoraphobie</h1>
+<h1 id="13-lagoraphobie" class="entry-title hc-3">1.3  L'agoraphobie</h1>
 <h2 id="definition_2">Définition</h2>
 <p>L'<strong>agoraphobie</strong> est un trouble anxieux caractérisé par une peur ou une anxiété importante face à certaines situations dans lesquelles la personne pense qu'il pourrait être difficile de s'échapper, d'obtenir de l'aide ou de faire face à des symptômes anxieux.</p>
 <p>Les situations concernées peuvent notamment être les transports en commun, les espaces ouverts ou fermés, les lieux très fréquentés, les files d'attente ou le fait de se trouver à l'extérieur du domicile seul.</p>
@@ -540,7 +549,7 @@
 <h2 id="prise-en-charge_1">Prise en charge</h2>
 <p>La <strong>TCC</strong>, notamment avec une exposition progressive aux situations redoutées, constitue une approche fréquemment utilisée. Concrètement, cela peut consister à se rapprocher très progressivement d'une situation évitée (par exemple, rester d'abord près de la porte d'un magasin, puis y entrer quelques minutes, puis y rester plus longtemps), à un rythme choisi avec un professionnel plutôt que subi.</p>
 <p>Un traitement médicamenteux peut également être envisagé dans certaines situations par un professionnel de santé.</p>
-<h2 id="comment-aider-un-proche-agoraphobe">🤝 Comment aider un proche agoraphobe</h2>
+<h2 id="comment-aider-un-proche-agoraphobe">Comment aider un proche agoraphobe</h2>
 <ul>
 <li><strong>Ne pas minimiser ni forcer.</strong> Dire « il n'y a aucun danger, vas-y » ou au contraire éviter systématiquement toute sortie « pour lui/elle » peuvent tous les deux renforcer le trouble à leur manière : le premier en invalidant la peur ressentie, le second en confirmant que la situation est effectivement dangereuse.</li>
 <li><strong>Respecter le rythme d'exposition.</strong> Si la personne suit un accompagnement avec des paliers progressifs, l'aider à les tenir sans les accélérer ni les éviter est souvent plus utile que de proposer des solutions de contournement.</li>
@@ -549,7 +558,7 @@
 </ul>
 <h2 id="a-retenir_2">À retenir</h2>
 <p>L'agoraphobie ne signifie pas simplement « avoir peur des grands espaces ». Elle concerne plus largement certaines situations dans lesquelles la personne ressent une difficulté à s'échapper ou à obtenir de l'aide.</p>
-<h1 id="14-le-trouble-danxiete-sociale" class="entry-title hc-4">🧠 1.4  Le trouble d'anxiété sociale</h1>
+<h1 id="14-le-trouble-danxiete-sociale" class="entry-title hc-4">1.4  Le trouble d'anxiété sociale</h1>
 <h2 id="definition_3">Définition</h2>
 <p>Le <strong>trouble d'anxiété sociale</strong>, également appelé phobie sociale, est un trouble anxieux caractérisé par une peur ou une anxiété importante dans les situations sociales ou de performance.</p>
 <p>La personne peut craindre d'être observée, jugée, humiliée ou de montrer des signes d'anxiété devant les autres.</p>
@@ -619,7 +628,7 @@
 <h2 id="prise-en-charge_2">Prise en charge</h2>
 <p>La TCC constitue une approche couramment utilisée. Elle peut notamment travailler sur les pensées liées au jugement social et sur l'exposition progressive aux situations anxiogènes — par exemple, s'entraîner d'abord à poser une question courte à un inconnu avant de viser une prise de parole en groupe.</p>
 <p>Dans certaines situations, un traitement médicamenteux peut également être proposé.</p>
-<h2 id="comment-aider-un-proche-anxieux-socialement">🤝 Comment aider un proche anxieux socialement</h2>
+<h2 id="comment-aider-un-proche-anxieux-socialement">Comment aider un proche anxieux socialement</h2>
 <ul>
 <li><strong>Ne pas répondre systématiquement à sa place</strong> dans les interactions sociales, même par réflexe protecteur : cela peut renforcer l'idée que la personne est incapable de gérer seule ces situations.</li>
 <li><strong>Éviter de mettre en avant l'anxiété devant d'autres</strong> (« il/elle est timide, ne fais pas attention ») : cela peut ajouter de la honte à une situation déjà inconfortable.</li>
@@ -633,7 +642,7 @@
 <p>Une exposition adaptée peut être utile, mais elle s'inscrit généralement dans une démarche structurée lorsque l'anxiété est importante.</p>
 <h2 id="a-retenir_3">À retenir</h2>
 <p>Le trouble d'anxiété sociale correspond à une peur importante et persistante de certaines situations sociales ou de performance, souvent liée à la crainte d'être observé, jugé ou humilié.</p>
-<h1 id="15-les-phobies-specifiques" class="entry-title hc-5">🧠 1.5  Les phobies spécifiques</h1>
+<h1 id="15-les-phobies-specifiques" class="entry-title hc-5">1.5  Les phobies spécifiques</h1>
 <h2 id="definition_4">Définition</h2>
 <p>Une <strong>phobie spécifique</strong> est un trouble anxieux caractérisé par une peur intense et persistante provoquée par un objet ou une situation particulière.</p>
 <p>La peur peut concerner, par exemple :</p>
@@ -682,7 +691,7 @@
 <h2 id="prise-en-charge_3">Prise en charge</h2>
 <p>La TCC, notamment l'exposition progressive et contrôlée à l'objet ou à la situation redoutée, est une approche fréquemment utilisée.</p>
 <p>L'exposition est généralement réalisée de manière progressive et adaptée à la personne : par exemple, regarder d'abord une photo de l'animal redouté, puis une vidéo, avant d'envisager une rencontre encadrée.</p>
-<h2 id="comment-aider-un-proche-phobique">🤝 Comment aider un proche phobique</h2>
+<h2 id="comment-aider-un-proche-phobique">Comment aider un proche phobique</h2>
 <ul>
 <li><strong>Ne pas exposer brutalement</strong> la personne à l'objet de sa phobie « pour la forcer à affronter sa peur » : une exposition non préparée et non choisie peut aggraver la peur plutôt que la réduire.</li>
 <li><strong>Ne pas se moquer ni minimiser</strong>, même si la peur paraît disproportionnée de l'extérieur — elle est bien réelle et intense pour la personne qui la vit.</li>
@@ -691,7 +700,7 @@
 </ul>
 <h2 id="a-retenir_4">À retenir</h2>
 <p>Une phobie spécifique correspond à une peur intense et persistante liée à un objet ou une situation précise. Elle se distingue d'une simple préférence ou d'une peur légère par son intensité et son impact.</p>
-<h1 id="16-le-trouble-danxiete-de-separation" class="entry-title hc-1">🧠 1.6 Le trouble d’anxiété de séparation</h1>
+<h1 id="16-le-trouble-danxiete-de-separation" class="entry-title hc-1">1.6 Le trouble d’anxiété de séparation</h1>
 <h2 id="definition_5">Définition</h2>
 <p>Le <strong>trouble d’anxiété de séparation</strong> est un trouble anxieux caractérisé par une peur ou une inquiétude excessive concernant la séparation avec une personne à laquelle l'individu est fortement attaché.</p>
 <p>Il peut concerner les enfants, les adolescents et les adultes.</p>
@@ -733,7 +742,7 @@
 <p>Une prise en charge peut réduire les symptômes et favoriser progressivement l'autonomie.</p>
 <h2 id="prise-en-charge_4">Prise en charge</h2>
 <p>La psychothérapie, notamment la TCC, peut aider à diminuer progressivement l'anxiété liée aux séparations et à développer des stratégies d'adaptation, par exemple en pratiquant des séparations très brèves et prévisibles avant d'en allonger progressivement la durée.</p>
-<h2 id="comment-aider-un-proche-notamment-un-enfant-avec-ce-trouble">🤝 Comment aider un proche (notamment un enfant) avec ce trouble</h2>
+<h2 id="comment-aider-un-proche-notamment-un-enfant-avec-ce-trouble">Comment aider un proche (notamment un enfant) avec ce trouble</h2>
 <ul>
 <li><strong>Préparer les séparations à l'avance</strong> plutôt que de partir brusquement : expliquer clairement quand la personne reviendra, en des termes concrets et compréhensibles (« après le repas de midi », plutôt que « bientôt »).</li>
 <li><strong>Tenir ses engagements de retour</strong> autant que possible : la fiabilité rassure davantage que les paroles rassurantes répétées.</li>
@@ -743,7 +752,7 @@
 </ul>
 <h2 id="a-retenir_5">À retenir</h2>
 <p>Le trouble d'anxiété de séparation dépasse l'inquiétude normale liée à l'absence d'un proche. Il se caractérise par une anxiété importante, persistante et ayant des conséquences sur la vie quotidienne.</p>
-<h1 id="17-le-mutisme-selectif" class="entry-title hc-2">🧠 1.7  Le mutisme sélectif</h1>
+<h1 id="17-le-mutisme-selectif" class="entry-title hc-2">1.7  Le mutisme sélectif</h1>
 <h2 id="definition_6">Définition</h2>
 <p>Le <strong>mutisme sélectif</strong> est un trouble caractérisé par une incapacité persistante à parler dans certaines situations sociales, alors que la personne est capable de parler normalement dans d'autres contextes.</p>
 <p>Il apparaît généralement durant l'enfance et est souvent associé à une anxiété importante dans certaines situations sociales.</p>
@@ -783,7 +792,7 @@
 <h2 id="prise-en-charge_5">Prise en charge</h2>
 <p>La prise en charge peut inclure une psychothérapie et un accompagnement progressif dans les situations sociales.</p>
 <p>La collaboration entre l'enfant, la famille et l'environnement scolaire peut être importante.</p>
-<h2 id="comment-aider-un-enfant-avec-un-mutisme-selectif">🤝 Comment aider un enfant avec un mutisme sélectif</h2>
+<h2 id="comment-aider-un-enfant-avec-un-mutisme-selectif">Comment aider un enfant avec un mutisme sélectif</h2>
 <ul>
 <li><strong>Ne jamais forcer à parler</strong> ni le mettre en avant devant un groupe (« vas-y, dis bonjour ») : la pression sociale directe augmente généralement le blocage plutôt que de le résoudre.</li>
 <li><strong>Valoriser toute forme de communication</strong> (geste, écrit, signe) comme une réussite, sans attendre uniquement la parole.</li>
@@ -793,7 +802,7 @@
 </ul>
 <h2 id="a-retenir_6">À retenir</h2>
 <p>Le mutisme sélectif correspond à une difficulté importante à parler dans certains contextes, malgré une capacité à parler dans d'autres situations.</p>
-<h1 id="18-les-troubles-anxieux-induits-par-une-substance-ou-un-medicament" class="entry-title hc-3">🧠 1.8 Les troubles anxieux induits par une substance ou un médicament</h1>
+<h1 id="18-les-troubles-anxieux-induits-par-une-substance-ou-un-medicament" class="entry-title hc-3">1.8 Les troubles anxieux induits par une substance ou un médicament</h1>
 <h2 id="definition_7">Définition</h2>
 <p>Certains symptômes anxieux peuvent être directement associés à la consommation d'une substance, à une intoxication, à un sevrage ou à l'utilisation d'un médicament.</p>
 <p>Dans ce cas, l'anxiété n'est pas nécessairement expliquée par un trouble anxieux primaire.</p>
@@ -827,7 +836,7 @@
 <p>Les symptômes peuvent diminuer lorsque la cause est supprimée, mais leur évolution dépend de la substance concernée et de la situation de la personne.</p>
 <h2 id="a-retenir_7">À retenir</h2>
 <p>Tous les symptômes anxieux ne correspondent pas nécessairement à un trouble anxieux primaire. Certaines substances ou certains médicaments peuvent provoquer des manifestations similaires.</p>
-<h1 id="19-le-trouble-anxieux-du-a-une-autre-affection-medicale" class="entry-title hc-4">🧠 1.9  Le trouble anxieux dû à une autre affection médicale</h1>
+<h1 id="19-le-trouble-anxieux-du-a-une-autre-affection-medicale" class="entry-title hc-4">1.9  Le trouble anxieux dû à une autre affection médicale</h1>
 <h2 id="definition_8">Définition</h2>
 <p>Certaines affections médicales peuvent provoquer directement des symptômes ressemblant à ceux d'un trouble anxieux.</p>
 <p>Dans ce cas, les manifestations anxieuses sont liées aux conséquences physiologiques de l'affection médicale.</p>
@@ -853,7 +862,7 @@
 <p>Une prise en charge psychologique peut également être utile lorsque les symptômes anxieux persistent.</p>
 <h2 id="a-retenir_8">À retenir</h2>
 <p>Une personne présentant des symptômes anxieux n'a pas nécessairement un trouble psychiatrique. Certaines affections médicales peuvent produire des manifestations similaires.</p>
-<h1 id="110-le-trouble-anxieux-specifie" class="entry-title hc-5">🧠 1.10  Le trouble anxieux spécifié</h1>
+<h1 id="110-le-trouble-anxieux-specifie" class="entry-title hc-5">1.10  Le trouble anxieux spécifié</h1>
 <h2 id="definition_9">Définition</h2>
 <p>Le <strong>trouble anxieux spécifié</strong> est une catégorie utilisée lorsque des symptômes anxieux provoquent une souffrance ou une gêne significative, mais ne correspondent pas entièrement aux critères d'un trouble anxieux spécifique.</p>
 <p>Cette catégorie permet de décrire plus précisément certaines présentations cliniques particulières.</p>
@@ -878,7 +887,7 @@
 <p>Une psychothérapie peut notamment être proposée lorsque l'anxiété entraîne une gêne importante.</p>
 <h2 id="a-retenir_9">À retenir</h2>
 <p>Cette catégorie ne désigne pas un trouble unique avec une liste fixe de symptômes. Elle permet de décrire certaines formes d'anxiété cliniquement significatives qui ne correspondent pas complètement à une autre catégorie.</p>
-<h1 id="111-le-trouble-anxieux-non-specifie" class="entry-title hc-1">🧠 1.11 Le trouble anxieux non spécifié</h1>
+<h1 id="111-le-trouble-anxieux-non-specifie" class="entry-title hc-1">1.11 Le trouble anxieux non spécifié</h1>
 <h2 id="definition_10">Définition</h2>
 <p>Le <strong>trouble anxieux non spécifié</strong> est utilisé lorsqu'un professionnel constate des symptômes correspondant globalement au domaine des troubles anxieux, mais qu'il ne dispose pas de suffisamment d'informations pour déterminer précisément le type de trouble ou que les circonstances ne permettent pas de préciser davantage la présentation.</p>
 <h2 id="difference-avec-le-trouble-anxieux-specifie">Différence avec le trouble anxieux spécifié</h2>
@@ -901,7 +910,7 @@
 <p>Elle dépend des symptômes observés et de leur impact sur la personne.</p>
 <h2 id="a-retenir_10">À retenir</h2>
 <p>Le trouble anxieux non spécifié constitue une catégorie clinique générale utilisée lorsque la présentation anxieuse ne peut pas être classée plus précisément.</p>
-<h1 id="112-lanxiete-liee-a-des-situations-particulieres" class="entry-title hc-2">🧠 1.12 L'anxiété liée à des situations particulières</h1>
+<h1 id="112-lanxiete-liee-a-des-situations-particulieres" class="entry-title hc-2">1.12 L'anxiété liée à des situations particulières</h1>
 <h2 id="definition_11">Définition</h2>
 <p>Certaines personnes peuvent présenter une anxiété importante dans des circonstances spécifiques sans que cette anxiété corresponde nécessairement à un trouble distinct.</p>
 <p>La distinction entre une réaction normale et un trouble dépend notamment de l'intensité, de la persistance et des conséquences.</p>
@@ -927,7 +936,7 @@
 </ul>
 <h2 id="a-retenir_11">À retenir</h2>
 <p>Ressentir de l'anxiété ne signifie pas automatiquement présenter un trouble psychologique. L'anxiété est également une réaction normale face à l'incertitude ou au danger.</p>
-<h1 id="113-les-attaques-de-panique-comme-phenomene-associe" class="entry-title hc-3">🧠 1.13  Les attaques de panique comme phénomène associé</h1>
+<h1 id="113-les-attaques-de-panique-comme-phenomene-associe" class="entry-title hc-3">1.13  Les attaques de panique comme phénomène associé</h1>
 <h2 id="definition_12">Définition</h2>
 <p>Une <strong>attaque de panique</strong> est un épisode soudain de peur intense ou de malaise qui atteint rapidement une forte intensité.</p>
 <p>Elle peut apparaître dans différents troubles psychologiques, mais peut également survenir dans certaines situations sans qu'un trouble panique soit présent.</p>
@@ -956,7 +965,7 @@
 <p>Certaines personnes développent ensuite des comportements d'évitement.</p>
 <h2 id="a-retenir_12">À retenir</h2>
 <p>Une attaque de panique est un phénomène qui peut apparaître dans différents contextes. Elle ne constitue pas automatiquement un diagnostic de trouble panique.</p>
-<h1 id="114-lanxiete-anticipatoire" class="entry-title hc-4">🧠 1.14  L'anxiété anticipatoire</h1>
+<h1 id="114-lanxiete-anticipatoire" class="entry-title hc-4">1.14  L'anxiété anticipatoire</h1>
 <h2 id="definition_13">Définition</h2>
 <p>L'<strong>anxiété anticipatoire</strong> correspond à une anxiété ressentie avant qu'une situation redoutée ne se produise.</p>
 <p>La personne imagine ce qui pourrait arriver et anticipe différentes conséquences négatives.</p>
@@ -976,7 +985,7 @@
 <h2 id="role-de-lanticipation">Rôle de l'anticipation</h2>
 <p>L'anticipation peut avoir une fonction normale : prévoir un problème permet parfois de mieux s'y préparer.</p>
 <p>Elle devient problématique lorsqu'elle devient excessive et commence à limiter le fonctionnement quotidien.</p>
-<h2 id="reduire-lanxiete-anticipatoire">🛠️ Réduire l'anxiété anticipatoire</h2>
+<h2 id="reduire-lanxiete-anticipatoire">Réduire l'anxiété anticipatoire</h2>
 <p>Quelques pistes concrètes, utilisées notamment en TCC :</p>
 <ul>
 <li><strong>Limiter le temps consacré à l'anticipation.</strong> Se fixer un créneau court et défini pour « préparer » mentalement l'événement, plutôt que d'y penser de façon diffuse toute la journée.</li>
@@ -986,7 +995,7 @@
 </ul>
 <h2 id="a-retenir_13">À retenir</h2>
 <p>L'anxiété anticipatoire n'est pas un trouble indépendant dans toutes les classifications. Il s'agit principalement d'un phénomène pouvant accompagner différents troubles anxieux.</p>
-<h1 id="115-lanxiete-et-levitement" class="entry-title hc-5">🧠 1.15  L'anxiété et l'évitement</h1>
+<h1 id="115-lanxiete-et-levitement" class="entry-title hc-5">1.15  L'anxiété et l'évitement</h1>
 <h2 id="definition_14">Définition</h2>
 <p>L'<strong>évitement</strong> est un comportement consistant à éviter une situation, un objet, une pensée ou une sensation perçue comme anxiogène.</p>
 <p>Il constitue un mécanisme fréquent dans de nombreux troubles anxieux.</p>
@@ -994,7 +1003,7 @@
 <p>Lorsqu'une personne évite une situation qui lui fait peur, son anxiété diminue souvent momentanément.</p>
 <p>Cette diminution peut renforcer le comportement d'évitement.</p>
 <p>Le cerveau peut alors progressivement associer :</p>
-<p><strong>Situation → peur → évitement → soulagement</strong></p>
+<p><strong>Situation  peur  évitement  soulagement</strong></p>
 <p>Ce mécanisme peut contribuer au maintien de l'anxiété.</p>
 <h2 id="differentes-formes-devitement">Différentes formes d'évitement</h2>
 <p>L'évitement peut être :</p>
@@ -1019,7 +1028,7 @@
 <h2 id="prise-en-charge_9">Prise en charge</h2>
 <p>Dans certaines psychothérapies, notamment les TCC, l'évitement peut être travaillé progressivement.</p>
 <p>L'objectif n'est pas de forcer brutalement une personne à affronter ses peurs, mais de construire une progression adaptée à sa situation.</p>
-<h2 id="reduire-levitement-un-pas-a-la-fois">🛠️ Réduire l'évitement, un pas à la fois</h2>
+<h2 id="reduire-levitement-un-pas-a-la-fois">Réduire l'évitement, un pas à la fois</h2>
 <ul>
 <li><strong>Faire la liste des situations évitées</strong>, de la moins difficile à la plus difficile (une « échelle » d'exposition).</li>
 <li><strong>Commencer par le bas de l'échelle</strong>, pas par la situation la plus redoutée : le but est de réussir une étape gérable, pas de se mettre en échec.</li>
@@ -1033,8 +1042,26 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-2-troubles-obsessionnels-compulsifs-et-apparentes/"><span class="similar-icon">🩺</span>Partie 2 — Troubles obsessionnels-compulsifs et apparentés</a><a class="similar-item" href="/chapitre/troubles-partie-3-troubles-depressifs/"><span class="similar-icon">🩺</span>Partie 3 — Troubles dépressifs</a><a class="similar-item" href="/chapitre/troubles-partie-4-troubles-bipolaires/"><span class="similar-icon">🩺</span>Partie 4 — Troubles bipolaires</a></div>
+      <h2>Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-2-troubles-obsessionnels-compulsifs-et-apparentes/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 2 — Troubles obsessionnels-compulsifs et apparentés</a><a class="similar-item" href="/chapitre/troubles-partie-3-troubles-depressifs/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 3 — Troubles dépressifs</a><a class="similar-item" href="/chapitre/troubles-partie-4-troubles-bipolaires/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 4 — Troubles bipolaires</a></div>
     </div>
     <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
   </div>
@@ -1120,23 +1147,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -1154,7 +1183,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -1334,9 +1363,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -1345,10 +1376,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -1455,7 +1486,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1495,8 +1526,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1527,7 +1558,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1582,7 +1613,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1606,17 +1637,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1658,7 +1689,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

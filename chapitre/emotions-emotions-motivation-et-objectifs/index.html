@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#141-quest-ce-que-la-motivation">🎯 14.1 Qu'est-ce que la motivation ?</a></li><li><a href="#142-les-emotions-et-la-motivation">🧠 14.2 Les émotions et la motivation</a></li><li><a href="#143-la-recherche-de-recompense">🏆 14.3 La recherche de récompense</a></li><li><a href="#144-la-recherche-de-plaisir">⚡ 14.4 La recherche de plaisir</a></li><li><a href="#145-le-desir">🧠 14.5 Le désir</a></li><li><a href="#146-lanticipation-de-la-recompense">🔮 14.6 L'anticipation de la récompense</a></li><li><a href="#147-lerreur-de-prediction-de-recompense">🧪 14.7 L'erreur de prédiction de récompense</a></li><li><a href="#148-lapprentissage-par-recompense">🔄 14.8 L'apprentissage par récompense</a></li><li><a href="#149-le-renforcement-positif">➕ 14.9 Le renforcement positif</a></li><li><a href="#1410-la-motivation-intrinseque">🧠 14.10 La motivation intrinsèque</a></li><li><a href="#1411-la-motivation-extrinseque">🎁 14.11 La motivation extrinsèque</a></li><li><a href="#1412-motivation-intrinseque-et-extrinseque">⚖️ 14.12 Motivation intrinsèque et extrinsèque</a></li><li><a href="#1413-les-besoins-psychologiques">🧩 14.13 Les besoins psychologiques</a></li><li><a href="#1414-le-sentiment-de-competence">🛠️ 14.14 Le sentiment de compétence</a></li><li><a href="#1415-le-sentiment-dautonomie">🕊️ 14.15 Le sentiment d'autonomie</a></li><li><a href="#1416-la-motivation-sociale">🧑‍🤝‍🧑 14.16 La motivation sociale</a></li><li><a href="#1417-lattachement-et-les-objectifs">❤️ 14.17 L'attachement et les objectifs</a></li><li><a href="#1418-la-peur-comme-motivation">😨 14.18 La peur comme motivation</a></li><li><a href="#1419-la-colere-comme-motivation">😡 14.19 La colère comme motivation</a></li><li><a href="#1420-la-tristesse-et-la-motivation">😢 14.20 La tristesse et la motivation</a></li><li><a href="#1421-la-joie-et-la-motivation">😄 14.21 La joie et la motivation</a></li><li><a href="#1422-la-poursuite-dun-objectif">🏁 14.22 La poursuite d'un objectif</a></li><li><a href="#1423-les-objectifs-a-court-terme">📌 14.23 Les objectifs à court terme</a></li><li><a href="#1424-les-objectifs-a-long-terme">🗓️ 14.24 Les objectifs à long terme</a></li><li><a href="#1425-la-perseverance">⏳ 14.25 La persévérance</a></li><li><a href="#1426-les-obstacles-et-la-motivation">🚧 14.26 Les obstacles et la motivation</a></li><li><a href="#1427-le-sentiment-defficacite-personnelle">🧠 14.27 Le sentiment d'efficacité personnelle</a></li><li><a href="#1428-lechec-et-la-motivation">🔄 14.28 L'échec et la motivation</a></li><li><a href="#1429-la-reussite-et-la-motivation">🏆 14.29 La réussite et la motivation</a></li><li><a href="#1430-lengagement">🔥 14.30 L'engagement</a></li><li><a href="#1431-la-motivation-et-lattention">🧠 14.31 La motivation et l'attention</a></li><li><a href="#1432-la-motivation-et-les-pensees">💭 14.32 La motivation et les pensées</a></li><li><a href="#1433-la-motivation-et-la-memoire">🧠 14.33 La motivation et la mémoire</a></li><li><a href="#1434-le-conflit-entre-objectifs">⚖️ 14.34 Le conflit entre objectifs</a></li><li><a href="#1435-lambivalence-motivationnelle">🔀 14.35 L'ambivalence motivationnelle</a></li><li><a href="#1436-la-procrastination">🛑 14.36 La procrastination</a></li><li><a href="#1437-la-gratification-differee">🍬 14.37 La gratification différée</a></li><li><a href="#1438-les-attentes-et-la-motivation">🔮 14.38 Les attentes et la motivation</a></li><li><a href="#1439-les-differences-individuelles">🧩 14.39 Les différences individuelles</a></li><li><a href="#1440-pourquoi-etudier-les-emotions-la-motivation-et-les-objectifs">🔬 14.40 Pourquoi étudier les émotions, la motivation et les objectifs ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#141-quest-ce-que-la-motivation">14.1 Qu'est-ce que la motivation ?</a></li><li><a href="#142-les-emotions-et-la-motivation">14.2 Les émotions et la motivation</a></li><li><a href="#143-la-recherche-de-recompense">14.3 La recherche de récompense</a></li><li><a href="#144-la-recherche-de-plaisir">14.4 La recherche de plaisir</a></li><li><a href="#145-le-desir">14.5 Le désir</a></li><li><a href="#146-lanticipation-de-la-recompense">14.6 L'anticipation de la récompense</a></li><li><a href="#147-lerreur-de-prediction-de-recompense">14.7 L'erreur de prédiction de récompense</a></li><li><a href="#148-lapprentissage-par-recompense">14.8 L'apprentissage par récompense</a></li><li><a href="#149-le-renforcement-positif">14.9 Le renforcement positif</a></li><li><a href="#1410-la-motivation-intrinseque">14.10 La motivation intrinsèque</a></li><li><a href="#1411-la-motivation-extrinseque">14.11 La motivation extrinsèque</a></li><li><a href="#1412-motivation-intrinseque-et-extrinseque">14.12 Motivation intrinsèque et extrinsèque</a></li><li><a href="#1413-les-besoins-psychologiques">14.13 Les besoins psychologiques</a></li><li><a href="#1414-le-sentiment-de-competence">14.14 Le sentiment de compétence</a></li><li><a href="#1415-le-sentiment-dautonomie">14.15 Le sentiment d'autonomie</a></li><li><a href="#1416-la-motivation-sociale">‍‍ 14.16 La motivation sociale</a></li><li><a href="#1417-lattachement-et-les-objectifs">14.17 L'attachement et les objectifs</a></li><li><a href="#1418-la-peur-comme-motivation">14.18 La peur comme motivation</a></li><li><a href="#1419-la-colere-comme-motivation">14.19 La colère comme motivation</a></li><li><a href="#1420-la-tristesse-et-la-motivation">14.20 La tristesse et la motivation</a></li><li><a href="#1421-la-joie-et-la-motivation">14.21 La joie et la motivation</a></li><li><a href="#1422-la-poursuite-dun-objectif">14.22 La poursuite d'un objectif</a></li><li><a href="#1423-les-objectifs-a-court-terme">14.23 Les objectifs à court terme</a></li><li><a href="#1424-les-objectifs-a-long-terme">14.24 Les objectifs à long terme</a></li><li><a href="#1425-la-perseverance">14.25 La persévérance</a></li><li><a href="#1426-les-obstacles-et-la-motivation">14.26 Les obstacles et la motivation</a></li><li><a href="#1427-le-sentiment-defficacite-personnelle">14.27 Le sentiment d'efficacité personnelle</a></li><li><a href="#1428-lechec-et-la-motivation">14.28 L'échec et la motivation</a></li><li><a href="#1429-la-reussite-et-la-motivation">14.29 La réussite et la motivation</a></li><li><a href="#1430-lengagement">14.30 L'engagement</a></li><li><a href="#1431-la-motivation-et-lattention">14.31 La motivation et l'attention</a></li><li><a href="#1432-la-motivation-et-les-pensees">14.32 La motivation et les pensées</a></li><li><a href="#1433-la-motivation-et-la-memoire">14.33 La motivation et la mémoire</a></li><li><a href="#1434-le-conflit-entre-objectifs">14.34 Le conflit entre objectifs</a></li><li><a href="#1435-lambivalence-motivationnelle">14.35 L'ambivalence motivationnelle</a></li><li><a href="#1436-la-procrastination">14.36 La procrastination</a></li><li><a href="#1437-la-gratification-differee">14.37 La gratification différée</a></li><li><a href="#1438-les-attentes-et-la-motivation">14.38 Les attentes et la motivation</a></li><li><a href="#1439-les-differences-individuelles">14.39 Les différences individuelles</a></li><li><a href="#1440-pourquoi-etudier-les-emotions-la-motivation-et-les-objectifs">14.40 Pourquoi étudier les émotions, la motivation et les objectifs ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Émotions, motivation et objectifs',
         category: 'Émotions et comportements humains',
-        icon: '❤️'
+        icon: 'É'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/emotions/">❤️ Émotions et comportements humains</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/emotions/">Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Émotions, motivation et objectifs</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,139 +113,151 @@
     <div class="article-body">
       <p>Les émotions jouent un rôle important dans la motivation et dans la manière dont les individus poursuivent leurs objectifs. Elles peuvent augmenter ou diminuer l'envie d'agir, modifier la valeur accordée à une récompense et influencer la persévérance.</p>
 <p>La motivation ne dépend cependant pas uniquement des émotions. Elle résulte de l'interaction entre les besoins, les objectifs, les récompenses, les attentes, les expériences passées et le contexte.</p>
-<h2 id="141-quest-ce-que-la-motivation" class="entry-title hc-1">🎯 14.1 Qu'est-ce que la motivation ?</h2>
+<h2 id="141-quest-ce-que-la-motivation" class="entry-title hc-1">14.1 Qu'est-ce que la motivation ?</h2>
 <p>La motivation désigne l'ensemble des processus qui orientent et soutiennent un comportement vers un objectif ou une conséquence recherchée.</p>
 <p>Elle influence notamment le choix d'une action, l'effort fourni et la persévérance.</p>
-<h2 id="142-les-emotions-et-la-motivation" class="entry-title hc-2">🧠 14.2 Les émotions et la motivation</h2>
+<h2 id="142-les-emotions-et-la-motivation" class="entry-title hc-2">14.2 Les émotions et la motivation</h2>
 <p>Les émotions peuvent modifier la motivation.</p>
 <p>Une émotion agréable peut augmenter l'envie de poursuivre une activité, tandis qu'une émotion désagréable peut favoriser l'évitement ou la recherche d'une solution.</p>
-<h2 id="143-la-recherche-de-recompense" class="entry-title hc-3">🏆 14.3 La recherche de récompense</h2>
+<h2 id="143-la-recherche-de-recompense" class="entry-title hc-3">14.3 La recherche de récompense</h2>
 <p>Les individus peuvent être motivés par l'obtention d'une récompense.</p>
 <p>La récompense peut être matérielle, sociale, émotionnelle ou liée au sentiment de réussite.</p>
-<h2 id="144-la-recherche-de-plaisir" class="entry-title hc-4">⚡ 14.4 La recherche de plaisir</h2>
+<h2 id="144-la-recherche-de-plaisir" class="entry-title hc-4">14.4 La recherche de plaisir</h2>
 <p>Le plaisir anticipé peut augmenter la motivation à réaliser une action.</p>
 <p>L'attente d'une expérience agréable peut donc influencer le comportement avant même que la récompense soit obtenue.</p>
-<h2 id="145-le-desir" class="entry-title hc-5">🧠 14.5 Le désir</h2>
+<h2 id="145-le-desir" class="entry-title hc-5">14.5 Le désir</h2>
 <p>Le désir correspond à une tendance à vouloir obtenir quelque chose.</p>
 <p>Il peut être influencé par les besoins, les attentes, les expériences passées et les mécanismes de récompense.</p>
-<h2 id="146-lanticipation-de-la-recompense" class="entry-title hc-1">🔮 14.6 L'anticipation de la récompense</h2>
+<h2 id="146-lanticipation-de-la-recompense" class="entry-title hc-1">14.6 L'anticipation de la récompense</h2>
 <p>Une récompense future peut influencer le comportement avant sa réception.</p>
 <p>L'anticipation permet notamment d'estimer ce qui pourrait être obtenu et de préparer une action.</p>
-<h2 id="147-lerreur-de-prediction-de-recompense" class="entry-title hc-2">🧪 14.7 L'erreur de prédiction de récompense</h2>
+<h2 id="147-lerreur-de-prediction-de-recompense" class="entry-title hc-2">14.7 L'erreur de prédiction de récompense</h2>
 <p>Le cerveau compare notamment les résultats obtenus avec ceux qui étaient attendus.</p>
 <p>Une récompense meilleure ou moins bonne que prévu peut modifier les attentes futures et l'apprentissage.</p>
-<h2 id="148-lapprentissage-par-recompense" class="entry-title hc-3">🔄 14.8 L'apprentissage par récompense</h2>
+<h2 id="148-lapprentissage-par-recompense" class="entry-title hc-3">14.8 L'apprentissage par récompense</h2>
 <p>Les conséquences d'un comportement peuvent influencer la probabilité que ce comportement soit reproduit.</p>
 <p>Une conséquence positive peut notamment renforcer certaines actions.</p>
-<h2 id="149-le-renforcement-positif" class="entry-title hc-4">➕ 14.9 Le renforcement positif</h2>
+<h2 id="149-le-renforcement-positif" class="entry-title hc-4">14.9 Le renforcement positif</h2>
 <p>Le renforcement positif correspond à l'augmentation de la probabilité d'un comportement lorsqu'une conséquence agréable ou recherchée suit ce comportement.</p>
 <p>Il s'agit d'un mécanisme important de l'apprentissage comportemental.</p>
-<h2 id="1410-la-motivation-intrinseque" class="entry-title hc-5">🧠 14.10 La motivation intrinsèque</h2>
+<h2 id="1410-la-motivation-intrinseque" class="entry-title hc-5">14.10 La motivation intrinsèque</h2>
 <p>La motivation intrinsèque correspond à une motivation liée à l'intérêt ou au plaisir associé à l'activité elle-même.</p>
 <p>L'action est alors réalisée notamment parce qu'elle est considérée comme intéressante ou satisfaisante.</p>
-<h2 id="1411-la-motivation-extrinseque" class="entry-title hc-1">🎁 14.11 La motivation extrinsèque</h2>
+<h2 id="1411-la-motivation-extrinseque" class="entry-title hc-1">14.11 La motivation extrinsèque</h2>
 <p>La motivation extrinsèque repose davantage sur des conséquences externes à l'activité.</p>
 <p>Une récompense, une reconnaissance ou l'évitement d'une conséquence désagréable peuvent notamment influencer le comportement.</p>
-<h2 id="1412-motivation-intrinseque-et-extrinseque" class="entry-title hc-2">⚖️ 14.12 Motivation intrinsèque et extrinsèque</h2>
+<h2 id="1412-motivation-intrinseque-et-extrinseque" class="entry-title hc-2">14.12 Motivation intrinsèque et extrinsèque</h2>
 <p>Une même activité peut être motivée simultanément par des facteurs internes et externes.</p>
 <p>La distinction entre les deux formes n'est donc pas toujours absolue.</p>
-<h2 id="1413-les-besoins-psychologiques" class="entry-title hc-3">🧩 14.13 Les besoins psychologiques</h2>
+<h2 id="1413-les-besoins-psychologiques" class="entry-title hc-3">14.13 Les besoins psychologiques</h2>
 <p>Certains modèles de la motivation mettent en avant des besoins psychologiques fondamentaux.</p>
 <p>Ils peuvent notamment concerner l'autonomie, la compétence et les relations sociales.</p>
-<h2 id="1414-le-sentiment-de-competence" class="entry-title hc-4">🛠️ 14.14 Le sentiment de compétence</h2>
+<h2 id="1414-le-sentiment-de-competence" class="entry-title hc-4">14.14 Le sentiment de compétence</h2>
 <p>Le sentiment de compétence correspond à la perception de sa capacité à réussir une tâche ou à produire un résultat.</p>
 <p>Il peut influencer l'effort et la persévérance.</p>
-<h2 id="1415-le-sentiment-dautonomie" class="entry-title hc-5">🕊️ 14.15 Le sentiment d'autonomie</h2>
+<h2 id="1415-le-sentiment-dautonomie" class="entry-title hc-5">14.15 Le sentiment d'autonomie</h2>
 <p>Le sentiment d'autonomie correspond notamment à la perception de pouvoir agir selon ses propres choix.</p>
 <p>Une plus grande autonomie perçue peut influencer l'engagement dans certaines activités.</p>
-<h2 id="1416-la-motivation-sociale" class="entry-title hc-1">🧑‍🤝‍🧑 14.16 La motivation sociale</h2>
+<h2 id="1416-la-motivation-sociale" class="entry-title hc-1">‍‍ 14.16 La motivation sociale</h2>
 <p>Les interactions sociales peuvent constituer une importante source de motivation.</p>
 <p>La recherche d'appartenance, de reconnaissance ou de proximité peut influencer certains comportements.</p>
-<h2 id="1417-lattachement-et-les-objectifs" class="entry-title hc-2">❤️ 14.17 L'attachement et les objectifs</h2>
+<h2 id="1417-lattachement-et-les-objectifs" class="entry-title hc-2">14.17 L'attachement et les objectifs</h2>
 <p>Les relations d'attachement peuvent influencer certains objectifs.</p>
 <p>La recherche de proximité, de sécurité ou de soutien peut notamment orienter les comportements sociaux.</p>
-<h2 id="1418-la-peur-comme-motivation" class="entry-title hc-3">😨 14.18 La peur comme motivation</h2>
+<h2 id="1418-la-peur-comme-motivation" class="entry-title hc-3">14.18 La peur comme motivation</h2>
 <p>La peur peut pousser à éviter une menace ou à rechercher davantage de sécurité.</p>
 <p>Elle peut donc orienter fortement le comportement.</p>
-<h2 id="1419-la-colere-comme-motivation" class="entry-title hc-4">😡 14.19 La colère comme motivation</h2>
+<h2 id="1419-la-colere-comme-motivation" class="entry-title hc-4">14.19 La colère comme motivation</h2>
 <p>La colère peut augmenter la motivation à agir lorsqu'une situation est perçue comme injuste ou comme une limite dépassée.</p>
 <p>Elle peut notamment favoriser les comportements visant à modifier une situation.</p>
-<h2 id="1420-la-tristesse-et-la-motivation" class="entry-title hc-5">😢 14.20 La tristesse et la motivation</h2>
+<h2 id="1420-la-tristesse-et-la-motivation" class="entry-title hc-5">14.20 La tristesse et la motivation</h2>
 <p>La tristesse peut diminuer l'énergie consacrée à certaines activités.</p>
 <p>Elle peut également favoriser la recherche de soutien ou provoquer temporairement un retrait comportemental.</p>
-<h2 id="1421-la-joie-et-la-motivation" class="entry-title hc-1">😄 14.21 La joie et la motivation</h2>
+<h2 id="1421-la-joie-et-la-motivation" class="entry-title hc-1">14.21 La joie et la motivation</h2>
 <p>La joie peut favoriser l'engagement dans certaines activités.</p>
 <p>Les émotions positives peuvent notamment être associées à une plus grande tendance à explorer ou à interagir avec l'environnement.</p>
-<h2 id="1422-la-poursuite-dun-objectif" class="entry-title hc-2">🏁 14.22 La poursuite d'un objectif</h2>
+<h2 id="1422-la-poursuite-dun-objectif" class="entry-title hc-2">14.22 La poursuite d'un objectif</h2>
 <p>Un objectif fournit une direction au comportement.</p>
 <p>Il permet notamment de déterminer quelles actions sont pertinentes pour atteindre un résultat souhaité.</p>
-<h2 id="1423-les-objectifs-a-court-terme" class="entry-title hc-3">📌 14.23 Les objectifs à court terme</h2>
+<h2 id="1423-les-objectifs-a-court-terme" class="entry-title hc-3">14.23 Les objectifs à court terme</h2>
 <p>Les objectifs à court terme sont relativement proches dans le temps.</p>
 <p>Ils peuvent être plus faciles à représenter et fournir des récompenses plus rapidement.</p>
-<h2 id="1424-les-objectifs-a-long-terme" class="entry-title hc-4">🗓️ 14.24 Les objectifs à long terme</h2>
+<h2 id="1424-les-objectifs-a-long-terme" class="entry-title hc-4">14.24 Les objectifs à long terme</h2>
 <p>Les objectifs à long terme nécessitent généralement davantage de planification et de persévérance.</p>
 <p>La récompense étant éloignée, la motivation peut fluctuer au cours du temps.</p>
-<h2 id="1425-la-perseverance" class="entry-title hc-5">⏳ 14.25 La persévérance</h2>
+<h2 id="1425-la-perseverance" class="entry-title hc-5">14.25 La persévérance</h2>
 <p>La persévérance correspond à la tendance à maintenir un comportement malgré les difficultés ou les obstacles.</p>
 <p>Elle dépend notamment de la valeur accordée à l'objectif et des attentes concernant sa réussite.</p>
-<h2 id="1426-les-obstacles-et-la-motivation" class="entry-title hc-1">🚧 14.26 Les obstacles et la motivation</h2>
+<h2 id="1426-les-obstacles-et-la-motivation" class="entry-title hc-1">14.26 Les obstacles et la motivation</h2>
 <p>Les obstacles peuvent diminuer la motivation ou, dans certaines situations, augmenter l'engagement.</p>
 <p>La réaction dépend notamment de la difficulté perçue, du sentiment de contrôle et de la valeur de l'objectif.</p>
-<h2 id="1427-le-sentiment-defficacite-personnelle" class="entry-title hc-2">🧠 14.27 Le sentiment d'efficacité personnelle</h2>
+<h2 id="1427-le-sentiment-defficacite-personnelle" class="entry-title hc-2">14.27 Le sentiment d'efficacité personnelle</h2>
 <p>Le sentiment d'efficacité personnelle correspond à la croyance qu'une personne peut réussir une action donnée.</p>
 <p>Cette perception peut influencer l'effort, la persévérance et les choix comportementaux.</p>
-<h2 id="1428-lechec-et-la-motivation" class="entry-title hc-3">🔄 14.28 L'échec et la motivation</h2>
+<h2 id="1428-lechec-et-la-motivation" class="entry-title hc-3">14.28 L'échec et la motivation</h2>
 <p>Un échec peut modifier les attentes concernant une future réussite.</p>
 <p>Selon son interprétation, il peut entraîner une diminution de l'engagement ou conduire à une adaptation des stratégies utilisées.</p>
-<h2 id="1429-la-reussite-et-la-motivation" class="entry-title hc-4">🏆 14.29 La réussite et la motivation</h2>
+<h2 id="1429-la-reussite-et-la-motivation" class="entry-title hc-4">14.29 La réussite et la motivation</h2>
 <p>Une réussite peut renforcer les attentes positives et augmenter l'engagement dans certaines situations.</p>
 <p>Elle peut également modifier la valeur accordée à l'objectif.</p>
-<h2 id="1430-lengagement" class="entry-title hc-5">🔥 14.30 L'engagement</h2>
+<h2 id="1430-lengagement" class="entry-title hc-5">14.30 L'engagement</h2>
 <p>L'engagement correspond au degré d'implication dans une activité ou dans la poursuite d'un objectif.</p>
 <p>Il peut varier selon l'intérêt, la difficulté, les récompenses et le contexte.</p>
-<h2 id="1431-la-motivation-et-lattention" class="entry-title hc-1">🧠 14.31 La motivation et l'attention</h2>
+<h2 id="1431-la-motivation-et-lattention" class="entry-title hc-1">14.31 La motivation et l'attention</h2>
 <p>La motivation influence ce à quoi l'attention est dirigée.</p>
 <p>Les informations liées à un objectif important peuvent notamment être traitées comme davantage prioritaires.</p>
-<h2 id="1432-la-motivation-et-les-pensees" class="entry-title hc-2">💭 14.32 La motivation et les pensées</h2>
+<h2 id="1432-la-motivation-et-les-pensees" class="entry-title hc-2">14.32 La motivation et les pensées</h2>
 <p>Les objectifs peuvent influencer les pensées et les interprétations.</p>
 <p>Lorsqu'un objectif devient important, les individus peuvent davantage remarquer les informations qui permettent de progresser vers celui-ci.</p>
-<h2 id="1433-la-motivation-et-la-memoire" class="entry-title hc-3">🧠 14.33 La motivation et la mémoire</h2>
+<h2 id="1433-la-motivation-et-la-memoire" class="entry-title hc-3">14.33 La motivation et la mémoire</h2>
 <p>La motivation peut influencer les informations auxquelles une personne prête attention et qu'elle mémorise.</p>
 <p>Les informations pertinentes pour un objectif peuvent bénéficier d'un traitement privilégié dans certaines situations.</p>
-<h2 id="1434-le-conflit-entre-objectifs" class="entry-title hc-4">⚖️ 14.34 Le conflit entre objectifs</h2>
+<h2 id="1434-le-conflit-entre-objectifs" class="entry-title hc-4">14.34 Le conflit entre objectifs</h2>
 <p>Plusieurs objectifs peuvent être poursuivis simultanément.</p>
 <p>Lorsqu'ils sont incompatibles, un conflit motivationnel peut apparaître.</p>
-<h2 id="1435-lambivalence-motivationnelle" class="entry-title hc-5">🔀 14.35 L'ambivalence motivationnelle</h2>
+<h2 id="1435-lambivalence-motivationnelle" class="entry-title hc-5">14.35 L'ambivalence motivationnelle</h2>
 <p>L'ambivalence motivationnelle correspond à la coexistence de tendances opposées concernant une même action.</p>
 <p>Une personne peut simultanément vouloir réaliser une action et vouloir l'éviter.</p>
-<h2 id="1436-la-procrastination" class="entry-title hc-1">🛑 14.36 La procrastination</h2>
+<h2 id="1436-la-procrastination" class="entry-title hc-1">14.36 La procrastination</h2>
 <p>La procrastination correspond au report volontaire d'une action prévue malgré la possibilité que ce report entraîne des conséquences négatives.</p>
 <p>Les émotions, la difficulté perçue et la recherche de récompenses immédiates peuvent participer à ce phénomène.</p>
-<h2 id="1437-la-gratification-differee" class="entry-title hc-2">🍬 14.37 La gratification différée</h2>
+<h2 id="1437-la-gratification-differee" class="entry-title hc-2">14.37 La gratification différée</h2>
 <p>La gratification différée correspond à la capacité à attendre une récompense future plutôt qu'à rechercher immédiatement une récompense plus petite.</p>
 <p>Elle implique notamment la représentation du futur et le contrôle comportemental.</p>
-<h2 id="1438-les-attentes-et-la-motivation" class="entry-title hc-3">🔮 14.38 Les attentes et la motivation</h2>
+<h2 id="1438-les-attentes-et-la-motivation" class="entry-title hc-3">14.38 Les attentes et la motivation</h2>
 <p>Les attentes concernant la réussite ou l'échec peuvent modifier l'engagement.</p>
 <p>Une faible probabilité perçue de réussite peut réduire la motivation, tandis qu'une attente de réussite peut la renforcer.</p>
-<h2 id="1439-les-differences-individuelles" class="entry-title hc-4">🧩 14.39 Les différences individuelles</h2>
+<h2 id="1439-les-differences-individuelles" class="entry-title hc-4">14.39 Les différences individuelles</h2>
 <p>La motivation varie fortement selon les individus.</p>
 <p>Les objectifs personnels, les expériences, les valeurs, les émotions, les capacités cognitives et le contexte peuvent tous influencer la motivation.</p>
-<h2 id="1440-pourquoi-etudier-les-emotions-la-motivation-et-les-objectifs" class="entry-title hc-5">🔬 14.40 Pourquoi étudier les émotions, la motivation et les objectifs ?</h2>
+<h2 id="1440-pourquoi-etudier-les-emotions-la-motivation-et-les-objectifs" class="entry-title hc-5">14.40 Pourquoi étudier les émotions, la motivation et les objectifs ?</h2>
 <p>Les émotions participent à l'orientation du comportement, tandis que les objectifs donnent une direction à l'action.</p>
 <p>Le fonctionnement peut être représenté ainsi :</p>
-<p><strong>❤️ émotion → 🎯 motivation → 🧠 objectif → ⚡ action → 🏆 conséquence → ❤️ nouvelle émotion</strong></p>
+<p>** émotion   motivation   objectif   action   conséquence   nouvelle émotion**</p>
 <p>Cette interaction permet de comprendre pourquoi les comportements humains peuvent changer en fonction des récompenses, des émotions, des attentes et des objectifs.</p>
-<h1 id="a-retenir">📌 À RETENIR</h1>
+<h1 id="a-retenir">À RETENIR</h1>
 <p>La motivation ne correspond pas simplement à « avoir envie ».</p>
 <p>Elle implique plusieurs processus :</p>
-<p><strong>🎯 objectifs → 🧠 attentes → ❤️ émotions → 🏆 récompenses → ⚡ effort → 🔄 apprentissage</strong></p>
+<p>** objectifs   attentes   émotions   récompenses   effort   apprentissage**</p>
 <p>Les émotions peuvent augmenter, diminuer ou réorienter la motivation. Elles ne déterminent cependant pas automatiquement le comportement.</p>
 <p>La motivation dépend également du <strong>contexte, des besoins, des objectifs, des expériences passées, des récompenses attendues, du sentiment de compétence et des différences individuelles</strong>.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-emotions-et-prise-de-decision/"><span class="similar-icon">❤️</span>Émotions et prise de décision</a><a class="similar-item" href="/chapitre/emotions-emotions-attention-et-perception/"><span class="similar-icon">❤️</span>Émotions, attention et perception</a><a class="similar-item" href="/chapitre/emotions-emotions-memoire-et-apprentissage/"><span class="similar-icon">❤️</span>Émotions, mémoire et apprentissage</a></div>
+      <h2>Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-emotions-et-prise-de-decision/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg></span>Émotions et prise de décision</a><a class="similar-item" href="/chapitre/emotions-emotions-attention-et-perception/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg></span>Émotions, attention et perception</a><a class="similar-item" href="/chapitre/emotions-emotions-memoire-et-apprentissage/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg></span>Émotions, mémoire et apprentissage</a></div>
     </div>
     <a class="back-link" href="/categorie/emotions/">← Retour à « Émotions et comportements humains »</a>
   </div>
@@ -316,23 +343,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -350,7 +379,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -530,9 +559,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -541,10 +572,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -651,7 +682,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -691,8 +722,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -723,7 +754,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -778,7 +809,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -802,17 +833,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -854,7 +885,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

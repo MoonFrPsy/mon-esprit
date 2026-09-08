@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#111-presentation-de-lexperience">🍬 11.1 PRÉSENTATION DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#112-le-dilemme-de-la-recompense">⏳ 11.2 LE DILEMME DE LA RÉCOMPENSE</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#113-le-controle-de-soi">🧠 11.3 LE CONTRÔLE DE SOI</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#114-lattention-et-la-distraction">👀 11.4 L'ATTENTION ET LA DISTRACTION</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#115-les-strategies-mentales">🧩 11.5 LES STRATÉGIES MENTALES</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#116-les-differences-entre-les-enfants">👶 11.6 LES DIFFÉRENCES ENTRE LES ENFANTS</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#117-le-lien-avec-le-futur">🔮 11.7 LE LIEN AVEC LE FUTUR</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#118-les-etudes-de-suivi">📈 11.8 LES ÉTUDES DE SUIVI</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#119-linfluence-de-lenvironnement">🏠 11.9 L'INFLUENCE DE L'ENVIRONNEMENT</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li><li><a href="#a-retenir_8">📌 À RETENIR</a></li></ul></li><li><a href="#1110-les-limites-et-les-resultats-plus-recents">⚠️ 11.10 LES LIMITES ET LES RÉSULTATS PLUS RÉCENTS</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li><li><a href="#a-retenir_9">📌 À RETENIR</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#111-presentation-de-lexperience">11.1 PRÉSENTATION DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition">DÉFINITION</a></li><li><a href="#explication">EXPLICATION</a></li><li><a href="#exemple">EXEMPLE</a></li><li><a href="#a-retenir">À RETENIR</a></li></ul></li><li><a href="#112-le-dilemme-de-la-recompense">11.2 LE DILEMME DE LA RÉCOMPENSE</a><ul class="sidebar-sublist"><li><a href="#definition_1">DÉFINITION</a></li><li><a href="#explication_1">EXPLICATION</a></li><li><a href="#exemple_1">EXEMPLE</a></li><li><a href="#a-retenir_1">À RETENIR</a></li></ul></li><li><a href="#113-le-controle-de-soi">11.3 LE CONTRÔLE DE SOI</a><ul class="sidebar-sublist"><li><a href="#definition_2">DÉFINITION</a></li><li><a href="#explication_2">EXPLICATION</a></li><li><a href="#exemple_2">EXEMPLE</a></li><li><a href="#a-retenir_2">À RETENIR</a></li></ul></li><li><a href="#114-lattention-et-la-distraction">11.4 L'ATTENTION ET LA DISTRACTION</a><ul class="sidebar-sublist"><li><a href="#definition_3">DÉFINITION</a></li><li><a href="#explication_3">EXPLICATION</a></li><li><a href="#exemple_3">EXEMPLE</a></li><li><a href="#a-retenir_3">À RETENIR</a></li></ul></li><li><a href="#115-les-strategies-mentales">11.5 LES STRATÉGIES MENTALES</a><ul class="sidebar-sublist"><li><a href="#definition_4">DÉFINITION</a></li><li><a href="#explication_4">EXPLICATION</a></li><li><a href="#exemple_4">EXEMPLE</a></li><li><a href="#a-retenir_4">À RETENIR</a></li></ul></li><li><a href="#116-les-differences-entre-les-enfants">11.6 LES DIFFÉRENCES ENTRE LES ENFANTS</a><ul class="sidebar-sublist"><li><a href="#definition_5">DÉFINITION</a></li><li><a href="#explication_5">EXPLICATION</a></li><li><a href="#exemple_5">EXEMPLE</a></li><li><a href="#a-retenir_5">À RETENIR</a></li></ul></li><li><a href="#117-le-lien-avec-le-futur">11.7 LE LIEN AVEC LE FUTUR</a><ul class="sidebar-sublist"><li><a href="#definition_6">DÉFINITION</a></li><li><a href="#explication_6">EXPLICATION</a></li><li><a href="#exemple_6">EXEMPLE</a></li><li><a href="#a-retenir_6">À RETENIR</a></li></ul></li><li><a href="#118-les-etudes-de-suivi">11.8 LES ÉTUDES DE SUIVI</a><ul class="sidebar-sublist"><li><a href="#definition_7">DÉFINITION</a></li><li><a href="#explication_7">EXPLICATION</a></li><li><a href="#exemple_7">EXEMPLE</a></li><li><a href="#a-retenir_7">À RETENIR</a></li></ul></li><li><a href="#119-linfluence-de-lenvironnement">11.9 L'INFLUENCE DE L'ENVIRONNEMENT</a><ul class="sidebar-sublist"><li><a href="#definition_8">DÉFINITION</a></li><li><a href="#explication_8">EXPLICATION</a></li><li><a href="#exemple_8">EXEMPLE</a></li><li><a href="#a-retenir_8">À RETENIR</a></li></ul></li><li><a href="#1110-les-limites-et-les-resultats-plus-recents">11.10 LES LIMITES ET LES RÉSULTATS PLUS RÉCENTS</a><ul class="sidebar-sublist"><li><a href="#definition_9">DÉFINITION</a></li><li><a href="#explication_9">EXPLICATION</a></li><li><a href="#exemple_9">EXEMPLE</a></li><li><a href="#a-retenir_9">À RETENIR</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: "L'expérience du marshmallow",
         category: 'Expériences célèbres de psychologie',
-        icon: '🧪'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/experiences/">🧪 Expériences célèbres de psychologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/experiences/">Expériences célèbres de psychologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>L'expérience du marshmallow</h1>
     </div>
     <div id="resume-banner"></div>
@@ -104,122 +119,122 @@
 </p>
 </blockquote>
 <hr />
-<h2 id="111-presentation-de-lexperience" class="entry-title hc-1">🍬 11.1 PRÉSENTATION DE L'EXPÉRIENCE</h2>
-<h3 id="definition">🔎 DÉFINITION</h3>
+<h2 id="111-presentation-de-lexperience" class="entry-title hc-1">11.1 PRÉSENTATION DE L'EXPÉRIENCE</h2>
+<h3 id="definition">DÉFINITION</h3>
 <p>L'<strong>expérience du Marshmallow</strong> désigne une série d'expériences réalisées par <strong>Walter Mischel</strong> et ses collaborateurs à partir de la fin des années 1960, portant notamment sur la capacité des enfants à <strong>différer une récompense</strong>.</p>
-<h3 id="explication">🧠 EXPLICATION</h3>
+<h3 id="explication">EXPLICATION</h3>
 <p>Les enfants étaient placés individuellement devant une récompense, souvent une guimauve.</p>
 <p>Le chercheur leur proposait généralement un choix : obtenir immédiatement une petite récompense ou attendre suffisamment longtemps pour obtenir une récompense plus importante.</p>
 <p>L'objectif était d'étudier les stratégies utilisées par les enfants pour résister à une récompense immédiate.</p>
-<h3 id="exemple">💬 EXEMPLE</h3>
+<h3 id="exemple">EXEMPLE</h3>
 <p>Un enfant peut choisir de manger immédiatement une guimauve ou attendre afin d'en obtenir deux plus tard.</p>
-<h3 id="a-retenir">📌 À RETENIR</h3>
+<h3 id="a-retenir">À RETENIR</h3>
 <p>L'expérience étudiait principalement la <strong>capacité à différer une récompense immédiate</strong>.</p>
 <hr />
-<h2 id="112-le-dilemme-de-la-recompense" class="entry-title hc-2">⏳ 11.2 LE DILEMME DE LA RÉCOMPENSE</h2>
-<h3 id="definition_1">🔎 DÉFINITION</h3>
+<h2 id="112-le-dilemme-de-la-recompense" class="entry-title hc-2">11.2 LE DILEMME DE LA RÉCOMPENSE</h2>
+<h3 id="definition_1">DÉFINITION</h3>
 <p>Le délai de gratification correspond à la capacité à attendre avant d'obtenir une récompense jugée désirable.</p>
-<h3 id="explication_1">🧠 EXPLICATION</h3>
+<h3 id="explication_1">EXPLICATION</h3>
 <p>L'enfant se retrouve face à deux possibilités :</p>
 <ul>
 <li>obtenir une récompense plus petite immédiatement ;</li>
 <li>attendre pour obtenir une récompense plus importante.</li>
 </ul>
 <p>La difficulté vient du fait que la récompense immédiate est directement disponible, tandis que la récompense plus importante nécessite de patienter.</p>
-<h3 id="exemple_1">💬 EXEMPLE</h3>
+<h3 id="exemple_1">EXEMPLE</h3>
 <p>Une personne préfère recevoir 5 € maintenant plutôt que 10 € dans une heure.</p>
 <p>Une autre accepte d'attendre pour obtenir la récompense plus importante.</p>
-<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<h3 id="a-retenir_1">À RETENIR</h3>
 <p>Le délai de gratification implique un <strong>arbitrage entre une récompense immédiate et une récompense future</strong>.</p>
 <hr />
-<h2 id="113-le-controle-de-soi" class="entry-title hc-3">🧠 11.3 LE CONTRÔLE DE SOI</h2>
-<h3 id="definition_2">🔎 DÉFINITION</h3>
+<h2 id="113-le-controle-de-soi" class="entry-title hc-3">11.3 LE CONTRÔLE DE SOI</h2>
+<h3 id="definition_2">DÉFINITION</h3>
 <p>Le <strong>contrôle de soi</strong> désigne la capacité à réguler certaines réactions, impulsions ou comportements afin de poursuivre un objectif.</p>
-<h3 id="explication_2">🧠 EXPLICATION</h3>
+<h3 id="explication_2">EXPLICATION</h3>
 <p>Dans l'expérience, attendre implique de ne pas consommer immédiatement la récompense disponible.</p>
 <p>Les chercheurs ont donc étudié les comportements permettant aux enfants de gérer cette attente.</p>
 <p>Certaines stratégies pouvaient notamment consister à détourner leur attention de la récompense.</p>
-<h3 id="exemple_2">💬 EXEMPLE</h3>
+<h3 id="exemple_2">EXEMPLE</h3>
 <p>Un enfant peut regarder ailleurs, jouer avec ses mains ou penser à autre chose plutôt que de fixer continuellement la guimauve.</p>
-<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<h3 id="a-retenir_2">À RETENIR</h3>
 <p>Le contrôle de soi ne consiste pas uniquement à « avoir de la volonté » : <strong>les stratégies utilisées pour gérer une situation peuvent également avoir une importance</strong>.</p>
 <hr />
-<h2 id="114-lattention-et-la-distraction" class="entry-title hc-4">👀 11.4 L'ATTENTION ET LA DISTRACTION</h2>
-<h3 id="definition_3">🔎 DÉFINITION</h3>
+<h2 id="114-lattention-et-la-distraction" class="entry-title hc-4">11.4 L'ATTENTION ET LA DISTRACTION</h2>
+<h3 id="definition_3">DÉFINITION</h3>
 <p>La distraction consiste à détourner volontairement ou involontairement son attention d'un stimulus afin d'en réduire l'attrait immédiat.</p>
-<h3 id="explication_3">🧠 EXPLICATION</h3>
+<h3 id="explication_3">EXPLICATION</h3>
 <p>Les travaux de Mischel ont notamment montré l'importance des stratégies cognitives utilisées pendant l'attente.</p>
 <p>Porter constamment son attention sur la récompense peut rendre l'attente plus difficile.</p>
 <p>À l'inverse, détourner son attention peut contribuer à rendre la situation plus supportable.</p>
-<h3 id="exemple_3">💬 EXEMPLE</h3>
+<h3 id="exemple_3">EXEMPLE</h3>
 <p>Un enfant qui fixe continuellement la guimauve peut avoir davantage de difficulté à attendre qu'un enfant qui détourne son regard et pense à autre chose.</p>
-<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<h3 id="a-retenir_3">À RETENIR</h3>
 <p>La manière dont l'attention est dirigée peut influencer <strong>la difficulté ressentie pendant l'attente</strong>.</p>
 <hr />
-<h2 id="115-les-strategies-mentales" class="entry-title hc-5">🧩 11.5 LES STRATÉGIES MENTALES</h2>
-<h3 id="definition_4">🔎 DÉFINITION</h3>
+<h2 id="115-les-strategies-mentales" class="entry-title hc-5">11.5 LES STRATÉGIES MENTALES</h2>
+<h3 id="definition_4">DÉFINITION</h3>
 <p>Une stratégie mentale est une manière de modifier son attention ou son interprétation d'une situation afin de faciliter la régulation du comportement.</p>
-<h3 id="explication_4">🧠 EXPLICATION</h3>
+<h3 id="explication_4">EXPLICATION</h3>
 <p>Les recherches de Mischel ont montré que les enfants ne réagissaient pas tous de la même manière.</p>
 <p>Certains pouvaient utiliser différentes stratégies pour rendre la récompense moins attirante sur le moment.</p>
 <p>L'attente n'était donc pas uniquement liée à une capacité générale de volonté.</p>
-<h3 id="exemple_4">💬 EXEMPLE</h3>
+<h3 id="exemple_4">EXEMPLE</h3>
 <p>Un enfant peut imaginer que la guimauve est autre chose qu'un aliment réel afin de réduire son envie de la manger immédiatement.</p>
-<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<h3 id="a-retenir_4">À RETENIR</h3>
 <p>Les performances peuvent dépendre <strong>des stratégies utilisées pour gérer la tentation</strong>.</p>
 <hr />
-<h2 id="116-les-differences-entre-les-enfants" class="entry-title hc-1">👶 11.6 LES DIFFÉRENCES ENTRE LES ENFANTS</h2>
-<h3 id="definition_5">🔎 DÉFINITION</h3>
+<h2 id="116-les-differences-entre-les-enfants" class="entry-title hc-1">11.6 LES DIFFÉRENCES ENTRE LES ENFANTS</h2>
+<h3 id="definition_5">DÉFINITION</h3>
 <p>Les différences individuelles correspondent aux variations de comportement observées entre plusieurs personnes confrontées à une même situation.</p>
-<h3 id="explication_5">🧠 EXPLICATION</h3>
+<h3 id="explication_5">EXPLICATION</h3>
 <p>Tous les enfants ne réagissaient pas de la même manière.</p>
 <p>Certains attendaient longtemps tandis que d'autres choisissaient rapidement la récompense disponible.</p>
 <p>Ces différences pouvaient être liées à plusieurs facteurs, notamment les stratégies utilisées, l'environnement et la manière dont la récompense était perçue.</p>
-<h3 id="exemple_5">💬 EXEMPLE</h3>
+<h3 id="exemple_5">EXEMPLE</h3>
 <p>Deux enfants placés dans une situation similaire peuvent prendre des décisions différentes : l'un attend, tandis que l'autre mange immédiatement la récompense.</p>
-<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<h3 id="a-retenir_5">À RETENIR</h3>
 <p>Les résultats montrent une <strong>variabilité importante entre les individus</strong>.</p>
 <hr />
-<h2 id="117-le-lien-avec-le-futur" class="entry-title hc-2">🔮 11.7 LE LIEN AVEC LE FUTUR</h2>
-<h3 id="definition_6">🔎 DÉFINITION</h3>
+<h2 id="117-le-lien-avec-le-futur" class="entry-title hc-2">11.7 LE LIEN AVEC LE FUTUR</h2>
+<h3 id="definition_6">DÉFINITION</h3>
 <p>Le délai de gratification peut être lié à la manière dont une personne accorde de l'importance à une récompense future par rapport à une récompense immédiate.</p>
-<h3 id="explication_6">🧠 EXPLICATION</h3>
+<h3 id="explication_6">EXPLICATION</h3>
 <p>Une personne doit parfois choisir entre un avantage disponible immédiatement et un avantage potentiellement plus important mais différé.</p>
 <p>Cette capacité intervient dans de nombreuses situations quotidiennes.</p>
 <p>Cependant, attendre plus longtemps dans le test du Marshmallow ne permet pas, à lui seul, de prédire précisément la réussite future d'une personne.</p>
-<h3 id="exemple_6">💬 EXEMPLE</h3>
+<h3 id="exemple_6">EXEMPLE</h3>
 <p>Un enfant peut préférer jouer immédiatement plutôt que terminer ses devoirs avant de jouer.</p>
-<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<h3 id="a-retenir_6">À RETENIR</h3>
 <p>La capacité à attendre une récompense est une <strong>compétence comportementale étudiable</strong>, mais elle ne résume pas à elle seule le développement ou la réussite future.</p>
 <hr />
-<h2 id="118-les-etudes-de-suivi" class="entry-title hc-3">📈 11.8 LES ÉTUDES DE SUIVI</h2>
-<h3 id="definition_7">🔎 DÉFINITION</h3>
+<h2 id="118-les-etudes-de-suivi" class="entry-title hc-3">11.8 LES ÉTUDES DE SUIVI</h2>
+<h3 id="definition_7">DÉFINITION</h3>
 <p>Une étude de suivi consiste à observer les participants plusieurs années après une première expérience afin d'étudier d'éventuelles relations entre leurs comportements initiaux et leurs caractéristiques ultérieures.</p>
-<h3 id="explication_7">🧠 EXPLICATION</h3>
+<h3 id="explication_7">EXPLICATION</h3>
 <p>Certaines recherches associées au test du Marshmallow ont rapporté des liens entre la capacité à attendre pendant l'enfance et certains résultats ultérieurs.</p>
 <p>Ces résultats ont contribué à populariser l'idée selon laquelle la capacité à attendre serait fortement prédictive de la réussite future.</p>
 <p>Cependant, des recherches ultérieures ont montré que ces relations étaient <strong>plus complexes</strong> que ce que la version populaire de l'expérience laissait entendre.</p>
-<h3 id="exemple_7">💬 EXEMPLE</h3>
+<h3 id="exemple_7">EXEMPLE</h3>
 <p>Un enfant qui attend longtemps peut présenter certaines caractéristiques différentes plusieurs années plus tard, mais cela ne signifie pas que la durée d'attente permet de prédire à elle seule son avenir.</p>
-<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<h3 id="a-retenir_7">À RETENIR</h3>
 <p>Les recherches de suivi ont trouvé certaines associations, mais <strong>elles ne permettent pas de transformer le test du Marshmallow en prédicteur individuel fiable de la réussite future</strong>.</p>
 <hr />
-<h2 id="119-linfluence-de-lenvironnement" class="entry-title hc-4">🏠 11.9 L'INFLUENCE DE L'ENVIRONNEMENT</h2>
-<h3 id="definition_8">🔎 DÉFINITION</h3>
+<h2 id="119-linfluence-de-lenvironnement" class="entry-title hc-4">11.9 L'INFLUENCE DE L'ENVIRONNEMENT</h2>
+<h3 id="definition_8">DÉFINITION</h3>
 <p>L'environnement correspond aux conditions sociales, familiales et matérielles dans lesquelles une personne évolue.</p>
-<h3 id="explication_8">🧠 EXPLICATION</h3>
+<h3 id="explication_8">EXPLICATION</h3>
 <p>La décision d'attendre peut dépendre de la manière dont une personne perçoit la fiabilité de son environnement.</p>
 <p>Si une récompense promise paraît peu fiable, attendre peut sembler moins rationnel.</p>
 <p>Les recherches plus récentes ont donc souligné l'importance du <strong>contexte</strong>, plutôt que de considérer la performance comme une simple mesure de volonté personnelle.</p>
-<h3 id="exemple_8">💬 EXEMPLE</h3>
+<h3 id="exemple_8">EXEMPLE</h3>
 <p>Un enfant qui a appris que les promesses sont généralement respectées peut avoir davantage de raisons de croire que la récompense future sera réellement disponible.</p>
-<h3 id="a-retenir_8">📌 À RETENIR</h3>
+<h3 id="a-retenir_8">À RETENIR</h3>
 <p>Le comportement face à une récompense dépend aussi de <strong>la confiance dans l'environnement et dans la promesse faite</strong>.</p>
 <hr />
-<h2 id="1110-les-limites-et-les-resultats-plus-recents" class="entry-title hc-5">⚠️ 11.10 LES LIMITES ET LES RÉSULTATS PLUS RÉCENTS</h2>
-<h3 id="definition_9">🔎 DÉFINITION</h3>
+<h2 id="1110-les-limites-et-les-resultats-plus-recents" class="entry-title hc-5">11.10 LES LIMITES ET LES RÉSULTATS PLUS RÉCENTS</h2>
+<h3 id="definition_9">DÉFINITION</h3>
 <p>Une limite scientifique correspond à un élément qui empêche de généraliser trop largement les résultats d'une expérience.</p>
-<h3 id="explication_9">🧠 EXPLICATION</h3>
+<h3 id="explication_9">EXPLICATION</h3>
 <p>L'expérience du Marshmallow est devenue célèbre pour une interprétation très simplifiée :</p>
 <blockquote>
 <p>« Les enfants capables d'attendre réussissent mieux dans la vie. »
@@ -229,12 +244,12 @@
 <p>Des recherches ultérieures ont montré que les relations entre le délai de gratification et les résultats ultérieurs sont influencées par de nombreux facteurs.</p>
 <p>Les caractéristiques familiales, les conditions socio-économiques, l'environnement et les différences entre les participants peuvent notamment contribuer aux résultats observés.</p>
 <p>L'expérience reste donc importante pour étudier le <strong>délai de gratification et les stratégies d'autorégulation</strong>, mais elle ne permet pas de prédire à elle seule l'avenir d'un individu.</p>
-<h3 id="exemple_9">💬 EXEMPLE</h3>
+<h3 id="exemple_9">EXEMPLE</h3>
 <p>Deux enfants peuvent obtenir des résultats différents au test pour des raisons qui ne sont pas simplement liées à leur « niveau de volonté ».</p>
-<h3 id="a-retenir_9">📌 À RETENIR</h3>
+<h3 id="a-retenir_9">À RETENIR</h3>
 <p>Le test du Marshmallow <strong>ne mesure pas une qualité fixe appelée « volonté » et ne permet pas de prédire à lui seul la réussite future</strong>.</p>
 <hr />
-<h1 id="en-pratique">🧩 EN PRATIQUE</h1>
+<h1 id="en-pratique">EN PRATIQUE</h1>
 <p>L'expérience du Marshmallow permet de comprendre plusieurs notions :</p>
 <ul>
 <li><strong>Délai de gratification</strong> : capacité à attendre une récompense future plutôt que de choisir immédiatement une récompense plus petite.</li>
@@ -250,8 +265,29 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Expériences célèbres de psychologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/experiences-l-experience-de-la-poupee-bobo/"><span class="similar-icon">🧪</span>L'expérience de la poupée Bobo</a><a class="similar-item" href="/chapitre/experiences-les-experiences-de-harry-harlow/"><span class="similar-icon">🧪</span>Les expériences de Harry Harlow</a><a class="similar-item" href="/chapitre/experiences-l-effet-stroop/"><span class="similar-icon">🧪</span>L'effet Stroop</a></div>
+      <h2>Autres chapitres de « Expériences célèbres de psychologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/experiences-l-experience-de-la-poupee-bobo/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>L'expérience de la poupée Bobo</a><a class="similar-item" href="/chapitre/experiences-les-experiences-de-harry-harlow/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>Les expériences de Harry Harlow</a><a class="similar-item" href="/chapitre/experiences-l-effet-stroop/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>L'effet Stroop</a></div>
     </div>
     <a class="back-link" href="/categorie/experiences/">← Retour à « Expériences célèbres de psychologie »</a>
   </div>
@@ -337,23 +373,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -371,7 +409,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -551,9 +589,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -562,10 +602,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -672,7 +712,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -712,8 +752,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -744,7 +784,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -799,7 +839,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -823,17 +863,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -875,7 +915,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

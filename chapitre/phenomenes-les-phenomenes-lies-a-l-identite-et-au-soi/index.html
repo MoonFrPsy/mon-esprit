@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#71-le-soi">🪞 7.1 Le soi</a></li><li><a href="#72-le-concept-de-soi">🧠 7.2 Le concept de soi</a></li><li><a href="#73-lidentite-personnelle">🪪 7.3 L'identité personnelle</a></li><li><a href="#74-la-continuite-du-soi">⏳ 7.4 La continuité du soi</a></li><li><a href="#75-lunite-du-soi">🧩 7.5 L'unité du soi</a></li><li><a href="#76-limage-de-soi">🪞 7.6 L'image de soi</a></li><li><a href="#77-lestime-de-soi">❤️ 7.7 L'estime de soi</a></li><li><a href="#78-lautoevaluation">📊 7.8 L'autoévaluation</a></li><li><a href="#79-la-comparaison-sociale">👥 7.9 La comparaison sociale</a></li><li><a href="#710-lidentite-narrative">🧠 7.10 L'identité narrative</a></li><li><a href="#711-le-recit-autobiographique">📖 7.11 Le récit autobiographique</a></li><li><a href="#712-le-soi-autobiographique">🧠 7.12 Le soi autobiographique</a></li><li><a href="#713-le-soi-futur">🔮 7.13 Le soi futur</a></li><li><a href="#714-le-soi-ideal">🧭 7.14 Le soi idéal</a></li><li><a href="#715-le-soi-reel-et-le-soi-percu">⚖️ 7.15 Le soi réel et le soi perçu</a></li><li><a href="#716-la-conscience-de-soi-objective">🪞 7.16 La conscience de soi objective</a></li><li><a href="#717-le-sentiment-detre-observe">👁️ 7.17 Le sentiment d'être observé</a></li><li><a href="#718-leffet-projecteur">🌟 7.18 L'effet projecteur</a></li><li><a href="#719-la-gestion-de-limpression">🎭 7.19 La gestion de l'impression</a></li><li><a href="#720-la-presentation-de-soi">🧍 7.20 La présentation de soi</a></li><li><a href="#721-le-soi-public-et-le-soi-prive">🎭 7.21 Le soi public et le soi privé</a></li><li><a href="#722-la-dissonance-du-soi">🧩 7.22 La dissonance du soi</a></li><li><a href="#723-la-flexibilite-identitaire">🔄 7.23 La flexibilité identitaire</a></li><li><a href="#724-lidentite-sociale">🧑‍🤝‍🧑 7.24 L'identité sociale</a></li><li><a href="#725-lidentification-au-groupe">👥 7.25 L'identification au groupe</a></li><li><a href="#726-le-soi-relationnel">🪞 7.26 Le soi relationnel</a></li><li><a href="#727-le-sentiment-dagentivite">🧠 7.27 Le sentiment d'agentivité</a></li><li><a href="#728-le-sentiment-de-propriete-corporelle">🧍 7.28 Le sentiment de propriété corporelle</a></li><li><a href="#729-lillusion-de-la-main-en-caoutchouc">🖐️ 7.29 L'illusion de la main en caoutchouc</a></li><li><a href="#730-lexperience-hors-du-corps">🪞 7.30 L'expérience hors du corps</a></li><li><a href="#731-lautoscopie">🌫️ 7.31 L'autoscopie</a></li><li><a href="#732-la-depersonnalisation">🧠 7.32 La dépersonnalisation</a></li><li><a href="#733-la-derealisation">🌍 7.33 La déréalisation</a></li><li><a href="#734-la-fragmentation-du-sentiment-de-soi">🧩 7.34 La fragmentation du sentiment de soi</a></li><li><a href="#735-le-changement-du-soi-au-cours-de-la-vie">🔄 7.35 Le changement du soi au cours de la vie</a></li><li><a href="#736-la-coherence-du-soi">🧠 7.36 La cohérence du soi</a></li><li><a href="#737-la-stabilite-du-soi">🪞 7.37 La stabilité du soi</a></li><li><a href="#738-le-role-social">🎭 7.38 Le rôle social</a></li><li><a href="#739-la-connaissance-de-soi">🧠 7.39 La connaissance de soi</a></li><li><a href="#740-pourquoi-etudier-les-phenomenes-lies-au-soi">🔬 7.40 Pourquoi étudier les phénomènes liés au soi ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#71-le-soi">7.1 Le soi</a></li><li><a href="#72-le-concept-de-soi">7.2 Le concept de soi</a></li><li><a href="#73-lidentite-personnelle">7.3 L'identité personnelle</a></li><li><a href="#74-la-continuite-du-soi">7.4 La continuité du soi</a></li><li><a href="#75-lunite-du-soi">7.5 L'unité du soi</a></li><li><a href="#76-limage-de-soi">7.6 L'image de soi</a></li><li><a href="#77-lestime-de-soi">7.7 L'estime de soi</a></li><li><a href="#78-lautoevaluation">7.8 L'autoévaluation</a></li><li><a href="#79-la-comparaison-sociale">7.9 La comparaison sociale</a></li><li><a href="#710-lidentite-narrative">7.10 L'identité narrative</a></li><li><a href="#711-le-recit-autobiographique">7.11 Le récit autobiographique</a></li><li><a href="#712-le-soi-autobiographique">7.12 Le soi autobiographique</a></li><li><a href="#713-le-soi-futur">7.13 Le soi futur</a></li><li><a href="#714-le-soi-ideal">7.14 Le soi idéal</a></li><li><a href="#715-le-soi-reel-et-le-soi-percu">7.15 Le soi réel et le soi perçu</a></li><li><a href="#716-la-conscience-de-soi-objective">7.16 La conscience de soi objective</a></li><li><a href="#717-le-sentiment-detre-observe">7.17 Le sentiment d'être observé</a></li><li><a href="#718-leffet-projecteur">7.18 L'effet projecteur</a></li><li><a href="#719-la-gestion-de-limpression">7.19 La gestion de l'impression</a></li><li><a href="#720-la-presentation-de-soi">7.20 La présentation de soi</a></li><li><a href="#721-le-soi-public-et-le-soi-prive">7.21 Le soi public et le soi privé</a></li><li><a href="#722-la-dissonance-du-soi">7.22 La dissonance du soi</a></li><li><a href="#723-la-flexibilite-identitaire">7.23 La flexibilité identitaire</a></li><li><a href="#724-lidentite-sociale">‍‍ 7.24 L'identité sociale</a></li><li><a href="#725-lidentification-au-groupe">7.25 L'identification au groupe</a></li><li><a href="#726-le-soi-relationnel">7.26 Le soi relationnel</a></li><li><a href="#727-le-sentiment-dagentivite">7.27 Le sentiment d'agentivité</a></li><li><a href="#728-le-sentiment-de-propriete-corporelle">7.28 Le sentiment de propriété corporelle</a></li><li><a href="#729-lillusion-de-la-main-en-caoutchouc">7.29 L'illusion de la main en caoutchouc</a></li><li><a href="#730-lexperience-hors-du-corps">7.30 L'expérience hors du corps</a></li><li><a href="#731-lautoscopie">7.31 L'autoscopie</a></li><li><a href="#732-la-depersonnalisation">7.32 La dépersonnalisation</a></li><li><a href="#733-la-derealisation">7.33 La déréalisation</a></li><li><a href="#734-la-fragmentation-du-sentiment-de-soi">7.34 La fragmentation du sentiment de soi</a></li><li><a href="#735-le-changement-du-soi-au-cours-de-la-vie">7.35 Le changement du soi au cours de la vie</a></li><li><a href="#736-la-coherence-du-soi">7.36 La cohérence du soi</a></li><li><a href="#737-la-stabilite-du-soi">7.37 La stabilité du soi</a></li><li><a href="#738-le-role-social">7.38 Le rôle social</a></li><li><a href="#739-la-connaissance-de-soi">7.39 La connaissance de soi</a></li><li><a href="#740-pourquoi-etudier-les-phenomenes-lies-au-soi">7.40 Pourquoi étudier les phénomènes liés au soi ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: "Les phénomènes liés à l'identité et au soi",
         category: 'Phénomènes psychologiques',
-        icon: '🔮'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/phenomenes/">🔮 Phénomènes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/phenomenes/">Phénomènes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les phénomènes liés à l'identité et au soi</h1>
     </div>
     <div id="resume-banner"></div>
@@ -105,7 +120,7 @@
 <p>Les phénomènes liés au soi peuvent concerner l'image corporelle, l'identité personnelle, les souvenirs autobiographiques, la perception de ses propres pensées et la manière dont une personne se représente elle-même.
 </p>
 </blockquote>
-<h2 id="71-le-soi" class="entry-title hc-1">🪞 7.1 Le soi</h2>
+<h2 id="71-le-soi" class="entry-title hc-1">7.1 Le soi</h2>
 <p>Le soi désigne la représentation mentale qu'une personne possède d'elle-même.</p>
 <p>Il peut comprendre :</p>
 <ul>
@@ -119,7 +134,7 @@
 <li>l'apparence physique</li>
 </ul>
 <p>Le soi évolue au cours de la vie.</p>
-<h2 id="72-le-concept-de-soi" class="entry-title hc-2">🧠 7.2 Le concept de soi</h2>
+<h2 id="72-le-concept-de-soi" class="entry-title hc-2">7.2 Le concept de soi</h2>
 <p>Le concept de soi correspond à l'ensemble des connaissances et représentations qu'une personne possède à propos d'elle-même.</p>
 <p>Il peut inclure des éléments comme :</p>
 <ul>
@@ -129,7 +144,7 @@
 <li>« cette activité fait partie de mon identité »</li>
 </ul>
 <p>Le concept de soi peut changer selon les expériences et les contextes.</p>
-<h2 id="73-lidentite-personnelle" class="entry-title hc-3">🪪 7.3 L'identité personnelle</h2>
+<h2 id="73-lidentite-personnelle" class="entry-title hc-3">7.3 L'identité personnelle</h2>
 <p>L'identité personnelle correspond au sentiment d'être un individu particulier et relativement distinct des autres.</p>
 <p>Elle repose notamment sur :</p>
 <ul>
@@ -141,14 +156,14 @@
 <li>les projets</li>
 <li>les caractéristiques personnelles</li>
 </ul>
-<h2 id="74-la-continuite-du-soi" class="entry-title hc-4">⏳ 7.4 La continuité du soi</h2>
+<h2 id="74-la-continuite-du-soi" class="entry-title hc-4">7.4 La continuité du soi</h2>
 <p>La continuité du soi correspond au sentiment de rester la même personne malgré les changements qui surviennent au cours de la vie.</p>
 <p>Une personne peut avoir changé physiquement, émotionnellement ou socialement tout en conservant le sentiment d'être elle-même.</p>
 <p>Les souvenirs autobiographiques jouent notamment un rôle important dans cette continuité.</p>
-<h2 id="75-lunite-du-soi" class="entry-title hc-5">🧩 7.5 L'unité du soi</h2>
+<h2 id="75-lunite-du-soi" class="entry-title hc-5">7.5 L'unité du soi</h2>
 <p>L'unité du soi correspond au sentiment que les différentes expériences, pensées, émotions et actions appartiennent à un même individu.</p>
 <p>Elle contribue à donner une impression de cohérence psychologique.</p>
-<h2 id="76-limage-de-soi" class="entry-title hc-1">🪞 7.6 L'image de soi</h2>
+<h2 id="76-limage-de-soi" class="entry-title hc-1">7.6 L'image de soi</h2>
 <p>L'image de soi correspond à la représentation qu'une personne possède d'elle-même.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -159,7 +174,7 @@
 <li>la valeur personnelle</li>
 </ul>
 <p>Elle peut être différente de la manière dont les autres perçoivent cette même personne.</p>
-<h2 id="77-lestime-de-soi" class="entry-title hc-2">❤️ 7.7 L'estime de soi</h2>
+<h2 id="77-lestime-de-soi" class="entry-title hc-2">7.7 L'estime de soi</h2>
 <p>L'estime de soi correspond à l'évaluation générale de sa propre valeur.</p>
 <p>Elle peut varier selon :</p>
 <ul>
@@ -171,7 +186,7 @@
 <li>les expériences personnelles</li>
 </ul>
 <p>L'estime de soi n'est pas nécessairement stable.</p>
-<h2 id="78-lautoevaluation" class="entry-title hc-3">📊 7.8 L'autoévaluation</h2>
+<h2 id="78-lautoevaluation" class="entry-title hc-3">7.8 L'autoévaluation</h2>
 <p>L'autoévaluation consiste à porter un jugement sur ses propres caractéristiques ou performances.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -182,7 +197,7 @@
 <li>les résultats</li>
 </ul>
 <p>Cette évaluation peut être influencée par les normes sociales et les comparaisons avec les autres.</p>
-<h2 id="79-la-comparaison-sociale" class="entry-title hc-4">👥 7.9 La comparaison sociale</h2>
+<h2 id="79-la-comparaison-sociale" class="entry-title hc-4">7.9 La comparaison sociale</h2>
 <p>La comparaison sociale correspond au fait d'évaluer certaines caractéristiques personnelles en les comparant à celles d'autres personnes.</p>
 <p>Elle peut être :</p>
 <ul>
@@ -191,11 +206,11 @@
 <li>latérale, avec une personne considérée comme similaire</li>
 </ul>
 <p>Elle peut influencer l'image de soi.</p>
-<h2 id="710-lidentite-narrative" class="entry-title hc-5">🧠 7.10 L'identité narrative</h2>
+<h2 id="710-lidentite-narrative" class="entry-title hc-5">7.10 L'identité narrative</h2>
 <p>L'identité narrative correspond à la manière dont une personne organise son histoire personnelle sous la forme d'un récit.</p>
 <p>Les événements passés sont sélectionnés, interprétés et reliés entre eux pour créer une impression de continuité.</p>
 <p>Deux personnes ayant vécu des événements similaires peuvent donc construire des récits personnels très différents.</p>
-<h2 id="711-le-recit-autobiographique" class="entry-title hc-1">📖 7.11 Le récit autobiographique</h2>
+<h2 id="711-le-recit-autobiographique" class="entry-title hc-1">7.11 Le récit autobiographique</h2>
 <p>Le récit autobiographique correspond à la manière dont une personne raconte les événements de sa propre vie.</p>
 <p>Ce récit n'est pas une reproduction parfaite du passé.</p>
 <p>Il est influencé par :</p>
@@ -206,7 +221,7 @@
 <li>les événements ultérieurs</li>
 <li>le contexte dans lequel le récit est produit</li>
 </ul>
-<h2 id="712-le-soi-autobiographique" class="entry-title hc-2">🧠 7.12 Le soi autobiographique</h2>
+<h2 id="712-le-soi-autobiographique" class="entry-title hc-2">7.12 Le soi autobiographique</h2>
 <p>Le soi autobiographique correspond à la représentation de soi construite à partir des souvenirs personnels et de l'histoire vécue.</p>
 <p>Il permet notamment de relier :</p>
 <ul>
@@ -215,7 +230,7 @@
 <li>les projets futurs</li>
 </ul>
 <p>Il contribue ainsi au sentiment de continuité personnelle.</p>
-<h2 id="713-le-soi-futur" class="entry-title hc-3">🔮 7.13 Le soi futur</h2>
+<h2 id="713-le-soi-futur" class="entry-title hc-3">7.13 Le soi futur</h2>
 <p>Le soi futur correspond à la représentation mentale de la personne que l'on pourrait devenir.</p>
 <p>Il peut inclure :</p>
 <ul>
@@ -226,7 +241,7 @@
 <li>les différentes possibilités imaginées</li>
 </ul>
 <p>Ces représentations peuvent influencer les décisions présentes.</p>
-<h2 id="714-le-soi-ideal" class="entry-title hc-4">🧭 7.14 Le soi idéal</h2>
+<h2 id="714-le-soi-ideal" class="entry-title hc-4">7.14 Le soi idéal</h2>
 <p>Le soi idéal correspond à la représentation de la personne que l'on souhaiterait être.</p>
 <p>Il peut concerner :</p>
 <ul>
@@ -237,11 +252,11 @@
 <li>la réussite</li>
 </ul>
 <p>La différence entre le soi actuel et le soi idéal peut influencer les émotions et la motivation.</p>
-<h2 id="715-le-soi-reel-et-le-soi-percu" class="entry-title hc-5">⚖️ 7.15 Le soi réel et le soi perçu</h2>
+<h2 id="715-le-soi-reel-et-le-soi-percu" class="entry-title hc-5">7.15 Le soi réel et le soi perçu</h2>
 <p>Le soi réel correspond aux caractéristiques effectivement présentes, tandis que le soi perçu correspond à la manière dont une personne pense être.</p>
 <p>Ces deux représentations peuvent ne pas parfaitement correspondre.</p>
 <p>Une personne peut par exemple sous-estimer ou surestimer certaines de ses capacités.</p>
-<h2 id="716-la-conscience-de-soi-objective" class="entry-title hc-1">🪞 7.16 La conscience de soi objective</h2>
+<h2 id="716-la-conscience-de-soi-objective" class="entry-title hc-1">7.16 La conscience de soi objective</h2>
 <p>La conscience de soi objective correspond à une focalisation particulière de l'attention sur soi-même.</p>
 <p>Elle peut être déclenchée par :</p>
 <ul>
@@ -252,13 +267,13 @@
 <li>le sentiment d'être observé</li>
 </ul>
 <p>Cette focalisation peut augmenter la prise de conscience de ses propres comportements.</p>
-<h2 id="717-le-sentiment-detre-observe" class="entry-title hc-2">👁️ 7.17 Le sentiment d'être observé</h2>
+<h2 id="717-le-sentiment-detre-observe" class="entry-title hc-2">7.17 Le sentiment d'être observé</h2>
 <p>Le sentiment d'être observé correspond à l'impression qu'une autre personne porte une attention particulière à soi.</p>
 <p>Dans certaines situations sociales, cette impression peut être beaucoup plus forte que l'attention réellement portée par les autres.</p>
-<h2 id="718-leffet-projecteur" class="entry-title hc-3">🌟 7.18 L'effet projecteur</h2>
+<h2 id="718-leffet-projecteur" class="entry-title hc-3">7.18 L'effet projecteur</h2>
 <p>L'effet projecteur correspond à la tendance à surestimer l'importance que les autres accordent à son apparence, ses erreurs ou ses comportements.</p>
 <p>Une petite erreur peut ainsi sembler extrêmement visible pour soi alors qu'elle est peu remarquée par les autres.</p>
-<h2 id="719-la-gestion-de-limpression" class="entry-title hc-4">🎭 7.19 La gestion de l'impression</h2>
+<h2 id="719-la-gestion-de-limpression" class="entry-title hc-4">7.19 La gestion de l'impression</h2>
 <p>La gestion de l'impression correspond aux comportements visant à influencer la manière dont une personne est perçue par les autres.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -269,15 +284,15 @@
 <li>la présentation de soi</li>
 </ul>
 <p>Elle est particulièrement visible dans certaines situations sociales.</p>
-<h2 id="720-la-presentation-de-soi" class="entry-title hc-5">🧍 7.20 La présentation de soi</h2>
+<h2 id="720-la-presentation-de-soi" class="entry-title hc-5">7.20 La présentation de soi</h2>
 <p>La présentation de soi désigne la manière dont une personne présente volontairement certains aspects d'elle-même dans une situation sociale.</p>
 <p>Elle peut varier selon le contexte.</p>
 <p>Une personne peut par exemple adopter une présentation différente dans un contexte professionnel, familial ou amical.</p>
-<h2 id="721-le-soi-public-et-le-soi-prive" class="entry-title hc-1">🎭 7.21 Le soi public et le soi privé</h2>
+<h2 id="721-le-soi-public-et-le-soi-prive" class="entry-title hc-1">7.21 Le soi public et le soi privé</h2>
 <p>Le soi public correspond aux aspects de soi présentés dans les interactions sociales.</p>
 <p>Le soi privé concerne davantage les pensées, émotions et caractéristiques qui restent principalement internes.</p>
 <p>La différence entre les deux est normale et peut varier selon les situations.</p>
-<h2 id="722-la-dissonance-du-soi" class="entry-title hc-2">🧩 7.22 La dissonance du soi</h2>
+<h2 id="722-la-dissonance-du-soi" class="entry-title hc-2">7.22 La dissonance du soi</h2>
 <p>Une dissonance du soi peut apparaître lorsque différentes représentations de soi sont difficiles à concilier.</p>
 <p>Par exemple :</p>
 <ul>
@@ -285,7 +300,7 @@
 <li>mais « j'ai besoin de beaucoup de soutien »</li>
 </ul>
 <p>Ces contradictions peuvent créer une tension psychologique.</p>
-<h2 id="723-la-flexibilite-identitaire" class="entry-title hc-3">🔄 7.23 La flexibilité identitaire</h2>
+<h2 id="723-la-flexibilite-identitaire" class="entry-title hc-3">7.23 La flexibilité identitaire</h2>
 <p>La flexibilité identitaire correspond à la capacité à adapter certains aspects de sa représentation de soi aux différentes situations sans nécessairement perdre le sentiment de continuité personnelle.</p>
 <p>Une même personne peut avoir plusieurs rôles :</p>
 <ul>
@@ -297,7 +312,7 @@
 <li>créateur</li>
 </ul>
 <p>Ces rôles peuvent coexister.</p>
-<h2 id="724-lidentite-sociale" class="entry-title hc-4">🧑‍🤝‍🧑 7.24 L'identité sociale</h2>
+<h2 id="724-lidentite-sociale" class="entry-title hc-4">‍‍ 7.24 L'identité sociale</h2>
 <p>L'identité sociale correspond aux aspects de l'identité liés à l'appartenance à différents groupes sociaux.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -309,10 +324,10 @@
 <li>les groupes culturels</li>
 </ul>
 <p>Elle participe à la manière dont une personne se définit.</p>
-<h2 id="725-lidentification-au-groupe" class="entry-title hc-5">👥 7.25 L'identification au groupe</h2>
+<h2 id="725-lidentification-au-groupe" class="entry-title hc-5">7.25 L'identification au groupe</h2>
 <p>L'identification au groupe correspond au degré auquel une personne considère l'appartenance à un groupe comme importante pour son identité.</p>
 <p>Plus l'identification est forte, plus les réussites ou difficultés du groupe peuvent avoir une influence sur le sentiment de soi.</p>
-<h2 id="726-le-soi-relationnel" class="entry-title hc-1">🪞 7.26 Le soi relationnel</h2>
+<h2 id="726-le-soi-relationnel" class="entry-title hc-1">7.26 Le soi relationnel</h2>
 <p>Le soi relationnel correspond aux aspects de l'identité qui se construisent dans les relations avec les autres.</p>
 <p>Certaines caractéristiques personnelles peuvent notamment être définies à travers les relations :</p>
 <ul>
@@ -323,27 +338,27 @@
 <li>parent</li>
 </ul>
 <p>L'identité possède donc également une dimension relationnelle.</p>
-<h2 id="727-le-sentiment-dagentivite" class="entry-title hc-2">🧠 7.27 Le sentiment d'agentivité</h2>
+<h2 id="727-le-sentiment-dagentivite" class="entry-title hc-2">7.27 Le sentiment d'agentivité</h2>
 <p>Le sentiment d'agentivité correspond à l'impression d'être à l'origine de ses propres actions.</p>
 <p>Par exemple, lorsque l'on décide volontairement de lever la main, on ressent généralement que l'action provient de soi.</p>
 <p>Ce sentiment peut être modifié dans certaines expériences neurologiques ou psychologiques.</p>
-<h2 id="728-le-sentiment-de-propriete-corporelle" class="entry-title hc-3">🧍 7.28 Le sentiment de propriété corporelle</h2>
+<h2 id="728-le-sentiment-de-propriete-corporelle" class="entry-title hc-3">7.28 Le sentiment de propriété corporelle</h2>
 <p>Le sentiment de propriété corporelle correspond à l'impression que son corps ou certaines parties de celui-ci appartiennent à soi.</p>
 <p>Il participe à l'expérience corporelle quotidienne.</p>
 <p>Certaines expériences expérimentales peuvent temporairement modifier ce sentiment.</p>
-<h2 id="729-lillusion-de-la-main-en-caoutchouc" class="entry-title hc-4">🖐️ 7.29 L'illusion de la main en caoutchouc</h2>
+<h2 id="729-lillusion-de-la-main-en-caoutchouc" class="entry-title hc-4">7.29 L'illusion de la main en caoutchouc</h2>
 <p>L'illusion de la main en caoutchouc est un phénomène expérimental dans lequel une personne peut temporairement ressentir qu'une fausse main fait partie de son propre corps.</p>
 <p>Elle repose notamment sur la synchronisation entre des informations visuelles et tactiles.</p>
 <p>Cette illusion montre que le cerveau construit activement la représentation du corps.</p>
-<h2 id="730-lexperience-hors-du-corps" class="entry-title hc-5">🪞 7.30 L'expérience hors du corps</h2>
+<h2 id="730-lexperience-hors-du-corps" class="entry-title hc-5">7.30 L'expérience hors du corps</h2>
 <p>Une expérience hors du corps correspond à une impression de percevoir son propre corps depuis une position extérieure à celui-ci.</p>
 <p>Elle peut apparaître dans différents contextes, notamment certaines situations neurologiques, physiologiques ou psychologiques.</p>
 <p>Elle ne signifie pas nécessairement qu'une personne croit réellement avoir quitté son corps.</p>
-<h2 id="731-lautoscopie" class="entry-title hc-1">🌫️ 7.31 L'autoscopie</h2>
+<h2 id="731-lautoscopie" class="entry-title hc-1">7.31 L'autoscopie</h2>
 <p>L'autoscopie correspond à une expérience dans laquelle une personne a l'impression de voir son propre corps depuis une perspective extérieure.</p>
 <p>Elle appartient aux phénomènes de représentation corporelle et perceptive.</p>
 <p>Elle peut avoir différentes origines et ne constitue pas en elle-même un diagnostic.</p>
-<h2 id="732-la-depersonnalisation" class="entry-title hc-2">🧠 7.32 La dépersonnalisation</h2>
+<h2 id="732-la-depersonnalisation" class="entry-title hc-2">7.32 La dépersonnalisation</h2>
 <p>La dépersonnalisation correspond à une modification du sentiment d'être soi-même.</p>
 <p>Elle peut produire une impression de :</p>
 <ul>
@@ -353,7 +368,7 @@
 <li>diminution de l'intensité émotionnelle</li>
 </ul>
 <p>La personne conserve généralement une certaine capacité à reconnaître le caractère inhabituel de cette expérience.</p>
-<h2 id="733-la-derealisation" class="entry-title hc-3">🌍 7.33 La déréalisation</h2>
+<h2 id="733-la-derealisation" class="entry-title hc-3">7.33 La déréalisation</h2>
 <p>La déréalisation correspond à une modification de l'expérience du monde extérieur.</p>
 <p>L'environnement peut sembler :</p>
 <ul>
@@ -364,11 +379,11 @@
 <li>inhabituel</li>
 </ul>
 <p>Elle concerne principalement l'expérience de la réalité extérieure plutôt que l'identité elle-même.</p>
-<h2 id="734-la-fragmentation-du-sentiment-de-soi" class="entry-title hc-4">🧩 7.34 La fragmentation du sentiment de soi</h2>
+<h2 id="734-la-fragmentation-du-sentiment-de-soi" class="entry-title hc-4">7.34 La fragmentation du sentiment de soi</h2>
 <p>Le sentiment de soi peut parfois sembler composé d'aspects différents ou difficiles à intégrer.</p>
 <p>Une personne peut par exemple avoir l'impression que certains aspects de sa personnalité sont très différents selon les situations.</p>
 <p>Cela ne signifie pas automatiquement la présence d'un trouble dissociatif.</p>
-<h2 id="735-le-changement-du-soi-au-cours-de-la-vie" class="entry-title hc-5">🔄 7.35 Le changement du soi au cours de la vie</h2>
+<h2 id="735-le-changement-du-soi-au-cours-de-la-vie" class="entry-title hc-5">7.35 Le changement du soi au cours de la vie</h2>
 <p>L'identité évolue naturellement avec les expériences.</p>
 <p>Les changements peuvent concerner :</p>
 <ul>
@@ -381,17 +396,17 @@
 <li>les représentations personnelles</li>
 </ul>
 <p>Changer certains aspects de soi ne signifie donc pas nécessairement perdre son identité.</p>
-<h2 id="736-la-coherence-du-soi" class="entry-title hc-1">🧠 7.36 La cohérence du soi</h2>
+<h2 id="736-la-coherence-du-soi" class="entry-title hc-1">7.36 La cohérence du soi</h2>
 <p>La cohérence du soi correspond au sentiment que les différents aspects de sa personnalité et de son histoire peuvent être intégrés dans une représentation relativement organisée.</p>
 <p>Cette cohérence n'est pas parfaite et peut évoluer.</p>
-<h2 id="737-la-stabilite-du-soi" class="entry-title hc-2">🪞 7.37 La stabilité du soi</h2>
+<h2 id="737-la-stabilite-du-soi" class="entry-title hc-2">7.37 La stabilité du soi</h2>
 <p>La stabilité du soi correspond au degré auquel une personne conserve certaines caractéristiques personnelles à travers différentes situations et périodes.</p>
 <p>Certaines caractéristiques sont relativement stables, tandis que d'autres sont davantage influencées par le contexte.</p>
-<h2 id="738-le-role-social" class="entry-title hc-3">🎭 7.38 Le rôle social</h2>
+<h2 id="738-le-role-social" class="entry-title hc-3">7.38 Le rôle social</h2>
 <p>Un rôle social correspond à l'ensemble des comportements et attentes associés à une position ou une relation donnée.</p>
 <p>Une même personne peut adopter différents rôles selon le contexte.</p>
 <p>Le rôle social n'est donc qu'un aspect de l'identité globale.</p>
-<h2 id="739-la-connaissance-de-soi" class="entry-title hc-4">🧠 7.39 La connaissance de soi</h2>
+<h2 id="739-la-connaissance-de-soi" class="entry-title hc-4">7.39 La connaissance de soi</h2>
 <p>La connaissance de soi correspond aux informations qu'une personne possède sur ses propres caractéristiques psychologiques.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -403,7 +418,7 @@
 <li>les habitudes</li>
 </ul>
 <p>Elle peut être précise sur certains aspects et moins précise sur d'autres.</p>
-<h2 id="740-pourquoi-etudier-les-phenomenes-lies-au-soi" class="entry-title hc-5">🔬 7.40 Pourquoi étudier les phénomènes liés au soi ?</h2>
+<h2 id="740-pourquoi-etudier-les-phenomenes-lies-au-soi" class="entry-title hc-5">7.40 Pourquoi étudier les phénomènes liés au soi ?</h2>
 <p>L'étude du soi permet de mieux comprendre :</p>
 <ul>
 <li>comment se construit l'identité</li>
@@ -415,20 +430,41 @@
 </ul>
 <p>Le soi constitue ainsi un domaine central de la psychologie, situé à la rencontre de la cognition, des émotions, des relations sociales et de la conscience.</p>
 <hr />
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🪞 <strong>Le soi est une construction complexe.</strong> Il comprend notamment les souvenirs, les émotions, les caractéristiques personnelles, le corps et les relations.</p>
-<p>🧠 <strong>L'identité évolue au cours de la vie.</strong> Elle peut changer sans que le sentiment général de continuité personnelle disparaisse.</p>
-<p>📖 <strong>Les souvenirs participent à l'identité.</strong> Ils permettent notamment de relier le passé, le présent et les projets futurs.</p>
-<p>👥 <strong>Les autres participent à la construction du soi.</strong> Les relations et les groupes d'appartenance influencent la manière dont une personne se définit.</p>
-<p>🧍 <strong>Le corps joue également un rôle important.</strong> Le sentiment que son corps appartient à soi constitue une composante fondamentale de l'expérience personnelle.</p>
-<p>🎭 <strong>Une personne peut avoir plusieurs rôles sociaux</strong> sans que cela signifie qu'elle possède plusieurs identités distinctes.</p>
-<p>🌫️ <strong>Certaines expériences peuvent modifier temporairement le sentiment de soi</strong>, comme la dépersonnalisation, les expériences hors du corps ou certaines illusions corporelles.</p>
-<p>🔬 <strong>L'étude du soi permet de comprendre comment une personne construit une représentation relativement cohérente d'elle-même malgré les changements permanents de son expérience.</strong></p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p><strong>Le soi est une construction complexe.</strong> Il comprend notamment les souvenirs, les émotions, les caractéristiques personnelles, le corps et les relations.</p>
+<p><strong>L'identité évolue au cours de la vie.</strong> Elle peut changer sans que le sentiment général de continuité personnelle disparaisse.</p>
+<p><strong>Les souvenirs participent à l'identité.</strong> Ils permettent notamment de relier le passé, le présent et les projets futurs.</p>
+<p><strong>Les autres participent à la construction du soi.</strong> Les relations et les groupes d'appartenance influencent la manière dont une personne se définit.</p>
+<p><strong>Le corps joue également un rôle important.</strong> Le sentiment que son corps appartient à soi constitue une composante fondamentale de l'expérience personnelle.</p>
+<p><strong>Une personne peut avoir plusieurs rôles sociaux</strong> sans que cela signifie qu'elle possède plusieurs identités distinctes.</p>
+<p><strong>Certaines expériences peuvent modifier temporairement le sentiment de soi</strong>, comme la dépersonnalisation, les expériences hors du corps ou certaines illusions corporelles.</p>
+<p><strong>L'étude du soi permet de comprendre comment une personne construit une représentation relativement cohérente d'elle-même malgré les changements permanents de son expérience.</strong></p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Phénomènes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-sociaux/"><span class="similar-icon">🔮</span>Les phénomènes sociaux</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-relationnels/"><span class="similar-icon">🔮</span>Les phénomènes relationnels</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-de-decision-et-de-jugement/"><span class="similar-icon">🔮</span>Les phénomènes de décision et de jugement</a></div>
+      <h2>Autres chapitres de « Phénomènes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-sociaux/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes sociaux</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-relationnels/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes relationnels</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-de-decision-et-de-jugement/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes de décision et de jugement</a></div>
     </div>
     <a class="back-link" href="/categorie/phenomenes/">← Retour à « Phénomènes psychologiques »</a>
   </div>
@@ -514,23 +550,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -548,7 +586,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -728,9 +766,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -739,10 +779,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -849,7 +889,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -889,8 +929,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -921,7 +961,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -976,7 +1016,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1000,17 +1040,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1052,7 +1092,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

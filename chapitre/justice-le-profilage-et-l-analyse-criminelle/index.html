@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#81-le-profilage-criminel">🧠 8.1 LE PROFILAGE CRIMINEL</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#82-lanalyse-comportementale">🧠 8.2 L'ANALYSE COMPORTEMENTALE</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#83-le-modus-operandi">🧠 8.3 LE MODUS OPERANDI</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#84-la-signature-comportementale">🧠 8.4 LA SIGNATURE COMPORTEMENTALE</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#85-le-profil-psychologique">🧠 8.5 LE PROFIL PSYCHOLOGIQUE</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#86-lanalyse-de-la-scene-de-crime">🧠 8.6 L'ANALYSE DE LA SCÈNE DE CRIME</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#87-les-limites-du-profilage">🧠 8.7 LES LIMITES DU PROFILAGE</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#88-les-biais-du-profilage">🧠 8.8 LES BIAIS DU PROFILAGE</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#en-pratique">🧩 EN PRATIQUE</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#81-le-profilage-criminel">8.1 LE PROFILAGE CRIMINEL</a><ul class="sidebar-sublist"><li><a href="#definition">DÉFINITION</a></li><li><a href="#explication">EXPLICATION</a></li><li><a href="#exemple">EXEMPLE</a></li><li><a href="#a-retenir">À RETENIR</a></li></ul></li><li><a href="#82-lanalyse-comportementale">8.2 L'ANALYSE COMPORTEMENTALE</a><ul class="sidebar-sublist"><li><a href="#definition_1">DÉFINITION</a></li><li><a href="#explication_1">EXPLICATION</a></li><li><a href="#exemple_1">EXEMPLE</a></li><li><a href="#a-retenir_1">À RETENIR</a></li></ul></li><li><a href="#83-le-modus-operandi">8.3 LE MODUS OPERANDI</a><ul class="sidebar-sublist"><li><a href="#definition_2">DÉFINITION</a></li><li><a href="#explication_2">EXPLICATION</a></li><li><a href="#exemple_2">EXEMPLE</a></li><li><a href="#a-retenir_2">À RETENIR</a></li></ul></li><li><a href="#84-la-signature-comportementale">8.4 LA SIGNATURE COMPORTEMENTALE</a><ul class="sidebar-sublist"><li><a href="#definition_3">DÉFINITION</a></li><li><a href="#explication_3">EXPLICATION</a></li><li><a href="#exemple_3">EXEMPLE</a></li><li><a href="#a-retenir_3">À RETENIR</a></li></ul></li><li><a href="#85-le-profil-psychologique">8.5 LE PROFIL PSYCHOLOGIQUE</a><ul class="sidebar-sublist"><li><a href="#definition_4">DÉFINITION</a></li><li><a href="#explication_4">EXPLICATION</a></li><li><a href="#exemple_4">EXEMPLE</a></li><li><a href="#a-retenir_4">À RETENIR</a></li></ul></li><li><a href="#86-lanalyse-de-la-scene-de-crime">8.6 L'ANALYSE DE LA SCÈNE DE CRIME</a><ul class="sidebar-sublist"><li><a href="#definition_5">DÉFINITION</a></li><li><a href="#explication_5">EXPLICATION</a></li><li><a href="#exemple_5">EXEMPLE</a></li><li><a href="#a-retenir_5">À RETENIR</a></li></ul></li><li><a href="#87-les-limites-du-profilage">8.7 LES LIMITES DU PROFILAGE</a><ul class="sidebar-sublist"><li><a href="#definition_6">DÉFINITION</a></li><li><a href="#explication_6">EXPLICATION</a></li><li><a href="#exemple_6">EXEMPLE</a></li><li><a href="#a-retenir_6">À RETENIR</a></li></ul></li><li><a href="#88-les-biais-du-profilage">8.8 LES BIAIS DU PROFILAGE</a><ul class="sidebar-sublist"><li><a href="#definition_7">DÉFINITION</a></li><li><a href="#explication_7">EXPLICATION</a></li><li><a href="#exemple_7">EXEMPLE</a></li><li><a href="#a-retenir_7">À RETENIR</a></li></ul></li><li><a href="#en-pratique">EN PRATIQUE</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: "Le profilage et l'analyse criminelle",
         category: 'Psychologie, justice et criminologie',
-        icon: '⚖️'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/justice/">⚖️ Psychologie, justice et criminologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/justice/">Psychologie, justice et criminologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Le profilage et l'analyse criminelle</h1>
     </div>
     <div id="resume-banner"></div>
@@ -105,126 +120,153 @@
 <p>Comprendre comment certains comportements peuvent être étudiés dans le cadre d'une enquête criminelle, ainsi que les méthodes, les objectifs et les limites du profilage psychologique.
 </p>
 </blockquote>
-<h2 id="81-le-profilage-criminel" class="entry-title hc-1">🧠 8.1 LE PROFILAGE CRIMINEL</h2>
-<h3 id="definition">🔎 DÉFINITION</h3>
+<h2 id="81-le-profilage-criminel" class="entry-title hc-1">8.1 LE PROFILAGE CRIMINEL</h2>
+<h3 id="definition">DÉFINITION</h3>
 <p>Le profilage criminel consiste à analyser certains éléments d'une infraction afin de formuler des hypothèses concernant les caractéristiques possibles de son auteur.</p>
-<h3 id="explication">🧠 EXPLICATION</h3>
+<h3 id="explication">EXPLICATION</h3>
 <p>Le profilage peut s'appuyer sur différents éléments : comportement observé, circonstances de l'infraction, choix effectués par l'auteur, caractéristiques de la scène ou informations disponibles dans le dossier.</p>
 <p>L'objectif n'est pas de déterminer avec certitude l'identité d'une personne, mais de produire des hypothèses pouvant contribuer à l'orientation d'une enquête.</p>
 <p>Un profil peut concerner des caractéristiques comportementales, sociales ou situationnelles.</p>
 <p>Il reste toujours soumis aux informations disponibles et aux limites des méthodes utilisées.</p>
-<h3 id="exemple">💬 EXEMPLE</h3>
+<h3 id="exemple">EXEMPLE</h3>
 <p>L'analyse de plusieurs infractions présentant des caractéristiques communes peut permettre aux enquêteurs de rechercher certains points communs dans le comportement de leur auteur présumé.</p>
-<h3 id="a-retenir">📌 À RETENIR</h3>
+<h3 id="a-retenir">À RETENIR</h3>
 <p>Le profilage produit des hypothèses et non une identification certaine d'un individu.</p>
 <hr />
-<h2 id="82-lanalyse-comportementale" class="entry-title hc-2">🧠 8.2 L'ANALYSE COMPORTEMENTALE</h2>
-<h3 id="definition_1">🔎 DÉFINITION</h3>
+<h2 id="82-lanalyse-comportementale" class="entry-title hc-2">8.2 L'ANALYSE COMPORTEMENTALE</h2>
+<h3 id="definition_1">DÉFINITION</h3>
 <p>L'analyse comportementale consiste à étudier les actions, les décisions et les comportements observables d'une personne dans une situation donnée afin d'en comprendre certains mécanismes.</p>
-<h3 id="explication_1">🧠 EXPLICATION</h3>
+<h3 id="explication_1">EXPLICATION</h3>
 <p>Dans le contexte criminel, l'analyse comportementale peut chercher à comprendre comment une infraction a été réalisée, quelles décisions ont été prises et quels éléments semblent se répéter.</p>
 <p>Elle s'intéresse principalement aux comportements observables plutôt qu'à une supposée capacité à « lire » la personnalité d'une personne.</p>
 <p>Cette analyse peut également permettre de comparer plusieurs événements afin d'identifier d'éventuelles similitudes.</p>
-<h3 id="exemple_1">💬 EXEMPLE</h3>
+<h3 id="exemple_1">EXEMPLE</h3>
 <p>Plusieurs scènes présentant des comportements similaires peuvent être comparées afin de déterminer si elles pourraient avoir certains éléments en commun.</p>
-<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<h3 id="a-retenir_1">À RETENIR</h3>
 <p>L'analyse comportementale cherche à comprendre les comportements observables et leur contexte.</p>
 <hr />
-<h2 id="83-le-modus-operandi" class="entry-title hc-3">🧠 8.3 LE MODUS OPERANDI</h2>
-<h3 id="definition_2">🔎 DÉFINITION</h3>
+<h2 id="83-le-modus-operandi" class="entry-title hc-3">8.3 LE MODUS OPERANDI</h2>
+<h3 id="definition_2">DÉFINITION</h3>
 <p>Le modus operandi, souvent abrégé en « MO », désigne la manière dont une personne procède pour réaliser une infraction.</p>
-<h3 id="explication_2">🧠 EXPLICATION</h3>
+<h3 id="explication_2">EXPLICATION</h3>
 <p>Le modus operandi peut comprendre les méthodes utilisées, les choix effectués et certaines habitudes permettant de réaliser l'acte.</p>
 <p>Il n'est cependant pas nécessairement fixe.</p>
 <p>Une personne peut modifier sa manière de procéder en fonction de son expérience, de l'environnement, des circonstances ou de l'évolution de ses stratégies.</p>
 <p>Le modus operandi ne constitue donc pas une « signature psychologique » permettant à lui seul d'identifier un auteur.</p>
-<h3 id="exemple_2">💬 EXEMPLE</h3>
+<h3 id="exemple_2">EXEMPLE</h3>
 <p>Une personne peut utiliser une méthode particulière lors de plusieurs infractions, puis modifier cette méthode après avoir acquis davantage d'expérience ou rencontré de nouvelles contraintes.</p>
-<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<h3 id="a-retenir_2">À RETENIR</h3>
 <p>Le modus operandi décrit principalement la manière de procéder et peut évoluer avec le temps.</p>
 <hr />
-<h2 id="84-la-signature-comportementale" class="entry-title hc-4">🧠 8.4 LA SIGNATURE COMPORTEMENTALE</h2>
-<h3 id="definition_3">🔎 DÉFINITION</h3>
+<h2 id="84-la-signature-comportementale" class="entry-title hc-4">8.4 LA SIGNATURE COMPORTEMENTALE</h2>
+<h3 id="definition_3">DÉFINITION</h3>
 <p>La signature comportementale désigne certains comportements qui peuvent apparaître au-delà de ce qui est nécessaire pour réaliser une infraction et qui peuvent présenter une certaine signification pour leur auteur.</p>
-<h3 id="explication_3">🧠 EXPLICATION</h3>
+<h3 id="explication_3">EXPLICATION</h3>
 <p>La signature est généralement distinguée du modus operandi.</p>
 <p>Le modus operandi correspond davantage à ce qui est nécessaire ou utile pour accomplir l'acte, tandis que certains comportements supplémentaires peuvent refléter des besoins, motivations ou caractéristiques particulières.</p>
 <p>Cependant, l'interprétation d'une signature comportementale est complexe.</p>
 <p>Un même comportement peut avoir plusieurs explications et il serait incorrect de considérer qu'un élément observé révèle automatiquement un trait précis de personnalité.</p>
-<h3 id="exemple_3">💬 EXEMPLE</h3>
+<h3 id="exemple_3">EXEMPLE</h3>
 <p>Un comportement répété lors de plusieurs scènes peut attirer l'attention des enquêteurs lorsqu'il semble ne pas être directement nécessaire à la réalisation de l'infraction.</p>
-<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<h3 id="a-retenir_3">À RETENIR</h3>
 <p>La signature comportementale peut apporter des informations supplémentaires, mais son interprétation doit rester prudente.</p>
 <hr />
-<h2 id="85-le-profil-psychologique" class="entry-title hc-5">🧠 8.5 LE PROFIL PSYCHOLOGIQUE</h2>
-<h3 id="definition_4">🔎 DÉFINITION</h3>
+<h2 id="85-le-profil-psychologique" class="entry-title hc-5">8.5 LE PROFIL PSYCHOLOGIQUE</h2>
+<h3 id="definition_4">DÉFINITION</h3>
 <p>Un profil psychologique est une représentation hypothétique de certaines caractéristiques psychologiques ou comportementales pouvant être associées à une personne ou à un comportement.</p>
-<h3 id="explication_4">🧠 EXPLICATION</h3>
+<h3 id="explication_4">EXPLICATION</h3>
 <p>Dans le contexte criminel, un profil peut tenter d'estimer certaines caractéristiques à partir des éléments disponibles.</p>
 <p>Cependant, il ne permet pas de connaître directement la personnalité, les pensées ou les intentions d'une personne.</p>
 <p>Les caractéristiques proposées doivent être considérées comme des hypothèses et non comme des faits établis.</p>
 <p>Il existe également un risque de généralisation : plus un profil est vague, plus il peut sembler correspondre à un grand nombre de personnes.</p>
-<h3 id="exemple_4">💬 EXEMPLE</h3>
+<h3 id="exemple_4">EXEMPLE</h3>
 <p>Un profil peut suggérer qu'un auteur pourrait posséder certaines caractéristiques comportementales compatibles avec les éléments observés, sans permettre d'identifier précisément une personne.</p>
-<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<h3 id="a-retenir_4">À RETENIR</h3>
 <p>Un profil psychologique reste une hypothèse construite à partir d'informations disponibles et ne constitue pas une preuve d'identité.</p>
 <hr />
-<h2 id="86-lanalyse-de-la-scene-de-crime" class="entry-title hc-1">🧠 8.6 L'ANALYSE DE LA SCÈNE DE CRIME</h2>
-<h3 id="definition_5">🔎 DÉFINITION</h3>
+<h2 id="86-lanalyse-de-la-scene-de-crime" class="entry-title hc-1">8.6 L'ANALYSE DE LA SCÈNE DE CRIME</h2>
+<h3 id="definition_5">DÉFINITION</h3>
 <p>L'analyse de la scène de crime consiste à examiner les éléments observables d'une scène afin de comprendre le déroulement possible d'une infraction.</p>
-<h3 id="explication_5">🧠 EXPLICATION</h3>
+<h3 id="explication_5">EXPLICATION</h3>
 <p>L'étude d'une scène peut prendre en compte l'organisation spatiale, les comportements observables, les interactions possibles et différents éléments matériels.</p>
 <p>Dans une perspective comportementale, l'objectif peut être de comprendre certaines décisions prises par l'auteur.</p>
 <p>Cependant, l'analyse psychologique ne remplace pas l'analyse scientifique et matérielle de la scène.</p>
 <p>Les traces, les éléments techniques, les témoignages et les autres informations disponibles doivent être considérés ensemble.</p>
-<h3 id="exemple_5">💬 EXEMPLE</h3>
+<h3 id="exemple_5">EXEMPLE</h3>
 <p>L'organisation d'une scène peut permettre de formuler des hypothèses concernant les déplacements d'une personne ou certaines étapes possibles du déroulement des faits.</p>
-<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<h3 id="a-retenir_5">À RETENIR</h3>
 <p>L'analyse comportementale d'une scène complète les autres méthodes d'enquête mais ne les remplace pas.</p>
 <hr />
-<h2 id="87-les-limites-du-profilage" class="entry-title hc-2">🧠 8.7 LES LIMITES DU PROFILAGE</h2>
-<h3 id="definition_6">🔎 DÉFINITION</h3>
+<h2 id="87-les-limites-du-profilage" class="entry-title hc-2">8.7 LES LIMITES DU PROFILAGE</h2>
+<h3 id="definition_6">DÉFINITION</h3>
 <p>Les limites du profilage correspondent aux difficultés qui empêchent cette méthode de fournir des conclusions parfaitement certaines ou universelles.</p>
-<h3 id="explication_6">🧠 EXPLICATION</h3>
+<h3 id="explication_6">EXPLICATION</h3>
 <p>Les comportements humains sont complexes et peuvent avoir plusieurs causes.</p>
 <p>Deux personnes présentant des comportements similaires peuvent avoir des personnalités ou des motivations très différentes.</p>
 <p>À l'inverse, une même personne peut adopter des comportements différents selon les circonstances.</p>
 <p>La qualité d'un profil dépend également de la quantité et de la fiabilité des informations disponibles.</p>
 <p>Le profilage ne doit donc pas être considéré comme une méthode permettant de « trouver automatiquement le coupable ».</p>
-<h3 id="exemple_6">💬 EXEMPLE</h3>
+<h3 id="exemple_6">EXEMPLE</h3>
 <p>Un comportement observé sur une scène peut correspondre à plusieurs profils psychologiques différents. Il serait donc incorrect d'en déduire une personnalité précise à partir d'un seul élément.</p>
-<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<h3 id="a-retenir_6">À RETENIR</h3>
 <p>Le profilage possède des limites importantes et ses conclusions doivent être interprétées avec prudence.</p>
 <hr />
-<h2 id="88-les-biais-du-profilage" class="entry-title hc-3">🧠 8.8 LES BIAIS DU PROFILAGE</h2>
-<h3 id="definition_7">🔎 DÉFINITION</h3>
+<h2 id="88-les-biais-du-profilage" class="entry-title hc-3">8.8 LES BIAIS DU PROFILAGE</h2>
+<h3 id="definition_7">DÉFINITION</h3>
 <p>Les biais du profilage désignent les erreurs de raisonnement ou les influences pouvant conduire à interpréter certains éléments d'une enquête de manière incorrecte.</p>
-<h3 id="explication_7">🧠 EXPLICATION</h3>
+<h3 id="explication_7">EXPLICATION</h3>
 <p>Un biais peut apparaître lorsqu'une personne recherche principalement les informations qui confirment une hypothèse déjà formée.</p>
 <p>Le biais de confirmation constitue notamment un risque important : une fois qu'un profil est envisagé, certains éléments peuvent être interprétés comme venant le confirmer alors que d'autres informations contradictoires sont moins prises en compte.</p>
 <p>Les stéréotypes peuvent également influencer l'interprétation de certains comportements.</p>
 <p>Une analyse efficace nécessite donc de conserver plusieurs hypothèses et de réévaluer régulièrement les informations disponibles.</p>
-<h3 id="exemple_7">💬 EXEMPLE</h3>
+<h3 id="exemple_7">EXEMPLE</h3>
 <p>Si un enquêteur pense qu'un auteur possède certaines caractéristiques, il peut être tenté de donner davantage d'importance aux éléments correspondant à cette hypothèse et de minimiser ceux qui la contredisent.</p>
-<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<h3 id="a-retenir_7">À RETENIR</h3>
 <p>Les biais peuvent influencer l'interprétation des comportements et conduire à des hypothèses erronées.</p>
 <hr />
-<h2 id="en-pratique" class="entry-title hc-4">🧩 EN PRATIQUE</h2>
+<h2 id="en-pratique" class="entry-title hc-4">EN PRATIQUE</h2>
 <p>Le profilage criminel ne fonctionne pas comme dans les séries télévisées.</p>
 <p>Il ne permet pas de regarder une scène et de déterminer instantanément la personnalité, l'histoire ou l'identité d'un auteur.</p>
 <p>L'analyse criminelle repose sur l'interprétation d'éléments disponibles et sur la formulation d'hypothèses.</p>
 <p>Il est essentiel de distinguer :</p>
-<p><strong>Le comportement observé</strong> → ce qui peut être constaté.</p>
-<p><strong>L'interprétation comportementale</strong> → ce que ces éléments peuvent éventuellement suggérer.</p>
-<p><strong>L'hypothèse psychologique</strong> → une explication possible parmi plusieurs.</p>
-<p><strong>La preuve</strong> → un élément permettant d'établir un fait selon les règles applicables.</p>
+<p><strong>Le comportement observé</strong>  ce qui peut être constaté.</p>
+<p><strong>L'interprétation comportementale</strong>  ce que ces éléments peuvent éventuellement suggérer.</p>
+<p><strong>L'hypothèse psychologique</strong>  une explication possible parmi plusieurs.</p>
+<p><strong>La preuve</strong>  un élément permettant d'établir un fait selon les règles applicables.</p>
 <p>Le profilage peut donc constituer un outil d'orientation, mais il ne remplace ni les preuves matérielles, ni les témoignages, ni les analyses scientifiques, ni le travail d'enquête.</p>
 <p>La psychologie criminelle doit également éviter une erreur fondamentale : <strong>déduire automatiquement qu'un comportement révèle une personnalité précise</strong>. Un même comportement peut avoir plusieurs explications, et une personnalité ne peut pas être déterminée de manière fiable à partir d'un seul élément observé.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Psychologie, justice et criminologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-la-psychologie-des-decisions-judiciaires/"><span class="similar-icon">⚖️</span>La psychologie des décisions judiciaires</a><a class="similar-item" href="/chapitre/justice-les-mythes-sur-la-psychologie-criminelle/"><span class="similar-icon">⚖️</span>Les mythes sur la psychologie criminelle</a><a class="similar-item" href="/chapitre/justice-organisation-du-lexique-la-psychologie-et-la-justice/"><span class="similar-icon">⚖️</span>Organisation du lexique — la psychologie et la justice</a></div>
+      <h2>Autres chapitres de « Psychologie, justice et criminologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/justice-la-psychologie-des-decisions-judiciaires/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>La psychologie des décisions judiciaires</a><a class="similar-item" href="/chapitre/justice-les-mythes-sur-la-psychologie-criminelle/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>Les mythes sur la psychologie criminelle</a><a class="similar-item" href="/chapitre/justice-organisation-du-lexique-la-psychologie-et-la-justice/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="22" r="4" fill="currentColor" stroke="none"/>
+        <line x1="60" y1="26" x2="60" y2="95"/>
+        <line x1="42" y1="95" x2="78" y2="95"/>
+        <line x1="25" y1="40" x2="95" y2="40"/>
+        <line x1="25" y1="40" x2="16" y2="60"/>
+        <line x1="95" y1="40" x2="104" y2="60"/>
+        <path d="M6 60 Q16 76 26 60"/>
+        <path d="M94 60 Q104 76 114 60"/>
+    </svg></span>Organisation du lexique — la psychologie et la justice</a></div>
     </div>
     <a class="back-link" href="/categorie/justice/">← Retour à « Psychologie, justice et criminologie »</a>
   </div>
@@ -310,23 +352,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -344,7 +388,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -524,9 +568,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -535,10 +581,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -645,7 +691,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -685,8 +731,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -717,7 +763,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -772,7 +818,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -796,17 +842,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -848,7 +894,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

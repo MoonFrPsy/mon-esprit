@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#11-le-psychologue">🧠 1.1 Le psychologue</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#son-role">🧠 Son rôle</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#12-le-psychiatre">🩺 1.2 Le psychiatre</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#son-role_1">🧠 Son rôle</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#13-le-therapeute">🛋️ 1.3 Le thérapeute</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#important">🧠 Important</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#14-le-psychotherapeute">🧑‍⚕️ 1.4 Le psychothérapeute</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#objectifs-possibles">🧠 Objectifs possibles</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#15-la-consultation-psychologique">💬 1.5 La consultation psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#deroulement-possible">🧠 Déroulement possible</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#16-le-suivi-psychologique">📅 1.6 Le suivi psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#objectifs-possibles_1">🧠 Objectifs possibles</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#17-la-confidentialite">🔒 1.7 La confidentialité</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#pourquoi-est-elle-importante">🧠 Pourquoi est-elle importante ?</a></li><li><a href="#limites-possibles">⚠️ Limites possibles</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#18-lalliance-therapeutique">🤝 1.8 L'alliance thérapeutique</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#elle-repose-notamment-sur">🧩 Elle repose notamment sur</a></li><li><a href="#exemple">🧠 Exemple</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#19-les-objectifs-therapeutiques">🎯 1.9 Les objectifs thérapeutiques</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#exemples">🧠 Exemples</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#110-lentretien-clinique">🗣️ 1.10 L'entretien clinique</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#il-peut-explorer">🧠 Il peut explorer</a></li><li><a href="#particularite">🩺 Particularité</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#111-lanamnese">📖 1.11 L'anamnèse</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#informations-pouvant-etre-abordees">🧠 Informations pouvant être abordées</a></li><li><a href="#a-retenir_10">📌 À retenir</a></li></ul></li><li><a href="#112-le-motif-de-consultation">📝 1.12 Le motif de consultation</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#exemples_1">🧠 Exemples</a></li><li><a href="#a-retenir_11">📌 À retenir</a></li></ul></li><li><a href="#113-la-demande-therapeutique">🧩 1.13 La demande thérapeutique</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#exemple_1">🧠 Exemple</a></li><li><a href="#a-retenir_12">📌 À retenir</a></li></ul></li><li><a href="#114-levaluation-psychologique">🧠 1.14 L'évaluation psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#elle-peut-utiliser">🧩 Elle peut utiliser</a></li><li><a href="#objectif">🩺 Objectif</a></li><li><a href="#a-retenir_13">📌 À retenir</a></li></ul></li><li><a href="#115-le-bilan-psychologique">📊 1.15 Le bilan psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#outils-possibles">🧠 Outils possibles</a></li><li><a href="#a-retenir_14">📌 À retenir</a></li></ul></li><li><a href="#a-retenir-partie-1">🧠 À RETENIR PARTIE 1</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#11-le-psychologue">1.1 Le psychologue</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#son-role">Son rôle</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#12-le-psychiatre">1.2 Le psychiatre</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#son-role_1">Son rôle</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#13-le-therapeute">1.3 Le thérapeute</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#important">Important</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#14-le-psychotherapeute">‍ 1.4 Le psychothérapeute</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#objectifs-possibles">Objectifs possibles</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#15-la-consultation-psychologique">1.5 La consultation psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#deroulement-possible">Déroulement possible</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#16-le-suivi-psychologique">1.6 Le suivi psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#objectifs-possibles_1">Objectifs possibles</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#17-la-confidentialite">1.7 La confidentialité</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#pourquoi-est-elle-importante">Pourquoi est-elle importante ?</a></li><li><a href="#limites-possibles">Limites possibles</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#18-lalliance-therapeutique">1.8 L'alliance thérapeutique</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#elle-repose-notamment-sur">Elle repose notamment sur</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#19-les-objectifs-therapeutiques">1.9 Les objectifs thérapeutiques</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#110-lentretien-clinique">1.10 L'entretien clinique</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#il-peut-explorer">Il peut explorer</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#111-lanamnese">1.11 L'anamnèse</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#informations-pouvant-etre-abordees">Informations pouvant être abordées</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#112-le-motif-de-consultation">1.12 Le motif de consultation</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemples_1">Exemples</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#113-la-demande-therapeutique">1.13 La demande thérapeutique</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#exemple_1">Exemple</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#114-levaluation-psychologique">1.14 L'évaluation psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#elle-peut-utiliser">Elle peut utiliser</a></li><li><a href="#objectif">Objectif</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#115-le-bilan-psychologique">1.15 Le bilan psychologique</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#outils-possibles">Outils possibles</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#a-retenir-partie-1">À RETENIR PARTIE 1</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: "Les bases d'une séance psychologique",
         category: 'Lexique des séances psychologiques',
-        icon: '💬'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/lexique/">💬 Lexique des séances psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/lexique/">Lexique des séances psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les bases d'une séance psychologique</h1>
     </div>
     <div id="resume-banner"></div>
@@ -102,11 +117,11 @@
 </p>
 </blockquote>
 <hr />
-<h1 id="11-le-psychologue" class="entry-title hc-1">🧠 1.1 Le psychologue</h1>
-<h2 id="definition">🔎 Définition</h2>
+<h1 id="11-le-psychologue" class="entry-title hc-1">1.1 Le psychologue</h1>
+<h2 id="definition">Définition</h2>
 <p>Un <strong>psychologue</strong> est un professionnel formé à l'étude du fonctionnement psychologique, des émotions, des comportements et des processus mentaux.</p>
 <p>Il peut accompagner des personnes rencontrant différentes difficultés ou souhaitant mieux comprendre leur fonctionnement psychologique.</p>
-<h2 id="son-role">🧠 Son rôle</h2>
+<h2 id="son-role">Son rôle</h2>
 <p>Selon sa spécialisation, un psychologue peut notamment :</p>
 <ul>
 <li>réaliser des entretiens psychologiques ;</li>
@@ -117,14 +132,14 @@
 <li>réaliser des évaluations psychologiques ;</li>
 <li>orienter vers d'autres professionnels si nécessaire.</li>
 </ul>
-<h2 id="a-retenir">📌 À retenir</h2>
+<h2 id="a-retenir">À retenir</h2>
 <p>Le psychologue est un professionnel spécialisé dans le <strong>fonctionnement psychologique et le comportement humain</strong>.</p>
 <hr />
-<h1 id="12-le-psychiatre" class="entry-title hc-2">🩺 1.2 Le psychiatre</h1>
-<h2 id="definition_1">🔎 Définition</h2>
+<h1 id="12-le-psychiatre" class="entry-title hc-2">1.2 Le psychiatre</h1>
+<h2 id="definition_1">Définition</h2>
 <p>Un <strong>psychiatre</strong> est un médecin spécialisé en psychiatrie.</p>
 <p>Contrairement au psychologue, il possède une formation médicale.</p>
-<h2 id="son-role_1">🧠 Son rôle</h2>
+<h2 id="son-role_1">Son rôle</h2>
 <p>Un psychiatre peut notamment :</p>
 <ul>
 <li>évaluer l'état de santé mentale ;</li>
@@ -134,13 +149,13 @@
 <li>prescrire des médicaments lorsque cela est nécessaire ;</li>
 <li>assurer un suivi psychiatrique.</li>
 </ul>
-<h2 id="a-retenir_1">📌 À retenir</h2>
-<p><strong>Psychologue → spécialiste du fonctionnement psychologique.</strong></p>
-<p><strong>Psychiatre → médecin spécialisé en psychiatrie.</strong></p>
+<h2 id="a-retenir_1">À retenir</h2>
+<p><strong>Psychologue  spécialiste du fonctionnement psychologique.</strong></p>
+<p><strong>Psychiatre  médecin spécialisé en psychiatrie.</strong></p>
 <p>Les deux professions peuvent parfois travailler ensemble.</p>
 <hr />
-<h1 id="13-le-therapeute" class="entry-title hc-3">🛋️ 1.3 Le thérapeute</h1>
-<h2 id="definition_2">🔎 Définition</h2>
+<h1 id="13-le-therapeute" class="entry-title hc-3">1.3 Le thérapeute</h1>
+<h2 id="definition_2">Définition</h2>
 <p>Le terme <strong>thérapeute</strong> est un terme général désignant une personne qui propose un accompagnement thérapeutique.</p>
 <p>Il ne correspond pas toujours à une profession unique.</p>
 <p>Selon le contexte, un thérapeute peut être :</p>
@@ -150,7 +165,7 @@
 <li>psychothérapeute ;</li>
 <li>ou un professionnel formé à une approche thérapeutique spécifique.</li>
 </ul>
-<h2 id="important">🧠 Important</h2>
+<h2 id="important">Important</h2>
 <p>Le titre exact, la formation et les qualifications du professionnel peuvent varier.</p>
 <p>Il est donc utile de connaître :</p>
 <ul>
@@ -159,14 +174,14 @@
 <li>son domaine de spécialisation ;</li>
 <li>son approche thérapeutique.</li>
 </ul>
-<h2 id="a-retenir_2">📌 À retenir</h2>
+<h2 id="a-retenir_2">À retenir</h2>
 <p>Le mot <strong>thérapeute</strong> est un terme général et ne désigne pas automatiquement une profession précise.</p>
 <hr />
-<h1 id="14-le-psychotherapeute" class="entry-title hc-4">🧑‍⚕️ 1.4 Le psychothérapeute</h1>
-<h2 id="definition_3">🔎 Définition</h2>
+<h1 id="14-le-psychotherapeute" class="entry-title hc-4">‍ 1.4 Le psychothérapeute</h1>
+<h2 id="definition_3">Définition</h2>
 <p>Un <strong>psychothérapeute</strong> est un professionnel autorisé et formé à pratiquer la psychothérapie selon les règles applicables dans son pays.</p>
 <p>La psychothérapie consiste généralement en un accompagnement utilisant des méthodes psychologiques structurées.</p>
-<h2 id="objectifs-possibles">🧠 Objectifs possibles</h2>
+<h2 id="objectifs-possibles">Objectifs possibles</h2>
 <p>Une psychothérapie peut notamment chercher à :</p>
 <ul>
 <li>comprendre certaines difficultés ;</li>
@@ -176,11 +191,11 @@
 <li>améliorer le fonctionnement quotidien ;</li>
 <li>travailler sur les émotions ou les relations.</li>
 </ul>
-<h2 id="a-retenir_3">📌 À retenir</h2>
+<h2 id="a-retenir_3">À retenir</h2>
 <p>Le psychothérapeute est associé à la pratique de la <strong>psychothérapie</strong>, c'est-à-dire un accompagnement utilisant des méthodes thérapeutiques psychologiques.</p>
 <hr />
-<h1 id="15-la-consultation-psychologique" class="entry-title hc-5">💬 1.5 La consultation psychologique</h1>
-<h2 id="definition_4">🔎 Définition</h2>
+<h1 id="15-la-consultation-psychologique" class="entry-title hc-5">1.5 La consultation psychologique</h1>
+<h2 id="definition_4">Définition</h2>
 <p>Une <strong>consultation psychologique</strong> est une rencontre entre une personne et un professionnel de la psychologie ou de la santé mentale.</p>
 <p>Elle permet d'échanger autour :</p>
 <ul>
@@ -191,21 +206,21 @@
 <li>des relations ;</li>
 <li>de certains événements de vie.</li>
 </ul>
-<h2 id="deroulement-possible">🧠 Déroulement possible</h2>
+<h2 id="deroulement-possible">Déroulement possible</h2>
 <p>Une consultation peut comprendre :</p>
-<p><strong>🗣️ Discussion</strong></p>
+<p>** Discussion**</p>
 <p>La personne explique ce qu'elle souhaite aborder.</p>
-<p><strong>🔎 Exploration</strong></p>
+<p>** Exploration**</p>
 <p>Le professionnel pose des questions pour mieux comprendre la situation.</p>
-<p><strong>🧠 Analyse</strong></p>
+<p>** Analyse**</p>
 <p>Certains mécanismes, émotions ou comportements peuvent être examinés.</p>
-<p><strong>🛠️ Travail thérapeutique</strong></p>
+<p>** Travail thérapeutique**</p>
 <p>Des stratégies ou exercices peuvent être proposés selon l'approche utilisée.</p>
-<h2 id="a-retenir_4">📌 À retenir</h2>
+<h2 id="a-retenir_4">À retenir</h2>
 <p>Une consultation permet d'<strong>explorer une situation psychologique avec l'aide d'un professionnel</strong>.</p>
 <hr />
-<h1 id="16-le-suivi-psychologique" class="entry-title hc-1">📅 1.6 Le suivi psychologique</h1>
-<h2 id="definition_5">🔎 Définition</h2>
+<h1 id="16-le-suivi-psychologique" class="entry-title hc-1">1.6 Le suivi psychologique</h1>
+<h2 id="definition_5">Définition</h2>
 <p>Le <strong>suivi psychologique</strong> correspond à un accompagnement réalisé sur plusieurs consultations.</p>
 <p>La fréquence peut varier selon :</p>
 <ul>
@@ -215,7 +230,7 @@
 <li>les disponibilités ;</li>
 <li>les objectifs du suivi.</li>
 </ul>
-<h2 id="objectifs-possibles_1">🧠 Objectifs possibles</h2>
+<h2 id="objectifs-possibles_1">Objectifs possibles</h2>
 <p>Un suivi peut permettre de :</p>
 <ul>
 <li>observer l'évolution d'une situation ;</li>
@@ -224,14 +239,14 @@
 <li>comprendre certains mécanismes ;</li>
 <li>maintenir les progrès réalisés.</li>
 </ul>
-<h2 id="a-retenir_5">📌 À retenir</h2>
+<h2 id="a-retenir_5">À retenir</h2>
 <p>Un suivi psychologique correspond généralement à <strong>plusieurs consultations organisées dans le temps</strong>.</p>
 <hr />
-<h1 id="17-la-confidentialite" class="entry-title hc-2">🔒 1.7 La confidentialité</h1>
-<h2 id="definition_6">🔎 Définition</h2>
+<h1 id="17-la-confidentialite" class="entry-title hc-2">1.7 La confidentialité</h1>
+<h2 id="definition_6">Définition</h2>
 <p>La <strong>confidentialité</strong> correspond au principe selon lequel les informations partagées pendant un accompagnement professionnel sont protégées.</p>
 <p>Le professionnel est généralement tenu au <strong>secret professionnel</strong>, selon sa profession et les lois applicables.</p>
-<h2 id="pourquoi-est-elle-importante">🧠 Pourquoi est-elle importante ?</h2>
+<h2 id="pourquoi-est-elle-importante">Pourquoi est-elle importante ?</h2>
 <p>Elle permet de créer un espace dans lequel une personne peut s'exprimer plus librement.</p>
 <p>La confidentialité favorise notamment :</p>
 <ul>
@@ -240,7 +255,7 @@
 <li>la liberté d'expression ;</li>
 <li>la qualité de la relation thérapeutique.</li>
 </ul>
-<h2 id="limites-possibles">⚠️ Limites possibles</h2>
+<h2 id="limites-possibles">Limites possibles</h2>
 <p>La confidentialité peut connaître certaines exceptions prévues par la loi, notamment dans des situations impliquant :</p>
 <ul>
 <li>un danger grave et immédiat ;</li>
@@ -248,14 +263,14 @@
 <li>certaines obligations légales.</li>
 </ul>
 <p>Les règles exactes dépendent du pays et de la profession concernée.</p>
-<h2 id="a-retenir_6">📌 À retenir</h2>
+<h2 id="a-retenir_6">À retenir</h2>
 <p>La confidentialité protège les informations échangées pendant un accompagnement, mais elle peut comporter <strong>des exceptions légales spécifiques</strong>.</p>
 <hr />
-<h1 id="18-lalliance-therapeutique" class="entry-title hc-3">🤝 1.8 L'alliance thérapeutique</h1>
-<h2 id="definition_7">🔎 Définition</h2>
+<h1 id="18-lalliance-therapeutique" class="entry-title hc-3">1.8 L'alliance thérapeutique</h1>
+<h2 id="definition_7">Définition</h2>
 <p>L'<strong>alliance thérapeutique</strong> correspond à la relation de travail et de confiance qui se construit entre une personne et son thérapeute.</p>
 <p>Elle constitue un élément important dans de nombreuses formes de psychothérapie.</p>
-<h2 id="elle-repose-notamment-sur">🧩 Elle repose notamment sur</h2>
+<h2 id="elle-repose-notamment-sur">Elle repose notamment sur</h2>
 <ul>
 <li>la confiance ;</li>
 <li>le respect ;</li>
@@ -264,15 +279,15 @@
 <li>des objectifs partagés ;</li>
 <li>une collaboration dans le travail thérapeutique.</li>
 </ul>
-<h2 id="exemple">🧠 Exemple</h2>
+<h2 id="exemple">Exemple</h2>
 <p>Une personne peut se sentir suffisamment en confiance pour parler de sujets difficiles tout en sachant qu'elle peut exprimer un désaccord ou une incompréhension.</p>
-<h2 id="a-retenir_7">📌 À retenir</h2>
+<h2 id="a-retenir_7">À retenir</h2>
 <p>L'alliance thérapeutique correspond à la <strong>relation de confiance et de collaboration entre la personne accompagnée et le professionnel</strong>.</p>
 <hr />
-<h1 id="19-les-objectifs-therapeutiques" class="entry-title hc-4">🎯 1.9 Les objectifs thérapeutiques</h1>
-<h2 id="definition_8">🔎 Définition</h2>
+<h1 id="19-les-objectifs-therapeutiques" class="entry-title hc-4">1.9 Les objectifs thérapeutiques</h1>
+<h2 id="definition_8">Définition</h2>
 <p>Les <strong>objectifs thérapeutiques</strong> correspondent aux changements ou améliorations qu'une personne souhaite travailler pendant un accompagnement.</p>
-<h2 id="exemples">🧠 Exemples</h2>
+<h2 id="exemples">Exemples</h2>
 <p>Les objectifs peuvent concerner :</p>
 <ul>
 <li>mieux comprendre ses émotions ;</li>
@@ -283,15 +298,15 @@
 <li>améliorer certaines relations ;</li>
 <li>apprendre de nouvelles stratégies d'adaptation.</li>
 </ul>
-<h2 id="a-retenir_8">📌 À retenir</h2>
+<h2 id="a-retenir_8">À retenir</h2>
 <p>Les objectifs thérapeutiques permettent de donner une <strong>direction générale au travail réalisé pendant le suivi</strong>.</p>
 <p>Ils peuvent évoluer avec le temps.</p>
 <hr />
-<h1 id="110-lentretien-clinique" class="entry-title hc-5">🗣️ 1.10 L'entretien clinique</h1>
-<h2 id="definition_9">🔎 Définition</h2>
+<h1 id="110-lentretien-clinique" class="entry-title hc-5">1.10 L'entretien clinique</h1>
+<h2 id="definition_9">Définition</h2>
 <p>L'<strong>entretien clinique</strong> est une méthode utilisée par les professionnels pour recueillir et comprendre des informations concernant une personne et sa situation.</p>
 <p>Il repose principalement sur la discussion, l'observation et les questions posées.</p>
-<h2 id="il-peut-explorer">🧠 Il peut explorer</h2>
+<h2 id="il-peut-explorer">Il peut explorer</h2>
 <ul>
 <li>les symptômes éventuels ;</li>
 <li>l'histoire personnelle ;</li>
@@ -302,7 +317,7 @@
 <li>les événements importants ;</li>
 <li>les difficultés actuelles.</li>
 </ul>
-<h2 id="particularite">🩺 Particularité</h2>
+<h2 id="particularite">Particularité</h2>
 <p>L'entretien clinique ne consiste pas uniquement à poser une liste de questions.</p>
 <p>Le professionnel cherche également à comprendre :</p>
 <ul>
@@ -311,14 +326,14 @@
 <li>la manière dont la personne vit sa situation ;</li>
 <li>les conséquences sur la vie quotidienne.</li>
 </ul>
-<h2 id="a-retenir_9">📌 À retenir</h2>
+<h2 id="a-retenir_9">À retenir</h2>
 <p>L'entretien clinique est un <strong>outil d'évaluation et de compréhension utilisé par les professionnels</strong>.</p>
 <hr />
-<h1 id="111-lanamnese" class="entry-title hc-1">📖 1.11 L'anamnèse</h1>
-<h2 id="definition_10">🔎 Définition</h2>
+<h1 id="111-lanamnese" class="entry-title hc-1">1.11 L'anamnèse</h1>
+<h2 id="definition_10">Définition</h2>
 <p>L'<strong>anamnèse</strong> correspond au recueil d'informations concernant l'histoire d'une personne.</p>
 <p>Elle permet au professionnel de mieux comprendre le contexte général.</p>
-<h2 id="informations-pouvant-etre-abordees">🧠 Informations pouvant être abordées</h2>
+<h2 id="informations-pouvant-etre-abordees">Informations pouvant être abordées</h2>
 <p>L'anamnèse peut concerner :</p>
 <ul>
 <li>l'histoire personnelle ;</li>
@@ -330,13 +345,13 @@
 <li>les antécédents médicaux ;</li>
 <li>les difficultés actuelles.</li>
 </ul>
-<h2 id="a-retenir_10">📌 À retenir</h2>
+<h2 id="a-retenir_10">À retenir</h2>
 <p>L'anamnèse correspond à la <strong>reconstruction de l'histoire et du contexte d'une personne à partir des informations recueillies</strong>.</p>
 <hr />
-<h1 id="112-le-motif-de-consultation" class="entry-title hc-2">📝 1.12 Le motif de consultation</h1>
-<h2 id="definition_11">🔎 Définition</h2>
+<h1 id="112-le-motif-de-consultation" class="entry-title hc-2">1.12 Le motif de consultation</h1>
+<h2 id="definition_11">Définition</h2>
 <p>Le <strong>motif de consultation</strong> correspond à la principale raison pour laquelle une personne consulte un professionnel.</p>
-<h2 id="exemples_1">🧠 Exemples</h2>
+<h2 id="exemples_1">Exemples</h2>
 <p>Une personne peut consulter pour :</p>
 <ul>
 <li>une anxiété importante ;</li>
@@ -348,14 +363,14 @@
 <li>le besoin de mieux se comprendre.</li>
 </ul>
 <p>Le motif de consultation peut évoluer au cours du suivi.</p>
-<h2 id="a-retenir_11">📌 À retenir</h2>
+<h2 id="a-retenir_11">À retenir</h2>
 <p>Le motif de consultation correspond à la <strong>raison principale ayant conduit une personne à demander un accompagnement</strong>.</p>
 <hr />
-<h1 id="113-la-demande-therapeutique" class="entry-title hc-3">🧩 1.13 La demande thérapeutique</h1>
-<h2 id="definition_12">🔎 Définition</h2>
+<h1 id="113-la-demande-therapeutique" class="entry-title hc-3">1.13 La demande thérapeutique</h1>
+<h2 id="definition_12">Définition</h2>
 <p>La <strong>demande thérapeutique</strong> correspond à ce qu'une personne souhaite obtenir ou travailler grâce à un accompagnement.</p>
 <p>Elle peut être différente du motif initial de consultation.</p>
-<h2 id="exemple_1">🧠 Exemple</h2>
+<h2 id="exemple_1">Exemple</h2>
 <p>Une personne peut consulter initialement pour :</p>
 <blockquote>
 <p>« Je suis constamment stressé. »
@@ -366,14 +381,14 @@
 <p>« Je souhaite comprendre pourquoi certaines situations me provoquent autant d'anxiété et apprendre à mieux y faire face. »
 </p>
 </blockquote>
-<h2 id="a-retenir_12">📌 À retenir</h2>
+<h2 id="a-retenir_12">À retenir</h2>
 <p>Le <strong>motif de consultation</strong> explique pourquoi une personne vient consulter.</p>
 <p>La <strong>demande thérapeutique</strong> correspond davantage à ce qu'elle souhaite travailler.</p>
 <hr />
-<h1 id="114-levaluation-psychologique" class="entry-title hc-4">🧠 1.14 L'évaluation psychologique</h1>
-<h2 id="definition_13">🔎 Définition</h2>
+<h1 id="114-levaluation-psychologique" class="entry-title hc-4">1.14 L'évaluation psychologique</h1>
+<h2 id="definition_13">Définition</h2>
 <p>L'<strong>évaluation psychologique</strong> consiste à recueillir différentes informations afin de mieux comprendre le fonctionnement psychologique d'une personne.</p>
-<h2 id="elle-peut-utiliser">🧩 Elle peut utiliser</h2>
+<h2 id="elle-peut-utiliser">Elle peut utiliser</h2>
 <ul>
 <li>entretiens ;</li>
 <li>questionnaires ;</li>
@@ -381,7 +396,7 @@
 <li>tests psychologiques adaptés ;</li>
 <li>évaluation du fonctionnement quotidien.</li>
 </ul>
-<h2 id="objectif">🩺 Objectif</h2>
+<h2 id="objectif">Objectif</h2>
 <p>L'objectif n'est pas simplement de donner une étiquette à une personne.</p>
 <p>L'évaluation cherche à comprendre :</p>
 <ul>
@@ -391,11 +406,11 @@
 <li>les symptômes éventuels ;</li>
 <li>les mécanismes impliqués.</li>
 </ul>
-<h2 id="a-retenir_13">📌 À retenir</h2>
+<h2 id="a-retenir_13">À retenir</h2>
 <p>L'évaluation psychologique est une <strong>démarche structurée visant à mieux comprendre une situation psychologique</strong>.</p>
 <hr />
-<h1 id="115-le-bilan-psychologique" class="entry-title hc-5">📊 1.15 Le bilan psychologique</h1>
-<h2 id="definition_14">🔎 Définition</h2>
+<h1 id="115-le-bilan-psychologique" class="entry-title hc-5">1.15 Le bilan psychologique</h1>
+<h2 id="definition_14">Définition</h2>
 <p>Un <strong>bilan psychologique</strong> est une évaluation plus structurée pouvant utiliser plusieurs outils afin d'examiner certains aspects du fonctionnement psychologique.</p>
 <p>Selon le contexte, il peut concerner :</p>
 <ul>
@@ -405,7 +420,7 @@
 <li>certaines difficultés spécifiques ;</li>
 <li>le comportement.</li>
 </ul>
-<h2 id="outils-possibles">🧠 Outils possibles</h2>
+<h2 id="outils-possibles">Outils possibles</h2>
 <ul>
 <li>entretiens ;</li>
 <li>questionnaires ;</li>
@@ -413,21 +428,21 @@
 <li>observations ;</li>
 <li>analyse des résultats.</li>
 </ul>
-<h2 id="a-retenir_14">📌 À retenir</h2>
+<h2 id="a-retenir_14">À retenir</h2>
 <p>Le bilan psychologique permet une <strong>évaluation approfondie de certains aspects du fonctionnement psychologique</strong>.</p>
 <hr />
-<h1 id="a-retenir-partie-1" class="entry-title hc-1">🧠 À RETENIR PARTIE 1</h1>
+<h1 id="a-retenir-partie-1" class="entry-title hc-1">À RETENIR PARTIE 1</h1>
 <p>Une séance psychologique repose généralement sur plusieurs éléments essentiels :</p>
-<p><strong>💬 La communication</strong></p>
-<p>→ Permet d'exprimer ce qui est vécu.</p>
-<p><strong>🔒 La confidentialité</strong></p>
-<p>→ Protège les informations partagées selon les règles professionnelles et légales.</p>
-<p><strong>🤝 L'alliance thérapeutique</strong></p>
-<p>→ Crée une relation de confiance et de collaboration.</p>
-<p><strong>🎯 Les objectifs</strong></p>
-<p>→ Donnent une direction au travail thérapeutique.</p>
-<p><strong>🧠 L'évaluation</strong></p>
-<p>→ Permet de mieux comprendre la situation et les besoins.</p>
+<p>** La communication**</p>
+<p>Permet d'exprimer ce qui est vécu.</p>
+<p>** La confidentialité**</p>
+<p>Protège les informations partagées selon les règles professionnelles et légales.</p>
+<p>** L'alliance thérapeutique**</p>
+<p>Crée une relation de confiance et de collaboration.</p>
+<p>** Les objectifs**</p>
+<p>Donnent une direction au travail thérapeutique.</p>
+<p>** L'évaluation**</p>
+<p>Permet de mieux comprendre la situation et les besoins.</p>
 <blockquote>
 <p>Une consultation psychologique n'est pas simplement une conversation : il s'agit d'un espace d'écoute, d'évaluation et d'accompagnement structuré, adapté à la situation et aux besoins de chaque personne.
 </p>
@@ -435,8 +450,23 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Lexique des séances psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/lexique-les-mots-pour-parler-des-emotions/"><span class="similar-icon">💬</span>Les mots pour parler des émotions</a><a class="similar-item" href="/chapitre/lexique-les-concepts-lies-aux-pensees/"><span class="similar-icon">💬</span>Les concepts liés aux pensées</a><a class="similar-item" href="/chapitre/lexique-les-concepts-lies-aux-relations/"><span class="similar-icon">💬</span>Les concepts liés aux relations</a></div>
+      <h2>Autres chapitres de « Lexique des séances psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/lexique-les-mots-pour-parler-des-emotions/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg></span>Les mots pour parler des émotions</a><a class="similar-item" href="/chapitre/lexique-les-concepts-lies-aux-pensees/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg></span>Les concepts liés aux pensées</a><a class="similar-item" href="/chapitre/lexique-les-concepts-lies-aux-relations/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg></span>Les concepts liés aux relations</a></div>
     </div>
     <a class="back-link" href="/categorie/lexique/">← Retour à « Lexique des séances psychologiques »</a>
   </div>
@@ -522,23 +552,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -556,7 +588,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -736,9 +768,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -747,10 +781,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -857,7 +891,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -897,8 +931,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -929,7 +963,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -984,7 +1018,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1008,17 +1042,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1060,7 +1094,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

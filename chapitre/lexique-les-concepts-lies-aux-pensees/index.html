@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#31-la-pensee">💭 3.1 La pensée</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#exemple">🧠 Exemple</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#32-la-pensee-automatique">⚡ 3.2 La pensée automatique</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#exemple_1">🧠 Exemple</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#33-la-rumination">🔄 3.3 La rumination</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#manifestations-possibles">🧠 Manifestations possibles</a></li><li><a href="#exemple_2">🧩 Exemple</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#34-les-pensees-intrusives">🌪️ 3.4 Les pensées intrusives</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#important">🧠 Important</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#35-la-croyance">🧩 3.5 La croyance</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#exemple_3">🧠 Exemple</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#36-le-schema-cognitif">🧱 3.6 Le schéma cognitif</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#exemple_4">🧠 Exemple</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#37-linterpretation">🔍 3.7 L'interprétation</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#exemple_5">🧠 Exemple</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#38-le-biais-cognitif">⚖️ 3.8 Le biais cognitif</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#exemple_6">🧠 Exemple</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#39-le-biais-de-confirmation">🔎 3.9 Le biais de confirmation</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#exemple_7">🧠 Exemple</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#310-la-pensee-dichotomique">⚫ 3.10 La pensée dichotomique</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#exemples">🧠 Exemples</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#311-lanticipation-negative">🔮 3.11 L'anticipation négative</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#exemple_8">🧠 Exemple</a></li><li><a href="#a-retenir_10">📌 À retenir</a></li></ul></li><li><a href="#312-la-catastrophisation">🌩️ 3.12 La catastrophisation</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#exemple_9">🧠 Exemple</a></li><li><a href="#a-retenir_11">📌 À retenir</a></li></ul></li><li><a href="#313-la-personnalisation">🪞 3.13 La personnalisation</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#exemple_10">🧠 Exemple</a></li><li><a href="#a-retenir_12">📌 À retenir</a></li></ul></li><li><a href="#314-la-metacognition">🧠 3.14 La métacognition</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#exemple_11">🧠 Exemple</a></li><li><a href="#a-retenir_13">📌 À retenir</a></li></ul></li><li><a href="#315-lintrospection">🔍 3.15 L'introspection</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#exemple_12">🧠 Exemple</a></li><li><a href="#a-retenir_14">📌 À retenir</a></li></ul></li><li><a href="#316-linsight">💡 3.16 L'insight</a><ul class="sidebar-sublist"><li><a href="#definition_15">🔎 Définition</a></li><li><a href="#exemple_13">🧠 Exemple</a></li><li><a href="#a-retenir_15">📌 À retenir</a></li></ul></li><li><a href="#317-la-flexibilite-cognitive">🧩 3.17 La flexibilité cognitive</a><ul class="sidebar-sublist"><li><a href="#definition_16">🔎 Définition</a></li><li><a href="#exemple_14">🧠 Exemple</a></li><li><a href="#a-retenir_16">📌 À retenir</a></li></ul></li><li><a href="#318-la-charge-cognitive">🧠 3.18 La charge cognitive</a><ul class="sidebar-sublist"><li><a href="#definition_17">🔎 Définition</a></li><li><a href="#exemple_15">🧠 Exemple</a></li><li><a href="#a-retenir_17">📌 À retenir</a></li></ul></li><li><a href="#a-retenir-partie-3">🧠 À RETENIR PARTIE 3</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#31-la-pensee">3.1 La pensée</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#32-la-pensee-automatique">3.2 La pensée automatique</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#exemple_1">Exemple</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#33-la-rumination">3.3 La rumination</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#exemple_2">Exemple</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#34-les-pensees-intrusives">3.4 Les pensées intrusives</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#important">Important</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#35-la-croyance">3.5 La croyance</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#exemple_3">Exemple</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#36-le-schema-cognitif">3.6 Le schéma cognitif</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#exemple_4">Exemple</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#37-linterpretation">3.7 L'interprétation</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#exemple_5">Exemple</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#38-le-biais-cognitif">3.8 Le biais cognitif</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#exemple_6">Exemple</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#39-le-biais-de-confirmation">3.9 Le biais de confirmation</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#exemple_7">Exemple</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#310-la-pensee-dichotomique">3.10 La pensée dichotomique</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#311-lanticipation-negative">3.11 L'anticipation négative</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#exemple_8">Exemple</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#312-la-catastrophisation">3.12 La catastrophisation</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemple_9">Exemple</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#313-la-personnalisation">3.13 La personnalisation</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#exemple_10">Exemple</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#314-la-metacognition">3.14 La métacognition</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#exemple_11">Exemple</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#315-lintrospection">3.15 L'introspection</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#exemple_12">Exemple</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#316-linsight">3.16 L'insight</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#exemple_13">Exemple</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#317-la-flexibilite-cognitive">3.17 La flexibilité cognitive</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#exemple_14">Exemple</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#318-la-charge-cognitive">3.18 La charge cognitive</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#exemple_15">Exemple</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#a-retenir-partie-3">À RETENIR PARTIE 3</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les concepts liés aux pensées',
         category: 'Lexique des séances psychologiques',
-        icon: '💬'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/lexique/">💬 Lexique des séances psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/lexique/">Lexique des séances psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les concepts liés aux pensées</h1>
     </div>
     <div id="resume-banner"></div>
@@ -102,8 +117,8 @@
 </p>
 </blockquote>
 <hr />
-<h1 id="31-la-pensee" class="entry-title hc-1">💭 3.1 La pensée</h1>
-<h2 id="definition">🔎 Définition</h2>
+<h1 id="31-la-pensee" class="entry-title hc-1">3.1 La pensée</h1>
+<h2 id="definition">Définition</h2>
 <p>Une <strong>pensée</strong> est une activité mentale permettant notamment d'interpréter une situation, de réfléchir, d'imaginer, de se souvenir ou d'anticiper.</p>
 <p>Les pensées peuvent prendre différentes formes :</p>
 <ul>
@@ -114,7 +129,7 @@
 <li>questions ;</li>
 <li>interprétations.</li>
 </ul>
-<h2 id="exemple">🧠 Exemple</h2>
+<h2 id="exemple">Exemple</h2>
 <p>Face à un message sans réponse, différentes pensées peuvent apparaître :</p>
 <blockquote>
 <p>« La personne est peut-être occupée. »
@@ -126,11 +141,11 @@
 </p>
 </blockquote>
 <p>La même situation peut donc être interprétée de différentes manières.</p>
-<h2 id="a-retenir">📌 À retenir</h2>
+<h2 id="a-retenir">À retenir</h2>
 <p>Une pensée correspond à un <strong>contenu mental permettant d'interpréter ou de représenter une situation</strong>.</p>
 <hr />
-<h1 id="32-la-pensee-automatique" class="entry-title hc-2">⚡ 3.2 La pensée automatique</h1>
-<h2 id="definition_1">🔎 Définition</h2>
+<h1 id="32-la-pensee-automatique" class="entry-title hc-2">3.2 La pensée automatique</h1>
+<h2 id="definition_1">Définition</h2>
 <p>Une <strong>pensée automatique</strong> est une pensée qui apparaît rapidement et spontanément, souvent sans réflexion consciente approfondie.</p>
 <p>Elle peut être déclenchée par :</p>
 <ul>
@@ -140,7 +155,7 @@
 <li>une émotion ;</li>
 <li>une interaction sociale.</li>
 </ul>
-<h2 id="exemple_1">🧠 Exemple</h2>
+<h2 id="exemple_1">Exemple</h2>
 <p>Situation :</p>
 <blockquote>
 <p>Une personne reçoit une remarque critique.
@@ -158,13 +173,13 @@
 <li>colère ;</li>
 <li>honte.</li>
 </ul>
-<h2 id="a-retenir_1">📌 À retenir</h2>
+<h2 id="a-retenir_1">À retenir</h2>
 <p>Les pensées automatiques apparaissent souvent <strong>rapidement et spontanément</strong> et peuvent influencer fortement les émotions.</p>
 <hr />
-<h1 id="33-la-rumination" class="entry-title hc-3">🔄 3.3 La rumination</h1>
-<h2 id="definition_2">🔎 Définition</h2>
+<h1 id="33-la-rumination" class="entry-title hc-3">3.3 La rumination</h1>
+<h2 id="definition_2">Définition</h2>
 <p>La <strong>rumination</strong> correspond au fait de penser de manière répétitive à un problème, un événement ou une émotion sans parvenir facilement à s'en détacher.</p>
-<h2 id="manifestations-possibles">🧠 Manifestations possibles</h2>
+<h2 id="manifestations-possibles">Manifestations possibles</h2>
 <ul>
 <li>repenser constamment à une conversation ;</li>
 <li>analyser plusieurs fois un événement passé ;</li>
@@ -172,7 +187,7 @@
 <li>chercher continuellement une explication ;</li>
 <li>tourner mentalement autour du même problème.</li>
 </ul>
-<h2 id="exemple_2">🧩 Exemple</h2>
+<h2 id="exemple_2">Exemple</h2>
 <blockquote>
 <p>« Pourquoi j'ai dit ça ? »
 </p>
@@ -182,11 +197,11 @@
 </p>
 </blockquote>
 <p>Ces pensées peuvent revenir plusieurs fois.</p>
-<h2 id="a-retenir_2">📌 À retenir</h2>
+<h2 id="a-retenir_2">À retenir</h2>
 <p>La rumination correspond à une <strong>répétition mentale persistante autour d'un même sujet</strong>, souvent sans apporter de solution concrète.</p>
 <hr />
-<h1 id="34-les-pensees-intrusives" class="entry-title hc-4">🌪️ 3.4 Les pensées intrusives</h1>
-<h2 id="definition_3">🔎 Définition</h2>
+<h1 id="34-les-pensees-intrusives" class="entry-title hc-4">3.4 Les pensées intrusives</h1>
+<h2 id="definition_3">Définition</h2>
 <p>Les <strong>pensées intrusives</strong> sont des pensées, images ou impulsions qui apparaissent involontairement dans l'esprit.</p>
 <p>Elles peuvent parfois être :</p>
 <ul>
@@ -196,14 +211,14 @@
 <li>inquiétantes ;</li>
 <li>contraires aux valeurs de la personne.</li>
 </ul>
-<h2 id="important">🧠 Important</h2>
+<h2 id="important">Important</h2>
 <p>Le fait d'avoir une pensée intrusive <strong>ne signifie pas automatiquement vouloir agir selon cette pensée</strong>.</p>
 <p>Une pensée peut apparaître sans refléter les intentions, les valeurs ou la personnalité réelle d'une personne.</p>
-<h2 id="a-retenir_3">📌 À retenir</h2>
+<h2 id="a-retenir_3">À retenir</h2>
 <p>Une pensée intrusive est un <strong>contenu mental involontaire et non désiré</strong>.</p>
 <hr />
-<h1 id="35-la-croyance" class="entry-title hc-5">🧩 3.5 La croyance</h1>
-<h2 id="definition_4">🔎 Définition</h2>
+<h1 id="35-la-croyance" class="entry-title hc-5">3.5 La croyance</h1>
+<h2 id="definition_4">Définition</h2>
 <p>Une <strong>croyance</strong> est une idée qu'une personne considère comme vraie ou probable.</p>
 <p>Les croyances influencent souvent :</p>
 <ul>
@@ -212,18 +227,18 @@
 <li>les émotions ;</li>
 <li>les comportements.</li>
 </ul>
-<h2 id="exemple_3">🧠 Exemple</h2>
+<h2 id="exemple_3">Exemple</h2>
 <p>Une personne peut avoir la croyance :</p>
 <blockquote>
 <p>« Il faut toujours réussir pour avoir de la valeur. »
 </p>
 </blockquote>
 <p>Cette croyance peut influencer sa réaction face à l'échec.</p>
-<h2 id="a-retenir_4">📌 À retenir</h2>
+<h2 id="a-retenir_4">À retenir</h2>
 <p>Les croyances constituent des <strong>idées relativement stables permettant d'interpréter soi-même, les autres et le monde</strong>.</p>
 <hr />
-<h1 id="36-le-schema-cognitif" class="entry-title hc-1">🧱 3.6 Le schéma cognitif</h1>
-<h2 id="definition_5">🔎 Définition</h2>
+<h1 id="36-le-schema-cognitif" class="entry-title hc-1">3.6 Le schéma cognitif</h1>
+<h2 id="definition_5">Définition</h2>
 <p>Un <strong>schéma cognitif</strong> est une structure mentale permettant d'organiser et d'interpréter les informations.</p>
 <p>Les schémas se construisent progressivement à partir :</p>
 <ul>
@@ -233,21 +248,21 @@
 <li>des relations ;</li>
 <li>des apprentissages.</li>
 </ul>
-<h2 id="exemple_4">🧠 Exemple</h2>
+<h2 id="exemple_4">Exemple</h2>
 <p>Une personne ayant développé un schéma :</p>
 <blockquote>
 <p>« Je risque d'être abandonné. »
 </p>
 </blockquote>
 <p>peut interpréter certains comportements neutres comme des signes de rejet.</p>
-<h2 id="a-retenir_5">📌 À retenir</h2>
+<h2 id="a-retenir_5">À retenir</h2>
 <p>Un schéma cognitif fonctionne comme un <strong>cadre mental qui influence la manière dont les informations sont interprétées</strong>.</p>
 <hr />
-<h1 id="37-linterpretation" class="entry-title hc-2">🔍 3.7 L'interprétation</h1>
-<h2 id="definition_6">🔎 Définition</h2>
+<h1 id="37-linterpretation" class="entry-title hc-2">3.7 L'interprétation</h1>
+<h2 id="definition_6">Définition</h2>
 <p>L'<strong>interprétation</strong> correspond au sens qu'une personne attribue à une situation.</p>
 <p>Une même situation peut être interprétée de plusieurs façons.</p>
-<h2 id="exemple_5">🧠 Exemple</h2>
+<h2 id="exemple_5">Exemple</h2>
 <p>Situation :</p>
 <blockquote>
 <p>Une personne ne répond pas immédiatement à un message.
@@ -264,11 +279,11 @@
 </p>
 </blockquote>
 <p>La situation est identique, mais l'interprétation est différente.</p>
-<h2 id="a-retenir_6">📌 À retenir</h2>
+<h2 id="a-retenir_6">À retenir</h2>
 <p>Les émotions sont souvent influencées non seulement par les événements, mais également par <strong>la manière dont ces événements sont interprétés</strong>.</p>
 <hr />
-<h1 id="38-le-biais-cognitif" class="entry-title hc-3">⚖️ 3.8 Le biais cognitif</h1>
-<h2 id="definition_7">🔎 Définition</h2>
+<h1 id="38-le-biais-cognitif" class="entry-title hc-3">3.8 Le biais cognitif</h1>
+<h2 id="definition_7">Définition</h2>
 <p>Un <strong>biais cognitif</strong> est une tendance systématique de la pensée pouvant influencer la manière dont une personne :</p>
 <ul>
 <li>interprète une information ;</li>
@@ -277,29 +292,29 @@
 <li>évalue une situation.</li>
 </ul>
 <p>Les biais cognitifs sont fréquents chez tous les êtres humains.</p>
-<h2 id="exemple_6">🧠 Exemple</h2>
+<h2 id="exemple_6">Exemple</h2>
 <p>Une personne peut retenir principalement les informations qui confirment déjà ce qu'elle pense.</p>
 <p>C'est un exemple de <strong>biais de confirmation</strong>.</p>
-<h2 id="a-retenir_7">📌 À retenir</h2>
+<h2 id="a-retenir_7">À retenir</h2>
 <p>Un biais cognitif est une <strong>tendance automatique du cerveau à traiter certaines informations d'une manière particulière</strong>.</p>
 <hr />
-<h1 id="39-le-biais-de-confirmation" class="entry-title hc-4">🔎 3.9 Le biais de confirmation</h1>
-<h2 id="definition_8">🔎 Définition</h2>
+<h1 id="39-le-biais-de-confirmation" class="entry-title hc-4">3.9 Le biais de confirmation</h1>
+<h2 id="definition_8">Définition</h2>
 <p>Le <strong>biais de confirmation</strong> correspond à la tendance à rechercher, remarquer ou privilégier les informations qui confirment une croyance déjà existante.</p>
-<h2 id="exemple_7">🧠 Exemple</h2>
+<h2 id="exemple_7">Exemple</h2>
 <p>Une personne pense :</p>
 <blockquote>
 <p>« Personne ne m'apprécie. »
 </p>
 </blockquote>
 <p>Elle remarque particulièrement les moments où une personne ne lui répond pas, mais peut minimiser les signes d'affection ou d'intérêt.</p>
-<h2 id="a-retenir_8">📌 À retenir</h2>
+<h2 id="a-retenir_8">À retenir</h2>
 <p>Le biais de confirmation peut renforcer certaines croyances en donnant davantage d'importance aux informations qui semblent les confirmer.</p>
 <hr />
-<h1 id="310-la-pensee-dichotomique" class="entry-title hc-5">⚫ 3.10 La pensée dichotomique</h1>
-<h2 id="definition_9">🔎 Définition</h2>
+<h1 id="310-la-pensee-dichotomique" class="entry-title hc-5">3.10 La pensée dichotomique</h1>
+<h2 id="definition_9">Définition</h2>
 <p>La <strong>pensée dichotomique</strong>, parfois appelée pensée « tout ou rien », consiste à percevoir une situation principalement selon deux catégories opposées.</p>
-<h2 id="exemples">🧠 Exemples</h2>
+<h2 id="exemples">Exemples</h2>
 <ul>
 <li>réussite ou échec ;</li>
 <li>parfait ou nul ;</li>
@@ -311,81 +326,72 @@
 <p>« Si ce n'est pas parfait, c'est complètement raté. »
 </p>
 </blockquote>
-<h2 id="a-retenir_9">📌 À retenir</h2>
+<h2 id="a-retenir_9">À retenir</h2>
 <p>La pensée dichotomique simplifie une situation complexe en la plaçant dans <strong>deux catégories extrêmes</strong>.</p>
 <hr />
-<h1 id="311-lanticipation-negative" class="entry-title hc-1">🔮 3.11 L'anticipation négative</h1>
-<h2 id="definition_10">🔎 Définition</h2>
+<h1 id="311-lanticipation-negative" class="entry-title hc-1">3.11 L'anticipation négative</h1>
+<h2 id="definition_10">Définition</h2>
 <p>L'<strong>anticipation négative</strong> correspond à une tendance à imaginer qu'un événement futur aura probablement une issue défavorable.</p>
-<h2 id="exemple_8">🧠 Exemple</h2>
+<h2 id="exemple_8">Exemple</h2>
 <p>Avant un entretien :</p>
 <blockquote>
 <p>« Je vais forcément échouer. »
 </p>
 </blockquote>
 <p>La personne peut ressentir de l'anxiété avant même que la situation ait eu lieu.</p>
-<h2 id="a-retenir_10">📌 À retenir</h2>
+<h2 id="a-retenir_10">À retenir</h2>
 <p>Anticiper un résultat négatif ne signifie pas que ce résultat se produira réellement.</p>
 <hr />
-<h1 id="312-la-catastrophisation" class="entry-title hc-2">🌩️ 3.12 La catastrophisation</h1>
-<h2 id="definition_11">🔎 Définition</h2>
+<h1 id="312-la-catastrophisation" class="entry-title hc-2">3.12 La catastrophisation</h1>
+<h2 id="definition_11">Définition</h2>
 <p>La <strong>catastrophisation</strong> consiste à imaginer rapidement les conséquences les plus graves ou les plus négatives d'une situation.</p>
-<h2 id="exemple_9">🧠 Exemple</h2>
+<h2 id="exemple_9">Exemple</h2>
 <blockquote>
 <p>« J'ai fait une erreur au travail. »
 </p>
-</blockquote>
-<p>↓</p>
-<blockquote>
 <p>« Je vais avoir des problèmes. »
 </p>
-</blockquote>
-<p>↓</p>
-<blockquote>
 <p>« Je vais être licencié. »
 </p>
-</blockquote>
-<p>↓</p>
-<blockquote>
 <p>« Toute ma vie va être détruite. »
 </p>
 </blockquote>
-<h2 id="a-retenir_11">📌 À retenir</h2>
+<h2 id="a-retenir_11">À retenir</h2>
 <p>La catastrophisation correspond à une <strong>amplification mentale des conséquences négatives possibles</strong>.</p>
 <hr />
-<h1 id="313-la-personnalisation" class="entry-title hc-3">🪞 3.13 La personnalisation</h1>
-<h2 id="definition_12">🔎 Définition</h2>
+<h1 id="313-la-personnalisation" class="entry-title hc-3">3.13 La personnalisation</h1>
+<h2 id="definition_12">Définition</h2>
 <p>La <strong>personnalisation</strong> correspond à la tendance à considérer qu'un événement est directement lié à soi-même, même lorsque d'autres explications sont possibles.</p>
-<h2 id="exemple_10">🧠 Exemple</h2>
+<h2 id="exemple_10">Exemple</h2>
 <p>Deux personnes discutent et arrêtent de parler lorsqu'une troisième arrive.</p>
 <p>Cette personne peut penser :</p>
 <blockquote>
 <p>« Elles parlaient forcément de moi. »
 </p>
 </blockquote>
-<h2 id="a-retenir_12">📌 À retenir</h2>
+<h2 id="a-retenir_12">À retenir</h2>
 <p>La personnalisation consiste à <strong>attribuer excessivement certains événements à soi-même</strong>.</p>
 <hr />
-<h1 id="314-la-metacognition" class="entry-title hc-4">🧠 3.14 La métacognition</h1>
-<h2 id="definition_13">🔎 Définition</h2>
+<h1 id="314-la-metacognition" class="entry-title hc-4">3.14 La métacognition</h1>
+<h2 id="definition_13">Définition</h2>
 <p>La <strong>métacognition</strong> correspond à la capacité de réfléchir à ses propres pensées et processus mentaux.</p>
 <p>Elle peut être résumée ainsi :</p>
 <blockquote>
 <p><strong>Penser à sa manière de penser.</strong>
 </p>
 </blockquote>
-<h2 id="exemple_11">🧠 Exemple</h2>
+<h2 id="exemple_11">Exemple</h2>
 <p>Une personne remarque :</p>
 <blockquote>
 <p>« Je suis en train d'imaginer le pire, mais ce n'est peut-être qu'une pensée et pas une réalité. »
 </p>
 </blockquote>
 <p>Cette prise de recul constitue une forme de métacognition.</p>
-<h2 id="a-retenir_13">📌 À retenir</h2>
+<h2 id="a-retenir_13">À retenir</h2>
 <p>La métacognition permet de <strong>prendre du recul par rapport à ses propres pensées</strong>.</p>
 <hr />
-<h1 id="315-lintrospection" class="entry-title hc-5">🔍 3.15 L'introspection</h1>
-<h2 id="definition_14">🔎 Définition</h2>
+<h1 id="315-lintrospection" class="entry-title hc-5">3.15 L'introspection</h1>
+<h2 id="definition_14">Définition</h2>
 <p>L'<strong>introspection</strong> correspond au fait d'observer et d'examiner son propre fonctionnement intérieur.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -395,31 +401,31 @@
 <li>les comportements ;</li>
 <li>les réactions.</li>
 </ul>
-<h2 id="exemple_12">🧠 Exemple</h2>
+<h2 id="exemple_12">Exemple</h2>
 <p>Une personne peut se demander :</p>
 <blockquote>
 <p>« Pourquoi cette situation m'a-t-elle autant affecté ? »
 </p>
 </blockquote>
-<h2 id="a-retenir_14">📌 À retenir</h2>
+<h2 id="a-retenir_14">À retenir</h2>
 <p>L'introspection consiste à <strong>observer et analyser son propre fonctionnement psychologique</strong>.</p>
 <hr />
-<h1 id="316-linsight" class="entry-title hc-1">💡 3.16 L'insight</h1>
-<h2 id="definition_15">🔎 Définition</h2>
+<h1 id="316-linsight" class="entry-title hc-1">3.16 L'insight</h1>
+<h2 id="definition_15">Définition</h2>
 <p>L'<strong>insight</strong> est un terme utilisé pour désigner une prise de conscience ou une compréhension nouvelle concernant soi-même, une situation ou un mécanisme psychologique.</p>
-<h2 id="exemple_13">🧠 Exemple</h2>
+<h2 id="exemple_13">Exemple</h2>
 <p>Après plusieurs discussions, une personne peut comprendre :</p>
 <blockquote>
 <p>« Je remarque que je réagis très fortement au rejet parce que certaines expériences passées influencent encore mes réactions actuelles. »
 </p>
 </blockquote>
-<h2 id="a-retenir_15">📌 À retenir</h2>
+<h2 id="a-retenir_15">À retenir</h2>
 <p>Un insight correspond à une <strong>prise de conscience importante permettant de mieux comprendre une situation ou son propre fonctionnement</strong>.</p>
 <hr />
-<h1 id="317-la-flexibilite-cognitive" class="entry-title hc-2">🧩 3.17 La flexibilité cognitive</h1>
-<h2 id="definition_16">🔎 Définition</h2>
+<h1 id="317-la-flexibilite-cognitive" class="entry-title hc-2">3.17 La flexibilité cognitive</h1>
+<h2 id="definition_16">Définition</h2>
 <p>La <strong>flexibilité cognitive</strong> correspond à la capacité d'adapter sa manière de penser lorsqu'une situation change ou lorsqu'une nouvelle information apparaît.</p>
-<h2 id="exemple_14">🧠 Exemple</h2>
+<h2 id="exemple_14">Exemple</h2>
 <p>Une personne pense initialement :</p>
 <blockquote>
 <p>« Cette situation est forcément un échec. »
@@ -430,13 +436,13 @@
 <p>« Ce n'est pas le résultat que j'espérais, mais je peux peut-être apprendre quelque chose de cette expérience. »
 </p>
 </blockquote>
-<h2 id="a-retenir_16">📌 À retenir</h2>
+<h2 id="a-retenir_16">À retenir</h2>
 <p>La flexibilité cognitive permet de <strong>modifier une interprétation lorsque de nouvelles informations apparaissent</strong>.</p>
 <hr />
-<h1 id="318-la-charge-cognitive" class="entry-title hc-3">🧠 3.18 La charge cognitive</h1>
-<h2 id="definition_17">🔎 Définition</h2>
+<h1 id="318-la-charge-cognitive" class="entry-title hc-3">3.18 La charge cognitive</h1>
+<h2 id="definition_17">Définition</h2>
 <p>La <strong>charge cognitive</strong> correspond à la quantité de ressources mentales nécessaires pour traiter une information ou réaliser une tâche.</p>
-<h2 id="exemple_15">🧠 Exemple</h2>
+<h2 id="exemple_15">Exemple</h2>
 <p>Une personne doit simultanément :</p>
 <ul>
 <li>écouter quelqu'un ;</li>
@@ -445,7 +451,7 @@
 <li>résoudre un problème.</li>
 </ul>
 <p>La charge cognitive peut devenir importante.</p>
-<h2 id="a-retenir_17">📌 À retenir</h2>
+<h2 id="a-retenir_17">À retenir</h2>
 <p>Lorsque la charge cognitive est trop importante, il peut devenir plus difficile de :</p>
 <ul>
 <li>se concentrer ;</li>
@@ -454,26 +460,41 @@
 <li>gérer plusieurs informations.</li>
 </ul>
 <hr />
-<h1 id="a-retenir-partie-3" class="entry-title hc-4">🧠 À RETENIR PARTIE 3</h1>
+<h1 id="a-retenir-partie-3" class="entry-title hc-4">À RETENIR PARTIE 3</h1>
 <p>Les pensées ne représentent pas toujours une description exacte de la réalité.</p>
 <p>Elles peuvent être influencées par :</p>
-<p><strong>🧠 Les expériences passées</strong></p>
-<p><strong>❤️ Les émotions</strong></p>
-<p><strong>🔍 Les croyances</strong></p>
-<p><strong>🧩 Les schémas cognitifs</strong></p>
-<p><strong>⚖️ Les biais cognitifs</strong></p>
-<p><strong>🌍 Le contexte</strong></p>
+<p>** Les expériences passées**</p>
+<p>** Les émotions**</p>
+<p>** Les croyances**</p>
+<p>** Les schémas cognitifs**</p>
+<p>** Les biais cognitifs**</p>
+<p>** Le contexte**</p>
 <p>Une même situation peut donc provoquer des interprétations très différentes selon les personnes.</p>
 <blockquote>
-<p>💭 <strong>Avoir une pensée ne signifie pas nécessairement qu'elle est vraie.</strong>
+<p><strong>Avoir une pensée ne signifie pas nécessairement qu'elle est vraie.</strong>
 </p>
 </blockquote>
 <p>La capacité à observer, questionner et modifier certaines interprétations constitue une partie importante de plusieurs approches psychologiques et thérapeutiques.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Lexique des séances psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/lexique-les-concepts-lies-aux-relations/"><span class="similar-icon">💬</span>Les concepts liés aux relations</a><a class="similar-item" href="/chapitre/lexique-les-mecanismes-psychologiques/"><span class="similar-icon">💬</span>Les mécanismes psychologiques</a><a class="similar-item" href="/chapitre/lexique-les-termes-utilises-pendant-une-therapie/"><span class="similar-icon">💬</span>Les termes utilisés pendant une thérapie</a></div>
+      <h2>Autres chapitres de « Lexique des séances psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/lexique-les-concepts-lies-aux-relations/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg></span>Les concepts liés aux relations</a><a class="similar-item" href="/chapitre/lexique-les-mecanismes-psychologiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg></span>Les mécanismes psychologiques</a><a class="similar-item" href="/chapitre/lexique-les-termes-utilises-pendant-une-therapie/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg></span>Les termes utilisés pendant une thérapie</a></div>
     </div>
     <a class="back-link" href="/categorie/lexique/">← Retour à « Lexique des séances psychologiques »</a>
   </div>
@@ -559,23 +580,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -593,7 +616,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -773,9 +796,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -784,10 +809,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -894,7 +919,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -934,8 +959,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -966,7 +991,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1021,7 +1046,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1045,17 +1070,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1097,7 +1122,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

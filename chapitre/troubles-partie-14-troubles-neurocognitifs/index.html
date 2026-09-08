@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#141-le-trouble-neurocognitif-leger">🧠 14.1 Le trouble neurocognitif léger</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#fonctions-pouvant-etre-concernees">Fonctions pouvant être concernées</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#142-le-trouble-neurocognitif-majeur">🧠 14.2 Le trouble neurocognitif majeur</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#143-le-trouble-neurocognitif-majeur-ou-leger-du-a-la-maladie-dalzheimer">🧠 14.3 Le trouble neurocognitif majeur ou léger dû à la maladie d'Alzheimer</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#144-le-trouble-neurocognitif-vasculaire">🧠 14.4 Le trouble neurocognitif vasculaire</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#145-le-trouble-neurocognitif-a-corps-de-lewy">🧠 14.5 Le trouble neurocognitif à corps de Lewy</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#146-le-trouble-neurocognitif-du-a-la-maladie-de-parkinson">🧠 14.6 Le trouble neurocognitif dû à la maladie de Parkinson</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#147-le-trouble-neurocognitif-du-a-un-traumatisme-cranien">🧠 14.7 Le trouble neurocognitif dû à un traumatisme crânien</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#148-le-trouble-neurocognitif-du-a-une-infection-par-le-vih">🧠 14.8 Le trouble neurocognitif dû à une infection par le VIH</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#149-le-trouble-neurocognitif-du-a-une-substance-ou-a-un-medicament">🧠 14.9 Le trouble neurocognitif dû à une substance ou à un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1410-le-trouble-neurocognitif-du-a-une-maladie-a-prions">🧠 14.10 Le trouble neurocognitif dû à une maladie à prions</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1411-le-trouble-neurocognitif-du-a-la-maladie-de-huntington">🧠 14.11 Le trouble neurocognitif dû à la maladie de Huntington</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations-cognitives">Manifestations cognitives</a></li><li><a href="#manifestations-comportementales">Manifestations comportementales</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1412-le-trouble-neurocognitif-du-a-une-autre-affection-medicale">🧠 14.12 Le trouble neurocognitif dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1413-le-trouble-neurocognitif-frontotemporal">🧠 14.13 Le trouble neurocognitif frontotemporal</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1414-laphasie-progressive-primaire">🧠 14.14 L'aphasie progressive primaire</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_11">Manifestations</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1415-les-troubles-de-memoire-lies-aux-troubles-neurocognitifs">🧠 14.15 Les troubles de mémoire liés aux troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_12">Manifestations</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1416-les-troubles-de-lattention">🧠 14.16 Les troubles de l'attention</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations_13">Manifestations</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1417-les-troubles-des-fonctions-executives">🧠 14.17 Les troubles des fonctions exécutives</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#manifestations_14">Manifestations</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1418-les-troubles-visuospatiaux">🧠 14.18 Les troubles visuospatiaux</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#manifestations_15">Manifestations</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1419-les-troubles-du-langage-dans-les-troubles-neurocognitifs">🧠 14.19 Les troubles du langage dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#manifestations_16">Manifestations</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1420-les-troubles-de-la-cognition-sociale">🧠 14.20 Les troubles de la cognition sociale</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#manifestations_17">Manifestations</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1421-le-syndrome-confusionnel">🧠 14.21 Le syndrome confusionnel</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#manifestations_18">Manifestations</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1422-le-delirium-du-a-une-intoxication">🧠 14.22 Le délirium dû à une intoxication</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations_19">Manifestations</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1423-le-delirium-du-au-sevrage">🧠 14.23 Le délirium dû au sevrage</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations_20">Manifestations</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1424-la-demence">🧠 14.24 La démence</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#manifestations_21">Manifestations</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1425-la-demence-a-debut-precoce">🧠 14.25 La démence à début précoce</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1426-la-progression-des-troubles-neurocognitifs">🧠 14.26 La progression des troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#evolutions-possibles">Évolutions possibles</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1427-les-troubles-neurocognitifs-reversibles-ou-partiellement-reversibles">🧠 14.27 Les troubles neurocognitifs réversibles ou partiellement réversibles</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#causes-possibles_3">Causes possibles</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1428-les-changements-comportementaux-dans-les-troubles-neurocognitifs">🧠 14.28 Les changements comportementaux dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#manifestations_22">Manifestations</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1429-lapathie-dans-les-troubles-neurocognitifs">🧠 14.29 L'apathie dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#manifestations_23">Manifestations</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1430-les-hallucinations-dans-les-troubles-neurocognitifs">🧠 14.30 Les hallucinations dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#manifestations_24">Manifestations</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li><li><a href="#1431-les-troubles-du-sommeil-associes-aux-troubles-neurocognitifs">🧠 14.31 Les troubles du sommeil associés aux troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_30">Définition</a></li><li><a href="#manifestations_25">Manifestations</a></li><li><a href="#a-retenir_30">À retenir</a></li></ul></li><li><a href="#1432-lanosognosie">🧠 14.32 L'anosognosie</a><ul class="sidebar-sublist"><li><a href="#definition_31">Définition</a></li><li><a href="#manifestations_26">Manifestations</a></li><li><a href="#a-retenir_31">À retenir</a></li></ul></li><li><a href="#1433-la-perte-progressive-dautonomie">🧠 14.33 La perte progressive d'autonomie</a><ul class="sidebar-sublist"><li><a href="#definition_32">Définition</a></li><li><a href="#activites-pouvant-devenir-difficiles">Activités pouvant devenir difficiles</a></li><li><a href="#a-retenir_32">À retenir</a></li></ul></li><li><a href="#1434-levaluation-neuropsychologique">🧠 14.34 L'évaluation neuropsychologique</a><ul class="sidebar-sublist"><li><a href="#definition_33">Définition</a></li><li><a href="#fonctions-evaluees">Fonctions évaluées</a></li><li><a href="#a-retenir_33">À retenir</a></li></ul></li><li><a href="#1435-le-diagnostic-differentiel-des-troubles-neurocognitifs">🧠 14.35 Le diagnostic différentiel des troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_34">Définition</a></li><li><a href="#causes-pouvant-etre-envisagees">Causes pouvant être envisagées</a></li><li><a href="#a-retenir_34">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#141-le-trouble-neurocognitif-leger">14.1 Le trouble neurocognitif léger</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#fonctions-pouvant-etre-concernees">Fonctions pouvant être concernées</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#142-le-trouble-neurocognitif-majeur">14.2 Le trouble neurocognitif majeur</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#143-le-trouble-neurocognitif-majeur-ou-leger-du-a-la-maladie-dalzheimer">14.3 Le trouble neurocognitif majeur ou léger dû à la maladie d'Alzheimer</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#144-le-trouble-neurocognitif-vasculaire">14.4 Le trouble neurocognitif vasculaire</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#145-le-trouble-neurocognitif-a-corps-de-lewy">14.5 Le trouble neurocognitif à corps de Lewy</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#146-le-trouble-neurocognitif-du-a-la-maladie-de-parkinson">14.6 Le trouble neurocognitif dû à la maladie de Parkinson</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#147-le-trouble-neurocognitif-du-a-un-traumatisme-cranien">14.7 Le trouble neurocognitif dû à un traumatisme crânien</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#148-le-trouble-neurocognitif-du-a-une-infection-par-le-vih">14.8 Le trouble neurocognitif dû à une infection par le VIH</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#149-le-trouble-neurocognitif-du-a-une-substance-ou-a-un-medicament">14.9 Le trouble neurocognitif dû à une substance ou à un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1410-le-trouble-neurocognitif-du-a-une-maladie-a-prions">14.10 Le trouble neurocognitif dû à une maladie à prions</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1411-le-trouble-neurocognitif-du-a-la-maladie-de-huntington">14.11 Le trouble neurocognitif dû à la maladie de Huntington</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#manifestations-cognitives">Manifestations cognitives</a></li><li><a href="#manifestations-comportementales">Manifestations comportementales</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1412-le-trouble-neurocognitif-du-a-une-autre-affection-medicale">14.12 Le trouble neurocognitif dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemples">Exemples</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1413-le-trouble-neurocognitif-frontotemporal">14.13 Le trouble neurocognitif frontotemporal</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#manifestations_10">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1414-laphasie-progressive-primaire">14.14 L'aphasie progressive primaire</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_11">Manifestations</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1415-les-troubles-de-memoire-lies-aux-troubles-neurocognitifs">14.15 Les troubles de mémoire liés aux troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#manifestations_12">Manifestations</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1416-les-troubles-de-lattention">14.16 Les troubles de l'attention</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#manifestations_13">Manifestations</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1417-les-troubles-des-fonctions-executives">14.17 Les troubles des fonctions exécutives</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#manifestations_14">Manifestations</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1418-les-troubles-visuospatiaux">14.18 Les troubles visuospatiaux</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#manifestations_15">Manifestations</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1419-les-troubles-du-langage-dans-les-troubles-neurocognitifs">14.19 Les troubles du langage dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#manifestations_16">Manifestations</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1420-les-troubles-de-la-cognition-sociale">14.20 Les troubles de la cognition sociale</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#manifestations_17">Manifestations</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#1421-le-syndrome-confusionnel">14.21 Le syndrome confusionnel</a><ul class="sidebar-sublist"><li><a href="#definition_20">Définition</a></li><li><a href="#manifestations_18">Manifestations</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#a-retenir_20">À retenir</a></li></ul></li><li><a href="#1422-le-delirium-du-a-une-intoxication">14.22 Le délirium dû à une intoxication</a><ul class="sidebar-sublist"><li><a href="#definition_21">Définition</a></li><li><a href="#manifestations_19">Manifestations</a></li><li><a href="#a-retenir_21">À retenir</a></li></ul></li><li><a href="#1423-le-delirium-du-au-sevrage">14.23 Le délirium dû au sevrage</a><ul class="sidebar-sublist"><li><a href="#definition_22">Définition</a></li><li><a href="#manifestations_20">Manifestations</a></li><li><a href="#a-retenir_22">À retenir</a></li></ul></li><li><a href="#1424-la-demence">14.24 La démence</a><ul class="sidebar-sublist"><li><a href="#definition_23">Définition</a></li><li><a href="#manifestations_21">Manifestations</a></li><li><a href="#a-retenir_23">À retenir</a></li></ul></li><li><a href="#1425-la-demence-a-debut-precoce">14.25 La démence à début précoce</a><ul class="sidebar-sublist"><li><a href="#definition_24">Définition</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#a-retenir_24">À retenir</a></li></ul></li><li><a href="#1426-la-progression-des-troubles-neurocognitifs">14.26 La progression des troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_25">Définition</a></li><li><a href="#evolutions-possibles">Évolutions possibles</a></li><li><a href="#a-retenir_25">À retenir</a></li></ul></li><li><a href="#1427-les-troubles-neurocognitifs-reversibles-ou-partiellement-reversibles">14.27 Les troubles neurocognitifs réversibles ou partiellement réversibles</a><ul class="sidebar-sublist"><li><a href="#definition_26">Définition</a></li><li><a href="#causes-possibles_3">Causes possibles</a></li><li><a href="#a-retenir_26">À retenir</a></li></ul></li><li><a href="#1428-les-changements-comportementaux-dans-les-troubles-neurocognitifs">14.28 Les changements comportementaux dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_27">Définition</a></li><li><a href="#manifestations_22">Manifestations</a></li><li><a href="#a-retenir_27">À retenir</a></li></ul></li><li><a href="#1429-lapathie-dans-les-troubles-neurocognitifs">14.29 L'apathie dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_28">Définition</a></li><li><a href="#manifestations_23">Manifestations</a></li><li><a href="#a-retenir_28">À retenir</a></li></ul></li><li><a href="#1430-les-hallucinations-dans-les-troubles-neurocognitifs">14.30 Les hallucinations dans les troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_29">Définition</a></li><li><a href="#manifestations_24">Manifestations</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#a-retenir_29">À retenir</a></li></ul></li><li><a href="#1431-les-troubles-du-sommeil-associes-aux-troubles-neurocognitifs">14.31 Les troubles du sommeil associés aux troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_30">Définition</a></li><li><a href="#manifestations_25">Manifestations</a></li><li><a href="#a-retenir_30">À retenir</a></li></ul></li><li><a href="#1432-lanosognosie">14.32 L'anosognosie</a><ul class="sidebar-sublist"><li><a href="#definition_31">Définition</a></li><li><a href="#manifestations_26">Manifestations</a></li><li><a href="#a-retenir_31">À retenir</a></li></ul></li><li><a href="#1433-la-perte-progressive-dautonomie">14.33 La perte progressive d'autonomie</a><ul class="sidebar-sublist"><li><a href="#definition_32">Définition</a></li><li><a href="#activites-pouvant-devenir-difficiles">Activités pouvant devenir difficiles</a></li><li><a href="#a-retenir_32">À retenir</a></li></ul></li><li><a href="#1434-levaluation-neuropsychologique">14.34 L'évaluation neuropsychologique</a><ul class="sidebar-sublist"><li><a href="#definition_33">Définition</a></li><li><a href="#fonctions-evaluees">Fonctions évaluées</a></li><li><a href="#a-retenir_33">À retenir</a></li></ul></li><li><a href="#1435-le-diagnostic-differentiel-des-troubles-neurocognitifs">14.35 Le diagnostic différentiel des troubles neurocognitifs</a><ul class="sidebar-sublist"><li><a href="#definition_34">Définition</a></li><li><a href="#causes-pouvant-etre-envisagees">Causes pouvant être envisagées</a></li><li><a href="#a-retenir_34">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Partie 14 — Troubles neurocognitifs',
         category: 'Troubles psychologiques',
-        icon: '🩺'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/troubles/">Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Partie 14 — Troubles neurocognitifs</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,7 +113,7 @@
     </svg>
     </div>
     <div class="article-body">
-      <h1 id="141-le-trouble-neurocognitif-leger" class="entry-title hc-1">🧠 14.1 Le trouble neurocognitif léger</h1>
+      <h1 id="141-le-trouble-neurocognitif-leger" class="entry-title hc-1">14.1 Le trouble neurocognitif léger</h1>
 <h2 id="definition">Définition</h2>
 <p>Le <strong>trouble neurocognitif léger</strong> correspond à une diminution des capacités cognitives par rapport au fonctionnement antérieur, mais cette diminution ne provoque généralement pas une perte complète d'autonomie.</p>
 <h2 id="fonctions-pouvant-etre-concernees">Fonctions pouvant être concernées</h2>
@@ -122,7 +137,7 @@
 <h2 id="a-retenir">À retenir</h2>
 <p>Un trouble neurocognitif léger n'est pas synonyme de démence. La personne conserve généralement son autonomie, même si certaines tâches peuvent demander davantage d'efforts.</p>
 <hr />
-<h1 id="142-le-trouble-neurocognitif-majeur" class="entry-title hc-2">🧠 14.2 Le trouble neurocognitif majeur</h1>
+<h1 id="142-le-trouble-neurocognitif-majeur" class="entry-title hc-2">14.2 Le trouble neurocognitif majeur</h1>
 <h2 id="definition_1">Définition</h2>
 <p>Le <strong>trouble neurocognitif majeur</strong> correspond à une diminution importante des capacités cognitives qui interfère avec l'autonomie de la personne dans la vie quotidienne.</p>
 <h2 id="manifestations_1">Manifestations</h2>
@@ -139,7 +154,7 @@
 <h2 id="a-retenir_1">À retenir</h2>
 <p>Le terme « trouble neurocognitif majeur » est utilisé pour décrire un syndrome. Il ne désigne pas une maladie unique.</p>
 <hr />
-<h1 id="143-le-trouble-neurocognitif-majeur-ou-leger-du-a-la-maladie-dalzheimer" class="entry-title hc-3">🧠 14.3 Le trouble neurocognitif majeur ou léger dû à la maladie d'Alzheimer</h1>
+<h1 id="143-le-trouble-neurocognitif-majeur-ou-leger-du-a-la-maladie-dalzheimer" class="entry-title hc-3">14.3 Le trouble neurocognitif majeur ou léger dû à la maladie d'Alzheimer</h1>
 <h2 id="definition_2">Définition</h2>
 <p>La <strong>maladie d'Alzheimer</strong> est une maladie neurodégénérative pouvant provoquer une détérioration progressive de plusieurs fonctions cognitives.</p>
 <h2 id="manifestations_2">Manifestations</h2>
@@ -157,7 +172,7 @@
 <h2 id="a-retenir_2">À retenir</h2>
 <p>La maladie d'Alzheimer est une cause fréquente de trouble neurocognitif majeur, particulièrement chez les personnes âgées.</p>
 <hr />
-<h1 id="144-le-trouble-neurocognitif-vasculaire" class="entry-title hc-4">🧠 14.4 Le trouble neurocognitif vasculaire</h1>
+<h1 id="144-le-trouble-neurocognitif-vasculaire" class="entry-title hc-4">14.4 Le trouble neurocognitif vasculaire</h1>
 <h2 id="definition_3">Définition</h2>
 <p>Le <strong>trouble neurocognitif vasculaire</strong> est associé à des atteintes du cerveau provoquées par des problèmes affectant les vaisseaux sanguins cérébraux.</p>
 <h2 id="causes-possibles">Causes possibles</h2>
@@ -180,7 +195,7 @@
 <h2 id="a-retenir_3">À retenir</h2>
 <p>Les troubles vasculaires peuvent avoir une évolution progressive ou apparaître après plusieurs événements cérébrovasculaires.</p>
 <hr />
-<h1 id="145-le-trouble-neurocognitif-a-corps-de-lewy" class="entry-title hc-5">🧠 14.5 Le trouble neurocognitif à corps de Lewy</h1>
+<h1 id="145-le-trouble-neurocognitif-a-corps-de-lewy" class="entry-title hc-5">14.5 Le trouble neurocognitif à corps de Lewy</h1>
 <h2 id="definition_4">Définition</h2>
 <p>Le <strong>trouble neurocognitif à corps de Lewy</strong> est associé à la présence de dépôts anormaux appelés <strong>corps de Lewy</strong> dans le cerveau.</p>
 <h2 id="manifestations_4">Manifestations</h2>
@@ -196,7 +211,7 @@
 <h2 id="a-retenir_4">À retenir</h2>
 <p>Les fluctuations cognitives et les hallucinations visuelles peuvent être particulièrement caractéristiques.</p>
 <hr />
-<h1 id="146-le-trouble-neurocognitif-du-a-la-maladie-de-parkinson" class="entry-title hc-1">🧠 14.6 Le trouble neurocognitif dû à la maladie de Parkinson</h1>
+<h1 id="146-le-trouble-neurocognitif-du-a-la-maladie-de-parkinson" class="entry-title hc-1">14.6 Le trouble neurocognitif dû à la maladie de Parkinson</h1>
 <h2 id="definition_5">Définition</h2>
 <p>Certaines personnes atteintes de <strong>maladie de Parkinson</strong> peuvent développer un trouble neurocognitif.</p>
 <h2 id="manifestations_5">Manifestations</h2>
@@ -211,7 +226,7 @@
 <h2 id="a-retenir_5">À retenir</h2>
 <p>Les troubles moteurs et cognitifs peuvent évoluer différemment selon les personnes.</p>
 <hr />
-<h1 id="147-le-trouble-neurocognitif-du-a-un-traumatisme-cranien" class="entry-title hc-2">🧠 14.7 Le trouble neurocognitif dû à un traumatisme crânien</h1>
+<h1 id="147-le-trouble-neurocognitif-du-a-un-traumatisme-cranien" class="entry-title hc-2">14.7 Le trouble neurocognitif dû à un traumatisme crânien</h1>
 <h2 id="definition_6">Définition</h2>
 <p>Un <strong>traumatisme crânien</strong> peut entraîner des difficultés cognitives persistantes.</p>
 <h2 id="manifestations_6">Manifestations</h2>
@@ -227,7 +242,7 @@
 <h2 id="a-retenir_6">À retenir</h2>
 <p>Les conséquences dépendent notamment de la gravité du traumatisme et des régions cérébrales concernées.</p>
 <hr />
-<h1 id="148-le-trouble-neurocognitif-du-a-une-infection-par-le-vih" class="entry-title hc-3">🧠 14.8 Le trouble neurocognitif dû à une infection par le VIH</h1>
+<h1 id="148-le-trouble-neurocognitif-du-a-une-infection-par-le-vih" class="entry-title hc-3">14.8 Le trouble neurocognitif dû à une infection par le VIH</h1>
 <h2 id="definition_7">Définition</h2>
 <p>Une infection par le <strong>VIH</strong> peut, dans certaines situations, être associée à des difficultés cognitives.</p>
 <h2 id="manifestations_7">Manifestations</h2>
@@ -241,7 +256,7 @@
 <h2 id="a-retenir_7">À retenir</h2>
 <p>Les traitements modernes ont fortement modifié l'évolution des complications neurologiques liées au VIH.</p>
 <hr />
-<h1 id="149-le-trouble-neurocognitif-du-a-une-substance-ou-a-un-medicament" class="entry-title hc-4">🧠 14.9 Le trouble neurocognitif dû à une substance ou à un médicament</h1>
+<h1 id="149-le-trouble-neurocognitif-du-a-une-substance-ou-a-un-medicament" class="entry-title hc-4">14.9 Le trouble neurocognitif dû à une substance ou à un médicament</h1>
 <h2 id="definition_8">Définition</h2>
 <p>Certaines substances ou certains médicaments peuvent provoquer des perturbations cognitives.</p>
 <h2 id="manifestations_8">Manifestations</h2>
@@ -256,7 +271,7 @@
 <h2 id="a-retenir_8">À retenir</h2>
 <p>L'évaluation doit prendre en compte la substance utilisée, la quantité, la durée d'utilisation et l'évolution des symptômes.</p>
 <hr />
-<h1 id="1410-le-trouble-neurocognitif-du-a-une-maladie-a-prions" class="entry-title hc-5">🧠 14.10 Le trouble neurocognitif dû à une maladie à prions</h1>
+<h1 id="1410-le-trouble-neurocognitif-du-a-une-maladie-a-prions" class="entry-title hc-5">14.10 Le trouble neurocognitif dû à une maladie à prions</h1>
 <h2 id="definition_9">Définition</h2>
 <p>Les <strong>maladies à prions</strong> sont des maladies neurologiques rares pouvant provoquer une détérioration cérébrale rapide.</p>
 <h2 id="manifestations_9">Manifestations</h2>
@@ -270,7 +285,7 @@
 <h2 id="a-retenir_9">À retenir</h2>
 <p>Ces maladies sont rares et peuvent évoluer rapidement.</p>
 <hr />
-<h1 id="1411-le-trouble-neurocognitif-du-a-la-maladie-de-huntington" class="entry-title hc-1">🧠 14.11 Le trouble neurocognitif dû à la maladie de Huntington</h1>
+<h1 id="1411-le-trouble-neurocognitif-du-a-la-maladie-de-huntington" class="entry-title hc-1">14.11 Le trouble neurocognitif dû à la maladie de Huntington</h1>
 <h2 id="definition_10">Définition</h2>
 <p>La <strong>maladie de Huntington</strong> est une maladie neurodégénérative héréditaire pouvant affecter les mouvements, la cognition et le comportement.</p>
 <h2 id="manifestations-cognitives">Manifestations cognitives</h2>
@@ -290,7 +305,7 @@
 <h2 id="a-retenir_10">À retenir</h2>
 <p>La maladie associe généralement des manifestations motrices, cognitives et psychiatriques.</p>
 <hr />
-<h1 id="1412-le-trouble-neurocognitif-du-a-une-autre-affection-medicale" class="entry-title hc-2">🧠 14.12 Le trouble neurocognitif dû à une autre affection médicale</h1>
+<h1 id="1412-le-trouble-neurocognitif-du-a-une-autre-affection-medicale" class="entry-title hc-2">14.12 Le trouble neurocognitif dû à une autre affection médicale</h1>
 <h2 id="definition_11">Définition</h2>
 <p>Certaines maladies médicales peuvent provoquer ou contribuer à une détérioration cognitive.</p>
 <h2 id="exemples">Exemples</h2>
@@ -304,7 +319,7 @@
 <h2 id="a-retenir_11">À retenir</h2>
 <p>Un trouble cognitif peut avoir une cause médicale réversible ou partiellement réversible, ce qui rend l'évaluation médicale importante.</p>
 <hr />
-<h1 id="1413-le-trouble-neurocognitif-frontotemporal" class="entry-title hc-3">🧠 14.13 Le trouble neurocognitif frontotemporal</h1>
+<h1 id="1413-le-trouble-neurocognitif-frontotemporal" class="entry-title hc-3">14.13 Le trouble neurocognitif frontotemporal</h1>
 <h2 id="definition_12">Définition</h2>
 <p>Le <strong>trouble neurocognitif frontotemporal</strong> est associé à une dégénérescence touchant principalement certaines régions frontales et temporales du cerveau.</p>
 <h2 id="manifestations_10">Manifestations</h2>
@@ -322,7 +337,7 @@
 <h2 id="a-retenir_12">À retenir</h2>
 <p>Le profil peut être très différent de celui observé dans la maladie d'Alzheimer.</p>
 <hr />
-<h1 id="1414-laphasie-progressive-primaire" class="entry-title hc-4">🧠 14.14 L'aphasie progressive primaire</h1>
+<h1 id="1414-laphasie-progressive-primaire" class="entry-title hc-4">14.14 L'aphasie progressive primaire</h1>
 <h2 id="definition_13">Définition</h2>
 <p>L'<strong>aphasie progressive primaire</strong> correspond à un syndrome dans lequel les difficultés du langage constituent initialement le principal problème.</p>
 <h2 id="manifestations_11">Manifestations</h2>
@@ -338,7 +353,7 @@
 <h2 id="a-retenir_13">À retenir</h2>
 <p>Le langage est au premier plan au début de certaines formes d'aphasie progressive primaire.</p>
 <hr />
-<h1 id="1415-les-troubles-de-memoire-lies-aux-troubles-neurocognitifs" class="entry-title hc-5">🧠 14.15 Les troubles de mémoire liés aux troubles neurocognitifs</h1>
+<h1 id="1415-les-troubles-de-memoire-lies-aux-troubles-neurocognitifs" class="entry-title hc-5">14.15 Les troubles de mémoire liés aux troubles neurocognitifs</h1>
 <h2 id="definition_14">Définition</h2>
 <p>Les troubles neurocognitifs peuvent provoquer différents types de problèmes de mémoire.</p>
 <h2 id="manifestations_12">Manifestations</h2>
@@ -353,7 +368,7 @@
 <h2 id="a-retenir_14">À retenir</h2>
 <p>Les troubles de mémoire ne signifient pas automatiquement qu'une personne présente une maladie neurodégénérative.</p>
 <hr />
-<h1 id="1416-les-troubles-de-lattention" class="entry-title hc-1">🧠 14.16 Les troubles de l'attention</h1>
+<h1 id="1416-les-troubles-de-lattention" class="entry-title hc-1">14.16 Les troubles de l'attention</h1>
 <h2 id="definition_15">Définition</h2>
 <p>Les troubles neurocognitifs peuvent affecter la capacité à maintenir ou orienter son attention.</p>
 <h2 id="manifestations_13">Manifestations</h2>
@@ -367,7 +382,7 @@
 <h2 id="a-retenir_15">À retenir</h2>
 <p>Les difficultés attentionnelles peuvent avoir de nombreuses causes.</p>
 <hr />
-<h1 id="1417-les-troubles-des-fonctions-executives" class="entry-title hc-2">🧠 14.17 Les troubles des fonctions exécutives</h1>
+<h1 id="1417-les-troubles-des-fonctions-executives" class="entry-title hc-2">14.17 Les troubles des fonctions exécutives</h1>
 <h2 id="definition_16">Définition</h2>
 <p>Les <strong>fonctions exécutives</strong> permettent notamment de planifier, organiser, contrôler et adapter son comportement.</p>
 <h2 id="manifestations_14">Manifestations</h2>
@@ -383,7 +398,7 @@
 <h2 id="a-retenir_16">À retenir</h2>
 <p>Les fonctions exécutives sont essentielles à l'autonomie quotidienne.</p>
 <hr />
-<h1 id="1418-les-troubles-visuospatiaux" class="entry-title hc-3">🧠 14.18 Les troubles visuospatiaux</h1>
+<h1 id="1418-les-troubles-visuospatiaux" class="entry-title hc-3">14.18 Les troubles visuospatiaux</h1>
 <h2 id="definition_17">Définition</h2>
 <p>Les difficultés <strong>visuospatiales</strong> concernent la capacité à comprendre et utiliser les informations relatives à l'espace.</p>
 <h2 id="manifestations_15">Manifestations</h2>
@@ -397,7 +412,7 @@
 <h2 id="a-retenir_17">À retenir</h2>
 <p>Ces difficultés peuvent être présentes dans différents troubles neurocognitifs.</p>
 <hr />
-<h1 id="1419-les-troubles-du-langage-dans-les-troubles-neurocognitifs" class="entry-title hc-4">🧠 14.19 Les troubles du langage dans les troubles neurocognitifs</h1>
+<h1 id="1419-les-troubles-du-langage-dans-les-troubles-neurocognitifs" class="entry-title hc-4">14.19 Les troubles du langage dans les troubles neurocognitifs</h1>
 <h2 id="definition_18">Définition</h2>
 <p>Certains troubles neurocognitifs peuvent provoquer des difficultés importantes de communication.</p>
 <h2 id="manifestations_16">Manifestations</h2>
@@ -412,7 +427,7 @@
 <h2 id="a-retenir_18">À retenir</h2>
 <p>Les troubles du langage peuvent fournir des informations importantes sur les régions cérébrales touchées.</p>
 <hr />
-<h1 id="1420-les-troubles-de-la-cognition-sociale" class="entry-title hc-5">🧠 14.20 Les troubles de la cognition sociale</h1>
+<h1 id="1420-les-troubles-de-la-cognition-sociale" class="entry-title hc-5">14.20 Les troubles de la cognition sociale</h1>
 <h2 id="definition_19">Définition</h2>
 <p>La <strong>cognition sociale</strong> correspond aux capacités permettant notamment de comprendre les émotions, intentions et comportements des autres.</p>
 <h2 id="manifestations_17">Manifestations</h2>
@@ -426,7 +441,7 @@
 <h2 id="a-retenir_19">À retenir</h2>
 <p>Ces difficultés sont particulièrement importantes dans certains troubles frontotemporaux.</p>
 <hr />
-<h1 id="1421-le-syndrome-confusionnel" class="entry-title hc-1">🧠 14.21 Le syndrome confusionnel</h1>
+<h1 id="1421-le-syndrome-confusionnel" class="entry-title hc-1">14.21 Le syndrome confusionnel</h1>
 <h2 id="definition_20">Définition</h2>
 <p>Le <strong>syndrome confusionnel</strong>, ou délirium, correspond à une perturbation aiguë de l'attention et de la conscience accompagnée de changements cognitifs.</p>
 <h2 id="manifestations_18">Manifestations</h2>
@@ -452,7 +467,7 @@
 <h2 id="a-retenir_20">À retenir</h2>
 <p>Le délirium apparaît généralement rapidement et constitue une situation médicale nécessitant une évaluation.</p>
 <hr />
-<h1 id="1422-le-delirium-du-a-une-intoxication" class="entry-title hc-2">🧠 14.22 Le délirium dû à une intoxication</h1>
+<h1 id="1422-le-delirium-du-a-une-intoxication" class="entry-title hc-2">14.22 Le délirium dû à une intoxication</h1>
 <h2 id="definition_21">Définition</h2>
 <p>Certaines intoxications peuvent provoquer un état confusionnel aigu.</p>
 <h2 id="manifestations_19">Manifestations</h2>
@@ -467,7 +482,7 @@
 <h2 id="a-retenir_21">À retenir</h2>
 <p>Le délirium associé à une intoxication peut nécessiter une prise en charge médicale urgente.</p>
 <hr />
-<h1 id="1423-le-delirium-du-au-sevrage" class="entry-title hc-3">🧠 14.23 Le délirium dû au sevrage</h1>
+<h1 id="1423-le-delirium-du-au-sevrage" class="entry-title hc-3">14.23 Le délirium dû au sevrage</h1>
 <h2 id="definition_22">Définition</h2>
 <p>Le <strong>délirium de sevrage</strong> peut apparaître après l'arrêt ou la diminution brutale de certaines substances chez une personne dépendante.</p>
 <h2 id="manifestations_20">Manifestations</h2>
@@ -483,7 +498,7 @@
 <h2 id="a-retenir_22">À retenir</h2>
 <p>Certaines formes de sevrage peuvent être dangereuses et nécessitent une prise en charge médicale.</p>
 <hr />
-<h1 id="1424-la-demence" class="entry-title hc-4">🧠 14.24 La démence</h1>
+<h1 id="1424-la-demence" class="entry-title hc-4">14.24 La démence</h1>
 <h2 id="definition_23">Définition</h2>
 <p>Le terme <strong>démence</strong> est encore largement utilisé dans le langage courant et médical, mais les classifications modernes utilisent notamment le terme <strong>trouble neurocognitif majeur</strong>.</p>
 <h2 id="manifestations_21">Manifestations</h2>
@@ -498,7 +513,7 @@
 </ul>
 <h2 id="a-retenir_23">À retenir</h2>
 <p>« Démence » ne désigne pas une maladie unique. Plusieurs maladies peuvent provoquer un syndrome démentiel.</p>
-<h1 id="1425-la-demence-a-debut-precoce" class="entry-title hc-5">🧠 14.25 La démence à début précoce</h1>
+<h1 id="1425-la-demence-a-debut-precoce" class="entry-title hc-5">14.25 La démence à début précoce</h1>
 <h2 id="definition_24">Définition</h2>
 <p>On parle généralement de <strong>début précoce</strong> lorsqu'un syndrome démentiel apparaît avant l'âge habituellement associé aux formes tardives.</p>
 <h2 id="causes-possibles_2">Causes possibles</h2>
@@ -512,7 +527,7 @@
 <h2 id="a-retenir_24">À retenir</h2>
 <p>L'âge d'apparition peut influencer les causes envisagées et l'évaluation médicale.</p>
 <hr />
-<h1 id="1426-la-progression-des-troubles-neurocognitifs" class="entry-title hc-1">🧠 14.26 La progression des troubles neurocognitifs</h1>
+<h1 id="1426-la-progression-des-troubles-neurocognitifs" class="entry-title hc-1">14.26 La progression des troubles neurocognitifs</h1>
 <h2 id="definition_25">Définition</h2>
 <p>L'évolution d'un trouble neurocognitif dépend fortement de sa cause.</p>
 <h2 id="evolutions-possibles">Évolutions possibles</h2>
@@ -527,7 +542,7 @@
 <h2 id="a-retenir_25">À retenir</h2>
 <p>Tous les troubles neurocognitifs n'évoluent pas de la même manière.</p>
 <hr />
-<h1 id="1427-les-troubles-neurocognitifs-reversibles-ou-partiellement-reversibles" class="entry-title hc-2">🧠 14.27 Les troubles neurocognitifs réversibles ou partiellement réversibles</h1>
+<h1 id="1427-les-troubles-neurocognitifs-reversibles-ou-partiellement-reversibles" class="entry-title hc-2">14.27 Les troubles neurocognitifs réversibles ou partiellement réversibles</h1>
 <h2 id="definition_26">Définition</h2>
 <p>Certaines causes de difficultés cognitives peuvent être traitées et parfois améliorées.</p>
 <h2 id="causes-possibles_3">Causes possibles</h2>
@@ -542,7 +557,7 @@
 <h2 id="a-retenir_26">À retenir</h2>
 <p>Une baisse cognitive récente mérite une évaluation afin de rechercher d'éventuelles causes traitables.</p>
 <hr />
-<h1 id="1428-les-changements-comportementaux-dans-les-troubles-neurocognitifs" class="entry-title hc-3">🧠 14.28 Les changements comportementaux dans les troubles neurocognitifs</h1>
+<h1 id="1428-les-changements-comportementaux-dans-les-troubles-neurocognitifs" class="entry-title hc-3">14.28 Les changements comportementaux dans les troubles neurocognitifs</h1>
 <h2 id="definition_27">Définition</h2>
 <p>Les troubles neurocognitifs peuvent provoquer des changements du comportement ou de la personnalité.</p>
 <h2 id="manifestations_22">Manifestations</h2>
@@ -558,7 +573,7 @@
 <h2 id="a-retenir_27">À retenir</h2>
 <p>Ces changements peuvent être liés à l'atteinte cérébrale et ne signifient pas nécessairement que la personne « choisit » de se comporter ainsi.</p>
 <hr />
-<h1 id="1429-lapathie-dans-les-troubles-neurocognitifs" class="entry-title hc-4">🧠 14.29 L'apathie dans les troubles neurocognitifs</h1>
+<h1 id="1429-lapathie-dans-les-troubles-neurocognitifs" class="entry-title hc-4">14.29 L'apathie dans les troubles neurocognitifs</h1>
 <h2 id="definition_28">Définition</h2>
 <p>L'<strong>apathie</strong> correspond à une diminution importante de la motivation et de l'initiative.</p>
 <h2 id="manifestations_23">Manifestations</h2>
@@ -572,7 +587,7 @@
 <h2 id="a-retenir_28">À retenir</h2>
 <p>L'apathie peut être observée dans plusieurs maladies neurologiques.</p>
 <hr />
-<h1 id="1430-les-hallucinations-dans-les-troubles-neurocognitifs" class="entry-title hc-5">🧠 14.30 Les hallucinations dans les troubles neurocognitifs</h1>
+<h1 id="1430-les-hallucinations-dans-les-troubles-neurocognitifs" class="entry-title hc-5">14.30 Les hallucinations dans les troubles neurocognitifs</h1>
 <h2 id="definition_29">Définition</h2>
 <p>Certaines personnes présentant un trouble neurocognitif peuvent avoir des hallucinations.</p>
 <h2 id="manifestations_24">Manifestations</h2>
@@ -587,7 +602,7 @@
 <h2 id="a-retenir_29">À retenir</h2>
 <p>La présence d'hallucinations ne signifie pas automatiquement qu'une personne souffre d'un trouble psychotique.</p>
 <hr />
-<h1 id="1431-les-troubles-du-sommeil-associes-aux-troubles-neurocognitifs" class="entry-title hc-1">🧠 14.31 Les troubles du sommeil associés aux troubles neurocognitifs</h1>
+<h1 id="1431-les-troubles-du-sommeil-associes-aux-troubles-neurocognitifs" class="entry-title hc-1">14.31 Les troubles du sommeil associés aux troubles neurocognitifs</h1>
 <h2 id="definition_30">Définition</h2>
 <p>Les troubles neurocognitifs peuvent perturber le cycle veille-sommeil.</p>
 <h2 id="manifestations_25">Manifestations</h2>
@@ -601,7 +616,7 @@
 <h2 id="a-retenir_30">À retenir</h2>
 <p>Les troubles du sommeil peuvent aggraver les difficultés cognitives et comportementales.</p>
 <hr />
-<h1 id="1432-lanosognosie" class="entry-title hc-2">🧠 14.32 L'anosognosie</h1>
+<h1 id="1432-lanosognosie" class="entry-title hc-2">14.32 L'anosognosie</h1>
 <h2 id="definition_31">Définition</h2>
 <p>L'<strong>anosognosie</strong> correspond à une diminution ou une absence de conscience de certaines difficultés ou déficits.</p>
 <h2 id="manifestations_26">Manifestations</h2>
@@ -614,7 +629,7 @@
 <h2 id="a-retenir_31">À retenir</h2>
 <p>L'anosognosie peut être liée à certaines atteintes cérébrales et ne correspond pas nécessairement à un simple déni volontaire.</p>
 <hr />
-<h1 id="1433-la-perte-progressive-dautonomie" class="entry-title hc-3">🧠 14.33 La perte progressive d'autonomie</h1>
+<h1 id="1433-la-perte-progressive-dautonomie" class="entry-title hc-3">14.33 La perte progressive d'autonomie</h1>
 <h2 id="definition_32">Définition</h2>
 <p>Dans les troubles neurocognitifs majeurs, la diminution des capacités cognitives peut progressivement affecter l'autonomie.</p>
 <h2 id="activites-pouvant-devenir-difficiles">Activités pouvant devenir difficiles</h2>
@@ -629,7 +644,7 @@
 <h2 id="a-retenir_32">À retenir</h2>
 <p>La perte d'autonomie constitue un élément important permettant de distinguer les troubles neurocognitifs majeurs des troubles légers.</p>
 <hr />
-<h1 id="1434-levaluation-neuropsychologique" class="entry-title hc-4">🧠 14.34 L'évaluation neuropsychologique</h1>
+<h1 id="1434-levaluation-neuropsychologique" class="entry-title hc-4">14.34 L'évaluation neuropsychologique</h1>
 <h2 id="definition_33">Définition</h2>
 <p>L'<strong>évaluation neuropsychologique</strong> consiste à examiner différentes fonctions cognitives à l'aide d'entretiens et de tests standardisés.</p>
 <h2 id="fonctions-evaluees">Fonctions évaluées</h2>
@@ -644,7 +659,7 @@
 <h2 id="a-retenir_33">À retenir</h2>
 <p>Les tests neuropsychologiques peuvent aider à identifier le profil des difficultés, mais ils ne suffisent pas toujours à déterminer seuls la cause du trouble.</p>
 <hr />
-<h1 id="1435-le-diagnostic-differentiel-des-troubles-neurocognitifs" class="entry-title hc-5">🧠 14.35 Le diagnostic différentiel des troubles neurocognitifs</h1>
+<h1 id="1435-le-diagnostic-differentiel-des-troubles-neurocognitifs" class="entry-title hc-5">14.35 Le diagnostic différentiel des troubles neurocognitifs</h1>
 <h2 id="definition_34">Définition</h2>
 <p>Le <strong>diagnostic différentiel</strong> consiste à rechercher différentes causes possibles lorsque des difficultés cognitives apparaissent.</p>
 <h2 id="causes-pouvant-etre-envisagees">Causes pouvant être envisagées</h2>
@@ -665,8 +680,26 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-15-troubles-disruptifs-du-controle-des-impulsions-et-des-conduites/"><span class="similar-icon">🩺</span>Partie 15 — Troubles disruptifs, du contrôle des impulsions et des conduites</a><a class="similar-item" href="/chapitre/troubles-partie-16-troubles-de-l-attachement/"><span class="similar-icon">🩺</span>Partie 16 — Troubles de l'attachement</a><a class="similar-item" href="/chapitre/troubles-partie-17-troubles-lies-a-la-sexualite/"><span class="similar-icon">🩺</span>Partie 17 — Troubles liés à la sexualité</a></div>
+      <h2>Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-15-troubles-disruptifs-du-controle-des-impulsions-et-des-conduites/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 15 — Troubles disruptifs, du contrôle des impulsions et des conduites</a><a class="similar-item" href="/chapitre/troubles-partie-16-troubles-de-l-attachement/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 16 — Troubles de l'attachement</a><a class="similar-item" href="/chapitre/troubles-partie-17-troubles-lies-a-la-sexualite/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 17 — Troubles liés à la sexualité</a></div>
     </div>
     <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
   </div>
@@ -752,23 +785,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -786,7 +821,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -966,9 +1001,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -977,10 +1014,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -1087,7 +1124,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1127,8 +1164,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1159,7 +1196,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1214,7 +1251,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1238,17 +1275,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1290,7 +1327,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#181-quest-ce-quun-processus-therapeutique">🧠 18.1 Qu'est-ce qu'un processus thérapeutique ?</a></li><li><a href="#182-therapie-et-changement-psychologique">🩺 18.2 Thérapie et changement psychologique</a></li><li><a href="#183-lalliance-therapeutique">🤝 18.3 L'alliance thérapeutique</a></li><li><a href="#184-les-objectifs-therapeutiques">🎯 18.4 Les objectifs thérapeutiques</a></li><li><a href="#185-le-role-de-la-parole">🗣️ 18.5 Le rôle de la parole</a></li><li><a href="#186-la-prise-de-conscience">🧠 18.6 La prise de conscience</a></li><li><a href="#187-linsight">🔎 18.7 L'insight</a></li><li><a href="#188-la-formulation-du-probleme">🧩 18.8 La formulation du problème</a></li><li><a href="#189-les-mecanismes-de-maintien">🔄 18.9 Les mécanismes de maintien</a></li><li><a href="#1810-levitement">🚪 18.10 L'évitement</a></li><li><a href="#1811-lexposition">🧠 18.11 L'exposition</a></li><li><a href="#1812-lapprentissage-par-exposition">🔬 18.12 L'apprentissage par exposition</a></li><li><a href="#1813-lextinction-et-les-nouveaux-apprentissages">🧠 18.13 L'extinction et les nouveaux apprentissages</a></li><li><a href="#1814-la-restructuration-cognitive">💭 18.14 La restructuration cognitive</a></li><li><a href="#1815-les-croyances-centrales">🧠 18.15 Les croyances centrales</a></li><li><a href="#1816-les-schemas-psychologiques">🔗 18.16 Les schémas psychologiques</a></li><li><a href="#1817-la-metacognition-en-therapie">🧠 18.17 La métacognition en thérapie</a></li><li><a href="#1818-la-flexibilite-psychologique">🌱 18.18 La flexibilité psychologique</a></li><li><a href="#1819-lacceptation-emotionnelle">❤️ 18.19 L'acceptation émotionnelle</a></li><li><a href="#1820-la-regulation-emotionnelle-en-therapie">🧠 18.20 La régulation émotionnelle en thérapie</a></li><li><a href="#1821-lexpression-emotionnelle">🗣️ 18.21 L'expression émotionnelle</a></li><li><a href="#1822-le-traitement-emotionnel">🧠 18.22 Le traitement émotionnel</a></li><li><a href="#1823-la-reevaluation-dune-experience">🧩 18.23 La réévaluation d'une expérience</a></li><li><a href="#1824-la-reconsolidation-de-la-memoire">🔄 18.24 La reconsolidation de la mémoire</a></li><li><a href="#1825-les-comportements-therapeutiques">🧠 18.25 Les comportements thérapeutiques</a></li><li><a href="#1826-lexperimentation-comportementale">🎯 18.26 L'expérimentation comportementale</a></li><li><a href="#1827-lactivation-comportementale">🧠 18.27 L'activation comportementale</a></li><li><a href="#1828-le-processus-relationnel">🤝 18.28 Le processus relationnel</a></li><li><a href="#1829-le-transfert">🪞 18.29 Le transfert</a></li><li><a href="#1830-le-contre-transfert">🔄 18.30 Le contre-transfert</a></li><li><a href="#1831-la-resistance">🚧 18.31 La résistance</a></li><li><a href="#1832-la-motivation-au-changement">🧠 18.32 La motivation au changement</a></li><li><a href="#1833-lambivalence-therapeutique">⚖️ 18.33 L'ambivalence thérapeutique</a></li><li><a href="#1834-le-renforcement-et-lapprentissage">🧩 18.34 Le renforcement et l'apprentissage</a></li><li><a href="#1835-la-generalisation">🧠 18.35 La généralisation</a></li><li><a href="#1836-la-prevention-de-la-rechute">🔄 18.36 La prévention de la rechute</a></li><li><a href="#1837-comment-mesurer-le-changement">📈 18.37 Comment mesurer le changement ?</a></li><li><a href="#1838-comment-sait-on-quune-therapie-fonctionne">🔬 18.38 Comment sait-on qu'une thérapie fonctionne ?</a></li><li><a href="#1839-les-limites-des-modeles-therapeutiques">⚠️ 18.39 Les limites des modèles thérapeutiques</a></li><li><a href="#1840-pourquoi-etudier-les-processus-therapeutiques">🔬 18.40 Pourquoi étudier les processus thérapeutiques ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#181-quest-ce-quun-processus-therapeutique">18.1 Qu'est-ce qu'un processus thérapeutique ?</a></li><li><a href="#182-therapie-et-changement-psychologique">18.2 Thérapie et changement psychologique</a></li><li><a href="#183-lalliance-therapeutique">18.3 L'alliance thérapeutique</a></li><li><a href="#184-les-objectifs-therapeutiques">18.4 Les objectifs thérapeutiques</a></li><li><a href="#185-le-role-de-la-parole">18.5 Le rôle de la parole</a></li><li><a href="#186-la-prise-de-conscience">18.6 La prise de conscience</a></li><li><a href="#187-linsight">18.7 L'insight</a></li><li><a href="#188-la-formulation-du-probleme">18.8 La formulation du problème</a></li><li><a href="#189-les-mecanismes-de-maintien">18.9 Les mécanismes de maintien</a></li><li><a href="#1810-levitement">18.10 L'évitement</a></li><li><a href="#1811-lexposition">18.11 L'exposition</a></li><li><a href="#1812-lapprentissage-par-exposition">18.12 L'apprentissage par exposition</a></li><li><a href="#1813-lextinction-et-les-nouveaux-apprentissages">18.13 L'extinction et les nouveaux apprentissages</a></li><li><a href="#1814-la-restructuration-cognitive">18.14 La restructuration cognitive</a></li><li><a href="#1815-les-croyances-centrales">18.15 Les croyances centrales</a></li><li><a href="#1816-les-schemas-psychologiques">18.16 Les schémas psychologiques</a></li><li><a href="#1817-la-metacognition-en-therapie">18.17 La métacognition en thérapie</a></li><li><a href="#1818-la-flexibilite-psychologique">18.18 La flexibilité psychologique</a></li><li><a href="#1819-lacceptation-emotionnelle">18.19 L'acceptation émotionnelle</a></li><li><a href="#1820-la-regulation-emotionnelle-en-therapie">18.20 La régulation émotionnelle en thérapie</a></li><li><a href="#1821-lexpression-emotionnelle">18.21 L'expression émotionnelle</a></li><li><a href="#1822-le-traitement-emotionnel">18.22 Le traitement émotionnel</a></li><li><a href="#1823-la-reevaluation-dune-experience">18.23 La réévaluation d'une expérience</a></li><li><a href="#1824-la-reconsolidation-de-la-memoire">18.24 La reconsolidation de la mémoire</a></li><li><a href="#1825-les-comportements-therapeutiques">18.25 Les comportements thérapeutiques</a></li><li><a href="#1826-lexperimentation-comportementale">18.26 L'expérimentation comportementale</a></li><li><a href="#1827-lactivation-comportementale">18.27 L'activation comportementale</a></li><li><a href="#1828-le-processus-relationnel">18.28 Le processus relationnel</a></li><li><a href="#1829-le-transfert">18.29 Le transfert</a></li><li><a href="#1830-le-contre-transfert">18.30 Le contre-transfert</a></li><li><a href="#1831-la-resistance">18.31 La résistance</a></li><li><a href="#1832-la-motivation-au-changement">18.32 La motivation au changement</a></li><li><a href="#1833-lambivalence-therapeutique">18.33 L'ambivalence thérapeutique</a></li><li><a href="#1834-le-renforcement-et-lapprentissage">18.34 Le renforcement et l'apprentissage</a></li><li><a href="#1835-la-generalisation">18.35 La généralisation</a></li><li><a href="#1836-la-prevention-de-la-rechute">18.36 La prévention de la rechute</a></li><li><a href="#1837-comment-mesurer-le-changement">18.37 Comment mesurer le changement ?</a></li><li><a href="#1838-comment-sait-on-quune-therapie-fonctionne">18.38 Comment sait-on qu'une thérapie fonctionne ?</a></li><li><a href="#1839-les-limites-des-modeles-therapeutiques">18.39 Les limites des modèles thérapeutiques</a></li><li><a href="#1840-pourquoi-etudier-les-processus-therapeutiques">18.40 Pourquoi étudier les processus thérapeutiques ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Processus thérapeutiques',
         category: 'Concepts avancés',
-        icon: '🔬'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/avances/">🔬 Concepts avancés</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/avances/">Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Processus thérapeutiques</h1>
     </div>
     <div id="resume-banner"></div>
@@ -106,7 +121,7 @@
     <div class="article-body">
       <p>Les processus thérapeutiques désignent l'ensemble des mécanismes psychologiques qui peuvent intervenir au cours d'une psychothérapie.</p>
 <p>Une thérapie ne consiste pas simplement à :</p>
-<p><strong>parler → recevoir des conseils → aller mieux</strong></p>
+<p><strong>parler  recevoir des conseils  aller mieux</strong></p>
 <p>Le changement psychologique peut impliquer de nombreux processus :</p>
 <ul>
 <li>modification des croyances</li>
@@ -123,7 +138,7 @@
 </ul>
 <p>Les différentes approches thérapeutiques ne reposent pas toutes sur les mêmes mécanismes.</p>
 <hr />
-<h2 id="181-quest-ce-quun-processus-therapeutique" class="entry-title hc-1">🧠 18.1 Qu'est-ce qu'un processus thérapeutique ?</h2>
+<h2 id="181-quest-ce-quun-processus-therapeutique" class="entry-title hc-1">18.1 Qu'est-ce qu'un processus thérapeutique ?</h2>
 <p>Un processus thérapeutique correspond à un mécanisme pouvant contribuer au changement psychologique au cours d'une intervention.</p>
 <p>Il peut être :</p>
 <ul>
@@ -137,22 +152,18 @@
 </ul>
 <p>Plusieurs processus peuvent fonctionner simultanément.</p>
 <hr />
-<h2 id="182-therapie-et-changement-psychologique" class="entry-title hc-2">🩺 18.2 Thérapie et changement psychologique</h2>
+<h2 id="182-therapie-et-changement-psychologique" class="entry-title hc-2">18.2 Thérapie et changement psychologique</h2>
 <p>Le changement thérapeutique peut concerner différents niveaux.</p>
 <p>Par exemple :</p>
 <p><strong>pensées</strong></p>
-<p>↓</p>
 <p><strong>émotions</strong></p>
-<p>↓</p>
 <p><strong>comportements</strong></p>
-<p>↓</p>
 <p><strong>relations</strong></p>
-<p>↓</p>
 <p><strong>représentation de soi</strong></p>
 <p>Le changement d'un niveau peut également influencer les autres.</p>
 <p>Une modification comportementale peut par exemple produire de nouvelles expériences qui modifient progressivement certaines croyances.</p>
 <hr />
-<h2 id="183-lalliance-therapeutique" class="entry-title hc-3">🤝 18.3 L'alliance thérapeutique</h2>
+<h2 id="183-lalliance-therapeutique" class="entry-title hc-3">18.3 L'alliance thérapeutique</h2>
 <p>L'alliance thérapeutique correspond à la qualité de la collaboration entre le patient et le thérapeute.</p>
 <p>Elle peut notamment inclure :</p>
 <ul>
@@ -165,7 +176,7 @@
 <p>L'alliance ne signifie pas nécessairement que le patient et le thérapeute sont toujours d'accord.</p>
 <p>Une relation thérapeutique peut contenir des désaccords tout en restant fonctionnelle.</p>
 <hr />
-<h2 id="184-les-objectifs-therapeutiques" class="entry-title hc-4">🎯 18.4 Les objectifs thérapeutiques</h2>
+<h2 id="184-les-objectifs-therapeutiques" class="entry-title hc-4">18.4 Les objectifs thérapeutiques</h2>
 <p>Les objectifs permettent de donner une direction au travail thérapeutique.</p>
 <p>Ils peuvent concerner :</p>
 <ul>
@@ -179,7 +190,7 @@
 </ul>
 <p>Les objectifs peuvent évoluer au cours de la thérapie.</p>
 <hr />
-<h2 id="185-le-role-de-la-parole" class="entry-title hc-5">🗣️ 18.5 Le rôle de la parole</h2>
+<h2 id="185-le-role-de-la-parole" class="entry-title hc-5">18.5 Le rôle de la parole</h2>
 <p>Dans de nombreuses psychothérapies, la parole constitue un outil central.</p>
 <p>Parler peut permettre de :</p>
 <ul>
@@ -193,7 +204,7 @@
 <p>Cependant, parler d'un problème ne produit pas automatiquement un changement.</p>
 <p>Le processus dépend notamment de ce qui est fait avec ce contenu.</p>
 <hr />
-<h2 id="186-la-prise-de-conscience" class="entry-title hc-1">🧠 18.6 La prise de conscience</h2>
+<h2 id="186-la-prise-de-conscience" class="entry-title hc-1">18.6 La prise de conscience</h2>
 <p>La prise de conscience correspond à l'identification plus claire d'un phénomène psychologique.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -207,38 +218,38 @@
 </ul>
 <p>La prise de conscience peut constituer une étape importante, mais elle n'est pas toujours suffisante pour provoquer un changement.</p>
 <hr />
-<h2 id="187-linsight" class="entry-title hc-2">🔎 18.7 L'insight</h2>
+<h2 id="187-linsight" class="entry-title hc-2">18.7 L'insight</h2>
 <p>L'insight désigne généralement une compréhension nouvelle ou plus profonde de certains processus psychologiques.</p>
 <p>Une personne peut par exemple comprendre :</p>
 <p><strong>« Je réagis toujours de cette manière lorsque je me sens rejetée. »</strong></p>
 <p>L'insight permet de relier plusieurs expériences auparavant perçues comme séparées.</p>
 <p>Il peut contribuer au changement lorsqu'il permet ensuite une modification des réponses psychologiques ou comportementales.</p>
 <hr />
-<h2 id="188-la-formulation-du-probleme" class="entry-title hc-3">🧩 18.8 La formulation du problème</h2>
+<h2 id="188-la-formulation-du-probleme" class="entry-title hc-3">18.8 La formulation du problème</h2>
 <p>La formulation thérapeutique cherche à comprendre comment le problème fonctionne.</p>
 <p>Elle peut examiner :</p>
-<p><strong>déclencheurs → pensées → émotions → comportements → conséquences</strong></p>
+<p><strong>déclencheurs  pensées  émotions  comportements  conséquences</strong></p>
 <p>Cette représentation permet notamment d'identifier certains mécanismes de maintien.</p>
 <hr />
-<h2 id="189-les-mecanismes-de-maintien" class="entry-title hc-4">🔄 18.9 Les mécanismes de maintien</h2>
+<h2 id="189-les-mecanismes-de-maintien" class="entry-title hc-4">18.9 Les mécanismes de maintien</h2>
 <p>Une difficulté peut continuer à exister parce que certaines réactions entretiennent involontairement le problème.</p>
 <p>Par exemple :</p>
-<p><strong>peur → évitement → soulagement → renforcement de l'évitement</strong></p>
+<p><strong>peur  évitement  soulagement  renforcement de l'évitement</strong></p>
 <p>La thérapie peut chercher à modifier cette boucle.</p>
 <hr />
-<h2 id="1810-levitement" class="entry-title hc-5">🚪 18.10 L'évitement</h2>
+<h2 id="1810-levitement" class="entry-title hc-5">18.10 L'évitement</h2>
 <p>L'évitement consiste à réduire ou empêcher le contact avec une situation, une pensée, une émotion ou une sensation jugée difficile.</p>
 <p>Il peut produire un soulagement immédiat.</p>
 <p>Cependant, lorsque l'évitement devient systématique, il peut empêcher certains apprentissages.</p>
 <hr />
-<h2 id="1811-lexposition" class="entry-title hc-1">🧠 18.11 L'exposition</h2>
+<h2 id="1811-lexposition" class="entry-title hc-1">18.11 L'exposition</h2>
 <p>L'exposition consiste à entrer progressivement en contact avec une situation, un stimulus, un souvenir ou une sensation redoutée dans un cadre thérapeutique approprié.</p>
 <p>Elle peut permettre de nouveaux apprentissages.</p>
 <p>L'objectif n'est pas nécessairement de faire disparaître immédiatement toute peur.</p>
 <p>Il peut plutôt s'agir d'apprendre :</p>
 <p><strong>« cette expérience peut être tolérée et de nouvelles conséquences sont possibles »</strong></p>
 <hr />
-<h2 id="1812-lapprentissage-par-exposition" class="entry-title hc-2">🔬 18.12 L'apprentissage par exposition</h2>
+<h2 id="1812-lapprentissage-par-exposition" class="entry-title hc-2">18.12 L'apprentissage par exposition</h2>
 <p>L'exposition peut permettre une mise à jour des prédictions.</p>
 <p>Avant l'exposition :</p>
 <p><strong>« Si je fais cela, quelque chose de catastrophique va arriver. »</strong></p>
@@ -246,20 +257,20 @@
 <p><strong>« Ce que je prévoyais ne s'est pas produit de la manière attendue. »</strong></p>
 <p>Le cerveau peut alors progressivement modifier certaines prédictions.</p>
 <hr />
-<h2 id="1813-lextinction-et-les-nouveaux-apprentissages" class="entry-title hc-3">🧠 18.13 L'extinction et les nouveaux apprentissages</h2>
+<h2 id="1813-lextinction-et-les-nouveaux-apprentissages" class="entry-title hc-3">18.13 L'extinction et les nouveaux apprentissages</h2>
 <p>En psychologie expérimentale, l'extinction correspond notamment à la diminution d'une réponse conditionnée lorsque le stimulus n'est plus suivi de la conséquence attendue.</p>
 <p>Dans les troubles anxieux, l'exposition peut favoriser de nouveaux apprentissages.</p>
 <p>Cependant, l'ancien apprentissage ne disparaît pas nécessairement complètement.</p>
 <p>De nouvelles associations peuvent apprendre à coexister avec les anciennes.</p>
 <hr />
-<h2 id="1814-la-restructuration-cognitive" class="entry-title hc-4">💭 18.14 La restructuration cognitive</h2>
+<h2 id="1814-la-restructuration-cognitive" class="entry-title hc-4">18.14 La restructuration cognitive</h2>
 <p>La restructuration cognitive consiste notamment à examiner certaines pensées ou croyances problématiques.</p>
 <p>Le processus peut inclure :</p>
-<p><strong>pensée → preuves → alternatives → nouvelle interprétation</strong></p>
+<p><strong>pensée  preuves  alternatives  nouvelle interprétation</strong></p>
 <p>L'objectif n'est pas de remplacer automatiquement toute pensée négative par une pensée positive.</p>
 <p>Il s'agit plutôt de rechercher une interprétation plus précise et mieux soutenue par les informations disponibles.</p>
 <hr />
-<h2 id="1815-les-croyances-centrales" class="entry-title hc-5">🧠 18.15 Les croyances centrales</h2>
+<h2 id="1815-les-croyances-centrales" class="entry-title hc-5">18.15 Les croyances centrales</h2>
 <p>Certaines croyances peuvent être très générales et concerner :</p>
 <ul>
 <li>soi</li>
@@ -271,13 +282,13 @@
 <p>Elles peuvent influencer de nombreuses situations.</p>
 <p>Une thérapie peut chercher à identifier leur fonctionnement et à examiner les expériences qui les renforcent ou les contredisent.</p>
 <hr />
-<h2 id="1816-les-schemas-psychologiques" class="entry-title hc-1">🔗 18.16 Les schémas psychologiques</h2>
+<h2 id="1816-les-schemas-psychologiques" class="entry-title hc-1">18.16 Les schémas psychologiques</h2>
 <p>Un schéma correspond à une organisation relativement stable de connaissances, croyances, attentes et interprétations.</p>
 <p>Un schéma peut influencer :</p>
-<p><strong>ce qui est remarqué → ce qui est interprété → ce qui est ressenti → ce qui est fait</strong></p>
+<p><strong>ce qui est remarqué  ce qui est interprété  ce qui est ressenti  ce qui est fait</strong></p>
 <p>Les schémas peuvent donc participer à la répétition de certains modes de fonctionnement.</p>
 <hr />
-<h2 id="1817-la-metacognition-en-therapie" class="entry-title hc-2">🧠 18.17 La métacognition en thérapie</h2>
+<h2 id="1817-la-metacognition-en-therapie" class="entry-title hc-2">18.17 La métacognition en thérapie</h2>
 <p>La métacognition correspond à la capacité à réfléchir sur ses propres processus mentaux.</p>
 <p>Elle permet notamment d'observer :</p>
 <p><strong>« Je remarque que je pense cela. »</strong></p>
@@ -285,7 +296,7 @@
 <p><strong>« Cette pensée est forcément vraie. »</strong></p>
 <p>Cette distinction peut créer une distance entre une pensée et l'adhésion automatique à celle-ci.</p>
 <hr />
-<h2 id="1818-la-flexibilite-psychologique" class="entry-title hc-3">🌱 18.18 La flexibilité psychologique</h2>
+<h2 id="1818-la-flexibilite-psychologique" class="entry-title hc-3">18.18 La flexibilité psychologique</h2>
 <p>La flexibilité psychologique correspond à la capacité à adapter son comportement et son fonctionnement mental aux différentes situations.</p>
 <p>Elle implique notamment la possibilité de :</p>
 <ul>
@@ -297,7 +308,7 @@
 </ul>
 <p>Elle s'oppose davantage à la rigidité qu'à la stabilité.</p>
 <hr />
-<h2 id="1819-lacceptation-emotionnelle" class="entry-title hc-4">❤️ 18.19 L'acceptation émotionnelle</h2>
+<h2 id="1819-lacceptation-emotionnelle" class="entry-title hc-4">18.19 L'acceptation émotionnelle</h2>
 <p>L'acceptation émotionnelle consiste à reconnaître l'existence d'une émotion sans chercher systématiquement à la supprimer.</p>
 <p>Elle ne signifie pas :</p>
 <p><strong>« j'aime cette émotion »</strong></p>
@@ -306,7 +317,7 @@
 <p>Elle signifie plutôt :</p>
 <p><strong>« cette émotion est présente et je peux l'observer sans nécessairement devoir agir immédiatement dessus »</strong></p>
 <hr />
-<h2 id="1820-la-regulation-emotionnelle-en-therapie" class="entry-title hc-5">🧠 18.20 La régulation émotionnelle en thérapie</h2>
+<h2 id="1820-la-regulation-emotionnelle-en-therapie" class="entry-title hc-5">18.20 La régulation émotionnelle en thérapie</h2>
 <p>La thérapie peut permettre d'apprendre différentes stratégies de régulation.</p>
 <p>Cela peut inclure :</p>
 <ul>
@@ -320,7 +331,7 @@
 <p>L'objectif n'est pas nécessairement de diminuer toutes les émotions.</p>
 <p>Certaines émotions fournissent des informations importantes.</p>
 <hr />
-<h2 id="1821-lexpression-emotionnelle" class="entry-title hc-1">🗣️ 18.21 L'expression émotionnelle</h2>
+<h2 id="1821-lexpression-emotionnelle" class="entry-title hc-1">18.21 L'expression émotionnelle</h2>
 <p>Certaines thérapies utilisent l'expression émotionnelle comme processus thérapeutique.</p>
 <p>Mettre en mots une émotion peut permettre de mieux :</p>
 <ul>
@@ -332,7 +343,7 @@
 <p>Cependant, l'expression émotionnelle seule n'est pas toujours suffisante.</p>
 <p>Elle doit être replacée dans un processus thérapeutique plus large.</p>
 <hr />
-<h2 id="1822-le-traitement-emotionnel" class="entry-title hc-2">🧠 18.22 Le traitement émotionnel</h2>
+<h2 id="1822-le-traitement-emotionnel" class="entry-title hc-2">18.22 Le traitement émotionnel</h2>
 <p>Le traitement émotionnel désigne notamment le processus par lequel une expérience émotionnelle est progressivement intégrée et comprise.</p>
 <p>Une expérience difficile peut initialement être associée à :</p>
 <ul>
@@ -343,7 +354,7 @@
 </ul>
 <p>Le travail thérapeutique peut permettre de modifier progressivement certaines associations.</p>
 <hr />
-<h2 id="1823-la-reevaluation-dune-experience" class="entry-title hc-3">🧩 18.23 La réévaluation d'une expérience</h2>
+<h2 id="1823-la-reevaluation-dune-experience" class="entry-title hc-3">18.23 La réévaluation d'une expérience</h2>
 <p>Une expérience passée peut être réinterprétée avec de nouvelles informations.</p>
 <p>Cela ne signifie pas modifier les faits historiques.</p>
 <p>Cela signifie modifier leur <strong>signification psychologique</strong>.</p>
@@ -352,13 +363,13 @@
 <p>à :</p>
 <p><strong>« cet événement a eu certaines conséquences, mais il ne définit pas entièrement mes capacités »</strong></p>
 <hr />
-<h2 id="1824-la-reconsolidation-de-la-memoire" class="entry-title hc-4">🔄 18.24 La reconsolidation de la mémoire</h2>
+<h2 id="1824-la-reconsolidation-de-la-memoire" class="entry-title hc-4">18.24 La reconsolidation de la mémoire</h2>
 <p>Lorsqu'un souvenir est réactivé, certains modèles neuroscientifiques proposent qu'il puisse temporairement devenir susceptible de modification avant d'être à nouveau stabilisé.</p>
 <p>Ce processus est appelé <strong>reconsolidation</strong>.</p>
 <p>Il constitue un domaine important de recherche concernant les mécanismes possibles de certains changements thérapeutiques.</p>
 <p>Cependant, toutes les formes de changement thérapeutique ne peuvent pas être réduites à la reconsolidation.</p>
 <hr />
-<h2 id="1825-les-comportements-therapeutiques" class="entry-title hc-5">🧠 18.25 Les comportements thérapeutiques</h2>
+<h2 id="1825-les-comportements-therapeutiques" class="entry-title hc-5">18.25 Les comportements thérapeutiques</h2>
 <p>Certaines thérapies travaillent directement sur les comportements.</p>
 <p>Cela peut inclure :</p>
 <ul>
@@ -370,27 +381,24 @@
 </ul>
 <p>Modifier un comportement peut produire de nouvelles expériences et donc de nouveaux apprentissages.</p>
 <hr />
-<h2 id="1826-lexperimentation-comportementale" class="entry-title hc-1">🎯 18.26 L'expérimentation comportementale</h2>
+<h2 id="1826-lexperimentation-comportementale" class="entry-title hc-1">18.26 L'expérimentation comportementale</h2>
 <p>Une expérimentation comportementale permet de tester une prédiction dans la réalité.</p>
 <p>Exemple :</p>
-<p><strong>prédiction → « si je fais X, alors Y va forcément arriver »</strong></p>
-<p>↓</p>
+<p><strong>prédiction  « si je fais X, alors Y va forcément arriver »</strong></p>
 <p><strong>expérience</strong></p>
-<p>↓</p>
 <p><strong>résultat observé</strong></p>
-<p>↓</p>
 <p><strong>comparaison avec la prédiction</strong></p>
 <p>Cela permet parfois de mettre à l'épreuve certaines croyances.</p>
 <hr />
-<h2 id="1827-lactivation-comportementale" class="entry-title hc-2">🧠 18.27 L'activation comportementale</h2>
+<h2 id="1827-lactivation-comportementale" class="entry-title hc-2">18.27 L'activation comportementale</h2>
 <p>L'activation comportementale consiste notamment à augmenter progressivement certaines activités ayant une valeur ou une fonction importante.</p>
 <p>Elle est particulièrement étudiée dans le traitement de la dépression.</p>
 <p>L'objectif n'est pas simplement :</p>
 <p><strong>« faire plus de choses »</strong></p>
 <p>mais de modifier certaines relations entre :</p>
-<p><strong>activité → récompense → humeur → retrait → nouvelle activité</strong></p>
+<p><strong>activité  récompense  humeur  retrait  nouvelle activité</strong></p>
 <hr />
-<h2 id="1828-le-processus-relationnel" class="entry-title hc-3">🤝 18.28 Le processus relationnel</h2>
+<h2 id="1828-le-processus-relationnel" class="entry-title hc-3">18.28 Le processus relationnel</h2>
 <p>La relation avec le thérapeute peut elle-même devenir un espace d'observation et d'apprentissage.</p>
 <p>Elle peut permettre d'examiner :</p>
 <ul>
@@ -404,20 +412,20 @@
 </ul>
 <p>Cela varie fortement selon les approches thérapeutiques.</p>
 <hr />
-<h2 id="1829-le-transfert" class="entry-title hc-4">🪞 18.29 Le transfert</h2>
+<h2 id="1829-le-transfert" class="entry-title hc-4">18.29 Le transfert</h2>
 <p>Dans les approches psychodynamiques, le transfert désigne notamment le fait que certaines attentes, émotions ou représentations relationnelles puissent être mobilisées dans la relation thérapeutique.</p>
 <p>La relation thérapeutique peut alors devenir un contexte permettant d'observer certains schémas relationnels.</p>
 <p>Le transfert n'est donc pas simplement :</p>
 <p><strong>« aimer ou détester son thérapeute »</strong></p>
 <p>Il peut concerner des attentes relationnelles beaucoup plus complexes.</p>
 <hr />
-<h2 id="1830-le-contre-transfert" class="entry-title hc-5">🔄 18.30 Le contre-transfert</h2>
+<h2 id="1830-le-contre-transfert" class="entry-title hc-5">18.30 Le contre-transfert</h2>
 <p>Le contre-transfert désigne historiquement les réactions du thérapeute dans la relation avec le patient.</p>
 <p>Les conceptions contemporaines varient selon les approches.</p>
 <p>Ces réactions peuvent être considérées comme des informations potentielles sur la relation, mais elles doivent être analysées avec prudence.</p>
 <p>Une réaction du thérapeute n'est pas automatiquement la preuve de quelque chose concernant le patient.</p>
 <hr />
-<h2 id="1831-la-resistance" class="entry-title hc-1">🚧 18.31 La résistance</h2>
+<h2 id="1831-la-resistance" class="entry-title hc-1">18.31 La résistance</h2>
 <p>Dans certaines approches psychothérapeutiques, le terme résistance désigne des processus qui peuvent empêcher ou ralentir certains changements.</p>
 <p>Cela peut se manifester par :</p>
 <ul>
@@ -432,7 +440,7 @@
 <p>Il ne signifie pas simplement :</p>
 <p><strong>« le patient ne veut pas coopérer »</strong></p>
 <hr />
-<h2 id="1832-la-motivation-au-changement" class="entry-title hc-2">🧠 18.32 La motivation au changement</h2>
+<h2 id="1832-la-motivation-au-changement" class="entry-title hc-2">18.32 La motivation au changement</h2>
 <p>La motivation peut fluctuer.</p>
 <p>Une personne peut simultanément :</p>
 <p><strong>vouloir changer</strong></p>
@@ -441,32 +449,29 @@
 <p>Cette ambivalence est fréquente dans de nombreux processus thérapeutiques.</p>
 <p>Elle peut donc être étudiée plutôt que considérée uniquement comme un obstacle.</p>
 <hr />
-<h2 id="1833-lambivalence-therapeutique" class="entry-title hc-3">⚖️ 18.33 L'ambivalence thérapeutique</h2>
+<h2 id="1833-lambivalence-therapeutique" class="entry-title hc-3">18.33 L'ambivalence thérapeutique</h2>
 <p>L'ambivalence correspond à la coexistence de motivations contradictoires.</p>
 <p>Par exemple :</p>
 <p><strong>« Je veux changer, mais j'ai peur de perdre ce que je connais. »</strong></p>
 <p>Ces deux tendances peuvent être présentes simultanément.</p>
 <p>Le changement peut alors nécessiter une évolution progressive de l'équilibre entre ces motivations.</p>
 <hr />
-<h2 id="1834-le-renforcement-et-lapprentissage" class="entry-title hc-4">🧩 18.34 Le renforcement et l'apprentissage</h2>
+<h2 id="1834-le-renforcement-et-lapprentissage" class="entry-title hc-4">18.34 Le renforcement et l'apprentissage</h2>
 <p>Certains changements thérapeutiques peuvent être compris à travers les mécanismes d'apprentissage.</p>
 <p>Un comportement peut devenir plus probable lorsqu'il produit une conséquence renforçante.</p>
 <p>La thérapie peut donc modifier certains environnements d'apprentissage et introduire de nouvelles expériences.</p>
 <hr />
-<h2 id="1835-la-generalisation" class="entry-title hc-5">🧠 18.35 La généralisation</h2>
+<h2 id="1835-la-generalisation" class="entry-title hc-5">18.35 La généralisation</h2>
 <p>Un apprentissage réalisé dans une situation thérapeutique doit idéalement pouvoir être transféré à d'autres contextes.</p>
 <p>C'est ce qu'on peut appeler la généralisation.</p>
 <p>Par exemple :</p>
 <p><strong>nouvelle compétence en séance</strong></p>
-<p>↓</p>
 <p><strong>application dans la vie quotidienne</strong></p>
-<p>↓</p>
 <p><strong>répétition</strong></p>
-<p>↓</p>
 <p><strong>nouveau fonctionnement plus stable</strong></p>
 <p>Sans généralisation, une amélioration peut rester limitée au contexte thérapeutique.</p>
 <hr />
-<h2 id="1836-la-prevention-de-la-rechute" class="entry-title hc-1">🔄 18.36 La prévention de la rechute</h2>
+<h2 id="1836-la-prevention-de-la-rechute" class="entry-title hc-1">18.36 La prévention de la rechute</h2>
 <p>Une amélioration thérapeutique ne signifie pas nécessairement que le risque de retour des symptômes disparaît définitivement.</p>
 <p>Certaines approches travaillent donc sur :</p>
 <ul>
@@ -478,7 +483,7 @@
 </ul>
 <p>L'objectif est notamment de rendre les changements plus durables.</p>
 <hr />
-<h2 id="1837-comment-mesurer-le-changement" class="entry-title hc-2">📈 18.37 Comment mesurer le changement ?</h2>
+<h2 id="1837-comment-mesurer-le-changement" class="entry-title hc-2">18.37 Comment mesurer le changement ?</h2>
 <p>Le changement thérapeutique peut être évalué de différentes manières.</p>
 <p>On peut examiner :</p>
 <ul>
@@ -492,7 +497,7 @@
 </ul>
 <p>L'évolution peut être suivie avant, pendant et après la thérapie.</p>
 <hr />
-<h2 id="1838-comment-sait-on-quune-therapie-fonctionne" class="entry-title hc-3">🔬 18.38 Comment sait-on qu'une thérapie fonctionne ?</h2>
+<h2 id="1838-comment-sait-on-quune-therapie-fonctionne" class="entry-title hc-3">18.38 Comment sait-on qu'une thérapie fonctionne ?</h2>
 <p>La recherche utilise différentes méthodes pour étudier l'efficacité des psychothérapies.</p>
 <p>Elle peut comparer :</p>
 <ul>
@@ -508,7 +513,7 @@
 <p><strong>réponse individuelle</strong></p>
 <p>Une intervention pouvant être efficace en moyenne ne produit pas nécessairement le même résultat chez chaque personne.</p>
 <hr />
-<h2 id="1839-les-limites-des-modeles-therapeutiques" class="entry-title hc-4">⚠️ 18.39 Les limites des modèles thérapeutiques</h2>
+<h2 id="1839-les-limites-des-modeles-therapeutiques" class="entry-title hc-4">18.39 Les limites des modèles thérapeutiques</h2>
 <p>Aucun modèle psychothérapeutique ne décrit parfaitement l'ensemble du changement psychologique.</p>
 <p>Les mécanismes peuvent être :</p>
 <ul>
@@ -520,58 +525,88 @@
 <p>Il existe également plusieurs écoles thérapeutiques proposant des explications différentes.</p>
 <p>Les recherches contemporaines cherchent notamment à déterminer quels mécanismes sont communs à plusieurs approches et lesquels sont spécifiques à certaines thérapies.</p>
 <hr />
-<h2 id="1840-pourquoi-etudier-les-processus-therapeutiques" class="entry-title hc-5">🔬 18.40 Pourquoi étudier les processus thérapeutiques ?</h2>
+<h2 id="1840-pourquoi-etudier-les-processus-therapeutiques" class="entry-title hc-5">18.40 Pourquoi étudier les processus thérapeutiques ?</h2>
 <p>Étudier les processus thérapeutiques permet de comprendre <strong>comment le changement psychologique peut se produire</strong>, et pas seulement de savoir si une thérapie produit statistiquement une amélioration.</p>
 <p>Un changement peut impliquer :</p>
-<p><strong>🧠 compréhension</strong></p>
-<p>↓</p>
-<p><strong>❤️ expérience émotionnelle</strong></p>
-<p>↓</p>
-<p><strong>🎯 comportement</strong></p>
-<p>↓</p>
-<p><strong>🔄 apprentissage</strong></p>
-<p>↓</p>
-<p><strong>🧩 modification des croyances</strong></p>
-<p>↓</p>
-<p><strong>🤝 changement relationnel</strong></p>
-<p>↓</p>
-<p><strong>🌱 nouveau fonctionnement</strong></p>
+<p>** compréhension**</p>
+<p>** expérience émotionnelle**</p>
+<p>** comportement**</p>
+<p>** apprentissage**</p>
+<p>** modification des croyances**</p>
+<p>** changement relationnel**</p>
+<p>** nouveau fonctionnement**</p>
 <p>Les processus thérapeutiques sont donc multidimensionnels.</p>
 <p>Ils peuvent agir simultanément sur les pensées, les émotions, les comportements, les relations, les souvenirs et les représentations de soi.</p>
 <p>Une psychothérapie ne fonctionne pas nécessairement grâce à un seul mécanisme.</p>
 <p>Elle peut plutôt être comprise comme un <strong>ensemble dynamique de processus qui interagissent au cours du temps</strong>.</p>
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🧠 <strong>Une psychothérapie ne consiste pas uniquement à parler.</strong></p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p><strong>Une psychothérapie ne consiste pas uniquement à parler.</strong></p>
 <p>Elle peut mobiliser des processus cognitifs, émotionnels, comportementaux et relationnels.</p>
-<p>🤝 <strong>L'alliance thérapeutique est importante.</strong></p>
+<p><strong>L'alliance thérapeutique est importante.</strong></p>
 <p>Elle concerne notamment la collaboration autour des objectifs et du travail thérapeutique.</p>
-<p>🔎 <strong>L'insight peut favoriser la compréhension.</strong></p>
+<p><strong>L'insight peut favoriser la compréhension.</strong></p>
 <p>Mais comprendre un problème ne garantit pas automatiquement sa modification.</p>
-<p>🚪 <strong>L'évitement peut maintenir certaines difficultés.</strong></p>
+<p><strong>L'évitement peut maintenir certaines difficultés.</strong></p>
 <p>Il peut produire un soulagement immédiat tout en empêchant certains apprentissages.</p>
-<p>🧠 <strong>L'exposition permet de nouveaux apprentissages.</strong></p>
+<p><strong>L'exposition permet de nouveaux apprentissages.</strong></p>
 <p>Elle peut notamment modifier certaines prédictions et associations liées à la peur.</p>
-<p>💭 <strong>La restructuration cognitive permet d'examiner certaines interprétations.</strong></p>
+<p><strong>La restructuration cognitive permet d'examiner certaines interprétations.</strong></p>
 <p>L'objectif est davantage de rechercher une compréhension plus précise que de remplacer systématiquement une pensée négative par une pensée positive.</p>
-<p>❤️ <strong>La régulation émotionnelle peut être travaillée.</strong></p>
+<p><strong>La régulation émotionnelle peut être travaillée.</strong></p>
 <p>Réguler une émotion ne signifie pas nécessairement la supprimer.</p>
-<p>🔄 <strong>Les comportements peuvent produire de nouveaux apprentissages.</strong></p>
+<p><strong>Les comportements peuvent produire de nouveaux apprentissages.</strong></p>
 <p>Une nouvelle expérience répétée peut progressivement modifier certaines attentes et habitudes.</p>
-<p>🧩 <strong>La thérapie peut agir sur des boucles de maintien.</strong></p>
+<p><strong>La thérapie peut agir sur des boucles de maintien.</strong></p>
 <p>Modifier un seul élément peut parfois influencer plusieurs autres processus.</p>
-<p>📈 <strong>Le changement peut être progressif.</strong></p>
+<p><strong>Le changement peut être progressif.</strong></p>
 <p>Il peut concerner les symptômes, les comportements, les émotions, les relations ou la représentation de soi.</p>
-<p>⚠️ <strong>Les mécanismes thérapeutiques ne sont pas identiques dans toutes les thérapies.</strong></p>
+<p><strong>Les mécanismes thérapeutiques ne sont pas identiques dans toutes les thérapies.</strong></p>
 <p>Chaque approche possède ses propres modèles, concepts et méthodes.</p>
 <p>Enfin, comprendre les processus thérapeutiques revient à étudier une question centrale de la psychologie clinique :</p>
 <p><strong>comment un fonctionnement psychologique relativement stable peut-il progressivement se modifier ?</strong></p>
 <p>La réponse implique généralement plusieurs niveaux à la fois :</p>
-<p><strong>🧠 cognition + ❤️ émotions + 🎯 comportements + 🤝 relations + 🧬 apprentissage + 🌱 environnement</strong></p>
+<p>** cognition +  émotions +  comportements +  relations +  apprentissage +  environnement**</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-recherche-et-modeles-scientifiques/"><span class="similar-icon">🔬</span>Recherche et modèles scientifiques</a><a class="similar-item" href="/chapitre/avances-concepts-psychologiques-tres-avances/"><span class="similar-icon">🔬</span>Concepts psychologiques très avancés</a><a class="similar-item" href="/chapitre/avances-modeles-et-theories-psychologiques/"><span class="similar-icon">🔬</span>Modèles et théories psychologiques</a></div>
+      <h2>Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-recherche-et-modeles-scientifiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Recherche et modèles scientifiques</a><a class="similar-item" href="/chapitre/avances-concepts-psychologiques-tres-avances/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Concepts psychologiques très avancés</a><a class="similar-item" href="/chapitre/avances-modeles-et-theories-psychologiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Modèles et théories psychologiques</a></div>
     </div>
     <a class="back-link" href="/categorie/avances/">← Retour à « Concepts avancés »</a>
   </div>
@@ -657,23 +692,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -691,7 +728,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -871,9 +908,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -882,10 +921,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -992,7 +1031,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1032,8 +1071,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1064,7 +1103,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1119,7 +1158,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1143,17 +1182,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1195,7 +1234,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

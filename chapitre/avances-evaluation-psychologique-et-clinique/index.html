@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#161-quest-ce-que-levaluation-psychologique">🩺 16.1 Qu'est-ce que l'évaluation psychologique ?</a></li><li><a href="#162-pourquoi-realiser-une-evaluation">🎯 16.2 Pourquoi réaliser une évaluation ?</a></li><li><a href="#163-lanamnese">🧩 16.3 L'anamnèse</a></li><li><a href="#164-lentretien-clinique">🗣️ 16.4 L'entretien clinique</a></li><li><a href="#165-lentretien-non-structure">🧠 16.5 L'entretien non structuré</a></li><li><a href="#166-lentretien-semi-structure">📋 16.6 L'entretien semi-structuré</a></li><li><a href="#167-lentretien-structure">📑 16.7 L'entretien structuré</a></li><li><a href="#168-lobservation-clinique">👁️ 16.8 L'observation clinique</a></li><li><a href="#169-les-tests-psychologiques">🧠 16.9 Les tests psychologiques</a></li><li><a href="#1610-la-standardisation">📊 16.10 La standardisation</a></li><li><a href="#1611-les-normes">📈 16.11 Les normes</a></li><li><a href="#1612-la-validite">🧠 16.12 La validité</a></li><li><a href="#1613-la-fidelite">🔄 16.13 La fidélité</a></li><li><a href="#1614-fidelite-et-validite">⚖️ 16.14 Fidélité et validité</a></li><li><a href="#1615-les-questionnaires-dauto-evaluation">🧠 16.15 Les questionnaires d'auto-évaluation</a></li><li><a href="#1616-les-evaluations-hetero-rapportees">👥 16.16 Les évaluations hétéro-rapportées</a></li><li><a href="#1617-la-triangulation-des-informations">🧩 16.17 La triangulation des informations</a></li><li><a href="#1618-les-hypotheses-cliniques">🔍 16.18 Les hypothèses cliniques</a></li><li><a href="#1619-le-raisonnement-clinique">🧠 16.19 Le raisonnement clinique</a></li><li><a href="#1620-le-diagnostic-differentiel">🔎 16.20 Le diagnostic différentiel</a></li><li><a href="#1621-le-fonctionnement-cognitif">🧠 16.21 Le fonctionnement cognitif</a></li><li><a href="#1622-levaluation-de-la-memoire">🧠 16.22 L'évaluation de la mémoire</a></li><li><a href="#1623-levaluation-de-lattention">🎯 16.23 L'évaluation de l'attention</a></li><li><a href="#1624-levaluation-des-fonctions-executives">🧩 16.24 L'évaluation des fonctions exécutives</a></li><li><a href="#1625-levaluation-de-la-personnalite">🪞 16.25 L'évaluation de la personnalité</a></li><li><a href="#1626-levaluation-des-symptomes-emotionnels">❤️ 16.26 L'évaluation des symptômes émotionnels</a></li><li><a href="#1627-levaluation-dimensionnelle">🧠 16.27 L'évaluation dimensionnelle</a></li><li><a href="#1628-levaluation-categorielle">📋 16.28 L'évaluation catégorielle</a></li><li><a href="#1629-lapproche-dimensionnelle-et-categorielle">🔄 16.29 L'approche dimensionnelle et catégorielle</a></li><li><a href="#1630-levaluation-ecologique">🧠 16.30 L'évaluation écologique</a></li><li><a href="#1631-linfluence-du-contexte">🌍 16.31 L'influence du contexte</a></li><li><a href="#1632-les-differences-culturelles">🧬 16.32 Les différences culturelles</a></li><li><a href="#1633-les-biais-de-levaluation">🗣️ 16.33 Les biais de l'évaluation</a></li><li><a href="#1634-leffet-des-attentes">🧠 16.34 L'effet des attentes</a></li><li><a href="#1635-levolution-dans-le-temps">🔄 16.35 L'évolution dans le temps</a></li><li><a href="#1636-letat-et-le-trait">🧩 16.36 L'état et le trait</a></li><li><a href="#1637-linterpretation-integrative">🧠 16.37 L'interprétation intégrative</a></li><li><a href="#1638-les-limites-des-tests-psychologiques">⚠️ 16.38 Les limites des tests psychologiques</a></li><li><a href="#1639-evaluation-clinique-et-diagnostic">🩺 16.39 Évaluation clinique et diagnostic</a></li><li><a href="#1640-pourquoi-etudier-levaluation-psychologique-et-clinique">🔬 16.40 Pourquoi étudier l'évaluation psychologique et clinique ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#161-quest-ce-que-levaluation-psychologique">16.1 Qu'est-ce que l'évaluation psychologique ?</a></li><li><a href="#162-pourquoi-realiser-une-evaluation">16.2 Pourquoi réaliser une évaluation ?</a></li><li><a href="#163-lanamnese">16.3 L'anamnèse</a></li><li><a href="#164-lentretien-clinique">16.4 L'entretien clinique</a></li><li><a href="#165-lentretien-non-structure">16.5 L'entretien non structuré</a></li><li><a href="#166-lentretien-semi-structure">16.6 L'entretien semi-structuré</a></li><li><a href="#167-lentretien-structure">16.7 L'entretien structuré</a></li><li><a href="#168-lobservation-clinique">16.8 L'observation clinique</a></li><li><a href="#169-les-tests-psychologiques">16.9 Les tests psychologiques</a></li><li><a href="#1610-la-standardisation">16.10 La standardisation</a></li><li><a href="#1611-les-normes">16.11 Les normes</a></li><li><a href="#1612-la-validite">16.12 La validité</a></li><li><a href="#1613-la-fidelite">16.13 La fidélité</a></li><li><a href="#1614-fidelite-et-validite">16.14 Fidélité et validité</a></li><li><a href="#1615-les-questionnaires-dauto-evaluation">16.15 Les questionnaires d'auto-évaluation</a></li><li><a href="#1616-les-evaluations-hetero-rapportees">16.16 Les évaluations hétéro-rapportées</a></li><li><a href="#1617-la-triangulation-des-informations">16.17 La triangulation des informations</a></li><li><a href="#1618-les-hypotheses-cliniques">16.18 Les hypothèses cliniques</a></li><li><a href="#1619-le-raisonnement-clinique">16.19 Le raisonnement clinique</a></li><li><a href="#1620-le-diagnostic-differentiel">16.20 Le diagnostic différentiel</a></li><li><a href="#1621-le-fonctionnement-cognitif">16.21 Le fonctionnement cognitif</a></li><li><a href="#1622-levaluation-de-la-memoire">16.22 L'évaluation de la mémoire</a></li><li><a href="#1623-levaluation-de-lattention">16.23 L'évaluation de l'attention</a></li><li><a href="#1624-levaluation-des-fonctions-executives">16.24 L'évaluation des fonctions exécutives</a></li><li><a href="#1625-levaluation-de-la-personnalite">16.25 L'évaluation de la personnalité</a></li><li><a href="#1626-levaluation-des-symptomes-emotionnels">16.26 L'évaluation des symptômes émotionnels</a></li><li><a href="#1627-levaluation-dimensionnelle">16.27 L'évaluation dimensionnelle</a></li><li><a href="#1628-levaluation-categorielle">16.28 L'évaluation catégorielle</a></li><li><a href="#1629-lapproche-dimensionnelle-et-categorielle">16.29 L'approche dimensionnelle et catégorielle</a></li><li><a href="#1630-levaluation-ecologique">16.30 L'évaluation écologique</a></li><li><a href="#1631-linfluence-du-contexte">16.31 L'influence du contexte</a></li><li><a href="#1632-les-differences-culturelles">16.32 Les différences culturelles</a></li><li><a href="#1633-les-biais-de-levaluation">16.33 Les biais de l'évaluation</a></li><li><a href="#1634-leffet-des-attentes">16.34 L'effet des attentes</a></li><li><a href="#1635-levolution-dans-le-temps">16.35 L'évolution dans le temps</a></li><li><a href="#1636-letat-et-le-trait">16.36 L'état et le trait</a></li><li><a href="#1637-linterpretation-integrative">16.37 L'interprétation intégrative</a></li><li><a href="#1638-les-limites-des-tests-psychologiques">16.38 Les limites des tests psychologiques</a></li><li><a href="#1639-evaluation-clinique-et-diagnostic">16.39 Évaluation clinique et diagnostic</a></li><li><a href="#1640-pourquoi-etudier-levaluation-psychologique-et-clinique">16.40 Pourquoi étudier l'évaluation psychologique et clinique ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Évaluation psychologique et clinique',
         category: 'Concepts avancés',
-        icon: '🔬'
+        icon: 'É'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/avances/">🔬 Concepts avancés</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/avances/">Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Évaluation psychologique et clinique</h1>
     </div>
     <div id="resume-banner"></div>
@@ -122,10 +137,10 @@
 <p>L'évaluation clinique ne consiste donc pas simplement à « faire un test ».</p>
 <p>Elle repose généralement sur plusieurs sources d'informations qui doivent être confrontées entre elles.</p>
 <p>On peut résumer son fonctionnement général ainsi :</p>
-<p><strong>informations → observation → hypothèses → vérification → interprétation clinique</strong></p>
+<p><strong>informations  observation  hypothèses  vérification  interprétation clinique</strong></p>
 <p>Une évaluation cherche avant tout à produire une compréhension <strong>organisée, nuancée et contextualisée</strong> du fonctionnement psychologique.</p>
 <hr />
-<h2 id="161-quest-ce-que-levaluation-psychologique" class="entry-title hc-1">🩺 16.1 Qu'est-ce que l'évaluation psychologique ?</h2>
+<h2 id="161-quest-ce-que-levaluation-psychologique" class="entry-title hc-1">16.1 Qu'est-ce que l'évaluation psychologique ?</h2>
 <p>L'évaluation psychologique est une démarche permettant de recueillir des informations sur différents aspects du fonctionnement psychique.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -141,7 +156,7 @@
 <p>Elle peut être utilisée dans différents contextes :</p>
 <p><strong>clinique, neuropsychologique, scolaire, professionnel, recherche ou expertise</strong>, selon le cadre et les objectifs.</p>
 <hr />
-<h2 id="162-pourquoi-realiser-une-evaluation" class="entry-title hc-2">🎯 16.2 Pourquoi réaliser une évaluation ?</h2>
+<h2 id="162-pourquoi-realiser-une-evaluation" class="entry-title hc-2">16.2 Pourquoi réaliser une évaluation ?</h2>
 <p>Une évaluation peut avoir plusieurs objectifs.</p>
 <p>Par exemple :</p>
 <ul>
@@ -158,7 +173,7 @@
 <p>L'objectif détermine en grande partie les méthodes utilisées.</p>
 <p>Une évaluation destinée à examiner la mémoire ne sera pas construite de la même manière qu'une évaluation centrée sur la personnalité.</p>
 <hr />
-<h2 id="163-lanamnese" class="entry-title hc-3">🧩 16.3 L'anamnèse</h2>
+<h2 id="163-lanamnese" class="entry-title hc-3">16.3 L'anamnèse</h2>
 <p>L'anamnèse correspond au recueil des informations concernant l'histoire de la personne et l'évolution de la problématique.</p>
 <p>Elle peut notamment explorer :</p>
 <ul>
@@ -173,33 +188,33 @@
 </ul>
 <p>L'anamnèse permet de replacer les manifestations actuelles dans leur contexte.</p>
 <hr />
-<h2 id="164-lentretien-clinique" class="entry-title hc-4">🗣️ 16.4 L'entretien clinique</h2>
+<h2 id="164-lentretien-clinique" class="entry-title hc-4">16.4 L'entretien clinique</h2>
 <p>L'entretien clinique constitue l'une des principales méthodes d'évaluation.</p>
 <p>Il permet d'explorer :</p>
-<p><strong>ce qui se passe → depuis quand → dans quelles situations → avec quelle intensité → avec quelles conséquences</strong></p>
+<p><strong>ce qui se passe  depuis quand  dans quelles situations  avec quelle intensité  avec quelles conséquences</strong></p>
 <p>L'entretien permet également d'observer la manière dont la personne décrit son expérience.</p>
 <p>Cependant, l'entretien n'est pas une simple conversation.</p>
 <p>Il repose généralement sur une démarche structurée, adaptée à l'objectif clinique.</p>
 <hr />
-<h2 id="165-lentretien-non-structure" class="entry-title hc-5">🧠 16.5 L'entretien non structuré</h2>
+<h2 id="165-lentretien-non-structure" class="entry-title hc-5">16.5 L'entretien non structuré</h2>
 <p>Dans un entretien non structuré, le professionnel dispose d'une grande liberté concernant les questions posées et l'ordre dans lequel elles sont abordées.</p>
 <p>Cela permet d'explorer certains éléments de manière approfondie.</p>
 <p>Mais cette méthode peut également produire davantage de variabilité entre les évaluateurs.</p>
 <hr />
-<h2 id="166-lentretien-semi-structure" class="entry-title hc-1">📋 16.6 L'entretien semi-structuré</h2>
+<h2 id="166-lentretien-semi-structure" class="entry-title hc-1">16.6 L'entretien semi-structuré</h2>
 <p>L'entretien semi-structuré utilise un cadre défini tout en permettant une certaine flexibilité.</p>
 <p>Le professionnel dispose généralement de thèmes ou de questions déterminés à l'avance.</p>
 <p>Il peut cependant approfondir certaines réponses.</p>
 <p>Cette méthode cherche donc à combiner :</p>
 <p><strong>standardisation + adaptation individuelle</strong></p>
 <hr />
-<h2 id="167-lentretien-structure" class="entry-title hc-2">📑 16.7 L'entretien structuré</h2>
+<h2 id="167-lentretien-structure" class="entry-title hc-2">16.7 L'entretien structuré</h2>
 <p>L'entretien structuré suit un protocole beaucoup plus standardisé.</p>
 <p>Les questions et leur organisation sont davantage définies.</p>
 <p>Cela permet notamment d'améliorer la comparabilité entre différentes évaluations.</p>
 <p>Les entretiens structurés sont particulièrement utilisés dans certains contextes diagnostiques et de recherche.</p>
 <hr />
-<h2 id="168-lobservation-clinique" class="entry-title hc-3">👁️ 16.8 L'observation clinique</h2>
+<h2 id="168-lobservation-clinique" class="entry-title hc-3">16.8 L'observation clinique</h2>
 <p>L'observation constitue également une source d'information.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -215,7 +230,7 @@
 <p>L'observation ne permet toutefois pas de connaître directement les pensées d'une personne.</p>
 <p>Elle doit donc être interprétée avec prudence.</p>
 <hr />
-<h2 id="169-les-tests-psychologiques" class="entry-title hc-4">🧠 16.9 Les tests psychologiques</h2>
+<h2 id="169-les-tests-psychologiques" class="entry-title hc-4">16.9 Les tests psychologiques</h2>
 <p>Les tests psychologiques sont des outils standardisés permettant d'évaluer certaines caractéristiques ou capacités.</p>
 <p>Ils peuvent notamment mesurer :</p>
 <ul>
@@ -230,7 +245,7 @@
 <p>Un test ne mesure cependant jamais « toute la psychologie » d'une personne.</p>
 <p>Il mesure un construit ou un ensemble de caractéristiques défini par son modèle.</p>
 <hr />
-<h2 id="1610-la-standardisation" class="entry-title hc-5">📊 16.10 La standardisation</h2>
+<h2 id="1610-la-standardisation" class="entry-title hc-5">16.10 La standardisation</h2>
 <p>La standardisation consiste à administrer et interpréter un outil selon des procédures définies.</p>
 <p>Elle permet notamment de réduire certaines sources de variation.</p>
 <p>Cela peut concerner :</p>
@@ -244,7 +259,7 @@
 </ul>
 <p>Sans standardisation suffisante, comparer deux résultats devient beaucoup plus difficile.</p>
 <hr />
-<h2 id="1611-les-normes" class="entry-title hc-1">📈 16.11 Les normes</h2>
+<h2 id="1611-les-normes" class="entry-title hc-1">16.11 Les normes</h2>
 <p>Les résultats de nombreux tests sont comparés à des données provenant d'une population de référence.</p>
 <p>Cette comparaison permet de déterminer si une performance se situe :</p>
 <ul>
@@ -258,7 +273,7 @@
 <p><strong>« inférieur à la moyenne = pathologique »</strong></p>
 <p>Une différence statistique n'est pas automatiquement un trouble clinique.</p>
 <hr />
-<h2 id="1612-la-validite" class="entry-title hc-2">🧠 16.12 La validité</h2>
+<h2 id="1612-la-validite" class="entry-title hc-2">16.12 La validité</h2>
 <p>La validité concerne notamment la question suivante :</p>
 <p><strong>« Est-ce que l'outil mesure réellement ce qu'il est censé mesurer ? »</strong></p>
 <p>Différentes formes de validité peuvent être étudiées.</p>
@@ -272,7 +287,7 @@
 </ul>
 <p>Un test peut être très précis dans sa mesure tout en mesurant quelque chose de différent de ce qui était prévu.</p>
 <hr />
-<h2 id="1613-la-fidelite" class="entry-title hc-3">🔄 16.13 La fidélité</h2>
+<h2 id="1613-la-fidelite" class="entry-title hc-3">16.13 La fidélité</h2>
 <p>La fidélité concerne la stabilité et la précision de la mesure.</p>
 <p>Une mesure fiable doit produire des résultats suffisamment cohérents dans les conditions où cette stabilité est attendue.</p>
 <p>Différents aspects peuvent être étudiés :</p>
@@ -283,14 +298,14 @@
 </ul>
 <p>La fidélité et la validité sont donc deux notions différentes.</p>
 <hr />
-<h2 id="1614-fidelite-et-validite" class="entry-title hc-4">⚖️ 16.14 Fidélité et validité</h2>
+<h2 id="1614-fidelite-et-validite" class="entry-title hc-4">16.14 Fidélité et validité</h2>
 <p>Un outil peut être :</p>
 <p><strong>fiable mais peu valide</strong></p>
 <p>s'il mesure de manière très constante quelque chose qui n'est pas le construit recherché.</p>
 <p>À l'inverse, une mesure pertinente mais extrêmement instable pose également problème.</p>
 <p>Une bonne évaluation nécessite donc des instruments présentant des qualités psychométriques suffisantes.</p>
 <hr />
-<h2 id="1615-les-questionnaires-dauto-evaluation" class="entry-title hc-5">🧠 16.15 Les questionnaires d'auto-évaluation</h2>
+<h2 id="1615-les-questionnaires-dauto-evaluation" class="entry-title hc-5">16.15 Les questionnaires d'auto-évaluation</h2>
 <p>Les questionnaires d'auto-évaluation demandent à une personne de rapporter elle-même ses expériences.</p>
 <p>Ils peuvent explorer :</p>
 <ul>
@@ -312,7 +327,7 @@
 <li>interprétation personnelle</li>
 </ul>
 <hr />
-<h2 id="1616-les-evaluations-hetero-rapportees" class="entry-title hc-1">👥 16.16 Les évaluations hétéro-rapportées</h2>
+<h2 id="1616-les-evaluations-hetero-rapportees" class="entry-title hc-1">16.16 Les évaluations hétéro-rapportées</h2>
 <p>Une évaluation hétéro-rapportée repose sur des informations fournies par une autre personne.</p>
 <p>Cela peut être pertinent lorsque le comportement observé est difficile à évaluer uniquement à partir de l'auto-description.</p>
 <p>Selon le contexte, les informations peuvent provenir :</p>
@@ -324,14 +339,14 @@
 </ul>
 <p>Ces informations doivent également être interprétées avec prudence.</p>
 <hr />
-<h2 id="1617-la-triangulation-des-informations" class="entry-title hc-2">🧩 16.17 La triangulation des informations</h2>
+<h2 id="1617-la-triangulation-des-informations" class="entry-title hc-2">16.17 La triangulation des informations</h2>
 <p>La triangulation consiste à comparer plusieurs sources d'information.</p>
 <p>Par exemple :</p>
 <p><strong>entretien + observation + questionnaire + test cognitif</strong></p>
 <p>Si plusieurs sources convergent, l'hypothèse clinique peut gagner en crédibilité.</p>
 <p>Si elles divergent, cette divergence devient elle-même une information à comprendre.</p>
 <hr />
-<h2 id="1618-les-hypotheses-cliniques" class="entry-title hc-3">🔍 16.18 Les hypothèses cliniques</h2>
+<h2 id="1618-les-hypotheses-cliniques" class="entry-title hc-3">16.18 Les hypothèses cliniques</h2>
 <p>L'évaluation ne consiste pas seulement à accumuler des informations.</p>
 <p>Le professionnel construit progressivement des hypothèses.</p>
 <p>Par exemple :</p>
@@ -341,7 +356,7 @@
 <p>et :</p>
 <p><strong>« Quelles observations pourraient la contredire ? »</strong></p>
 <hr />
-<h2 id="1619-le-raisonnement-clinique" class="entry-title hc-4">🧠 16.19 Le raisonnement clinique</h2>
+<h2 id="1619-le-raisonnement-clinique" class="entry-title hc-4">16.19 Le raisonnement clinique</h2>
 <p>Le raisonnement clinique consiste à organiser les informations afin de construire une compréhension cohérente.</p>
 <p>Il implique notamment :</p>
 <ul>
@@ -353,7 +368,7 @@
 </ul>
 <p>Il s'agit donc d'un processus dynamique.</p>
 <hr />
-<h2 id="1620-le-diagnostic-differentiel" class="entry-title hc-5">🔎 16.20 Le diagnostic différentiel</h2>
+<h2 id="1620-le-diagnostic-differentiel" class="entry-title hc-5">16.20 Le diagnostic différentiel</h2>
 <p>Le diagnostic différentiel consiste à comparer plusieurs hypothèses pouvant expliquer des manifestations similaires.</p>
 <p>Un même symptôme peut apparaître dans différents troubles ou situations.</p>
 <p>Par exemple, des difficultés de concentration peuvent être liées à :</p>
@@ -369,7 +384,7 @@
 </ul>
 <p>La présence d'un symptôme isolé ne suffit donc généralement pas à déterminer son origine.</p>
 <hr />
-<h2 id="1621-le-fonctionnement-cognitif" class="entry-title hc-1">🧠 16.21 Le fonctionnement cognitif</h2>
+<h2 id="1621-le-fonctionnement-cognitif" class="entry-title hc-1">16.21 Le fonctionnement cognitif</h2>
 <p>L'évaluation neuropsychologique peut explorer différentes fonctions cognitives.</p>
 <p>Par exemple :</p>
 <p><strong>mémoire</strong></p>
@@ -380,7 +395,7 @@
 <p><strong>capacités visuospatiales</strong></p>
 <p>Elle cherche notamment à déterminer comment ces fonctions fonctionnent et comment elles interagissent.</p>
 <hr />
-<h2 id="1622-levaluation-de-la-memoire" class="entry-title hc-2">🧠 16.22 L'évaluation de la mémoire</h2>
+<h2 id="1622-levaluation-de-la-memoire" class="entry-title hc-2">16.22 L'évaluation de la mémoire</h2>
 <p>Une évaluation de la mémoire peut distinguer plusieurs processus :</p>
 <ul>
 <li>encodage</li>
@@ -395,7 +410,7 @@
 <p>Une difficulté de mémoire ne signifie donc pas nécessairement que « toute la mémoire fonctionne mal ».</p>
 <p>Différents systèmes peuvent être affectés différemment.</p>
 <hr />
-<h2 id="1623-levaluation-de-lattention" class="entry-title hc-3">🎯 16.23 L'évaluation de l'attention</h2>
+<h2 id="1623-levaluation-de-lattention" class="entry-title hc-3">16.23 L'évaluation de l'attention</h2>
 <p>L'attention peut être évaluée sous plusieurs dimensions :</p>
 <ul>
 <li>attention soutenue</li>
@@ -414,7 +429,7 @@
 </ul>
 <p>Un résultat doit donc être interprété dans son contexte.</p>
 <hr />
-<h2 id="1624-levaluation-des-fonctions-executives" class="entry-title hc-4">🧩 16.24 L'évaluation des fonctions exécutives</h2>
+<h2 id="1624-levaluation-des-fonctions-executives" class="entry-title hc-4">16.24 L'évaluation des fonctions exécutives</h2>
 <p>Les fonctions exécutives peuvent être examinées à travers différentes tâches.</p>
 <p>Par exemple :</p>
 <ul>
@@ -427,7 +442,7 @@
 </ul>
 <p>Il n'existe pas une seule tâche permettant de mesurer parfaitement l'ensemble des fonctions exécutives.</p>
 <hr />
-<h2 id="1625-levaluation-de-la-personnalite" class="entry-title hc-5">🪞 16.25 L'évaluation de la personnalité</h2>
+<h2 id="1625-levaluation-de-la-personnalite" class="entry-title hc-5">16.25 L'évaluation de la personnalité</h2>
 <p>L'évaluation de la personnalité peut utiliser différents modèles et instruments.</p>
 <p>Elle peut explorer :</p>
 <ul>
@@ -440,7 +455,7 @@
 </ul>
 <p>La personnalité ne doit pas être réduite à un score unique.</p>
 <hr />
-<h2 id="1626-levaluation-des-symptomes-emotionnels" class="entry-title hc-1">❤️ 16.26 L'évaluation des symptômes émotionnels</h2>
+<h2 id="1626-levaluation-des-symptomes-emotionnels" class="entry-title hc-1">16.26 L'évaluation des symptômes émotionnels</h2>
 <p>Les outils cliniques peuvent explorer différentes dimensions :</p>
 <ul>
 <li>anxiété</li>
@@ -452,10 +467,10 @@
 </ul>
 <p>Un questionnaire peut quantifier certaines manifestations mais ne remplace pas nécessairement une évaluation clinique complète.</p>
 <hr />
-<h2 id="1627-levaluation-dimensionnelle" class="entry-title hc-2">🧠 16.27 L'évaluation dimensionnelle</h2>
+<h2 id="1627-levaluation-dimensionnelle" class="entry-title hc-2">16.27 L'évaluation dimensionnelle</h2>
 <p>Une approche dimensionnelle considère certaines caractéristiques sur un continuum.</p>
 <p>Par exemple :</p>
-<p><strong>faible ←────────→ élevée</strong></p>
+<p><strong>faible ──────── élevée</strong></p>
 <p>Cela peut être utilisé pour étudier :</p>
 <ul>
 <li>anxiété</li>
@@ -466,15 +481,15 @@
 </ul>
 <p>Cette approche permet de représenter des différences quantitatives entre les individus.</p>
 <hr />
-<h2 id="1628-levaluation-categorielle" class="entry-title hc-3">📋 16.28 L'évaluation catégorielle</h2>
+<h2 id="1628-levaluation-categorielle" class="entry-title hc-3">16.28 L'évaluation catégorielle</h2>
 <p>Une approche catégorielle cherche notamment à déterminer si un ensemble de critères correspondant à une catégorie diagnostique est présent.</p>
 <p>Elle fonctionne davantage selon une logique :</p>
-<p><strong>critères présents → catégorie possible</strong></p>
+<p><strong>critères présents  catégorie possible</strong></p>
 <p>ou :</p>
-<p><strong>critères insuffisants → catégorie non retenue</strong></p>
+<p><strong>critères insuffisants  catégorie non retenue</strong></p>
 <p>Les systèmes catégoriels sont utiles mais peuvent simplifier une réalité psychologique plus continue.</p>
 <hr />
-<h2 id="1629-lapproche-dimensionnelle-et-categorielle" class="entry-title hc-4">🔄 16.29 L'approche dimensionnelle et catégorielle</h2>
+<h2 id="1629-lapproche-dimensionnelle-et-categorielle" class="entry-title hc-4">16.29 L'approche dimensionnelle et catégorielle</h2>
 <p>Les deux approches peuvent être complémentaires.</p>
 <p>Une personne peut présenter :</p>
 <p><strong>une catégorie diagnostique</strong></p>
@@ -482,7 +497,7 @@
 <p><strong>des degrés différents de plusieurs dimensions psychologiques.</strong></p>
 <p>Cela permet d'éviter une vision trop binaire du fonctionnement psychologique.</p>
 <hr />
-<h2 id="1630-levaluation-ecologique" class="entry-title hc-5">🧠 16.30 L'évaluation écologique</h2>
+<h2 id="1630-levaluation-ecologique" class="entry-title hc-5">16.30 L'évaluation écologique</h2>
 <p>Une difficulté observée dans un cabinet ou lors d'un test ne correspond pas toujours exactement au fonctionnement quotidien.</p>
 <p>L'évaluation écologique cherche donc à examiner le fonctionnement dans des situations proches de la vie réelle.</p>
 <p>Cela peut concerner :</p>
@@ -496,7 +511,7 @@
 </ul>
 <p>Le contexte peut fortement modifier les performances.</p>
 <hr />
-<h2 id="1631-linfluence-du-contexte" class="entry-title hc-1">🌍 16.31 L'influence du contexte</h2>
+<h2 id="1631-linfluence-du-contexte" class="entry-title hc-1">16.31 L'influence du contexte</h2>
 <p>Une performance psychologique n'est jamais complètement indépendante du contexte.</p>
 <p>Elle peut être influencée par :</p>
 <ul>
@@ -511,7 +526,7 @@
 </ul>
 <p>Une évaluation doit donc prendre en compte ces facteurs.</p>
 <hr />
-<h2 id="1632-les-differences-culturelles" class="entry-title hc-2">🧬 16.32 Les différences culturelles</h2>
+<h2 id="1632-les-differences-culturelles" class="entry-title hc-2">16.32 Les différences culturelles</h2>
 <p>Les outils psychologiques peuvent être influencés par la culture.</p>
 <p>Cela peut concerner :</p>
 <ul>
@@ -524,7 +539,7 @@
 </ul>
 <p>L'interprétation d'un résultat doit donc tenir compte de la population dans laquelle l'outil a été développé et validé.</p>
 <hr />
-<h2 id="1633-les-biais-de-levaluation" class="entry-title hc-3">🗣️ 16.33 Les biais de l'évaluation</h2>
+<h2 id="1633-les-biais-de-levaluation" class="entry-title hc-3">16.33 Les biais de l'évaluation</h2>
 <p>Toute évaluation peut être influencée par différentes sources de biais.</p>
 <p>Par exemple :</p>
 <p><strong>biais de l'évaluateur</strong></p>
@@ -535,12 +550,12 @@
 <p><strong>erreur de mesure</strong></p>
 <p>Une bonne méthodologie cherche à réduire ces influences.</p>
 <hr />
-<h2 id="1634-leffet-des-attentes" class="entry-title hc-4">🧠 16.34 L'effet des attentes</h2>
+<h2 id="1634-leffet-des-attentes" class="entry-title hc-4">16.34 L'effet des attentes</h2>
 <p>Les attentes peuvent influencer certaines évaluations.</p>
 <p>Un évaluateur qui s'attend fortement à observer un certain comportement peut involontairement accorder davantage d'attention aux informations qui correspondent à cette attente.</p>
 <p>C'est pourquoi la standardisation, l'utilisation de plusieurs sources et la réflexion critique sont importantes.</p>
 <hr />
-<h2 id="1635-levolution-dans-le-temps" class="entry-title hc-5">🔄 16.35 L'évolution dans le temps</h2>
+<h2 id="1635-levolution-dans-le-temps" class="entry-title hc-5">16.35 L'évolution dans le temps</h2>
 <p>Une évaluation réalisée à un moment donné représente principalement un <strong>état à un moment donné</strong>.</p>
 <p>Le fonctionnement psychologique peut évoluer.</p>
 <p>Ainsi :</p>
@@ -554,22 +569,21 @@
 </ul>
 <p>L'évolution temporelle constitue donc une information clinique importante.</p>
 <hr />
-<h2 id="1636-letat-et-le-trait" class="entry-title hc-1">🧩 16.36 L'état et le trait</h2>
+<h2 id="1636-letat-et-le-trait" class="entry-title hc-1">16.36 L'état et le trait</h2>
 <p>Une distinction importante concerne :</p>
-<p><strong>état → caractéristique relativement temporaire</strong></p>
-<p><strong>trait → caractéristique plus stable</strong></p>
+<p><strong>état  caractéristique relativement temporaire</strong></p>
+<p><strong>trait  caractéristique plus stable</strong></p>
 <p>Par exemple, une personne peut présenter temporairement une forte anxiété sans que cela signifie qu'elle possède un trait d'anxiété constamment élevé.</p>
 <p>L'évaluation doit donc distinguer ce qui semble situationnel de ce qui semble plus durable.</p>
 <hr />
-<h2 id="1637-linterpretation-integrative" class="entry-title hc-2">🧠 16.37 L'interprétation intégrative</h2>
+<h2 id="1637-linterpretation-integrative" class="entry-title hc-2">16.37 L'interprétation intégrative</h2>
 <p>Une évaluation clinique complète cherche à mettre les différentes informations en relation.</p>
 <p>On peut représenter le processus ainsi :</p>
 <p><strong>symptômes + histoire + contexte + cognition + émotions + comportements + relations</strong></p>
-<p>↓</p>
 <p><strong>formulation clinique</strong></p>
 <p>Cette formulation permet de comprendre comment différents facteurs peuvent interagir.</p>
 <hr />
-<h2 id="1638-les-limites-des-tests-psychologiques" class="entry-title hc-3">⚠️ 16.38 Les limites des tests psychologiques</h2>
+<h2 id="1638-les-limites-des-tests-psychologiques" class="entry-title hc-3">16.38 Les limites des tests psychologiques</h2>
 <p>Aucun test psychologique ne permet d'obtenir une connaissance parfaite d'une personne.</p>
 <p>Un test possède toujours :</p>
 <ul>
@@ -582,24 +596,24 @@
 <p>Un score doit donc être interprété dans son contexte.</p>
 <p>Un résultat isolé ne devrait pas être transformé automatiquement en diagnostic.</p>
 <hr />
-<h2 id="1639-evaluation-clinique-et-diagnostic" class="entry-title hc-4">🩺 16.39 Évaluation clinique et diagnostic</h2>
+<h2 id="1639-evaluation-clinique-et-diagnostic" class="entry-title hc-4">16.39 Évaluation clinique et diagnostic</h2>
 <p>L'évaluation et le diagnostic sont liés mais ne sont pas exactement la même chose.</p>
-<p><strong>Évaluation → recueillir et interpréter les informations</strong></p>
-<p><strong>Diagnostic → déterminer si les critères d'une catégorie ou d'un modèle diagnostique sont remplis</strong></p>
+<p><strong>Évaluation  recueillir et interpréter les informations</strong></p>
+<p><strong>Diagnostic  déterminer si les critères d'une catégorie ou d'un modèle diagnostique sont remplis</strong></p>
 <p>L'évaluation peut donc être beaucoup plus large que le diagnostic.</p>
 <p>Elle peut également servir à comprendre le fonctionnement d'une personne même lorsqu'aucun diagnostic n'est posé.</p>
 <hr />
-<h2 id="1640-pourquoi-etudier-levaluation-psychologique-et-clinique" class="entry-title hc-5">🔬 16.40 Pourquoi étudier l'évaluation psychologique et clinique ?</h2>
+<h2 id="1640-pourquoi-etudier-levaluation-psychologique-et-clinique" class="entry-title hc-5">16.40 Pourquoi étudier l'évaluation psychologique et clinique ?</h2>
 <p>L'évaluation psychologique permet de transformer une quantité importante d'informations en une compréhension structurée du fonctionnement psychologique.</p>
 <p>Elle repose notamment sur :</p>
-<p><strong>🗣️ entretien</strong></p>
-<p><strong>👁️ observation</strong></p>
-<p><strong>📋 questionnaires</strong></p>
-<p><strong>🧠 tests cognitifs</strong></p>
-<p><strong>📊 données standardisées</strong></p>
-<p><strong>📚 histoire personnelle</strong></p>
-<p><strong>🌍 contexte</strong></p>
-<p><strong>🔄 évolution dans le temps</strong></p>
+<p>** entretien**</p>
+<p>** observation**</p>
+<p>** questionnaires**</p>
+<p>** tests cognitifs**</p>
+<p>** données standardisées**</p>
+<p>** histoire personnelle**</p>
+<p>** contexte**</p>
+<p>** évolution dans le temps**</p>
 <p>Son objectif n'est pas simplement de placer une personne dans une catégorie.</p>
 <p>Une évaluation de qualité cherche à répondre à plusieurs questions :</p>
 <p><strong>Que se passe-t-il ?</strong></p>
@@ -613,23 +627,23 @@
 <p><strong>Comment le fonctionnement évolue-t-il ?</strong></p>
 <p>L'évaluation clinique constitue ainsi une étape essentielle du raisonnement psychologique et clinique.</p>
 <p>Elle permet de passer d'informations parfois dispersées à une <strong>formulation structurée, nuancée et révisable</strong>, tout en reconnaissant que toute mesure psychologique comporte des limites.</p>
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🔬 <strong>L'évaluation psychologique n'est pas simplement un test.</strong></p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p><strong>L'évaluation psychologique n'est pas simplement un test.</strong></p>
 <p>Elle combine généralement plusieurs sources d'information.</p>
-<p>🗣️ <strong>L'entretien clinique</strong> permet d'explorer l'histoire, les symptômes et le fonctionnement subjectif.</p>
-<p>👁️ <strong>L'observation</strong> apporte des informations sur les comportements et les interactions.</p>
-<p>📋 <strong>Les questionnaires</strong> permettent notamment de mesurer certaines dimensions ou symptômes.</p>
-<p>🧠 <strong>Les tests cognitifs</strong> permettent d'examiner certaines fonctions comme la mémoire, l'attention ou les fonctions exécutives.</p>
-<p>📊 <strong>La standardisation</strong> permet de comparer les performances dans des conditions définies.</p>
-<p>⚖️ <strong>Fidélité et validité sont différentes.</strong></p>
+<p><strong>L'entretien clinique</strong> permet d'explorer l'histoire, les symptômes et le fonctionnement subjectif.</p>
+<p><strong>L'observation</strong> apporte des informations sur les comportements et les interactions.</p>
+<p><strong>Les questionnaires</strong> permettent notamment de mesurer certaines dimensions ou symptômes.</p>
+<p><strong>Les tests cognitifs</strong> permettent d'examiner certaines fonctions comme la mémoire, l'attention ou les fonctions exécutives.</p>
+<p><strong>La standardisation</strong> permet de comparer les performances dans des conditions définies.</p>
+<p><strong>Fidélité et validité sont différentes.</strong></p>
 <p>Un outil doit être suffisamment fiable et mesurer réellement le construit qu'il prétend évaluer.</p>
-<p>🧩 <strong>Plusieurs sources peuvent être combinées.</strong></p>
+<p><strong>Plusieurs sources peuvent être combinées.</strong></p>
 <p>La convergence entre différentes informations peut renforcer une hypothèse, tandis qu'une divergence peut également fournir des informations importantes.</p>
-<p>🔎 <strong>Un symptôme n'est pas un diagnostic.</strong></p>
+<p><strong>Un symptôme n'est pas un diagnostic.</strong></p>
 <p>Le même symptôme peut apparaître dans plusieurs troubles ou être lié à différents facteurs.</p>
-<p>🌍 <strong>Le contexte compte.</strong></p>
+<p><strong>Le contexte compte.</strong></p>
 <p>Stress, sommeil, fatigue, environnement, culture et motivation peuvent influencer les performances.</p>
-<p>🔄 <strong>Le fonctionnement psychologique évolue.</strong></p>
+<p><strong>Le fonctionnement psychologique évolue.</strong></p>
 <p>Une évaluation représente une période donnée et ne décrit pas nécessairement le fonctionnement permanent d'une personne.</p>
 <p>Enfin, l'évaluation clinique ne cherche pas seulement à répondre à :</p>
 <p><strong>« Quel diagnostic correspond ? »</strong></p>
@@ -638,8 +652,44 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-diagnostic-et-raisonnement-clinique/"><span class="similar-icon">🔬</span>Diagnostic et raisonnement clinique</a><a class="similar-item" href="/chapitre/avances-processus-therapeutiques/"><span class="similar-icon">🔬</span>Processus thérapeutiques</a><a class="similar-item" href="/chapitre/avances-recherche-et-modeles-scientifiques/"><span class="similar-icon">🔬</span>Recherche et modèles scientifiques</a></div>
+      <h2>Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-diagnostic-et-raisonnement-clinique/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Diagnostic et raisonnement clinique</a><a class="similar-item" href="/chapitre/avances-processus-therapeutiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Processus thérapeutiques</a><a class="similar-item" href="/chapitre/avances-recherche-et-modeles-scientifiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Recherche et modèles scientifiques</a></div>
     </div>
     <a class="back-link" href="/categorie/avances/">← Retour à « Concepts avancés »</a>
   </div>
@@ -725,23 +775,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -759,7 +811,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -939,9 +991,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -950,10 +1004,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -1060,7 +1114,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1100,8 +1154,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1132,7 +1186,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1187,7 +1241,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1211,17 +1265,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1263,7 +1317,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

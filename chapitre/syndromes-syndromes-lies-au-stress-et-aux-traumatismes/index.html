@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#51-le-syndrome-du-survivant">⚡ 5.1 Le syndrome du survivant</a><ul class="sidebar-sublist"><li><a href="#definition">🧠 Définition</a></li><li><a href="#manifestations-possibles">🔎 Manifestations possibles</a></li><li><a href="#mecanismes-psychologiques">🧩 Mécanismes psychologiques</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#52-le-trouble-de-stress-aigu">⚡ 5.2 Le trouble de stress aigu</a><ul class="sidebar-sublist"><li><a href="#definition_1">🧠 Définition</a></li><li><a href="#manifestations-possibles_1">🔎 Manifestations possibles</a></li><li><a href="#duree">⏳ Durée</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_1">🛠️ Prise en charge</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#53-le-trouble-de-stress-posttraumatique-tspt">⚡ 5.3 Le trouble de stress posttraumatique (TSPT)</a><ul class="sidebar-sublist"><li><a href="#definition_2">🧠 Définition</a></li><li><a href="#les-grandes-categories-de-symptomes">🧠 Les grandes catégories de symptômes</a></li><li><a href="#mecanismes">🧬 Mécanismes</a></li><li><a href="#diagnostic_2">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_2">🛠️ Prise en charge</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#54-le-syndrome-de-stockholm">⚡ 5.4 Le syndrome de Stockholm</a><ul class="sidebar-sublist"><li><a href="#definition_3">🧠 Définition</a></li><li><a href="#manifestations-decrites">🔎 Manifestations décrites</a></li><li><a href="#explication-possible">🧠 Explication possible</a></li><li><a href="#statut-scientifique">⚠️ Statut scientifique</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#55-le-syndrome-de-la-cabane">⚡ 5.5 Le syndrome de la cabane</a><ul class="sidebar-sublist"><li><a href="#definition_4">🧠 Définition</a></li><li><a href="#manifestations-possibles_2">🔎 Manifestations possibles</a></li><li><a href="#mecanisme">🧠 Mécanisme</a></li><li><a href="#statut">⚠️ Statut</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#56-le-syndrome-de-paris">🌍 5.6 Le syndrome de Paris</a><ul class="sidebar-sublist"><li><a href="#definition_5">🧠 Définition</a></li><li><a href="#manifestations-rapportees">🔎 Manifestations rapportées</a></li><li><a href="#explication-possible_1">🧠 Explication possible</a></li><li><a href="#statut_1">⚠️ Statut</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#57-le-syndrome-de-jerusalem">🕊️ 5.7 Le syndrome de Jérusalem</a><ul class="sidebar-sublist"><li><a href="#definition_6">🧠 Définition</a></li><li><a href="#manifestations-possibles_3">🔎 Manifestations possibles</a></li><li><a href="#facteurs-possibles">🧠 Facteurs possibles</a></li><li><a href="#statut_2">⚠️ Statut</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#58-le-syndrome-de-stendhal">🎨 5.8 Le syndrome de Stendhal</a><ul class="sidebar-sublist"><li><a href="#definition_7">🧠 Définition</a></li><li><a href="#manifestations-possibles_4">🔎 Manifestations possibles</a></li><li><a href="#explication-possible_2">🧠 Explication possible</a></li><li><a href="#statut_3">⚠️ Statut</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#59-lepuisement-professionnel-burnout">💼 5.9 L'épuisement professionnel Burnout</a><ul class="sidebar-sublist"><li><a href="#definition_8">🧠 Définition</a></li><li><a href="#1-epuisement">🔥 1. Épuisement</a></li><li><a href="#2-distance-mentale">🧊 2. Distance mentale</a></li><li><a href="#3-diminution-de-lefficacite">📉 3. Diminution de l'efficacité</a></li><li><a href="#facteurs-favorisant">🧬 Facteurs favorisant</a></li><li><a href="#diagnostic_3">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_3">🛠️ Prise en charge</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#510-le-stress-traumatique-secondaire">🧠 5.10 Le stress traumatique secondaire</a><ul class="sidebar-sublist"><li><a href="#definition_9">🧠 Définition</a></li><li><a href="#manifestations-possibles_5">🔎 Manifestations possibles</a></li><li><a href="#difference-avec-le-traumatisme-direct">🧠 Différence avec le traumatisme direct</a></li><li><a href="#prise-en-charge_4">🩺 Prise en charge</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#51-le-syndrome-du-survivant">5.1 Le syndrome du survivant</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#mecanismes-psychologiques">Mécanismes psychologiques</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#52-le-trouble-de-stress-aigu">5.2 Le trouble de stress aigu</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li><li><a href="#duree">Durée</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#53-le-trouble-de-stress-posttraumatique-tspt">5.3 Le trouble de stress posttraumatique (TSPT)</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#les-grandes-categories-de-symptomes">Les grandes catégories de symptômes</a></li><li><a href="#mecanismes">Mécanismes</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#54-le-syndrome-de-stockholm">5.4 Le syndrome de Stockholm</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations-decrites">Manifestations décrites</a></li><li><a href="#explication-possible">Explication possible</a></li><li><a href="#statut-scientifique">Statut scientifique</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#55-le-syndrome-de-la-cabane">5.5 Le syndrome de la cabane</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations-possibles_2">Manifestations possibles</a></li><li><a href="#mecanisme">Mécanisme</a></li><li><a href="#statut">Statut</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#56-le-syndrome-de-paris">5.6 Le syndrome de Paris</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations-rapportees">Manifestations rapportées</a></li><li><a href="#explication-possible_1">Explication possible</a></li><li><a href="#statut_1">Statut</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#57-le-syndrome-de-jerusalem">5.7 Le syndrome de Jérusalem</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations-possibles_3">Manifestations possibles</a></li><li><a href="#facteurs-possibles">Facteurs possibles</a></li><li><a href="#statut_2">Statut</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#58-le-syndrome-de-stendhal">5.8 Le syndrome de Stendhal</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations-possibles_4">Manifestations possibles</a></li><li><a href="#explication-possible_2">Explication possible</a></li><li><a href="#statut_3">Statut</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#59-lepuisement-professionnel-burnout">5.9 L'épuisement professionnel Burnout</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#1-epuisement">1. Épuisement</a></li><li><a href="#2-distance-mentale">2. Distance mentale</a></li><li><a href="#3-diminution-de-lefficacite">3. Diminution de l'efficacité</a></li><li><a href="#facteurs-favorisant">Facteurs favorisant</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#510-le-stress-traumatique-secondaire">5.10 Le stress traumatique secondaire</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations-possibles_5">Manifestations possibles</a></li><li><a href="#difference-avec-le-traumatisme-direct">Différence avec le traumatisme direct</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Syndromes liés au stress et aux traumatismes',
         category: 'Syndromes psychologiques',
-        icon: '🧬'
+        icon: 'S'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/syndromes/">🧬 Syndromes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/syndromes/">Syndromes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Syndromes liés au stress et aux traumatismes</h1>
     </div>
     <div id="resume-banner"></div>
@@ -99,14 +114,14 @@
     </svg>
     </div>
     <div class="article-body">
-      <p>⚠️ Plusieurs termes de cette partie sont des notions populaires ou descriptives et ne constituent pas des diagnostics psychiatriques officiels.</p>
+      <p>Plusieurs termes de cette partie sont des notions populaires ou descriptives et ne constituent pas des diagnostics psychiatriques officiels.</p>
 <p>Cette partie regroupe différents syndromes, troubles et phénomènes psychologiques pouvant apparaître après un événement traumatique, une situation de menace, une période de stress intense ou une exposition prolongée à des facteurs de pression psychologique.</p>
-<h1 id="51-le-syndrome-du-survivant" class="entry-title hc-1">⚡ 5.1  Le syndrome du survivant</h1>
-<h2 id="definition">🧠 Définition</h2>
+<h1 id="51-le-syndrome-du-survivant" class="entry-title hc-1">5.1  Le syndrome du survivant</h1>
+<h2 id="definition">Définition</h2>
 <p>Le syndrome du survivant désigne un ensemble de réactions psychologiques pouvant apparaître chez une personne ayant survécu à un événement dans lequel d'autres personnes ont été gravement blessées ou sont décédées.</p>
 <p>Il est notamment associé aux catastrophes, accidents, guerres, attentats ou autres événements collectifs traumatiques.</p>
 <p>Une caractéristique fréquente est la présence d'une <strong>culpabilité du survivant</strong> : la personne peut avoir le sentiment qu'elle n'aurait pas dû survivre alors que d'autres n'ont pas survécu.</p>
-<h2 id="manifestations-possibles">🔎 Manifestations possibles</h2>
+<h2 id="manifestations-possibles">Manifestations possibles</h2>
 <p>Culpabilité d'avoir survécu
 Sentiment d'injustice
 Tristesse persistante
@@ -119,18 +134,18 @@ Isolement social
 Difficultés à ressentir du plaisir
 Pensées intrusives concernant l'événement
 Sentiment de responsabilité excessive</p>
-<h2 id="mecanismes-psychologiques">🧩 Mécanismes psychologiques</h2>
+<h2 id="mecanismes-psychologiques">Mécanismes psychologiques</h2>
 <p>La personne peut chercher à comprendre pourquoi elle a survécu alors que d'autres personnes sont mortes.</p>
 <p>Le cerveau peut également reconstruire l'événement en recherchant des décisions ou des actions qui auraient prétendument pu changer son déroulement.</p>
 <p>Cette recherche de responsabilité peut conduire à une culpabilité importante, même lorsque la personne n'avait objectivement aucun contrôle sur la situation.</p>
-<h2 id="diagnostic">🩺 Diagnostic</h2>
+<h2 id="diagnostic">Diagnostic</h2>
 <p>Le syndrome du survivant n'est généralement pas considéré comme un diagnostic psychiatrique autonome.</p>
 <p>Il peut cependant apparaître dans le contexte :</p>
 <p>d'un trouble de stress posttraumatique ;
 d'un trouble dépressif ;
 d'un trouble anxieux ;
 d'un deuil compliqué ou prolongé.</p>
-<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge">Prise en charge</h2>
 <p>La prise en charge dépend des symptômes présents.</p>
 <p>Elle peut notamment comprendre :</p>
 <p>psychothérapie ;
@@ -138,55 +153,55 @@ accompagnement après traumatisme ;
 traitement des troubles anxieux ou dépressifs associés ;
 travail autour de la culpabilité ;
 soutien social et familial.</p>
-<h2 id="a-retenir">📌 À retenir</h2>
+<h2 id="a-retenir">À retenir</h2>
 <p>Le syndrome du survivant décrit principalement les conséquences psychologiques possibles du fait d'avoir survécu à un événement traumatique impliquant la mort ou la souffrance d'autres personnes.</p>
-<h1 id="52-le-trouble-de-stress-aigu" class="entry-title hc-2">⚡ 5.2  Le trouble de stress aigu</h1>
-<h2 id="definition_1">🧠 Définition</h2>
+<h1 id="52-le-trouble-de-stress-aigu" class="entry-title hc-2">5.2  Le trouble de stress aigu</h1>
+<h2 id="definition_1">Définition</h2>
 <p>Le trouble de stress aigu correspond à une réaction psychotraumatique pouvant apparaître rapidement après l'exposition à un événement traumatique.</p>
 <p>Il peut survenir après avoir vécu directement un événement menaçant, avoir été témoin d'un événement grave ou avoir été confronté aux conséquences traumatiques d'un événement.</p>
-<h2 id="manifestations-possibles_1">🔎 Manifestations possibles</h2>
-<h3 id="reviviscences">🧠 Reviviscences</h3>
+<h2 id="manifestations-possibles_1">Manifestations possibles</h2>
+<h3 id="reviviscences">Reviviscences</h3>
 <p>Souvenirs intrusifs
 Images involontaires
 Cauchemars
 Flashbacks
 Impression de revivre l'événement</p>
-<h3 id="anxiete">😰 Anxiété</h3>
+<h3 id="anxiete">Anxiété</h3>
 <p>Peur intense
 Hypervigilance
 Nervosité
 Sursauts exagérés
 Difficultés à se détendre</p>
-<h3 id="evitement">🧍 Évitement</h3>
+<h3 id="evitement">Évitement</h3>
 <p>Évitement des lieux associés au traumatisme
 Évitement des conversations
 Refus de penser à l'événement
 Évitement de certaines personnes ou situations</p>
-<h3 id="dissociation">🌫️ Dissociation</h3>
+<h3 id="dissociation">Dissociation</h3>
 <p>Impression d'être détaché de soi
 Sensation d'irréalité
 Impression que le monde semble irréel
 Difficulté à se souvenir de certains éléments de l'événement</p>
-<h2 id="duree">⏳ Durée</h2>
+<h2 id="duree">Durée</h2>
 <p>Le trouble de stress aigu se situe dans une période relativement proche du traumatisme.</p>
 <p>Lorsque les symptômes persistent audelà de la période correspondant au trouble de stress aigu, une évolution vers un trouble de stress posttraumatique peut être envisagée selon les critères diagnostiques.</p>
-<h2 id="diagnostic_1">🩺 Diagnostic</h2>
+<h2 id="diagnostic_1">Diagnostic</h2>
 <p>Le diagnostic repose sur :</p>
 <p>la nature de l'événement vécu ;
 les symptômes présents ;
 leur intensité ;
 leur durée ;
 leur impact sur le fonctionnement quotidien.</p>
-<h2 id="prise-en-charge_1">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge_1">Prise en charge</h2>
 <p>La prise en charge peut inclure :</p>
 <p>soutien psychologique ;
 psychothérapie centrée sur le traumatisme ;
 surveillance de l'évolution des symptômes ;
 prise en charge des troubles associés.</p>
-<h2 id="a-retenir_1">📌 À retenir</h2>
+<h2 id="a-retenir_1">À retenir</h2>
 <p>Le trouble de stress aigu correspond à une réaction psychotraumatique précoce après un événement traumatique.</p>
-<h1 id="53-le-trouble-de-stress-posttraumatique-tspt" class="entry-title hc-3">⚡ 5.3  Le trouble de stress posttraumatique (TSPT)</h1>
-<h2 id="definition_2">🧠 Définition</h2>
+<h1 id="53-le-trouble-de-stress-posttraumatique-tspt" class="entry-title hc-3">5.3  Le trouble de stress posttraumatique (TSPT)</h1>
+<h2 id="definition_2">Définition</h2>
 <p>Le trouble de stress posttraumatique, ou <strong><a class="gloss-link" href="#53-le-trouble-de-stress-posttraumatique-tspt" title="Voir la définition de TSPT">TSPT</a></strong>, est un trouble psychique pouvant apparaître après l'exposition à un événement traumatique.</p>
 <p>Le traumatisme peut notamment être lié à :</p>
 <p>une violence physique ;
@@ -196,17 +211,17 @@ un attentat ;
 un accident grave ;
 une catastrophe ;
 certaines formes de violence répétée.</p>
-<h2 id="les-grandes-categories-de-symptomes">🧠 Les grandes catégories de symptômes</h2>
-<h3 id="1-reviviscence">🔥 1. Reviviscence</h3>
+<h2 id="les-grandes-categories-de-symptomes">Les grandes catégories de symptômes</h2>
+<h3 id="1-reviviscence">1. Reviviscence</h3>
 <p>L'événement peut continuer à être vécu psychologiquement comme s'il était encore présent.</p>
 <p>Exemples :</p>
 <p>flashbacks ;
 cauchemars ;
 souvenirs intrusifs ;
 réactions émotionnelles intenses face à des rappels du traumatisme.</p>
-<h3 id="2-evitement">🚪 2. Évitement</h3>
+<h3 id="2-evitement">2. Évitement</h3>
 <p>Certaines situations, personnes, lieux ou discussions peuvent être évités afin de ne pas réveiller les souvenirs traumatiques.</p>
-<h3 id="3-hyperactivation">⚠️ 3. Hyperactivation</h3>
+<h3 id="3-hyperactivation">3. Hyperactivation</h3>
 <p>Le système d'alerte reste particulièrement actif.</p>
 <p>Cela peut provoquer :</p>
 <p>hypervigilance ;
@@ -214,7 +229,7 @@ irritabilité ;
 troubles du sommeil ;
 difficultés de concentration ;
 réactions de sursaut importantes.</p>
-<h3 id="4-modifications-cognitives-et-emotionnelles">🌫️ 4. Modifications cognitives et émotionnelles</h3>
+<h3 id="4-modifications-cognitives-et-emotionnelles">4. Modifications cognitives et émotionnelles</h3>
 <p>Peuvent notamment apparaître :</p>
 <p>pensées négatives persistantes ;
 sentiment de culpabilité ;
@@ -223,29 +238,29 @@ détachement émotionnel ;
 perte d'intérêt ;
 difficultés relationnelles ;
 vision négative de soi ou du monde.</p>
-<h2 id="mecanismes">🧬 Mécanismes</h2>
+<h2 id="mecanismes">Mécanismes</h2>
 <p>Le traumatisme peut modifier durablement les mécanismes de détection de la menace et de traitement des souvenirs.</p>
 <p>Certains éléments associés au traumatisme peuvent ensuite être interprétés comme des signaux de danger alors qu'ils ne représentent plus réellement une menace.</p>
-<h2 id="diagnostic_2">🩺 Diagnostic</h2>
+<h2 id="diagnostic_2">Diagnostic</h2>
 <p>Le diagnostic repose sur des critères cliniques précis concernant :</p>
 <p>l'exposition à un traumatisme ;
 la nature des symptômes ;
 leur durée ;
 leur intensité ;
 leurs conséquences sur le fonctionnement quotidien.</p>
-<h2 id="prise-en-charge_2">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge_2">Prise en charge</h2>
 <p>Les traitements peuvent notamment inclure :</p>
 <p>thérapies cognitivocomportementales centrées sur le traumatisme ;
 EMDR ;
 thérapies d'exposition ;
 autres psychothérapies spécialisées ;
 médicaments dans certaines situations.</p>
-<h2 id="a-retenir_2">📌 À retenir</h2>
+<h2 id="a-retenir_2">À retenir</h2>
 <p>Le TSPT est une réaction psychotraumatique durable pouvant toucher la mémoire, les émotions, les pensées, le comportement et le système d'alerte.</p>
-<h1 id="54-le-syndrome-de-stockholm" class="entry-title hc-4">⚡ 5.4  Le syndrome de Stockholm</h1>
-<h2 id="definition_3">🧠 Définition</h2>
+<h1 id="54-le-syndrome-de-stockholm" class="entry-title hc-4">5.4  Le syndrome de Stockholm</h1>
+<h2 id="definition_3">Définition</h2>
 <p>Le syndrome de Stockholm est un terme utilisé pour décrire une situation dans laquelle une personne retenue captive ou soumise à une menace peut développer des sentiments positifs, de l'attachement ou une identification envers son agresseur ou ravisseur.</p>
-<h2 id="manifestations-decrites">🔎 Manifestations décrites</h2>
+<h2 id="manifestations-decrites">Manifestations décrites</h2>
 <p>Le phénomène peut notamment être associé à :</p>
 <p>sympathie envers l'agresseur ;
 défense de celuici ;
@@ -253,19 +268,19 @@ minimisation de la violence subie ;
 sentiment de gratitude envers de petites marques de gentillesse ;
 méfiance envers les personnes extérieures ;
 attachement émotionnel au ravisseur.</p>
-<h2 id="explication-possible">🧠 Explication possible</h2>
+<h2 id="explication-possible">Explication possible</h2>
 <p>Dans une situation de danger extrême et de dépendance totale, l'attention peut se focaliser sur les comportements permettant de maintenir un sentiment minimal de sécurité.</p>
 <p>Une petite marque de gentillesse peut alors prendre une importance psychologique considérable.</p>
-<h2 id="statut-scientifique">⚠️ Statut scientifique</h2>
+<h2 id="statut-scientifique">Statut scientifique</h2>
 <p>Le syndrome de Stockholm n'est <strong>pas un diagnostic officiel</strong> reconnu comme trouble psychiatrique autonome dans les principales classifications diagnostiques.</p>
 <p>Le terme reste néanmoins utilisé dans les médias et dans certaines discussions autour des situations de captivité ou de violence.</p>
-<h2 id="a-retenir_3">📌 À retenir</h2>
+<h2 id="a-retenir_3">À retenir</h2>
 <p>Le syndrome de Stockholm est un terme descriptif controversé, et non un diagnostic psychiatrique officiel.</p>
-<h1 id="55-le-syndrome-de-la-cabane" class="entry-title hc-5">⚡ 5.5  Le syndrome de la cabane</h1>
-<h2 id="definition_4">🧠 Définition</h2>
+<h1 id="55-le-syndrome-de-la-cabane" class="entry-title hc-5">5.5  Le syndrome de la cabane</h1>
+<h2 id="definition_4">Définition</h2>
 <p>Le syndrome de la cabane désigne un ensemble de difficultés psychologiques associées au fait de rester longtemps dans un environnement isolé ou protégé et d'éprouver ensuite des difficultés à retourner dans le monde extérieur.</p>
 <p>Le terme a notamment été largement utilisé pendant et après les périodes de confinement liées à la pandémie de COVID19.</p>
-<h2 id="manifestations-possibles_2">🔎 Manifestations possibles</h2>
+<h2 id="manifestations-possibles_2">Manifestations possibles</h2>
 <p>peur de sortir ;
 anxiété dans les lieux publics ;
 besoin de rester chez soi ;
@@ -273,7 +288,7 @@ perte d'habitude des interactions sociales ;
 fatigue après des interactions ;
 sentiment de sécurité uniquement à domicile ;
 difficulté à reprendre une activité extérieure.</p>
-<h2 id="mecanisme">🧠 Mécanisme</h2>
+<h2 id="mecanisme">Mécanisme</h2>
 <p>Un environnement peut devenir progressivement associé à la sécurité.</p>
 <p>À l'inverse, l'extérieur peut être associé à :</p>
 <p>l'incertitude ;
@@ -282,16 +297,16 @@ la stimulation ;
 les interactions sociales ;
 les obligations.</p>
 <p>Plus l'évitement se prolonge, plus le retour à l'extérieur peut devenir difficile.</p>
-<h2 id="statut">⚠️ Statut</h2>
+<h2 id="statut">Statut</h2>
 <p>Le syndrome de la cabane n'est pas un diagnostic psychiatrique officiel.</p>
 <p>Les symptômes peuvent cependant être associés à différents troubles anxieux ou à des phénomènes d'évitement.</p>
-<h2 id="a-retenir_4">📌 À retenir</h2>
+<h2 id="a-retenir_4">À retenir</h2>
 <p>Le syndrome de la cabane décrit surtout une difficulté à retrouver une vie extérieure après une longue période d'isolement ou de retrait.</p>
-<h1 id="56-le-syndrome-de-paris" class="entry-title hc-1">🌍 5.6  Le syndrome de Paris</h1>
-<h2 id="definition_5">🧠 Définition</h2>
+<h1 id="56-le-syndrome-de-paris" class="entry-title hc-1">5.6  Le syndrome de Paris</h1>
+<h2 id="definition_5">Définition</h2>
 <p>Le syndrome de Paris désigne un phénomène décrit chez certaines personnes visitant Paris et ressentant une détresse psychologique importante lorsque la réalité de la ville ne correspond pas à leurs attentes ou à l'image idéalisée qu'elles en avaient.</p>
 <p>Le terme est particulièrement associé aux visiteurs provenant de cultures très éloignées de la culture française.</p>
-<h2 id="manifestations-rapportees">🔎 Manifestations rapportées</h2>
+<h2 id="manifestations-rapportees">Manifestations rapportées</h2>
 <p>Dans les descriptions du phénomène, peuvent apparaître :</p>
 <p>anxiété intense ;
 confusion ;
@@ -301,9 +316,9 @@ symptômes dissociatifs ;
 hallucinations dans certains cas ;
 sentiment de persécution ;
 réactions physiques liées au stress.</p>
-<h2 id="explication-possible_1">🧠 Explication possible</h2>
+<h2 id="explication-possible_1">Explication possible</h2>
 <p>Le phénomène peut être favorisé par un décalage important entre :</p>
-<p><strong>Image idéalisée → réalité vécue</strong></p>
+<p><strong>Image idéalisée  réalité vécue</strong></p>
 <p>Ce décalage peut être accentué par :</p>
 <p>fatigue ;
 barrière linguistique ;
@@ -311,16 +326,16 @@ choc culturel ;
 isolement ;
 stress du voyage ;
 attentes irréalistes.</p>
-<h2 id="statut_1">⚠️ Statut</h2>
+<h2 id="statut_1">Statut</h2>
 <p>Le syndrome de Paris n'est pas reconnu comme un diagnostic psychiatrique officiel.</p>
 <p>Il s'agit principalement d'un terme descriptif utilisé pour évoquer certaines réactions extrêmes liées au choc culturel.</p>
-<h2 id="a-retenir_5">📌 À retenir</h2>
+<h2 id="a-retenir_5">À retenir</h2>
 <p>Le syndrome de Paris illustre la manière dont un choc culturel important peut parfois provoquer une détresse psychologique.</p>
-<h1 id="57-le-syndrome-de-jerusalem" class="entry-title hc-2">🕊️ 5.7  Le syndrome de Jérusalem</h1>
-<h2 id="definition_6">🧠 Définition</h2>
+<h1 id="57-le-syndrome-de-jerusalem" class="entry-title hc-2">5.7  Le syndrome de Jérusalem</h1>
+<h2 id="definition_6">Définition</h2>
 <p>Le syndrome de Jérusalem désigne un phénomène dans lequel certaines personnes visitant Jérusalem développent des idées religieuses ou mystiques particulièrement intenses.</p>
 <p>Dans les situations les plus extrêmes, ces manifestations peuvent prendre la forme d'un épisode psychotique.</p>
-<h2 id="manifestations-possibles_3">🔎 Manifestations possibles</h2>
+<h2 id="manifestations-possibles_3">Manifestations possibles</h2>
 <p>Les descriptions du phénomène incluent :</p>
 <p>sentiment d'avoir une mission divine ;
 identification à un personnage religieux ;
@@ -330,7 +345,7 @@ comportement inhabituel ;
 isolement ;
 idées délirantes ;
 hallucinations dans certains cas.</p>
-<h2 id="facteurs-possibles">🧠 Facteurs possibles</h2>
+<h2 id="facteurs-possibles">Facteurs possibles</h2>
 <p>Le phénomène peut être associé à :</p>
 <p>forte charge symbolique du lieu ;
 croyances religieuses préexistantes ;
@@ -338,16 +353,16 @@ stress du voyage ;
 manque de sommeil ;
 vulnérabilité psychologique ;
 trouble psychiatrique préexistant.</p>
-<h2 id="statut_2">⚠️ Statut</h2>
+<h2 id="statut_2">Statut</h2>
 <p>Le syndrome de Jérusalem n'est pas considéré comme un diagnostic psychiatrique autonome.</p>
 <p>Il peut parfois correspondre à la manifestation d'un trouble psychotique sousjacent.</p>
-<h2 id="a-retenir_6">📌 À retenir</h2>
+<h2 id="a-retenir_6">À retenir</h2>
 <p>Le syndrome de Jérusalem décrit certaines manifestations psychologiques ou psychotiques associées au contexte particulier d'un séjour à Jérusalem.</p>
-<h1 id="58-le-syndrome-de-stendhal" class="entry-title hc-3">🎨 5.8  Le syndrome de Stendhal</h1>
-<h2 id="definition_7">🧠 Définition</h2>
+<h1 id="58-le-syndrome-de-stendhal" class="entry-title hc-3">5.8  Le syndrome de Stendhal</h1>
+<h2 id="definition_7">Définition</h2>
 <p>Le syndrome de Stendhal désigne un ensemble de réactions physiques et psychologiques intenses pouvant être associées à une exposition importante à des œuvres d'art, à la beauté artistique ou à un environnement culturel particulièrement chargé.</p>
 <p>Le terme provient des descriptions de l'écrivain français Stendhal lors de son séjour à Florence.</p>
-<h2 id="manifestations-possibles_4">🔎 Manifestations possibles</h2>
+<h2 id="manifestations-possibles_4">Manifestations possibles</h2>
 <p>Les réactions décrites peuvent comprendre :</p>
 <p>accélération du rythme cardiaque ;
 vertiges ;
@@ -358,7 +373,7 @@ désorientation ;
 anxiété ;
 impression d'être submergé par les œuvres.</p>
 <p>Dans des descriptions extrêmes, des symptômes psychiatriques plus importants ont également été rapportés.</p>
-<h2 id="explication-possible_2">🧠 Explication possible</h2>
+<h2 id="explication-possible_2">Explication possible</h2>
 <p>Une stimulation émotionnelle extrêmement forte peut provoquer une activation importante du système nerveux.</p>
 <p>Le contexte peut également jouer un rôle :</p>
 <p>fatigue ;
@@ -366,37 +381,37 @@ accumulation de visites ;
 forte attente ;
 environnement culturel intense ;
 surcharge émotionnelle.</p>
-<h2 id="statut_3">⚠️ Statut</h2>
+<h2 id="statut_3">Statut</h2>
 <p>Le syndrome de Stendhal n'est pas reconnu comme un diagnostic psychiatrique officiel.</p>
 <p>Il s'agit principalement d'une notion descriptive et culturelle.</p>
-<h2 id="a-retenir_7">📌 À retenir</h2>
+<h2 id="a-retenir_7">À retenir</h2>
 <p>Le syndrome de Stendhal décrit une réaction émotionnelle et parfois physique très intense face à l'art ou à un environnement culturel fortement stimulant.</p>
-<h1 id="59-lepuisement-professionnel-burnout" class="entry-title hc-4">💼 5.9  L'épuisement professionnel  Burnout</h1>
-<h2 id="definition_8">🧠 Définition</h2>
+<h1 id="59-lepuisement-professionnel-burnout" class="entry-title hc-4">5.9  L'épuisement professionnel  Burnout</h1>
+<h2 id="definition_8">Définition</h2>
 <p>L'épuisement professionnel, couramment appelé <strong>burnout</strong>, correspond à un phénomène lié au stress chronique dans le contexte professionnel.</p>
 <p>Il se caractérise principalement par un épuisement important, une distance mentale accrue visàvis du travail et une diminution du sentiment d'efficacité professionnelle.</p>
-<h2 id="1-epuisement">🔥 1. Épuisement</h2>
+<h2 id="1-epuisement">1. Épuisement</h2>
 <p>La personne peut ressentir :</p>
 <p>fatigue persistante ;
 manque d'énergie ;
 difficultés à récupérer ;
 épuisement émotionnel ;
 difficultés de concentration.</p>
-<h2 id="2-distance-mentale">🧊 2. Distance mentale</h2>
+<h2 id="2-distance-mentale">2. Distance mentale</h2>
 <p>Peuvent apparaître :</p>
 <p>détachement du travail ;
 cynisme ;
 irritabilité ;
 perte d'intérêt ;
 sentiment de fonctionner « automatiquement ».</p>
-<h2 id="3-diminution-de-lefficacite">📉 3. Diminution de l'efficacité</h2>
+<h2 id="3-diminution-de-lefficacite">3. Diminution de l'efficacité</h2>
 <p>Cela peut se manifester par :</p>
 <p>difficultés à accomplir les tâches ;
 baisse de concentration ;
 sentiment d'inefficacité ;
 baisse de motivation ;
 augmentation des erreurs.</p>
-<h2 id="facteurs-favorisant">🧬 Facteurs favorisant</h2>
+<h2 id="facteurs-favorisant">Facteurs favorisant</h2>
 <p>Le burnout peut être favorisé par :</p>
 <p>surcharge de travail ;
 manque de contrôle ;
@@ -406,10 +421,10 @@ manque de reconnaissance ;
 conflits professionnels ;
 manque de soutien ;
 déséquilibre entre efforts et récompenses.</p>
-<h2 id="diagnostic_3">🩺 Diagnostic</h2>
+<h2 id="diagnostic_3">Diagnostic</h2>
 <p>Le burnout n'est pas classé comme un trouble mental dans la CIM11.</p>
 <p>Il est plutôt décrit comme un <strong>phénomène lié au contexte professionnel</strong>, résultant d'un stress chronique au travail qui n'a pas été correctement géré.</p>
-<h2 id="prise-en-charge_3">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge_3">Prise en charge</h2>
 <p>La prise en charge peut nécessiter :</p>
 <p>réduction ou adaptation de la charge professionnelle ;
 repos ;
@@ -417,10 +432,10 @@ accompagnement psychologique ;
 amélioration des conditions de travail ;
 traitement d'éventuels troubles associés ;
 réorganisation progressive de l'activité.</p>
-<h2 id="a-retenir_8">📌 À retenir</h2>
+<h2 id="a-retenir_8">À retenir</h2>
 <p>Le burnout est principalement lié au <strong>stress professionnel chronique</strong> et se caractérise par l'épuisement, la distance mentale visàvis du travail et une diminution de l'efficacité professionnelle.</p>
-<h1 id="510-le-stress-traumatique-secondaire" class="entry-title hc-5">🧠 5.10  Le stress traumatique secondaire</h1>
-<h2 id="definition_9">🧠 Définition</h2>
+<h1 id="510-le-stress-traumatique-secondaire" class="entry-title hc-5">5.10  Le stress traumatique secondaire</h1>
+<h2 id="definition_9">Définition</h2>
 <p>Le stress traumatique secondaire correspond à des réactions traumatiques pouvant apparaître chez une personne exposée indirectement aux traumatismes vécus par d'autres.</p>
 <p>Il peut notamment concerner :</p>
 <p>professionnels de santé ;
@@ -431,7 +446,7 @@ policiers ;
 pompiers ;
 aidants ;
 personnes régulièrement exposées aux récits traumatiques.</p>
-<h2 id="manifestations-possibles_5">🔎 Manifestations possibles</h2>
+<h2 id="manifestations-possibles_5">Manifestations possibles</h2>
 <p>cauchemars ;
 pensées intrusives ;
 anxiété ;
@@ -441,12 +456,12 @@ irritabilité ;
 évitement ;
 sentiment d'impuissance ;
 difficultés de concentration.</p>
-<h2 id="difference-avec-le-traumatisme-direct">🧠 Différence avec le traumatisme direct</h2>
+<h2 id="difference-avec-le-traumatisme-direct">Différence avec le traumatisme direct</h2>
 <h3 id="traumatisme-direct">Traumatisme direct</h3>
 <p>La personne vit ellemême l'événement traumatique.</p>
 <h3 id="traumatisme-secondaire">Traumatisme secondaire</h3>
 <p>La personne est exposée au traumatisme d'une autre personne ou à ses conséquences.</p>
-<h2 id="prise-en-charge_4">🩺 Prise en charge</h2>
+<h2 id="prise-en-charge_4">Prise en charge</h2>
 <p>Elle peut comprendre :</p>
 <p>soutien psychologique ;
 supervision professionnelle ;
@@ -454,13 +469,34 @@ repos ;
 limitation de l'exposition lorsque cela est possible ;
 techniques de gestion du stress ;
 psychothérapie si les symptômes deviennent importants.</p>
-<h2 id="a-retenir_9">📌 À retenir</h2>
+<h2 id="a-retenir_9">À retenir</h2>
 <p>Le stress traumatique secondaire montre qu'une exposition indirecte répétée à des expériences traumatiques peut également avoir des conséquences psychologiques importantes.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Syndromes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-relationnels-et-sociaux/"><span class="similar-icon">🧬</span>Syndromes relationnels et sociaux</a><a class="similar-item" href="/chapitre/syndromes-syndromes-culturels/"><span class="similar-icon">🧬</span>Syndromes culturels</a><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-au-corps/"><span class="similar-icon">🧬</span>Syndromes liés au corps</a></div>
+      <h2>Autres chapitres de « Syndromes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-relationnels-et-sociaux/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes relationnels et sociaux</a><a class="similar-item" href="/chapitre/syndromes-syndromes-culturels/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes culturels</a><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-au-corps/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes liés au corps</a></div>
     </div>
     <a class="back-link" href="/categorie/syndromes/">← Retour à « Syndromes psychologiques »</a>
   </div>
@@ -546,23 +582,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -580,7 +618,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -760,9 +798,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -771,10 +811,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -881,7 +921,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -921,8 +961,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -953,7 +993,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1008,7 +1048,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1032,17 +1072,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1084,7 +1124,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

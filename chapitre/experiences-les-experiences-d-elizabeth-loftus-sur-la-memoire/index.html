@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#101-presentation-des-recherches">🧠 10.1 PRÉSENTATION DES RECHERCHES</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#102-lexperience-de-loftus-et-palmer">🚗 10.2 L'EXPÉRIENCE DE LOFTUS ET PALMER</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#103-linfluence-du-vocabulaire">🗣️ 10.3 L'INFLUENCE DU VOCABULAIRE</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#104-leffet-de-desinformation">🧩 10.4 L'EFFET DE DÉSINFORMATION</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#105-la-memoire-reconstructive">🧠 10.5 LA MÉMOIRE RECONSTRUCTIVE</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#106-le-souvenir-et-les-informations-posterieures">🔄 10.6 LE SOUVENIR ET LES INFORMATIONS POSTÉRIEURES</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#107-la-memoire-et-les-temoins">👥 10.7 LA MÉMOIRE ET LES TÉMOINS</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#108-les-faux-souvenirs">⚠️ 10.8 LES FAUX SOUVENIRS</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#109-la-confiance-dans-le-souvenir">🧠 10.9 LA CONFIANCE DANS LE SOUVENIR</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li><li><a href="#a-retenir_8">📌 À RETENIR</a></li></ul></li><li><a href="#1010-limportance-des-recherches-de-loftus">🔬 10.10 L'IMPORTANCE DES RECHERCHES DE LOFTUS</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li><li><a href="#a-retenir_9">📌 À RETENIR</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#101-presentation-des-recherches">10.1 PRÉSENTATION DES RECHERCHES</a><ul class="sidebar-sublist"><li><a href="#definition">DÉFINITION</a></li><li><a href="#explication">EXPLICATION</a></li><li><a href="#exemple">EXEMPLE</a></li><li><a href="#a-retenir">À RETENIR</a></li></ul></li><li><a href="#102-lexperience-de-loftus-et-palmer">10.2 L'EXPÉRIENCE DE LOFTUS ET PALMER</a><ul class="sidebar-sublist"><li><a href="#definition_1">DÉFINITION</a></li><li><a href="#explication_1">EXPLICATION</a></li><li><a href="#exemple_1">EXEMPLE</a></li><li><a href="#a-retenir_1">À RETENIR</a></li></ul></li><li><a href="#103-linfluence-du-vocabulaire">10.3 L'INFLUENCE DU VOCABULAIRE</a><ul class="sidebar-sublist"><li><a href="#definition_2">DÉFINITION</a></li><li><a href="#explication_2">EXPLICATION</a></li><li><a href="#exemple_2">EXEMPLE</a></li><li><a href="#a-retenir_2">À RETENIR</a></li></ul></li><li><a href="#104-leffet-de-desinformation">10.4 L'EFFET DE DÉSINFORMATION</a><ul class="sidebar-sublist"><li><a href="#definition_3">DÉFINITION</a></li><li><a href="#explication_3">EXPLICATION</a></li><li><a href="#exemple_3">EXEMPLE</a></li><li><a href="#a-retenir_3">À RETENIR</a></li></ul></li><li><a href="#105-la-memoire-reconstructive">10.5 LA MÉMOIRE RECONSTRUCTIVE</a><ul class="sidebar-sublist"><li><a href="#definition_4">DÉFINITION</a></li><li><a href="#explication_4">EXPLICATION</a></li><li><a href="#exemple_4">EXEMPLE</a></li><li><a href="#a-retenir_4">À RETENIR</a></li></ul></li><li><a href="#106-le-souvenir-et-les-informations-posterieures">10.6 LE SOUVENIR ET LES INFORMATIONS POSTÉRIEURES</a><ul class="sidebar-sublist"><li><a href="#definition_5">DÉFINITION</a></li><li><a href="#explication_5">EXPLICATION</a></li><li><a href="#exemple_5">EXEMPLE</a></li><li><a href="#a-retenir_5">À RETENIR</a></li></ul></li><li><a href="#107-la-memoire-et-les-temoins">10.7 LA MÉMOIRE ET LES TÉMOINS</a><ul class="sidebar-sublist"><li><a href="#definition_6">DÉFINITION</a></li><li><a href="#explication_6">EXPLICATION</a></li><li><a href="#exemple_6">EXEMPLE</a></li><li><a href="#a-retenir_6">À RETENIR</a></li></ul></li><li><a href="#108-les-faux-souvenirs">10.8 LES FAUX SOUVENIRS</a><ul class="sidebar-sublist"><li><a href="#definition_7">DÉFINITION</a></li><li><a href="#explication_7">EXPLICATION</a></li><li><a href="#exemple_7">EXEMPLE</a></li><li><a href="#a-retenir_7">À RETENIR</a></li></ul></li><li><a href="#109-la-confiance-dans-le-souvenir">10.9 LA CONFIANCE DANS LE SOUVENIR</a><ul class="sidebar-sublist"><li><a href="#definition_8">DÉFINITION</a></li><li><a href="#explication_8">EXPLICATION</a></li><li><a href="#exemple_8">EXEMPLE</a></li><li><a href="#a-retenir_8">À RETENIR</a></li></ul></li><li><a href="#1010-limportance-des-recherches-de-loftus">10.10 L'IMPORTANCE DES RECHERCHES DE LOFTUS</a><ul class="sidebar-sublist"><li><a href="#definition_9">DÉFINITION</a></li><li><a href="#explication_9">EXPLICATION</a></li><li><a href="#exemple_9">EXEMPLE</a></li><li><a href="#a-retenir_9">À RETENIR</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: "Les expériences d'Elizabeth Loftus sur la mémoire",
         category: 'Expériences célèbres de psychologie',
-        icon: '🧪'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/experiences/">🧪 Expériences célèbres de psychologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/experiences/">Expériences célèbres de psychologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les expériences d'Elizabeth Loftus sur la mémoire</h1>
     </div>
     <div id="resume-banner"></div>
@@ -104,67 +119,67 @@
 </p>
 </blockquote>
 <hr />
-<h2 id="101-presentation-des-recherches" class="entry-title hc-1">🧠 10.1 PRÉSENTATION DES RECHERCHES</h2>
-<h3 id="definition">🔎 DÉFINITION</h3>
+<h2 id="101-presentation-des-recherches" class="entry-title hc-1">10.1 PRÉSENTATION DES RECHERCHES</h2>
+<h3 id="definition">DÉFINITION</h3>
 <p>Les travaux d'<strong>Elizabeth Loftus</strong> portent notamment sur la manière dont la mémoire peut être influencée par des informations reçues après un événement.</p>
-<h3 id="explication">🧠 EXPLICATION</h3>
+<h3 id="explication">EXPLICATION</h3>
 <p>À partir des années 1970, Loftus et différents collaborateurs ont réalisé de nombreuses expériences sur la <strong>mémoire reconstructive</strong>.</p>
 <p>Ces recherches ont montré que se souvenir ne consiste pas simplement à récupérer une copie exacte d'un événement passé.</p>
 <p>Les informations reçues après l'événement peuvent parfois influencer la manière dont celui-ci est ensuite rappelé.</p>
-<h3 id="exemple">💬 EXEMPLE</h3>
+<h3 id="exemple">EXEMPLE</h3>
 <p>Une personne observe un événement puis reçoit plus tard une information incorrecte à son sujet.</p>
 <p>Lorsqu'elle doit raconter l'événement plusieurs jours après, cette information peut parfois influencer son souvenir.</p>
-<h3 id="a-retenir">📌 À RETENIR</h3>
+<h3 id="a-retenir">À RETENIR</h3>
 <p>La mémoire humaine est <strong>reconstructive</strong> et peut être influencée par des informations reçues après un événement.</p>
 <hr />
-<h2 id="102-lexperience-de-loftus-et-palmer" class="entry-title hc-2">🚗 10.2 L'EXPÉRIENCE DE LOFTUS ET PALMER</h2>
-<h3 id="definition_1">🔎 DÉFINITION</h3>
+<h2 id="102-lexperience-de-loftus-et-palmer" class="entry-title hc-2">10.2 L'EXPÉRIENCE DE LOFTUS ET PALMER</h2>
+<h3 id="definition_1">DÉFINITION</h3>
 <p>L'expérience de <strong>Loftus et Palmer</strong>, publiée en 1974, étudie l'influence du vocabulaire utilisé pour poser une question sur le souvenir d'un accident automobile.</p>
-<h3 id="explication_1">🧠 EXPLICATION</h3>
+<h3 id="explication_1">EXPLICATION</h3>
 <p>Les participants regardaient des films montrant des accidents de voiture.</p>
 <p>Après le visionnage, les chercheurs leur posaient notamment une question portant sur la vitesse des véhicules.</p>
 <p>Le mot utilisé pour décrire l'accident variait selon les groupes.</p>
 <p>Certains participants étaient interrogés avec un terme relativement neutre, tandis que d'autres recevaient un terme évoquant un accident plus violent.</p>
 <p>Les estimations de vitesse variaient selon le mot employé.</p>
-<h3 id="exemple_1">💬 EXEMPLE</h3>
+<h3 id="exemple_1">EXEMPLE</h3>
 <p>Deux personnes regardent exactement le même accident.</p>
 <p>L'une entend une question utilisant un terme relativement neutre.</p>
 <p>L'autre entend une formulation utilisant un terme beaucoup plus fort.</p>
 <p>Leur estimation de la vitesse peut alors différer.</p>
-<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<h3 id="a-retenir_1">À RETENIR</h3>
 <p>La manière dont une question est formulée peut <strong>influencer certaines réponses concernant un événement mémorisé</strong>.</p>
 <hr />
-<h2 id="103-linfluence-du-vocabulaire" class="entry-title hc-3">🗣️ 10.3 L'INFLUENCE DU VOCABULAIRE</h2>
-<h3 id="definition_2">🔎 DÉFINITION</h3>
+<h2 id="103-linfluence-du-vocabulaire" class="entry-title hc-3">10.3 L'INFLUENCE DU VOCABULAIRE</h2>
+<h3 id="definition_2">DÉFINITION</h3>
 <p>L'influence du vocabulaire désigne la modification possible d'un jugement ou d'un souvenir en fonction des mots utilisés pour décrire une situation.</p>
-<h3 id="explication_2">🧠 EXPLICATION</h3>
+<h3 id="explication_2">EXPLICATION</h3>
 <p>Les expériences de Loftus et Palmer ont montré que certains termes peuvent orienter la manière dont un participant évalue un événement.</p>
 <p>Un mot ne transmet pas uniquement une information neutre.</p>
 <p>Il peut également suggérer une certaine interprétation de ce qui s'est produit.</p>
-<h3 id="exemple_2">💬 EXEMPLE</h3>
+<h3 id="exemple_2">EXEMPLE</h3>
 <p>Décrire une collision avec un terme évoquant un impact violent peut conduire à une estimation différente de celle obtenue avec un terme plus neutre.</p>
-<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<h3 id="a-retenir_2">À RETENIR</h3>
 <p>Les mots utilisés pour interroger une personne peuvent <strong>orienter la reconstruction d'un souvenir</strong>.</p>
 <hr />
-<h2 id="104-leffet-de-desinformation" class="entry-title hc-4">🧩 10.4 L'EFFET DE DÉSINFORMATION</h2>
-<h3 id="definition_3">🔎 DÉFINITION</h3>
+<h2 id="104-leffet-de-desinformation" class="entry-title hc-4">10.4 L'EFFET DE DÉSINFORMATION</h2>
+<h3 id="definition_3">DÉFINITION</h3>
 <p>L'<strong>effet de désinformation</strong> désigne une modification possible du souvenir d'un événement après l'exposition à des informations incorrectes ou trompeuses concernant cet événement.</p>
-<h3 id="explication_3">🧠 EXPLICATION</h3>
+<h3 id="explication_3">EXPLICATION</h3>
 <p>Une personne peut d'abord être confrontée à un événement.</p>
 <p>Plus tard, elle reçoit une information qui ne correspond pas exactement à ce qu'elle a réellement observé.</p>
 <p>Lorsqu'elle est ensuite interrogée sur l'événement initial, cette information peut parfois être intégrée à son souvenir.</p>
 <p>Loftus a largement étudié ce phénomène dans différentes expériences.</p>
-<h3 id="exemple_3">💬 EXEMPLE</h3>
+<h3 id="exemple_3">EXEMPLE</h3>
 <p>Une personne voit une voiture rouge lors d'un accident.</p>
 <p>Plus tard, quelqu'un lui parle d'une voiture bleue.</p>
 <p>Lors d'un rappel ultérieur, cette information erronée peut parfois influencer sa réponse.</p>
-<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<h3 id="a-retenir_3">À RETENIR</h3>
 <p>Une information reçue <strong>après un événement</strong> peut parfois modifier le souvenir de cet événement.</p>
 <hr />
-<h2 id="105-la-memoire-reconstructive" class="entry-title hc-5">🧠 10.5 LA MÉMOIRE RECONSTRUCTIVE</h2>
-<h3 id="definition_4">🔎 DÉFINITION</h3>
+<h2 id="105-la-memoire-reconstructive" class="entry-title hc-5">10.5 LA MÉMOIRE RECONSTRUCTIVE</h2>
+<h3 id="definition_4">DÉFINITION</h3>
 <p>La <strong>mémoire reconstructive</strong> désigne le fait que les souvenirs peuvent être reconstruits à partir de différentes informations plutôt que simplement reproduits comme un enregistrement.</p>
-<h3 id="explication_4">🧠 EXPLICATION</h3>
+<h3 id="explication_4">EXPLICATION</h3>
 <p>Lorsque quelqu'un se souvient d'un événement, plusieurs éléments peuvent intervenir :</p>
 <ul>
 <li>les informations réellement perçues ;</li>
@@ -175,68 +190,68 @@
 <li>le temps écoulé.</li>
 </ul>
 <p>La mémoire peut donc être relativement précise tout en comportant certaines erreurs.</p>
-<h3 id="exemple_4">💬 EXEMPLE</h3>
+<h3 id="exemple_4">EXEMPLE</h3>
 <p>Une personne se souvient parfaitement d'un événement général mais confond la couleur d'un objet ou l'ordre exact de deux actions.</p>
-<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<h3 id="a-retenir_4">À RETENIR</h3>
 <p>Un souvenir peut être <strong>sincère et néanmoins comporter des erreurs</strong>.</p>
 <hr />
-<h2 id="106-le-souvenir-et-les-informations-posterieures" class="entry-title hc-1">🔄 10.6 LE SOUVENIR ET LES INFORMATIONS POSTÉRIEURES</h2>
-<h3 id="definition_5">🔎 DÉFINITION</h3>
+<h2 id="106-le-souvenir-et-les-informations-posterieures" class="entry-title hc-1">10.6 LE SOUVENIR ET LES INFORMATIONS POSTÉRIEURES</h2>
+<h3 id="definition_5">DÉFINITION</h3>
 <p>Les informations postérieures sont les informations reçues après qu'un événement a été observé.</p>
-<h3 id="explication_5">🧠 EXPLICATION</h3>
+<h3 id="explication_5">EXPLICATION</h3>
 <p>La mémoire d'un événement ne reste pas nécessairement totalement indépendante des informations rencontrées par la suite.</p>
 <p>Des conversations, questions, récits ou descriptions peuvent parfois influencer la reconstruction du souvenir.</p>
 <p>Cette influence ne signifie cependant pas que toute information reçue après un événement modifiera automatiquement la mémoire.</p>
-<h3 id="exemple_5">💬 EXEMPLE</h3>
+<h3 id="exemple_5">EXEMPLE</h3>
 <p>Après avoir assisté à un accident, une personne discute avec plusieurs témoins.</p>
 <p>Certains racontent des détails différents de ceux dont elle se souvenait initialement.</p>
 <p>Ces discussions peuvent parfois influencer son souvenir ultérieur.</p>
-<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<h3 id="a-retenir_5">À RETENIR</h3>
 <p>Les informations postérieures peuvent parfois <strong>interagir avec le souvenir initial</strong>.</p>
 <hr />
-<h2 id="107-la-memoire-et-les-temoins" class="entry-title hc-2">👥 10.7 LA MÉMOIRE ET LES TÉMOINS</h2>
-<h3 id="definition_6">🔎 DÉFINITION</h3>
+<h2 id="107-la-memoire-et-les-temoins" class="entry-title hc-2">10.7 LA MÉMOIRE ET LES TÉMOINS</h2>
+<h3 id="definition_6">DÉFINITION</h3>
 <p>La mémoire des témoins correspond aux souvenirs qu'une personne conserve après avoir observé un événement important, notamment dans un contexte judiciaire.</p>
-<h3 id="explication_6">🧠 EXPLICATION</h3>
+<h3 id="explication_6">EXPLICATION</h3>
 <p>Les recherches de Loftus ont eu une influence importante sur la compréhension des <strong>témoignages oculaires</strong>.</p>
 <p>Un témoin peut être honnête et convaincu de ce qu'il rapporte tout en ayant un souvenir partiellement inexact.</p>
 <p>Les questions posées pendant une enquête peuvent également influencer certaines réponses.</p>
 <p>C'est pourquoi la confiance exprimée par un témoin ne suffit pas à déterminer à elle seule l'exactitude de son souvenir.</p>
-<h3 id="exemple_6">💬 EXEMPLE</h3>
+<h3 id="exemple_6">EXEMPLE</h3>
 <p>Un témoin décrit avec assurance un détail qu'il pense avoir vu.</p>
 <p>Une analyse ultérieure montre cependant que ce détail pouvait avoir été influencé par des informations reçues après l'événement.</p>
-<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<h3 id="a-retenir_6">À RETENIR</h3>
 <p><strong>Être sincèrement convaincu d'un souvenir ne garantit pas que chaque détail soit exact.</strong></p>
 <hr />
-<h2 id="108-les-faux-souvenirs" class="entry-title hc-3">⚠️ 10.8 LES FAUX SOUVENIRS</h2>
-<h3 id="definition_7">🔎 DÉFINITION</h3>
+<h2 id="108-les-faux-souvenirs" class="entry-title hc-3">10.8 LES FAUX SOUVENIRS</h2>
+<h3 id="definition_7">DÉFINITION</h3>
 <p>Un <strong>faux souvenir</strong> est un souvenir qui contient des éléments qui ne correspondent pas exactement à ce qui s'est réellement produit.</p>
-<h3 id="explication_7">🧠 EXPLICATION</h3>
+<h3 id="explication_7">EXPLICATION</h3>
 <p>Les faux souvenirs peuvent prendre différentes formes.</p>
 <p>Une personne peut se souvenir d'un détail incorrect, mélanger plusieurs événements ou avoir le sentiment qu'un événement s'est produit alors qu'il ne s'est pas produit de la manière dont elle s'en souvient.</p>
 <p>Les recherches expérimentales ont montré qu'il est possible, dans certaines conditions, d'influencer certains souvenirs.</p>
 <p>Cela ne signifie pas que les souvenirs sont généralement faux.</p>
-<h3 id="exemple_7">💬 EXEMPLE</h3>
+<h3 id="exemple_7">EXEMPLE</h3>
 <p>Une personne se souvient d'avoir vu un objet particulier lors d'un événement alors que cet objet n'était pas réellement présent.</p>
-<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<h3 id="a-retenir_7">À RETENIR</h3>
 <p>Les faux souvenirs sont <strong>possibles</strong>, mais cela ne signifie pas que la mémoire humaine est globalement peu fiable.</p>
 <hr />
-<h2 id="109-la-confiance-dans-le-souvenir" class="entry-title hc-4">🧠 10.9 LA CONFIANCE DANS LE SOUVENIR</h2>
-<h3 id="definition_8">🔎 DÉFINITION</h3>
+<h2 id="109-la-confiance-dans-le-souvenir" class="entry-title hc-4">10.9 LA CONFIANCE DANS LE SOUVENIR</h2>
+<h3 id="definition_8">DÉFINITION</h3>
 <p>La confiance dans un souvenir correspond au degré de certitude qu'une personne ressent concernant l'exactitude de ce qu'elle se rappelle.</p>
-<h3 id="explication_8">🧠 EXPLICATION</h3>
+<h3 id="explication_8">EXPLICATION</h3>
 <p>Une personne peut être extrêmement sûre d'un souvenir qui comporte pourtant une erreur.</p>
 <p>La confiance subjective et l'exactitude objective ne sont donc pas toujours parfaitement liées.</p>
 <p>Cette distinction est particulièrement importante lorsqu'un témoignage est utilisé pour prendre une décision importante.</p>
-<h3 id="exemple_8">💬 EXEMPLE</h3>
+<h3 id="exemple_8">EXEMPLE</h3>
 <p>Un témoin peut déclarer être certain d'avoir vu un détail précis alors que des éléments objectifs montrent que son souvenir comporte une erreur.</p>
-<h3 id="a-retenir_8">📌 À RETENIR</h3>
+<h3 id="a-retenir_8">À RETENIR</h3>
 <p><strong>La confiance dans un souvenir et son exactitude sont deux notions différentes.</strong></p>
 <hr />
-<h2 id="1010-limportance-des-recherches-de-loftus" class="entry-title hc-5">🔬 10.10 L'IMPORTANCE DES RECHERCHES DE LOFTUS</h2>
-<h3 id="definition_9">🔎 DÉFINITION</h3>
+<h2 id="1010-limportance-des-recherches-de-loftus" class="entry-title hc-5">10.10 L'IMPORTANCE DES RECHERCHES DE LOFTUS</h2>
+<h3 id="definition_9">DÉFINITION</h3>
 <p>Les recherches d'Elizabeth Loftus ont contribué à modifier la compréhension scientifique de la mémoire et de son utilisation dans certains contextes judiciaires.</p>
-<h3 id="explication_9">🧠 EXPLICATION</h3>
+<h3 id="explication_9">EXPLICATION</h3>
 <p>Ses travaux ont notamment attiré l'attention sur :</p>
 <ul>
 <li>la reconstruction des souvenirs ;</li>
@@ -247,12 +262,12 @@
 <li>l'influence des informations reçues après un événement.</li>
 </ul>
 <p>Ces recherches ont également contribué à montrer pourquoi les procédures utilisées pour recueillir des témoignages doivent limiter autant que possible les influences susceptibles de modifier les souvenirs.</p>
-<h3 id="exemple_9">💬 EXEMPLE</h3>
+<h3 id="exemple_9">EXEMPLE</h3>
 <p>Lorsqu'une personne doit raconter un événement, la formulation des questions peut avoir de l'importance, notamment lorsqu'elle contient déjà une information susceptible d'orienter la réponse.</p>
-<h3 id="a-retenir_9">📌 À RETENIR</h3>
+<h3 id="a-retenir_9">À RETENIR</h3>
 <p>Les recherches de Loftus ont profondément influencé <strong>l'étude scientifique de la mémoire et la compréhension des témoignages</strong>.</p>
 <hr />
-<h1 id="en-pratique">🧩 EN PRATIQUE</h1>
+<h1 id="en-pratique">EN PRATIQUE</h1>
 <p>Les recherches d'Elizabeth Loftus permettent de comprendre plusieurs notions importantes :</p>
 <ul>
 <li><strong>Mémoire reconstructive</strong> : les souvenirs sont reconstruits plutôt que simplement reproduits.</li>
@@ -267,8 +282,29 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Expériences célèbres de psychologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/experiences-l-experience-du-marshmallow/"><span class="similar-icon">🧪</span>L'expérience du marshmallow</a><a class="similar-item" href="/chapitre/experiences-l-experience-de-la-poupee-bobo/"><span class="similar-icon">🧪</span>L'expérience de la poupée Bobo</a><a class="similar-item" href="/chapitre/experiences-les-experiences-de-harry-harlow/"><span class="similar-icon">🧪</span>Les expériences de Harry Harlow</a></div>
+      <h2>Autres chapitres de « Expériences célèbres de psychologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/experiences-l-experience-du-marshmallow/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>L'expérience du marshmallow</a><a class="similar-item" href="/chapitre/experiences-l-experience-de-la-poupee-bobo/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>L'expérience de la poupée Bobo</a><a class="similar-item" href="/chapitre/experiences-les-experiences-de-harry-harlow/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>Les expériences de Harry Harlow</a></div>
     </div>
     <a class="back-link" href="/categorie/experiences/">← Retour à « Expériences célèbres de psychologie »</a>
   </div>
@@ -354,23 +390,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -388,7 +426,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -568,9 +606,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -579,10 +619,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -689,7 +729,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -729,8 +769,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -761,7 +801,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -816,7 +856,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -840,17 +880,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -892,7 +932,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

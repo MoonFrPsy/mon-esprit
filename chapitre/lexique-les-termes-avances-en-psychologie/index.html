@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#102-le-fonctionnement-psychique">10.2 Le fonctionnement psychique</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#103-la-dynamique-psychique">10.3 La dynamique psychique</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#104-le-conflit-intrapsychique">10.4 Le conflit intrapsychique</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#exemple">🧠 Exemple</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#105-la-mentalisation">10.5 La mentalisation</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#exemple_1">📌 Exemple</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#106-la-metacognition">10.6 La métacognition</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#exemple_2">📌 Exemple</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#107-la-conscience-de-soi">10.7 La conscience de soi</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#108-le-sentiment-de-continuite-du-soi">10.8 Le sentiment de continuité du soi</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#109-la-representation-mentale">10.9 La représentation mentale</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#1010-le-schema-cognitif">10.10 Le schéma cognitif</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#exemple_3">📌 Exemple</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#1011-le-schema-precoce-inadapte">10.11 Le schéma précoce inadapté</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#a-retenir_10">📌 À retenir</a></li></ul></li><li><a href="#1012-le-mode">10.12 Le mode</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#exemple_4">📌 Exemple</a></li><li><a href="#a-retenir_11">📌 À retenir</a></li></ul></li><li><a href="#1013-le-transfert">10.13 Le transfert</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#exemple_5">📌 Exemple</a></li><li><a href="#a-retenir_12">📌 À retenir</a></li></ul></li><li><a href="#1014-le-contre-transfert">10.14 Le contre-transfert</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#a-retenir_13">📌 À retenir</a></li></ul></li><li><a href="#1015-la-psychopathologie-dimensionnelle">10.15 La psychopathologie dimensionnelle</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#exemple_6">📌 Exemple</a></li><li><a href="#a-retenir_14">📌 À retenir</a></li></ul></li><li><a href="#1016-la-comorbidite">10.16 La comorbidité</a><ul class="sidebar-sublist"><li><a href="#definition_15">🔎 Définition</a></li><li><a href="#exemple_7">📌 Exemple</a></li><li><a href="#a-retenir_15">📌 À retenir</a></li></ul></li><li><a href="#1017-la-symptomatologie">10.17 La symptomatologie</a><ul class="sidebar-sublist"><li><a href="#definition_16">🔎 Définition</a></li><li><a href="#a-retenir_16">📌 À retenir</a></li></ul></li><li><a href="#1018-la-nosographie">10.18 La nosographie</a><ul class="sidebar-sublist"><li><a href="#definition_17">🔎 Définition</a></li><li><a href="#exemples-de-classifications">📚 Exemples de classifications</a></li><li><a href="#a-retenir_17">📌 À retenir</a></li></ul></li><li><a href="#1019-le-diagnostic-differentiel">10.19 Le diagnostic différentiel</a><ul class="sidebar-sublist"><li><a href="#definition_18">🔎 Définition</a></li><li><a href="#exemple_8">📌 Exemple</a></li><li><a href="#a-retenir_18">📌 À retenir</a></li></ul></li><li><a href="#1020-la-formulation-clinique">10.20 La formulation clinique</a><ul class="sidebar-sublist"><li><a href="#definition_19">🔎 Définition</a></li><li><a href="#a-retenir_19">📌 À retenir</a></li></ul></li><li><a href="#a-retenir_20">🧠 À RETENIR</a></li><li><a href="#fin-du-lexique-des-seances-psychologiques">📖 FIN DU LEXIQUE DES SÉANCES PSYCHOLOGIQUES</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#102-le-fonctionnement-psychique">10.2 Le fonctionnement psychique</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#103-la-dynamique-psychique">10.3 La dynamique psychique</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#104-le-conflit-intrapsychique">10.4 Le conflit intrapsychique</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#105-la-mentalisation">10.5 La mentalisation</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#exemple_1">Exemple</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#106-la-metacognition">10.6 La métacognition</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#exemple_2">Exemple</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#107-la-conscience-de-soi">10.7 La conscience de soi</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#108-le-sentiment-de-continuite-du-soi">10.8 Le sentiment de continuité du soi</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#109-la-representation-mentale">10.9 La représentation mentale</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1010-le-schema-cognitif">10.10 Le schéma cognitif</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#exemple_3">Exemple</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#1011-le-schema-precoce-inadapte">10.11 Le schéma précoce inadapté</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#1012-le-mode">10.12 Le mode</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemple_4">Exemple</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#1013-le-transfert">10.13 Le transfert</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#exemple_5">Exemple</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#1014-le-contre-transfert">10.14 Le contre-transfert</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li><li><a href="#1015-la-psychopathologie-dimensionnelle">10.15 La psychopathologie dimensionnelle</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#exemple_6">Exemple</a></li><li><a href="#a-retenir_14">À retenir</a></li></ul></li><li><a href="#1016-la-comorbidite">10.16 La comorbidité</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#exemple_7">Exemple</a></li><li><a href="#a-retenir_15">À retenir</a></li></ul></li><li><a href="#1017-la-symptomatologie">10.17 La symptomatologie</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#a-retenir_16">À retenir</a></li></ul></li><li><a href="#1018-la-nosographie">10.18 La nosographie</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#exemples-de-classifications">Exemples de classifications</a></li><li><a href="#a-retenir_17">À retenir</a></li></ul></li><li><a href="#1019-le-diagnostic-differentiel">10.19 Le diagnostic différentiel</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#exemple_8">Exemple</a></li><li><a href="#a-retenir_18">À retenir</a></li></ul></li><li><a href="#1020-la-formulation-clinique">10.20 La formulation clinique</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#a-retenir_19">À retenir</a></li></ul></li><li><a href="#a-retenir_20">À RETENIR</a></li><li><a href="#fin-du-lexique-des-seances-psychologiques">FIN DU LEXIQUE DES SÉANCES PSYCHOLOGIQUES</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les termes avancés en psychologie',
         category: 'Lexique des séances psychologiques',
-        icon: '💬'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/lexique/">💬 Lexique des séances psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/lexique/">Lexique des séances psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les termes avancés en psychologie</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,12 +113,12 @@
     </div>
     <div class="article-body">
       <blockquote>
-<p>🧠 Cette partie rassemble des notions plus spécialisées utilisées en psychologie clinique, en psychopathologie, en psychothérapie et dans l'étude du fonctionnement psychique.
+<p>Cette partie rassemble des notions plus spécialisées utilisées en psychologie clinique, en psychopathologie, en psychothérapie et dans l'étude du fonctionnement psychique.
 </p>
 </blockquote>
 <hr />
 <h2 id="101-la-psychopathologie">10.1 La psychopathologie</h2>
-<h3 id="definition">🔎 Définition</h3>
+<h3 id="definition">Définition</h3>
 <p>La <strong>psychopathologie</strong> est l'étude scientifique des troubles psychiques, de leurs manifestations, de leur évolution et des mécanismes qui peuvent y être associés.</p>
 <p>Elle s'intéresse notamment :</p>
 <ul>
@@ -114,11 +129,11 @@
 <li>aux mécanismes psychologiques ;</li>
 <li>à l'évolution des troubles.</li>
 </ul>
-<h3 id="a-retenir">📌 À retenir</h3>
+<h3 id="a-retenir">À retenir</h3>
 <p>La psychopathologie est un <strong>domaine d'étude</strong>, et non un trouble psychologique.</p>
 <hr />
 <h1 id="102-le-fonctionnement-psychique" class="entry-title hc-1">10.2 Le fonctionnement psychique</h1>
-<h3 id="definition_1">🔎 Définition</h3>
+<h3 id="definition_1">Définition</h3>
 <p>Le <strong>fonctionnement psychique</strong> désigne la manière dont une personne organise et vit ses pensées, émotions, perceptions, relations et comportements.</p>
 <p>Il peut être étudié à différents niveaux :</p>
 <ul>
@@ -128,31 +143,31 @@
 <li>relationnel ;</li>
 <li>inconscient.</li>
 </ul>
-<h3 id="a-retenir_1">📌 À retenir</h3>
+<h3 id="a-retenir_1">À retenir</h3>
 <p>Il s'agit d'une notion globale permettant de comprendre comment différents aspects psychologiques fonctionnent ensemble.</p>
 <hr />
 <h1 id="103-la-dynamique-psychique" class="entry-title hc-2">10.3 La dynamique psychique</h1>
-<h3 id="definition_2">🔎 Définition</h3>
+<h3 id="definition_2">Définition</h3>
 <p>La <strong>dynamique psychique</strong> désigne les interactions entre différents processus psychologiques pouvant influencer les pensées, émotions et comportements.</p>
 <p>Dans certaines approches, elle peut notamment faire référence aux conflits internes, aux besoins, aux défenses et aux motivations.</p>
-<h3 id="a-retenir_2">📌 À retenir</h3>
+<h3 id="a-retenir_2">À retenir</h3>
 <p>Le terme est particulièrement présent dans les approches psychodynamiques.</p>
 <hr />
 <h1 id="104-le-conflit-intrapsychique" class="entry-title hc-3">10.4 Le conflit intrapsychique</h1>
-<h3 id="definition_3">🔎 Définition</h3>
+<h3 id="definition_3">Définition</h3>
 <p>Un <strong>conflit intrapsychique</strong> correspond à une opposition entre différents besoins, désirs, valeurs, pensées ou tendances psychologiques au sein du fonctionnement psychique.</p>
-<h3 id="exemple">🧠 Exemple</h3>
+<h3 id="exemple">Exemple</h3>
 <p>Une personne peut simultanément :</p>
 <ul>
 <li>vouloir être proche d'une autre personne ;</li>
 <li>craindre cette proximité.</li>
 </ul>
 <p>Ces deux tendances peuvent créer une tension interne.</p>
-<h3 id="a-retenir_3">📌 À retenir</h3>
+<h3 id="a-retenir_3">À retenir</h3>
 <p>Un conflit intrapsychique ne signifie pas nécessairement présence d'un trouble.</p>
 <hr />
 <h1 id="105-la-mentalisation" class="entry-title hc-4">10.5 La mentalisation</h1>
-<h3 id="definition_4">🔎 Définition</h3>
+<h3 id="definition_4">Définition</h3>
 <p>La <strong>mentalisation</strong> désigne la capacité à comprendre les comportements, les émotions et les réactions en les reliant à des états mentaux.</p>
 <p>Elle concerne :</p>
 <ul>
@@ -162,13 +177,13 @@
 <li>les émotions des autres ;</li>
 <li>les intentions.</li>
 </ul>
-<h3 id="exemple_1">📌 Exemple</h3>
+<h3 id="exemple_1">Exemple</h3>
 <p>Comprendre qu'une personne peut sembler distante non pas parce qu'elle rejette quelqu'un, mais parce qu'elle est anxieuse, implique un processus de mentalisation.</p>
-<h3 id="a-retenir_4">📌 À retenir</h3>
+<h3 id="a-retenir_4">À retenir</h3>
 <p>La mentalisation aide à interpréter les comportements au-delà de leur apparence immédiate.</p>
 <hr />
 <h1 id="106-la-metacognition" class="entry-title hc-5">10.6 La métacognition</h1>
-<h3 id="definition_5">🔎 Définition</h3>
+<h3 id="definition_5">Définition</h3>
 <p>La <strong>métacognition</strong> correspond à la capacité à réfléchir sur ses propres processus cognitifs.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -178,13 +193,13 @@
 <li>les stratégies utilisées pour résoudre un problème ;</li>
 <li>la manière dont on apprend.</li>
 </ul>
-<h3 id="exemple_2">📌 Exemple</h3>
+<h3 id="exemple_2">Exemple</h3>
 <p>Se demander « pourquoi est-ce que je pense automatiquement de cette manière ? » constitue une forme de réflexion métacognitive.</p>
-<h3 id="a-retenir_5">📌 À retenir</h3>
+<h3 id="a-retenir_5">À retenir</h3>
 <p>La métacognition peut être considérée comme une forme de <strong>réflexion sur son propre fonctionnement mental</strong>.</p>
 <hr />
 <h1 id="107-la-conscience-de-soi" class="entry-title hc-1">10.7 La conscience de soi</h1>
-<h3 id="definition_6">🔎 Définition</h3>
+<h3 id="definition_6">Définition</h3>
 <p>La <strong>conscience de soi</strong> désigne la capacité à avoir une représentation de soi-même en tant qu'individu.</p>
 <p>Elle peut inclure :</p>
 <ul>
@@ -194,11 +209,11 @@
 <li>la conscience de ses pensées ;</li>
 <li>la perception de son identité.</li>
 </ul>
-<h3 id="a-retenir_6">📌 À retenir</h3>
+<h3 id="a-retenir_6">À retenir</h3>
 <p>La conscience de soi possède plusieurs dimensions et ne se limite pas à « savoir qui l'on est ».</p>
 <hr />
 <h1 id="108-le-sentiment-de-continuite-du-soi" class="entry-title hc-2">10.8 Le sentiment de continuité du soi</h1>
-<h3 id="definition_7">🔎 Définition</h3>
+<h3 id="definition_7">Définition</h3>
 <p>Le <strong>sentiment de continuité du soi</strong> correspond à l'impression de rester la même personne à travers le temps malgré les changements.</p>
 <p>Il repose notamment sur :</p>
 <ul>
@@ -208,11 +223,11 @@
 <li>les expériences ;</li>
 <li>les projets.</li>
 </ul>
-<h3 id="a-retenir_7">📌 À retenir</h3>
+<h3 id="a-retenir_7">À retenir</h3>
 <p>Une personne peut changer au cours de sa vie tout en conservant un sentiment de continuité personnelle.</p>
 <hr />
 <h1 id="109-la-representation-mentale" class="entry-title hc-3">10.9 La représentation mentale</h1>
-<h3 id="definition_8">🔎 Définition</h3>
+<h3 id="definition_8">Définition</h3>
 <p>Une <strong>représentation mentale</strong> est une construction interne permettant de se représenter un objet, une personne, une situation, soi-même ou une relation.</p>
 <p>Elle peut être :</p>
 <ul>
@@ -222,11 +237,11 @@
 <li>conceptuelle ;</li>
 <li>relationnelle.</li>
 </ul>
-<h3 id="a-retenir_8">📌 À retenir</h3>
+<h3 id="a-retenir_8">À retenir</h3>
 <p>Les représentations mentales influencent notamment la manière dont une situation est interprétée.</p>
 <hr />
 <h1 id="1010-le-schema-cognitif" class="entry-title hc-4">10.10 Le schéma cognitif</h1>
-<h3 id="definition_9">🔎 Définition</h3>
+<h3 id="definition_9">Définition</h3>
 <p>Un <strong>schéma cognitif</strong> est une structure mentale organisée permettant d'interpréter certaines informations et expériences.</p>
 <p>Les schémas peuvent influencer :</p>
 <ul>
@@ -236,13 +251,13 @@
 <li>les attentes ;</li>
 <li>les comportements.</li>
 </ul>
-<h3 id="exemple_3">📌 Exemple</h3>
+<h3 id="exemple_3">Exemple</h3>
 <p>Une personne ayant un schéma fortement associé au rejet peut être particulièrement attentive aux signes pouvant confirmer cette attente.</p>
-<h3 id="a-retenir_9">📌 À retenir</h3>
+<h3 id="a-retenir_9">À retenir</h3>
 <p>Un schéma n'est pas simplement une pensée isolée : il s'agit d'une organisation plus générale des connaissances et attentes.</p>
 <hr />
 <h1 id="1011-le-schema-precoce-inadapte" class="entry-title hc-5">10.11 Le schéma précoce inadapté</h1>
-<h3 id="definition_10">🔎 Définition</h3>
+<h3 id="definition_10">Définition</h3>
 <p>Dans la <strong>thérapie des schémas</strong>, un schéma précoce inadapté désigne un modèle psychologique profond et durable pouvant influencer la perception de soi, des autres et du monde.</p>
 <p>Il peut notamment concerner :</p>
 <ul>
@@ -253,55 +268,55 @@
 <li>l'exigence excessive ;</li>
 <li>le sentiment de ne pas être suffisamment aimé.</li>
 </ul>
-<h3 id="a-retenir_10">📌 À retenir</h3>
+<h3 id="a-retenir_10">À retenir</h3>
 <p>Il s'agit d'une notion spécifique à un modèle thérapeutique particulier.</p>
 <hr />
 <h1 id="1012-le-mode" class="entry-title hc-1">10.12 Le mode</h1>
-<h3 id="definition_11">🔎 Définition</h3>
+<h3 id="definition_11">Définition</h3>
 <p>Dans la <strong>thérapie des schémas</strong>, un <strong>mode</strong> correspond à un état psychologique momentanément activé comprenant certaines émotions, pensées, souvenirs et tendances comportementales.</p>
 <p>Une même personne peut passer d'un mode à un autre selon les situations.</p>
-<h3 id="exemple_4">📌 Exemple</h3>
+<h3 id="exemple_4">Exemple</h3>
 <p>Une personne peut se sentir très vulnérable dans une situation puis devenir extrêmement critique envers elle-même quelques instants plus tard.</p>
-<h3 id="a-retenir_11">📌 À retenir</h3>
+<h3 id="a-retenir_11">À retenir</h3>
 <p>Le concept de mode est particulièrement utilisé dans la thérapie des schémas.</p>
 <hr />
 <h1 id="1013-le-transfert" class="entry-title hc-2">10.13 Le transfert</h1>
-<h3 id="definition_12">🔎 Définition</h3>
+<h3 id="definition_12">Définition</h3>
 <p>Le <strong>transfert</strong> désigne le fait que certaines émotions, attentes ou représentations provenant d'expériences relationnelles antérieures peuvent être mobilisées dans la relation avec le thérapeute.</p>
-<h3 id="exemple_5">📌 Exemple</h3>
+<h3 id="exemple_5">Exemple</h3>
 <p>Une personne ayant connu certaines relations très critiques peut être particulièrement sensible à la possibilité d'être jugée par son thérapeute.</p>
-<h3 id="a-retenir_12">📌 À retenir</h3>
+<h3 id="a-retenir_12">À retenir</h3>
 <p>Le transfert est une notion historique importante des approches psychodynamiques et psychanalytiques.</p>
 <hr />
 <h1 id="1014-le-contre-transfert" class="entry-title hc-3">10.14  Le contre-transfert</h1>
-<h3 id="definition_13">🔎 Définition</h3>
+<h3 id="definition_13">Définition</h3>
 <p>Le <strong>contre-transfert</strong> désigne traditionnellement les réactions émotionnelles du thérapeute dans la relation avec le patient.</p>
 <p>Dans les conceptions contemporaines, il peut également désigner l'ensemble des réactions personnelles du thérapeute pouvant être influencées par la relation thérapeutique.</p>
-<h3 id="a-retenir_13">📌 À retenir</h3>
+<h3 id="a-retenir_13">À retenir</h3>
 <p>Le contre-transfert fait partie des éléments pouvant être réfléchis dans le travail clinique du thérapeute.</p>
 <hr />
 <h1 id="1015-la-psychopathologie-dimensionnelle" class="entry-title hc-4">10.15 La psychopathologie dimensionnelle</h1>
-<h3 id="definition_14">🔎 Définition</h3>
+<h3 id="definition_14">Définition</h3>
 <p>La <strong>psychopathologie dimensionnelle</strong> considère certains phénomènes psychologiques comme pouvant se situer sur des <strong>continuums</strong> plutôt que comme simplement présents ou absents.</p>
-<h3 id="exemple_6">📌 Exemple</h3>
+<h3 id="exemple_6">Exemple</h3>
 <p>L'anxiété peut exister à différents niveaux d'intensité sans que toutes les personnes anxieuses présentent nécessairement un trouble anxieux.</p>
-<h3 id="a-retenir_14">📌 À retenir</h3>
+<h3 id="a-retenir_14">À retenir</h3>
 <p>Une caractéristique psychologique présente à un certain degré n'est pas automatiquement pathologique.</p>
 <hr />
 <h1 id="1016-la-comorbidite" class="entry-title hc-5">10.16 La comorbidité</h1>
-<h3 id="definition_15">🔎 Définition</h3>
+<h3 id="definition_15">Définition</h3>
 <p>La <strong>comorbidité</strong> désigne la présence simultanée de plusieurs troubles ou problèmes de santé chez une même personne.</p>
-<h3 id="exemple_7">📌 Exemple</h3>
+<h3 id="exemple_7">Exemple</h3>
 <p>Une personne peut présenter à la fois :</p>
 <ul>
 <li>un trouble anxieux ;</li>
 <li>et un trouble dépressif.</li>
 </ul>
-<h3 id="a-retenir_15">📌 À retenir</h3>
+<h3 id="a-retenir_15">À retenir</h3>
 <p>La présence de plusieurs difficultés peut influencer leur évaluation et leur prise en charge.</p>
 <hr />
 <h1 id="1017-la-symptomatologie" class="entry-title hc-1">10.17 La symptomatologie</h1>
-<h3 id="definition_16">🔎 Définition</h3>
+<h3 id="definition_16">Définition</h3>
 <p>La <strong>symptomatologie</strong> désigne l'ensemble des symptômes et manifestations associés à un trouble ou à une situation clinique.</p>
 <p>Elle peut comprendre :</p>
 <ul>
@@ -311,26 +326,26 @@
 <li>symptômes physiques ;</li>
 <li>symptômes perceptifs.</li>
 </ul>
-<h3 id="a-retenir_16">📌 À retenir</h3>
+<h3 id="a-retenir_16">À retenir</h3>
 <p>La symptomatologie décrit <strong>ce qui est observé ou rapporté</strong>, tandis que le diagnostic cherche notamment à déterminer comment ces manifestations peuvent être comprises et classées.</p>
 <hr />
 <h1 id="1018-la-nosographie" class="entry-title hc-2">10.18 La nosographie</h1>
-<h3 id="definition_17">🔎 Définition</h3>
+<h3 id="definition_17">Définition</h3>
 <p>La <strong>nosographie</strong> est la classification et l'organisation des maladies ou troubles selon différentes catégories et critères.</p>
 <p>En psychiatrie, elle permet notamment d'organiser les différents troubles dans des classifications diagnostiques.</p>
-<h3 id="exemples-de-classifications">📚 Exemples de classifications</h3>
+<h3 id="exemples-de-classifications">Exemples de classifications</h3>
 <ul>
 <li>DSM ;</li>
 <li>CIM.</li>
 </ul>
-<h3 id="a-retenir_17">📌 À retenir</h3>
+<h3 id="a-retenir_17">À retenir</h3>
 <p>Une classification diagnostique est un système permettant d'organiser les troubles ; elle ne décrit pas nécessairement toute la complexité d'une personne.</p>
 <hr />
 <h1 id="1019-le-diagnostic-differentiel" class="entry-title hc-3">10.19 Le diagnostic différentiel</h1>
-<h3 id="definition_18">🔎 Définition</h3>
+<h3 id="definition_18">Définition</h3>
 <p>Le <strong>diagnostic différentiel</strong> consiste à comparer plusieurs hypothèses possibles pouvant expliquer un ensemble de symptômes.</p>
 <p>L'objectif est notamment de distinguer des troubles présentant des manifestations similaires.</p>
-<h3 id="exemple_8">📌 Exemple</h3>
+<h3 id="exemple_8">Exemple</h3>
 <p>Une difficulté de concentration peut apparaître dans différents contextes, notamment lors :</p>
 <ul>
 <li>d'un stress important ;</li>
@@ -339,11 +354,11 @@
 <li>d'un trouble du sommeil ;</li>
 <li>de certaines conditions médicales.</li>
 </ul>
-<h3 id="a-retenir_18">📌 À retenir</h3>
+<h3 id="a-retenir_18">À retenir</h3>
 <p>Un même symptôme peut avoir plusieurs explications possibles.</p>
 <hr />
 <h1 id="1020-la-formulation-clinique" class="entry-title hc-4">10.20 La formulation clinique</h1>
-<h3 id="definition_19">🔎 Définition</h3>
+<h3 id="definition_19">Définition</h3>
 <p>La <strong>formulation clinique</strong> est une manière structurée de comprendre les difficultés d'une personne en reliant différents éléments de son histoire et de son fonctionnement actuel.</p>
 <p>Elle peut prendre en compte :</p>
 <ul>
@@ -354,31 +369,46 @@
 <li>l'histoire personnelle ;</li>
 <li>les facteurs environnementaux.</li>
 </ul>
-<h3 id="a-retenir_19">📌 À retenir</h3>
+<h3 id="a-retenir_19">À retenir</h3>
 <p>Une formulation clinique cherche à comprendre <strong>comment les différents éléments s'articulent</strong>, au-delà de la simple attribution d'un diagnostic.</p>
 <hr />
-<h1 id="a-retenir_20" class="entry-title hc-5">🧠 À RETENIR</h1>
-<p>🔹 La <strong>psychopathologie</strong> étudie les troubles psychiques et leurs manifestations.</p>
-<p>🔹 Le <strong>fonctionnement psychique</strong> cherche à comprendre la manière dont les différents processus psychologiques s'organisent.</p>
-<p>🔹 La <strong>mentalisation</strong> concerne la compréhension des comportements à partir des états mentaux.</p>
-<p>🔹 La <strong>métacognition</strong> consiste à réfléchir à son propre fonctionnement cognitif.</p>
-<p>🔹 Les <strong>schémas cognitifs</strong> peuvent influencer la manière dont les situations sont interprétées.</p>
-<p>🔹 Le <strong>transfert</strong> et le <strong>contre-transfert</strong> sont particulièrement importants dans certaines approches psychothérapeutiques.</p>
-<p>🔹 La <strong>comorbidité</strong> rappelle qu'une même personne peut présenter plusieurs troubles ou difficultés simultanément.</p>
-<p>🔹 Un <strong>symptôme isolé ne suffit généralement pas à établir un diagnostic</strong>.</p>
-<p>🔹 Le <strong>diagnostic différentiel</strong> permet d'envisager plusieurs explications possibles avant de retenir une hypothèse clinique.</p>
-<p>🔹 La <strong>formulation clinique</strong> cherche à comprendre le fonctionnement dans son ensemble plutôt qu'à simplement attribuer une étiquette diagnostique.</p>
+<h1 id="a-retenir_20" class="entry-title hc-5">À RETENIR</h1>
+<p>La <strong>psychopathologie</strong> étudie les troubles psychiques et leurs manifestations.</p>
+<p>Le <strong>fonctionnement psychique</strong> cherche à comprendre la manière dont les différents processus psychologiques s'organisent.</p>
+<p>La <strong>mentalisation</strong> concerne la compréhension des comportements à partir des états mentaux.</p>
+<p>La <strong>métacognition</strong> consiste à réfléchir à son propre fonctionnement cognitif.</p>
+<p>Les <strong>schémas cognitifs</strong> peuvent influencer la manière dont les situations sont interprétées.</p>
+<p>Le <strong>transfert</strong> et le <strong>contre-transfert</strong> sont particulièrement importants dans certaines approches psychothérapeutiques.</p>
+<p>La <strong>comorbidité</strong> rappelle qu'une même personne peut présenter plusieurs troubles ou difficultés simultanément.</p>
+<p>Un <strong>symptôme isolé ne suffit généralement pas à établir un diagnostic</strong>.</p>
+<p>Le <strong>diagnostic différentiel</strong> permet d'envisager plusieurs explications possibles avant de retenir une hypothèse clinique.</p>
+<p>La <strong>formulation clinique</strong> cherche à comprendre le fonctionnement dans son ensemble plutôt qu'à simplement attribuer une étiquette diagnostique.</p>
 <hr />
-<h1 id="fin-du-lexique-des-seances-psychologiques" class="entry-title hc-1">📖 FIN DU LEXIQUE DES SÉANCES PSYCHOLOGIQUES</h1>
+<h1 id="fin-du-lexique-des-seances-psychologiques" class="entry-title hc-1">FIN DU LEXIQUE DES SÉANCES PSYCHOLOGIQUES</h1>
 <blockquote>
-<p>💬 Cette catégorie a permis de parcourir progressivement les principaux mots et concepts pouvant être rencontrés dans le domaine de la psychologie, depuis les bases d'une séance jusqu'aux notions cliniques plus avancées.
+<p>Cette catégorie a permis de parcourir progressivement les principaux mots et concepts pouvant être rencontrés dans le domaine de la psychologie, depuis les bases d'une séance jusqu'aux notions cliniques plus avancées.
 </p>
 </blockquote>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Lexique des séances psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/lexique-les-bases-d-une-seance-psychologique/"><span class="similar-icon">💬</span>Les bases d'une séance psychologique</a><a class="similar-item" href="/chapitre/lexique-les-mots-pour-parler-des-emotions/"><span class="similar-icon">💬</span>Les mots pour parler des émotions</a><a class="similar-item" href="/chapitre/lexique-les-concepts-lies-aux-pensees/"><span class="similar-icon">💬</span>Les concepts liés aux pensées</a></div>
+      <h2>Autres chapitres de « Lexique des séances psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/lexique-les-bases-d-une-seance-psychologique/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg></span>Les bases d'une séance psychologique</a><a class="similar-item" href="/chapitre/lexique-les-mots-pour-parler-des-emotions/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg></span>Les mots pour parler des émotions</a><a class="similar-item" href="/chapitre/lexique-les-concepts-lies-aux-pensees/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 28 h52 a9 9 0 0 1 9 9 v22 a9 9 0 0 1 -9 9 h-28 l-15 14 v-14 h-9
+                 a9 9 0 0 1 -9 -9 v-22 a9 9 0 0 1 9 -9 Z"/>
+        <path d="M55 54 h41 a9 9 0 0 1 9 9 v16 a9 9 0 0 1 -9 9 h-5 v12 l-13 -12 h-23
+                 a9 9 0 0 1 -9 -9 v-16 a9 9 0 0 1 9 -9 Z"/>
+    </svg></span>Les concepts liés aux pensées</a></div>
     </div>
     <a class="back-link" href="/categorie/lexique/">← Retour à « Lexique des séances psychologiques »</a>
   </div>
@@ -464,23 +494,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -498,7 +530,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -678,9 +710,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -689,10 +723,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -799,7 +833,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -839,8 +873,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -871,7 +905,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -926,7 +960,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -950,17 +984,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1002,7 +1036,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#131-le-syndrome-de-ganser">🧠 13.1 Le syndrome de Ganser</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#manifestations-possibles">🧠 Manifestations possibles</a></li><li><a href="#associations-possibles">🧬 Associations possibles</a></li><li><a href="#statut">🩺 Statut</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#132-le-syndrome-de-kleinelevin">😴 13.2 Le syndrome de KleineLevin</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#manifestations-possibles_1">😴 Manifestations possibles</a></li><li><a href="#evolution">🧬 Évolution</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#133-la-narcolepsie-maladie-de-gelineau">😴 13.3 La narcolepsie / maladie de Gélineau</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#manifestations-principales">😴 Manifestations principales</a></li><li><a href="#mecanisme">🧬 Mécanisme</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#134-le-syndrome-de-paris">🗼 13.4 Le syndrome de Paris</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#manifestations-rapportees">🧠 Manifestations rapportées</a></li><li><a href="#explication-possible">🧬 Explication possible</a></li><li><a href="#statut_1">🩺 Statut</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#135-le-syndrome-de-jerusalem">🕍 13.5 Le syndrome de Jérusalem</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#manifestations-possibles_2">🧠 Manifestations possibles</a></li><li><a href="#particularite">🧬 Particularité</a></li><li><a href="#statut_2">🩺 Statut</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#136-le-syndrome-de-stendhal">🎨 13.6 Le syndrome de Stendhal</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#manifestations-rapportees_1">🧠 Manifestations rapportées</a></li><li><a href="#explication">🧬 Explication</a></li><li><a href="#statut_3">🩺 Statut</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#137-le-trouble-dissociatif-de-lidentite">🎭 13.7 Le trouble dissociatif de l'identité</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#manifestations-possibles_3">🧠 Manifestations possibles</a></li><li><a href="#dissociation">🧬 Dissociation</a></li><li><a href="#diagnostic_2">🩺 Diagnostic</a></li><li><a href="#prise-en-charge_1">🛠️ Prise en charge</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#138-le-syndrome-de-munchhausen">🎭 13.8 Le syndrome de Münchhausen</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#manifestations-possibles_4">🧠 Manifestations possibles</a></li><li><a href="#motivation">🧬 Motivation</a></li><li><a href="#statut_4">🩺 Statut</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#139-le-trouble-factice-impose-a-autrui">👶 13.9 Le trouble factice imposé à autrui</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#manifestations-possibles_5">🧠 Manifestations possibles</a></li><li><a href="#particularite_1">🧬 Particularité</a></li><li><a href="#statut_5">🩺 Statut</a></li><li><a href="#a-retenir_8">⚠️ À retenir</a></li></ul></li><li><a href="#1310-le-syndrome-de-la-personnalite-multiple-dans-la-culture-populaire">🧠 13.10 Le syndrome de la « personnalité multiple » dans la culture populaire</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#dans-la-culture-populaire">🎬 Dans la culture populaire</a></li><li><a href="#realite-clinique">🧠 Réalité clinique</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#a-retenir-partie-13">🔬 À RETENIR PARTIE 13</a><ul class="sidebar-sublist"><li><a href="#syndrome-clinique">🩺 Syndrome clinique</a></li><li><a href="#trouble-reconnu">🧠 Trouble reconnu</a></li><li><a href="#phenomene-descriptif">🌍 Phénomène descriptif</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#131-le-syndrome-de-ganser">13.1 Le syndrome de Ganser</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations-possibles">Manifestations possibles</a></li><li><a href="#associations-possibles">Associations possibles</a></li><li><a href="#statut">Statut</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#132-le-syndrome-de-kleinelevin">13.2 Le syndrome de KleineLevin</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations-possibles_1">Manifestations possibles</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#133-la-narcolepsie-maladie-de-gelineau">13.3 La narcolepsie / maladie de Gélineau</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations-principales">Manifestations principales</a></li><li><a href="#mecanisme">Mécanisme</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#134-le-syndrome-de-paris">13.4 Le syndrome de Paris</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations-rapportees">Manifestations rapportées</a></li><li><a href="#explication-possible">Explication possible</a></li><li><a href="#statut_1">Statut</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#135-le-syndrome-de-jerusalem">13.5 Le syndrome de Jérusalem</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations-possibles_2">Manifestations possibles</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#statut_2">Statut</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#136-le-syndrome-de-stendhal">13.6 Le syndrome de Stendhal</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations-rapportees_1">Manifestations rapportées</a></li><li><a href="#explication">Explication</a></li><li><a href="#statut_3">Statut</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#137-le-trouble-dissociatif-de-lidentite">13.7 Le trouble dissociatif de l'identité</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations-possibles_3">Manifestations possibles</a></li><li><a href="#dissociation">Dissociation</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#138-le-syndrome-de-munchhausen">13.8 Le syndrome de Münchhausen</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations-possibles_4">Manifestations possibles</a></li><li><a href="#motivation">Motivation</a></li><li><a href="#statut_4">Statut</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#139-le-trouble-factice-impose-a-autrui">13.9 Le trouble factice imposé à autrui</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations-possibles_5">Manifestations possibles</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#statut_5">Statut</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#1310-le-syndrome-de-la-personnalite-multiple-dans-la-culture-populaire">13.10 Le syndrome de la « personnalité multiple » dans la culture populaire</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#dans-la-culture-populaire">Dans la culture populaire</a></li><li><a href="#realite-clinique">Réalité clinique</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#a-retenir-partie-13">À RETENIR PARTIE 13</a><ul class="sidebar-sublist"><li><a href="#syndrome-clinique">Syndrome clinique</a></li><li><a href="#trouble-reconnu">Trouble reconnu</a></li><li><a href="#phenomene-descriptif">Phénomène descriptif</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Syndromes rares et phénomènes particuliers',
         category: 'Syndromes psychologiques',
-        icon: '🧬'
+        icon: 'S'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/syndromes/">🧬 Syndromes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/syndromes/">Syndromes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Syndromes rares et phénomènes particuliers</h1>
     </div>
     <div id="resume-banner"></div>
@@ -103,15 +118,15 @@
 <p>Cette partie regroupe des syndromes et phénomènes particulièrement rares, atypiques ou célèbres en psychologie, psychiatrie, neurologie et médecine du sommeil. Certains sont des diagnostics ou des syndromes reconnus, tandis que d'autres sont surtout des descriptions cliniques ou culturelles.
 </p>
 </blockquote>
-<h1 id="131-le-syndrome-de-ganser" class="entry-title hc-1">🧠 13.1  Le syndrome de Ganser</h1>
-<h2 id="definition">🔎 Définition</h2>
+<h1 id="131-le-syndrome-de-ganser" class="entry-title hc-1">13.1  Le syndrome de Ganser</h1>
+<h2 id="definition">Définition</h2>
 <p>Le <strong>syndrome de Ganser</strong> est un phénomène psychiatrique rare caractérisé notamment par des réponses approximatives ou « à côté » de la question.</p>
 <p>La personne semble comprendre la question, mais fournit une réponse proche de la bonne réponse sans être exacte.</p>
 <p>Exemple :</p>
 <p><strong>Question :</strong> « Combien font 2 + 2 ? »</p>
 <p><strong>Réponse :</strong> « 5. »</p>
 <p>Le comportement peut donner l'impression que la personne connaît la réponse mais ne fournit volontairement pas la réponse exacte. Cependant, l'interprétation clinique est beaucoup plus complexe.</p>
-<h2 id="manifestations-possibles">🧠 Manifestations possibles</h2>
+<h2 id="manifestations-possibles">Manifestations possibles</h2>
 <p>Réponses approximatives
 Confusion
 Désorientation
@@ -120,19 +135,19 @@ Troubles de la mémoire
 Perceptions inhabituelles
 Modifications de la conscience
 Comportements inhabituels</p>
-<h2 id="associations-possibles">🧬 Associations possibles</h2>
+<h2 id="associations-possibles">Associations possibles</h2>
 <p>Historiquement, le syndrome a souvent été associé à des situations psychiatriques sévères ou à des états dissociatifs.</p>
 <p>Il peut également être observé dans certains contextes neurologiques ou médicaux.</p>
-<h2 id="statut">🩺 Statut</h2>
+<h2 id="statut">Statut</h2>
 <p>Le syndrome de Ganser est un phénomène clinique rare. Son statut diagnostique varie selon les classifications et les auteurs.</p>
-<h2 id="a-retenir">📌 À retenir</h2>
+<h2 id="a-retenir">À retenir</h2>
 <p>Le syndrome de Ganser est principalement caractérisé par des <strong>réponses approximatives et une altération inhabituelle du fonctionnement cognitif ou de la conscience</strong>.</p>
-<h1 id="132-le-syndrome-de-kleinelevin" class="entry-title hc-2">😴 13.2  Le syndrome de KleineLevin</h1>
-<h2 id="definition_1">🔎 Définition</h2>
+<h1 id="132-le-syndrome-de-kleinelevin" class="entry-title hc-2">13.2  Le syndrome de KleineLevin</h1>
+<h2 id="definition_1">Définition</h2>
 <p>Le <strong>syndrome de KleineLevin</strong> est un trouble neurologique du sommeil extrêmement rare caractérisé par des épisodes récurrents d'<strong>hypersomnie</strong>, accompagnés de modifications importantes du comportement et du fonctionnement cognitif.</p>
 <p>Les épisodes peuvent durer plusieurs jours ou semaines avant de disparaître.</p>
 <p>Entre les épisodes, le fonctionnement peut redevenir largement normal.</p>
-<h2 id="manifestations-possibles_1">😴 Manifestations possibles</h2>
+<h2 id="manifestations-possibles_1">Manifestations possibles</h2>
 <p>Pendant les épisodes :</p>
 <p>Sommeil extrêmement prolongé
 Difficulté à rester éveillé
@@ -144,30 +159,30 @@ Irritabilité
 Comportement inhabituel
 Augmentation de l'appétit chez certaines personnes
 Hypersexualité chez certaines personnes</p>
-<h2 id="evolution">🧬 Évolution</h2>
+<h2 id="evolution">Évolution</h2>
 <p>Le syndrome évolue généralement par <strong>épisodes séparés par des périodes de rémission</strong>.</p>
 <p>Il apparaît souvent pendant l'adolescence, mais peut également commencer à d'autres périodes de la vie.</p>
-<h2 id="diagnostic">🩺 Diagnostic</h2>
+<h2 id="diagnostic">Diagnostic</h2>
 <p>Le diagnostic repose notamment sur :</p>
 <p>La répétition des épisodes
 L'hypersomnie importante
 Les modifications comportementales et cognitives
 L'exclusion d'autres causes médicales ou neurologiques</p>
-<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge">Prise en charge</h2>
 <p>La prise en charge est principalement médicale et vise notamment à :</p>
 <p>gérer les épisodes ;
 assurer la sécurité ;
 surveiller le sommeil ;
 rechercher d'éventuels facteurs déclenchants.</p>
-<h2 id="a-retenir_1">📌 À retenir</h2>
+<h2 id="a-retenir_1">À retenir</h2>
 <p>Le syndrome de KleineLevin est un <strong>trouble neurologique du sommeil rare</strong>, caractérisé par des épisodes récurrents de sommeil excessif et de modifications comportementales.</p>
-<h1 id="133-la-narcolepsie-maladie-de-gelineau" class="entry-title hc-3">😴 13.3  La narcolepsie / maladie de Gélineau</h1>
-<h2 id="definition_2">🔎 Définition</h2>
+<h1 id="133-la-narcolepsie-maladie-de-gelineau" class="entry-title hc-3">13.3  La narcolepsie / maladie de Gélineau</h1>
+<h2 id="definition_2">Définition</h2>
 <p>La <strong>narcolepsie</strong>, historiquement appelée <strong>maladie de Gélineau</strong>, est un trouble neurologique du sommeil caractérisé par une somnolence diurne excessive et des épisodes incontrôlables d'endormissement.</p>
-<h2 id="manifestations-principales">😴 Manifestations principales</h2>
-<h3 id="somnolence-diurne-excessive">💤 Somnolence diurne excessive</h3>
+<h2 id="manifestations-principales">Manifestations principales</h2>
+<h3 id="somnolence-diurne-excessive">Somnolence diurne excessive</h3>
 <p>Une envie irrépressible de dormir peut apparaître pendant la journée.</p>
-<h3 id="cataplexie">💪 Cataplexie</h3>
+<h3 id="cataplexie">Cataplexie</h3>
 <p>Dans certains types de narcolepsie, des émotions fortes peuvent provoquer une perte soudaine du tonus musculaire.</p>
 <p>Exemples :</p>
 <p>faiblesse des jambes ;
@@ -175,24 +190,24 @@ chute de la tête ;
 difficulté à maintenir une posture ;
 perte musculaire brève.</p>
 <p>La personne peut rester consciente pendant l'épisode.</p>
-<h3 id="paralysie-du-sommeil">🌙 Paralysie du sommeil</h3>
+<h3 id="paralysie-du-sommeil">Paralysie du sommeil</h3>
 <p>Une incapacité temporaire à bouger lors de l'endormissement ou du réveil peut apparaître.</p>
-<h3 id="hallucinations-hypnagogiques-ou-hypnopompiques">👁️ Hallucinations hypnagogiques ou hypnopompiques</h3>
+<h3 id="hallucinations-hypnagogiques-ou-hypnopompiques">Hallucinations hypnagogiques ou hypnopompiques</h3>
 <p>Des expériences perceptives particulièrement réalistes peuvent survenir lors de la transition entre sommeil et éveil.</p>
-<h2 id="mecanisme">🧬 Mécanisme</h2>
+<h2 id="mecanisme">Mécanisme</h2>
 <p>Certaines formes de narcolepsie sont associées à une diminution importante de l'hypocrétine/orexine, un système impliqué dans la régulation de l'éveil et du sommeil.</p>
-<h2 id="diagnostic_1">🩺 Diagnostic</h2>
+<h2 id="diagnostic_1">Diagnostic</h2>
 <p>Il peut notamment impliquer :</p>
 <p>étude du sommeil ;
 polysomnographie ;
 test itératif de latence d'endormissement ;
 évaluation des symptômes.</p>
-<h2 id="a-retenir_2">📌 À retenir</h2>
+<h2 id="a-retenir_2">À retenir</h2>
 <p>La narcolepsie est avant tout une <strong>maladie neurologique du sommeil</strong>, et non simplement une tendance à être fatigué.</p>
-<h1 id="134-le-syndrome-de-paris" class="entry-title hc-4">🗼 13.4  Le syndrome de Paris</h1>
-<h2 id="definition_3">🔎 Définition</h2>
+<h1 id="134-le-syndrome-de-paris" class="entry-title hc-4">13.4  Le syndrome de Paris</h1>
+<h2 id="definition_3">Définition</h2>
 <p>Le <strong>syndrome de Paris</strong> est une expression utilisée pour décrire un état de détresse psychologique intense pouvant apparaître chez certaines personnes lors d'un séjour à Paris lorsque la réalité vécue ne correspond pas à leurs attentes ou représentations de la ville.</p>
-<h2 id="manifestations-rapportees">🧠 Manifestations rapportées</h2>
+<h2 id="manifestations-rapportees">Manifestations rapportées</h2>
 <p>Selon les descriptions :</p>
 <p>anxiété intense ;
 désorientation ;
@@ -201,18 +216,18 @@ confusion ;
 symptômes physiques ;
 agitation ;
 parfois expériences perceptives inhabituelles.</p>
-<h2 id="explication-possible">🧬 Explication possible</h2>
+<h2 id="explication-possible">Explication possible</h2>
 <p>Plusieurs facteurs peuvent intervenir :</p>
 <p><strong>attentes idéalisées + choc culturel + fatigue + barrière linguistique + stress + environnement inhabituel.</strong></p>
-<h2 id="statut_1">🩺 Statut</h2>
+<h2 id="statut_1">Statut</h2>
 <p>Le syndrome de Paris n'est <strong>pas un diagnostic psychiatrique officiel</strong>.</p>
 <p>Il s'agit principalement d'une description culturelle et clinique.</p>
-<h2 id="a-retenir_3">📌 À retenir</h2>
+<h2 id="a-retenir_3">À retenir</h2>
 <p>Le syndrome de Paris illustre l'influence que peuvent avoir les <strong>attentes culturelles et l'environnement</strong> sur l'expérience psychologique.</p>
-<h1 id="135-le-syndrome-de-jerusalem" class="entry-title hc-5">🕍 13.5  Le syndrome de Jérusalem</h1>
-<h2 id="definition_4">🔎 Définition</h2>
+<h1 id="135-le-syndrome-de-jerusalem" class="entry-title hc-5">13.5  Le syndrome de Jérusalem</h1>
+<h2 id="definition_4">Définition</h2>
 <p>Le <strong>syndrome de Jérusalem</strong> désigne un phénomène dans lequel une personne visitant Jérusalem développe des préoccupations religieuses ou spirituelles extrêmement intenses, parfois accompagnées de comportements inhabituels.</p>
-<h2 id="manifestations-possibles_2">🧠 Manifestations possibles</h2>
+<h2 id="manifestations-possibles_2">Manifestations possibles</h2>
 <p>Certaines descriptions cliniques rapportent :</p>
 <p>préoccupations religieuses intenses ;
 sentiment d'avoir une mission particulière ;
@@ -221,18 +236,18 @@ discours religieux inhabituel ;
 retrait social ;
 comportements rituels inhabituels ;
 expériences délirantes ou perceptives.</p>
-<h2 id="particularite">🧬 Particularité</h2>
+<h2 id="particularite">Particularité</h2>
 <p>Le contexte religieux et culturel de Jérusalem peut jouer un rôle important dans l'apparition ou la forme prise par certains symptômes.</p>
-<h2 id="statut_2">🩺 Statut</h2>
+<h2 id="statut_2">Statut</h2>
 <p>Le syndrome de Jérusalem n'est pas un diagnostic psychiatrique autonome.</p>
 <p>Il peut correspondre à différentes situations psychiatriques selon les cas.</p>
-<h2 id="a-retenir_4">📌 À retenir</h2>
+<h2 id="a-retenir_4">À retenir</h2>
 <p>Il s'agit d'un <strong>phénomène culturel et clinique</strong> dans lequel un contexte religieux particulièrement chargé peut s'intégrer à une expérience psychiatrique.</p>
-<h1 id="136-le-syndrome-de-stendhal" class="entry-title hc-1">🎨 13.6  Le syndrome de Stendhal</h1>
-<h2 id="definition_5">🔎 Définition</h2>
+<h1 id="136-le-syndrome-de-stendhal" class="entry-title hc-1">13.6  Le syndrome de Stendhal</h1>
+<h2 id="definition_5">Définition</h2>
 <p>Le <strong>syndrome de Stendhal</strong> est une expression utilisée pour décrire un ensemble de réactions physiques et psychologiques pouvant apparaître face à une exposition intense à l'art, notamment lorsqu'une personne se trouve confrontée à une grande quantité d'œuvres particulièrement impressionnantes.</p>
 <p>Le phénomène est particulièrement associé à Florence.</p>
-<h2 id="manifestations-rapportees_1">🧠 Manifestations rapportées</h2>
+<h2 id="manifestations-rapportees_1">Manifestations rapportées</h2>
 <p>Étourdissements
 Palpitations
 Confusion
@@ -241,7 +256,7 @@ Désorientation
 Émotions extrêmement fortes
 Anxiété
 Malaise physique</p>
-<h2 id="explication">🧬 Explication</h2>
+<h2 id="explication">Explication</h2>
 <p>L'expérience peut être influencée par :</p>
 <p>Intensité émotionnelle
 Fatigue
@@ -249,16 +264,16 @@ Stress
 Attentes personnelles
 Environnement
 Sensibilité individuelle</p>
-<h2 id="statut_3">🩺 Statut</h2>
+<h2 id="statut_3">Statut</h2>
 <p>Le syndrome de Stendhal n'est <strong>pas un diagnostic psychiatrique officiel</strong>.</p>
 <p>Il s'agit davantage d'une expression culturelle et d'une observation clinique discutée.</p>
-<h2 id="a-retenir_5">📌 À retenir</h2>
+<h2 id="a-retenir_5">À retenir</h2>
 <p>Le syndrome de Stendhal décrit une <strong>réaction particulièrement intense face à l'art ou à une expérience esthétique</strong>.</p>
-<h1 id="137-le-trouble-dissociatif-de-lidentite" class="entry-title hc-2">🎭 13.7  Le trouble dissociatif de l'identité</h1>
-<h2 id="definition_6">🔎 Définition</h2>
+<h1 id="137-le-trouble-dissociatif-de-lidentite" class="entry-title hc-2">13.7  Le trouble dissociatif de l'identité</h1>
+<h2 id="definition_6">Définition</h2>
 <p>Le <strong>trouble dissociatif de l'identité (TDI)</strong> est un trouble dissociatif caractérisé par une perturbation de l'identité associée à la présence de différents états de personnalité ou de différentes expériences du soi.</p>
 <p>Il peut également provoquer des <strong>lacunes de mémoire autobiographique</strong> qui dépassent les oublis ordinaires.</p>
-<h2 id="manifestations-possibles_3">🧠 Manifestations possibles</h2>
+<h2 id="manifestations-possibles_3">Manifestations possibles</h2>
 <p>Sensation d'identités ou d'états du soi distincts
 Modifications du comportement
 Modifications de la perception de soi
@@ -267,7 +282,7 @@ Sensation d'être spectateur de ses propres actions
 Dépersonnalisation
 Difficultés à reconstruire certains événements
 Changements importants dans les émotions ou les préférences selon les états</p>
-<h2 id="dissociation">🧬 Dissociation</h2>
+<h2 id="dissociation">Dissociation</h2>
 <p>La <strong>dissociation</strong> correspond à une perturbation dans l'intégration normale de différentes fonctions psychologiques.</p>
 <p>Elle peut concerner :</p>
 <p>mémoire ;
@@ -275,24 +290,24 @@ identité ;
 perception ;
 conscience ;
 émotions.</p>
-<h2 id="diagnostic_2">🩺 Diagnostic</h2>
+<h2 id="diagnostic_2">Diagnostic</h2>
 <p>Le diagnostic est clinique.</p>
 <p>Il nécessite de distinguer le TDI d'autres situations pouvant provoquer des changements d'identité, des pertes de mémoire ou des expériences dissociatives.</p>
-<h2 id="prise-en-charge_1">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge_1">Prise en charge</h2>
 <p>La prise en charge est généralement psychothérapeutique et peut viser notamment :</p>
 <p>la stabilisation ;
 la compréhension des phénomènes dissociatifs ;
 la réduction des symptômes ;
 l'intégration du fonctionnement psychologique.</p>
-<h2 id="a-retenir_6">📌 À retenir</h2>
+<h2 id="a-retenir_6">À retenir</h2>
 <p>Le terme populaire <strong>« personnalité multiple »</strong> est imprécis.</p>
 <p>Le terme clinique utilisé est :</p>
 <p><strong>Trouble dissociatif de l'identité (TDI).</strong></p>
-<h1 id="138-le-syndrome-de-munchhausen" class="entry-title hc-3">🎭 13.8  Le syndrome de Münchhausen</h1>
-<h2 id="definition_7">🔎 Définition</h2>
+<h1 id="138-le-syndrome-de-munchhausen" class="entry-title hc-3">13.8  Le syndrome de Münchhausen</h1>
+<h2 id="definition_7">Définition</h2>
 <p>Le <strong>syndrome de Münchhausen</strong> est une ancienne appellation utilisée pour décrire une forme de <strong>trouble factice</strong> dans laquelle une personne provoque, simule ou présente volontairement des symptômes afin d'adopter le rôle de malade.</p>
 <p>L'objectif principal n'est pas nécessairement d'obtenir un avantage matériel évident.</p>
-<h2 id="manifestations-possibles_4">🧠 Manifestations possibles</h2>
+<h2 id="manifestations-possibles_4">Manifestations possibles</h2>
 <p>Une personne peut :</p>
 <p>inventer certains symptômes ;
 exagérer volontairement des symptômes ;
@@ -300,43 +315,43 @@ provoquer certains problèmes de santé ;
 multiplier les consultations ;
 présenter des antécédents médicaux complexes ;
 rechercher fréquemment des examens ou des hospitalisations.</p>
-<h2 id="motivation">🧬 Motivation</h2>
+<h2 id="motivation">Motivation</h2>
 <p>Le trouble factice se distingue notamment de la simulation par le fait que le comportement est associé à une <strong>motivation psychologique liée au rôle de malade</strong> plutôt qu'à un bénéfice externe clairement identifiable.</p>
-<h2 id="statut_4">🩺 Statut</h2>
+<h2 id="statut_4">Statut</h2>
 <p>Le terme « syndrome de Münchhausen » est aujourd'hui largement remplacé par le concept de <strong>trouble factice</strong> dans les classifications modernes.</p>
-<h2 id="a-retenir_7">📌 À retenir</h2>
+<h2 id="a-retenir_7">À retenir</h2>
 <p>Il s'agit d'un phénomène différent de la simulation visant clairement un avantage externe.</p>
-<h1 id="139-le-trouble-factice-impose-a-autrui" class="entry-title hc-4">👶 13.9  Le trouble factice imposé à autrui</h1>
-<h2 id="definition_8">🔎 Définition</h2>
+<h1 id="139-le-trouble-factice-impose-a-autrui" class="entry-title hc-4">13.9  Le trouble factice imposé à autrui</h1>
+<h2 id="definition_8">Définition</h2>
 <p>Le <strong>trouble factice imposé à autrui</strong> correspond à une situation dans laquelle une personne falsifie, provoque ou présente artificiellement des symptômes chez une autre personne dont elle a la charge.</p>
 <p>La personne concernée est souvent un enfant ou une personne dépendante.</p>
-<h2 id="manifestations-possibles_5">🧠 Manifestations possibles</h2>
+<h2 id="manifestations-possibles_5">Manifestations possibles</h2>
 <p>La personne responsable peut :</p>
 <p>inventer des symptômes ;
 exagérer des problèmes médicaux ;
 provoquer volontairement certains symptômes ;
 modifier des informations médicales ;
 multiplier les consultations.</p>
-<h2 id="particularite_1">🧬 Particularité</h2>
+<h2 id="particularite_1">Particularité</h2>
 <p>Le phénomène peut être extrêmement difficile à détecter car les symptômes sont parfois observés principalement en présence de la personne responsable.</p>
-<h2 id="statut_5">🩺 Statut</h2>
+<h2 id="statut_5">Statut</h2>
 <p>Il s'agit d'un trouble factice reconnu dans les classifications diagnostiques modernes sous différentes formulations.</p>
 <p>L'ancienne expression <strong>« syndrome de Münchhausen par procuration »</strong> est aujourd'hui moins privilégiée.</p>
-<h2 id="a-retenir_8">⚠️ À retenir</h2>
+<h2 id="a-retenir_8">À retenir</h2>
 <p>Ce phénomène peut représenter une forme de <strong>maltraitance médicale</strong> et peut mettre directement en danger la personne concernée.</p>
-<h1 id="1310-le-syndrome-de-la-personnalite-multiple-dans-la-culture-populaire" class="entry-title hc-5">🧠 13.10  Le syndrome de la « personnalité multiple » dans la culture populaire</h1>
-<h2 id="definition_9">🔎 Définition</h2>
+<h1 id="1310-le-syndrome-de-la-personnalite-multiple-dans-la-culture-populaire" class="entry-title hc-5">13.10  Le syndrome de la « personnalité multiple » dans la culture populaire</h1>
+<h2 id="definition_9">Définition</h2>
 <p>La notion de <strong>« personnalité multiple »</strong> est largement présente dans les films, séries et œuvres de fiction.</p>
 <p>Elle est souvent représentée comme plusieurs personnes totalement indépendantes partageant le même corps.</p>
 <p>Cette représentation est généralement <strong>beaucoup plus spectaculaire que la réalité clinique du trouble dissociatif de l'identité</strong>.</p>
-<h2 id="dans-la-culture-populaire">🎬 Dans la culture populaire</h2>
+<h2 id="dans-la-culture-populaire">Dans la culture populaire</h2>
 <p>Les œuvres de fiction présentent parfois :</p>
 <p>changements instantanés extrêmement visibles ;
 personnalités totalement opposées ;
 souvenirs complètement séparés ;
 comportements violents automatiquement associés à une identité particulière.</p>
 <p>Ces représentations peuvent être très éloignées de la diversité réelle des manifestations dissociatives.</p>
-<h2 id="realite-clinique">🧠 Réalité clinique</h2>
+<h2 id="realite-clinique">Réalité clinique</h2>
 <p>Le TDI peut présenter des manifestations très différentes selon les personnes.</p>
 <p>Les changements d'état peuvent être :</p>
 <p>subtils ;
@@ -344,25 +359,25 @@ progressifs ;
 difficiles à identifier ;
 accompagnés de symptômes dissociatifs ;
 associés à des troubles de mémoire.</p>
-<h2 id="a-retenir_9">📌 À retenir</h2>
+<h2 id="a-retenir_9">À retenir</h2>
 <p><strong>« Personnalité multiple »</strong> est principalement une expression populaire.</p>
 <p>Le terme clinique est <strong>trouble dissociatif de l'identité</strong>.</p>
-<h1 id="a-retenir-partie-13" class="entry-title hc-1">🔬 À RETENIR  PARTIE 13</h1>
+<h1 id="a-retenir-partie-13" class="entry-title hc-1">À RETENIR  PARTIE 13</h1>
 <p>Les phénomènes rares montrent que les manifestations psychologiques peuvent être extrêmement diverses.</p>
 <p>Certains phénomènes sont :</p>
-<p><strong>🧠 neurologiques</strong></p>
-<p><strong>😴 liés au sommeil</strong></p>
-<p><strong>🧩 dissociatifs</strong></p>
-<p><strong>🌍 culturels</strong></p>
-<p><strong>🎨 liés aux expériences émotionnelles</strong></p>
-<p><strong>🩺 médicaux</strong></p>
-<p><strong>🎭 psychiatriques</strong></p>
+<p>** neurologiques**</p>
+<p>** liés au sommeil**</p>
+<p>** dissociatifs**</p>
+<p>** culturels**</p>
+<p>** liés aux expériences émotionnelles**</p>
+<p>** médicaux**</p>
+<p>** psychiatriques**</p>
 <p>Il est également essentiel de distinguer trois catégories :</p>
-<h3 id="syndrome-clinique">🩺 Syndrome clinique</h3>
+<h3 id="syndrome-clinique">Syndrome clinique</h3>
 <p>Un ensemble identifiable de symptômes observés dans la pratique médicale ou psychologique.</p>
-<h3 id="trouble-reconnu">🧠 Trouble reconnu</h3>
+<h3 id="trouble-reconnu">Trouble reconnu</h3>
 <p>Une condition pouvant disposer de critères diagnostiques établis dans une classification médicale ou psychiatrique.</p>
-<h3 id="phenomene-descriptif">🌍 Phénomène descriptif</h3>
+<h3 id="phenomene-descriptif">Phénomène descriptif</h3>
 <p>Une expression utilisée pour décrire une expérience particulière sans constituer nécessairement un diagnostic officiel.</p>
 <blockquote>
 <p><strong>Un nom spectaculaire ne signifie donc pas forcément qu'il s'agit d'une maladie reconnue.</strong>
@@ -371,8 +386,29 @@ associés à des troubles de mémoire.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Syndromes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-de-l-identite-et-de-la-reconnaissance/"><span class="similar-icon">🧬</span>Syndromes de l'identité et de la reconnaissance</a><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-a-la-perception/"><span class="similar-icon">🧬</span>Syndromes liés à la perception</a><a class="similar-item" href="/chapitre/syndromes-syndromes-delirants-particuliers/"><span class="similar-icon">🧬</span>Syndromes délirants particuliers</a></div>
+      <h2>Autres chapitres de « Syndromes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-de-l-identite-et-de-la-reconnaissance/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes de l'identité et de la reconnaissance</a><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-a-la-perception/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes liés à la perception</a><a class="similar-item" href="/chapitre/syndromes-syndromes-delirants-particuliers/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes délirants particuliers</a></div>
     </div>
     <a class="back-link" href="/categorie/syndromes/">← Retour à « Syndromes psychologiques »</a>
   </div>
@@ -458,23 +494,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -492,7 +530,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -672,9 +710,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -683,10 +723,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -793,7 +833,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -833,8 +873,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -865,7 +905,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -920,7 +960,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -944,17 +984,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -996,7 +1036,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

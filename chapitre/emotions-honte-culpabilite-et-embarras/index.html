@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#81-les-emotions-dans-les-interactions-sociales">🧑‍🤝‍🧑 8.1 Les émotions dans les interactions sociales</a></li><li><a href="#82-la-perception-des-emotions-dautrui">👀 8.2 La perception des émotions d'autrui</a></li><li><a href="#83-la-reconnaissance-emotionnelle">😊 8.3 La reconnaissance émotionnelle</a></li><li><a href="#84-linterpretation-emotionnelle">🧠 8.4 L'interprétation émotionnelle</a></li><li><a href="#85-la-communication-emotionnelle">🗣️ 8.5 La communication émotionnelle</a></li><li><a href="#86-les-expressions-faciales">👁️ 8.6 Les expressions faciales</a></li><li><a href="#87-la-prosodie-emotionnelle">🔊 8.7 La prosodie émotionnelle</a></li><li><a href="#88-le-langage-corporel-emotionnel">🧍 8.8 Le langage corporel émotionnel</a></li><li><a href="#89-lempathie">🫂 8.9 L'empathie</a></li><li><a href="#810-lempathie-cognitive">🧠 8.10 L'empathie cognitive</a></li><li><a href="#811-lempathie-emotionnelle">❤️ 8.11 L'empathie émotionnelle</a></li><li><a href="#812-la-contagion-emotionnelle">🔄 8.12 La contagion émotionnelle</a></li><li><a href="#813-le-mimetisme-emotionnel">🪞 8.13 Le mimétisme émotionnel</a></li><li><a href="#814-la-synchronisation-emotionnelle">🧑‍🤝‍🧑 8.14 La synchronisation émotionnelle</a></li><li><a href="#815-la-cooperation">🤝 8.15 La coopération</a></li><li><a href="#816-la-competition">⚔️ 8.16 La compétition</a></li><li><a href="#817-lattachement-social">💕 8.17 L'attachement social</a></li><li><a href="#818-le-besoin-de-proximite">🫂 8.18 Le besoin de proximité</a></li><li><a href="#819-le-sentiment-de-securite-sociale">🛡️ 8.19 Le sentiment de sécurité sociale</a></li><li><a href="#820-le-soutien-social">💬 8.20 Le soutien social</a></li><li><a href="#821-les-emotions-et-le-sentiment-dappartenance">🌱 8.21 Les émotions et le sentiment d'appartenance</a></li><li><a href="#822-lidentite-sociale">👥 8.22 L'identité sociale</a></li><li><a href="#823-la-fierte-collective">🏆 8.23 La fierté collective</a></li><li><a href="#824-la-colere-sociale">😡 8.24 La colère sociale</a></li><li><a href="#825-les-emotions-et-le-sentiment-dinjustice">⚖️ 8.25 Les émotions et le sentiment d'injustice</a></li><li><a href="#826-la-honte-sociale">😳 8.26 La honte sociale</a></li><li><a href="#827-la-culpabilite-dans-les-relations">😔 8.27 La culpabilité dans les relations</a></li><li><a href="#828-la-gratitude-dans-les-relations">💚 8.28 La gratitude dans les relations</a></li><li><a href="#829-la-reciprocite-emotionnelle">🔄 8.29 La réciprocité émotionnelle</a></li><li><a href="#830-les-attentes-emotionnelles">💭 8.30 Les attentes émotionnelles</a></li><li><a href="#831-le-rejet-social">🚫 8.31 Le rejet social</a></li><li><a href="#832-la-douleur-sociale">💔 8.32 La douleur sociale</a></li><li><a href="#833-lexclusion-sociale">🚪 8.33 L'exclusion sociale</a></li><li><a href="#834-lescalade-emotionnelle-dans-les-conflits">🔥 8.34 L'escalade émotionnelle dans les conflits</a></li><li><a href="#835-les-emotions-et-linterpretation-des-comportements">🧠 8.35 Les émotions et l'interprétation des comportements</a></li><li><a href="#836-les-emotions-et-la-communication">🗣️ 8.36 Les émotions et la communication</a></li><li><a href="#837-les-malentendus-emotionnels">🧩 8.37 Les malentendus émotionnels</a></li><li><a href="#838-la-regulation-emotionnelle-interpersonnelle">🧠 8.38 La régulation émotionnelle interpersonnelle</a></li><li><a href="#839-linfluence-du-contexte-social-et-culturel">🌍 8.39 L'influence du contexte social et culturel</a></li><li><a href="#840-pourquoi-etudier-les-emotions-et-les-relations-sociales">🔬 8.40 Pourquoi étudier les émotions et les relations sociales ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#81-les-emotions-dans-les-interactions-sociales">‍‍ 8.1 Les émotions dans les interactions sociales</a></li><li><a href="#82-la-perception-des-emotions-dautrui">8.2 La perception des émotions d'autrui</a></li><li><a href="#83-la-reconnaissance-emotionnelle">8.3 La reconnaissance émotionnelle</a></li><li><a href="#84-linterpretation-emotionnelle">8.4 L'interprétation émotionnelle</a></li><li><a href="#85-la-communication-emotionnelle">8.5 La communication émotionnelle</a></li><li><a href="#86-les-expressions-faciales">8.6 Les expressions faciales</a></li><li><a href="#87-la-prosodie-emotionnelle">8.7 La prosodie émotionnelle</a></li><li><a href="#88-le-langage-corporel-emotionnel">8.8 Le langage corporel émotionnel</a></li><li><a href="#89-lempathie">8.9 L'empathie</a></li><li><a href="#810-lempathie-cognitive">8.10 L'empathie cognitive</a></li><li><a href="#811-lempathie-emotionnelle">8.11 L'empathie émotionnelle</a></li><li><a href="#812-la-contagion-emotionnelle">8.12 La contagion émotionnelle</a></li><li><a href="#813-le-mimetisme-emotionnel">8.13 Le mimétisme émotionnel</a></li><li><a href="#814-la-synchronisation-emotionnelle">‍‍ 8.14 La synchronisation émotionnelle</a></li><li><a href="#815-la-cooperation">8.15 La coopération</a></li><li><a href="#816-la-competition">8.16 La compétition</a></li><li><a href="#817-lattachement-social">8.17 L'attachement social</a></li><li><a href="#818-le-besoin-de-proximite">8.18 Le besoin de proximité</a></li><li><a href="#819-le-sentiment-de-securite-sociale">8.19 Le sentiment de sécurité sociale</a></li><li><a href="#820-le-soutien-social">8.20 Le soutien social</a></li><li><a href="#821-les-emotions-et-le-sentiment-dappartenance">8.21 Les émotions et le sentiment d'appartenance</a></li><li><a href="#822-lidentite-sociale">8.22 L'identité sociale</a></li><li><a href="#823-la-fierte-collective">8.23 La fierté collective</a></li><li><a href="#824-la-colere-sociale">8.24 La colère sociale</a></li><li><a href="#825-les-emotions-et-le-sentiment-dinjustice">8.25 Les émotions et le sentiment d'injustice</a></li><li><a href="#826-la-honte-sociale">8.26 La honte sociale</a></li><li><a href="#827-la-culpabilite-dans-les-relations">8.27 La culpabilité dans les relations</a></li><li><a href="#828-la-gratitude-dans-les-relations">8.28 La gratitude dans les relations</a></li><li><a href="#829-la-reciprocite-emotionnelle">8.29 La réciprocité émotionnelle</a></li><li><a href="#830-les-attentes-emotionnelles">8.30 Les attentes émotionnelles</a></li><li><a href="#831-le-rejet-social">8.31 Le rejet social</a></li><li><a href="#832-la-douleur-sociale">8.32 La douleur sociale</a></li><li><a href="#833-lexclusion-sociale">8.33 L'exclusion sociale</a></li><li><a href="#834-lescalade-emotionnelle-dans-les-conflits">8.34 L'escalade émotionnelle dans les conflits</a></li><li><a href="#835-les-emotions-et-linterpretation-des-comportements">8.35 Les émotions et l'interprétation des comportements</a></li><li><a href="#836-les-emotions-et-la-communication">8.36 Les émotions et la communication</a></li><li><a href="#837-les-malentendus-emotionnels">8.37 Les malentendus émotionnels</a></li><li><a href="#838-la-regulation-emotionnelle-interpersonnelle">8.38 La régulation émotionnelle interpersonnelle</a></li><li><a href="#839-linfluence-du-contexte-social-et-culturel">8.39 L'influence du contexte social et culturel</a></li><li><a href="#840-pourquoi-etudier-les-emotions-et-les-relations-sociales">8.40 Pourquoi étudier les émotions et les relations sociales ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Honte, culpabilité et embarras',
         category: 'Émotions et comportements humains',
-        icon: '❤️'
+        icon: 'H'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/emotions/">❤️ Émotions et comportements humains</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/emotions/">Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Honte, culpabilité et embarras</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,10 +113,10 @@
     <div class="article-body">
       <p>Les émotions jouent un rôle important dans les relations sociales. Elles influencent la manière dont les individus perçoivent les autres, communiquent, coopèrent, réagissent aux comportements sociaux et construisent leurs relations.</p>
 <p>Les émotions peuvent être exprimées directement, mais elles peuvent également être transmises indirectement par les expressions faciales, la voix, les gestes ou les comportements.</p>
-<h2 id="81-les-emotions-dans-les-interactions-sociales" class="entry-title hc-1">🧑‍🤝‍🧑 8.1 Les émotions dans les interactions sociales</h2>
+<h2 id="81-les-emotions-dans-les-interactions-sociales" class="entry-title hc-1">‍‍ 8.1 Les émotions dans les interactions sociales</h2>
 <p>Les émotions interviennent constamment dans les interactions sociales.</p>
 <p>Une même situation peut provoquer des réactions différentes selon les personnes, leurs expériences, leurs attentes et le contexte.</p>
-<h2 id="82-la-perception-des-emotions-dautrui" class="entry-title hc-2">👀 8.2 La perception des émotions d'autrui</h2>
+<h2 id="82-la-perception-des-emotions-dautrui" class="entry-title hc-2">8.2 La perception des émotions d'autrui</h2>
 <p>Les individus peuvent détecter certains indices émotionnels chez les autres.</p>
 <p>Ces informations peuvent provenir :</p>
 <ul>
@@ -111,58 +126,58 @@
 <li>des gestes ;</li>
 <li>du comportement.</li>
 </ul>
-<h2 id="83-la-reconnaissance-emotionnelle" class="entry-title hc-3">😊 8.3 La reconnaissance émotionnelle</h2>
+<h2 id="83-la-reconnaissance-emotionnelle" class="entry-title hc-3">8.3 La reconnaissance émotionnelle</h2>
 <p>La reconnaissance émotionnelle correspond à la capacité à identifier certains états émotionnels chez autrui.</p>
 <p>Elle implique notamment l'utilisation d'informations faciales, vocales et contextuelles.</p>
-<h2 id="84-linterpretation-emotionnelle" class="entry-title hc-4">🧠 8.4 L'interprétation émotionnelle</h2>
+<h2 id="84-linterpretation-emotionnelle" class="entry-title hc-4">8.4 L'interprétation émotionnelle</h2>
 <p>Reconnaître une expression émotionnelle ne suffit pas toujours à comprendre ce qu'une personne ressent.</p>
 <p>Le contexte permet d'interpréter plus précisément les signaux observés.</p>
-<h2 id="85-la-communication-emotionnelle" class="entry-title hc-5">🗣️ 8.5 La communication émotionnelle</h2>
+<h2 id="85-la-communication-emotionnelle" class="entry-title hc-5">8.5 La communication émotionnelle</h2>
 <p>Les émotions peuvent être communiquées volontairement ou involontairement.</p>
 <p>Les paroles peuvent transmettre directement un état émotionnel, tandis que le comportement peut fournir des indices supplémentaires.</p>
-<h2 id="86-les-expressions-faciales" class="entry-title hc-1">👁️ 8.6 Les expressions faciales</h2>
+<h2 id="86-les-expressions-faciales" class="entry-title hc-1">8.6 Les expressions faciales</h2>
 <p>Les expressions faciales constituent une source importante d'informations sociales.</p>
 <p>Elles peuvent fournir des indications concernant différents états émotionnels, même si leur interprétation dépend également du contexte.</p>
-<h2 id="87-la-prosodie-emotionnelle" class="entry-title hc-2">🔊 8.7 La prosodie émotionnelle</h2>
+<h2 id="87-la-prosodie-emotionnelle" class="entry-title hc-2">8.7 La prosodie émotionnelle</h2>
 <p>La prosodie correspond notamment aux variations de ton, de rythme et d'intensité de la voix.</p>
 <p>Ces caractéristiques peuvent transmettre des informations émotionnelles indépendamment des mots utilisés.</p>
-<h2 id="88-le-langage-corporel-emotionnel" class="entry-title hc-3">🧍 8.8 Le langage corporel émotionnel</h2>
+<h2 id="88-le-langage-corporel-emotionnel" class="entry-title hc-3">8.8 Le langage corporel émotionnel</h2>
 <p>La posture et les mouvements corporels peuvent également communiquer certains états émotionnels.</p>
 <p>Ils sont généralement interprétés en combinaison avec les autres informations disponibles.</p>
-<h2 id="89-lempathie" class="entry-title hc-4">🫂 8.9 L'empathie</h2>
+<h2 id="89-lempathie" class="entry-title hc-4">8.9 L'empathie</h2>
 <p>L'empathie correspond à différents processus permettant de comprendre ou de partager partiellement l'état d'une autre personne.</p>
 <p>Elle ne signifie pas nécessairement ressentir exactement la même émotion.</p>
-<h2 id="810-lempathie-cognitive" class="entry-title hc-5">🧠 8.10 L'empathie cognitive</h2>
+<h2 id="810-lempathie-cognitive" class="entry-title hc-5">8.10 L'empathie cognitive</h2>
 <p>L'empathie cognitive concerne principalement la compréhension de l'état mental ou émotionnel d'une autre personne.</p>
 <p>Elle implique notamment la prise de perspective.</p>
-<h2 id="811-lempathie-emotionnelle" class="entry-title hc-1">❤️ 8.11 L'empathie émotionnelle</h2>
+<h2 id="811-lempathie-emotionnelle" class="entry-title hc-1">8.11 L'empathie émotionnelle</h2>
 <p>L'empathie émotionnelle correspond à une réponse affective provoquée par l'état émotionnel d'une autre personne.</p>
 <p>Elle peut contribuer à certains comportements sociaux, notamment le soutien.</p>
-<h2 id="812-la-contagion-emotionnelle" class="entry-title hc-2">🔄 8.12 La contagion émotionnelle</h2>
+<h2 id="812-la-contagion-emotionnelle" class="entry-title hc-2">8.12 La contagion émotionnelle</h2>
 <p>La contagion émotionnelle correspond à la tendance d'un état émotionnel à se transmettre ou à influencer l'état émotionnel d'autres personnes.</p>
 <p>Elle peut apparaître dans les interactions individuelles ou dans les groupes.</p>
-<h2 id="813-le-mimetisme-emotionnel" class="entry-title hc-3">🪞 8.13 Le mimétisme émotionnel</h2>
+<h2 id="813-le-mimetisme-emotionnel" class="entry-title hc-3">8.13 Le mimétisme émotionnel</h2>
 <p>Les individus peuvent spontanément reproduire certains comportements observés chez les autres.</p>
 <p>Le mimétisme facial ou comportemental peut notamment participer à la synchronisation émotionnelle.</p>
-<h2 id="814-la-synchronisation-emotionnelle" class="entry-title hc-4">🧑‍🤝‍🧑 8.14 La synchronisation émotionnelle</h2>
+<h2 id="814-la-synchronisation-emotionnelle" class="entry-title hc-4">‍‍ 8.14 La synchronisation émotionnelle</h2>
 <p>Deux personnes peuvent progressivement présenter des états émotionnels ou des comportements davantage synchronisés au cours d'une interaction.</p>
 <p>Cette synchronisation peut participer à la coordination sociale.</p>
-<h2 id="815-la-cooperation" class="entry-title hc-5">🤝 8.15 La coopération</h2>
+<h2 id="815-la-cooperation" class="entry-title hc-5">8.15 La coopération</h2>
 <p>Les émotions peuvent influencer la volonté de coopérer avec d'autres personnes.</p>
 <p>La confiance, la satisfaction, la gratitude ou certaines émotions positives peuvent favoriser certaines formes de coopération.</p>
-<h2 id="816-la-competition" class="entry-title hc-1">⚔️ 8.16 La compétition</h2>
+<h2 id="816-la-competition" class="entry-title hc-1">8.16 La compétition</h2>
 <p>Les émotions peuvent également apparaître dans les situations de compétition.</p>
 <p>La réussite, l'échec, la frustration, la jalousie ou la fierté peuvent influencer le comportement compétitif.</p>
-<h2 id="817-lattachement-social" class="entry-title hc-2">💕 8.17 L'attachement social</h2>
+<h2 id="817-lattachement-social" class="entry-title hc-2">8.17 L'attachement social</h2>
 <p>Les émotions participent à la création et au maintien de liens sociaux.</p>
 <p>Les expériences de proximité, de sécurité et de soutien peuvent renforcer certains liens relationnels.</p>
-<h2 id="818-le-besoin-de-proximite" class="entry-title hc-3">🫂 8.18 Le besoin de proximité</h2>
+<h2 id="818-le-besoin-de-proximite" class="entry-title hc-3">8.18 Le besoin de proximité</h2>
 <p>Dans certaines situations émotionnelles, une personne peut rechercher davantage la présence d'autrui.</p>
 <p>Ce phénomène peut notamment apparaître lors d'expériences de peur, de tristesse ou d'incertitude.</p>
-<h2 id="819-le-sentiment-de-securite-sociale" class="entry-title hc-4">🛡️ 8.19 Le sentiment de sécurité sociale</h2>
+<h2 id="819-le-sentiment-de-securite-sociale" class="entry-title hc-4">8.19 Le sentiment de sécurité sociale</h2>
 <p>La présence de personnes perçues comme sûres peut modifier la manière dont certaines situations sont vécues.</p>
 <p>Le sentiment de sécurité sociale peut influencer les réactions émotionnelles et comportementales.</p>
-<h2 id="820-le-soutien-social" class="entry-title hc-5">💬 8.20 Le soutien social</h2>
+<h2 id="820-le-soutien-social" class="entry-title hc-5">8.20 Le soutien social</h2>
 <p>Le soutien social correspond aux différentes formes d'aide ou de présence apportées par l'entourage.</p>
 <p>Il peut être :</p>
 <ul>
@@ -171,52 +186,52 @@
 <li>informationnel ;</li>
 <li>pratique.</li>
 </ul>
-<h2 id="821-les-emotions-et-le-sentiment-dappartenance" class="entry-title hc-1">🌱 8.21 Les émotions et le sentiment d'appartenance</h2>
+<h2 id="821-les-emotions-et-le-sentiment-dappartenance" class="entry-title hc-1">8.21 Les émotions et le sentiment d'appartenance</h2>
 <p>Le sentiment d'appartenir à un groupe peut influencer les émotions et les comportements sociaux.</p>
 <p>L'appartenance peut notamment contribuer à un sentiment d'identité et de sécurité sociale.</p>
-<h2 id="822-lidentite-sociale" class="entry-title hc-2">👥 8.22 L'identité sociale</h2>
+<h2 id="822-lidentite-sociale" class="entry-title hc-2">8.22 L'identité sociale</h2>
 <p>L'identité sociale correspond à la partie de la représentation de soi associée à l'appartenance à différents groupes sociaux.</p>
 <p>Ces appartenances peuvent influencer certaines émotions et attitudes.</p>
-<h2 id="823-la-fierte-collective" class="entry-title hc-3">🏆 8.23 La fierté collective</h2>
+<h2 id="823-la-fierte-collective" class="entry-title hc-3">8.23 La fierté collective</h2>
 <p>Une réussite attribuée à un groupe auquel une personne s'identifie peut provoquer une forme de fierté collective.</p>
 <p>Cette émotion peut renforcer le sentiment d'appartenance.</p>
-<h2 id="824-la-colere-sociale" class="entry-title hc-4">😡 8.24 La colère sociale</h2>
+<h2 id="824-la-colere-sociale" class="entry-title hc-4">8.24 La colère sociale</h2>
 <p>La colère peut apparaître lorsqu'une situation est perçue comme injuste ou menaçante pour soi-même ou pour un groupe.</p>
 <p>Elle peut influencer les comportements collectifs et individuels.</p>
-<h2 id="825-les-emotions-et-le-sentiment-dinjustice" class="entry-title hc-5">⚖️ 8.25 Les émotions et le sentiment d'injustice</h2>
+<h2 id="825-les-emotions-et-le-sentiment-dinjustice" class="entry-title hc-5">8.25 Les émotions et le sentiment d'injustice</h2>
 <p>La perception d'une injustice peut provoquer différentes réactions émotionnelles.</p>
 <p>La colère, la frustration, la tristesse ou l'indignation peuvent notamment apparaître.</p>
-<h2 id="826-la-honte-sociale" class="entry-title hc-1">😳 8.26 La honte sociale</h2>
+<h2 id="826-la-honte-sociale" class="entry-title hc-1">8.26 La honte sociale</h2>
 <p>La honte sociale est associée à une évaluation négative de soi dans un contexte où le regard d'autrui est important.</p>
 <p>Elle peut influencer le comportement social et parfois favoriser le retrait.</p>
-<h2 id="827-la-culpabilite-dans-les-relations" class="entry-title hc-2">😔 8.27 La culpabilité dans les relations</h2>
+<h2 id="827-la-culpabilite-dans-les-relations" class="entry-title hc-2">8.27 La culpabilité dans les relations</h2>
 <p>La culpabilité peut apparaître lorsqu'une personne considère avoir causé un tort ou violé une norme.</p>
 <p>Elle peut influencer certains comportements de réparation ou de modification du comportement.</p>
-<h2 id="828-la-gratitude-dans-les-relations" class="entry-title hc-3">💚 8.28 La gratitude dans les relations</h2>
+<h2 id="828-la-gratitude-dans-les-relations" class="entry-title hc-3">8.28 La gratitude dans les relations</h2>
 <p>La gratitude peut renforcer certains liens sociaux.</p>
 <p>Elle peut notamment favoriser la reconnaissance des comportements positifs d'autrui et encourager la réciprocité.</p>
-<h2 id="829-la-reciprocite-emotionnelle" class="entry-title hc-4">🔄 8.29 La réciprocité émotionnelle</h2>
+<h2 id="829-la-reciprocite-emotionnelle" class="entry-title hc-4">8.29 La réciprocité émotionnelle</h2>
 <p>Les interactions sociales reposent souvent sur des échanges réciproques.</p>
 <p>Une émotion positive exprimée par une personne peut favoriser une réponse positive chez l'autre, même si cette dynamique n'est pas automatique.</p>
-<h2 id="830-les-attentes-emotionnelles" class="entry-title hc-5">💭 8.30 Les attentes émotionnelles</h2>
+<h2 id="830-les-attentes-emotionnelles" class="entry-title hc-5">8.30 Les attentes émotionnelles</h2>
 <p>Les individus possèdent des attentes concernant la manière dont les autres devraient se comporter émotionnellement.</p>
 <p>Lorsque ces attentes ne sont pas satisfaites, cela peut provoquer de la déception, de la colère ou de la tristesse.</p>
-<h2 id="831-le-rejet-social" class="entry-title hc-1">🚫 8.31 Le rejet social</h2>
+<h2 id="831-le-rejet-social" class="entry-title hc-1">8.31 Le rejet social</h2>
 <p>Le rejet social correspond à une expérience dans laquelle une personne perçoit qu'elle n'est pas acceptée, souhaitée ou incluse par d'autres.</p>
 <p>Cette expérience peut provoquer différentes réactions émotionnelles.</p>
-<h2 id="832-la-douleur-sociale" class="entry-title hc-2">💔 8.32 La douleur sociale</h2>
+<h2 id="832-la-douleur-sociale" class="entry-title hc-2">8.32 La douleur sociale</h2>
 <p>Certaines expériences sociales douloureuses peuvent produire une détresse psychologique importante.</p>
 <p>La douleur sociale peut notamment être associée au rejet, à l'exclusion ou à la perte d'une relation.</p>
-<h2 id="833-lexclusion-sociale" class="entry-title hc-3">🚪 8.33 L'exclusion sociale</h2>
+<h2 id="833-lexclusion-sociale" class="entry-title hc-3">8.33 L'exclusion sociale</h2>
 <p>L'exclusion correspond à une situation dans laquelle une personne est écartée d'une interaction, d'un groupe ou d'une activité sociale.</p>
 <p>Elle peut influencer les émotions, les pensées et les comportements.</p>
-<h2 id="834-lescalade-emotionnelle-dans-les-conflits" class="entry-title hc-4">🔥 8.34 L'escalade émotionnelle dans les conflits</h2>
+<h2 id="834-lescalade-emotionnelle-dans-les-conflits" class="entry-title hc-4">8.34 L'escalade émotionnelle dans les conflits</h2>
 <p>Lorsqu'une interaction devient conflictuelle, les émotions peuvent progressivement augmenter en intensité.</p>
 <p>La colère d'une personne peut notamment influencer celle de l'autre et créer une boucle d'escalade.</p>
-<h2 id="835-les-emotions-et-linterpretation-des-comportements" class="entry-title hc-5">🧠 8.35 Les émotions et l'interprétation des comportements</h2>
+<h2 id="835-les-emotions-et-linterpretation-des-comportements" class="entry-title hc-5">8.35 Les émotions et l'interprétation des comportements</h2>
 <p>L'état émotionnel peut influencer la manière dont les comportements d'autrui sont interprétés.</p>
 <p>Par exemple, une personne déjà en colère peut interpréter certaines actions ambiguës comme davantage hostiles.</p>
-<h2 id="836-les-emotions-et-la-communication" class="entry-title hc-1">🗣️ 8.36 Les émotions et la communication</h2>
+<h2 id="836-les-emotions-et-la-communication" class="entry-title hc-1">8.36 Les émotions et la communication</h2>
 <p>Les émotions peuvent modifier :</p>
 <ul>
 <li>le choix des mots ;</li>
@@ -225,30 +240,42 @@
 <li>l'écoute ;</li>
 <li>l'interprétation des messages.</li>
 </ul>
-<h2 id="837-les-malentendus-emotionnels" class="entry-title hc-2">🧩 8.37 Les malentendus émotionnels</h2>
+<h2 id="837-les-malentendus-emotionnels" class="entry-title hc-2">8.37 Les malentendus émotionnels</h2>
 <p>Une expression émotionnelle peut être mal interprétée.</p>
 <p>Une personne peut paraître froide alors qu'elle est simplement fatiguée, ou paraître en colère alors qu'elle ressent principalement de la frustration.</p>
-<h2 id="838-la-regulation-emotionnelle-interpersonnelle" class="entry-title hc-3">🧠 8.38 La régulation émotionnelle interpersonnelle</h2>
+<h2 id="838-la-regulation-emotionnelle-interpersonnelle" class="entry-title hc-3">8.38 La régulation émotionnelle interpersonnelle</h2>
 <p>Les individus peuvent influencer l'état émotionnel d'autres personnes par leurs comportements.</p>
 <p>La présence, la communication, le soutien ou la réassurance peuvent notamment modifier l'expérience émotionnelle d'autrui.</p>
-<h2 id="839-linfluence-du-contexte-social-et-culturel" class="entry-title hc-4">🌍 8.39 L'influence du contexte social et culturel</h2>
+<h2 id="839-linfluence-du-contexte-social-et-culturel" class="entry-title hc-4">8.39 L'influence du contexte social et culturel</h2>
 <p>Les normes sociales et culturelles influencent la manière dont les émotions sont exprimées, interprétées et régulées.</p>
 <p>Une expression considérée comme appropriée dans un contexte peut être perçue différemment dans un autre.</p>
-<h2 id="840-pourquoi-etudier-les-emotions-et-les-relations-sociales" class="entry-title hc-5">🔬 8.40 Pourquoi étudier les émotions et les relations sociales ?</h2>
+<h2 id="840-pourquoi-etudier-les-emotions-et-les-relations-sociales" class="entry-title hc-5">8.40 Pourquoi étudier les émotions et les relations sociales ?</h2>
 <p>Les émotions permettent de comprendre de nombreux mécanismes sociaux :</p>
-<p><strong>émotion → expression → interprétation → réaction d'autrui → interaction → nouvelle émotion</strong></p>
+<p><strong>émotion  expression  interprétation  réaction d'autrui  interaction  nouvelle émotion</strong></p>
 <p>Elles participent ainsi à la communication, à la coopération, aux conflits, à l'attachement, au soutien social et au sentiment d'appartenance.</p>
-<h1 id="a-retenir">📌 À RETENIR</h1>
+<h1 id="a-retenir">À RETENIR</h1>
 <p>Les émotions ne sont pas uniquement des expériences individuelles. Elles possèdent également une <strong>dimension sociale importante</strong>.</p>
 <p>Elles peuvent être :</p>
-<p><strong>❤️ ressenties → 🗣️ exprimées → 👀 perçues → 🧠 interprétées → 🧑‍🤝‍🧑 partagées → 🔄 modifiées par les interactions</strong></p>
+<p>** ressenties   exprimées   perçues   interprétées  ‍‍ partagées   modifiées par les interactions**</p>
 <p>L'empathie, la contagion émotionnelle, le soutien social, la coopération, le rejet, l'exclusion et les conflits montrent que les émotions peuvent influencer directement les relations.</p>
 <p>Cependant, une expression émotionnelle ne permet jamais à elle seule de connaître avec certitude l'état intérieur d'une personne. <strong>Le contexte, les comportements et les différences individuelles doivent également être pris en compte.</strong></p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-amour-attachement-et-comportements/"><span class="similar-icon">❤️</span>Amour, attachement et comportements</a><a class="similar-item" href="/chapitre/emotions-emotions-et-relations-sociales/"><span class="similar-icon">❤️</span>Émotions et relations sociales</a><a class="similar-item" href="/chapitre/emotions-expression-et-communication-emotionnelle/"><span class="similar-icon">❤️</span>Expression et communication émotionnelle</a></div>
+      <h2>Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-amour-attachement-et-comportements/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg></span>Amour, attachement et comportements</a><a class="similar-item" href="/chapitre/emotions-emotions-et-relations-sociales/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg></span>Émotions et relations sociales</a><a class="similar-item" href="/chapitre/emotions-expression-et-communication-emotionnelle/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg></span>Expression et communication émotionnelle</a></div>
     </div>
     <a class="back-link" href="/categorie/emotions/">← Retour à « Émotions et comportements humains »</a>
   </div>
@@ -334,23 +361,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -368,7 +397,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -548,9 +577,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -559,10 +590,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -669,7 +700,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -709,8 +740,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -741,7 +772,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -796,7 +827,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -820,17 +851,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -872,7 +903,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

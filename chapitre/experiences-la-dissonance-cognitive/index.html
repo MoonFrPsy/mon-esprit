@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#91-presentation-de-lexperience">🧠 9.1 PRÉSENTATION DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#92-le-dispositif-experimental">🎭 9.2 LE DISPOSITIF EXPÉRIMENTAL</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#93-le-role-de-la-recompense">💵 9.3 LE RÔLE DE LA RÉCOMPENSE</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#94-le-changement-dattitude">🧩 9.4 LE CHANGEMENT D'ATTITUDE</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#95-la-justification-insuffisante">⚖️ 9.5 LA JUSTIFICATION INSUFFISANTE</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#96-la-recherche-de-coherence">🧠 9.6 LA RECHERCHE DE COHÉRENCE</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#97-le-comportement-et-les-croyances">🗣️ 9.7 LE COMPORTEMENT ET LES CROYANCES</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#98-les-moyens-de-reduire-la-dissonance">🔄 9.8 LES MOYENS DE RÉDUIRE LA DISSONANCE</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#99-les-applications-dans-la-vie-quotidienne">🌍 9.9 LES APPLICATIONS DANS LA VIE QUOTIDIENNE</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li><li><a href="#a-retenir_8">📌 À RETENIR</a></li></ul></li><li><a href="#910-les-limites-et-les-discussions-scientifiques">⚠️ 9.10 LES LIMITES ET LES DISCUSSIONS SCIENTIFIQUES</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li><li><a href="#a-retenir_9">📌 À RETENIR</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#91-presentation-de-lexperience">9.1 PRÉSENTATION DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition">DÉFINITION</a></li><li><a href="#explication">EXPLICATION</a></li><li><a href="#exemple">EXEMPLE</a></li><li><a href="#a-retenir">À RETENIR</a></li></ul></li><li><a href="#92-le-dispositif-experimental">9.2 LE DISPOSITIF EXPÉRIMENTAL</a><ul class="sidebar-sublist"><li><a href="#definition_1">DÉFINITION</a></li><li><a href="#explication_1">EXPLICATION</a></li><li><a href="#exemple_1">EXEMPLE</a></li><li><a href="#a-retenir_1">À RETENIR</a></li></ul></li><li><a href="#93-le-role-de-la-recompense">9.3 LE RÔLE DE LA RÉCOMPENSE</a><ul class="sidebar-sublist"><li><a href="#definition_2">DÉFINITION</a></li><li><a href="#explication_2">EXPLICATION</a></li><li><a href="#exemple_2">EXEMPLE</a></li><li><a href="#a-retenir_2">À RETENIR</a></li></ul></li><li><a href="#94-le-changement-dattitude">9.4 LE CHANGEMENT D'ATTITUDE</a><ul class="sidebar-sublist"><li><a href="#definition_3">DÉFINITION</a></li><li><a href="#explication_3">EXPLICATION</a></li><li><a href="#exemple_3">EXEMPLE</a></li><li><a href="#a-retenir_3">À RETENIR</a></li></ul></li><li><a href="#95-la-justification-insuffisante">9.5 LA JUSTIFICATION INSUFFISANTE</a><ul class="sidebar-sublist"><li><a href="#definition_4">DÉFINITION</a></li><li><a href="#explication_4">EXPLICATION</a></li><li><a href="#exemple_4">EXEMPLE</a></li><li><a href="#a-retenir_4">À RETENIR</a></li></ul></li><li><a href="#96-la-recherche-de-coherence">9.6 LA RECHERCHE DE COHÉRENCE</a><ul class="sidebar-sublist"><li><a href="#definition_5">DÉFINITION</a></li><li><a href="#explication_5">EXPLICATION</a></li><li><a href="#exemple_5">EXEMPLE</a></li><li><a href="#a-retenir_5">À RETENIR</a></li></ul></li><li><a href="#97-le-comportement-et-les-croyances">9.7 LE COMPORTEMENT ET LES CROYANCES</a><ul class="sidebar-sublist"><li><a href="#definition_6">DÉFINITION</a></li><li><a href="#explication_6">EXPLICATION</a></li><li><a href="#exemple_6">EXEMPLE</a></li><li><a href="#a-retenir_6">À RETENIR</a></li></ul></li><li><a href="#98-les-moyens-de-reduire-la-dissonance">9.8 LES MOYENS DE RÉDUIRE LA DISSONANCE</a><ul class="sidebar-sublist"><li><a href="#definition_7">DÉFINITION</a></li><li><a href="#explication_7">EXPLICATION</a></li><li><a href="#exemple_7">EXEMPLE</a></li><li><a href="#a-retenir_7">À RETENIR</a></li></ul></li><li><a href="#99-les-applications-dans-la-vie-quotidienne">9.9 LES APPLICATIONS DANS LA VIE QUOTIDIENNE</a><ul class="sidebar-sublist"><li><a href="#definition_8">DÉFINITION</a></li><li><a href="#explication_8">EXPLICATION</a></li><li><a href="#exemple_8">EXEMPLE</a></li><li><a href="#a-retenir_8">À RETENIR</a></li></ul></li><li><a href="#910-les-limites-et-les-discussions-scientifiques">9.10 LES LIMITES ET LES DISCUSSIONS SCIENTIFIQUES</a><ul class="sidebar-sublist"><li><a href="#definition_9">DÉFINITION</a></li><li><a href="#explication_9">EXPLICATION</a></li><li><a href="#exemple_9">EXEMPLE</a></li><li><a href="#a-retenir_9">À RETENIR</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'La dissonance cognitive',
         category: 'Expériences célèbres de psychologie',
-        icon: '🧪'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/experiences/">🧪 Expériences célèbres de psychologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/experiences/">Expériences célèbres de psychologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>La dissonance cognitive</h1>
     </div>
     <div id="resume-banner"></div>
@@ -104,81 +119,81 @@
 </p>
 </blockquote>
 <hr />
-<h2 id="91-presentation-de-lexperience" class="entry-title hc-1">🧠 9.1 PRÉSENTATION DE L'EXPÉRIENCE</h2>
-<h3 id="definition">🔎 DÉFINITION</h3>
+<h2 id="91-presentation-de-lexperience" class="entry-title hc-1">9.1 PRÉSENTATION DE L'EXPÉRIENCE</h2>
+<h3 id="definition">DÉFINITION</h3>
 <p>La <strong>dissonance cognitive</strong> désigne un état de tension psychologique qui peut apparaître lorsqu'une personne possède simultanément des pensées, croyances ou comportements qui sont difficiles à concilier.</p>
-<h3 id="explication">🧠 EXPLICATION</h3>
+<h3 id="explication">EXPLICATION</h3>
 <p>La théorie de la dissonance cognitive a été développée par <strong>Leon Festinger</strong> en 1957.</p>
 <p>En 1959, Festinger et <strong>James Carlsmith</strong> réalisent une expérience devenue célèbre sous le titre <em>Cognitive Consequences of Forced Compliance</em>.</p>
 <p>Les chercheurs cherchent notamment à comprendre ce qui se produit lorsqu'une personne adopte un comportement qui entre en contradiction avec son attitude réelle.</p>
-<h3 id="exemple">💬 EXEMPLE</h3>
+<h3 id="exemple">EXEMPLE</h3>
 <p>Une personne pense qu'une activité est extrêmement désagréable, mais affirme ensuite à quelqu'un d'autre qu'elle était intéressante.</p>
 <p>Une contradiction apparaît alors entre ce qu'elle pense réellement et ce qu'elle vient de dire.</p>
-<h3 id="a-retenir">📌 À RETENIR</h3>
+<h3 id="a-retenir">À RETENIR</h3>
 <p>La dissonance cognitive correspond à une <strong>tension provoquée par une contradiction entre différentes cognitions ou entre une cognition et un comportement</strong>.</p>
 <hr />
-<h2 id="92-le-dispositif-experimental" class="entry-title hc-2">🎭 9.2 LE DISPOSITIF EXPÉRIMENTAL</h2>
-<h3 id="definition_1">🔎 DÉFINITION</h3>
+<h2 id="92-le-dispositif-experimental" class="entry-title hc-2">9.2 LE DISPOSITIF EXPÉRIMENTAL</h2>
+<h3 id="definition_1">DÉFINITION</h3>
 <p>Le dispositif expérimental correspond à l'organisation utilisée par les chercheurs pour provoquer et mesurer la dissonance cognitive.</p>
-<h3 id="explication_1">🧠 EXPLICATION</h3>
+<h3 id="explication_1">EXPLICATION</h3>
 <p>Les participants devaient réaliser une tâche répétitive et volontairement peu intéressante.</p>
 <p>Après cette tâche, certains participants étaient invités à présenter l'expérience comme étant agréable à une autre personne.</p>
 <p>Les participants étaient répartis dans différentes conditions, notamment avec une récompense de <strong>1 dollar</strong> ou de <strong>20 dollars</strong> pour effectuer cette déclaration.</p>
 <p>Les chercheurs mesuraient ensuite l'évaluation que les participants faisaient eux-mêmes de l'activité.</p>
-<h3 id="exemple_1">💬 EXEMPLE</h3>
+<h3 id="exemple_1">EXEMPLE</h3>
 <p>Un participant vient de réaliser une tâche très répétitive.</p>
 <p>Il reçoit ensuite une petite récompense pour dire à une autre personne que l'activité était intéressante.</p>
 <p>Les chercheurs cherchent alors à savoir comment il évaluera lui-même cette activité.</p>
-<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<h3 id="a-retenir_1">À RETENIR</h3>
 <p>L'expérience mettait les participants dans une situation où <strong>leur comportement pouvait entrer en contradiction avec leur attitude réelle</strong>.</p>
 <hr />
-<h2 id="93-le-role-de-la-recompense" class="entry-title hc-3">💵 9.3 LE RÔLE DE LA RÉCOMPENSE</h2>
-<h3 id="definition_2">🔎 DÉFINITION</h3>
+<h2 id="93-le-role-de-la-recompense" class="entry-title hc-3">9.3 LE RÔLE DE LA RÉCOMPENSE</h2>
+<h3 id="definition_2">DÉFINITION</h3>
 <p>La récompense correspond ici à la somme d'argent proposée aux participants pour effectuer le comportement demandé.</p>
-<h3 id="explication_2">🧠 EXPLICATION</h3>
+<h3 id="explication_2">EXPLICATION</h3>
 <p>Le résultat le plus célèbre de l'expérience concerne la différence entre les groupes ayant reçu <strong>1 dollar</strong> et ceux ayant reçu <strong>20 dollars</strong>.</p>
 <p>Selon l'interprétation proposée par Festinger et Carlsmith, les participants ayant reçu une faible récompense avaient moins de justification externe pour expliquer pourquoi ils avaient affirmé que la tâche était intéressante.</p>
 <p>Ils pouvaient donc ressentir davantage de dissonance entre leur comportement et leur attitude.</p>
-<h3 id="exemple_2">💬 EXEMPLE</h3>
+<h3 id="exemple_2">EXEMPLE</h3>
 <p>Une personne accepte de dire qu'une activité était agréable pour seulement 1 dollar.</p>
 <p>Après coup, elle dispose de peu de justification externe pour expliquer son comportement.</p>
-<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<h3 id="a-retenir_2">À RETENIR</h3>
 <p>Une récompense plus importante peut fournir une <strong>justification externe</strong> plus forte au comportement.</p>
 <hr />
-<h2 id="94-le-changement-dattitude" class="entry-title hc-4">🧩 9.4 LE CHANGEMENT D'ATTITUDE</h2>
-<h3 id="definition_3">🔎 DÉFINITION</h3>
+<h2 id="94-le-changement-dattitude" class="entry-title hc-4">9.4 LE CHANGEMENT D'ATTITUDE</h2>
+<h3 id="definition_3">DÉFINITION</h3>
 <p>Le changement d'attitude correspond à une modification de l'évaluation ou de l'opinion qu'une personne possède concernant un objet, une activité ou une situation.</p>
-<h3 id="explication_3">🧠 EXPLICATION</h3>
+<h3 id="explication_3">EXPLICATION</h3>
 <p>Les participants ayant reçu <strong>1 dollar</strong> ont évalué l'activité plus positivement que ceux ayant reçu 20 dollars.</p>
 <p>Festinger et Carlsmith ont interprété ce résultat comme une conséquence de la dissonance cognitive.</p>
 <p>Lorsqu'une justification externe est faible, une personne peut chercher à réduire la contradiction en modifiant son attitude.</p>
 <p>Autrement dit, elle peut finir par considérer l'activité comme moins désagréable qu'elle ne le pensait initialement.</p>
-<h3 id="exemple_3">💬 EXEMPLE</h3>
+<h3 id="exemple_3">EXEMPLE</h3>
 <p>Une personne pense qu'une activité est ennuyeuse.</p>
 <p>Après avoir affirmé qu'elle était intéressante pour une faible récompense, elle peut progressivement modifier son jugement de l'activité.</p>
-<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<h3 id="a-retenir_3">À RETENIR</h3>
 <p>La dissonance cognitive peut contribuer à <strong>modifier une attitude afin de réduire une contradiction psychologique</strong>.</p>
 <hr />
-<h2 id="95-la-justification-insuffisante" class="entry-title hc-5">⚖️ 9.5 LA JUSTIFICATION INSUFFISANTE</h2>
-<h3 id="definition_4">🔎 DÉFINITION</h3>
+<h2 id="95-la-justification-insuffisante" class="entry-title hc-5">9.5 LA JUSTIFICATION INSUFFISANTE</h2>
+<h3 id="definition_4">DÉFINITION</h3>
 <p>La <strong>justification insuffisante</strong> désigne une situation dans laquelle une personne possède une raison externe trop faible pour expliquer complètement un comportement qu'elle vient d'adopter.</p>
-<h3 id="explication_4">🧠 EXPLICATION</h3>
+<h3 id="explication_4">EXPLICATION</h3>
 <p>Dans l'expérience de Festinger et Carlsmith, recevoir seulement 1 dollar constituait une justification externe relativement faible.</p>
 <p>Le participant pouvait alors se retrouver face à une contradiction :</p>
 <p><strong>« Je pense que cette activité était ennuyeuse »</strong></p>
 <p>mais également :</p>
 <p><strong>« Je viens de dire qu'elle était intéressante. »</strong></p>
 <p>Lorsque la récompense ne suffisait pas à expliquer le comportement, le changement d'attitude pouvait constituer une manière de réduire cette contradiction.</p>
-<h3 id="exemple_4">💬 EXEMPLE</h3>
+<h3 id="exemple_4">EXEMPLE</h3>
 <p>Une personne fait quelque chose qu'elle n'apprécie pas sans recevoir de raison particulièrement importante pour le faire.</p>
 <p>Elle peut ensuite modifier la manière dont elle perçoit cette activité afin de rendre son comportement plus cohérent avec ses pensées.</p>
-<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<h3 id="a-retenir_4">À RETENIR</h3>
 <p>Une justification externe faible peut favoriser la recherche d'une <strong>cohérence interne</strong>.</p>
 <hr />
-<h2 id="96-la-recherche-de-coherence" class="entry-title hc-1">🧠 9.6 LA RECHERCHE DE COHÉRENCE</h2>
-<h3 id="definition_5">🔎 DÉFINITION</h3>
+<h2 id="96-la-recherche-de-coherence" class="entry-title hc-1">9.6 LA RECHERCHE DE COHÉRENCE</h2>
+<h3 id="definition_5">DÉFINITION</h3>
 <p>La recherche de cohérence correspond à la tendance à réduire les contradictions entre différentes pensées, attitudes ou comportements.</p>
-<h3 id="explication_5">🧠 EXPLICATION</h3>
+<h3 id="explication_5">EXPLICATION</h3>
 <p>Les êtres humains peuvent chercher à maintenir une certaine cohérence entre ce qu'ils pensent, ce qu'ils disent et ce qu'ils font.</p>
 <p>Lorsqu'une contradiction apparaît, plusieurs solutions sont possibles :</p>
 <ul>
@@ -188,29 +203,29 @@
 <li>minimiser l'importance de la contradiction.</li>
 </ul>
 <p>La dissonance cognitive ne signifie donc pas qu'une personne changera toujours d'opinion.</p>
-<h3 id="exemple_5">💬 EXEMPLE</h3>
+<h3 id="exemple_5">EXEMPLE</h3>
 <p>Une personne considère qu'elle devrait économiser de l'argent mais achète tout de même un objet coûteux.</p>
 <p>Elle peut ensuite chercher différentes justifications pour rendre cette décision plus cohérente avec ses convictions.</p>
-<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<h3 id="a-retenir_5">À RETENIR</h3>
 <p>La dissonance cognitive peut être réduite de <strong>plusieurs manières</strong>, et pas uniquement par un changement d'attitude.</p>
 <hr />
-<h2 id="97-le-comportement-et-les-croyances" class="entry-title hc-2">🗣️ 9.7 LE COMPORTEMENT ET LES CROYANCES</h2>
-<h3 id="definition_6">🔎 DÉFINITION</h3>
+<h2 id="97-le-comportement-et-les-croyances" class="entry-title hc-2">9.7 LE COMPORTEMENT ET LES CROYANCES</h2>
+<h3 id="definition_6">DÉFINITION</h3>
 <p>La relation entre comportement et croyances désigne l'influence réciproque possible entre ce qu'une personne fait et ce qu'elle pense.</p>
-<h3 id="explication_6">🧠 EXPLICATION</h3>
+<h3 id="explication_6">EXPLICATION</h3>
 <p>On pourrait imaginer que les croyances déterminent toujours les comportements.</p>
 <p>Cependant, les recherches sur la dissonance cognitive montrent également que le comportement peut influencer les attitudes.</p>
 <p>Une personne peut parfois adapter son interprétation de la situation après avoir agi d'une manière qui ne correspondait pas totalement à ses convictions initiales.</p>
-<h3 id="exemple_6">💬 EXEMPLE</h3>
+<h3 id="exemple_6">EXEMPLE</h3>
 <p>Une personne pense qu'elle n'aime pas un type d'activité.</p>
 <p>Après l'avoir pratiquée plusieurs fois pour différentes raisons, elle peut progressivement réévaluer son opinion.</p>
-<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<h3 id="a-retenir_6">À RETENIR</h3>
 <p>Les attitudes peuvent influencer les comportements, mais <strong>les comportements peuvent également contribuer à modifier les attitudes</strong>.</p>
 <hr />
-<h2 id="98-les-moyens-de-reduire-la-dissonance" class="entry-title hc-3">🔄 9.8 LES MOYENS DE RÉDUIRE LA DISSONANCE</h2>
-<h3 id="definition_7">🔎 DÉFINITION</h3>
+<h2 id="98-les-moyens-de-reduire-la-dissonance" class="entry-title hc-3">9.8 LES MOYENS DE RÉDUIRE LA DISSONANCE</h2>
+<h3 id="definition_7">DÉFINITION</h3>
 <p>La réduction de la dissonance correspond aux stratégies psychologiques permettant de diminuer la tension créée par une contradiction.</p>
-<h3 id="explication_7">🧠 EXPLICATION</h3>
+<h3 id="explication_7">EXPLICATION</h3>
 <p>Plusieurs mécanismes peuvent permettre de réduire cette tension.</p>
 <p>Une personne peut :</p>
 <ul>
@@ -221,38 +236,38 @@
 <li>trouver une justification supplémentaire.</li>
 </ul>
 <p>La stratégie utilisée dépend du contexte et de l'importance de la contradiction.</p>
-<h3 id="exemple_7">💬 EXEMPLE</h3>
+<h3 id="exemple_7">EXEMPLE</h3>
 <p>Après avoir acheté un produit coûteux, une personne peut rechercher principalement des avis positifs sur ce produit afin de se convaincre que son achat était une bonne décision.</p>
-<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<h3 id="a-retenir_7">À RETENIR</h3>
 <p>La dissonance peut être réduite par <strong>un changement de comportement, d'attitude ou de justification</strong>.</p>
 <hr />
-<h2 id="99-les-applications-dans-la-vie-quotidienne" class="entry-title hc-4">🌍 9.9 LES APPLICATIONS DANS LA VIE QUOTIDIENNE</h2>
-<h3 id="definition_8">🔎 DÉFINITION</h3>
+<h2 id="99-les-applications-dans-la-vie-quotidienne" class="entry-title hc-4">9.9 LES APPLICATIONS DANS LA VIE QUOTIDIENNE</h2>
+<h3 id="definition_8">DÉFINITION</h3>
 <p>La dissonance cognitive peut être observée dans de nombreuses situations impliquant des choix, des décisions ou des contradictions personnelles.</p>
-<h3 id="explication_8">🧠 EXPLICATION</h3>
+<h3 id="explication_8">EXPLICATION</h3>
 <p>Elle peut notamment être étudiée dans les domaines de la consommation, du travail, des relations sociales, des décisions personnelles ou de l'engagement.</p>
 <p>Elle permet de comprendre pourquoi une personne peut parfois défendre une décision après l'avoir prise alors qu'elle avait auparavant des doutes.</p>
 <p>Cela ne signifie cependant pas que toute justification après une décision est automatiquement due à la dissonance cognitive.</p>
-<h3 id="exemple_8">💬 EXEMPLE</h3>
+<h3 id="exemple_8">EXEMPLE</h3>
 <p>Une personne hésite longtemps avant de choisir entre deux produits.</p>
 <p>Après son achat, elle peut davantage mettre en avant les qualités du produit choisi et les défauts de celui qu'elle n'a pas acheté.</p>
-<h3 id="a-retenir_8">📌 À RETENIR</h3>
+<h3 id="a-retenir_8">À RETENIR</h3>
 <p>La dissonance cognitive permet notamment d'étudier <strong>la manière dont les individus donnent du sens à leurs propres décisions</strong>.</p>
 <hr />
-<h2 id="910-les-limites-et-les-discussions-scientifiques" class="entry-title hc-5">⚠️ 9.10 LES LIMITES ET LES DISCUSSIONS SCIENTIFIQUES</h2>
-<h3 id="definition_9">🔎 DÉFINITION</h3>
+<h2 id="910-les-limites-et-les-discussions-scientifiques" class="entry-title hc-5">9.10 LES LIMITES ET LES DISCUSSIONS SCIENTIFIQUES</h2>
+<h3 id="definition_9">DÉFINITION</h3>
 <p>Une limite expérimentale correspond à un élément qui doit être pris en compte avant de généraliser les résultats d'une étude.</p>
-<h3 id="explication_9">🧠 EXPLICATION</h3>
+<h3 id="explication_9">EXPLICATION</h3>
 <p>L'expérience de Festinger et Carlsmith a eu une influence considérable sur la psychologie sociale, mais son interprétation a également fait l'objet de discussions et de recherches ultérieures.</p>
 <p>Les effets observés dans une situation expérimentale particulière ne permettent pas de prédire automatiquement le comportement de toutes les personnes dans toutes les circonstances.</p>
 <p>La dissonance cognitive constitue aujourd'hui un domaine de recherche beaucoup plus large que cette seule expérience.</p>
 <p>Les résultats de l'expérience historique doivent donc être compris dans leur contexte plutôt que comme une explication universelle de tous les changements d'opinion.</p>
-<h3 id="exemple_9">💬 EXEMPLE</h3>
+<h3 id="exemple_9">EXEMPLE</h3>
 <p>Une personne peut changer d'avis après avoir justifié une décision, mais ce changement peut également être influencé par d'autres facteurs : nouvelles informations, pression sociale, expérience personnelle ou évolution des préférences.</p>
-<h3 id="a-retenir_9">📌 À RETENIR</h3>
+<h3 id="a-retenir_9">À RETENIR</h3>
 <p>L'expérience de Festinger et Carlsmith est <strong>historique et importante</strong>, mais elle ne suffit pas à expliquer à elle seule tous les changements d'attitude.</p>
 <hr />
-<h1 id="en-pratique">🧩 EN PRATIQUE</h1>
+<h1 id="en-pratique">EN PRATIQUE</h1>
 <p>L'expérience de Festinger et Carlsmith permet de comprendre plusieurs notions fondamentales :</p>
 <ul>
 <li><strong>Dissonance cognitive</strong> : tension liée à une contradiction entre différentes cognitions ou entre cognition et comportement.</li>
@@ -266,8 +281,29 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Expériences célèbres de psychologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/experiences-les-experiences-d-elizabeth-loftus-sur-la-memoire/"><span class="similar-icon">🧪</span>Les expériences d'Elizabeth Loftus sur la mémoire</a><a class="similar-item" href="/chapitre/experiences-l-experience-du-marshmallow/"><span class="similar-icon">🧪</span>L'expérience du marshmallow</a><a class="similar-item" href="/chapitre/experiences-l-experience-de-la-poupee-bobo/"><span class="similar-icon">🧪</span>L'expérience de la poupée Bobo</a></div>
+      <h2>Autres chapitres de « Expériences célèbres de psychologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/experiences-les-experiences-d-elizabeth-loftus-sur-la-memoire/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>Les expériences d'Elizabeth Loftus sur la mémoire</a><a class="similar-item" href="/chapitre/experiences-l-experience-du-marshmallow/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>L'expérience du marshmallow</a><a class="similar-item" href="/chapitre/experiences-l-experience-de-la-poupee-bobo/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>L'expérience de la poupée Bobo</a></div>
     </div>
     <a class="back-link" href="/categorie/experiences/">← Retour à « Expériences célèbres de psychologie »</a>
   </div>
@@ -353,23 +389,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -387,7 +425,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -567,9 +605,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -578,10 +618,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -688,7 +728,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -728,8 +768,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -760,7 +800,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -815,7 +855,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -839,17 +879,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -891,7 +931,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

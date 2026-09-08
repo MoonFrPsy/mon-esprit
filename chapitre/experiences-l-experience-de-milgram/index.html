@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#11-presentation-de-lexperience">🧪 1.1 PRÉSENTATION DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 DÉFINITION</a></li><li><a href="#explication">🧠 EXPLICATION</a></li><li><a href="#exemple">💬 EXEMPLE</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul></li><li><a href="#12-le-dispositif-experimental">⚡ 1.2 LE DISPOSITIF EXPÉRIMENTAL</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 DÉFINITION</a></li><li><a href="#explication_1">🧠 EXPLICATION</a></li><li><a href="#exemple_1">💬 EXEMPLE</a></li><li><a href="#a-retenir_1">📌 À RETENIR</a></li></ul></li><li><a href="#13-lobeissance-a-lautorite">🧠 1.3 L'OBÉISSANCE À L'AUTORITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 DÉFINITION</a></li><li><a href="#explication_2">🧠 EXPLICATION</a></li><li><a href="#exemple_2">💬 EXEMPLE</a></li><li><a href="#a-retenir_2">📌 À RETENIR</a></li></ul></li><li><a href="#14-le-conflit-moral">😰 1.4 LE CONFLIT MORAL</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 DÉFINITION</a></li><li><a href="#explication_3">🧠 EXPLICATION</a></li><li><a href="#exemple_3">💬 EXEMPLE</a></li><li><a href="#a-retenir_3">📌 À RETENIR</a></li></ul></li><li><a href="#15-la-responsabilite-et-lautorite">👤 1.5 LA RESPONSABILITÉ ET L'AUTORITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 DÉFINITION</a></li><li><a href="#explication_4">🧠 EXPLICATION</a></li><li><a href="#exemple_4">💬 EXEMPLE</a></li><li><a href="#a-retenir_4">📌 À RETENIR</a></li></ul></li><li><a href="#16-linfluence-du-contexte">👥 1.6 L'INFLUENCE DU CONTEXTE</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 DÉFINITION</a></li><li><a href="#explication_5">🧠 EXPLICATION</a></li><li><a href="#exemple_5">💬 EXEMPLE</a></li><li><a href="#a-retenir_5">📌 À RETENIR</a></li></ul></li><li><a href="#17-les-resultats-de-milgram">🔬 1.7 LES RÉSULTATS DE MILGRAM</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 DÉFINITION</a></li><li><a href="#explication_6">🧠 EXPLICATION</a></li><li><a href="#exemple_6">💬 EXEMPLE</a></li><li><a href="#a-retenir_6">📌 À RETENIR</a></li></ul></li><li><a href="#18-les-variations-de-lexperience">🧩 1.8 LES VARIATIONS DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 DÉFINITION</a></li><li><a href="#explication_7">🧠 EXPLICATION</a></li><li><a href="#exemple_7">💬 EXEMPLE</a></li><li><a href="#a-retenir_7">📌 À RETENIR</a></li></ul></li><li><a href="#19-les-critiques-et-les-questions-ethiques">⚠️ 1.9 LES CRITIQUES ET LES QUESTIONS ÉTHIQUES</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 DÉFINITION</a></li><li><a href="#explication_8">🧠 EXPLICATION</a></li><li><a href="#exemple_8">💬 EXEMPLE</a></li><li><a href="#a-retenir_8">📌 À RETENIR</a></li></ul></li><li><a href="#110-limportance-de-lexperience-de-milgram">📚 1.10 L'IMPORTANCE DE L'EXPÉRIENCE DE MILGRAM</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 DÉFINITION</a></li><li><a href="#explication_9">🧠 EXPLICATION</a></li><li><a href="#exemple_9">💬 EXEMPLE</a></li><li><a href="#a-retenir_9">📌 À RETENIR</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#11-presentation-de-lexperience">1.1 PRÉSENTATION DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition">DÉFINITION</a></li><li><a href="#explication">EXPLICATION</a></li><li><a href="#exemple">EXEMPLE</a></li><li><a href="#a-retenir">À RETENIR</a></li></ul></li><li><a href="#12-le-dispositif-experimental">1.2 LE DISPOSITIF EXPÉRIMENTAL</a><ul class="sidebar-sublist"><li><a href="#definition_1">DÉFINITION</a></li><li><a href="#explication_1">EXPLICATION</a></li><li><a href="#exemple_1">EXEMPLE</a></li><li><a href="#a-retenir_1">À RETENIR</a></li></ul></li><li><a href="#13-lobeissance-a-lautorite">1.3 L'OBÉISSANCE À L'AUTORITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_2">DÉFINITION</a></li><li><a href="#explication_2">EXPLICATION</a></li><li><a href="#exemple_2">EXEMPLE</a></li><li><a href="#a-retenir_2">À RETENIR</a></li></ul></li><li><a href="#14-le-conflit-moral">1.4 LE CONFLIT MORAL</a><ul class="sidebar-sublist"><li><a href="#definition_3">DÉFINITION</a></li><li><a href="#explication_3">EXPLICATION</a></li><li><a href="#exemple_3">EXEMPLE</a></li><li><a href="#a-retenir_3">À RETENIR</a></li></ul></li><li><a href="#15-la-responsabilite-et-lautorite">1.5 LA RESPONSABILITÉ ET L'AUTORITÉ</a><ul class="sidebar-sublist"><li><a href="#definition_4">DÉFINITION</a></li><li><a href="#explication_4">EXPLICATION</a></li><li><a href="#exemple_4">EXEMPLE</a></li><li><a href="#a-retenir_4">À RETENIR</a></li></ul></li><li><a href="#16-linfluence-du-contexte">1.6 L'INFLUENCE DU CONTEXTE</a><ul class="sidebar-sublist"><li><a href="#definition_5">DÉFINITION</a></li><li><a href="#explication_5">EXPLICATION</a></li><li><a href="#exemple_5">EXEMPLE</a></li><li><a href="#a-retenir_5">À RETENIR</a></li></ul></li><li><a href="#17-les-resultats-de-milgram">1.7 LES RÉSULTATS DE MILGRAM</a><ul class="sidebar-sublist"><li><a href="#definition_6">DÉFINITION</a></li><li><a href="#explication_6">EXPLICATION</a></li><li><a href="#exemple_6">EXEMPLE</a></li><li><a href="#a-retenir_6">À RETENIR</a></li></ul></li><li><a href="#18-les-variations-de-lexperience">1.8 LES VARIATIONS DE L'EXPÉRIENCE</a><ul class="sidebar-sublist"><li><a href="#definition_7">DÉFINITION</a></li><li><a href="#explication_7">EXPLICATION</a></li><li><a href="#exemple_7">EXEMPLE</a></li><li><a href="#a-retenir_7">À RETENIR</a></li></ul></li><li><a href="#19-les-critiques-et-les-questions-ethiques">1.9 LES CRITIQUES ET LES QUESTIONS ÉTHIQUES</a><ul class="sidebar-sublist"><li><a href="#definition_8">DÉFINITION</a></li><li><a href="#explication_8">EXPLICATION</a></li><li><a href="#exemple_8">EXEMPLE</a></li><li><a href="#a-retenir_8">À RETENIR</a></li></ul></li><li><a href="#110-limportance-de-lexperience-de-milgram">1.10 L'IMPORTANCE DE L'EXPÉRIENCE DE MILGRAM</a><ul class="sidebar-sublist"><li><a href="#definition_9">DÉFINITION</a></li><li><a href="#explication_9">EXPLICATION</a></li><li><a href="#exemple_9">EXEMPLE</a></li><li><a href="#a-retenir_9">À RETENIR</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: "L'expérience de Milgram",
         category: 'Expériences célèbres de psychologie',
-        icon: '🧪'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/experiences/">🧪 Expériences célèbres de psychologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/experiences/">Expériences célèbres de psychologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>L'expérience de Milgram</h1>
     </div>
     <div id="resume-banner"></div>
@@ -104,133 +119,133 @@
 </p>
 </blockquote>
 <hr />
-<h2 id="11-presentation-de-lexperience" class="entry-title hc-1">🧪 1.1 PRÉSENTATION DE L'EXPÉRIENCE</h2>
-<h3 id="definition">🔎 DÉFINITION</h3>
+<h2 id="11-presentation-de-lexperience" class="entry-title hc-1">1.1 PRÉSENTATION DE L'EXPÉRIENCE</h2>
+<h3 id="definition">DÉFINITION</h3>
 <p>L'expérience de Milgram est une série d'expériences menées par le psychologue américain <strong>Stanley Milgram</strong> au début des années 1960. Elle cherchait à étudier jusqu'à quel point une personne pouvait obéir à une autorité lorsqu'une consigne semblait entrer en conflit avec sa conscience.</p>
-<h3 id="explication">🧠 EXPLICATION</h3>
+<h3 id="explication">EXPLICATION</h3>
 <p>Les participants pensaient participer à une étude sur l'apprentissage et la mémoire.</p>
 <p>Ils étaient placés dans une situation où une personne présentée comme un « élève » devait répondre à des questions. Lorsqu'une réponse était incorrecte, le participant devait, selon les instructions reçues, augmenter progressivement l'intensité d'une prétendue décharge électrique.</p>
 <p>En réalité, les décharges n'étaient pas réellement administrées. L'« élève » était un complice de l'expérimentateur et ses réactions étaient préparées à l'avance.</p>
 <p>L'objectif réel était d'observer le comportement du participant face aux demandes de l'expérimentateur.</p>
-<h3 id="exemple">💬 EXEMPLE</h3>
+<h3 id="exemple">EXEMPLE</h3>
 <p>Un participant peut être mal à l'aise lorsqu'il entend les réactions de l'« élève », mais continuer malgré ses hésitations parce que l'expérimentateur lui demande de poursuivre.</p>
-<h3 id="a-retenir">📌 À RETENIR</h3>
+<h3 id="a-retenir">À RETENIR</h3>
 <p>L'expérience de Milgram étudie principalement <strong>l'obéissance à l'autorité</strong>, et non la violence ou la cruauté en elles-mêmes.</p>
 <hr />
-<h2 id="12-le-dispositif-experimental" class="entry-title hc-2">⚡ 1.2 LE DISPOSITIF EXPÉRIMENTAL</h2>
-<h3 id="definition_1">🔎 DÉFINITION</h3>
+<h2 id="12-le-dispositif-experimental" class="entry-title hc-2">1.2 LE DISPOSITIF EXPÉRIMENTAL</h2>
+<h3 id="definition_1">DÉFINITION</h3>
 <p>Le dispositif expérimental désigne l'ensemble des conditions organisées par Milgram afin d'observer le comportement des participants face à l'autorité.</p>
-<h3 id="explication_1">🧠 EXPLICATION</h3>
+<h3 id="explication_1">EXPLICATION</h3>
 <p>Le participant était présenté comme le « professeur ». L'expérimentateur lui demandait de faire passer des séries de questions à l'« élève ».</p>
 <p>À chaque erreur, le participant devait augmenter progressivement le niveau de la décharge supposée.</p>
 <p>L'élève, qui était en réalité un complice, donnait volontairement certaines mauvaises réponses et manifestait progressivement son inconfort.</p>
 <p>L'expérimentateur restait présent et utilisait des consignes standardisées pour demander au participant de continuer.</p>
-<h3 id="exemple_1">💬 EXEMPLE</h3>
+<h3 id="exemple_1">EXEMPLE</h3>
 <p>Le participant peut demander s'il doit réellement continuer. L'expérimentateur lui indique alors que l'expérience nécessite qu'il poursuive.</p>
-<h3 id="a-retenir_1">📌 À RETENIR</h3>
+<h3 id="a-retenir_1">À RETENIR</h3>
 <p>Le dispositif plaçait volontairement le participant dans un <strong>conflit entre ses propres réactions et les demandes de l'autorité</strong>.</p>
 <hr />
-<h2 id="13-lobeissance-a-lautorite" class="entry-title hc-3">🧠 1.3 L'OBÉISSANCE À L'AUTORITÉ</h2>
-<h3 id="definition_2">🔎 DÉFINITION</h3>
+<h2 id="13-lobeissance-a-lautorite" class="entry-title hc-3">1.3 L'OBÉISSANCE À L'AUTORITÉ</h2>
+<h3 id="definition_2">DÉFINITION</h3>
 <p>L'obéissance à l'autorité désigne le fait de modifier ou maintenir son comportement en réponse à une demande provenant d'une personne considérée comme légitime ou supérieure dans une situation donnée.</p>
-<h3 id="explication_2">🧠 EXPLICATION</h3>
+<h3 id="explication_2">EXPLICATION</h3>
 <p>Milgram voulait notamment comprendre pourquoi des individus ordinaires peuvent parfois suivre les instructions d'une autorité alors qu'ils ressentent de l'inconfort ou du désaccord.</p>
 <p>L'autorité peut donner l'impression que la responsabilité principale appartient à celui qui donne l'ordre.</p>
 <p>La situation peut alors être vécue différemment : au lieu de considérer son comportement uniquement comme une décision personnelle, l'individu peut avoir le sentiment qu'il exécute une tâche sous la responsabilité de l'expérimentateur.</p>
 <p>Cela ne signifie toutefois pas qu'une personne perd automatiquement toute capacité de jugement lorsqu'elle se trouve face à une autorité.</p>
-<h3 id="exemple_2">💬 EXEMPLE</h3>
+<h3 id="exemple_2">EXEMPLE</h3>
 <p>Une personne peut penser que la consigne est discutable, mais considérer que l'expérimentateur possède davantage de connaissances et qu'il est donc légitime de suivre ses instructions.</p>
-<h3 id="a-retenir_2">📌 À RETENIR</h3>
+<h3 id="a-retenir_2">À RETENIR</h3>
 <p>L'autorité peut exercer une influence importante sur le comportement, mais <strong>l'obéissance n'est jamais automatique</strong>.</p>
 <hr />
-<h2 id="14-le-conflit-moral" class="entry-title hc-4">😰 1.4 LE CONFLIT MORAL</h2>
-<h3 id="definition_3">🔎 DÉFINITION</h3>
+<h2 id="14-le-conflit-moral" class="entry-title hc-4">1.4 LE CONFLIT MORAL</h2>
+<h3 id="definition_3">DÉFINITION</h3>
 <p>Le conflit moral correspond à une situation dans laquelle différentes valeurs, obligations ou convictions semblent entrer en opposition.</p>
-<h3 id="explication_3">🧠 EXPLICATION</h3>
+<h3 id="explication_3">EXPLICATION</h3>
 <p>Dans l'expérience de Milgram, certains participants manifestaient une forte tension lorsqu'ils pensaient que leurs actions pouvaient faire souffrir l'autre personne.</p>
 <p>Certains hésitaient, protestaient ou demandaient à arrêter.</p>
 <p>Le comportement observable ne correspondait donc pas toujours à une absence d'émotion ou d'empathie.</p>
 <p>Au contraire, les réactions de certains participants montraient qu'ils pouvaient ressentir une importante détresse tout en continuant à suivre les instructions.</p>
-<h3 id="exemple_3">💬 EXEMPLE</h3>
+<h3 id="exemple_3">EXEMPLE</h3>
 <p>Un participant peut être visiblement anxieux et demander plusieurs fois si l'« élève » va bien, tout en continuant finalement l'expérience.</p>
-<h3 id="a-retenir_3">📌 À RETENIR</h3>
+<h3 id="a-retenir_3">À RETENIR</h3>
 <p><strong>Obéir ne signifie pas nécessairement être indifférent aux conséquences de son comportement.</strong></p>
 <hr />
-<h2 id="15-la-responsabilite-et-lautorite" class="entry-title hc-5">👤 1.5 LA RESPONSABILITÉ ET L'AUTORITÉ</h2>
-<h3 id="definition_4">🔎 DÉFINITION</h3>
+<h2 id="15-la-responsabilite-et-lautorite" class="entry-title hc-5">1.5 LA RESPONSABILITÉ ET L'AUTORITÉ</h2>
+<h3 id="definition_4">DÉFINITION</h3>
 <p>Dans un contexte d'autorité, la perception de la responsabilité peut être influencée par la présence d'une personne donnant les instructions.</p>
-<h3 id="explication_4">🧠 EXPLICATION</h3>
+<h3 id="explication_4">EXPLICATION</h3>
 <p>Milgram s'est intéressé à la manière dont les individus peuvent percevoir leur propre rôle lorsqu'ils exécutent une action demandée par une autorité.</p>
 <p>Une personne peut avoir tendance à considérer qu'elle n'est pas entièrement à l'origine de l'action puisqu'elle agit dans le cadre d'une consigne.</p>
 <p>Cette question est importante car elle permet de distinguer <strong>l'exécution d'une instruction</strong> de la disparition complète de la responsabilité individuelle.</p>
-<h3 id="exemple_4">💬 EXEMPLE</h3>
+<h3 id="exemple_4">EXEMPLE</h3>
 <p>Un participant peut penser : « C'est l'expérimentateur qui sait ce qu'il fait, je suis simplement chargé d'appliquer les consignes. »</p>
-<h3 id="a-retenir_4">📌 À RETENIR</h3>
+<h3 id="a-retenir_4">À RETENIR</h3>
 <p>La présence d'une autorité peut modifier la manière dont une personne <strong>perçoit son propre rôle et sa responsabilité</strong>.</p>
 <hr />
-<h2 id="16-linfluence-du-contexte" class="entry-title hc-1">👥 1.6 L'INFLUENCE DU CONTEXTE</h2>
-<h3 id="definition_5">🔎 DÉFINITION</h3>
+<h2 id="16-linfluence-du-contexte" class="entry-title hc-1">1.6 L'INFLUENCE DU CONTEXTE</h2>
+<h3 id="definition_5">DÉFINITION</h3>
 <p>Le contexte correspond à l'ensemble des éléments sociaux et situationnels entourant un comportement.</p>
-<h3 id="explication_5">🧠 EXPLICATION</h3>
+<h3 id="explication_5">EXPLICATION</h3>
 <p>Le comportement observé dans l'expérience de Milgram ne peut pas être expliqué uniquement par la personnalité des participants.</p>
 <p>La situation elle-même jouait un rôle important : présence d'un expérimentateur, cadre scientifique, consignes progressives et impression que l'expérience était légitime.</p>
 <p>Cela illustre une idée importante de la psychologie sociale : <strong>le comportement humain dépend à la fois de la personne et de la situation dans laquelle elle se trouve.</strong></p>
-<h3 id="exemple_5">💬 EXEMPLE</h3>
+<h3 id="exemple_5">EXEMPLE</h3>
 <p>Une personne peut agir différemment face à une même demande selon qu'elle se trouve seule, entourée de personnes du même statut ou face à une autorité reconnue.</p>
-<h3 id="a-retenir_5">📌 À RETENIR</h3>
+<h3 id="a-retenir_5">À RETENIR</h3>
 <p>Le comportement humain ne dépend pas uniquement de la personnalité. <strong>Le contexte social peut profondément influencer les décisions.</strong></p>
 <hr />
-<h2 id="17-les-resultats-de-milgram" class="entry-title hc-2">🔬 1.7 LES RÉSULTATS DE MILGRAM</h2>
-<h3 id="definition_6">🔎 DÉFINITION</h3>
+<h2 id="17-les-resultats-de-milgram" class="entry-title hc-2">1.7 LES RÉSULTATS DE MILGRAM</h2>
+<h3 id="definition_6">DÉFINITION</h3>
 <p>Les résultats correspondent aux comportements observés par Milgram lors de ses différentes variantes expérimentales.</p>
-<h3 id="explication_6">🧠 EXPLICATION</h3>
+<h3 id="explication_6">EXPLICATION</h3>
 <p>Dans la condition expérimentale devenue la plus célèbre, une proportion importante des participants a continué à administrer les niveaux de décharges supposées jusqu'au niveau maximal prévu par le dispositif.</p>
 <p>Ce résultat a surpris de nombreux chercheurs et a contribué à faire de l'expérience de Milgram une référence majeure en psychologie sociale.</p>
 <p>Il est cependant important de ne pas interpréter ce résultat comme la preuve que « la majorité des humains sont cruels ».</p>
 <p>L'expérience portait sur une situation expérimentale très particulière et ne permet pas de résumer la personnalité ou la moralité des participants.</p>
-<h3 id="exemple_6">💬 EXEMPLE</h3>
+<h3 id="exemple_6">EXEMPLE</h3>
 <p>Deux personnes peuvent ressentir une même pression provenant d'une autorité mais réagir différemment : l'une continue, tandis que l'autre refuse ou arrête.</p>
-<h3 id="a-retenir_6">📌 À RETENIR</h3>
+<h3 id="a-retenir_6">À RETENIR</h3>
 <p>Les résultats montrent l'importance potentielle de <strong>la situation, de l'autorité et du contexte social dans le comportement humain</strong>.</p>
 <hr />
-<h2 id="18-les-variations-de-lexperience" class="entry-title hc-3">🧩 1.8 LES VARIATIONS DE L'EXPÉRIENCE</h2>
-<h3 id="definition_7">🔎 DÉFINITION</h3>
+<h2 id="18-les-variations-de-lexperience" class="entry-title hc-3">1.8 LES VARIATIONS DE L'EXPÉRIENCE</h2>
+<h3 id="definition_7">DÉFINITION</h3>
 <p>Une variation expérimentale consiste à modifier certains éléments d'une expérience afin d'observer leur influence sur le comportement.</p>
-<h3 id="explication_7">🧠 EXPLICATION</h3>
+<h3 id="explication_7">EXPLICATION</h3>
 <p>Milgram a réalisé plusieurs variantes de son dispositif.</p>
 <p>La distance entre le participant et l'« élève », la présence de l'expérimentateur ou encore les conditions dans lesquelles les instructions étaient données pouvaient modifier le niveau d'obéissance observé.</p>
 <p>Ces variations étaient importantes car elles permettaient de montrer que le comportement ne dépendait pas seulement d'une caractéristique stable des participants.</p>
-<h3 id="exemple_7">💬 EXEMPLE</h3>
+<h3 id="exemple_7">EXEMPLE</h3>
 <p>Lorsque les conditions rendent l'autorité moins présente ou lorsque le participant est davantage confronté aux conséquences supposées de son action, son comportement peut changer.</p>
-<h3 id="a-retenir_7">📌 À RETENIR</h3>
+<h3 id="a-retenir_7">À RETENIR</h3>
 <p>Modifier le contexte peut modifier fortement le comportement observé.</p>
 <hr />
-<h2 id="19-les-critiques-et-les-questions-ethiques" class="entry-title hc-4">⚠️ 1.9 LES CRITIQUES ET LES QUESTIONS ÉTHIQUES</h2>
-<h3 id="definition_8">🔎 DÉFINITION</h3>
+<h2 id="19-les-critiques-et-les-questions-ethiques" class="entry-title hc-4">1.9 LES CRITIQUES ET LES QUESTIONS ÉTHIQUES</h2>
+<h3 id="definition_8">DÉFINITION</h3>
 <p>Les critiques méthodologiques et éthiques correspondent aux interrogations portant sur la manière dont une expérience a été réalisée, interprétée et sur les conséquences qu'elle a pu avoir pour les participants.</p>
-<h3 id="explication_8">🧠 EXPLICATION</h3>
+<h3 id="explication_8">EXPLICATION</h3>
 <p>L'expérience de Milgram est aujourd'hui fortement étudiée du point de vue de l'éthique de la recherche.</p>
 <p>Les participants étaient soumis à une situation pouvant provoquer une importante tension psychologique. Ils pensaient également que leurs actions pouvaient causer une souffrance réelle à une autre personne.</p>
 <p>Les standards éthiques de la recherche ont depuis considérablement évolué.</p>
 <p>Des chercheurs ont également discuté certaines interprétations des résultats et la manière dont les expériences originales doivent être généralisées à d'autres situations.</p>
-<h3 id="exemple_8">💬 EXEMPLE</h3>
+<h3 id="exemple_8">EXEMPLE</h3>
 <p>Un résultat obtenu dans un laboratoire ne peut pas automatiquement être considéré comme représentatif de toutes les situations d'autorité existant dans la vie quotidienne.</p>
-<h3 id="a-retenir_8">📌 À RETENIR</h3>
+<h3 id="a-retenir_8">À RETENIR</h3>
 <p>L'expérience de Milgram reste majeure, mais ses résultats doivent être étudiés <strong>avec leur contexte historique, méthodologique et éthique</strong>.</p>
 <hr />
-<h2 id="110-limportance-de-lexperience-de-milgram" class="entry-title hc-5">📚 1.10 L'IMPORTANCE DE L'EXPÉRIENCE DE MILGRAM</h2>
-<h3 id="definition_9">🔎 DÉFINITION</h3>
+<h2 id="110-limportance-de-lexperience-de-milgram" class="entry-title hc-5">1.10 L'IMPORTANCE DE L'EXPÉRIENCE DE MILGRAM</h2>
+<h3 id="definition_9">DÉFINITION</h3>
 <p>L'expérience de Milgram est devenue une référence historique dans l'étude de l'obéissance et de l'influence sociale.</p>
-<h3 id="explication_9">🧠 EXPLICATION</h3>
+<h3 id="explication_9">EXPLICATION</h3>
 <p>Elle a contribué à montrer que des comportements humains complexes peuvent être fortement influencés par une situation sociale.</p>
 <p>Son influence dépasse la seule psychologie expérimentale. Elle est également étudiée dans les domaines de la psychologie sociale, de la justice, de la sociologie et de l'éthique de la recherche.</p>
 <p>L'expérience a aussi contribué à renforcer la réflexion sur les conditions dans lesquelles des recherches impliquant des participants humains peuvent être menées.</p>
-<h3 id="exemple_9">💬 EXEMPLE</h3>
+<h3 id="exemple_9">EXEMPLE</h3>
 <p>Aujourd'hui, l'expérience peut être utilisée pour réfléchir à des situations dans lesquelles une personne doit choisir entre suivre une consigne et agir selon ses propres valeurs.</p>
-<h3 id="a-retenir_9">📌 À RETENIR</h3>
+<h3 id="a-retenir_9">À RETENIR</h3>
 <p>Milgram a profondément marqué la psychologie sociale en montrant que <strong>l'autorité et le contexte peuvent exercer une influence considérable sur le comportement humain</strong>.</p>
 <hr />
-<h1 id="en-pratique">🧩 EN PRATIQUE</h1>
+<h1 id="en-pratique">EN PRATIQUE</h1>
 <p>L'expérience de Milgram permet de comprendre plusieurs mécanismes importants :</p>
 <ul>
 <li>Une autorité perçue comme légitime peut influencer fortement les comportements.</li>
@@ -244,8 +259,29 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Expériences célèbres de psychologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/experiences-l-experience-de-asch/"><span class="similar-icon">🧪</span>L'expérience de Asch</a><a class="similar-item" href="/chapitre/experiences-l-experience-de-la-prison-de-stanford/"><span class="similar-icon">🧪</span>L'expérience de la prison de Stanford</a><a class="similar-item" href="/chapitre/experiences-l-experience-de-little-albert/"><span class="similar-icon">🧪</span>L'expérience de Little Albert</a></div>
+      <h2>Autres chapitres de « Expériences célèbres de psychologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/experiences-l-experience-de-asch/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>L'expérience de Asch</a><a class="similar-item" href="/chapitre/experiences-l-experience-de-la-prison-de-stanford/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>L'expérience de la prison de Stanford</a><a class="similar-item" href="/chapitre/experiences-l-experience-de-little-albert/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="44" y1="14" x2="76" y2="14"/>
+        <path d="M48 14 L48 46 L22 94 Q19 100 26 100 L94 100 Q101 100 98 94 L72 46 L72 14"/>
+        <line x1="34" y1="72" x2="86" y2="72"/>
+        <circle cx="52" cy="84" r="3" fill="currentColor" stroke="none"/>
+        <circle cx="68" cy="90" r="4" fill="currentColor" stroke="none"/>
+        <circle cx="78" cy="80" r="2.5" fill="currentColor" stroke="none"/>
+    </svg></span>L'expérience de Little Albert</a></div>
     </div>
     <a class="back-link" href="/categorie/experiences/">← Retour à « Expériences célèbres de psychologie »</a>
   </div>
@@ -331,23 +367,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -365,7 +403,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -545,9 +583,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -556,10 +596,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -666,7 +706,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -706,8 +746,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -738,7 +778,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -793,7 +833,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -817,17 +857,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -869,7 +909,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

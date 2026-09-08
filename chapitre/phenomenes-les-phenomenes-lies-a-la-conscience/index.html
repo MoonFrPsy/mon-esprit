@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#61-la-conscience">🔎 6.1 La conscience</a></li><li><a href="#62-letat-de-conscience">🌅 6.2 L'état de conscience</a></li><li><a href="#63-leveil">⚡ 6.3 L'éveil</a></li><li><a href="#64-la-conscience-de-soi">🧠 6.4 La conscience de soi</a></li><li><a href="#65-lintrospection">🪞 6.5 L'introspection</a></li><li><a href="#66-la-metaconscience">🔍 6.6 La métaconscience</a></li><li><a href="#67-la-conscience-des-pensees">💭 6.7 La conscience des pensées</a></li><li><a href="#68-le-flux-de-conscience">🌊 6.8 Le flux de conscience</a></li><li><a href="#69-le-traitement-conscient">🧩 6.9 Le traitement conscient</a></li><li><a href="#610-le-traitement-inconscient">⚙️ 6.10 Le traitement inconscient</a></li><li><a href="#611-lacces-conscient">🚪 6.11 L'accès conscient</a></li><li><a href="#612-la-conscience-perceptive">👁️ 6.12 La conscience perceptive</a></li><li><a href="#613-la-perception-subliminale">🧠 6.13 La perception subliminale</a></li><li><a href="#614-lexperience-subjective">🌫️ 6.14 L'expérience subjective</a></li><li><a href="#615-le-sentiment-dexister">🧍 6.15 Le sentiment d'exister</a></li><li><a href="#616-le-sentiment-detre-soi">🪞 6.16 Le sentiment d'être soi</a></li><li><a href="#617-la-continuite-de-la-conscience">🧠 6.17 La continuité de la conscience</a></li><li><a href="#618-la-conscience-du-temps">⏳ 6.18 La conscience du temps</a></li><li><a href="#619-les-changements-de-conscience-lies-au-sommeil">😴 6.19 Les changements de conscience liés au sommeil</a></li><li><a href="#620-la-conscience-pendant-les-reves">🌙 6.20 La conscience pendant les rêves</a></li><li><a href="#621-le-reve-lucide">✨ 6.21 Le rêve lucide</a></li><li><a href="#622-les-etats-modifies-de-conscience">🧘 6.22 Les états modifiés de conscience</a></li><li><a href="#623-lhypnose">🌀 6.23 L'hypnose</a></li><li><a href="#624-la-meditation-et-la-conscience">🌿 6.24 La méditation et la conscience</a></li><li><a href="#625-la-dissociation">🧩 6.25 La dissociation</a></li><li><a href="#626-la-depersonnalisation">🌫️ 6.26 La dépersonnalisation</a></li><li><a href="#627-la-derealisation">🌍 6.27 La déréalisation</a></li><li><a href="#628-la-conscience-peripherique">👁️ 6.28 La conscience périphérique</a></li><li><a href="#629-le-projecteur-de-la-conscience">🎯 6.29 Le projecteur de la conscience</a></li><li><a href="#630-les-changements-spontanes-du-contenu-conscient">🔄 6.30 Les changements spontanés du contenu conscient</a></li><li><a href="#631-lerrance-mentale-consciente">💭 6.31 L'errance mentale consciente</a></li><li><a href="#632-la-conscience-reflexive">🧠 6.32 La conscience réflexive</a></li><li><a href="#633-le-niveau-de-conscience">🔬 6.33 Le niveau de conscience</a></li><li><a href="#634-la-conscience-et-la-memoire">🧠 6.34 La conscience et la mémoire</a></li><li><a href="#635-la-conscience-et-les-emotions">❤️ 6.35 La conscience et les émotions</a></li><li><a href="#636-la-conscience-et-lattention">🧩 6.36 La conscience et l'attention</a></li><li><a href="#637-la-conscience-corporelle">🪞 6.37 La conscience corporelle</a></li><li><a href="#638-la-conscience-et-lidentite">🧠 6.38 La conscience et l'identité</a></li><li><a href="#639-pourquoi-la-conscience-est-elle-difficile-a-etudier">🔬 6.39 Pourquoi la conscience est-elle difficile à étudier ?</a></li><li><a href="#640-pourquoi-etudier-les-phenomenes-de-conscience">📚 6.40 Pourquoi étudier les phénomènes de conscience ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#61-la-conscience">6.1 La conscience</a></li><li><a href="#62-letat-de-conscience">6.2 L'état de conscience</a></li><li><a href="#63-leveil">6.3 L'éveil</a></li><li><a href="#64-la-conscience-de-soi">6.4 La conscience de soi</a></li><li><a href="#65-lintrospection">6.5 L'introspection</a></li><li><a href="#66-la-metaconscience">6.6 La métaconscience</a></li><li><a href="#67-la-conscience-des-pensees">6.7 La conscience des pensées</a></li><li><a href="#68-le-flux-de-conscience">6.8 Le flux de conscience</a></li><li><a href="#69-le-traitement-conscient">6.9 Le traitement conscient</a></li><li><a href="#610-le-traitement-inconscient">6.10 Le traitement inconscient</a></li><li><a href="#611-lacces-conscient">6.11 L'accès conscient</a></li><li><a href="#612-la-conscience-perceptive">6.12 La conscience perceptive</a></li><li><a href="#613-la-perception-subliminale">6.13 La perception subliminale</a></li><li><a href="#614-lexperience-subjective">6.14 L'expérience subjective</a></li><li><a href="#615-le-sentiment-dexister">6.15 Le sentiment d'exister</a></li><li><a href="#616-le-sentiment-detre-soi">6.16 Le sentiment d'être soi</a></li><li><a href="#617-la-continuite-de-la-conscience">6.17 La continuité de la conscience</a></li><li><a href="#618-la-conscience-du-temps">6.18 La conscience du temps</a></li><li><a href="#619-les-changements-de-conscience-lies-au-sommeil">6.19 Les changements de conscience liés au sommeil</a></li><li><a href="#620-la-conscience-pendant-les-reves">6.20 La conscience pendant les rêves</a></li><li><a href="#621-le-reve-lucide">6.21 Le rêve lucide</a></li><li><a href="#622-les-etats-modifies-de-conscience">6.22 Les états modifiés de conscience</a></li><li><a href="#623-lhypnose">6.23 L'hypnose</a></li><li><a href="#624-la-meditation-et-la-conscience">6.24 La méditation et la conscience</a></li><li><a href="#625-la-dissociation">6.25 La dissociation</a></li><li><a href="#626-la-depersonnalisation">6.26 La dépersonnalisation</a></li><li><a href="#627-la-derealisation">6.27 La déréalisation</a></li><li><a href="#628-la-conscience-peripherique">6.28 La conscience périphérique</a></li><li><a href="#629-le-projecteur-de-la-conscience">6.29 Le projecteur de la conscience</a></li><li><a href="#630-les-changements-spontanes-du-contenu-conscient">6.30 Les changements spontanés du contenu conscient</a></li><li><a href="#631-lerrance-mentale-consciente">6.31 L'errance mentale consciente</a></li><li><a href="#632-la-conscience-reflexive">6.32 La conscience réflexive</a></li><li><a href="#633-le-niveau-de-conscience">6.33 Le niveau de conscience</a></li><li><a href="#634-la-conscience-et-la-memoire">6.34 La conscience et la mémoire</a></li><li><a href="#635-la-conscience-et-les-emotions">6.35 La conscience et les émotions</a></li><li><a href="#636-la-conscience-et-lattention">6.36 La conscience et l'attention</a></li><li><a href="#637-la-conscience-corporelle">6.37 La conscience corporelle</a></li><li><a href="#638-la-conscience-et-lidentite">6.38 La conscience et l'identité</a></li><li><a href="#639-pourquoi-la-conscience-est-elle-difficile-a-etudier">6.39 Pourquoi la conscience est-elle difficile à étudier ?</a></li><li><a href="#640-pourquoi-etudier-les-phenomenes-de-conscience">6.40 Pourquoi étudier les phénomènes de conscience ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les phénomènes liés à la conscience',
         category: 'Phénomènes psychologiques',
-        icon: '🔮'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/phenomenes/">🔮 Phénomènes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/phenomenes/">Phénomènes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les phénomènes liés à la conscience</h1>
     </div>
     <div id="resume-banner"></div>
@@ -104,7 +119,7 @@
 <p>Elle ne correspond pas à un phénomène unique. Elle implique notamment l'état d'éveil, l'attention, la perception de soi, la perception du monde extérieur et la capacité à prendre conscience de ses propres expériences.
 </p>
 </blockquote>
-<h2 id="61-la-conscience" class="entry-title hc-1">🔎 6.1 La conscience</h2>
+<h2 id="61-la-conscience" class="entry-title hc-1">6.1 La conscience</h2>
 <p>La conscience correspond à la présence d'une expérience subjective.</p>
 <p>Elle permet notamment de :</p>
 <ul>
@@ -116,7 +131,7 @@
 <li>réfléchir à certaines de ses propres expériences</li>
 </ul>
 <p>La conscience est l'un des sujets les plus complexes étudiés en psychologie et en neurosciences.</p>
-<h2 id="62-letat-de-conscience" class="entry-title hc-2">🌅 6.2 L'état de conscience</h2>
+<h2 id="62-letat-de-conscience" class="entry-title hc-2">6.2 L'état de conscience</h2>
 <p>L'état de conscience correspond au niveau général de présence et d'éveil d'une personne.</p>
 <p>Il peut varier selon :</p>
 <ul>
@@ -128,7 +143,7 @@
 <li>certaines atteintes neurologiques</li>
 </ul>
 <p>La conscience n'est donc pas constante au cours du temps.</p>
-<h2 id="63-leveil" class="entry-title hc-3">⚡ 6.3 L'éveil</h2>
+<h2 id="63-leveil" class="entry-title hc-3">6.3 L'éveil</h2>
 <p>L'éveil correspond au niveau d'activation général de l'organisme.</p>
 <p>Un niveau d'éveil élevé peut favoriser :</p>
 <ul>
@@ -137,7 +152,7 @@
 <li>la réactivité</li>
 </ul>
 <p>Un niveau trop élevé peut toutefois s'accompagner d'une forte agitation ou d'une diminution de certaines capacités attentionnelles.</p>
-<h2 id="64-la-conscience-de-soi" class="entry-title hc-4">🧠 6.4 La conscience de soi</h2>
+<h2 id="64-la-conscience-de-soi" class="entry-title hc-4">6.4 La conscience de soi</h2>
 <p>La conscience de soi correspond à la capacité à avoir une représentation de soi en tant qu'individu distinct.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -149,7 +164,7 @@
 <li>l'identité</li>
 </ul>
 <p>Elle participe à la construction du sentiment d'exister comme individu.</p>
-<h2 id="65-lintrospection" class="entry-title hc-5">🪞 6.5 L'introspection</h2>
+<h2 id="65-lintrospection" class="entry-title hc-5">6.5 L'introspection</h2>
 <p>L'introspection consiste à porter son attention sur ses propres expériences mentales.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -160,15 +175,15 @@
 <li>un souvenir</li>
 </ul>
 <p>L'introspection ne permet cependant pas nécessairement d'accéder directement à toutes les causes d'un comportement ou d'une pensée.</p>
-<h2 id="66-la-metaconscience" class="entry-title hc-1">🔍 6.6 La métaconscience</h2>
+<h2 id="66-la-metaconscience" class="entry-title hc-1">6.6 La métaconscience</h2>
 <p>La métaconscience correspond au fait d'être conscient de son propre état mental.</p>
 <p>Par exemple, une personne peut non seulement avoir une pensée, mais également remarquer qu'elle est en train de penser.</p>
 <p>Elle implique une forme de recul par rapport à l'expérience mentale immédiate.</p>
-<h2 id="67-la-conscience-des-pensees" class="entry-title hc-2">💭 6.7 La conscience des pensées</h2>
+<h2 id="67-la-conscience-des-pensees" class="entry-title hc-2">6.7 La conscience des pensées</h2>
 <p>Une pensée peut apparaître dans l'esprit sans avoir été volontairement produite.</p>
 <p>La conscience des pensées correspond au fait de remarquer leur présence.</p>
 <p>Certaines pensées sont très facilement identifiées, tandis que d'autres peuvent rester en arrière-plan jusqu'à ce qu'un élément attire l'attention.</p>
-<h2 id="68-le-flux-de-conscience" class="entry-title hc-3">🌊 6.8 Le flux de conscience</h2>
+<h2 id="68-le-flux-de-conscience" class="entry-title hc-3">6.8 Le flux de conscience</h2>
 <p>Le flux de conscience désigne le déroulement continu et changeant des expériences mentales.</p>
 <p>Il peut inclure :</p>
 <ul>
@@ -180,11 +195,11 @@
 <li>perceptions</li>
 </ul>
 <p>Le contenu de la conscience change constamment, parfois très rapidement.</p>
-<h2 id="69-le-traitement-conscient" class="entry-title hc-4">🧩 6.9 Le traitement conscient</h2>
+<h2 id="69-le-traitement-conscient" class="entry-title hc-4">6.9 Le traitement conscient</h2>
 <p>Le traitement conscient correspond aux informations dont une personne a actuellement conscience.</p>
 <p>Il peut demander davantage de ressources attentionnelles que certains traitements automatiques.</p>
 <p>Par exemple, résoudre volontairement un problème complexe mobilise généralement davantage la conscience qu'effectuer une action devenue très habituelle.</p>
-<h2 id="610-le-traitement-inconscient" class="entry-title hc-5">⚙️ 6.10 Le traitement inconscient</h2>
+<h2 id="610-le-traitement-inconscient" class="entry-title hc-5">6.10 Le traitement inconscient</h2>
 <p>Une grande quantité d'informations peut être traitée sans entrer dans la conscience.</p>
 <p>Cela peut concerner :</p>
 <ul>
@@ -195,7 +210,7 @@
 <li>des automatismes</li>
 </ul>
 <p>Le traitement inconscient ne signifie pas nécessairement qu'un contenu est totalement inaccessible à la conscience.</p>
-<h2 id="611-lacces-conscient" class="entry-title hc-1">🚪 6.11 L'accès conscient</h2>
+<h2 id="611-lacces-conscient" class="entry-title hc-1">6.11 L'accès conscient</h2>
 <p>Toutes les informations présentes dans l'environnement n'accèdent pas simultanément à la conscience.</p>
 <p>Une information peut être :</p>
 <ol>
@@ -205,25 +220,25 @@
 <li>devenir consciente</li>
 </ol>
 <p>Ce processus contribue à expliquer pourquoi une personne peut être exposée à de nombreuses informations sans avoir conscience de chacune d'elles.</p>
-<h2 id="612-la-conscience-perceptive" class="entry-title hc-2">👁️ 6.12 La conscience perceptive</h2>
+<h2 id="612-la-conscience-perceptive" class="entry-title hc-2">6.12 La conscience perceptive</h2>
 <p>La conscience perceptive correspond au fait d'avoir une expérience consciente d'une information sensorielle.</p>
 <p>Voir un objet ne signifie donc pas uniquement recevoir des informations visuelles. Cela implique également que l'information devienne accessible à l'expérience consciente.</p>
-<h2 id="613-la-perception-subliminale" class="entry-title hc-3">🧠 6.13 La perception subliminale</h2>
+<h2 id="613-la-perception-subliminale" class="entry-title hc-3">6.13 La perception subliminale</h2>
 <p>La perception subliminale désigne le traitement d'une information présentée dans des conditions où elle n'est pas clairement consciente.</p>
 <p>Certaines informations peuvent ainsi influencer certains traitements sans être consciemment identifiées.</p>
 <p>Les effets subliminaux existent, mais leur influence est généralement plus limitée et plus dépendante du contexte que certaines représentations populaires ne le suggèrent.</p>
-<h2 id="614-lexperience-subjective" class="entry-title hc-4">🌫️ 6.14 L'expérience subjective</h2>
+<h2 id="614-lexperience-subjective" class="entry-title hc-4">6.14 L'expérience subjective</h2>
 <p>L'expérience subjective correspond à la manière dont une expérience est vécue de l'intérieur.</p>
 <p>Deux personnes peuvent être exposées à une situation similaire tout en ayant des expériences subjectives différentes.</p>
 <p>Elle constitue une dimension centrale de l'étude de la conscience.</p>
-<h2 id="615-le-sentiment-dexister" class="entry-title hc-5">🧍 6.15 Le sentiment d'exister</h2>
+<h2 id="615-le-sentiment-dexister" class="entry-title hc-5">6.15 Le sentiment d'exister</h2>
 <p>Le sentiment d'exister correspond à l'expérience fondamentale d'être présent en tant que sujet.</p>
 <p>Il est généralement continu et tellement familier qu'il est rarement remarqué consciemment.</p>
 <p>Certaines expériences psychologiques ou neurologiques peuvent cependant modifier temporairement ce sentiment.</p>
-<h2 id="616-le-sentiment-detre-soi" class="entry-title hc-1">🪞 6.16 Le sentiment d'être soi</h2>
+<h2 id="616-le-sentiment-detre-soi" class="entry-title hc-1">6.16 Le sentiment d'être soi</h2>
 <p>Le sentiment d'être soi correspond à l'impression que les pensées, sensations et actions appartiennent à un même sujet.</p>
 <p>Il participe à la continuité du soi dans le temps.</p>
-<h2 id="617-la-continuite-de-la-conscience" class="entry-title hc-2">🧠 6.17 La continuité de la conscience</h2>
+<h2 id="617-la-continuite-de-la-conscience" class="entry-title hc-2">6.17 La continuité de la conscience</h2>
 <p>La conscience donne généralement l'impression d'être continue.</p>
 <p>Pourtant, elle est influencée par :</p>
 <ul>
@@ -235,7 +250,7 @@
 <li>certaines altérations neurologiques</li>
 </ul>
 <p>La sensation de continuité est donc une expérience construite à partir d'une succession d'états.</p>
-<h2 id="618-la-conscience-du-temps" class="entry-title hc-3">⏳ 6.18 La conscience du temps</h2>
+<h2 id="618-la-conscience-du-temps" class="entry-title hc-3">6.18 La conscience du temps</h2>
 <p>La perception du temps n'est pas parfaitement objective.</p>
 <p>Une même durée peut sembler :</p>
 <ul>
@@ -245,11 +260,11 @@
 <li>lente</li>
 </ul>
 <p>L'attention, les émotions, l'activité et les événements vécus peuvent modifier cette expérience subjective.</p>
-<h2 id="619-les-changements-de-conscience-lies-au-sommeil" class="entry-title hc-4">😴 6.19 Les changements de conscience liés au sommeil</h2>
+<h2 id="619-les-changements-de-conscience-lies-au-sommeil" class="entry-title hc-4">6.19 Les changements de conscience liés au sommeil</h2>
 <p>Le sommeil modifie profondément la conscience.</p>
 <p>Au cours du sommeil, les niveaux d'éveil, d'attention et de perception de l'environnement changent.</p>
 <p>Certaines formes d'expérience consciente restent cependant présentes, notamment pendant les rêves.</p>
-<h2 id="620-la-conscience-pendant-les-reves" class="entry-title hc-5">🌙 6.20 La conscience pendant les rêves</h2>
+<h2 id="620-la-conscience-pendant-les-reves" class="entry-title hc-5">6.20 La conscience pendant les rêves</h2>
 <p>Pendant un rêve, une expérience subjective peut être très riche alors que la perception directe de l'environnement extérieur est fortement réduite.</p>
 <p>Les rêves peuvent contenir :</p>
 <ul>
@@ -260,11 +275,11 @@
 <li>des interactions</li>
 <li>des scénarios complexes</li>
 </ul>
-<h2 id="621-le-reve-lucide" class="entry-title hc-1">✨ 6.21 Le rêve lucide</h2>
+<h2 id="621-le-reve-lucide" class="entry-title hc-1">6.21 Le rêve lucide</h2>
 <p>Le rêve lucide correspond à un rêve dans lequel la personne prend conscience qu'elle est en train de rêver.</p>
 <p>Dans certains rêves lucides, elle peut également avoir un certain degré de contrôle sur le contenu du rêve.</p>
 <p>Le niveau de contrôle varie fortement selon les expériences.</p>
-<h2 id="622-les-etats-modifies-de-conscience" class="entry-title hc-2">🧘 6.22 Les états modifiés de conscience</h2>
+<h2 id="622-les-etats-modifies-de-conscience" class="entry-title hc-2">6.22 Les états modifiés de conscience</h2>
 <p>Un état modifié de conscience correspond à une modification importante de l'expérience consciente habituelle.</p>
 <p>Cela peut notamment être associé :</p>
 <ul>
@@ -276,11 +291,11 @@
 <li>à certaines situations neurologiques</li>
 </ul>
 <p>Le terme décrit un changement d'état sans constituer à lui seul un diagnostic.</p>
-<h2 id="623-lhypnose" class="entry-title hc-3">🌀 6.23 L'hypnose</h2>
+<h2 id="623-lhypnose" class="entry-title hc-3">6.23 L'hypnose</h2>
 <p>L'hypnose correspond à un état particulier caractérisé notamment par une attention fortement focalisée et une modification de l'expérience subjective.</p>
 <p>La suggestibilité peut également être modifiée.</p>
 <p>L'hypnose n'est pas équivalente au sommeil et ne signifie pas automatiquement une perte totale de contrôle.</p>
-<h2 id="624-la-meditation-et-la-conscience" class="entry-title hc-4">🌿 6.24 La méditation et la conscience</h2>
+<h2 id="624-la-meditation-et-la-conscience" class="entry-title hc-4">6.24 La méditation et la conscience</h2>
 <p>Certaines pratiques méditatives cherchent à modifier la manière dont l'attention et la conscience sont orientées.</p>
 <p>Elles peuvent notamment favoriser l'observation des :</p>
 <ul>
@@ -290,7 +305,7 @@
 <li>perceptions</li>
 </ul>
 <p>La méditation peut donc constituer un objet d'étude important dans les recherches sur la conscience et l'attention.</p>
-<h2 id="625-la-dissociation" class="entry-title hc-5">🧩 6.25 La dissociation</h2>
+<h2 id="625-la-dissociation" class="entry-title hc-5">6.25 La dissociation</h2>
 <p>La dissociation correspond à une perturbation ou une séparation inhabituelle entre différents aspects de l'expérience psychologique.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -301,7 +316,7 @@
 <li>la conscience de soi</li>
 </ul>
 <p>La dissociation peut être transitoire et relativement légère ou s'inscrire dans certains troubles dissociatifs.</p>
-<h2 id="626-la-depersonnalisation" class="entry-title hc-1">🌫️ 6.26 La dépersonnalisation</h2>
+<h2 id="626-la-depersonnalisation" class="entry-title hc-1">6.26 La dépersonnalisation</h2>
 <p>La dépersonnalisation correspond à une modification du sentiment d'être soi-même.</p>
 <p>Une personne peut avoir l'impression :</p>
 <ul>
@@ -311,7 +326,7 @@
 <li>que ses émotions sont moins accessibles</li>
 </ul>
 <p>La personne peut généralement conserver la conscience que cette expérience est inhabituelle.</p>
-<h2 id="627-la-derealisation" class="entry-title hc-2">🌍 6.27 La déréalisation</h2>
+<h2 id="627-la-derealisation" class="entry-title hc-2">6.27 La déréalisation</h2>
 <p>La déréalisation correspond à une modification de l'expérience du monde extérieur.</p>
 <p>L'environnement peut sembler :</p>
 <ul>
@@ -322,15 +337,15 @@
 <li>brumeux</li>
 </ul>
 <p>Comme pour la dépersonnalisation, la personne peut généralement savoir que cette impression correspond à une modification de son expérience plutôt qu'à une transformation réelle du monde.</p>
-<h2 id="628-la-conscience-peripherique" class="entry-title hc-3">👁️ 6.28 La conscience périphérique</h2>
+<h2 id="628-la-conscience-peripherique" class="entry-title hc-3">6.28 La conscience périphérique</h2>
 <p>La conscience ne se limite pas nécessairement à ce qui se trouve au centre de l'attention.</p>
 <p>Certaines informations peuvent rester présentes de manière périphérique.</p>
 <p>Par exemple, une personne concentrée sur une conversation peut conserver une conscience partielle des sons ou mouvements autour d'elle.</p>
-<h2 id="629-le-projecteur-de-la-conscience" class="entry-title hc-4">🎯 6.29 Le projecteur de la conscience</h2>
+<h2 id="629-le-projecteur-de-la-conscience" class="entry-title hc-4">6.29 Le projecteur de la conscience</h2>
 <p>L'expérience consciente peut être comparée à un projecteur qui met certaines informations au premier plan.</p>
 <p>Ce qui se trouve au centre bénéficie généralement de davantage de ressources attentionnelles.</p>
 <p>Cependant, la conscience ne fonctionne pas comme un projecteur parfaitement délimité : plusieurs informations peuvent être traitées simultanément à différents niveaux.</p>
-<h2 id="630-les-changements-spontanes-du-contenu-conscient" class="entry-title hc-5">🔄 6.30 Les changements spontanés du contenu conscient</h2>
+<h2 id="630-les-changements-spontanes-du-contenu-conscient" class="entry-title hc-5">6.30 Les changements spontanés du contenu conscient</h2>
 <p>Le contenu de la conscience peut changer sans décision volontaire.</p>
 <p>Une pensée peut être remplacée par :</p>
 <ul>
@@ -341,7 +356,7 @@
 <li>une autre pensée</li>
 </ul>
 <p>Ces changements peuvent être influencés par l'environnement, l'attention, les objectifs ou les associations mentales.</p>
-<h2 id="631-lerrance-mentale-consciente" class="entry-title hc-1">💭 6.31 L'errance mentale consciente</h2>
+<h2 id="631-lerrance-mentale-consciente" class="entry-title hc-1">6.31 L'errance mentale consciente</h2>
 <p>L'errance mentale correspond au déplacement de l'attention vers des pensées qui ne sont pas directement liées à l'activité en cours.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -353,7 +368,7 @@
 <li>des scénarios imaginés</li>
 </ul>
 <p>Elle peut parfois être volontaire et parfois apparaître spontanément.</p>
-<h2 id="632-la-conscience-reflexive" class="entry-title hc-2">🧠 6.32 La conscience réflexive</h2>
+<h2 id="632-la-conscience-reflexive" class="entry-title hc-2">6.32 La conscience réflexive</h2>
 <p>La conscience réflexive correspond à la capacité à réfléchir sur ses propres états mentaux.</p>
 <p>Elle permet par exemple de se demander :</p>
 <ul>
@@ -362,7 +377,7 @@
 <li>« Est-ce que je suis certain de mon jugement ? »</li>
 </ul>
 <p>Elle constitue une composante importante de la métacognition.</p>
-<h2 id="633-le-niveau-de-conscience" class="entry-title hc-3">🔬 6.33 Le niveau de conscience</h2>
+<h2 id="633-le-niveau-de-conscience" class="entry-title hc-3">6.33 Le niveau de conscience</h2>
 <p>Le niveau de conscience peut être décrit selon différents degrés d'éveil et de réactivité.</p>
 <p>Dans le domaine médical, certaines altérations importantes de la conscience peuvent être associées à :</p>
 <ul>
@@ -372,11 +387,11 @@
 <li>le coma</li>
 </ul>
 <p>Ces états relèvent notamment de l'évaluation neurologique et médicale.</p>
-<h2 id="634-la-conscience-et-la-memoire" class="entry-title hc-4">🧠 6.34 La conscience et la mémoire</h2>
+<h2 id="634-la-conscience-et-la-memoire" class="entry-title hc-4">6.34 La conscience et la mémoire</h2>
 <p>La conscience et la mémoire sont étroitement liées.</p>
 <p>Une expérience consciente peut être mémorisée, mais toutes les expériences conscientes ne deviennent pas nécessairement des souvenirs accessibles ultérieurement.</p>
 <p>La mémoire contribue également à donner une impression de continuité personnelle.</p>
-<h2 id="635-la-conscience-et-les-emotions" class="entry-title hc-5">❤️ 6.35 La conscience et les émotions</h2>
+<h2 id="635-la-conscience-et-les-emotions" class="entry-title hc-5">6.35 La conscience et les émotions</h2>
 <p>Les émotions peuvent modifier le contenu de la conscience.</p>
 <p>Une émotion intense peut :</p>
 <ul>
@@ -387,12 +402,12 @@
 <li>rendre certaines informations particulièrement présentes</li>
 </ul>
 <p>La conscience émotionnelle correspond notamment à la capacité à reconnaître et identifier ses propres états émotionnels.</p>
-<h2 id="636-la-conscience-et-lattention" class="entry-title hc-1">🧩 6.36 La conscience et l'attention</h2>
+<h2 id="636-la-conscience-et-lattention" class="entry-title hc-1">6.36 La conscience et l'attention</h2>
 <p>La conscience et l'attention sont fortement liées, mais elles ne sont pas synonymes.</p>
 <p>L'attention sélectionne et privilégie certaines informations.</p>
 <p>La conscience correspond davantage au fait d'avoir une expérience subjective ou un accès conscient à certaines informations.</p>
 <p>Une partie des processus attentionnels peut donc fonctionner sans conscience explicite.</p>
-<h2 id="637-la-conscience-corporelle" class="entry-title hc-2">🪞 6.37 La conscience corporelle</h2>
+<h2 id="637-la-conscience-corporelle" class="entry-title hc-2">6.37 La conscience corporelle</h2>
 <p>La conscience corporelle correspond à l'expérience consciente du corps.</p>
 <p>Elle peut inclure :</p>
 <ul>
@@ -404,11 +419,11 @@
 <li>la respiration</li>
 </ul>
 <p>Elle participe à la représentation du soi corporel.</p>
-<h2 id="638-la-conscience-et-lidentite" class="entry-title hc-3">🧠 6.38 La conscience et l'identité</h2>
+<h2 id="638-la-conscience-et-lidentite" class="entry-title hc-3">6.38 La conscience et l'identité</h2>
 <p>La conscience permet notamment de maintenir une représentation de soi à travers différentes expériences.</p>
 <p>Les souvenirs, les émotions, les intentions et les perceptions corporelles participent ensemble à cette représentation.</p>
 <p>L'identité ne correspond cependant pas uniquement à la conscience présente à un instant donné.</p>
-<h2 id="639-pourquoi-la-conscience-est-elle-difficile-a-etudier" class="entry-title hc-4">🔬 6.39 Pourquoi la conscience est-elle difficile à étudier ?</h2>
+<h2 id="639-pourquoi-la-conscience-est-elle-difficile-a-etudier" class="entry-title hc-4">6.39 Pourquoi la conscience est-elle difficile à étudier ?</h2>
 <p>La conscience possède une dimension subjective qui ne peut pas être observée directement de la même manière qu'un comportement.</p>
 <p>Les chercheurs utilisent donc notamment :</p>
 <ul>
@@ -420,7 +435,7 @@
 <li>les recherches sur le sommeil</li>
 </ul>
 <p>L'étude scientifique de la conscience reste un domaine actif de recherche.</p>
-<h2 id="640-pourquoi-etudier-les-phenomenes-de-conscience" class="entry-title hc-5">📚 6.40 Pourquoi étudier les phénomènes de conscience ?</h2>
+<h2 id="640-pourquoi-etudier-les-phenomenes-de-conscience" class="entry-title hc-5">6.40 Pourquoi étudier les phénomènes de conscience ?</h2>
 <p>L'étude de la conscience permet de mieux comprendre :</p>
 <ul>
 <li>comment les informations deviennent conscientes</li>
@@ -432,19 +447,40 @@
 </ul>
 <p>La conscience constitue ainsi un point de rencontre entre psychologie, neurosciences, médecine et philosophie.</p>
 <hr />
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🧠 <strong>La conscience n'est pas un phénomène unique.</strong> Elle comprend l'éveil, l'expérience subjective, la conscience de soi, la perception et l'accès à certaines informations mentales.</p>
-<p>🔎 <strong>Tout ce qui est traité par le cerveau n'est pas nécessairement conscient.</strong> Une partie importante des traitements peut rester en dehors de l'expérience consciente.</p>
-<p>🪞 <strong>La conscience de soi</strong> permet de faire l'expérience de soi comme d'un individu distinct.</p>
-<p>🌙 <strong>Le sommeil et les rêves</strong> montrent que l'expérience consciente peut continuer à exister sous des formes très différentes de l'état d'éveil.</p>
-<p>🌀 <strong>Les états modifiés de conscience</strong> peuvent modifier profondément la perception de soi, du temps ou de l'environnement.</p>
-<p>🌫️ <strong>La dépersonnalisation et la déréalisation</strong> sont des modifications de l'expérience subjective qui peuvent apparaître dans différents contextes.</p>
-<p>🔬 <strong>La conscience reste un domaine de recherche complexe</strong>, étudié à la croisée de la psychologie, des neurosciences, de la médecine et de la philosophie.</p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p><strong>La conscience n'est pas un phénomène unique.</strong> Elle comprend l'éveil, l'expérience subjective, la conscience de soi, la perception et l'accès à certaines informations mentales.</p>
+<p><strong>Tout ce qui est traité par le cerveau n'est pas nécessairement conscient.</strong> Une partie importante des traitements peut rester en dehors de l'expérience consciente.</p>
+<p><strong>La conscience de soi</strong> permet de faire l'expérience de soi comme d'un individu distinct.</p>
+<p><strong>Le sommeil et les rêves</strong> montrent que l'expérience consciente peut continuer à exister sous des formes très différentes de l'état d'éveil.</p>
+<p><strong>Les états modifiés de conscience</strong> peuvent modifier profondément la perception de soi, du temps ou de l'environnement.</p>
+<p><strong>La dépersonnalisation et la déréalisation</strong> sont des modifications de l'expérience subjective qui peuvent apparaître dans différents contextes.</p>
+<p><strong>La conscience reste un domaine de recherche complexe</strong>, étudié à la croisée de la psychologie, des neurosciences, de la médecine et de la philosophie.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Phénomènes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-a-l-identite-et-au-soi/"><span class="similar-icon">🔮</span>Les phénomènes liés à l'identité et au soi</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-sociaux/"><span class="similar-icon">🔮</span>Les phénomènes sociaux</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-relationnels/"><span class="similar-icon">🔮</span>Les phénomènes relationnels</a></div>
+      <h2>Autres chapitres de « Phénomènes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-a-l-identite-et-au-soi/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes liés à l'identité et au soi</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-sociaux/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes sociaux</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-relationnels/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes relationnels</a></div>
     </div>
     <a class="back-link" href="/categorie/phenomenes/">← Retour à « Phénomènes psychologiques »</a>
   </div>
@@ -530,23 +566,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -564,7 +602,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -744,9 +782,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -755,10 +795,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -865,7 +905,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -905,8 +945,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -937,7 +977,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -992,7 +1032,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1016,17 +1056,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1068,7 +1108,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

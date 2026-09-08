@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#111-quest-ce-que-la-personnalite">🪞 11.1 Qu'est-ce que la personnalité ?</a></li><li><a href="#112-quest-ce-quun-trait-de-personnalite">🧩 11.2 Qu'est-ce qu'un trait de personnalité ?</a></li><li><a href="#113-quand-un-trait-devient-il-problematique">📊 11.3 Quand un trait devient-il problématique ?</a></li><li><a href="#114-la-rigidite-de-la-personnalite">🔄 11.4 La rigidité de la personnalité</a></li><li><a href="#115-la-flexibilite-psychologique">🌱 11.5 La flexibilité psychologique</a></li><li><a href="#116-lidentite-personnelle">🪞 11.6 L'identité personnelle</a></li><li><a href="#117-la-continuite-de-lidentite">🔀 11.7 La continuité de l'identité</a></li><li><a href="#118-lintegration-de-lidentite">🧩 11.8 L'intégration de l'identité</a></li><li><a href="#119-le-clivage">⚫⚪ 11.9 Le clivage</a></li><li><a href="#1110-lidealisation">🌟 11.10 L'idéalisation</a></li><li><a href="#1111-la-devalorisation">📉 11.11 La dévalorisation</a></li><li><a href="#1112-lalternance-idealisation-devalorisation">🔄 11.12 L'alternance idéalisation dévalorisation</a></li><li><a href="#1113-la-regulation-emotionnelle-et-la-personnalite">❤️ 11.13 La régulation émotionnelle et la personnalité</a></li><li><a href="#1114-limpulsivite">⚡ 11.14 L'impulsivité</a></li><li><a href="#1115-le-controle-des-impulsions">🧠 11.15 Le contrôle des impulsions</a></li><li><a href="#1116-les-mecanismes-de-defense">🛡️ 11.16 Les mécanismes de défense</a></li><li><a href="#1117-la-flexibilite-des-defenses">📊 11.17 La flexibilité des défenses</a></li><li><a href="#1118-la-mentalisation">🧠 11.18 La mentalisation</a></li><li><a href="#1119-la-comprehension-des-autres">🧑‍🤝‍🧑 11.19 La compréhension des autres</a></li><li><a href="#1120-la-sensibilite-au-rejet">👁️ 11.20 La sensibilité au rejet</a></li><li><a href="#1121-le-fonctionnement-relationnel">❤️ 11.21 Le fonctionnement relationnel</a></li><li><a href="#1122-les-schemas-relationnels-repetitifs">🔄 11.22 Les schémas relationnels répétitifs</a></li><li><a href="#1123-les-croyances-sur-soi">🧠 11.23 Les croyances sur soi</a></li><li><a href="#1124-les-croyances-sur-les-autres">👥 11.24 Les croyances sur les autres</a></li><li><a href="#1125-les-schemas-cognitifs">🧩 11.25 Les schémas cognitifs</a></li><li><a href="#1126-les-biais-dans-le-fonctionnement-de-la-personnalite">🔍 11.26 Les biais dans le fonctionnement de la personnalité</a></li><li><a href="#1127-lestime-de-soi">🪞 11.27 L'estime de soi</a></li><li><a href="#1128-la-stabilite-de-lestime-de-soi">🔄 11.28 La stabilité de l'estime de soi</a></li><li><a href="#1129-le-sentiment-dagentivite">🧠 11.29 Le sentiment d'agentivité</a></li><li><a href="#1130-le-rapport-au-corps">🧍 11.30 Le rapport au corps</a></li><li><a href="#1131-personnalite-et-cognition">🧠 11.31 Personnalité et cognition</a></li><li><a href="#1132-personnalite-et-emotions">❤️ 11.32 Personnalité et émotions</a></li><li><a href="#1133-temperament-et-personnalite">🧬 11.33 Tempérament et personnalité</a></li><li><a href="#1134-personnalite-et-developpement">🌱 11.34 Personnalité et développement</a></li><li><a href="#1135-culture-et-personnalite">🌍 11.35 Culture et personnalité</a></li><li><a href="#1136-personnalite-et-contexte">🧩 11.36 Personnalité et contexte</a></li><li><a href="#1137-quest-ce-quun-trouble-de-la-personnalite">🩺 11.37 Qu'est-ce qu'un trouble de la personnalité ?</a></li><li><a href="#1138-les-troubles-de-la-personnalite-comme-categories-diagnostiques">🧠 11.38 Les troubles de la personnalité comme catégories diagnostiques</a></li><li><a href="#1139-une-personnalite-peut-elle-changer">📈 11.39 Une personnalité peut-elle changer ?</a></li><li><a href="#1140-pourquoi-etudier-la-personnalite-et-le-fonctionnement-pathologique">🌌 11.40 Pourquoi étudier la personnalité et le fonctionnement pathologique ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#111-quest-ce-que-la-personnalite">11.1 Qu'est-ce que la personnalité ?</a></li><li><a href="#112-quest-ce-quun-trait-de-personnalite">11.2 Qu'est-ce qu'un trait de personnalité ?</a></li><li><a href="#113-quand-un-trait-devient-il-problematique">11.3 Quand un trait devient-il problématique ?</a></li><li><a href="#114-la-rigidite-de-la-personnalite">11.4 La rigidité de la personnalité</a></li><li><a href="#115-la-flexibilite-psychologique">11.5 La flexibilité psychologique</a></li><li><a href="#116-lidentite-personnelle">11.6 L'identité personnelle</a></li><li><a href="#117-la-continuite-de-lidentite">11.7 La continuité de l'identité</a></li><li><a href="#118-lintegration-de-lidentite">11.8 L'intégration de l'identité</a></li><li><a href="#119-le-clivage">11.9 Le clivage</a></li><li><a href="#1110-lidealisation">11.10 L'idéalisation</a></li><li><a href="#1111-la-devalorisation">11.11 La dévalorisation</a></li><li><a href="#1112-lalternance-idealisation-devalorisation">11.12 L'alternance idéalisation dévalorisation</a></li><li><a href="#1113-la-regulation-emotionnelle-et-la-personnalite">11.13 La régulation émotionnelle et la personnalité</a></li><li><a href="#1114-limpulsivite">11.14 L'impulsivité</a></li><li><a href="#1115-le-controle-des-impulsions">11.15 Le contrôle des impulsions</a></li><li><a href="#1116-les-mecanismes-de-defense">11.16 Les mécanismes de défense</a></li><li><a href="#1117-la-flexibilite-des-defenses">11.17 La flexibilité des défenses</a></li><li><a href="#1118-la-mentalisation">11.18 La mentalisation</a></li><li><a href="#1119-la-comprehension-des-autres">‍‍ 11.19 La compréhension des autres</a></li><li><a href="#1120-la-sensibilite-au-rejet">11.20 La sensibilité au rejet</a></li><li><a href="#1121-le-fonctionnement-relationnel">11.21 Le fonctionnement relationnel</a></li><li><a href="#1122-les-schemas-relationnels-repetitifs">11.22 Les schémas relationnels répétitifs</a></li><li><a href="#1123-les-croyances-sur-soi">11.23 Les croyances sur soi</a></li><li><a href="#1124-les-croyances-sur-les-autres">11.24 Les croyances sur les autres</a></li><li><a href="#1125-les-schemas-cognitifs">11.25 Les schémas cognitifs</a></li><li><a href="#1126-les-biais-dans-le-fonctionnement-de-la-personnalite">11.26 Les biais dans le fonctionnement de la personnalité</a></li><li><a href="#1127-lestime-de-soi">11.27 L'estime de soi</a></li><li><a href="#1128-la-stabilite-de-lestime-de-soi">11.28 La stabilité de l'estime de soi</a></li><li><a href="#1129-le-sentiment-dagentivite">11.29 Le sentiment d'agentivité</a></li><li><a href="#1130-le-rapport-au-corps">11.30 Le rapport au corps</a></li><li><a href="#1131-personnalite-et-cognition">11.31 Personnalité et cognition</a></li><li><a href="#1132-personnalite-et-emotions">11.32 Personnalité et émotions</a></li><li><a href="#1133-temperament-et-personnalite">11.33 Tempérament et personnalité</a></li><li><a href="#1134-personnalite-et-developpement">11.34 Personnalité et développement</a></li><li><a href="#1135-culture-et-personnalite">11.35 Culture et personnalité</a></li><li><a href="#1136-personnalite-et-contexte">11.36 Personnalité et contexte</a></li><li><a href="#1137-quest-ce-quun-trouble-de-la-personnalite">11.37 Qu'est-ce qu'un trouble de la personnalité ?</a></li><li><a href="#1138-les-troubles-de-la-personnalite-comme-categories-diagnostiques">11.38 Les troubles de la personnalité comme catégories diagnostiques</a></li><li><a href="#1139-une-personnalite-peut-elle-changer">11.39 Une personnalité peut-elle changer ?</a></li><li><a href="#1140-pourquoi-etudier-la-personnalite-et-le-fonctionnement-pathologique">11.40 Pourquoi étudier la personnalité et le fonctionnement pathologique ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Personnalité et fonctionnement pathologique',
         category: 'Concepts avancés',
-        icon: '🔬'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/avances/">🔬 Concepts avancés</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/avances/">Concepts avancés</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Personnalité et fonctionnement pathologique</h1>
     </div>
     <div id="resume-banner"></div>
@@ -108,11 +123,11 @@
 <p>La psychopathologie de la personnalité ne consiste pas simplement à identifier des traits considérés comme « mauvais » ou « anormaux ».</p>
 <p>Un trait peut être très marqué sans être pathologique.</p>
 <p>Ce qui devient particulièrement important en clinique concerne plutôt la combinaison de plusieurs éléments :</p>
-<p><strong>🧠 rigidité + 🔄 répétition + ❤️ souffrance + 🧑‍🤝‍🧑 difficultés relationnelles + 🌍 retentissement sur le fonctionnement</strong></p>
+<p>** rigidité +  répétition +  souffrance + ‍‍ difficultés relationnelles +  retentissement sur le fonctionnement**</p>
 <p>Les troubles de la personnalité sont généralement compris comme des modes de fonctionnement durables qui s'écartent de manière importante des attentes culturelles et qui peuvent affecter différents domaines de la vie.</p>
 <p>Il est également important de distinguer <strong>personnalité</strong>, <strong>traits de personnalité</strong> et <strong>trouble de la personnalité</strong>.</p>
 <hr />
-<h2 id="111-quest-ce-que-la-personnalite" class="entry-title hc-1">🪞 11.1 Qu'est-ce que la personnalité ?</h2>
+<h2 id="111-quest-ce-que-la-personnalite" class="entry-title hc-1">11.1 Qu'est-ce que la personnalité ?</h2>
 <p>La personnalité désigne l'organisation relativement durable de différentes caractéristiques psychologiques.</p>
 <p>Elle comprend notamment :</p>
 <ul>
@@ -130,7 +145,7 @@
 <p>La personnalité n'est donc pas simplement « le caractère ».</p>
 <p>Elle correspond à un système beaucoup plus large.</p>
 <hr />
-<h2 id="112-quest-ce-quun-trait-de-personnalite" class="entry-title hc-2">🧩 11.2 Qu'est-ce qu'un trait de personnalité ?</h2>
+<h2 id="112-quest-ce-quun-trait-de-personnalite" class="entry-title hc-2">11.2 Qu'est-ce qu'un trait de personnalité ?</h2>
 <p>Un trait est une tendance relativement stable à penser, ressentir ou agir d'une certaine manière.</p>
 <p>Par exemple :</p>
 <ul>
@@ -144,7 +159,7 @@
 <p>Une caractéristique élevée n'est donc pas automatiquement pathologique.</p>
 <p><strong>Trait important ≠ trouble de la personnalité</strong></p>
 <hr />
-<h2 id="113-quand-un-trait-devient-il-problematique" class="entry-title hc-3">📊 11.3 Quand un trait devient-il problématique ?</h2>
+<h2 id="113-quand-un-trait-devient-il-problematique" class="entry-title hc-3">11.3 Quand un trait devient-il problématique ?</h2>
 <p>Un trait peut devenir problématique lorsqu'il devient :</p>
 <ul>
 <li>extrêmement rigide</li>
@@ -157,16 +172,16 @@
 <p>Le contexte culturel doit également être pris en compte.</p>
 <p>Une caractéristique inhabituelle dans un environnement donné peut être normale dans un autre.</p>
 <hr />
-<h2 id="114-la-rigidite-de-la-personnalite" class="entry-title hc-4">🔄 11.4 La rigidité de la personnalité</h2>
+<h2 id="114-la-rigidite-de-la-personnalite" class="entry-title hc-4">11.4 La rigidité de la personnalité</h2>
 <p>La rigidité correspond à une difficulté à adapter son fonctionnement lorsque la situation change.</p>
 <p>Une personne peut posséder une stratégie qui fonctionne dans certaines circonstances mais continue à l'utiliser même lorsqu'elle devient inefficace.</p>
 <p>On peut représenter cela ainsi :</p>
-<p><strong>situation → stratégie habituelle → résultat</strong></p>
+<p><strong>situation  stratégie habituelle  résultat</strong></p>
 <p>Si la situation change mais que la stratégie reste identique :</p>
-<p><strong>nouvelle situation → ancienne stratégie → difficulté</strong></p>
+<p><strong>nouvelle situation  ancienne stratégie  difficulté</strong></p>
 <p>La rigidité constitue donc une dimension importante du fonctionnement pathologique.</p>
 <hr />
-<h2 id="115-la-flexibilite-psychologique" class="entry-title hc-5">🌱 11.5 La flexibilité psychologique</h2>
+<h2 id="115-la-flexibilite-psychologique" class="entry-title hc-5">11.5 La flexibilité psychologique</h2>
 <p>La flexibilité correspond à la capacité à modifier son comportement ou sa manière de penser selon les circonstances.</p>
 <p>Elle implique notamment :</p>
 <ul>
@@ -179,7 +194,7 @@
 <p>Une personnalité saine n'est pas nécessairement une personnalité toujours calme ou toujours adaptable.</p>
 <p>La flexibilité signifie surtout que plusieurs réponses restent accessibles.</p>
 <hr />
-<h2 id="116-lidentite-personnelle" class="entry-title hc-1">🪞 11.6 L'identité personnelle</h2>
+<h2 id="116-lidentite-personnelle" class="entry-title hc-1">11.6 L'identité personnelle</h2>
 <p>L'identité correspond à la représentation que l'individu possède de lui-même.</p>
 <p>Elle comprend notamment :</p>
 <p><strong>« Qui suis-je ? »</strong></p>
@@ -188,14 +203,14 @@
 <p><strong>« Comment suis-je différent des autres ? »</strong></p>
 <p>Une identité relativement intégrée permet de maintenir une continuité malgré les changements d'humeur ou de contexte.</p>
 <hr />
-<h2 id="117-la-continuite-de-lidentite" class="entry-title hc-2">🔀 11.7 La continuité de l'identité</h2>
+<h2 id="117-la-continuite-de-lidentite" class="entry-title hc-2">11.7 La continuité de l'identité</h2>
 <p>La continuité du soi correspond au sentiment de rester la même personne malgré les changements.</p>
 <p>Cela ne signifie pas rester identique.</p>
 <p>Une personne peut changer considérablement tout en conservant une impression de continuité :</p>
-<p><strong>passé → présent → futur</strong></p>
+<p><strong>passé  présent  futur</strong></p>
 <p>Certaines organisations psychopathologiques peuvent être associées à une expérience plus instable ou fragmentée de cette continuité.</p>
 <hr />
-<h2 id="118-lintegration-de-lidentite" class="entry-title hc-3">🧩 11.8 L'intégration de l'identité</h2>
+<h2 id="118-lintegration-de-lidentite" class="entry-title hc-3">11.8 L'intégration de l'identité</h2>
 <p>L'intégration de l'identité implique notamment la capacité à réunir différentes représentations de soi.</p>
 <p>Par exemple :</p>
 <p><strong>« Je peux être compétent dans certains domaines et avoir des difficultés dans d'autres. »</strong></p>
@@ -204,20 +219,20 @@
 <p>L'intégration permet de conserver une représentation nuancée.</p>
 <p>À l'inverse, certaines organisations peuvent favoriser des représentations très polarisées.</p>
 <hr />
-<h2 id="119-le-clivage" class="entry-title hc-4">⚫⚪ 11.9 Le clivage</h2>
+<h2 id="119-le-clivage" class="entry-title hc-4">11.9 Le clivage</h2>
 <p>Dans certains modèles psychodynamiques, le clivage désigne une difficulté à intégrer simultanément des aspects positifs et négatifs d'une même personne ou de soi-même.</p>
 <p>Une représentation peut alors devenir très polarisée :</p>
-<p><strong>entièrement positif ↔ entièrement négatif</strong></p>
+<p><strong>entièrement positif  entièrement négatif</strong></p>
 <p>Le clivage n'est pas simplement le fait de changer d'avis.</p>
 <p>Il correspond à un mode particulier d'organisation des représentations.</p>
 <hr />
-<h2 id="1110-lidealisation" class="entry-title hc-5">🌟 11.10 L'idéalisation</h2>
+<h2 id="1110-lidealisation" class="entry-title hc-5">11.10 L'idéalisation</h2>
 <p>L'idéalisation consiste à attribuer à une personne ou à soi-même des caractéristiques extrêmement positives.</p>
 <p>Dans certains modèles, elle peut avoir une fonction défensive.</p>
 <p>Elle peut temporairement simplifier une réalité complexe.</p>
 <p>Cependant, lorsqu'elle devient rigide, elle peut rendre difficile l'intégration des caractéristiques moins positives.</p>
 <hr />
-<h2 id="1111-la-devalorisation" class="entry-title hc-1">📉 11.11 La dévalorisation</h2>
+<h2 id="1111-la-devalorisation" class="entry-title hc-1">11.11 La dévalorisation</h2>
 <p>La dévalorisation consiste à attribuer une valeur extrêmement négative à soi-même ou à une autre personne.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -229,7 +244,7 @@
 </ul>
 <p>Comme l'idéalisation, elle peut être comprise différemment selon les modèles psychologiques.</p>
 <hr />
-<h2 id="1112-lalternance-idealisation-devalorisation" class="entry-title hc-2">🔄 11.12 L'alternance idéalisation dévalorisation</h2>
+<h2 id="1112-lalternance-idealisation-devalorisation" class="entry-title hc-2">11.12 L'alternance idéalisation dévalorisation</h2>
 <p>Certaines organisations peuvent présenter une alternance rapide entre deux représentations opposées.</p>
 <p>Par exemple :</p>
 <p><strong>« Cette personne est exceptionnelle. »</strong></p>
@@ -238,7 +253,7 @@
 <p>La difficulté réside dans l'intégration des deux représentations.</p>
 <p>Cette dynamique ne suffit cependant pas à diagnostiquer un trouble particulier.</p>
 <hr />
-<h2 id="1113-la-regulation-emotionnelle-et-la-personnalite" class="entry-title hc-3">❤️ 11.13 La régulation émotionnelle et la personnalité</h2>
+<h2 id="1113-la-regulation-emotionnelle-et-la-personnalite" class="entry-title hc-3">11.13 La régulation émotionnelle et la personnalité</h2>
 <p>La personnalité influence la manière dont les émotions sont vécues et régulées.</p>
 <p>Certaines personnes peuvent présenter une plus grande stabilité émotionnelle.</p>
 <p>D'autres peuvent présenter :</p>
@@ -251,7 +266,7 @@
 </ul>
 <p>La régulation émotionnelle constitue donc une dimension importante de l'étude de la personnalité.</p>
 <hr />
-<h2 id="1114-limpulsivite" class="entry-title hc-4">⚡ 11.14 L'impulsivité</h2>
+<h2 id="1114-limpulsivite" class="entry-title hc-4">11.14 L'impulsivité</h2>
 <p>L'impulsivité peut correspondre à plusieurs tendances :</p>
 <ul>
 <li>agir rapidement</li>
@@ -263,14 +278,14 @@
 <p>L'impulsivité n'est pas une caractéristique unique.</p>
 <p>Elle possède plusieurs dimensions et peut varier selon les situations.</p>
 <hr />
-<h2 id="1115-le-controle-des-impulsions" class="entry-title hc-5">🧠 11.15 Le contrôle des impulsions</h2>
+<h2 id="1115-le-controle-des-impulsions" class="entry-title hc-5">11.15 Le contrôle des impulsions</h2>
 <p>Le contrôle des impulsions implique notamment :</p>
-<p><strong>impulsion → inhibition → évaluation → réponse</strong></p>
+<p><strong>impulsion  inhibition  évaluation  réponse</strong></p>
 <p>Un fonctionnement pathologique peut parfois être associé à une difficulté persistante à interrompre certaines réponses.</p>
 <p>Mais une perte ponctuelle de contrôle ne signifie pas qu'une personne possède un trouble de la personnalité.</p>
 <p>La fréquence, la répétition, le contexte et les conséquences sont importants.</p>
 <hr />
-<h2 id="1116-les-mecanismes-de-defense" class="entry-title hc-1">🛡️ 11.16 Les mécanismes de défense</h2>
+<h2 id="1116-les-mecanismes-de-defense" class="entry-title hc-1">11.16 Les mécanismes de défense</h2>
 <p>Les mécanismes de défense participent à la manière dont une personne gère certains conflits psychologiques.</p>
 <p>Ils peuvent inclure :</p>
 <ul>
@@ -287,14 +302,14 @@
 <p>Les modèles psychodynamiques s'intéressent particulièrement à leur organisation.</p>
 <p>Une défense isolée ne permet pas de définir une personnalité.</p>
 <hr />
-<h2 id="1117-la-flexibilite-des-defenses" class="entry-title hc-2">📊 11.17 La flexibilité des défenses</h2>
+<h2 id="1117-la-flexibilite-des-defenses" class="entry-title hc-2">11.17 La flexibilité des défenses</h2>
 <p>Un fonctionnement plus flexible permet généralement d'utiliser différentes stratégies selon les circonstances.</p>
 <p>Un fonctionnement très rigide peut conduire à reproduire systématiquement les mêmes défenses.</p>
 <p>On peut donc étudier :</p>
 <p><strong>diversité + flexibilité + adaptation</strong></p>
 <p>plutôt que simplement compter le nombre de mécanismes présents.</p>
 <hr />
-<h2 id="1118-la-mentalisation" class="entry-title hc-3">🧠 11.18 La mentalisation</h2>
+<h2 id="1118-la-mentalisation" class="entry-title hc-3">11.18 La mentalisation</h2>
 <p>La mentalisation désigne la capacité à comprendre les comportements en fonction d'états mentaux.</p>
 <p>Cela concerne :</p>
 <ul>
@@ -308,7 +323,7 @@
 <p>Elle concerne aussi bien son propre fonctionnement que celui des autres.</p>
 <p>La mentalisation peut diminuer temporairement lorsque l'activation émotionnelle devient très importante.</p>
 <hr />
-<h2 id="1119-la-comprehension-des-autres" class="entry-title hc-4">🧑‍🤝‍🧑 11.19 La compréhension des autres</h2>
+<h2 id="1119-la-comprehension-des-autres" class="entry-title hc-4">‍‍ 11.19 La compréhension des autres</h2>
 <p>Le fonctionnement de la personnalité influence également la manière dont les intentions des autres sont interprétées.</p>
 <p>Une même situation peut être comprise comme :</p>
 <p><strong>soutien</strong></p>
@@ -320,14 +335,14 @@
 <p><strong>indifférence</strong></p>
 <p>selon les représentations et attentes de la personne.</p>
 <hr />
-<h2 id="1120-la-sensibilite-au-rejet" class="entry-title hc-5">👁️ 11.20 La sensibilité au rejet</h2>
+<h2 id="1120-la-sensibilite-au-rejet" class="entry-title hc-5">11.20 La sensibilité au rejet</h2>
 <p>Certaines personnes présentent une sensibilité particulièrement importante aux signes pouvant être interprétés comme du rejet.</p>
 <p>Cela peut entraîner :</p>
-<p><strong>signal ambigu → interprétation de rejet → émotion → comportement → réaction de l'autre</strong></p>
+<p><strong>signal ambigu  interprétation de rejet  émotion  comportement  réaction de l'autre</strong></p>
 <p>La réaction de l'autre peut ensuite renforcer l'interprétation initiale.</p>
 <p>Cette dynamique peut donc devenir circulaire.</p>
 <hr />
-<h2 id="1121-le-fonctionnement-relationnel" class="entry-title hc-1">❤️ 11.21 Le fonctionnement relationnel</h2>
+<h2 id="1121-le-fonctionnement-relationnel" class="entry-title hc-1">11.21 Le fonctionnement relationnel</h2>
 <p>La personnalité influence notamment :</p>
 <ul>
 <li>proximité</li>
@@ -341,13 +356,13 @@
 </ul>
 <p>Les difficultés relationnelles peuvent donc être comprises comme une interaction entre caractéristiques individuelles et environnement.</p>
 <hr />
-<h2 id="1122-les-schemas-relationnels-repetitifs" class="entry-title hc-2">🔄 11.22 Les schémas relationnels répétitifs</h2>
+<h2 id="1122-les-schemas-relationnels-repetitifs" class="entry-title hc-2">11.22 Les schémas relationnels répétitifs</h2>
 <p>Un schéma relationnel correspond à une manière relativement répétitive de percevoir et de gérer les relations.</p>
 <p>Par exemple :</p>
-<p><strong>attente → comportement → réaction de l'autre → interprétation → nouvelle attente</strong></p>
+<p><strong>attente  comportement  réaction de l'autre  interprétation  nouvelle attente</strong></p>
 <p>Les schémas peuvent être appris au cours du développement et être modifiés par de nouvelles expériences.</p>
 <hr />
-<h2 id="1123-les-croyances-sur-soi" class="entry-title hc-3">🧠 11.23 Les croyances sur soi</h2>
+<h2 id="1123-les-croyances-sur-soi" class="entry-title hc-3">11.23 Les croyances sur soi</h2>
 <p>Certaines croyances centrales peuvent influencer le fonctionnement de la personnalité.</p>
 <p>Exemples :</p>
 <p><strong>« Je suis incapable. »</strong></p>
@@ -356,7 +371,7 @@
 <p>Ces croyances ne constituent pas automatiquement des troubles.</p>
 <p>Elles deviennent particulièrement importantes lorsqu'elles sont rigides, généralisées et difficiles à remettre en question.</p>
 <hr />
-<h2 id="1124-les-croyances-sur-les-autres" class="entry-title hc-4">👥 11.24 Les croyances sur les autres</h2>
+<h2 id="1124-les-croyances-sur-les-autres" class="entry-title hc-4">11.24 Les croyances sur les autres</h2>
 <p>Les croyances peuvent également concerner les autres :</p>
 <p><strong>« Les autres sont fiables. »</strong></p>
 <p><strong>« Les autres sont dangereux. »</strong></p>
@@ -364,13 +379,13 @@
 <p>Ces représentations peuvent influencer les comportements relationnels.</p>
 <p>Elles peuvent également être modifiées par l'expérience.</p>
 <hr />
-<h2 id="1125-les-schemas-cognitifs" class="entry-title hc-5">🧩 11.25 Les schémas cognitifs</h2>
+<h2 id="1125-les-schemas-cognitifs" class="entry-title hc-5">11.25 Les schémas cognitifs</h2>
 <p>Un schéma cognitif est une organisation relativement stable de connaissances et d'attentes.</p>
 <p>Il permet de traiter rapidement certaines informations.</p>
 <p>Cependant, lorsqu'un schéma devient extrêmement rigide, il peut favoriser une sélection particulière des informations.</p>
 <p>La personne peut alors remarquer davantage les éléments qui confirment ses attentes que ceux qui les contredisent.</p>
 <hr />
-<h2 id="1126-les-biais-dans-le-fonctionnement-de-la-personnalite" class="entry-title hc-1">🔍 11.26 Les biais dans le fonctionnement de la personnalité</h2>
+<h2 id="1126-les-biais-dans-le-fonctionnement-de-la-personnalite" class="entry-title hc-1">11.26 Les biais dans le fonctionnement de la personnalité</h2>
 <p>Les biais cognitifs peuvent participer au fonctionnement de certains profils.</p>
 <p>Ils peuvent concerner :</p>
 <ul>
@@ -383,7 +398,7 @@
 <p>Un biais n'est toutefois pas nécessairement pathologique.</p>
 <p>Tous les êtres humains utilisent des raccourcis cognitifs.</p>
 <hr />
-<h2 id="1127-lestime-de-soi" class="entry-title hc-2">🪞 11.27 L'estime de soi</h2>
+<h2 id="1127-lestime-de-soi" class="entry-title hc-2">11.27 L'estime de soi</h2>
 <p>L'estime de soi correspond à l'évaluation globale de sa propre valeur.</p>
 <p>Elle peut être :</p>
 <ul>
@@ -395,14 +410,14 @@
 <p>Une estime de soi faible ou élevée ne suffit pas à définir un trouble de personnalité.</p>
 <p>La manière dont l'estime de soi est organisée et régulée peut cependant être importante cliniquement.</p>
 <hr />
-<h2 id="1128-la-stabilite-de-lestime-de-soi" class="entry-title hc-3">🔄 11.28 La stabilité de l'estime de soi</h2>
+<h2 id="1128-la-stabilite-de-lestime-de-soi" class="entry-title hc-3">11.28 La stabilité de l'estime de soi</h2>
 <p>Certaines personnes présentent une estime de soi relativement stable.</p>
 <p>D'autres peuvent présenter une grande variation :</p>
-<p><strong>succès → forte valorisation</strong></p>
-<p><strong>échec → forte dévalorisation</strong></p>
+<p><strong>succès  forte valorisation</strong></p>
+<p><strong>échec  forte dévalorisation</strong></p>
 <p>Lorsque l'évaluation de soi dépend fortement d'événements externes, l'état émotionnel peut devenir très sensible aux changements du contexte.</p>
 <hr />
-<h2 id="1129-le-sentiment-dagentivite" class="entry-title hc-4">🧠 11.29 Le sentiment d'agentivité</h2>
+<h2 id="1129-le-sentiment-dagentivite" class="entry-title hc-4">11.29 Le sentiment d'agentivité</h2>
 <p>L'agentivité correspond au sentiment d'être à l'origine de ses propres actions.</p>
 <p>Elle participe à l'expérience :</p>
 <p><strong>« C'est moi qui ai fait cela. »</strong></p>
@@ -415,7 +430,7 @@
 </ul>
 <p>Certaines perturbations psychologiques ou neurologiques peuvent modifier ce sentiment.</p>
 <hr />
-<h2 id="1130-le-rapport-au-corps" class="entry-title hc-5">🧍 11.30 Le rapport au corps</h2>
+<h2 id="1130-le-rapport-au-corps" class="entry-title hc-5">11.30 Le rapport au corps</h2>
 <p>La personnalité peut également être étudiée en lien avec l'image corporelle.</p>
 <p>Cela comprend :</p>
 <ul>
@@ -426,7 +441,7 @@
 </ul>
 <p>Le rapport au corps peut influencer l'identité et l'estime de soi.</p>
 <hr />
-<h2 id="1131-personnalite-et-cognition" class="entry-title hc-1">🧠 11.31 Personnalité et cognition</h2>
+<h2 id="1131-personnalite-et-cognition" class="entry-title hc-1">11.31 Personnalité et cognition</h2>
 <p>La personnalité influence certains styles cognitifs, sans déterminer entièrement les capacités cognitives.</p>
 <p>Elle peut être associée à des tendances concernant :</p>
 <ul>
@@ -439,20 +454,20 @@
 </ul>
 <p>La cognition et la personnalité s'influencent donc mutuellement.</p>
 <hr />
-<h2 id="1132-personnalite-et-emotions" class="entry-title hc-2">❤️ 11.32 Personnalité et émotions</h2>
+<h2 id="1132-personnalite-et-emotions" class="entry-title hc-2">11.32 Personnalité et émotions</h2>
 <p>Les traits de personnalité peuvent influencer la fréquence et l'intensité de certaines expériences émotionnelles.</p>
 <p>Par exemple, une forte sensibilité émotionnelle peut favoriser une activation plus importante face à certains événements.</p>
 <p>Cependant :</p>
 <p><strong>trait émotionnel ≠ émotion permanente</strong></p>
 <p>Une personne peut présenter une forte sensibilité émotionnelle tout en fonctionnant efficacement dans de nombreux contextes.</p>
 <hr />
-<h2 id="1133-temperament-et-personnalite" class="entry-title hc-3">🧬 11.33 Tempérament et personnalité</h2>
+<h2 id="1133-temperament-et-personnalite" class="entry-title hc-3">11.33 Tempérament et personnalité</h2>
 <p>Le tempérament correspond à certaines tendances biologiquement influencées qui apparaissent relativement tôt dans le développement.</p>
 <p>La personnalité se construit ensuite à travers l'interaction entre :</p>
 <p><strong>tempérament + développement + apprentissage + environnement + relations + culture</strong></p>
 <p>Le tempérament constitue donc une composante de la personnalité mais ne la résume pas.</p>
 <hr />
-<h2 id="1134-personnalite-et-developpement" class="entry-title hc-4">🌱 11.34 Personnalité et développement</h2>
+<h2 id="1134-personnalite-et-developpement" class="entry-title hc-4">11.34 Personnalité et développement</h2>
 <p>La personnalité n'apparaît pas instantanément.</p>
 <p>Elle se développe progressivement.</p>
 <p>Les influences peuvent inclure :</p>
@@ -467,7 +482,7 @@
 </ul>
 <p>Le développement ne suit cependant pas une trajectoire parfaitement prédéterminée.</p>
 <hr />
-<h2 id="1135-culture-et-personnalite" class="entry-title hc-5">🌍 11.35 Culture et personnalité</h2>
+<h2 id="1135-culture-et-personnalite" class="entry-title hc-5">11.35 Culture et personnalité</h2>
 <p>La culture influence notamment :</p>
 <ul>
 <li>normes sociales</li>
@@ -480,10 +495,10 @@
 <p>Un comportement ne peut donc pas être interprété indépendamment du contexte culturel.</p>
 <p>Cette dimension est particulièrement importante lorsqu'il est question de psychopathologie de la personnalité.</p>
 <hr />
-<h2 id="1136-personnalite-et-contexte" class="entry-title hc-1">🧩 11.36 Personnalité et contexte</h2>
+<h2 id="1136-personnalite-et-contexte" class="entry-title hc-1">11.36 Personnalité et contexte</h2>
 <p>La personnalité représente des tendances relativement stables, mais le comportement dépend également du contexte.</p>
 <p>On peut observer :</p>
-<p><strong>personnalité × situation → comportement</strong></p>
+<p><strong>personnalité × situation  comportement</strong></p>
 <p>Une personne peut donc réagir différemment dans :</p>
 <ul>
 <li>un environnement familier</li>
@@ -493,7 +508,7 @@
 <li>une situation fortement stressante</li>
 </ul>
 <hr />
-<h2 id="1137-quest-ce-quun-trouble-de-la-personnalite" class="entry-title hc-2">🩺 11.37 Qu'est-ce qu'un trouble de la personnalité ?</h2>
+<h2 id="1137-quest-ce-quun-trouble-de-la-personnalite" class="entry-title hc-2">11.37 Qu'est-ce qu'un trouble de la personnalité ?</h2>
 <p>Un trouble de la personnalité correspond à un mode durable de fonctionnement qui implique plusieurs dimensions de la personnalité et qui entraîne des difficultés importantes.</p>
 <p>Les classifications diagnostiques utilisent des critères précis.</p>
 <p>L'évaluation tient notamment compte :</p>
@@ -508,14 +523,14 @@
 </ul>
 <p>Un trait isolé ne suffit pas.</p>
 <hr />
-<h2 id="1138-les-troubles-de-la-personnalite-comme-categories-diagnostiques" class="entry-title hc-3">🧠 11.38 Les troubles de la personnalité comme catégories diagnostiques</h2>
+<h2 id="1138-les-troubles-de-la-personnalite-comme-categories-diagnostiques" class="entry-title hc-3">11.38 Les troubles de la personnalité comme catégories diagnostiques</h2>
 <p>Les troubles de la personnalité peuvent être classés différemment selon les systèmes diagnostiques.</p>
 <p>Les classifications ont également évolué au fil du temps.</p>
 <p>Certaines approches privilégient des catégories distinctes.</p>
 <p>D'autres accordent davantage d'importance aux dimensions et à la sévérité du fonctionnement.</p>
 <p>Cela montre que la manière de conceptualiser la personnalité pathologique continue d'évoluer.</p>
 <hr />
-<h2 id="1139-une-personnalite-peut-elle-changer" class="entry-title hc-4">📈 11.39 Une personnalité peut-elle changer ?</h2>
+<h2 id="1139-une-personnalite-peut-elle-changer" class="entry-title hc-4">11.39 Une personnalité peut-elle changer ?</h2>
 <p>Oui.</p>
 <p>La personnalité présente une certaine stabilité, mais elle n'est pas immuable.</p>
 <p>Des changements peuvent apparaître avec :</p>
@@ -531,30 +546,30 @@
 <p>Le changement peut être progressif et variable selon les caractéristiques étudiées.</p>
 <p><strong>Stabilité ≠ immobilité</strong></p>
 <hr />
-<h2 id="1140-pourquoi-etudier-la-personnalite-et-le-fonctionnement-pathologique" class="entry-title hc-5">🌌 11.40 Pourquoi étudier la personnalité et le fonctionnement pathologique ?</h2>
+<h2 id="1140-pourquoi-etudier-la-personnalite-et-le-fonctionnement-pathologique" class="entry-title hc-5">11.40 Pourquoi étudier la personnalité et le fonctionnement pathologique ?</h2>
 <p>L'étude de la personnalité permet de comprendre pourquoi des personnes peuvent réagir très différemment à des situations similaires.</p>
 <p>Elle permet d'articuler plusieurs dimensions :</p>
-<p><strong>🪞 identité</strong></p>
-<p><strong>❤️ émotions</strong></p>
-<p><strong>🧠 cognition</strong></p>
-<p><strong>🛡️ défenses</strong></p>
-<p><strong>🧑‍🤝‍🧑 relations</strong></p>
-<p><strong>⚡ impulsivité</strong></p>
-<p><strong>🎯 motivation</strong></p>
-<p><strong>🌍 environnement</strong></p>
-<p><strong>🧬 développement</strong></p>
+<p>** identité**</p>
+<p>** émotions**</p>
+<p>** cognition**</p>
+<p>** défenses**</p>
+<p><strong>‍‍ relations</strong></p>
+<p>** impulsivité**</p>
+<p>** motivation**</p>
+<p>** environnement**</p>
+<p>** développement**</p>
 <p>Le fonctionnement pathologique ne doit donc pas être réduit à une liste de comportements.</p>
 <p>Il correspond à une organisation complexe de tendances, de représentations, d'émotions, de stratégies et de relations avec l'environnement.</p>
-<h1 id="a-retenir">📌 À RETENIR</h1>
+<h1 id="a-retenir">À RETENIR</h1>
 <p>La personnalité est un système complexe de caractéristiques relativement stables, mais elle reste capable d'évoluer.</p>
 <p>Il faut distinguer :</p>
-<p>🧩 <strong>Trait</strong></p>
+<p><strong>Trait</strong></p>
 <p>Tendance relativement stable.</p>
-<p>🪞 <strong>Personnalité</strong></p>
+<p><strong>Personnalité</strong></p>
 <p>Organisation générale de nombreuses caractéristiques psychologiques.</p>
-<p>🔄 <strong>Fonctionnement</strong></p>
+<p><strong>Fonctionnement</strong></p>
 <p>Manière dont ces caractéristiques se manifestent dans différents contextes.</p>
-<p>🩺 <strong>Trouble de la personnalité</strong></p>
+<p><strong>Trouble de la personnalité</strong></p>
 <p>Organisation durable et suffisamment importante pour entraîner des difficultés cliniquement significatives selon des critères diagnostiques.</p>
 <p>Les dimensions particulièrement importantes sont :</p>
 <p><strong>identité + régulation émotionnelle + cognition + impulsivité + défenses + relations + mentalisation + flexibilité</strong></p>
@@ -565,8 +580,44 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Concepts avancés »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-traumatisme-et-processus-dissociatifs/"><span class="similar-icon">🔬</span>Traumatisme et processus dissociatifs</a><a class="similar-item" href="/chapitre/avances-cognition-sociale-avancee/"><span class="similar-icon">🔬</span>Cognition sociale avancée</a><a class="similar-item" href="/chapitre/avances-neuropsychologie-et-fonctionnement-cerebral/"><span class="similar-icon">🔬</span>Neuropsychologie et fonctionnement cérébral</a></div>
+      <h2>Autres chapitres de « Concepts avancés »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/avances-traumatisme-et-processus-dissociatifs/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Traumatisme et processus dissociatifs</a><a class="similar-item" href="/chapitre/avances-cognition-sociale-avancee/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Cognition sociale avancée</a><a class="similar-item" href="/chapitre/avances-neuropsychologie-et-fonctionnement-cerebral/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="28" cy="28" r="9"/>
+        <circle cx="92" cy="28" r="9"/>
+        <circle cx="60" cy="64" r="9"/>
+        <circle cx="28" cy="98" r="9"/>
+        <circle cx="92" cy="98" r="9"/>
+        <line x1="34" y1="34" x2="55" y2="59"/>
+        <line x1="86" y1="34" x2="65" y2="59"/>
+        <line x1="34" y1="92" x2="55" y2="69"/>
+        <line x1="86" y1="92" x2="65" y2="69"/>
+        <line x1="35" y1="28" x2="85" y2="28"/>
+        <line x1="35" y1="98" x2="85" y2="98"/>
+    </svg></span>Neuropsychologie et fonctionnement cérébral</a></div>
     </div>
     <a class="back-link" href="/categorie/avances/">← Retour à « Concepts avancés »</a>
   </div>
@@ -652,23 +703,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -686,7 +739,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -866,9 +919,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -877,10 +932,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -987,7 +1042,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1027,8 +1082,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1059,7 +1114,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1114,7 +1169,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1138,17 +1193,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1190,7 +1245,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

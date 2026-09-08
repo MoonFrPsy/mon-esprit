@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#22-une-enfance-marquee-par-les-crises">🧒 2.2 Une enfance marquée par les crises</a></li><li><a href="#23-une-operation-experimentale">🩺 2.3 Une opération expérimentale</a></li><li><a href="#24-henry-ne-peut-plus-former-de-nouveaux-souvenirs">🧠 2.4 Henry ne peut plus former de nouveaux souvenirs</a></li><li><a href="#25-un-present-presque-permanent">⏳ 2.5 Un présent presque permanent</a></li><li><a href="#26-pourtant-tout-navait-pas-disparu">🧩 2.6 Pourtant, tout n'avait pas disparu</a></li><li><a href="#27-larrivee-de-brenda-milner">🔬 2.7 L'arrivée de Brenda Milner</a></li><li><a href="#28-lexperience-qui-va-tout-changer">🧠 2.8 L'expérience qui va tout changer</a></li><li><a href="#29-comment-pouvait-il-apprendre-sans-se-souvenir">🧩 2.9 Comment pouvait-il apprendre sans se souvenir ?</a><ul class="sidebar-sublist"><li><a href="#memoire-declarative">📚 Mémoire déclarative</a></li><li><a href="#memoire-procedurale">🧠 Mémoire procédurale</a></li></ul></li><li><a href="#210-le-mystere-de-lhippocampe">🧠 2.10 Le mystère de l'hippocampe</a></li><li><a href="#211-pourquoi-henry-se-souvenait-il-de-son-enfance">🧠 2.11 Pourquoi Henry se souvenait-il de son enfance ?</a></li><li><a href="#212-henry-pouvait-donc-se-souvenir-de-son-passe">🧩 2.12 Henry pouvait donc se souvenir de son passé...</a></li><li><a href="#213-les-consequences-humaines">❤️ 2.13 Les conséquences humaines</a></li><li><a href="#214-la-memoire-construit-elle-une-partie-de-notre-identite">🪞 2.14 La mémoire construit-elle une partie de notre identité ?</a></li><li><a href="#215-le-paradoxe-de-henry">🧠 2.15 Le paradoxe de Henry</a></li><li><a href="#216-une-personne-qui-devient-un-cas-scientifique-majeur">🔬 2.16 Une personne qui devient un cas scientifique majeur</a></li><li><a href="#217-une-dissociation-extraordinaire">🧩 2.17 Une dissociation extraordinaire</a></li><li><a href="#218-lhippocampe-nest-pas-la-memoire">🧠 2.18 L'hippocampe n'est pas « la mémoire »</a></li><li><a href="#219-les-chercheurs-ont-continue-a-etudier-henry">🔬 2.19 Les chercheurs ont continué à étudier Henry</a></li><li><a href="#220-une-etrange-forme-de-continuite">🧠 2.20 Une étrange forme de continuité</a></li><li><a href="#221-une-vie-etudiee-pendant-plus-de-cinquante-ans">🕰️ 2.21 Une vie étudiée pendant plus de cinquante ans</a></li><li><a href="#222-une-decouverte-qui-depasse-largement-henry">🧠 2.22 Une découverte qui dépasse largement Henry</a></li><li><a href="#223-le-cerveau-apprend-parfois-sans-que-nous-le-sachions">🧩 2.23 Le cerveau apprend parfois sans que nous le sachions</a></li><li><a href="#224-ce-que-henry-nous-apprend-sur-les-habitudes">🧠 2.24 Ce que Henry nous apprend sur les habitudes</a></li><li><a href="#225-une-decouverte-fondamentale-pour-la-neuropsychologie">🔬 2.25 Une découverte fondamentale pour la neuropsychologie</a></li><li><a href="#226-henry-apres-des-decennies">🧠 2.26 Henry après des décennies</a></li><li><a href="#227-la-relation-avec-les-chercheurs">❤️ 2.27 La relation avec les chercheurs</a></li><li><a href="#228-henry-netait-pas-seulement-sa-maladie">🧠 2.28 Henry n'était pas seulement sa maladie</a></li><li><a href="#229-une-histoire-qui-a-change-la-science">🔬 2.29 Une histoire qui a changé la science</a></li><li><a href="#230-la-mort-de-henry">🧩 2.30 La mort de Henry</a></li><li><a href="#231-pourquoi-son-histoire-est-extraordinaire">🧠 2.31 Pourquoi son histoire est extraordinaire</a></li><li><a href="#232-ce-que-lon-sait-aujourdhui">🔬 2.32 Ce que l'on sait aujourd'hui</a></li><li><a href="#233-ce-quil-faut-nuancer">⚠️ 2.33 Ce qu'il faut nuancer</a></li><li><a href="#234-une-autre-idee-importante">🧠 2.34 Une autre idée importante</a></li><li><a href="#235-ce-que-cette-histoire-nous-apprend">🌱 2.35 Ce que cette histoire nous apprend</a></li><li><a href="#236-une-derniere-reflexion">❤️ 2.36 Une dernière réflexion</a></li><li><a href="#a-retenir">📌 À RETENIR</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#22-une-enfance-marquee-par-les-crises">2.2 Une enfance marquée par les crises</a></li><li><a href="#23-une-operation-experimentale">2.3 Une opération expérimentale</a></li><li><a href="#24-henry-ne-peut-plus-former-de-nouveaux-souvenirs">2.4 Henry ne peut plus former de nouveaux souvenirs</a></li><li><a href="#25-un-present-presque-permanent">2.5 Un présent presque permanent</a></li><li><a href="#26-pourtant-tout-navait-pas-disparu">2.6 Pourtant, tout n'avait pas disparu</a></li><li><a href="#27-larrivee-de-brenda-milner">2.7 L'arrivée de Brenda Milner</a></li><li><a href="#28-lexperience-qui-va-tout-changer">2.8 L'expérience qui va tout changer</a></li><li><a href="#29-comment-pouvait-il-apprendre-sans-se-souvenir">2.9 Comment pouvait-il apprendre sans se souvenir ?</a><ul class="sidebar-sublist"><li><a href="#memoire-declarative">Mémoire déclarative</a></li><li><a href="#memoire-procedurale">Mémoire procédurale</a></li></ul></li><li><a href="#210-le-mystere-de-lhippocampe">2.10 Le mystère de l'hippocampe</a></li><li><a href="#211-pourquoi-henry-se-souvenait-il-de-son-enfance">2.11 Pourquoi Henry se souvenait-il de son enfance ?</a></li><li><a href="#212-henry-pouvait-donc-se-souvenir-de-son-passe">2.12 Henry pouvait donc se souvenir de son passé...</a></li><li><a href="#213-les-consequences-humaines">2.13 Les conséquences humaines</a></li><li><a href="#214-la-memoire-construit-elle-une-partie-de-notre-identite">2.14 La mémoire construit-elle une partie de notre identité ?</a></li><li><a href="#215-le-paradoxe-de-henry">2.15 Le paradoxe de Henry</a></li><li><a href="#216-une-personne-qui-devient-un-cas-scientifique-majeur">2.16 Une personne qui devient un cas scientifique majeur</a></li><li><a href="#217-une-dissociation-extraordinaire">2.17 Une dissociation extraordinaire</a></li><li><a href="#218-lhippocampe-nest-pas-la-memoire">2.18 L'hippocampe n'est pas « la mémoire »</a></li><li><a href="#219-les-chercheurs-ont-continue-a-etudier-henry">2.19 Les chercheurs ont continué à étudier Henry</a></li><li><a href="#220-une-etrange-forme-de-continuite">2.20 Une étrange forme de continuité</a></li><li><a href="#221-une-vie-etudiee-pendant-plus-de-cinquante-ans">2.21 Une vie étudiée pendant plus de cinquante ans</a></li><li><a href="#222-une-decouverte-qui-depasse-largement-henry">2.22 Une découverte qui dépasse largement Henry</a></li><li><a href="#223-le-cerveau-apprend-parfois-sans-que-nous-le-sachions">2.23 Le cerveau apprend parfois sans que nous le sachions</a></li><li><a href="#224-ce-que-henry-nous-apprend-sur-les-habitudes">2.24 Ce que Henry nous apprend sur les habitudes</a></li><li><a href="#225-une-decouverte-fondamentale-pour-la-neuropsychologie">2.25 Une découverte fondamentale pour la neuropsychologie</a></li><li><a href="#226-henry-apres-des-decennies">2.26 Henry après des décennies</a></li><li><a href="#227-la-relation-avec-les-chercheurs">2.27 La relation avec les chercheurs</a></li><li><a href="#228-henry-netait-pas-seulement-sa-maladie">2.28 Henry n'était pas seulement sa maladie</a></li><li><a href="#229-une-histoire-qui-a-change-la-science">2.29 Une histoire qui a changé la science</a></li><li><a href="#230-la-mort-de-henry">2.30 La mort de Henry</a></li><li><a href="#231-pourquoi-son-histoire-est-extraordinaire">2.31 Pourquoi son histoire est extraordinaire</a></li><li><a href="#232-ce-que-lon-sait-aujourdhui">2.32 Ce que l'on sait aujourd'hui</a></li><li><a href="#233-ce-quil-faut-nuancer">2.33 Ce qu'il faut nuancer</a></li><li><a href="#234-une-autre-idee-importante">2.34 Une autre idée importante</a></li><li><a href="#235-ce-que-cette-histoire-nous-apprend">2.35 Ce que cette histoire nous apprend</a></li><li><a href="#236-une-derniere-reflexion">2.36 Une dernière réflexion</a></li><li><a href="#a-retenir">À RETENIR</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Quand le cerveau et la psychologie se rencontrent',
         category: 'Histoires vraies de psychologie',
-        icon: '📖'
+        icon: 'Q'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/histoires/">📖 Histoires vraies de psychologie</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/histoires/">Histoires vraies de psychologie</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Quand le cerveau et la psychologie se rencontrent</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,12 +113,12 @@
     <div class="article-body">
       <p><mark>Henry Molaison : l'homme condamné à vivre dans un présent sans cesse renouvelé</mark></p>
 <hr />
-<h2 id="21-lhistoire">🧠 2.1 L'histoire</h2>
-<p>📅 <strong>Date de l'opération :</strong> 1953</p>
-<p>📍 <strong>Lieu :</strong> Hartford, Connecticut, États-Unis</p>
-<p>👤 <strong>Nom :</strong> Henry Gustav Molaison</p>
-<p>🔬 <strong>Nom utilisé pendant sa vie :</strong> H.M.</p>
-<p>🧠 <strong>Domaine :</strong> mémoire, hippocampe, neurosciences cognitives</p>
+<h2 id="21-lhistoire">2.1 L'histoire</h2>
+<p><strong>Date de l'opération :</strong> 1953</p>
+<p><strong>Lieu :</strong> Hartford, Connecticut, États-Unis</p>
+<p><strong>Nom :</strong> Henry Gustav Molaison</p>
+<p><strong>Nom utilisé pendant sa vie :</strong> H.M.</p>
+<p><strong>Domaine :</strong> mémoire, hippocampe, neurosciences cognitives</p>
 <p>Imagine se réveiller un matin.</p>
 <p>Tu sais qui tu es.</p>
 <p>Tu sais où tu es.</p>
@@ -121,7 +136,7 @@
 <p>Et pourtant, lorsque tu regardes autour de toi, tu as l'impression que rien de tout cela ne s'est réellement passé.</p>
 <p>C'est, dans une certaine mesure, la réalité dans laquelle Henry Molaison allait vivre pendant plus de cinquante ans.</p>
 <hr />
-<h1 id="22-une-enfance-marquee-par-les-crises" class="entry-title hc-1">🧒 2.2 Une enfance marquée par les crises</h1>
+<h1 id="22-une-enfance-marquee-par-les-crises" class="entry-title hc-1">2.2 Une enfance marquée par les crises</h1>
 <p>Henry Molaison naît en 1926 aux États-Unis.</p>
 <p>Pendant son enfance, il commence à souffrir de crises d'épilepsie.</p>
 <p>Les sources historiques indiquent qu'il avait été victime d'un accident à vélo durant son enfance, après lequel ses crises sont apparues ou se sont aggravées, même si l'origine exacte de son épilepsie est aujourd'hui considérée avec davantage de prudence.</p>
@@ -133,7 +148,7 @@
 <p>Il ne parvient plus à mener une vie professionnelle normale.</p>
 <p>Les crises sont tellement fréquentes et importantes qu'une solution radicale est envisagée.</p>
 <hr />
-<h1 id="23-une-operation-experimentale" class="entry-title hc-2">🩺 2.3 Une opération expérimentale</h1>
+<h1 id="23-une-operation-experimentale" class="entry-title hc-2">2.3 Une opération expérimentale</h1>
 <p>En 1953, Henry Molaison rencontre le neurochirurgien William Beecher Scoville.</p>
 <p>Scoville pense que les crises pourraient être liées à certaines régions des lobes temporaux.</p>
 <p>Il propose alors une opération extrêmement importante.</p>
@@ -148,7 +163,7 @@
 <p>Mais lorsque Henry se réveille...</p>
 <p>les médecins découvrent quelque chose qu'ils n'avaient pas prévu.</p>
 <hr />
-<h1 id="24-henry-ne-peut-plus-former-de-nouveaux-souvenirs" class="entry-title hc-3">🧠 2.4 Henry ne peut plus former de nouveaux souvenirs</h1>
+<h1 id="24-henry-ne-peut-plus-former-de-nouveaux-souvenirs" class="entry-title hc-3">2.4 Henry ne peut plus former de nouveaux souvenirs</h1>
 <p>Après l'opération, Henry semble conserver de nombreuses capacités.</p>
 <p>Il peut parler.</p>
 <p>Il peut comprendre les conversations.</p>
@@ -169,7 +184,7 @@
 <p>Il semble avoir perdu une grande partie de sa capacité à <strong>former de nouveaux souvenirs à long terme.</strong></p>
 <p>Les chercheurs appelleront cela une <strong>amnésie antérograde</strong>.</p>
 <hr />
-<h1 id="25-un-present-presque-permanent" class="entry-title hc-4">⏳ 2.5 Un présent presque permanent</h1>
+<h1 id="25-un-present-presque-permanent" class="entry-title hc-4">2.5 Un présent presque permanent</h1>
 <p>C'est ce qui rend son histoire aussi particulière.</p>
 <p>Henry pouvait se souvenir de nombreuses informations datant d'avant son opération.</p>
 <p>Mais son cerveau rencontrait énormément de difficultés lorsqu'il devait transformer de nouvelles expériences en souvenirs durables.</p>
@@ -186,7 +201,7 @@
 <p>Le passé ancien pouvait exister.</p>
 <p>Mais le présent avait énormément de difficultés à devenir du passé mémorisable.</p>
 <hr />
-<h1 id="26-pourtant-tout-navait-pas-disparu" class="entry-title hc-5">🧩 2.6 Pourtant, tout n'avait pas disparu</h1>
+<h1 id="26-pourtant-tout-navait-pas-disparu" class="entry-title hc-5">2.6 Pourtant, tout n'avait pas disparu</h1>
 <p>Et c'est ici que l'histoire devient encore plus fascinante.</p>
 <p>Si Henry avait perdu toute forme de mémoire, les chercheurs auraient simplement conclu que l'opération avait détruit « la mémoire ».</p>
 <p>Mais ce n'était pas le cas.</p>
@@ -200,7 +215,7 @@
 <p>Certaines pouvaient fonctionner.</p>
 <p>D'autres étaient profondément perturbées.</p>
 <hr />
-<h1 id="27-larrivee-de-brenda-milner" class="entry-title hc-1">🔬 2.7 L'arrivée de Brenda Milner</h1>
+<h1 id="27-larrivee-de-brenda-milner" class="entry-title hc-1">2.7 L'arrivée de Brenda Milner</h1>
 <p>C'est dans ce contexte qu'intervient une psychologue et neuropsychologue nommée Brenda Milner.</p>
 <p>Milner commence à étudier Henry au milieu des années 1950.</p>
 <p>Elle va passer des décennies à examiner son fonctionnement.</p>
@@ -213,7 +228,7 @@
 <p><strong>se souvenir consciemment de l'avoir appris</strong></p>
 <p>ne sont pas forcément la même chose.</p>
 <hr />
-<h1 id="28-lexperience-qui-va-tout-changer" class="entry-title hc-2">🧠 2.8 L'expérience qui va tout changer</h1>
+<h1 id="28-lexperience-qui-va-tout-changer" class="entry-title hc-2">2.8 L'expérience qui va tout changer</h1>
 <p>Brenda Milner demande à Henry d'effectuer une tâche appelée <strong>dessin en miroir</strong>.</p>
 <p>Le principe est relativement simple.</p>
 <p>Henry doit suivre une forme avec un crayon tout en regardant uniquement son reflet dans un miroir.</p>
@@ -229,16 +244,16 @@
 <p>Son cerveau semble avoir appris quelque chose sans que Henry ait le souvenir conscient de l'avoir appris.</p>
 <p>Les recherches de Milner ont ainsi fourni une démonstration majeure de l'existence de différents systèmes mnésiques.</p>
 <hr />
-<h1 id="29-comment-pouvait-il-apprendre-sans-se-souvenir" class="entry-title hc-3">🧩 2.9 Comment pouvait-il apprendre sans se souvenir ?</h1>
+<h1 id="29-comment-pouvait-il-apprendre-sans-se-souvenir" class="entry-title hc-3">2.9 Comment pouvait-il apprendre sans se souvenir ?</h1>
 <p>Cette question est fondamentale.</p>
 <p>Imagine deux choses :</p>
-<h3 id="memoire-declarative">📚 Mémoire déclarative</h3>
+<h3 id="memoire-declarative">Mémoire déclarative</h3>
 <p>Elle permet notamment de se souvenir consciemment :</p>
 <p>« J'ai rencontré cette personne hier. »</p>
 <p>« J'ai appris cette information. »</p>
 <p>« Je suis allé à cet endroit. »</p>
 <p>« J'ai vu ce film. »</p>
-<h3 id="memoire-procedurale">🧠 Mémoire procédurale</h3>
+<h3 id="memoire-procedurale">Mémoire procédurale</h3>
 <p>Elle concerne notamment l'apprentissage de compétences et de procédures.</p>
 <p>Par exemple :</p>
 <p>faire du vélo,</p>
@@ -248,7 +263,7 @@
 <p>Son cerveau pouvait donc apprendre une compétence sans créer le souvenir conscient correspondant.</p>
 <p>Cette découverte a profondément modifié les modèles scientifiques de la mémoire.</p>
 <hr />
-<h1 id="210-le-mystere-de-lhippocampe" class="entry-title hc-4">🧠 2.10 Le mystère de l'hippocampe</h1>
+<h1 id="210-le-mystere-de-lhippocampe" class="entry-title hc-4">2.10 Le mystère de l'hippocampe</h1>
 <p>Les chercheurs commencent alors à comprendre quelque chose d'essentiel.</p>
 <p>L'hippocampe n'est pas simplement une sorte de « disque dur » contenant tous les souvenirs.</p>
 <p>Il joue un rôle majeur dans la formation et la consolidation de certains souvenirs, notamment les souvenirs épisodiques.</p>
@@ -256,7 +271,7 @@
 <p>L'hippocampe participe notamment à la transformation d'expériences récentes en représentations pouvant être conservées à plus long terme.</p>
 <p>Le cas de Henry fournit donc une occasion exceptionnelle d'étudier ce qui se passe lorsque ces structures sont gravement endommagées.</p>
 <hr />
-<h1 id="211-pourquoi-henry-se-souvenait-il-de-son-enfance" class="entry-title hc-5">🧠 2.11 Pourquoi Henry se souvenait-il de son enfance ?</h1>
+<h1 id="211-pourquoi-henry-se-souvenait-il-de-son-enfance" class="entry-title hc-5">2.11 Pourquoi Henry se souvenait-il de son enfance ?</h1>
 <p>Cette question a longtemps intrigué les chercheurs.</p>
 <p>Si l'hippocampe est important pour les souvenirs, pourquoi Henry pouvait-il encore se souvenir de nombreuses choses datant d'avant son opération ?</p>
 <p>La réponse est que les souvenirs anciens ne dépendent pas exactement du même fonctionnement que la création de nouveaux souvenirs.</p>
@@ -264,7 +279,7 @@
 <p>Les structures temporales médiales jouent notamment un rôle particulièrement important dans la formation et la stabilisation de nouveaux souvenirs.</p>
 <p>Henry présentait ainsi une mémoire ancienne relativement préservée comparativement à sa capacité extrêmement réduite à former de nouveaux souvenirs.</p>
 <hr />
-<h1 id="212-henry-pouvait-donc-se-souvenir-de-son-passe" class="entry-title hc-1">🧩 2.12 Henry pouvait donc se souvenir de son passé...</h1>
+<h1 id="212-henry-pouvait-donc-se-souvenir-de-son-passe" class="entry-title hc-1">2.12 Henry pouvait donc se souvenir de son passé...</h1>
 <p>...mais avait énormément de mal à créer son futur.</p>
 <p>Cette phrase résume une partie essentielle de son histoire.</p>
 <p>Son passé existait.</p>
@@ -275,7 +290,7 @@
 <p>L'expérience était vécue.</p>
 <p>Mais elle ne pouvait pas toujours être retrouvée plus tard sous la forme d'un souvenir conscient.</p>
 <hr />
-<h1 id="213-les-consequences-humaines" class="entry-title hc-2">❤️ 2.13 Les conséquences humaines</h1>
+<h1 id="213-les-consequences-humaines" class="entry-title hc-2">2.13 Les conséquences humaines</h1>
 <p>Derrière cette découverte scientifique se trouvait une réalité extrêmement difficile.</p>
 <p>Henry avait besoin d'aide pour vivre.</p>
 <p>Il ne pouvait pas simplement apprendre progressivement à connaître son nouvel environnement comme le ferait une personne sans trouble de mémoire.</p>
@@ -286,7 +301,7 @@
 <p>Sa situation montre donc que la mémoire n'est pas seulement une fonction utilisée pour répondre à des questions.</p>
 <p>Elle participe directement à la continuité psychologique.</p>
 <hr />
-<h1 id="214-la-memoire-construit-elle-une-partie-de-notre-identite" class="entry-title hc-3">🪞 2.14 La mémoire construit-elle une partie de notre identité ?</h1>
+<h1 id="214-la-memoire-construit-elle-une-partie-de-notre-identite" class="entry-title hc-3">2.14 La mémoire construit-elle une partie de notre identité ?</h1>
 <p>Pour comprendre Henry, il faut réfléchir à une chose très simple.</p>
 <p>Une grande partie de l'identité repose sur les souvenirs.</p>
 <p>« Je suis cette personne parce que j'ai vécu ces choses. »</p>
@@ -300,7 +315,7 @@
 <p>Mais sa capacité à ajouter continuellement de nouveaux chapitres était profondément altérée.</p>
 <p>Son cas permet donc de comprendre pourquoi la mémoire joue un rôle aussi important dans la construction du sentiment de continuité personnelle.</p>
 <hr />
-<h1 id="215-le-paradoxe-de-henry" class="entry-title hc-4">🧠 2.15 Le paradoxe de Henry</h1>
+<h1 id="215-le-paradoxe-de-henry" class="entry-title hc-4">2.15 Le paradoxe de Henry</h1>
 <p>Il existe quelque chose de particulièrement étrange dans son histoire.</p>
 <p>Henry pouvait apprendre.</p>
 <p>Mais il ne savait pas toujours qu'il avait appris.</p>
@@ -314,21 +329,21 @@
 <p><strong>mémoire ≠ système unique.</strong></p>
 <p>Ces deux distinctions sont devenues fondamentales dans l'étude scientifique de la mémoire.</p>
 <hr />
-<h1 id="216-une-personne-qui-devient-un-cas-scientifique-majeur" class="entry-title hc-5">🔬 2.16 Une personne qui devient un cas scientifique majeur</h1>
+<h1 id="216-une-personne-qui-devient-un-cas-scientifique-majeur" class="entry-title hc-5">2.16 Une personne qui devient un cas scientifique majeur</h1>
 <p>Pendant plusieurs décennies, Henry est étudié par de nombreux chercheurs.</p>
 <p>Son cas permet d'examiner progressivement différentes formes de mémoire.</p>
 <p>Les chercheurs étudient notamment :</p>
-<p>🧠 la mémoire à court terme</p>
-<p>🧠 la mémoire à long terme</p>
-<p>🧠 la mémoire épisodique</p>
-<p>🧠 la mémoire procédurale</p>
-<p>🧠 l'apprentissage moteur</p>
-<p>🧠 la reconnaissance</p>
-<p>🧠 les souvenirs anciens</p>
-<p>🧠 les nouvelles informations</p>
+<p>la mémoire à court terme</p>
+<p>la mémoire à long terme</p>
+<p>la mémoire épisodique</p>
+<p>la mémoire procédurale</p>
+<p>l'apprentissage moteur</p>
+<p>la reconnaissance</p>
+<p>les souvenirs anciens</p>
+<p>les nouvelles informations</p>
 <p>Son cas devient l'un des exemples les plus importants de l'histoire des neurosciences cognitives.</p>
 <hr />
-<h1 id="217-une-dissociation-extraordinaire" class="entry-title hc-1">🧩 2.17 Une dissociation extraordinaire</h1>
+<h1 id="217-une-dissociation-extraordinaire" class="entry-title hc-1">2.17 Une dissociation extraordinaire</h1>
 <p>Le mot <strong>dissociation</strong> est particulièrement important ici.</p>
 <p>En psychologie cognitive et en neuropsychologie, une dissociation peut désigner une situation dans laquelle deux capacités qui semblaient fonctionner ensemble se retrouvent séparées.</p>
 <p>Chez Henry :</p>
@@ -338,7 +353,7 @@
 <p>Cela signifie que les scientifiques pouvaient observer séparément différents mécanismes.</p>
 <p>C'était comme si une fenêtre avait été ouverte sur l'organisation interne de la mémoire humaine.</p>
 <hr />
-<h1 id="218-lhippocampe-nest-pas-la-memoire" class="entry-title hc-2">🧠 2.18 L'hippocampe n'est pas « la mémoire »</h1>
+<h1 id="218-lhippocampe-nest-pas-la-memoire" class="entry-title hc-2">2.18 L'hippocampe n'est pas « la mémoire »</h1>
 <p>Une autre leçon importante est qu'il serait faux de dire :</p>
 <p><strong>« L'hippocampe est la partie du cerveau qui contient la mémoire. »</strong></p>
 <p>C'est beaucoup trop simple.</p>
@@ -349,7 +364,7 @@
 <p>Différents types de souvenirs impliquent différents circuits.</p>
 <p>Le cas de Henry a précisément contribué à faire comprendre cette complexité.</p>
 <hr />
-<h1 id="219-les-chercheurs-ont-continue-a-etudier-henry" class="entry-title hc-3">🔬 2.19 Les chercheurs ont continué à étudier Henry</h1>
+<h1 id="219-les-chercheurs-ont-continue-a-etudier-henry" class="entry-title hc-3">2.19 Les chercheurs ont continué à étudier Henry</h1>
 <p>Henry n'a pas seulement été étudié pendant quelques mois.</p>
 <p>Il a été suivi pendant plusieurs décennies.</p>
 <p>Au fil du temps, les scientifiques ont découvert de nouvelles informations sur son fonctionnement.</p>
@@ -359,7 +374,7 @@
 <p>Certaines capacités d'apprentissage restaient présentes.</p>
 <p>Mais son amnésie demeurait profondément importante.</p>
 <hr />
-<h1 id="220-une-etrange-forme-de-continuite" class="entry-title hc-4">🧠 2.20 Une étrange forme de continuité</h1>
+<h1 id="220-une-etrange-forme-de-continuite" class="entry-title hc-4">2.20 Une étrange forme de continuité</h1>
 <p>Même avec cette amnésie, Henry n'était pas simplement « vide ».</p>
 <p>Il continuait à avoir des pensées.</p>
 <p>Il continuait à ressentir.</p>
@@ -371,14 +386,14 @@
 <p>Cette distinction est essentielle.</p>
 <p><strong>Ne pas se souvenir d'une expérience ne signifie pas nécessairement ne pas l'avoir vécue.</strong></p>
 <hr />
-<h1 id="221-une-vie-etudiee-pendant-plus-de-cinquante-ans" class="entry-title hc-5">🕰️ 2.21 Une vie étudiée pendant plus de cinquante ans</h1>
+<h1 id="221-une-vie-etudiee-pendant-plus-de-cinquante-ans" class="entry-title hc-5">2.21 Une vie étudiée pendant plus de cinquante ans</h1>
 <p>Henry reste un sujet d'étude scientifique pendant plusieurs décennies.</p>
 <p>Les chercheurs reviennent régulièrement sur son cas.</p>
 <p>Chaque nouvelle méthode permet de comprendre un peu mieux son cerveau.</p>
 <p>Avec l'apparition de techniques d'imagerie cérébrale modernes, les scientifiques peuvent également examiner plus précisément les régions qui avaient été retirées.</p>
 <p>Des analyses ultérieures ont confirmé l'importance des régions temporales médiales dans son amnésie.</p>
 <hr />
-<h1 id="222-une-decouverte-qui-depasse-largement-henry" class="entry-title hc-1">🧠 2.22 Une découverte qui dépasse largement Henry</h1>
+<h1 id="222-une-decouverte-qui-depasse-largement-henry" class="entry-title hc-1">2.22 Une découverte qui dépasse largement Henry</h1>
 <p>Avant les recherches sur Henry, la mémoire était encore relativement mal comprise.</p>
 <p>Après son étude, les scientifiques disposent d'un modèle beaucoup plus précis.</p>
 <p>Ils comprennent progressivement que :</p>
@@ -391,7 +406,7 @@
 </ul>
 <p>Ces découvertes vont influencer toute la recherche ultérieure sur la mémoire.</p>
 <hr />
-<h1 id="223-le-cerveau-apprend-parfois-sans-que-nous-le-sachions" class="entry-title hc-2">🧩 2.23 Le cerveau apprend parfois sans que nous le sachions</h1>
+<h1 id="223-le-cerveau-apprend-parfois-sans-que-nous-le-sachions" class="entry-title hc-2">2.23 Le cerveau apprend parfois sans que nous le sachions</h1>
 <p>L'histoire de Henry révèle quelque chose de fascinant.</p>
 <p>Une partie de notre apprentissage peut se produire sans souvenir conscient.</p>
 <p>Les habitudes peuvent se renforcer.</p>
@@ -400,7 +415,7 @@
 <p>Le cerveau peut donc modifier son fonctionnement à partir de l'expérience même lorsque la personne n'a pas un souvenir conscient de cette expérience.</p>
 <p>Henry a permis aux chercheurs de voir cette séparation de manière particulièrement spectaculaire.</p>
 <hr />
-<h1 id="224-ce-que-henry-nous-apprend-sur-les-habitudes" class="entry-title hc-3">🧠 2.24 Ce que Henry nous apprend sur les habitudes</h1>
+<h1 id="224-ce-que-henry-nous-apprend-sur-les-habitudes" class="entry-title hc-3">2.24 Ce que Henry nous apprend sur les habitudes</h1>
 <p>Imagine apprendre à utiliser un nouveau logiciel.</p>
 <p>Au début, chaque action demande de la réflexion.</p>
 <p>Après plusieurs jours, certaines étapes deviennent automatiques.</p>
@@ -409,7 +424,7 @@
 <p>Chez Henry, les chercheurs ont observé une forme de dissociation entre cette capacité d'apprentissage et la mémoire consciente.</p>
 <p>Cela a contribué à montrer que certaines compétences peuvent être acquises même lorsque la mémoire épisodique est gravement altérée.</p>
 <hr />
-<h1 id="225-une-decouverte-fondamentale-pour-la-neuropsychologie" class="entry-title hc-4">🔬 2.25 Une découverte fondamentale pour la neuropsychologie</h1>
+<h1 id="225-une-decouverte-fondamentale-pour-la-neuropsychologie" class="entry-title hc-4">2.25 Une découverte fondamentale pour la neuropsychologie</h1>
 <p>Le cas de Henry est devenu une référence majeure parce qu'il permettait d'étudier un fonctionnement cognitif presque comme une expérience naturelle.</p>
 <p>Les chercheurs pouvaient observer :</p>
 <p><strong>ce qui avait été perdu</strong></p>
@@ -419,7 +434,7 @@
 <p>Si une capacité disparaît alors qu'une autre reste relativement intacte, cela peut fournir des indices sur l'organisation des fonctions cérébrales.</p>
 <p>Les chercheurs utilisent encore aujourd'hui ce type de raisonnement en neuropsychologie.</p>
 <hr />
-<h1 id="226-henry-apres-des-decennies" class="entry-title hc-5">🧠 2.26 Henry après des décennies</h1>
+<h1 id="226-henry-apres-des-decennies" class="entry-title hc-5">2.26 Henry après des décennies</h1>
 <p>Pendant toute sa vie adulte, Henry reste profondément atteint par son amnésie.</p>
 <p>Il vit dans un environnement où il reçoit des soins et où son quotidien est structuré.</p>
 <p>Les chercheurs continuent à le rencontrer.</p>
@@ -429,7 +444,7 @@
 <p>Une chercheuse pouvait passer des années à travailler avec lui.</p>
 <p>Mais Henry pouvait ne pas conserver le souvenir autobiographique de cette relation.</p>
 <hr />
-<h1 id="227-la-relation-avec-les-chercheurs" class="entry-title hc-1">❤️ 2.27 La relation avec les chercheurs</h1>
+<h1 id="227-la-relation-avec-les-chercheurs" class="entry-title hc-1">2.27 La relation avec les chercheurs</h1>
 <p>Cela crée une situation psychologique très particulière.</p>
 <p>Les chercheurs connaissent Henry depuis des années.</p>
 <p>Ils connaissent son histoire.</p>
@@ -443,7 +458,7 @@
 <p><strong>« Je viens peut-être de vous rencontrer. »</strong></p>
 <p>Cette différence illustre de manière presque parfaite l'importance de la mémoire dans la construction de la continuité relationnelle.</p>
 <hr />
-<h1 id="228-henry-netait-pas-seulement-sa-maladie" class="entry-title hc-2">🧠 2.28 Henry n'était pas seulement sa maladie</h1>
+<h1 id="228-henry-netait-pas-seulement-sa-maladie" class="entry-title hc-2">2.28 Henry n'était pas seulement sa maladie</h1>
 <p>Il serait facile de raconter son histoire uniquement comme celle d'un cerveau endommagé.</p>
 <p>Mais Henry était une personne.</p>
 <p>Il avait des préférences.</p>
@@ -455,27 +470,27 @@
 <p>Il pouvait interagir avec son environnement.</p>
 <p>Son cas rappelle qu'un déficit cognitif, même extrêmement important, ne résume jamais entièrement le fonctionnement d'une personne.</p>
 <hr />
-<h1 id="229-une-histoire-qui-a-change-la-science" class="entry-title hc-3">🔬 2.29 Une histoire qui a changé la science</h1>
+<h1 id="229-une-histoire-qui-a-change-la-science" class="entry-title hc-3">2.29 Une histoire qui a changé la science</h1>
 <p>Le cas H.M. a contribué à faire passer l'étude de la mémoire d'une conception relativement générale à une compréhension beaucoup plus différenciée.</p>
 <p>Aujourd'hui, les chercheurs parlent de plusieurs systèmes et processus mnésiques.</p>
 <p>Ils distinguent notamment :</p>
-<p>🧠 mémoire de travail</p>
-<p>🧠 mémoire épisodique</p>
-<p>🧠 mémoire sémantique</p>
-<p>🧠 mémoire procédurale</p>
-<p>🧠 mémoire implicite</p>
-<p>🧠 mémoire explicite</p>
+<p>mémoire de travail</p>
+<p>mémoire épisodique</p>
+<p>mémoire sémantique</p>
+<p>mémoire procédurale</p>
+<p>mémoire implicite</p>
+<p>mémoire explicite</p>
 <p>Ces catégories ont évidemment été développées et précisées par de nombreux travaux scientifiques.</p>
 <p>Mais Henry Molaison a joué un rôle historique majeur dans cette évolution.</p>
 <hr />
-<h1 id="230-la-mort-de-henry" class="entry-title hc-4">🧩 2.30 La mort de Henry</h1>
+<h1 id="230-la-mort-de-henry" class="entry-title hc-4">2.30 La mort de Henry</h1>
 <p>Henry Molaison meurt en 2008, à l'âge de 82 ans.</p>
 <p>Après sa mort, son cerveau est conservé et étudié avec des méthodes modernes.</p>
 <p>Cela permet aux chercheurs d'examiner beaucoup plus précisément les régions cérébrales qui avaient été retirées ou préservées.</p>
 <p>Son cerveau devient ainsi lui-même un objet scientifique majeur.</p>
 <p>Même après sa mort, Henry continue donc à contribuer à la compréhension de la mémoire humaine.</p>
 <hr />
-<h1 id="231-pourquoi-son-histoire-est-extraordinaire" class="entry-title hc-5">🧠 2.31 Pourquoi son histoire est extraordinaire</h1>
+<h1 id="231-pourquoi-son-histoire-est-extraordinaire" class="entry-title hc-5">2.31 Pourquoi son histoire est extraordinaire</h1>
 <p>Henry Molaison n'a jamais voulu devenir l'un des patients les plus célèbres de l'histoire des neurosciences.</p>
 <p>Il voulait simplement trouver une solution à une maladie qui détruisait progressivement sa vie quotidienne.</p>
 <p>L'opération a permis de réduire considérablement ses crises.</p>
@@ -483,14 +498,14 @@
 <p>Cette tragédie personnelle a permis aux scientifiques de comprendre quelque chose de fondamental :</p>
 <p><strong>la mémoire humaine est composée de plusieurs mécanismes qui ne dépendent pas tous des mêmes régions cérébrales.</strong></p>
 <hr />
-<h1 id="232-ce-que-lon-sait-aujourdhui" class="entry-title hc-1">🔬 2.32 Ce que l'on sait aujourd'hui</h1>
+<h1 id="232-ce-que-lon-sait-aujourdhui" class="entry-title hc-1">2.32 Ce que l'on sait aujourd'hui</h1>
 <p>Les recherches modernes ont largement confirmé l'importance des régions temporales médiales, notamment de l'hippocampe, dans la formation de souvenirs épisodiques et dans certains processus de mémoire à long terme.</p>
 <p>Mais elles montrent également que le fonctionnement de la mémoire dépend de réseaux beaucoup plus vastes.</p>
 <p>Le cerveau ne possède pas une seule « zone de la mémoire ».</p>
 <p>Il possède un ensemble de systèmes qui collaborent.</p>
 <p>L'hippocampe joue un rôle central dans certains de ces processus, mais il ne représente qu'une partie d'un système beaucoup plus complexe.</p>
 <hr />
-<h1 id="233-ce-quil-faut-nuancer" class="entry-title hc-2">⚠️ 2.33 Ce qu'il faut nuancer</h1>
+<h1 id="233-ce-quil-faut-nuancer" class="entry-title hc-2">2.33 Ce qu'il faut nuancer</h1>
 <p>L'histoire de Henry est parfois résumée par une phrase :</p>
 <p><strong>« Il avait seulement 30 secondes de mémoire. »</strong></p>
 <p>Cette formulation est populaire, mais elle est trompeuse.</p>
@@ -503,7 +518,7 @@
 <p><strong>« tout est oublié après 30 secondes ».</strong></p>
 <p>Son amnésie était beaucoup plus complexe.</p>
 <hr />
-<h1 id="234-une-autre-idee-importante" class="entry-title hc-3">🧠 2.34 Une autre idée importante</h1>
+<h1 id="234-une-autre-idee-importante" class="entry-title hc-3">2.34 Une autre idée importante</h1>
 <p>Il serait également faux de dire :</p>
 <p><strong>« L'hippocampe stocke les souvenirs. »</strong></p>
 <p>Les souvenirs ne sont pas stockés dans une seule structure comme des fichiers dans un ordinateur.</p>
@@ -511,20 +526,20 @@
 <p>L'hippocampe joue un rôle majeur dans la formation et la récupération de certains souvenirs, mais il participe à un système beaucoup plus large.</p>
 <p>Cette nuance est essentielle pour comprendre correctement les neurosciences modernes.</p>
 <hr />
-<h1 id="235-ce-que-cette-histoire-nous-apprend" class="entry-title hc-4">🌱 2.35 Ce que cette histoire nous apprend</h1>
+<h1 id="235-ce-que-cette-histoire-nous-apprend" class="entry-title hc-4">2.35 Ce que cette histoire nous apprend</h1>
 <p>L'histoire de Henry Molaison est tragique.</p>
 <p>Mais elle a également permis à la science de découvrir quelque chose d'extraordinaire.</p>
 <p>Elle a montré que :</p>
-<p>🧠 la mémoire n'est pas une fonction unique ;</p>
-<p>🧩 plusieurs systèmes mnésiques peuvent fonctionner indépendamment ;</p>
-<p>🔬 certaines formes d'apprentissage peuvent rester possibles malgré une amnésie sévère ;</p>
-<p>🧠 l'hippocampe joue un rôle essentiel dans la formation de certains souvenirs ;</p>
-<p>⏳ les souvenirs anciens et les nouveaux souvenirs ne dépendent pas exactement des mêmes mécanismes ;</p>
-<p>❤️ la mémoire participe profondément au sentiment de continuité personnelle.</p>
+<p>la mémoire n'est pas une fonction unique ;</p>
+<p>plusieurs systèmes mnésiques peuvent fonctionner indépendamment ;</p>
+<p>certaines formes d'apprentissage peuvent rester possibles malgré une amnésie sévère ;</p>
+<p>l'hippocampe joue un rôle essentiel dans la formation de certains souvenirs ;</p>
+<p>les souvenirs anciens et les nouveaux souvenirs ne dépendent pas exactement des mêmes mécanismes ;</p>
+<p>la mémoire participe profondément au sentiment de continuité personnelle.</p>
 <p>Henry a donc permis aux chercheurs de comprendre quelque chose que nous expérimentons tous sans forcément y penser :</p>
 <p><strong>nos souvenirs ne sont pas simplement des informations stockées dans notre cerveau. Ils participent à la manière dont nous construisons notre histoire personnelle.</strong></p>
 <hr />
-<h1 id="236-une-derniere-reflexion" class="entry-title hc-5">❤️ 2.36 Une dernière réflexion</h1>
+<h1 id="236-une-derniere-reflexion" class="entry-title hc-5">2.36 Une dernière réflexion</h1>
 <p>Chaque matin, une personne se réveille avec le sentiment de continuer sa propre histoire.</p>
 <p>Elle sait ce qu'elle a fait hier.</p>
 <p>Elle reconnaît les personnes importantes.</p>
@@ -543,20 +558,32 @@
 <p><strong>se souvenir n'est pas seulement conserver le passé.</strong></p>
 <p><strong>C'est aussi ce qui permet de construire une continuité entre le passé, le présent et le futur.</strong></p>
 <hr />
-<h1 id="a-retenir" class="entry-title hc-1">📌 À RETENIR</h1>
-<p>🧠 <strong>Henry Molaison, connu sous le nom de patient H.M.,</strong> est devenu l'un des cas les plus importants de l'histoire des neurosciences.</p>
-<p>🩺 En 1953, une opération destinée à réduire son épilepsie entraîne une amnésie antérograde extrêmement sévère.</p>
-<p>🧩 Henry conserve cependant de nombreuses capacités cognitives et certains souvenirs anciens.</p>
-<p>🔬 Les travaux de Brenda Milner montrent notamment qu'il peut apprendre certaines compétences sans conserver le souvenir conscient de les avoir apprises.</p>
-<p>🧠 Son cas contribue à démontrer que la mémoire n'est pas un système unique et que différentes formes de mémoire reposent sur des mécanismes différents.</p>
-<p>📚 Les recherches menées sur Henry ont profondément influencé notre compréhension de l'hippocampe, de la mémoire et de l'apprentissage.</p>
-<p>❤️ Son histoire montre également à quel point la mémoire participe à notre sentiment d'identité, de continuité et de relation avec le monde.</p>
+<h1 id="a-retenir" class="entry-title hc-1">À RETENIR</h1>
+<p><strong>Henry Molaison, connu sous le nom de patient H.M.,</strong> est devenu l'un des cas les plus importants de l'histoire des neurosciences.</p>
+<p>En 1953, une opération destinée à réduire son épilepsie entraîne une amnésie antérograde extrêmement sévère.</p>
+<p>Henry conserve cependant de nombreuses capacités cognitives et certains souvenirs anciens.</p>
+<p>Les travaux de Brenda Milner montrent notamment qu'il peut apprendre certaines compétences sans conserver le souvenir conscient de les avoir apprises.</p>
+<p>Son cas contribue à démontrer que la mémoire n'est pas un système unique et que différentes formes de mémoire reposent sur des mécanismes différents.</p>
+<p>Les recherches menées sur Henry ont profondément influencé notre compréhension de l'hippocampe, de la mémoire et de l'apprentissage.</p>
+<p>Son histoire montre également à quel point la mémoire participe à notre sentiment d'identité, de continuité et de relation avec le monde.</p>
 <p><strong>Une tragédie individuelle est ainsi devenue l'une des découvertes les plus importantes de l'histoire de la psychologie cognitive et des neurosciences.</strong></p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Histoires vraies de psychologie »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/histoires-quand-tout-semble-impossible/"><span class="similar-icon">📖</span>Quand tout semble impossible</a><a class="similar-item" href="/chapitre/histoires-un-cerveau-qui-n-avait-pas-dit-son-dernier-mot/"><span class="similar-icon">📖</span>Un cerveau qui n'avait pas dit son dernier mot</a><a class="similar-item" href="/chapitre/histoires-l-histoire-qui-a-fait-naitre-l-effet-du-temoin/"><span class="similar-icon">📖</span>L'histoire qui a fait naître l'effet du témoin</a></div>
+      <h2>Autres chapitres de « Histoires vraies de psychologie »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/histoires-quand-tout-semble-impossible/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg></span>Quand tout semble impossible</a><a class="similar-item" href="/chapitre/histoires-un-cerveau-qui-n-avait-pas-dit-son-dernier-mot/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg></span>Un cerveau qui n'avait pas dit son dernier mot</a><a class="similar-item" href="/chapitre/histoires-l-histoire-qui-a-fait-naitre-l-effet-du-temoin/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="16" y="22" width="88" height="76" rx="5"/>
+        <circle cx="41" cy="48" r="10"/>
+        <path d="M16 84 L44 60 L65 78 L84 56 L104 80"/>
+    </svg></span>L'histoire qui a fait naître l'effet du témoin</a></div>
     </div>
     <a class="back-link" href="/categorie/histoires/">← Retour à « Histoires vraies de psychologie »</a>
   </div>
@@ -642,23 +669,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -676,7 +705,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -856,9 +885,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -867,10 +898,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -977,7 +1008,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1017,8 +1048,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1049,7 +1080,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1104,7 +1135,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1128,17 +1159,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1180,7 +1211,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

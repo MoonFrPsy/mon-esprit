@@ -1,30 +1,31 @@
 /* ===========================================================
-   Esprit Ouvert — feuille de style principale
-   Thème sombre, doux pour les yeux, illustrations sur-mesure
+   Mon Esprit — feuille de style principale
+   Identité refondue : Fraunces + Newsreader, vert profond / crème doré
    =========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
 :root {
-  --bg: #171E1A;
-  --bg-raised: #212B25;
-  --bg-raised-2: #2A362E;
-  --ink: #EDE3D3;
-  --ink-soft: #A69C89;
-  --title: #F5EDDE;
-  --link: #D4AF5C;
-  --clay: #D4AF5C;
-  --line: #384338;
+  /* Thème sombre par défaut : vert profond, encre crème, accent doré */
+  --bg: #14211C;
+  --bg-raised: #1B2A24;
+  --bg-raised-2: #22302A;
+  --ink: #EDE8DB;
+  --ink-soft: #AEB8AC;
+  --title: #F3EFE3;
+  --link: #C9A86A;
+  --clay: #C9A86A;
+  --line: #2A3A33;
   --max-width: 720px;
 
   /* couleurs pour distinguer chaque entrée d'un chapitre — dérivées
      du logo (vert profond, sauge, crème, terre) plutôt que d'un
      arc-en-ciel générique */
-  --hc-1: #8CA57E;
-  --hc-2: #D4A574;
-  --hc-3: #C98A5C;
-  --hc-4: #6B9080;
-  --hc-5: #B08D6F;
+  --hc-1: #8FA88A;
+  --hc-2: #C9A86A;
+  --hc-3: #B98A62;
+  --hc-4: #6E9488;
+  --hc-5: #A98F72;
 
   /* couleur d'identité par catégorie (bannières, icônes) */
   --acc-termes: var(--hc-2);
@@ -34,10 +35,10 @@
   --acc-mecanismes: var(--hc-4);
   --acc-phenomenes: var(--hc-3);
   --acc-emotions: var(--link);
-  --acc-avances: #B58A9E;
-  --acc-histoires: #A68E5C;
-  --acc-justice: #9C6B5C;
-  --acc-experiences: #7C9483;
+  --acc-avances: #B597A8;
+  --acc-histoires: #AC9464;
+  --acc-justice: #A17862;
+  --acc-experiences: #83A08A;
 
   --mx: 50%;
   --my: 30%;
@@ -45,26 +46,26 @@
 
 /* ---------- Thème clair (activé via data-theme="light" sur <html>) ---------- */
 html[data-theme="light"] {
-  --bg: #F7F3EA;
-  --bg-raised: #FFFFFF;
-  --bg-raised-2: #EFE9DC;
-  --ink: #2A332C;
-  --ink-soft: #6B6355;
-  --title: #1A211C;
-  --link: #5C7A4E;
-  --clay: #A67C2E;
-  --line: #DED5C2;
+  --bg: #F1F1EC;
+  --bg-raised: #FBFBF8;
+  --bg-raised-2: #E9E5D8;
+  --ink: #20302B;
+  --ink-soft: #52645C;
+  --title: #1B2A24;
+  --link: #7C5E33;
+  --clay: #7C5E33;
+  --line: #D6D2C6;
 
-  --hc-1: #5C7A4E;
-  --hc-2: #A67C2E;
-  --hc-3: #A05C34;
-  --hc-4: #3D6B58;
-  --hc-5: #8A6248;
+  --hc-1: #4C6A46;
+  --hc-2: #7C5E33;
+  --hc-3: #8A4E30;
+  --hc-4: #345448;
+  --hc-5: #6E4E38;
 
-  --acc-avances: #8A5C6E;
-  --acc-histoires: #7A6238;
-  --acc-justice: #7A4838;
-  --acc-experiences: #5C7A62;
+  --acc-avances: #7A4E60;
+  --acc-histoires: #6A5228;
+  --acc-justice: #6A3A2A;
+  --acc-experiences: #4C6A52;
 }
 
 html[data-theme="light"] body::before { display: none; }
@@ -99,7 +100,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Newsreader', serif;
   font-size: 1.0625rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;

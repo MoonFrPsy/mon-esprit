@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#51-la-schizophrenie">🧠 5.1 La schizophrénie</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#principales-manifestations">Principales manifestations</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#causes">Causes</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#comment-aider-un-proche">🤝 Comment aider un proche</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#52-le-trouble-schizo-affectif">🧠 5.2 Le trouble schizo-affectif</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#comment-aider-un-proche_1">🤝 Comment aider un proche</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#53-le-trouble-delirant">🧠 5.3 Le trouble délirant</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#types-de-themes-delirants">Types de thèmes délirants</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#comment-aider-un-proche_2">🤝 Comment aider un proche</a></li><li><a href="#prise-en-charge_2">🛠️ Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#54-le-trouble-psychotique-bref">🧠 5.4 Le trouble psychotique bref</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#debut">Début</a></li><li><a href="#evolution_2">Évolution</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#55-le-trouble-schizophreniforme">🧠 5.5 Le trouble schizophréniforme</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#particularite_2">Particularité</a></li><li><a href="#evolution_3">Évolution</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#56-le-trouble-psychotique-induit-par-une-substance-ou-un-medicament">🧠 5.6 Le trouble psychotique induit par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#evolution_4">Évolution</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#57-le-trouble-psychotique-du-a-une-autre-affection-medicale">🧠 5.7 Le trouble psychotique dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#58-catatonie-associee-a-un-autre-trouble-mental">🧠 5.8 Catatonie associée à un autre trouble mental</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#particularite_3">Particularité</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#59-autre-trouble-du-spectre-de-la-schizophrenie-et-autre-trouble-psychotique-specifie">🧠 5.9 Autre trouble du spectre de la schizophrénie et autre trouble psychotique spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#510-autre-trouble-du-spectre-de-la-schizophrenie-et-autre-trouble-psychotique-non-specifie">🧠 5.10 Autre trouble du spectre de la schizophrénie et autre trouble psychotique non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#512-les-hallucinations">🧠 5.12 Les hallucinations</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#types">Types</a></li><li><a href="#causes_1">Causes</a></li><li><a href="#comment-reagir-face-a-des-hallucinations">🤝 Comment réagir face à des hallucinations</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#513-la-desorganisation-de-la-pensee">🗣️ 5.13 La désorganisation de la pensée</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#514-les-symptomes-negatifs">🧍 5.14 Les symptômes négatifs</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#principales-manifestations_1">Principales manifestations</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#comment-aider-face-aux-symptomes-negatifs">🤝 Comment aider face aux symptômes négatifs</a></li><li><a href="#prise-en-charge_7">🛠️ Prise en charge</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#515-la-perte-de-contact-avec-la-realite">🧠 5.15 La perte de contact avec la réalité</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#particularite_4">Particularité</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#51-la-schizophrenie">5.1 La schizophrénie</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#principales-manifestations">Principales manifestations</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#causes">Causes</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#comment-aider-un-proche">Comment aider un proche</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#52-le-trouble-schizo-affectif">5.2 Le trouble schizo-affectif</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#comment-aider-un-proche_1">Comment aider un proche</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#53-le-trouble-delirant">5.3 Le trouble délirant</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#types-de-themes-delirants">Types de thèmes délirants</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#comment-aider-un-proche_2">Comment aider un proche</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#54-le-trouble-psychotique-bref">5.4 Le trouble psychotique bref</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#debut">Début</a></li><li><a href="#evolution_2">Évolution</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#55-le-trouble-schizophreniforme">5.5 Le trouble schizophréniforme</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#particularite_2">Particularité</a></li><li><a href="#evolution_3">Évolution</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#56-le-trouble-psychotique-induit-par-une-substance-ou-un-medicament">5.6 Le trouble psychotique induit par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#evolution_4">Évolution</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#57-le-trouble-psychotique-du-a-une-autre-affection-medicale">5.7 Le trouble psychotique dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#58-catatonie-associee-a-un-autre-trouble-mental">5.8 Catatonie associée à un autre trouble mental</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#particularite_3">Particularité</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#59-autre-trouble-du-spectre-de-la-schizophrenie-et-autre-trouble-psychotique-specifie">5.9 Autre trouble du spectre de la schizophrénie et autre trouble psychotique spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#510-autre-trouble-du-spectre-de-la-schizophrenie-et-autre-trouble-psychotique-non-specifie">5.10 Autre trouble du spectre de la schizophrénie et autre trouble psychotique non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#512-les-hallucinations">5.12 Les hallucinations</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#types">Types</a></li><li><a href="#causes_1">Causes</a></li><li><a href="#comment-reagir-face-a-des-hallucinations">Comment réagir face à des hallucinations</a></li><li><a href="#a-retenir_10">À retenir</a></li></ul></li><li><a href="#513-la-desorganisation-de-la-pensee">5.13 La désorganisation de la pensée</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#a-retenir_11">À retenir</a></li></ul></li><li><a href="#514-les-symptomes-negatifs">5.14 Les symptômes négatifs</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#principales-manifestations_1">Principales manifestations</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#comment-aider-face-aux-symptomes-negatifs">Comment aider face aux symptômes négatifs</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_12">À retenir</a></li></ul></li><li><a href="#515-la-perte-de-contact-avec-la-realite">5.15 La perte de contact avec la réalité</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#particularite_4">Particularité</a></li><li><a href="#a-retenir_13">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Partie 5 — Schizophrénie et autres troubles psychotiques',
         category: 'Troubles psychologiques',
-        icon: '🩺'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/troubles/">Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Partie 5 — Schizophrénie et autres troubles psychotiques</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,7 +113,7 @@
     </svg>
     </div>
     <div class="article-body">
-      <h1 id="51-la-schizophrenie" class="entry-title hc-1">🧠 5.1  La schizophrénie</h1>
+      <h1 id="51-la-schizophrenie" class="entry-title hc-1">5.1  La schizophrénie</h1>
 <h2 id="definition">Définition</h2>
 <p>La <strong>schizophrénie</strong> est un trouble psychotique complexe qui peut affecter la perception de la réalité, la pensée, les émotions, le comportement et les relations sociales.</p>
 <p>Elle n'est pas synonyme de « double personnalité ».</p>
@@ -151,7 +166,7 @@
 <li>accompagnement familial</li>
 <li>soutien social.</li>
 </ul>
-<h2 id="comment-aider-un-proche">🤝 Comment aider un proche</h2>
+<h2 id="comment-aider-un-proche">Comment aider un proche</h2>
 <ul>
 <li><strong>Ne pas argumenter contre les idées délirantes ou les hallucinations.</strong> Essayer de « prouver » que ce que la personne perçoit n'est pas réel provoque généralement plus de conflit que d'aide — la perception est vécue comme bien réelle par la personne.</li>
 <li><strong>Valider la détresse sans valider le contenu.</strong> On peut dire « je vois que tu as très peur en ce moment » sans confirmer ni contredire frontalement ce que la personne décrit.</li>
@@ -162,7 +177,7 @@
 </ul>
 <h2 id="a-retenir">À retenir</h2>
 <p>La schizophrénie est un trouble complexe qui peut modifier profondément la perception et l'interprétation de la réalité. Elle ne correspond pas à un dédoublement de personnalité.</p>
-<h1 id="52-le-trouble-schizo-affectif" class="entry-title hc-2">🧠 5.2 Le trouble schizo-affectif</h1>
+<h1 id="52-le-trouble-schizo-affectif" class="entry-title hc-2">5.2 Le trouble schizo-affectif</h1>
 <h2 id="definition_1">Définition</h2>
 <p>Le <strong>trouble schizo-affectif</strong> associe des symptômes psychotiques importants à des épisodes significatifs de l'humeur.</p>
 <p>Il comporte donc à la fois des caractéristiques appartenant au spectre de la psychose et des caractéristiques liées à l'humeur.</p>
@@ -189,11 +204,11 @@
 <li>psychothérapie</li>
 <li>accompagnement psychosocial.</li>
 </ul>
-<h2 id="comment-aider-un-proche_1">🤝 Comment aider un proche</h2>
+<h2 id="comment-aider-un-proche_1">Comment aider un proche</h2>
 <p>Les mêmes principes que pour la schizophrénie s'appliquent : ne pas argumenter contre le contenu des symptômes psychotiques, valider la détresse ressentie plutôt que le contenu perçu, et encourager la continuité du suivi. Une attention particulière peut être portée aux variations de l'humeur, qui nécessitent souvent un ajustement du traitement au fil du temps.</p>
 <h2 id="a-retenir_1">À retenir</h2>
 <p>Le trouble schizo-affectif se situe à l'intersection des troubles psychotiques et des troubles de l'humeur.</p>
-<h1 id="53-le-trouble-delirant" class="entry-title hc-3">🧠 5.3  Le trouble délirant</h1>
+<h1 id="53-le-trouble-delirant" class="entry-title hc-3">5.3  Le trouble délirant</h1>
 <h2 id="definition_2">Définition</h2>
 <p>Le <strong>trouble délirant</strong> est caractérisé par la présence d'une ou plusieurs idées délirantes persistantes.</p>
 <p>Une idée délirante est une conviction fermement maintenue malgré des éléments importants qui la contredisent.</p>
@@ -212,18 +227,18 @@
 <p>Cela le distingue notamment de certaines formes de schizophrénie.</p>
 <h2 id="exemple">Exemple</h2>
 <p>Une personne peut être convaincue qu'un individu la surveille constamment alors qu'il n'existe pas d'éléments permettant de confirmer cette conviction.</p>
-<h2 id="comment-aider-un-proche_2">🤝 Comment aider un proche</h2>
+<h2 id="comment-aider-un-proche_2">Comment aider un proche</h2>
 <ul>
 <li><strong>Ne pas chercher à convaincre la personne que sa conviction est fausse.</strong> Une idée délirante, par définition, résiste aux contre-arguments, même solides — insister peut renforcer la méfiance envers soi plutôt que remettre en question l'idée.</li>
 <li><strong>Se concentrer sur le fonctionnement quotidien</strong> plutôt que sur le débat autour de la conviction elle-même, puisque celui-ci reste souvent préservé par ailleurs.</li>
 <li><strong>Rester présent et disponible</strong>, sans forcer la discussion sur le sujet délirant.</li>
 <li><strong>Encourager un accompagnement professionnel</strong>, en douceur, en insistant sur le soutien plutôt que sur l'idée que « quelque chose ne va pas ».</li>
 </ul>
-<h2 id="prise-en-charge_2">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge_2">Prise en charge</h2>
 <p>Une psychothérapie et, selon la situation, un traitement médicamenteux peuvent être proposés. L'alliance de confiance avec un professionnel est souvent particulièrement déterminante ici, étant donné la nature même du trouble délirant.</p>
 <h2 id="a-retenir_2">À retenir</h2>
 <p>Une croyance inhabituelle n'est pas automatiquement une idée délirante. Le contexte culturel, les preuves disponibles et le degré de conviction doivent être pris en compte.</p>
-<h1 id="54-le-trouble-psychotique-bref" class="entry-title hc-4">🧠 5.4  Le trouble psychotique bref</h1>
+<h1 id="54-le-trouble-psychotique-bref" class="entry-title hc-4">5.4  Le trouble psychotique bref</h1>
 <h2 id="definition_3">Définition</h2>
 <p>Le <strong>trouble psychotique bref</strong> correspond à l'apparition soudaine de symptômes psychotiques qui durent une période relativement courte avant un retour vers le fonctionnement antérieur.</p>
 <h2 id="manifestations_1">Manifestations</h2>
@@ -243,7 +258,7 @@
 <p>Une évaluation psychiatrique est nécessaire afin de déterminer la cause des symptômes et d'assurer la sécurité de la personne.</p>
 <h2 id="a-retenir_3">À retenir</h2>
 <p>Un épisode psychotique bref peut être intense sans nécessairement évoluer vers une schizophrénie.</p>
-<h1 id="55-le-trouble-schizophreniforme" class="entry-title hc-5">🧠 5.5  Le trouble schizophréniforme</h1>
+<h1 id="55-le-trouble-schizophreniforme" class="entry-title hc-5">5.5  Le trouble schizophréniforme</h1>
 <h2 id="definition_4">Définition</h2>
 <p>Le <strong>trouble schizophréniforme</strong> présente des symptômes similaires à ceux de la schizophrénie, mais leur durée est plus courte.</p>
 <h2 id="manifestations_2">Manifestations</h2>
@@ -262,7 +277,7 @@
 <p>Dans d'autres situations, l'évolution peut conduire à un autre diagnostic du spectre de la schizophrénie si les symptômes persistent.</p>
 <h2 id="a-retenir_4">À retenir</h2>
 <p>Le trouble schizophréniforme ressemble à la schizophrénie mais se distingue principalement par la durée de l'épisode.</p>
-<h1 id="56-le-trouble-psychotique-induit-par-une-substance-ou-un-medicament" class="entry-title hc-1">🧠 5.6  Le trouble psychotique induit par une substance ou un médicament</h1>
+<h1 id="56-le-trouble-psychotique-induit-par-une-substance-ou-un-medicament" class="entry-title hc-1">5.6  Le trouble psychotique induit par une substance ou un médicament</h1>
 <h2 id="definition_5">Définition</h2>
 <p>Ce trouble correspond à l'apparition de symptômes psychotiques en relation avec une substance, un médicament, une intoxication ou un sevrage.</p>
 <h2 id="manifestations_3">Manifestations</h2>
@@ -281,7 +296,7 @@
 <p>Une évaluation médicale est importante afin d'identifier la cause et de déterminer le traitement approprié.</p>
 <h2 id="a-retenir_5">À retenir</h2>
 <p>La présence de symptômes psychotiques ne signifie pas automatiquement qu'il s'agit d'une schizophrénie.</p>
-<h1 id="57-le-trouble-psychotique-du-a-une-autre-affection-medicale" class="entry-title hc-2">🧠 5.7  Le trouble psychotique dû à une autre affection médicale</h1>
+<h1 id="57-le-trouble-psychotique-du-a-une-autre-affection-medicale" class="entry-title hc-2">5.7  Le trouble psychotique dû à une autre affection médicale</h1>
 <h2 id="definition_6">Définition</h2>
 <p>Ce trouble correspond à des symptômes psychotiques considérés comme directement liés aux conséquences physiologiques d'une affection médicale.</p>
 <h2 id="manifestations_4">Manifestations</h2>
@@ -300,7 +315,7 @@
 <p>Une prise en charge psychiatrique peut également être nécessaire.</p>
 <h2 id="a-retenir_6">À retenir</h2>
 <p>Certaines maladies ou atteintes du cerveau peuvent provoquer des symptômes ressemblant à ceux des troubles psychotiques primaires.</p>
-<h1 id="58-catatonie-associee-a-un-autre-trouble-mental" class="entry-title hc-3">🧠 5.8  Catatonie associée à un autre trouble mental</h1>
+<h1 id="58-catatonie-associee-a-un-autre-trouble-mental" class="entry-title hc-3">5.8  Catatonie associée à un autre trouble mental</h1>
 <h2 id="definition_7">Définition</h2>
 <p>La <strong>catatonie</strong> est un syndrome caractérisé par des perturbations importantes du mouvement, du comportement et de la réactivité.</p>
 <p>Elle peut apparaître dans différents troubles psychiatriques.</p>
@@ -321,7 +336,7 @@
 <p>La catatonie nécessite une évaluation médicale rapide, notamment lorsque la personne ne mange plus, ne boit plus ou reste immobile pendant une période importante.</p>
 <h2 id="a-retenir_7">À retenir</h2>
 <p>La catatonie est un syndrome qui peut avoir plusieurs causes et qui nécessite une prise en charge adaptée.</p>
-<h1 id="59-autre-trouble-du-spectre-de-la-schizophrenie-et-autre-trouble-psychotique-specifie" class="entry-title hc-4">🧠 5.9  Autre trouble du spectre de la schizophrénie et autre trouble psychotique spécifié</h1>
+<h1 id="59-autre-trouble-du-spectre-de-la-schizophrenie-et-autre-trouble-psychotique-specifie" class="entry-title hc-4">5.9  Autre trouble du spectre de la schizophrénie et autre trouble psychotique spécifié</h1>
 <h2 id="definition_8">Définition</h2>
 <p>Cette catégorie est utilisée lorsqu'une personne présente des symptômes psychotiques importants qui ne correspondent pas entièrement aux critères d'un trouble psychotique précis.</p>
 <p>Le professionnel indique alors généralement pourquoi la présentation est particulière.</p>
@@ -335,7 +350,7 @@
 </ul>
 <h2 id="a-retenir_8">À retenir</h2>
 <p>La catégorie « spécifié » permet de décrire une présentation clinique particulière sans la faire entrer artificiellement dans une catégorie qui ne lui correspond pas.</p>
-<h1 id="510-autre-trouble-du-spectre-de-la-schizophrenie-et-autre-trouble-psychotique-non-specifie" class="entry-title hc-5">🧠 5.10  Autre trouble du spectre de la schizophrénie et autre trouble psychotique non spécifié</h1>
+<h1 id="510-autre-trouble-du-spectre-de-la-schizophrenie-et-autre-trouble-psychotique-non-specifie" class="entry-title hc-5">5.10  Autre trouble du spectre de la schizophrénie et autre trouble psychotique non spécifié</h1>
 <h2 id="definition_9">Définition</h2>
 <p>Cette catégorie est utilisée lorsque des symptômes psychotiques provoquent une souffrance ou une altération importante du fonctionnement, mais que les informations disponibles ne permettent pas de préciser davantage le diagnostic.</p>
 <h2 id="manifestations_7">Manifestations</h2>
@@ -350,7 +365,7 @@
 <p>Le terme « non spécifié » signifie qu'une classification plus précise n'est pas possible ou appropriée dans le contexte de l'évaluation.</p>
 <h2 id="a-retenir_9">À retenir</h2>
 <p>« Non spécifié » ne signifie pas que les symptômes sont moins réels ou moins importants.</p>
-<h1 id="512-les-hallucinations" class="entry-title hc-1">🧠 5.12  Les hallucinations</h1>
+<h1 id="512-les-hallucinations" class="entry-title hc-1">5.12  Les hallucinations</h1>
 <h2 id="definition_10">Définition</h2>
 <p>Une <strong>hallucination</strong> est une perception qui se produit en l'absence d'un stimulus externe correspondant.</p>
 <p>Elle peut concerner différents sens.</p>
@@ -375,7 +390,7 @@
 <li>manque important de sommeil</li>
 <li>certaines situations médicales.</li>
 </ul>
-<h2 id="comment-reagir-face-a-des-hallucinations">🤝 Comment réagir face à des hallucinations</h2>
+<h2 id="comment-reagir-face-a-des-hallucinations">Comment réagir face à des hallucinations</h2>
 <ul>
 <li><strong>Ne pas nier ni confirmer ce que la personne perçoit.</strong> Dire « il n'y a rien » peut être vécu comme une invalidation, tandis que confirmer peut renforcer le phénomène. Il est souvent plus utile de reconnaître l'expérience vécue (« je comprends que ça te semble réel et que ça t'effraie ») sans se positionner sur la réalité de la perception.</li>
 <li><strong>Rester calme.</strong> Une réaction de panique de l'entourage peut amplifier la détresse de la personne.</li>
@@ -384,7 +399,7 @@
 </ul>
 <h2 id="a-retenir_10">À retenir</h2>
 <p>Une hallucination n'est pas nécessairement liée à la schizophrénie. Son origine doit être évaluée dans son contexte.</p>
-<h1 id="513-la-desorganisation-de-la-pensee" class="entry-title hc-2">🗣️ 5.13  La désorganisation de la pensée</h1>
+<h1 id="513-la-desorganisation-de-la-pensee" class="entry-title hc-2">5.13  La désorganisation de la pensée</h1>
 <h2 id="definition_11">Définition</h2>
 <p>La <strong>désorganisation de la pensée</strong> correspond à une difficulté importante à organiser ses idées de manière cohérente.</p>
 <p>Elle peut notamment être observée dans certains troubles psychotiques.</p>
@@ -401,7 +416,7 @@
 <p>La communication avec l'entourage peut devenir difficile.</p>
 <h2 id="a-retenir_11">À retenir</h2>
 <p>La désorganisation de la pensée ne correspond pas simplement au fait d'être distrait ou de chercher ses mots occasionnellement. Elle est beaucoup plus importante et persistante lorsqu'elle constitue un symptôme clinique.</p>
-<h1 id="514-les-symptomes-negatifs" class="entry-title hc-3">🧍 5.14  Les symptômes négatifs</h1>
+<h1 id="514-les-symptomes-negatifs" class="entry-title hc-3">5.14  Les symptômes négatifs</h1>
 <h2 id="definition_12">Définition</h2>
 <p>Les <strong>symptômes négatifs</strong> correspondent à une diminution ou une absence de certaines fonctions psychologiques normalement présentes.</p>
 <p>Ils sont particulièrement importants dans la schizophrénie.</p>
@@ -423,18 +438,18 @@
 <li>l'autonomie</li>
 <li>les activités quotidiennes.</li>
 </ul>
-<h2 id="comment-aider-face-aux-symptomes-negatifs">🤝 Comment aider face aux symptômes négatifs</h2>
+<h2 id="comment-aider-face-aux-symptomes-negatifs">Comment aider face aux symptômes négatifs</h2>
 <ul>
 <li><strong>Ne pas confondre avec de la paresse ou un manque de volonté.</strong> Les symptômes négatifs sont des manifestations du trouble, pas un choix — cette confusion est l'une des sources d'incompréhension les plus fréquentes pour l'entourage.</li>
 <li><strong>Ne pas pousser à « faire plus » de force.</strong> Encourager doucement de petites activités est plus utile qu'exiger un fonctionnement normal d'un coup.</li>
 <li><strong>Valoriser les petites initiatives</strong>, même minimes, plutôt que de se concentrer sur ce qui n'est pas fait.</li>
 <li><strong>Adapter ses attentes</strong> à la période traversée par la personne, qui peut évoluer avec le temps et le traitement.</li>
 </ul>
-<h2 id="prise-en-charge_7">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge_7">Prise en charge</h2>
 <p>Les symptômes négatifs répondent souvent moins bien aux antipsychotiques que les symptômes positifs (hallucinations, délires). Une réhabilitation psychosociale — structuration d'activités, entraînement de compétences sociales — et un accompagnement au long cours sont généralement nécessaires en complément du traitement médicamenteux.</p>
 <h2 id="a-retenir_12">À retenir</h2>
 <p>« Négatif » ne signifie pas « mauvais ». Le terme désigne une diminution d'une fonction ou d'un comportement habituellement présent.</p>
-<h1 id="515-la-perte-de-contact-avec-la-realite" class="entry-title hc-4">🧠 5.15 La perte de contact avec la réalité</h1>
+<h1 id="515-la-perte-de-contact-avec-la-realite" class="entry-title hc-4">5.15 La perte de contact avec la réalité</h1>
 <h2 id="definition_13">Définition</h2>
 <p>La <strong>perte de contact avec la réalité</strong> est une expression générale utilisée pour décrire certaines situations dans lesquelles une personne interprète ou perçoit la réalité d'une manière profondément différente de ce qui est objectivement observable.</p>
 <p>Elle peut notamment être associée à des symptômes psychotiques.</p>
@@ -453,8 +468,26 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-6-troubles-de-la-personnalite/"><span class="similar-icon">🩺</span>Partie 6 — Troubles de la personnalité</a><a class="similar-item" href="/chapitre/troubles-partie-7-troubles-des-conduites-alimentaires/"><span class="similar-icon">🩺</span>Partie 7 — Troubles des conduites alimentaires</a><a class="similar-item" href="/chapitre/troubles-partie-8-troubles-neurodeveloppementaux/"><span class="similar-icon">🩺</span>Partie 8 — Troubles neurodéveloppementaux</a></div>
+      <h2>Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-6-troubles-de-la-personnalite/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 6 — Troubles de la personnalité</a><a class="similar-item" href="/chapitre/troubles-partie-7-troubles-des-conduites-alimentaires/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 7 — Troubles des conduites alimentaires</a><a class="similar-item" href="/chapitre/troubles-partie-8-troubles-neurodeveloppementaux/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 8 — Troubles neurodéveloppementaux</a></div>
     </div>
     <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
   </div>
@@ -540,23 +573,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -574,7 +609,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -754,9 +789,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -765,10 +802,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -875,7 +912,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -915,8 +952,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -947,7 +984,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1002,7 +1039,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1026,17 +1063,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1078,7 +1115,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

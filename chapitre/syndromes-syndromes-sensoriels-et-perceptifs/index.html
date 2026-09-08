@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#91-la-misophonie">👂 9.1 La misophonie</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#sons-frequemment-declencheurs">🔊 Sons fréquemment déclencheurs</a></li><li><a href="#reactions-possibles">🧠 Réactions possibles</a></li><li><a href="#mecanismes-etudies">🧬 Mécanismes étudiés</a></li><li><a href="#diagnostic">🩺 Diagnostic</a></li><li><a href="#a-retenir">📌 À retenir</a></li></ul></li><li><a href="#92-la-misokinesie">👁️ 9.2 La misokinésie</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#declencheurs-possibles">👀 Déclencheurs possibles</a></li><li><a href="#reactions">🧠 Réactions</a></li><li><a href="#particularite">🧩 Particularité</a></li><li><a href="#a-retenir_1">📌 À retenir</a></li></ul></li><li><a href="#93-lhyperacousie">🔊 9.3 L'hyperacousie</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#sons-pouvant-devenir-difficiles">🔊 Sons pouvant devenir difficiles</a></li><li><a href="#manifestations">🧠 Manifestations</a></li><li><a href="#causes-possibles">🧬 Causes possibles</a></li><li><a href="#diagnostic_1">🩺 Diagnostic</a></li><li><a href="#a-retenir_2">📌 À retenir</a></li></ul></li><li><a href="#94-la-synesthesie">🌈 9.4 La synesthésie</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#exemple">🎨 Exemple</a></li><li><a href="#particularites">🧠 Particularités</a></li><li><a href="#mecanismes-etudies_1">🧬 Mécanismes étudiés</a></li><li><a href="#a-retenir_3">📌 À retenir</a></li></ul></li><li><a href="#95-la-sensibilite-sensorielle-accrue">🧠 9.5 La sensibilité sensorielle accrue</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#manifestations_1">👂👁️ Manifestations</a></li><li><a href="#contextes-possibles">🧩 Contextes possibles</a></li><li><a href="#a-retenir_4">📌 À retenir</a></li></ul></li><li><a href="#96-les-hallucinations">👁️ 9.6 Les hallucinations</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#hallucinations-visuelles">👁️ Hallucinations visuelles</a></li><li><a href="#hallucinations-auditives">👂 Hallucinations auditives</a></li><li><a href="#hallucinations-olfactives">👃 Hallucinations olfactives</a></li><li><a href="#hallucinations-gustatives">👅 Hallucinations gustatives</a></li><li><a href="#hallucinations-tactiles">✋ Hallucinations tactiles</a></li><li><a href="#causes-possibles_1">🧠 Causes possibles</a></li><li><a href="#diagnostic_2">🩺 Diagnostic</a></li><li><a href="#a-retenir_5">📌 À retenir</a></li></ul></li><li><a href="#97-les-illusions-perceptives">🪞 9.7 Les illusions perceptives</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#types-possibles">🧠 Types possibles</a></li><li><a href="#causes-possibles_2">🧬 Causes possibles</a></li><li><a href="#a-retenir_6">📌 À retenir</a></li></ul></li><li><a href="#98-la-derealisation">🌀 9.8 La déréalisation</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#manifestations_2">🧠 Manifestations</a></li><li><a href="#contextes-possibles_1">🧩 Contextes possibles</a></li><li><a href="#a-retenir_7">📌 À retenir</a></li></ul></li><li><a href="#99-la-depersonnalisation">🪞 9.9 La dépersonnalisation</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#manifestations_3">🧠 Manifestations</a></li><li><a href="#difference-avec-la-derealisation">🧩 Différence avec la déréalisation</a></li><li><a href="#a-retenir_8">📌 À retenir</a></li></ul></li><li><a href="#910-la-surcharge-sensorielle">🔄 9.10 La surcharge sensorielle</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#stimulations-possibles">🔊 Stimulations possibles</a></li><li><a href="#manifestations_4">🧠 Manifestations</a></li><li><a href="#contextes-possibles_2">🧩 Contextes possibles</a></li><li><a href="#a-retenir_9">📌 À retenir</a></li></ul></li><li><a href="#a-retenir-partie-9">🧠 À RETENIR PARTIE 9</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#91-la-misophonie">9.1 La misophonie</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#sons-frequemment-declencheurs">Sons fréquemment déclencheurs</a></li><li><a href="#reactions-possibles">Réactions possibles</a></li><li><a href="#mecanismes-etudies">Mécanismes étudiés</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#92-la-misokinesie">9.2 La misokinésie</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#declencheurs-possibles">Déclencheurs possibles</a></li><li><a href="#reactions">Réactions</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#93-lhyperacousie">9.3 L'hyperacousie</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#sons-pouvant-devenir-difficiles">Sons pouvant devenir difficiles</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#94-la-synesthesie">9.4 La synesthésie</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#particularites">Particularités</a></li><li><a href="#mecanismes-etudies_1">Mécanismes étudiés</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#95-la-sensibilite-sensorielle-accrue">9.5 La sensibilité sensorielle accrue</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#contextes-possibles">Contextes possibles</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#96-les-hallucinations">9.6 Les hallucinations</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#hallucinations-visuelles">Hallucinations visuelles</a></li><li><a href="#hallucinations-auditives">Hallucinations auditives</a></li><li><a href="#hallucinations-olfactives">Hallucinations olfactives</a></li><li><a href="#hallucinations-gustatives">Hallucinations gustatives</a></li><li><a href="#hallucinations-tactiles">Hallucinations tactiles</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#97-les-illusions-perceptives">9.7 Les illusions perceptives</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#types-possibles">Types possibles</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#98-la-derealisation">9.8 La déréalisation</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#contextes-possibles_1">Contextes possibles</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#99-la-depersonnalisation">9.9 La dépersonnalisation</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#difference-avec-la-derealisation">Différence avec la déréalisation</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#910-la-surcharge-sensorielle">9.10 La surcharge sensorielle</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#stimulations-possibles">Stimulations possibles</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#contextes-possibles_2">Contextes possibles</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li><li><a href="#a-retenir-partie-9">À RETENIR PARTIE 9</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Syndromes sensoriels et perceptifs',
         category: 'Syndromes psychologiques',
-        icon: '🧬'
+        icon: 'S'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/syndromes/">🧬 Syndromes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/syndromes/">Syndromes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Syndromes sensoriels et perceptifs</h1>
     </div>
     <div id="resume-banner"></div>
@@ -100,12 +115,12 @@
     </div>
     <div class="article-body">
       <p>Cette partie regroupe différents phénomènes concernant la manière dont le cerveau reçoit, interprète et organise les informations provenant des sens. Ils peuvent toucher l'ouïe, la vision, le toucher, les mouvements ou plusieurs systèmes sensoriels à la fois.</p>
-<h1 id="91-la-misophonie" class="entry-title hc-1">👂 9.1  La misophonie</h1>
-<h2 id="definition">🔎 Définition</h2>
+<h1 id="91-la-misophonie" class="entry-title hc-1">9.1  La misophonie</h1>
+<h2 id="definition">Définition</h2>
 <p>La <strong>misophonie</strong> désigne une réaction émotionnelle et physiologique très forte déclenchée par certains sons spécifiques.</p>
 <p>Les sons concernés sont généralement des sons répétitifs produits par d'autres personnes.</p>
 <p>Il ne s'agit pas simplement de trouver un son désagréable : la réaction peut être disproportionnée par rapport à l'intensité réelle du son.</p>
-<h2 id="sons-frequemment-declencheurs">🔊 Sons fréquemment déclencheurs</h2>
+<h2 id="sons-frequemment-declencheurs">Sons fréquemment déclencheurs</h2>
 <p>Par exemple :</p>
 <p>mastication ;
 déglutition ;
@@ -117,7 +132,7 @@ clics répétitifs ;
 bruits de clavier ;
 certains sons produits avec la bouche.</p>
 <p>Les déclencheurs varient fortement d'une personne à l'autre.</p>
-<h2 id="reactions-possibles">🧠 Réactions possibles</h2>
+<h2 id="reactions-possibles">Réactions possibles</h2>
 <p>Un son déclencheur peut provoquer :</p>
 <p>irritation intense ;
 colère ;
@@ -127,20 +142,20 @@ tension corporelle ;
 accélération du rythme cardiaque ;
 envie de fuir ;
 difficulté à rester concentré.</p>
-<h2 id="mecanismes-etudies">🧬 Mécanismes étudiés</h2>
+<h2 id="mecanismes-etudies">Mécanismes étudiés</h2>
 <p>Les recherches suggèrent une implication particulière des mécanismes cérébraux permettant d'associer un son à une réaction émotionnelle.</p>
 <p>La misophonie pourrait notamment impliquer une interaction inhabituelle entre :</p>
-<p><strong>Perception sonore → attention → traitement émotionnel → réaction corporelle</strong></p>
-<h2 id="diagnostic">🩺 Diagnostic</h2>
+<p><strong>Perception sonore  attention  traitement émotionnel  réaction corporelle</strong></p>
+<h2 id="diagnostic">Diagnostic</h2>
 <p>La misophonie ne correspond pas simplement à une sensibilité auditive générale.</p>
 <p>Son statut diagnostique reste discuté et elle peut être étudiée dans différents contextes cliniques.</p>
-<h2 id="a-retenir">📌 À retenir</h2>
+<h2 id="a-retenir">À retenir</h2>
 <p>La misophonie correspond à une <strong>réaction extrêmement forte à certains sons spécifiques</strong>, souvent répétitifs.</p>
-<h1 id="92-la-misokinesie" class="entry-title hc-2">👁️ 9.2  La misokinésie</h1>
-<h2 id="definition_1">🔎 Définition</h2>
+<h1 id="92-la-misokinesie" class="entry-title hc-2">9.2  La misokinésie</h1>
+<h2 id="definition_1">Définition</h2>
 <p>La <strong>misokinésie</strong> désigne une réaction négative importante déclenchée par l'observation de certains mouvements répétitifs.</p>
 <p>Elle peut être considérée comme un phénomène apparenté à la misophonie, mais concernant principalement la <strong>vision</strong> plutôt que l'audition.</p>
-<h2 id="declencheurs-possibles">👀 Déclencheurs possibles</h2>
+<h2 id="declencheurs-possibles">Déclencheurs possibles</h2>
 <p>Par exemple :</p>
 <p>mouvements répétitifs d'une jambe ;
 tapotements avec les doigts ;
@@ -149,7 +164,7 @@ balancement du corps ;
 agitation répétée ;
 mouvements de bouche ;
 gestes répétitifs.</p>
-<h2 id="reactions">🧠 Réactions</h2>
+<h2 id="reactions">Réactions</h2>
 <p>Une personne peut ressentir :</p>
 <p>irritation ;
 tension ;
@@ -158,16 +173,16 @@ anxiété ;
 colère ;
 besoin de détourner le regard ;
 envie d'éviter la situation.</p>
-<h2 id="particularite">🧩 Particularité</h2>
+<h2 id="particularite">Particularité</h2>
 <p>La misokinésie montre que certains phénomènes de sensibilité peuvent être déclenchés non seulement par les sons mais également par des <strong>informations visuelles répétitives</strong>.</p>
-<h2 id="a-retenir_1">📌 À retenir</h2>
-<p><strong>Misophonie → sons déclencheurs.</strong></p>
-<p><strong>Misokinésie → mouvements visuels déclencheurs.</strong></p>
-<h1 id="93-lhyperacousie" class="entry-title hc-3">🔊 9.3  L'hyperacousie</h1>
-<h2 id="definition_2">🔎 Définition</h2>
+<h2 id="a-retenir_1">À retenir</h2>
+<p><strong>Misophonie  sons déclencheurs.</strong></p>
+<p><strong>Misokinésie  mouvements visuels déclencheurs.</strong></p>
+<h1 id="93-lhyperacousie" class="entry-title hc-3">9.3  L'hyperacousie</h1>
+<h2 id="definition_2">Définition</h2>
 <p>L'<strong>hyperacousie</strong> correspond à une sensibilité anormalement élevée à certains sons ordinaires.</p>
 <p>Des sons normalement tolérés peuvent être perçus comme extrêmement forts, désagréables ou douloureux.</p>
-<h2 id="sons-pouvant-devenir-difficiles">🔊 Sons pouvant devenir difficiles</h2>
+<h2 id="sons-pouvant-devenir-difficiles">Sons pouvant devenir difficiles</h2>
 <p>voix ;
 télévision ;
 musique ;
@@ -176,7 +191,7 @@ vaisselle ;
 appareils électroménagers ;
 bruits de portes ;
 sons aigus.</p>
-<h2 id="manifestations">🧠 Manifestations</h2>
+<h2 id="manifestations">Manifestations</h2>
 <p>L'hyperacousie peut provoquer :</p>
 <p>inconfort ;
 douleur ;
@@ -184,7 +199,7 @@ anxiété face aux sons ;
 évitement des environnements bruyants ;
 difficulté à supporter certaines activités ;
 fatigue importante après exposition sonore.</p>
-<h2 id="causes-possibles">🧬 Causes possibles</h2>
+<h2 id="causes-possibles">Causes possibles</h2>
 <p>Elle peut être associée à :</p>
 <p>certaines atteintes auditives ;
 acouphènes ;
@@ -193,12 +208,12 @@ traumatismes sonores ;
 certaines maladies neurologiques ;
 certaines situations médicales.</p>
 <p>Elle peut également apparaître sans cause clairement identifiée.</p>
-<h2 id="diagnostic_1">🩺 Diagnostic</h2>
+<h2 id="diagnostic_1">Diagnostic</h2>
 <p>Une évaluation médicale ou audiologique peut être réalisée afin d'évaluer la sensibilité auditive et de rechercher une cause.</p>
-<h2 id="a-retenir_2">📌 À retenir</h2>
+<h2 id="a-retenir_2">À retenir</h2>
 <p>L'hyperacousie concerne principalement <strong>l'intensité ou la tolérance aux sons</strong>, contrairement à la misophonie qui concerne surtout des sons précis associés à une réaction émotionnelle.</p>
-<h1 id="94-la-synesthesie" class="entry-title hc-4">🌈 9.4  La synesthésie</h1>
-<h2 id="definition_3">🔎 Définition</h2>
+<h1 id="94-la-synesthesie" class="entry-title hc-4">9.4  La synesthésie</h1>
+<h2 id="definition_3">Définition</h2>
 <p>La <strong>synesthésie</strong> est un phénomène perceptif dans lequel une stimulation d'un sens entraîne automatiquement une expérience supplémentaire dans un autre domaine sensoriel ou cognitif.</p>
 <p>La personne peut par exemple associer automatiquement :</p>
 <p>une lettre à une couleur ;
@@ -206,29 +221,29 @@ un chiffre à une couleur ;
 un son à une forme ;
 une musique à une sensation ;
 certains mots à des goûts.</p>
-<h2 id="exemple">🎨 Exemple</h2>
+<h2 id="exemple">Exemple</h2>
 <p>Une personne peut toujours percevoir mentalement :</p>
-<p><strong>A → rouge</strong></p>
-<p><strong>B → bleu</strong></p>
-<p><strong>7 → vert</strong></p>
+<p><strong>A  rouge</strong></p>
+<p><strong>B  bleu</strong></p>
+<p><strong>7  vert</strong></p>
 <p>Ces associations sont généralement automatiques et relativement stables.</p>
-<h2 id="particularites">🧠 Particularités</h2>
+<h2 id="particularites">Particularités</h2>
 <p>La synesthésie :</p>
 <p>est généralement involontaire ;
 peut être présente depuis longtemps ;
 est souvent stable ;
 n'est pas nécessairement source de souffrance ;
 n'est pas considérée en ellemême comme une maladie mentale.</p>
-<h2 id="mecanismes-etudies_1">🧬 Mécanismes étudiés</h2>
+<h2 id="mecanismes-etudies_1">Mécanismes étudiés</h2>
 <p>Plusieurs hypothèses concernent :</p>
 <p>la connectivité entre régions cérébrales ;
 le traitement multisensoriel ;
 les mécanismes de perception ;
 des facteurs génétiques.</p>
-<h2 id="a-retenir_3">📌 À retenir</h2>
+<h2 id="a-retenir_3">À retenir</h2>
 <p>La synesthésie est principalement <strong>un phénomène perceptif et neurocognitif</strong>, pas un trouble psychiatrique en soi.</p>
-<h1 id="95-la-sensibilite-sensorielle-accrue" class="entry-title hc-5">🧠 9.5  La sensibilité sensorielle accrue</h1>
-<h2 id="definition_4">🔎 Définition</h2>
+<h1 id="95-la-sensibilite-sensorielle-accrue" class="entry-title hc-5">9.5  La sensibilité sensorielle accrue</h1>
+<h2 id="definition_4">Définition</h2>
 <p>La <strong>sensibilité sensorielle accrue</strong> désigne une réaction particulièrement importante à certaines stimulations sensorielles.</p>
 <p>Elle peut concerner :</p>
 <p>les sons ;
@@ -238,7 +253,7 @@ les odeurs ;
 le goût ;
 le toucher ;
 les mouvements.</p>
-<h2 id="manifestations_1">👂👁️ Manifestations</h2>
+<h2 id="manifestations_1">Manifestations</h2>
 <p>Une personne peut être particulièrement sensible :</p>
 <p>aux lumières fortes ;
 aux bruits soudains ;
@@ -247,7 +262,7 @@ aux vêtements ou tissus ;
 aux odeurs ;
 au contact physique ;
 à certains environnements très stimulants.</p>
-<h2 id="contextes-possibles">🧩 Contextes possibles</h2>
+<h2 id="contextes-possibles">Contextes possibles</h2>
 <p>Une sensibilité sensorielle importante peut être observée dans différents contextes :</p>
 <p>troubles du neurodéveloppement ;
 migraines ;
@@ -257,23 +272,23 @@ certaines conditions neurologiques ;
 fatigue ;
 surcharge sensorielle.</p>
 <p>Elle peut également exister sans être liée à un trouble particulier.</p>
-<h2 id="a-retenir_4">📌 À retenir</h2>
+<h2 id="a-retenir_4">À retenir</h2>
 <p>Une forte sensibilité sensorielle n'est pas automatiquement pathologique. Son importance dépend notamment de son intensité et de ses conséquences sur le fonctionnement quotidien.</p>
-<h1 id="96-les-hallucinations" class="entry-title hc-1">👁️ 9.6  Les hallucinations</h1>
-<h2 id="definition_5">🔎 Définition</h2>
+<h1 id="96-les-hallucinations" class="entry-title hc-1">9.6  Les hallucinations</h1>
+<h2 id="definition_5">Définition</h2>
 <p>Une <strong>hallucination</strong> est une expérience perceptive qui survient en l'absence d'une stimulation sensorielle externe correspondante.</p>
 <p>Elle peut concerner différents sens.</p>
-<h2 id="hallucinations-visuelles">👁️ Hallucinations visuelles</h2>
+<h2 id="hallucinations-visuelles">Hallucinations visuelles</h2>
 <p>Perception d'une image, d'une personne, d'un objet ou d'une scène sans stimulus correspondant.</p>
-<h2 id="hallucinations-auditives">👂 Hallucinations auditives</h2>
+<h2 id="hallucinations-auditives">Hallucinations auditives</h2>
 <p>Perception de sons ou de voix sans source sonore externe correspondante.</p>
-<h2 id="hallucinations-olfactives">👃 Hallucinations olfactives</h2>
+<h2 id="hallucinations-olfactives">Hallucinations olfactives</h2>
 <p>Perception d'une odeur sans source identifiable.</p>
-<h2 id="hallucinations-gustatives">👅 Hallucinations gustatives</h2>
+<h2 id="hallucinations-gustatives">Hallucinations gustatives</h2>
 <p>Perception d'un goût sans stimulus correspondant.</p>
-<h2 id="hallucinations-tactiles">✋ Hallucinations tactiles</h2>
+<h2 id="hallucinations-tactiles">Hallucinations tactiles</h2>
 <p>Sensation de contact ou de mouvement sur le corps sans stimulus externe correspondant.</p>
-<h2 id="causes-possibles_1">🧠 Causes possibles</h2>
+<h2 id="causes-possibles_1">Causes possibles</h2>
 <p>Les hallucinations peuvent être associées à de nombreuses situations :</p>
 <p>certains troubles psychiatriques ;
 troubles neurologiques ;
@@ -285,7 +300,7 @@ intoxication ou sevrage de substances ;
 certains médicaments ;
 privation sensorielle ;
 fièvre ou états confusionnels.</p>
-<h2 id="diagnostic_2">🩺 Diagnostic</h2>
+<h2 id="diagnostic_2">Diagnostic</h2>
 <p>Le contexte est essentiel.</p>
 <p>Une hallucination isolée ne permet pas à elle seule de déterminer l'existence d'un trouble psychiatrique.</p>
 <p>L'évaluation cherche notamment à déterminer :</p>
@@ -295,34 +310,34 @@ sa durée ;
 les circonstances ;
 les autres symptômes ;
 les éventuelles causes médicales ou neurologiques.</p>
-<h2 id="a-retenir_5">📌 À retenir</h2>
+<h2 id="a-retenir_5">À retenir</h2>
 <p>Une hallucination est une <strong>expérience perceptive sans stimulus externe correspondant</strong>. Ses causes sont multiples.</p>
-<h1 id="97-les-illusions-perceptives" class="entry-title hc-2">🪞 9.7  Les illusions perceptives</h1>
-<h2 id="definition_6">🔎 Définition</h2>
+<h1 id="97-les-illusions-perceptives" class="entry-title hc-2">9.7  Les illusions perceptives</h1>
+<h2 id="definition_6">Définition</h2>
 <p>Une <strong>illusion perceptive</strong> correspond à une interprétation erronée ou déformée d'une stimulation réellement présente.</p>
 <p>La différence fondamentale avec l'hallucination est donc la présence d'un stimulus externe.</p>
 <h3 id="exemple_1">Exemple :</h3>
 <p><strong>Illusion :</strong> un manteau dans une pièce sombre est interprété comme une personne.</p>
 <p><strong>Hallucination :</strong> perception d'une personne alors qu'aucun objet correspondant n'est présent.</p>
-<h2 id="types-possibles">🧠 Types possibles</h2>
+<h2 id="types-possibles">Types possibles</h2>
 <p>Les illusions peuvent concerner :</p>
 <p>la vision ;
 l'audition ;
 le toucher ;
 l'interprétation de formes ;
 l'identification d'objets.</p>
-<h2 id="causes-possibles_2">🧬 Causes possibles</h2>
+<h2 id="causes-possibles_2">Causes possibles</h2>
 <p>Elles peuvent apparaître dans des situations normales, notamment :</p>
 <p>faible luminosité ;
 fatigue ;
 stress ;
 attention réduite.</p>
 <p>Elles peuvent également être observées dans certaines conditions neurologiques ou psychiatriques.</p>
-<h2 id="a-retenir_6">📌 À retenir</h2>
+<h2 id="a-retenir_6">À retenir</h2>
 <p><strong>Illusion = stimulus réel mal interprété.</strong></p>
 <p><strong>Hallucination = perception sans stimulus externe correspondant.</strong></p>
-<h1 id="98-la-derealisation" class="entry-title hc-3">🌀 9.8  La déréalisation</h1>
-<h2 id="definition_7">🔎 Définition</h2>
+<h1 id="98-la-derealisation" class="entry-title hc-3">9.8  La déréalisation</h1>
+<h2 id="definition_7">Définition</h2>
 <p>La <strong>déréalisation</strong> correspond à une sensation d'étrangeté ou d'irréalité concernant l'environnement.</p>
 <p>Le monde peut sembler :</p>
 <p>irréel ;
@@ -331,7 +346,7 @@ distant ;
 brumeux ;
 comme dans un rêve ;
 « faux » ou inhabituel.</p>
-<h2 id="manifestations_2">🧠 Manifestations</h2>
+<h2 id="manifestations_2">Manifestations</h2>
 <p>Une personne peut avoir l'impression :</p>
 <p>que les lieux sont étranges ;
 que les personnes semblent irréelles ;
@@ -339,7 +354,7 @@ que les couleurs ont changé ;
 que les sons sont différents ;
 d'observer le monde comme derrière une vitre ;
 d'être dans un rêve.</p>
-<h2 id="contextes-possibles_1">🧩 Contextes possibles</h2>
+<h2 id="contextes-possibles_1">Contextes possibles</h2>
 <p>La déréalisation peut être associée à :</p>
 <p>stress intense ;
 anxiété ;
@@ -348,13 +363,13 @@ traumatisme ;
 fatigue importante ;
 troubles dissociatifs.</p>
 <p>Elle peut également apparaître de manière transitoire.</p>
-<h2 id="a-retenir_7">📌 À retenir</h2>
+<h2 id="a-retenir_7">À retenir</h2>
 <p>La déréalisation concerne principalement <strong>le sentiment de réalité de l'environnement</strong>.</p>
-<h1 id="99-la-depersonnalisation" class="entry-title hc-4">🪞 9.9  La dépersonnalisation</h1>
-<h2 id="definition_8">🔎 Définition</h2>
+<h1 id="99-la-depersonnalisation" class="entry-title hc-4">9.9  La dépersonnalisation</h1>
+<h2 id="definition_8">Définition</h2>
 <p>La <strong>dépersonnalisation</strong> correspond à une sensation d'étrangeté par rapport à soimême.</p>
 <p>Le sentiment d'être soi peut sembler modifié ou distant.</p>
-<h2 id="manifestations_3">🧠 Manifestations</h2>
+<h2 id="manifestations_3">Manifestations</h2>
 <p>Une personne peut avoir l'impression :</p>
 <p>d'observer son propre corps de l'extérieur ;
 d'être déconnectée de ses émotions ;
@@ -362,17 +377,17 @@ que ses pensées ne semblent pas totalement personnelles ;
 d'agir automatiquement ;
 que son corps semble étrange ;
 d'être comme un observateur de soimême.</p>
-<h2 id="difference-avec-la-derealisation">🧩 Différence avec la déréalisation</h2>
+<h2 id="difference-avec-la-derealisation">Différence avec la déréalisation</h2>
 <p><strong>Dépersonnalisation :</strong> sentiment d'irréalité concernant <strong>soimême</strong>.</p>
 <p><strong>Déréalisation :</strong> sentiment d'irréalité concernant <strong>l'environnement</strong>.</p>
 <p>Les deux peuvent apparaître simultanément.</p>
-<h2 id="a-retenir_8">📌 À retenir</h2>
+<h2 id="a-retenir_8">À retenir</h2>
 <p>La dépersonnalisation concerne principalement <strong>l'expérience subjective de soi</strong>.</p>
-<h1 id="910-la-surcharge-sensorielle" class="entry-title hc-5">🔄 9.10  La surcharge sensorielle</h1>
-<h2 id="definition_9">🔎 Définition</h2>
+<h1 id="910-la-surcharge-sensorielle" class="entry-title hc-5">9.10  La surcharge sensorielle</h1>
+<h2 id="definition_9">Définition</h2>
 <p>La <strong>surcharge sensorielle</strong> survient lorsque la quantité ou l'intensité des stimulations reçues devient difficile à traiter.</p>
 <p>Le cerveau reçoit alors davantage d'informations sensorielles qu'il ne parvient efficacement à organiser à ce momentlà.</p>
-<h2 id="stimulations-possibles">🔊 Stimulations possibles</h2>
+<h2 id="stimulations-possibles">Stimulations possibles</h2>
 <p>bruit ;
 lumière ;
 foule ;
@@ -381,7 +396,7 @@ odeurs ;
 mouvements ;
 contacts physiques ;
 informations visuelles nombreuses.</p>
-<h2 id="manifestations_4">🧠 Manifestations</h2>
+<h2 id="manifestations_4">Manifestations</h2>
 <p>Elle peut provoquer :</p>
 <p>fatigue ;
 irritabilité ;
@@ -391,7 +406,7 @@ anxiété ;
 sensation d'être submergé ;
 difficulté à communiquer ;
 baisse de concentration.</p>
-<h2 id="contextes-possibles_2">🧩 Contextes possibles</h2>
+<h2 id="contextes-possibles_2">Contextes possibles</h2>
 <p>La surcharge sensorielle peut apparaître dans différents contextes et n'est pas spécifique à un seul trouble.</p>
 <p>Elle peut notamment être favorisée par :</p>
 <p>fatigue ;
@@ -400,28 +415,49 @@ environnement très stimulant ;
 certaines particularités neurodéveloppementales ;
 certaines migraines ;
 certaines conditions neurologiques.</p>
-<h2 id="a-retenir_9">📌 À retenir</h2>
+<h2 id="a-retenir_9">À retenir</h2>
 <p>La surcharge sensorielle correspond à une <strong>difficulté temporaire ou répétée à traiter un volume important de stimulations sensorielles</strong>.</p>
-<h1 id="a-retenir-partie-9" class="entry-title hc-1">🧠 À RETENIR  PARTIE 9</h1>
+<h1 id="a-retenir-partie-9" class="entry-title hc-1">À RETENIR  PARTIE 9</h1>
 <p>La perception n'est pas une simple reproduction du monde extérieur. Le cerveau sélectionne, organise et interprète constamment les informations provenant des sens.</p>
 <p>Une modification de ce fonctionnement peut concerner :</p>
-<p><strong>👂 L'audition</strong></p>
-<p>→ misophonie, hyperacousie.</p>
-<p><strong>👁️ La vision</strong></p>
-<p>→ misokinésie, illusions perceptives.</p>
-<p><strong>🌈 Plusieurs sens</strong></p>
-<p>→ synesthésie, surcharge sensorielle.</p>
-<p><strong>🧠 La perception du réel</strong></p>
-<p>→ déréalisation.</p>
-<p><strong>🪞 La perception de soi</strong></p>
-<p>→ dépersonnalisation.</p>
-<p><strong>👁️👂 Les expériences perceptives sans stimulus correspondant</strong></p>
-<p>→ hallucinations.</p>
+<p>** L'audition**</p>
+<p>misophonie, hyperacousie.</p>
+<p>** La vision**</p>
+<p>misokinésie, illusions perceptives.</p>
+<p>** Plusieurs sens**</p>
+<p>synesthésie, surcharge sensorielle.</p>
+<p>** La perception du réel**</p>
+<p>déréalisation.</p>
+<p>** La perception de soi**</p>
+<p>dépersonnalisation.</p>
+<p>** Les expériences perceptives sans stimulus correspondant**</p>
+<p>hallucinations.</p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Syndromes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-a-la-memoire/"><span class="similar-icon">🧬</span>Syndromes liés à la mémoire</a><a class="similar-item" href="/chapitre/syndromes-syndromes-medicaux-avec-consequences-psychologiques/"><span class="similar-icon">🧬</span>Syndromes médicaux avec conséquences psychologiques</a><a class="similar-item" href="/chapitre/syndromes-phenomenes-psychologiques-modernes-syndromes/"><span class="similar-icon">🧬</span>Phénomènes psychologiques modernes (syndromes)</a></div>
+      <h2>Autres chapitres de « Syndromes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-a-la-memoire/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes liés à la mémoire</a><a class="similar-item" href="/chapitre/syndromes-syndromes-medicaux-avec-consequences-psychologiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes médicaux avec conséquences psychologiques</a><a class="similar-item" href="/chapitre/syndromes-phenomenes-psychologiques-modernes-syndromes/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Phénomènes psychologiques modernes (syndromes)</a></div>
     </div>
     <a class="back-link" href="/categorie/syndromes/">← Retour à « Syndromes psychologiques »</a>
   </div>
@@ -507,23 +543,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -541,7 +579,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -721,9 +759,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -732,10 +772,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -842,7 +882,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -882,8 +922,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -914,7 +954,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -969,7 +1009,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -993,17 +1033,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1045,7 +1085,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

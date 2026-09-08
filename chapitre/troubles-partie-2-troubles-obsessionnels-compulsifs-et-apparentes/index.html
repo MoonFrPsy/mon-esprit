@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#21-le-trouble-obsessionnel-compulsif-toc">🧠 2.1 Le trouble obsessionnel-compulsif (TOC)</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#les-obsessions">Les obsessions</a></li><li><a href="#les-compulsions">Les compulsions</a></li><li><a href="#le-cycle-obsession-compulsion">Le cycle obsession-compulsion</a></li><li><a href="#causes">Causes</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#comment-aider-un-proche-avec-un-toc">🤝 Comment aider un proche avec un TOC</a></li><li><a href="#techniques-concretes">🛠️ Techniques concrètes</a></li><li><a href="#idees-recues">Idées reçues</a></li><li><a href="#exemple-fictif">Exemple fictif</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#22-le-trouble-dysmorphique-corporel">🪞 2.2 Le trouble dysmorphique corporel</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#preoccupation-concernant-lapparence">Préoccupation concernant l'apparence</a></li><li><a href="#comportements-associes">Comportements associés</a></li><li><a href="#manifestations-psychologiques">Manifestations psychologiques</a></li><li><a href="#causes_1">Causes</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#comment-aider-un-proche">🤝 Comment aider un proche</a></li><li><a href="#techniques-concretes_1">🛠️ Techniques concrètes</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#23-le-trouble-daccumulation">🏠 2.3 Le trouble d'accumulation</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#pourquoi-les-objets-sont-ils-conserves">Pourquoi les objets sont-ils conservés ?</a></li><li><a href="#accumulation">Accumulation</a></li><li><a href="#manifestations-comportementales">Manifestations comportementales</a></li><li><a href="#consequences_2">Conséquences</a></li><li><a href="#causes_2">Causes</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#comment-aider-un-proche-accumulateur">🤝 Comment aider un proche accumulateur</a></li><li><a href="#techniques-concretes_2">🛠️ Techniques concrètes</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#24-la-trichotillomanie">💇 2.4 La trichotillomanie</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#zones-concernees">Zones concernées</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#declencheurs-possibles">Déclencheurs possibles</a></li><li><a href="#consequences_3">Conséquences</a></li><li><a href="#causes_3">Causes</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#comment-aider-un-proche_1">🤝 Comment aider un proche</a></li><li><a href="#techniques-concretes_3">🛠️ Techniques concrètes</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#25-le-trouble-dexcoriation">✋ 2.5 Le trouble d'excoriation</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#zones-concernees_1">Zones concernées</a></li><li><a href="#declencheurs">Déclencheurs</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#consequences-physiques">Conséquences physiques</a></li><li><a href="#consequences-psychologiques">Conséquences psychologiques</a></li><li><a href="#causes_4">Causes</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#comment-aider-un-proche_2">🤝 Comment aider un proche</a></li><li><a href="#techniques-concretes_4">🛠️ Techniques concrètes</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#26-trouble-obsessionnel-compulsif-et-apparente-induit-par-une-substance-ou-un-medicament">🧠 2.6 Trouble obsessionnel-compulsif et apparenté induit par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#causes_5">Causes</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#27-trouble-obsessionnel-compulsif-et-apparente-du-a-une-autre-affection-medicale">🧠 2.7 Trouble obsessionnel-compulsif et apparenté dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#causes_6">Causes</a></li><li><a href="#diagnostic_6">Diagnostic</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#28-autre-trouble-obsessionnel-compulsif-et-apparente-specifie">🧠 2.8 Autre trouble obsessionnel-compulsif et apparenté spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#diagnostic_7">Diagnostic</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#29-trouble-obsessionnel-compulsif-et-apparente-non-specifie">🧠 2.9 Trouble obsessionnel-compulsif et apparenté non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#diagnostic_8">Diagnostic</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#21-le-trouble-obsessionnel-compulsif-toc">2.1 Le trouble obsessionnel-compulsif (TOC)</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#les-obsessions">Les obsessions</a></li><li><a href="#les-compulsions">Les compulsions</a></li><li><a href="#le-cycle-obsession-compulsion">Le cycle obsession-compulsion</a></li><li><a href="#causes">Causes</a></li><li><a href="#consequences">Conséquences</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#comment-aider-un-proche-avec-un-toc">Comment aider un proche avec un TOC</a></li><li><a href="#techniques-concretes">Techniques concrètes</a></li><li><a href="#idees-recues">Idées reçues</a></li><li><a href="#exemple-fictif">Exemple fictif</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#22-le-trouble-dysmorphique-corporel">2.2 Le trouble dysmorphique corporel</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#preoccupation-concernant-lapparence">Préoccupation concernant l'apparence</a></li><li><a href="#comportements-associes">Comportements associés</a></li><li><a href="#manifestations-psychologiques">Manifestations psychologiques</a></li><li><a href="#causes_1">Causes</a></li><li><a href="#consequences_1">Conséquences</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#comment-aider-un-proche">Comment aider un proche</a></li><li><a href="#techniques-concretes_1">Techniques concrètes</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#23-le-trouble-daccumulation">2.3 Le trouble d'accumulation</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#pourquoi-les-objets-sont-ils-conserves">Pourquoi les objets sont-ils conservés ?</a></li><li><a href="#accumulation">Accumulation</a></li><li><a href="#manifestations-comportementales">Manifestations comportementales</a></li><li><a href="#consequences_2">Conséquences</a></li><li><a href="#causes_2">Causes</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#comment-aider-un-proche-accumulateur">Comment aider un proche accumulateur</a></li><li><a href="#techniques-concretes_2">Techniques concrètes</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#24-la-trichotillomanie">2.4 La trichotillomanie</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#zones-concernees">Zones concernées</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#declencheurs-possibles">Déclencheurs possibles</a></li><li><a href="#consequences_3">Conséquences</a></li><li><a href="#causes_3">Causes</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#comment-aider-un-proche_1">Comment aider un proche</a></li><li><a href="#techniques-concretes_3">Techniques concrètes</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#25-le-trouble-dexcoriation">2.5 Le trouble d'excoriation</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#zones-concernees_1">Zones concernées</a></li><li><a href="#declencheurs">Déclencheurs</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#consequences-physiques">Conséquences physiques</a></li><li><a href="#consequences-psychologiques">Conséquences psychologiques</a></li><li><a href="#causes_4">Causes</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#comment-aider-un-proche_2">Comment aider un proche</a></li><li><a href="#techniques-concretes_4">Techniques concrètes</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#26-trouble-obsessionnel-compulsif-et-apparente-induit-par-une-substance-ou-un-medicament">2.6 Trouble obsessionnel-compulsif et apparenté induit par une substance ou un médicament</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#causes_5">Causes</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#evolution">Évolution</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#27-trouble-obsessionnel-compulsif-et-apparente-du-a-une-autre-affection-medicale">2.7 Trouble obsessionnel-compulsif et apparenté dû à une autre affection médicale</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#causes_6">Causes</a></li><li><a href="#diagnostic_6">Diagnostic</a></li><li><a href="#evolution_1">Évolution</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#28-autre-trouble-obsessionnel-compulsif-et-apparente-specifie">2.8 Autre trouble obsessionnel-compulsif et apparenté spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#diagnostic_7">Diagnostic</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#29-trouble-obsessionnel-compulsif-et-apparente-non-specifie">2.9 Trouble obsessionnel-compulsif et apparenté non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#diagnostic_8">Diagnostic</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Partie 2 — Troubles obsessionnels-compulsifs et apparentés',
         category: 'Troubles psychologiques',
-        icon: '🩺'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/troubles/">Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Partie 2 — Troubles obsessionnels-compulsifs et apparentés</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,7 +113,7 @@
     </svg>
     </div>
     <div class="article-body">
-      <h1 id="21-le-trouble-obsessionnel-compulsif-toc" class="entry-title hc-1">🧠 2.1  Le trouble obsessionnel-compulsif (TOC)</h1>
+      <h1 id="21-le-trouble-obsessionnel-compulsif-toc" class="entry-title hc-1">2.1  Le trouble obsessionnel-compulsif (TOC)</h1>
 <h2 id="definition">Définition</h2>
 <p>Le <strong>trouble obsessionnel-compulsif (<a class="gloss-link" href="#21-le-trouble-obsessionnel-compulsif-toc" title="Voir la définition de TOC">TOC</a>)</strong> est un trouble psychologique caractérisé par la présence d'<strong>obsessions</strong>, de <strong>compulsions</strong>, ou des deux.</p>
 <p>Les obsessions sont des pensées, images mentales ou impulsions répétitives et persistantes qui sont vécues comme indésirables ou difficiles à contrôler.</p>
@@ -138,7 +153,7 @@
 </ul>
 <h2 id="le-cycle-obsession-compulsion">Le cycle obsession-compulsion</h2>
 <p>Un mécanisme fréquent peut être résumé ainsi :</p>
-<p><strong>Obsession → anxiété → compulsion → soulagement temporaire → retour de l'obsession</strong></p>
+<p><strong>Obsession  anxiété  compulsion  soulagement temporaire  retour de l'obsession</strong></p>
 <p>La compulsion peut donc diminuer momentanément l'anxiété, ce qui peut renforcer la tendance à la reproduire.</p>
 <h2 id="causes">Causes</h2>
 <p>Le TOC résulte probablement de l'interaction de plusieurs facteurs :</p>
@@ -166,14 +181,14 @@
 <h2 id="prise-en-charge">Prise en charge</h2>
 <p>La <strong>TCC</strong>, notamment avec exposition et prévention de la réponse, constitue une approche importante dans la prise en charge du TOC.</p>
 <p>Certains médicaments peuvent également être utilisés selon la situation.</p>
-<h2 id="comment-aider-un-proche-avec-un-toc">🤝 Comment aider un proche avec un TOC</h2>
+<h2 id="comment-aider-un-proche-avec-un-toc">Comment aider un proche avec un TOC</h2>
 <ul>
 <li><strong>Ne pas participer aux rituels.</strong> Rassurer la personne à sa place, ou accomplir une vérification pour elle, peut sembler aidant sur le moment, mais entretient le TOC à long terme en confirmant que la vérification était nécessaire.</li>
 <li><strong>Ne pas forcer l'arrêt brutal d'un rituel.</strong> L'empêcher de force peut provoquer une détresse intense sans réduire le trouble ; la réduction se travaille progressivement, idéalement avec un professionnel.</li>
 <li><strong>Distinguer la personne du trouble.</strong> Une remarque comme « tu exagères » peut renforcer la honte déjà présente ; il est plus aidant de reconnaître que l'obsession est vécue comme réelle et angoissante, même si la personne sait elle-même qu'elle est excessive.</li>
 <li><strong>Encourager la prise en charge professionnelle</strong> sans culpabiliser si la personne n'est pas encore prête.</li>
 </ul>
-<h2 id="techniques-concretes">🛠️ Techniques concrètes</h2>
+<h2 id="techniques-concretes">Techniques concrètes</h2>
 <h3 id="a-court-terme-face-a-une-envie-de-compulsion">À court terme, face à une envie de compulsion</h3>
 <ul>
 <li><strong>Retarder la compulsion de quelques minutes</strong> plutôt que de l'arrêter d'un coup — même un court délai aide à observer que l'anxiété redescend un peu d'elle-même.</li>
@@ -195,7 +210,7 @@
 <p>Une personne craint constamment d'avoir contaminé sa famille après avoir touché une poignée de porte. Elle se lave alors les mains pendant une longue période. Le soulagement obtenu est temporaire, puis le doute revient et le cycle recommence.</p>
 <h2 id="a-retenir">À retenir</h2>
 <p>Le TOC repose principalement sur des obsessions et/ou compulsions répétitives, difficiles à contrôler et suffisamment importantes pour entraîner une souffrance ou une gêne significative.</p>
-<h1 id="22-le-trouble-dysmorphique-corporel" class="entry-title hc-2">🪞 2.2  Le trouble dysmorphique corporel</h1>
+<h1 id="22-le-trouble-dysmorphique-corporel" class="entry-title hc-2">2.2  Le trouble dysmorphique corporel</h1>
 <h2 id="definition_1">Définition</h2>
 <p>Le <strong>trouble dysmorphique corporel</strong>, parfois appelé dysmorphophobie, est un trouble caractérisé par une préoccupation importante concernant un ou plusieurs aspects de son apparence physique.</p>
 <p>La caractéristique centrale n'est pas simplement de ne pas aimer une partie de son corps, mais d'avoir une préoccupation suffisamment importante pour entraîner une souffrance ou perturber la vie quotidienne.</p>
@@ -249,18 +264,18 @@
 <p>Le diagnostic repose sur la nature et l'intensité de la préoccupation ainsi que sur les comportements répétitifs qui l'accompagnent et leurs conséquences.</p>
 <h2 id="prise-en-charge_1">Prise en charge</h2>
 <p>La TCC constitue une approche fréquemment utilisée. Certains traitements médicamenteux peuvent également être envisagés.</p>
-<h2 id="comment-aider-un-proche">🤝 Comment aider un proche</h2>
+<h2 id="comment-aider-un-proche">Comment aider un proche</h2>
 <ul>
 <li><strong>Éviter de commenter son apparence</strong>, même positivement (« mais non, tu es très bien ») : ces remarques, bien qu'affectueuses, peuvent renforcer l'idée que l'apparence est le sujet central à surveiller.</li>
 <li><strong>Ne pas participer à la recherche de réassurance répétée.</strong> Répondre à chaque « est-ce que ça se voit ? » peut sembler utile mais entretient le cycle de vérification.</li>
 <li><strong>Éviter de minimiser</strong> (« tout le monde a des complexes ») : la souffrance ressentie est réelle et disproportionnée par rapport à ce que les autres perçoivent.</li>
 <li><strong>Encourager un accompagnement professionnel</strong> plutôt qu'une solution esthétique, qui ne résout généralement pas la préoccupation sous-jacente.</li>
 </ul>
-<h2 id="techniques-concretes_1">🛠️ Techniques concrètes</h2>
+<h2 id="techniques-concretes_1">Techniques concrètes</h2>
 <p>Le travail thérapeutique porte notamment sur la réduction progressive des vérifications au miroir et de la réassurance recherchée, ainsi que sur une exposition graduelle aux situations sociales redoutées. Un traitement médicamenteux peut être proposé par un professionnel de santé en complément, selon la situation.</p>
 <h2 id="a-retenir_1">À retenir</h2>
 <p>Le trouble dysmorphique corporel ne correspond pas simplement au fait de trouver une partie de son corps peu esthétique. Il implique une préoccupation excessive et envahissante concernant l'apparence.</p>
-<h1 id="23-le-trouble-daccumulation" class="entry-title hc-3">🏠 2.3  Le trouble d'accumulation</h1>
+<h1 id="23-le-trouble-daccumulation" class="entry-title hc-3">2.3  Le trouble d'accumulation</h1>
 <h2 id="definition_2">Définition</h2>
 <p>Le <strong>trouble d'accumulation</strong> est caractérisé par une difficulté persistante à jeter ou à se séparer de possessions, indépendamment de leur valeur réelle.</p>
 <p>Cette difficulté entraîne progressivement une accumulation importante d'objets et peut rendre certaines pièces difficiles ou impossibles à utiliser normalement.</p>
@@ -316,18 +331,18 @@
 <p>Le diagnostic tient notamment compte de l'accumulation, de la difficulté persistante à se séparer des objets et des conséquences sur le fonctionnement du logement ou de la vie quotidienne.</p>
 <h2 id="prise-en-charge_2">Prise en charge</h2>
 <p>La TCC adaptée au trouble d'accumulation peut notamment travailler sur les décisions concernant les possessions et la difficulté à s'en séparer.</p>
-<h2 id="comment-aider-un-proche-accumulateur">🤝 Comment aider un proche accumulateur</h2>
+<h2 id="comment-aider-un-proche-accumulateur">Comment aider un proche accumulateur</h2>
 <ul>
 <li><strong>Ne jamais jeter les affaires de la personne sans son accord</strong>, même avec de bonnes intentions : cela peut être vécu comme une violation grave et détruire la confiance, sans résoudre le trouble.</li>
 <li><strong>Avancer par petites étapes choisies ensemble</strong> plutôt que de viser un grand rangement d'un coup, souvent source d'échec et de détresse intense.</li>
 <li><strong>Comprendre que la valeur perçue de l'objet est réelle pour la personne</strong>, même si elle semble disproportionnée de l'extérieur — inutile de débattre de la logique de cet attachement.</li>
 <li><strong>Prendre soin de la sécurité du logement</strong> (risques liés à l'encombrement, à l'hygiène) sans en faire uniquement une question de propreté ou de volonté.</li>
 </ul>
-<h2 id="techniques-concretes_2">🛠️ Techniques concrètes</h2>
+<h2 id="techniques-concretes_2">Techniques concrètes</h2>
 <p>Le travail thérapeutique porte généralement sur la prise de décision face à chaque objet, la tolérance à l'inconfort ressenti lors d'un tri, et une progression très graduelle plutôt qu'un grand désencombrement ponctuel — qui, seul, ne modifie généralement pas le trouble sur le long terme.</p>
 <h2 id="a-retenir_2">À retenir</h2>
 <p>Le trouble d'accumulation ne correspond pas simplement au fait d'avoir beaucoup d'affaires. C'est la difficulté persistante à s'en séparer et l'accumulation qui en résulte qui sont centrales.</p>
-<h1 id="24-la-trichotillomanie" class="entry-title hc-4">💇 2.4  La trichotillomanie</h1>
+<h1 id="24-la-trichotillomanie" class="entry-title hc-4">2.4  La trichotillomanie</h1>
 <h2 id="definition_3">Définition</h2>
 <p>La <strong>trichotillomanie</strong>, ou trouble d'arrachage des cheveux, est un trouble caractérisé par des arrachages répétitifs de cheveux ou de poils, entraînant généralement une perte visible.</p>
 <p>La personne peut ressentir une tension ou une envie importante avant l'arrachage et un soulagement ou une satisfaction après celui-ci.</p>
@@ -369,17 +384,17 @@
 <p>Le diagnostic prend notamment en compte la répétition de l'arrachage, la perte de cheveux ou de poils et les conséquences sur la vie de la personne.</p>
 <h2 id="prise-en-charge_3">Prise en charge</h2>
 <p>Certaines TCC, notamment les approches basées sur l'entraînement à l'inversion des habitudes, peuvent être utilisées.</p>
-<h2 id="comment-aider-un-proche_1">🤝 Comment aider un proche</h2>
+<h2 id="comment-aider-un-proche_1">Comment aider un proche</h2>
 <ul>
 <li><strong>Ne pas faire de remarques sur les zones dégarnies</strong> ni demander d'arrêter par la seule volonté — le geste est souvent peu conscient, pas un choix délibéré.</li>
 <li><strong>Proposer des alternatives sensorielles</strong> (objet à manipuler, balle antistress) plutôt que d'interdire le geste directement.</li>
 <li><strong>Aider à repérer les moments à risque</strong> (ennui, concentration, stress) sans surveiller en permanence, ce qui peut ajouter de la pression.</li>
 </ul>
-<h2 id="techniques-concretes_3">🛠️ Techniques concrètes</h2>
+<h2 id="techniques-concretes_3">Techniques concrètes</h2>
 <p>L'entraînement à l'inversion des habitudes est l'approche la plus étudiée : elle consiste à repérer précisément les moments et sensations qui précèdent le geste, puis à leur substituer une action incompatible (par exemple serrer les poings) le temps que l'envie passe. Un accompagnement psychologique aide à identifier les déclencheurs propres à chaque personne.</p>
 <h2 id="a-retenir_3">À retenir</h2>
 <p>La trichotillomanie n'est pas simplement une mauvaise habitude. Il s'agit d'un comportement répétitif pouvant devenir difficile à contrôler et entraîner des conséquences physiques et psychologiques.</p>
-<h1 id="25-le-trouble-dexcoriation" class="entry-title hc-5">✋ 2.5 Le trouble d'excoriation</h1>
+<h1 id="25-le-trouble-dexcoriation" class="entry-title hc-5">2.5 Le trouble d'excoriation</h1>
 <h2 id="definition_4">Définition</h2>
 <p>Le <strong>trouble d'excoriation</strong>, également appelé trouble de grattage pathologique de la peau, est caractérisé par le fait de toucher, gratter, pincer ou arracher de manière répétée certaines zones de la peau, entraînant des lésions.</p>
 <p>La personne peut ressentir une tension ou une envie avant le comportement et un soulagement après celui-ci.</p>
@@ -435,17 +450,17 @@
 <p>Le diagnostic prend notamment en compte les lésions provoquées, les tentatives pour réduire ou arrêter le comportement et son impact sur la vie quotidienne.</p>
 <h2 id="prise-en-charge_4">Prise en charge</h2>
 <p>La TCC, notamment certaines techniques utilisées pour les comportements répétitifs, peut être proposée.</p>
-<h2 id="comment-aider-un-proche_2">🤝 Comment aider un proche</h2>
+<h2 id="comment-aider-un-proche_2">Comment aider un proche</h2>
 <ul>
 <li><strong>Éviter de dire « arrête de te gratter »</strong> de façon répétée : cela ajoute une pression supplémentaire sans aider à contrôler un geste souvent automatique.</li>
 <li><strong>Ne pas focaliser les conversations sur les lésions visibles</strong>, ce qui peut renforcer la honte.</li>
 <li><strong>Encourager à consulter</strong> si les lésions s'aggravent ou si le geste devient très fréquent, sans dramatiser.</li>
 </ul>
-<h2 id="techniques-concretes_4">🛠️ Techniques concrètes</h2>
+<h2 id="techniques-concretes_4">Techniques concrètes</h2>
 <p>Comme pour la trichotillomanie, l'entraînement à l'inversion des habitudes (repérer le geste et le remplacer par une action incompatible) fait partie des approches les plus utilisées, en complément d'un travail sur les déclencheurs émotionnels (stress, ennui) qui précèdent souvent le comportement.</p>
 <h2 id="a-retenir_4">À retenir</h2>
 <p>Le trouble d'excoriation correspond à un comportement répétitif de manipulation de la peau entraînant des lésions et une difficulté à contrôler ce comportement.</p>
-<h1 id="26-trouble-obsessionnel-compulsif-et-apparente-induit-par-une-substance-ou-un-medicament" class="entry-title hc-1">🧠 2.6  Trouble obsessionnel-compulsif et apparenté induit par une substance ou un médicament</h1>
+<h1 id="26-trouble-obsessionnel-compulsif-et-apparente-induit-par-une-substance-ou-un-medicament" class="entry-title hc-1">2.6  Trouble obsessionnel-compulsif et apparenté induit par une substance ou un médicament</h1>
 <h2 id="definition_5">Définition</h2>
 <p>Ce trouble correspond à l'apparition de symptômes obsessionnels ou compulsifs en lien avec l'utilisation d'une substance, d'un médicament, une intoxication ou un sevrage.</p>
 <p>Les symptômes peuvent ressembler à ceux d'un TOC classique, mais leur apparition est liée à une substance ou à un médicament.</p>
@@ -479,7 +494,7 @@
 <p>Une évaluation médicale peut être nécessaire afin de déterminer s'il faut modifier, arrêter ou remplacer un médicament, ou prendre en charge une consommation de substance.</p>
 <h2 id="a-retenir_5">À retenir</h2>
 <p>Des symptômes ressemblant à ceux d'un TOC peuvent parfois être provoqués ou aggravés par une substance ou un médicament. Dans ce cas, ils sont considérés différemment d'un TOC primaire.</p>
-<h1 id="27-trouble-obsessionnel-compulsif-et-apparente-du-a-une-autre-affection-medicale" class="entry-title hc-2">🧠 2.7  Trouble obsessionnel-compulsif et apparenté dû à une autre affection médicale</h1>
+<h1 id="27-trouble-obsessionnel-compulsif-et-apparente-du-a-une-autre-affection-medicale" class="entry-title hc-2">2.7  Trouble obsessionnel-compulsif et apparenté dû à une autre affection médicale</h1>
 <h2 id="definition_6">Définition</h2>
 <p>Ce trouble correspond à la présence de symptômes obsessionnels ou compulsifs considérés comme directement liés aux conséquences physiologiques d'une affection médicale.</p>
 <h2 id="manifestations_3">Manifestations</h2>
@@ -509,7 +524,7 @@
 <p>Une prise en charge psychologique peut également être proposée lorsque les symptômes persistent ou entraînent une gêne importante.</p>
 <h2 id="a-retenir_6">À retenir</h2>
 <p>Certains symptômes obsessionnels ou compulsifs peuvent avoir une origine médicale. Une évaluation complète permet de rechercher la cause la plus probable.</p>
-<h1 id="28-autre-trouble-obsessionnel-compulsif-et-apparente-specifie" class="entry-title hc-3">🧠 2.8  Autre trouble obsessionnel-compulsif et apparenté spécifié</h1>
+<h1 id="28-autre-trouble-obsessionnel-compulsif-et-apparente-specifie" class="entry-title hc-3">2.8  Autre trouble obsessionnel-compulsif et apparenté spécifié</h1>
 <h2 id="definition_7">Définition</h2>
 <p>Cette catégorie est utilisée lorsqu'une personne présente des symptômes appartenant au groupe des troubles obsessionnels-compulsifs et apparentés, mais que ces symptômes ne correspondent pas entièrement aux critères d'un trouble spécifique.</p>
 <p>Dans ce cas, le professionnel précise généralement pourquoi la présentation ne correspond pas complètement à une catégorie particulière.</p>
@@ -532,7 +547,7 @@
 <p>Une psychothérapie peut notamment être proposée.</p>
 <h2 id="a-retenir_7">À retenir</h2>
 <p>« Spécifié » signifie que les symptômes sont suffisamment importants pour être pris en compte, mais qu'ils ne correspondent pas complètement à l'une des catégories principales et que la raison est précisée.</p>
-<h1 id="29-trouble-obsessionnel-compulsif-et-apparente-non-specifie" class="entry-title hc-4">🧠 2.9  Trouble obsessionnel-compulsif et apparenté non spécifié</h1>
+<h1 id="29-trouble-obsessionnel-compulsif-et-apparente-non-specifie" class="entry-title hc-4">2.9  Trouble obsessionnel-compulsif et apparenté non spécifié</h1>
 <h2 id="definition_8">Définition</h2>
 <p>Cette catégorie est utilisée lorsque des symptômes appartenant au spectre obsessionnel-compulsif et apparenté provoquent une souffrance ou une gêne importante, mais que les informations disponibles ne permettent pas de déterminer précisément le trouble.</p>
 <h2 id="manifestations_5">Manifestations</h2>
@@ -556,8 +571,26 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-3-troubles-depressifs/"><span class="similar-icon">🩺</span>Partie 3 — Troubles dépressifs</a><a class="similar-item" href="/chapitre/troubles-partie-4-troubles-bipolaires/"><span class="similar-icon">🩺</span>Partie 4 — Troubles bipolaires</a><a class="similar-item" href="/chapitre/troubles-partie-5-schizophrenie-et-autres-troubles-psychotiques/"><span class="similar-icon">🩺</span>Partie 5 — Schizophrénie et autres troubles psychotiques</a></div>
+      <h2>Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-3-troubles-depressifs/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 3 — Troubles dépressifs</a><a class="similar-item" href="/chapitre/troubles-partie-4-troubles-bipolaires/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 4 — Troubles bipolaires</a><a class="similar-item" href="/chapitre/troubles-partie-5-schizophrenie-et-autres-troubles-psychotiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 5 — Schizophrénie et autres troubles psychotiques</a></div>
     </div>
     <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
   </div>
@@ -643,23 +676,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -677,7 +712,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -857,9 +892,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -868,10 +905,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -978,7 +1015,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1018,8 +1055,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1050,7 +1087,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1105,7 +1142,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1129,17 +1166,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1181,7 +1218,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

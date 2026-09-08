@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#91-la-place-des-mecanismes-de-defense-en-psychopathologie">🩺 9.1 La place des mécanismes de défense en psychopathologie</a></li><li><a href="#92-les-mecanismes-de-defense-et-langoisse">🧠 9.2 Les mécanismes de défense et l'angoisse</a></li><li><a href="#93-les-mecanismes-de-defense-dans-les-troubles-anxieux">🔄 9.3 Les mécanismes de défense dans les troubles anxieux</a><ul class="sidebar-sublist"><li><a href="#exemple">💭 Exemple</a></li><li><a href="#a-distinguer">🧠 À distinguer</a></li></ul></li><li><a href="#94-les-mecanismes-de-defense-dans-les-troubles-obsessionnels">🧩 9.4 Les mécanismes de défense dans les troubles obsessionnels</a><ul class="sidebar-sublist"><li><a href="#exemple_1">💭 Exemple</a></li></ul></li><li><a href="#95-les-mecanismes-de-defense-dans-les-troubles-dissociatifs">🌫️ 9.5 Les mécanismes de défense dans les troubles dissociatifs</a><ul class="sidebar-sublist"><li><a href="#important">⚠️ Important</a></li></ul></li><li><a href="#96-les-mecanismes-de-defense-dans-les-troubles-de-la-personnalite">👤 9.6 Les mécanismes de défense dans les troubles de la personnalité</a><ul class="sidebar-sublist"><li><a href="#important_1">🧠 Important</a></li></ul></li><li><a href="#97-le-clivage-dans-certains-fonctionnements-de-personnalite">⚖️ 9.7 Le clivage dans certains fonctionnements de personnalité</a><ul class="sidebar-sublist"><li><a href="#exemple_2">💭 Exemple</a></li></ul></li><li><a href="#98-lidealisation-et-la-devalorisation">🌟 9.8 L'idéalisation et la dévalorisation</a><ul class="sidebar-sublist"><li><a href="#idealisation">🌟 Idéalisation</a></li><li><a href="#devalorisation">🔽 Dévalorisation</a></li><li><a href="#alternance">🔄 Alternance</a></li></ul></li><li><a href="#99-la-projection-dans-la-psychopathologie">🪞 9.9 La projection dans la psychopathologie</a><ul class="sidebar-sublist"><li><a href="#exemple_3">💭 Exemple</a></li><li><a href="#important_2">⚠️ Important</a></li></ul></li><li><a href="#910-le-deni-dans-la-psychopathologie">🧱 9.10 Le déni dans la psychopathologie</a><ul class="sidebar-sublist"><li><a href="#fonction-possible">🧠 Fonction possible</a></li></ul></li><li><a href="#911-lintellectualisation-dans-la-psychopathologie">🧠 9.11 L'intellectualisation dans la psychopathologie</a><ul class="sidebar-sublist"><li><a href="#exemple_4">💭 Exemple</a></li><li><a href="#_1">⚖️</a></li></ul></li><li><a href="#912-le-refoulement">🔒 9.12 Le refoulement</a><ul class="sidebar-sublist"><li><a href="#important_3">⚠️ Important</a></li></ul></li><li><a href="#913-la-regression">🔄 9.13 La régression</a><ul class="sidebar-sublist"><li><a href="#exemple_5">💭 Exemple</a></li></ul></li><li><a href="#914-le-passage-a-lacte-dans-la-psychopathologie">💥 9.14 Le passage à l'acte dans la psychopathologie</a><ul class="sidebar-sublist"><li><a href="#exemple_6">💭 Exemple</a></li><li><a href="#important_4">⚠️ Important</a></li></ul></li><li><a href="#915-la-dissociation-comme-protection-psychologique">🌫️ 9.15 La dissociation comme protection psychologique</a></li><li><a href="#916-les-mecanismes-de-defense-et-les-traumatismes">🧩 9.16 Les mécanismes de défense et les traumatismes</a><ul class="sidebar-sublist"><li><a href="#important_5">🧠 Important</a></li></ul></li><li><a href="#917-les-mecanismes-de-defense-et-les-troubles-alimentaires">🍽️ 9.17 Les mécanismes de défense et les troubles alimentaires</a></li><li><a href="#918-les-mecanismes-de-defense-et-la-depression">🧠 9.18 Les mécanismes de défense et la dépression</a><ul class="sidebar-sublist"><li><a href="#_2">🧩</a></li></ul></li><li><a href="#919-les-mecanismes-de-defense-et-les-troubles-lies-a-la-colere">⚡ 9.19 Les mécanismes de défense et les troubles liés à la colère</a><ul class="sidebar-sublist"><li><a href="#exemple_7">💭 Exemple</a></li></ul></li><li><a href="#920-les-mecanismes-de-defense-et-lestime-de-soi">🪞 9.20 Les mécanismes de défense et l'estime de soi</a><ul class="sidebar-sublist"><li><a href="#idealisation_1">🌟 Idéalisation</a></li><li><a href="#devalorisation_1">🔽 Dévalorisation</a></li><li><a href="#omnipotence">👑 Omnipotence</a></li><li><a href="#deni">🛡️ Déni</a></li><li><a href="#_3">🧠</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#91-la-place-des-mecanismes-de-defense-en-psychopathologie">9.1 La place des mécanismes de défense en psychopathologie</a></li><li><a href="#92-les-mecanismes-de-defense-et-langoisse">9.2 Les mécanismes de défense et l'angoisse</a></li><li><a href="#93-les-mecanismes-de-defense-dans-les-troubles-anxieux">9.3 Les mécanismes de défense dans les troubles anxieux</a><ul class="sidebar-sublist"><li><a href="#exemple">Exemple</a></li><li><a href="#a-distinguer">À distinguer</a></li></ul></li><li><a href="#94-les-mecanismes-de-defense-dans-les-troubles-obsessionnels">9.4 Les mécanismes de défense dans les troubles obsessionnels</a><ul class="sidebar-sublist"><li><a href="#exemple_1">Exemple</a></li></ul></li><li><a href="#95-les-mecanismes-de-defense-dans-les-troubles-dissociatifs">9.5 Les mécanismes de défense dans les troubles dissociatifs</a><ul class="sidebar-sublist"><li><a href="#important">Important</a></li></ul></li><li><a href="#96-les-mecanismes-de-defense-dans-les-troubles-de-la-personnalite">9.6 Les mécanismes de défense dans les troubles de la personnalité</a><ul class="sidebar-sublist"><li><a href="#important_1">Important</a></li></ul></li><li><a href="#97-le-clivage-dans-certains-fonctionnements-de-personnalite">9.7 Le clivage dans certains fonctionnements de personnalité</a><ul class="sidebar-sublist"><li><a href="#exemple_2">Exemple</a></li></ul></li><li><a href="#98-lidealisation-et-la-devalorisation">9.8 L'idéalisation et la dévalorisation</a><ul class="sidebar-sublist"><li><a href="#idealisation">Idéalisation</a></li><li><a href="#devalorisation">Dévalorisation</a></li><li><a href="#alternance">Alternance</a></li></ul></li><li><a href="#99-la-projection-dans-la-psychopathologie">9.9 La projection dans la psychopathologie</a><ul class="sidebar-sublist"><li><a href="#exemple_3">Exemple</a></li><li><a href="#important_2">Important</a></li></ul></li><li><a href="#910-le-deni-dans-la-psychopathologie">9.10 Le déni dans la psychopathologie</a><ul class="sidebar-sublist"><li><a href="#fonction-possible">Fonction possible</a></li></ul></li><li><a href="#911-lintellectualisation-dans-la-psychopathologie">9.11 L'intellectualisation dans la psychopathologie</a><ul class="sidebar-sublist"><li><a href="#exemple_4">Exemple</a></li><li><a href="#_1"></a></li></ul></li><li><a href="#912-le-refoulement">9.12 Le refoulement</a><ul class="sidebar-sublist"><li><a href="#important_3">Important</a></li></ul></li><li><a href="#913-la-regression">9.13 La régression</a><ul class="sidebar-sublist"><li><a href="#exemple_5">Exemple</a></li></ul></li><li><a href="#914-le-passage-a-lacte-dans-la-psychopathologie">9.14 Le passage à l'acte dans la psychopathologie</a><ul class="sidebar-sublist"><li><a href="#exemple_6">Exemple</a></li><li><a href="#important_4">Important</a></li></ul></li><li><a href="#915-la-dissociation-comme-protection-psychologique">9.15 La dissociation comme protection psychologique</a></li><li><a href="#916-les-mecanismes-de-defense-et-les-traumatismes">9.16 Les mécanismes de défense et les traumatismes</a><ul class="sidebar-sublist"><li><a href="#important_5">Important</a></li></ul></li><li><a href="#917-les-mecanismes-de-defense-et-les-troubles-alimentaires">9.17 Les mécanismes de défense et les troubles alimentaires</a></li><li><a href="#918-les-mecanismes-de-defense-et-la-depression">9.18 Les mécanismes de défense et la dépression</a><ul class="sidebar-sublist"><li><a href="#_2"></a></li></ul></li><li><a href="#919-les-mecanismes-de-defense-et-les-troubles-lies-a-la-colere">9.19 Les mécanismes de défense et les troubles liés à la colère</a><ul class="sidebar-sublist"><li><a href="#exemple_7">Exemple</a></li></ul></li><li><a href="#920-les-mecanismes-de-defense-et-lestime-de-soi">9.20 Les mécanismes de défense et l'estime de soi</a><ul class="sidebar-sublist"><li><a href="#idealisation_1">Idéalisation</a></li><li><a href="#devalorisation_1">Dévalorisation</a></li><li><a href="#omnipotence">Omnipotence</a></li><li><a href="#deni">Déni</a></li><li><a href="#_3"></a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les mécanismes de défense en psychopathologie',
         category: 'Mécanismes de défense',
-        icon: '🧩'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/mecanismes/">🧩 Mécanismes de défense</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/mecanismes/">Mécanismes de défense</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les mécanismes de défense en psychopathologie</h1>
     </div>
     <div id="resume-banner"></div>
@@ -96,13 +111,13 @@
     </div>
     <div class="article-body">
       <blockquote>
-<p>🧠 En psychopathologie, les mécanismes de défense permettent d'étudier la manière dont le fonctionnement psychique peut tenter de gérer l'angoisse, les conflits internes, les émotions difficiles ou certaines expériences vécues comme menaçantes.</p>
+<p>En psychopathologie, les mécanismes de défense permettent d'étudier la manière dont le fonctionnement psychique peut tenter de gérer l'angoisse, les conflits internes, les émotions difficiles ou certaines expériences vécues comme menaçantes.</p>
 <p>Leur présence n'indique pas automatiquement l'existence d'un trouble psychologique. Tout le monde utilise différents mécanismes de défense, mais leur fréquence, leur rigidité, leur intensité et leurs conséquences peuvent varier considérablement.</p>
-<p>🔬 Cette partie s'intéresse particulièrement à la place des mécanismes de défense dans différents fonctionnements psychopathologiques.
+<p>Cette partie s'intéresse particulièrement à la place des mécanismes de défense dans différents fonctionnements psychopathologiques.
 </p>
 </blockquote>
 <hr />
-<h2 id="91-la-place-des-mecanismes-de-defense-en-psychopathologie" class="entry-title hc-1">🩺 9.1 La place des mécanismes de défense en psychopathologie</h2>
+<h2 id="91-la-place-des-mecanismes-de-defense-en-psychopathologie" class="entry-title hc-1">9.1 La place des mécanismes de défense en psychopathologie</h2>
 <p>La <strong>psychopathologie</strong> étudie les troubles et phénomènes psychologiques qui peuvent entraîner une souffrance, une altération du fonctionnement ou une difficulté importante dans différents domaines de la vie.</p>
 <p>Dans certaines approches psychodynamiques, les mécanismes de défense constituent un élément important pour comprendre le fonctionnement psychique.</p>
 <p>Ils peuvent notamment être étudiés selon :</p>
@@ -115,7 +130,7 @@
 <li>leurs conséquences sur le fonctionnement psychologique.</li>
 </ul>
 <hr />
-<h2 id="92-les-mecanismes-de-defense-et-langoisse" class="entry-title hc-2">🧠 9.2 Les mécanismes de défense et l'angoisse</h2>
+<h2 id="92-les-mecanismes-de-defense-et-langoisse" class="entry-title hc-2">9.2 Les mécanismes de défense et l'angoisse</h2>
 <p>L'<strong>angoisse</strong> constitue une notion centrale dans de nombreuses théories psychodynamiques.</p>
 <p>Lorsqu'une tension psychique devient difficile à supporter, différents mécanismes peuvent être mobilisés afin de la diminuer.</p>
 <p>Par exemple :</p>
@@ -126,28 +141,28 @@
 <li>l'intellectualisation peut réduire l'impact émotionnel ;</li>
 <li>la dissociation peut créer une distance avec certaines expériences.</li>
 </ul>
-<p>🧩 Un même état d'angoisse peut donc être associé à différents mécanismes selon la personne et le contexte.</p>
+<p>Un même état d'angoisse peut donc être associé à différents mécanismes selon la personne et le contexte.</p>
 <hr />
-<h2 id="93-les-mecanismes-de-defense-dans-les-troubles-anxieux" class="entry-title hc-3">🔄 9.3 Les mécanismes de défense dans les troubles anxieux</h2>
+<h2 id="93-les-mecanismes-de-defense-dans-les-troubles-anxieux" class="entry-title hc-3">9.3 Les mécanismes de défense dans les troubles anxieux</h2>
 <p>Dans les <strong>troubles anxieux</strong>, certains mécanismes ou stratégies peuvent participer au maintien de l'anxiété.</p>
 <p>L'<strong>évitement</strong> constitue notamment un processus important dans de nombreux troubles anxieux.</p>
-<h3 id="exemple">💭 Exemple</h3>
+<h3 id="exemple">Exemple</h3>
 <p>Une personne ressent une forte anxiété dans une situation particulière et commence à l'éviter.</p>
 <p>L'évitement peut produire un soulagement immédiat.</p>
 <p>Cependant, si la situation est systématiquement évitée, la personne peut avoir moins d'occasions de constater qu'elle est capable de la gérer.</p>
-<h3 id="a-distinguer">🧠 À distinguer</h3>
+<h3 id="a-distinguer">À distinguer</h3>
 <p>L'évitement est à la fois décrit comme une stratégie d'adaptation et étudié comme un comportement pouvant maintenir certains troubles anxieux.</p>
 <hr />
-<h2 id="94-les-mecanismes-de-defense-dans-les-troubles-obsessionnels" class="entry-title hc-4">🧩 9.4 Les mécanismes de défense dans les troubles obsessionnels</h2>
+<h2 id="94-les-mecanismes-de-defense-dans-les-troubles-obsessionnels" class="entry-title hc-4">9.4 Les mécanismes de défense dans les troubles obsessionnels</h2>
 <p>Dans les <strong>troubles obsessionnels-compulsifs</strong>, certaines stratégies psychologiques peuvent être utilisées pour diminuer temporairement une anxiété ou une sensation de menace.</p>
 <p>Les comportements compulsifs peuvent notamment avoir une fonction de <strong>neutralisation</strong>.</p>
-<h3 id="exemple_1">💭 Exemple</h3>
+<h3 id="exemple_1">Exemple</h3>
 <p>Une pensée intrusive provoque une forte anxiété.</p>
 <p>Une personne réalise ensuite une action répétitive afin de réduire cette anxiété.</p>
 <p>Le soulagement obtenu peut renforcer temporairement le comportement.</p>
-<p>⚠️ Les compulsions ne doivent cependant pas être réduites à de simples mécanismes de défense : les modèles cognitifs et comportementaux du <a class="gloss-link" href="/chapitre/troubles-partie-2-troubles-obsessionnels-compulsifs-et-apparentes/#21-le-trouble-obsessionnel-compulsif-toc" title="Voir la définition de TOC">TOC</a> décrivent également des processus spécifiques.</p>
+<p>Les compulsions ne doivent cependant pas être réduites à de simples mécanismes de défense : les modèles cognitifs et comportementaux du <a class="gloss-link" href="/chapitre/troubles-partie-2-troubles-obsessionnels-compulsifs-et-apparentes/#21-le-trouble-obsessionnel-compulsif-toc" title="Voir la définition de TOC">TOC</a> décrivent également des processus spécifiques.</p>
 <hr />
-<h2 id="95-les-mecanismes-de-defense-dans-les-troubles-dissociatifs" class="entry-title hc-5">🌫️ 9.5 Les mécanismes de défense dans les troubles dissociatifs</h2>
+<h2 id="95-les-mecanismes-de-defense-dans-les-troubles-dissociatifs" class="entry-title hc-5">9.5 Les mécanismes de défense dans les troubles dissociatifs</h2>
 <p>La <strong>dissociation</strong> occupe une place particulière dans certains troubles dissociatifs.</p>
 <p>Elle correspond à une perturbation de l'intégration habituelle de certains aspects de l'expérience.</p>
 <p>Elle peut concerner :</p>
@@ -159,10 +174,10 @@
 <li>le sentiment de continuité de soi.</li>
 </ul>
 <p>Dans certaines approches, la dissociation peut être comprise comme une manière de mettre à distance une expérience psychologiquement difficile.</p>
-<h3 id="important">⚠️ Important</h3>
+<h3 id="important">Important</h3>
 <p>Toutes les expériences dissociatives ne correspondent pas à un trouble dissociatif.</p>
 <hr />
-<h2 id="96-les-mecanismes-de-defense-dans-les-troubles-de-la-personnalite" class="entry-title hc-1">👤 9.6 Les mécanismes de défense dans les troubles de la personnalité</h2>
+<h2 id="96-les-mecanismes-de-defense-dans-les-troubles-de-la-personnalite" class="entry-title hc-1">9.6 Les mécanismes de défense dans les troubles de la personnalité</h2>
 <p>Les mécanismes de défense ont historiquement occupé une place importante dans certaines théories des <strong>troubles de la personnalité</strong>.</p>
 <p>Certains modèles psychodynamiques étudient notamment :</p>
 <ul>
@@ -175,14 +190,14 @@
 <li>l'omnipotence ;</li>
 <li>la dissociation.</li>
 </ul>
-<h3 id="important_1">🧠 Important</h3>
+<h3 id="important_1">Important</h3>
 <p>La présence d'un de ces mécanismes ne suffit absolument pas à identifier un trouble de la personnalité.</p>
 <p>L'évaluation clinique repose sur un ensemble beaucoup plus large de caractéristiques.</p>
 <hr />
-<h2 id="97-le-clivage-dans-certains-fonctionnements-de-personnalite" class="entry-title hc-2">⚖️ 9.7 Le clivage dans certains fonctionnements de personnalité</h2>
+<h2 id="97-le-clivage-dans-certains-fonctionnements-de-personnalite" class="entry-title hc-2">9.7 Le clivage dans certains fonctionnements de personnalité</h2>
 <p>Le <strong>clivage</strong> peut occuper une place importante dans certaines formulations psychodynamiques des troubles de la personnalité.</p>
 <p>Il consiste à maintenir séparées des représentations contradictoires.</p>
-<h3 id="exemple_2">💭 Exemple</h3>
+<h3 id="exemple_2">Exemple</h3>
 <p>Une personne peut percevoir quelqu'un comme :</p>
 <blockquote>
 <p>« totalement extraordinaire »
@@ -195,27 +210,27 @@
 </blockquote>
 <p>La difficulté concerne alors l'intégration simultanée des qualités et des défauts d'une même personne.</p>
 <hr />
-<h2 id="98-lidealisation-et-la-devalorisation" class="entry-title hc-3">🌟 9.8 L'idéalisation et la dévalorisation</h2>
+<h2 id="98-lidealisation-et-la-devalorisation" class="entry-title hc-3">9.8 L'idéalisation et la dévalorisation</h2>
 <p>L'<strong>idéalisation</strong> et la <strong>dévalorisation</strong> peuvent parfois fonctionner ensemble.</p>
-<h3 id="idealisation">🌟 Idéalisation</h3>
+<h3 id="idealisation">Idéalisation</h3>
 <p>Attribuer une valeur extrêmement positive à une personne, à soi-même ou à une situation.</p>
-<h3 id="devalorisation">🔽 Dévalorisation</h3>
+<h3 id="devalorisation">Dévalorisation</h3>
 <p>Attribuer une valeur extrêmement négative à cette même personne, à soi-même ou à une situation.</p>
-<h3 id="alternance">🔄 Alternance</h3>
+<h3 id="alternance">Alternance</h3>
 <p>Dans certains fonctionnements psychologiques, ces deux processus peuvent alterner rapidement.</p>
 <p>Ils peuvent notamment participer à la régulation de l'estime de soi ou des relations.</p>
 <hr />
-<h2 id="99-la-projection-dans-la-psychopathologie" class="entry-title hc-4">🪞 9.9 La projection dans la psychopathologie</h2>
+<h2 id="99-la-projection-dans-la-psychopathologie" class="entry-title hc-4">9.9 La projection dans la psychopathologie</h2>
 <p>La <strong>projection</strong> consiste à attribuer à une autre personne certains sentiments, pensées ou intentions principalement issus de son propre fonctionnement psychique.</p>
 <p>Elle peut être étudiée dans différentes formes de psychopathologie.</p>
-<h3 id="exemple_3">💭 Exemple</h3>
+<h3 id="exemple_3">Exemple</h3>
 <p>Une personne ressent une forte hostilité mais interprète systématiquement les comportements des autres comme hostiles envers elle.</p>
-<h3 id="important_2">⚠️ Important</h3>
+<h3 id="important_2">Important</h3>
 <p>La projection ne signifie pas qu'une interprétation est forcément fausse.</p>
 <p>Une personne peut réellement être confrontée à un comportement hostile.</p>
 <p>L'analyse porte sur la manière dont ses propres contenus psychiques peuvent influencer l'interprétation de la réalité.</p>
 <hr />
-<h2 id="910-le-deni-dans-la-psychopathologie" class="entry-title hc-5">🧱 9.10 Le déni dans la psychopathologie</h2>
+<h2 id="910-le-deni-dans-la-psychopathologie" class="entry-title hc-5">9.10 Le déni dans la psychopathologie</h2>
 <p>Le <strong>déni</strong> peut apparaître sous différentes formes.</p>
 <p>Il peut concerner :</p>
 <ul>
@@ -226,40 +241,40 @@
 <li>certaines caractéristiques de soi.</li>
 </ul>
 <p>Dans certains contextes psychopathologiques, le déni peut devenir particulièrement rigide.</p>
-<h3 id="fonction-possible">🧠 Fonction possible</h3>
+<h3 id="fonction-possible">Fonction possible</h3>
 <p>Il permet de réduire temporairement la confrontation avec une réalité vécue comme trop difficile.</p>
 <hr />
-<h2 id="911-lintellectualisation-dans-la-psychopathologie" class="entry-title hc-1">🧠 9.11 L'intellectualisation dans la psychopathologie</h2>
+<h2 id="911-lintellectualisation-dans-la-psychopathologie" class="entry-title hc-1">9.11 L'intellectualisation dans la psychopathologie</h2>
 <p>L'<strong>intellectualisation</strong> consiste à traiter une situation principalement à travers son aspect intellectuel ou théorique afin de prendre une distance avec son contenu émotionnel.</p>
-<h3 id="exemple_4">💭 Exemple</h3>
+<h3 id="exemple_4">Exemple</h3>
 <p>Une personne confrontée à une expérience douloureuse peut expliquer précisément les mécanismes psychologiques impliqués tout en ayant beaucoup de difficultés à parler de ce qu'elle ressent.</p>
-<h3 id="_1">⚖️</h3>
+<h3 id="_1"></h3>
 <p>L'intellectualisation n'est pas forcément problématique.</p>
 <p>Elle peut être utile lorsqu'elle permet de comprendre une situation sans empêcher complètement le traitement émotionnel.</p>
 <hr />
-<h2 id="912-le-refoulement" class="entry-title hc-2">🔒 9.12 Le refoulement</h2>
+<h2 id="912-le-refoulement" class="entry-title hc-2">9.12 Le refoulement</h2>
 <p>Le <strong>refoulement</strong> est un concept central de la théorie psychanalytique.</p>
 <p>Il désigne un processus par lequel certaines représentations ou certains contenus psychiques sont maintenus hors de la conscience.</p>
 <p>Dans les théories psychodynamiques, le refoulement est considéré comme un mécanisme de défense fondamental.</p>
-<h3 id="important_3">⚠️ Important</h3>
+<h3 id="important_3">Important</h3>
 <p>Le concept de refoulement appartient principalement aux modèles psychodynamiques et ne constitue pas une explication universelle de la mémoire ou des troubles psychologiques.</p>
 <hr />
-<h2 id="913-la-regression" class="entry-title hc-3">🔄 9.13 La régression</h2>
+<h2 id="913-la-regression" class="entry-title hc-3">9.13 La régression</h2>
 <p>La <strong>régression</strong> correspond à un retour vers des modes de fonctionnement associés à une période antérieure du développement.</p>
 <p>Elle peut être observée dans différentes situations de stress ou de détresse.</p>
-<h3 id="exemple_5">💭 Exemple</h3>
+<h3 id="exemple_5">Exemple</h3>
 <p>Une personne habituellement autonome peut devenir temporairement très dépendante lorsqu'elle traverse une période de grande insécurité.</p>
 <p>La régression peut être transitoire et ne constitue pas en elle-même un signe de psychopathologie.</p>
 <hr />
-<h2 id="914-le-passage-a-lacte-dans-la-psychopathologie" class="entry-title hc-4">💥 9.14 Le passage à l'acte dans la psychopathologie</h2>
+<h2 id="914-le-passage-a-lacte-dans-la-psychopathologie" class="entry-title hc-4">9.14 Le passage à l'acte dans la psychopathologie</h2>
 <p>Le <strong>passage à l'acte</strong>, ou <em>acting out</em>, consiste à exprimer une tension psychique principalement à travers un comportement.</p>
 <p>Il peut parfois être étudié dans certains fonctionnements psychopathologiques.</p>
-<h3 id="exemple_6">💭 Exemple</h3>
+<h3 id="exemple_6">Exemple</h3>
 <p>Une émotion difficile à identifier ou à verbaliser peut être exprimée directement par un comportement impulsif.</p>
-<h3 id="important_4">⚠️ Important</h3>
+<h3 id="important_4">Important</h3>
 <p>Tout comportement impulsif n'est pas nécessairement un passage à l'acte au sens psychodynamique.</p>
 <hr />
-<h2 id="915-la-dissociation-comme-protection-psychologique" class="entry-title hc-5">🌫️ 9.15 La dissociation comme protection psychologique</h2>
+<h2 id="915-la-dissociation-comme-protection-psychologique" class="entry-title hc-5">9.15 La dissociation comme protection psychologique</h2>
 <p>Dans certaines situations particulièrement difficiles, la dissociation peut être comprise comme une manière de mettre à distance certains aspects d'une expérience.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -271,7 +286,7 @@
 </ul>
 <p>Certaines formes peuvent être transitoires, tandis que d'autres peuvent être beaucoup plus importantes.</p>
 <hr />
-<h2 id="916-les-mecanismes-de-defense-et-les-traumatismes" class="entry-title hc-1">🧩 9.16 Les mécanismes de défense et les traumatismes</h2>
+<h2 id="916-les-mecanismes-de-defense-et-les-traumatismes" class="entry-title hc-1">9.16 Les mécanismes de défense et les traumatismes</h2>
 <p>Les expériences traumatiques peuvent être associées à différentes réactions psychologiques.</p>
 <p>Selon les personnes et les circonstances, on peut observer :</p>
 <ul>
@@ -283,11 +298,11 @@
 <li>intellectualisation ;</li>
 <li>retrait relationnel.</li>
 </ul>
-<h3 id="important_5">🧠 Important</h3>
+<h3 id="important_5">Important</h3>
 <p>Aucune de ces réactions n'est obligatoire après un traumatisme.</p>
 <p>Les réactions psychologiques varient considérablement d'une personne à l'autre.</p>
 <hr />
-<h2 id="917-les-mecanismes-de-defense-et-les-troubles-alimentaires" class="entry-title hc-2">🍽️ 9.17 Les mécanismes de défense et les troubles alimentaires</h2>
+<h2 id="917-les-mecanismes-de-defense-et-les-troubles-alimentaires" class="entry-title hc-2">9.17 Les mécanismes de défense et les troubles alimentaires</h2>
 <p>Dans certaines approches psychodynamiques, les comportements liés à l'alimentation peuvent être étudiés en relation avec différents conflits psychiques.</p>
 <p>Des mécanismes tels que :</p>
 <ul>
@@ -299,10 +314,10 @@
 <li>rationalisation</li>
 </ul>
 <p>peuvent être discutés dans certaines formulations cliniques.</p>
-<p>⚠️ Cependant, les troubles alimentaires sont complexes et résultent de l'interaction de nombreux facteurs biologiques, psychologiques, sociaux et environnementaux.</p>
+<p>Cependant, les troubles alimentaires sont complexes et résultent de l'interaction de nombreux facteurs biologiques, psychologiques, sociaux et environnementaux.</p>
 <p>Ils ne peuvent pas être expliqués par les mécanismes de défense seuls.</p>
 <hr />
-<h2 id="918-les-mecanismes-de-defense-et-la-depression" class="entry-title hc-3">🧠 9.18 Les mécanismes de défense et la dépression</h2>
+<h2 id="918-les-mecanismes-de-defense-et-la-depression" class="entry-title hc-3">9.18 Les mécanismes de défense et la dépression</h2>
 <p>Dans certaines approches psychodynamiques, différents mécanismes peuvent être étudiés chez des personnes présentant des symptômes dépressifs.</p>
 <p>Par exemple :</p>
 <ul>
@@ -313,11 +328,11 @@
 <li>intellectualisation ;</li>
 <li>évitement.</li>
 </ul>
-<h3 id="_2">🧩</h3>
+<h3 id="_2"></h3>
 <p>Ces mécanismes ne constituent cependant pas une cause unique de la dépression.</p>
 <p>La dépression est un phénomène multifactoriel impliquant notamment des facteurs biologiques, psychologiques et environnementaux.</p>
 <hr />
-<h2 id="919-les-mecanismes-de-defense-et-les-troubles-lies-a-la-colere" class="entry-title hc-4">⚡ 9.19 Les mécanismes de défense et les troubles liés à la colère</h2>
+<h2 id="919-les-mecanismes-de-defense-et-les-troubles-lies-a-la-colere" class="entry-title hc-4">9.19 Les mécanismes de défense et les troubles liés à la colère</h2>
 <p>La colère peut être directement exprimée ou transformée de différentes manières.</p>
 <p>Certains processus peuvent notamment impliquer :</p>
 <ul>
@@ -328,23 +343,23 @@
 <li>passage à l'acte ;</li>
 <li>formation réactionnelle.</li>
 </ul>
-<h3 id="exemple_7">💭 Exemple</h3>
+<h3 id="exemple_7">Exemple</h3>
 <p>Une frustration vécue dans un contexte peut être déplacée vers une personne qui n'est pas à l'origine de la frustration.</p>
 <hr />
-<h2 id="920-les-mecanismes-de-defense-et-lestime-de-soi" class="entry-title hc-5">🪞 9.20 Les mécanismes de défense et l'estime de soi</h2>
+<h2 id="920-les-mecanismes-de-defense-et-lestime-de-soi" class="entry-title hc-5">9.20 Les mécanismes de défense et l'estime de soi</h2>
 <p>Certains mécanismes peuvent avoir une fonction importante dans la protection de l'<strong>estime de soi</strong>.</p>
-<h3 id="idealisation_1">🌟 Idéalisation</h3>
+<h3 id="idealisation_1">Idéalisation</h3>
 <p>Permet de maintenir une image très positive.</p>
-<h3 id="devalorisation_1">🔽 Dévalorisation</h3>
+<h3 id="devalorisation_1">Dévalorisation</h3>
 <p>Peut protéger contre la déception ou la comparaison.</p>
-<h3 id="omnipotence">👑 Omnipotence</h3>
+<h3 id="omnipotence">Omnipotence</h3>
 <p>Peut maintenir une impression de puissance.</p>
-<h3 id="deni">🛡️ Déni</h3>
+<h3 id="deni">Déni</h3>
 <p>Peut protéger temporairement contre une information menaçante pour l'image de soi.</p>
-<h3 id="_3">🧠</h3>
+<h3 id="_3"></h3>
 <p>Ces mécanismes peuvent donc être compris comme différentes manières de gérer une menace ressentie envers l'image personnelle.</p>
 <hr />
-<h1 id="921-les-mecanismes-selon-leur-niveau-dadaptation">📊 9.21 Les mécanismes selon leur niveau d'adaptation</h1>
+<h1 id="921-les-mecanismes-selon-leur-niveau-dadaptation">9.21 Les mécanismes selon leur niveau d'adaptation</h1>
 <p>Certaines classifications psychodynamiques regroupent les mécanismes de défense selon différents niveaux d'adaptation.</p>
 <table>
 <thead>
@@ -356,32 +371,32 @@
 </thead>
 <tbody>
 <tr>
-<td>🌱 Mature</td>
+<td>Mature</td>
 <td>Gestion relativement flexible de la réalité et des émotions</td>
 <td>Sublimation, humour, anticipation</td>
 </tr>
 <tr>
-<td>🧩 Névrotiques / intermédiaires</td>
+<td>Névrotiques / intermédiaires</td>
 <td>Protection contre l'angoisse avec une distorsion généralement limitée de la réalité</td>
 <td>Refoulement, déplacement, isolation de l'affect</td>
 </tr>
 <tr>
-<td>⚠️ Immatures</td>
+<td>Immatures</td>
 <td>Fonctionnement souvent plus rigide ou associé à davantage de distorsion</td>
 <td>Déni, projection, passage à l'acte</td>
 </tr>
 <tr>
-<td>🧱 Défenses très primitives</td>
+<td>Défenses très primitives</td>
 <td>Distorsion importante de soi ou de la réalité dans certains modèles</td>
 <td>Clivage, déni massif, identification projective</td>
 </tr>
 </tbody>
 </table>
-<p>⚠️ Les classifications et les termes peuvent varier selon les écoles psychologiques.</p>
+<p>Les classifications et les termes peuvent varier selon les écoles psychologiques.</p>
 <hr />
-<h1 id="922-defense-saine-ou-defense-pathologique">🔬 9.22 Défense saine ou défense pathologique ?</h1>
+<h1 id="922-defense-saine-ou-defense-pathologique">9.22 Défense saine ou défense pathologique ?</h1>
 <p>Un même mécanisme peut être adaptatif dans une situation et problématique dans une autre.</p>
-<h3 id="exemple_8">🌱 Exemple</h3>
+<h3 id="exemple_8">Exemple</h3>
 <p><strong>Humour :</strong></p>
 <p>Peut aider à prendre du recul.</p>
 <p>Mais utilisé constamment, il peut empêcher l'expression émotionnelle.</p>
@@ -391,7 +406,7 @@
 <p><strong>Intellectualisation :</strong></p>
 <p>Peut aider à comprendre une situation.</p>
 <p>Mais elle peut aussi empêcher le contact avec certaines émotions.</p>
-<p>🧠 La question importante n'est donc pas seulement :</p>
+<p>La question importante n'est donc pas seulement :</p>
 <blockquote>
 <p>« Quel mécanisme est utilisé ? »
 </p>
@@ -402,7 +417,7 @@
 </p>
 </blockquote>
 <hr />
-<h1 id="923-la-rigidite-des-mecanismes">📈 9.23 La rigidité des mécanismes</h1>
+<h1 id="923-la-rigidite-des-mecanismes">9.23 La rigidité des mécanismes</h1>
 <p>Un mécanisme devient potentiellement problématique lorsqu'il est :</p>
 <ul>
 <li>extrêmement fréquent ;</li>
@@ -415,10 +430,10 @@
 </ul>
 <p>La <strong>flexibilité</strong> constitue donc un élément important dans l'évaluation du fonctionnement psychologique.</p>
 <hr />
-<h1 id="924-plusieurs-mecanismes-peuvent-fonctionner-ensemble">🧩 9.24 Plusieurs mécanismes peuvent fonctionner ensemble</h1>
+<h1 id="924-plusieurs-mecanismes-peuvent-fonctionner-ensemble">9.24 Plusieurs mécanismes peuvent fonctionner ensemble</h1>
 <p>Les mécanismes de défense ne fonctionnent pas nécessairement séparément.</p>
 <p>Une même situation peut mobiliser une succession de mécanismes.</p>
-<h3 id="exemple_9">💭 Exemple</h3>
+<h3 id="exemple_9">Exemple</h3>
 <p>Une personne reçoit une critique :</p>
 <p><strong>1. Déni</strong></p>
 <p>Elle refuse d'abord de reconnaître la critique.</p>
@@ -428,9 +443,9 @@
 <p>Elle construit une explication justifiant son comportement.</p>
 <p><strong>4. Déplacement</strong></p>
 <p>Elle exprime finalement sa frustration envers quelqu'un d'autre.</p>
-<p>🧠 Cette succession montre qu'un fonctionnement défensif peut être dynamique et évoluer au cours d'une même situation.</p>
+<p>Cette succession montre qu'un fonctionnement défensif peut être dynamique et évoluer au cours d'une même situation.</p>
 <hr />
-<h1 id="925-les-mecanismes-de-defense-dans-levaluation-clinique">🩺 9.25 Les mécanismes de défense dans l'évaluation clinique</h1>
+<h1 id="925-les-mecanismes-de-defense-dans-levaluation-clinique">9.25 Les mécanismes de défense dans l'évaluation clinique</h1>
 <p>Dans certaines approches cliniques, l'étude des mécanismes de défense peut contribuer à comprendre :</p>
 <ul>
 <li>la manière de gérer les émotions ;</li>
@@ -443,11 +458,11 @@
 <p>Cependant, les mécanismes de défense ne constituent qu'un élément possible de l'évaluation psychologique.</p>
 <p>Une évaluation clinique complète prend en compte de nombreux autres éléments.</p>
 <hr />
-<h1 id="926-un-mecanisme-de-defense-nest-pas-un-diagnostic">⚠️ 9.26 Un mécanisme de défense n'est pas un diagnostic</h1>
+<h1 id="926-un-mecanisme-de-defense-nest-pas-un-diagnostic">9.26 Un mécanisme de défense n'est pas un diagnostic</h1>
 <p>Il est important de ne pas confondre :</p>
-<p><strong>🧩 Mécanisme de défense</strong></p>
+<p>** Mécanisme de défense**</p>
 <p>avec</p>
-<p><strong>🩺 Trouble psychologique</strong></p>
+<p>** Trouble psychologique**</p>
 <p>Par exemple :</p>
 <blockquote>
 <p>Utiliser la projection ≠ avoir un trouble de la personnalité.
@@ -461,7 +476,7 @@
 </blockquote>
 <p>Les mécanismes de défense sont des <strong>processus psychologiques</strong>, pas des diagnostics.</p>
 <hr />
-<h1 id="927-tableau-recapitulatif">📊 9.27 Tableau récapitulatif</h1>
+<h1 id="927-tableau-recapitulatif">9.27 Tableau récapitulatif</h1>
 <table>
 <thead>
 <tr>
@@ -471,69 +486,69 @@
 </thead>
 <tbody>
 <tr>
-<td>🛡️ Déni</td>
+<td>Déni</td>
 <td>Réduire la confrontation avec une réalité difficile</td>
 </tr>
 <tr>
-<td>🪞 Projection</td>
+<td>Projection</td>
 <td>Attribuer certains contenus internes à autrui</td>
 </tr>
 <tr>
-<td>🔄 Déplacement</td>
+<td>Déplacement</td>
 <td>Transférer une émotion vers une autre cible</td>
 </tr>
 <tr>
-<td>🧠 Intellectualisation</td>
+<td>Intellectualisation</td>
 <td>Mettre une distance cognitive avec l'émotion</td>
 </tr>
 <tr>
-<td>🔒 Refoulement</td>
+<td>Refoulement</td>
 <td>Maintenir certains contenus hors de la conscience</td>
 </tr>
 <tr>
-<td>👶 Régression</td>
+<td>Régression</td>
 <td>Revenir temporairement à un mode de fonctionnement antérieur</td>
 </tr>
 <tr>
-<td>🌫️ Dissociation</td>
+<td>Dissociation</td>
 <td>Séparer certains éléments de l'expérience</td>
 </tr>
 <tr>
-<td>🧩 Clivage</td>
+<td>Clivage</td>
 <td>Maintenir séparées des représentations contradictoires</td>
 </tr>
 <tr>
-<td>🌟 Idéalisation</td>
+<td>Idéalisation</td>
 <td>Maintenir une représentation extrêmement positive</td>
 </tr>
 <tr>
-<td>🔽 Dévalorisation</td>
+<td>Dévalorisation</td>
 <td>Réduire fortement la valeur attribuée à soi ou à autrui</td>
 </tr>
 <tr>
-<td>🎭 Formation réactionnelle</td>
+<td>Formation réactionnelle</td>
 <td>Exprimer l'opposé d'une tendance interne</td>
 </tr>
 <tr>
-<td>🔄 Annulation rétroactive</td>
+<td>Annulation rétroactive</td>
 <td>Neutraliser symboliquement une pensée ou une action</td>
 </tr>
 <tr>
-<td>👑 Omnipotence</td>
+<td>Omnipotence</td>
 <td>Maintenir une impression de puissance ou de contrôle</td>
 </tr>
 <tr>
-<td>💥 Passage à l'acte</td>
+<td>Passage à l'acte</td>
 <td>Exprimer une tension principalement par le comportement</td>
 </tr>
 <tr>
-<td>🚪 Évitement</td>
+<td>Évitement</td>
 <td>Réduire temporairement l'anxiété ou la confrontation</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h1 id="928-les-limites-des-modeles-defensifs">🧠 9.28 Les limites des modèles défensifs</h1>
+<h1 id="928-les-limites-des-modeles-defensifs">9.28 Les limites des modèles défensifs</h1>
 <p>Les mécanismes de défense sont particulièrement importants dans certaines théories psychodynamiques, mais ils ne constituent pas l'unique manière d'expliquer les troubles psychologiques.</p>
 <p>D'autres approches mettent davantage l'accent sur :</p>
 <ul>
@@ -547,23 +562,32 @@
 <li>l'environnement ;</li>
 <li>les facteurs sociaux.</li>
 </ul>
-<p>🔬 La psychopathologie moderne utilise donc plusieurs modèles complémentaires.</p>
+<p>La psychopathologie moderne utilise donc plusieurs modèles complémentaires.</p>
 <hr />
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🩺 Les mécanismes de défense peuvent aider à comprendre la manière dont le psychisme tente de gérer certaines tensions.</p>
-<p>🧠 Leur utilisation est normale et ne signifie pas automatiquement qu'un trouble est présent.</p>
-<p>⚖️ Ce qui importe notamment est leur <strong>flexibilité</strong>, leur <strong>intensité</strong>, leur <strong>fréquence</strong> et leurs <strong>conséquences</strong>.</p>
-<p>🧩 Plusieurs mécanismes peuvent être utilisés simultanément.</p>
-<p>🔬 Les mécanismes de défense constituent surtout un outil conceptuel parmi d'autres pour comprendre le fonctionnement psychologique.</p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p>Les mécanismes de défense peuvent aider à comprendre la manière dont le psychisme tente de gérer certaines tensions.</p>
+<p>Leur utilisation est normale et ne signifie pas automatiquement qu'un trouble est présent.</p>
+<p>Ce qui importe notamment est leur <strong>flexibilité</strong>, leur <strong>intensité</strong>, leur <strong>fréquence</strong> et leurs <strong>conséquences</strong>.</p>
+<p>Plusieurs mécanismes peuvent être utilisés simultanément.</p>
+<p>Les mécanismes de défense constituent surtout un outil conceptuel parmi d'autres pour comprendre le fonctionnement psychologique.</p>
 <blockquote>
-<p>🧠 <strong>Un mécanisme de défense n'est pas une maladie : c'est un processus psychologique dont la fonction et les conséquences dépendent du contexte dans lequel il apparaît.</strong>
+<p><strong>Un mécanisme de défense n'est pas une maladie : c'est un processus psychologique dont la fonction et les conséquences dépendent du contexte dans lequel il apparaît.</strong>
 </p>
 </blockquote>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Mécanismes de défense »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-dans-la-vie-quotidienne/"><span class="similar-icon">🧩</span>Les mécanismes de défense dans la vie quotidienne</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-en-psychologie-clinique/"><span class="similar-icon">🧩</span>Les mécanismes de défense en psychologie clinique</a><a class="similar-item" href="/chapitre/mecanismes-classification-et-niveaux-des-mecanismes-de-defense/"><span class="similar-icon">🧩</span>Classification et niveaux des mécanismes de défense</a></div>
+      <h2>Autres chapitres de « Mécanismes de défense »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-dans-la-vie-quotidienne/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Les mécanismes de défense dans la vie quotidienne</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-en-psychologie-clinique/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Les mécanismes de défense en psychologie clinique</a><a class="similar-item" href="/chapitre/mecanismes-classification-et-niveaux-des-mecanismes-de-defense/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Classification et niveaux des mécanismes de défense</a></div>
     </div>
     <a class="back-link" href="/categorie/mecanismes/">← Retour à « Mécanismes de défense »</a>
   </div>
@@ -649,23 +673,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -683,7 +709,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -863,9 +889,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -874,10 +902,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -984,7 +1012,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -1024,8 +1052,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -1056,7 +1084,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1111,7 +1139,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1135,17 +1163,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1187,7 +1215,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

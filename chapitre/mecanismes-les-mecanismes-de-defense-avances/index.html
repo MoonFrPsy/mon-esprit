@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#81-le-clivage">🧩 8.1 Le clivage</a><ul class="sidebar-sublist"><li><a href="#definition">🔎 Définition</a></li><li><a href="#exemple">💭 Exemple</a></li><li><a href="#fonction">🧠 Fonction</a></li></ul></li><li><a href="#82-lidealisation">🌟 8.2 L'idéalisation</a><ul class="sidebar-sublist"><li><a href="#definition_1">🔎 Définition</a></li><li><a href="#exemple_1">💭 Exemple</a></li><li><a href="#fonction_1">🧠 Fonction</a></li><li><a href="#limite">⚠️ Limite</a></li></ul></li><li><a href="#83-la-devalorisation">🔽 8.3 La dévalorisation</a><ul class="sidebar-sublist"><li><a href="#definition_2">🔎 Définition</a></li><li><a href="#exemple_2">💭 Exemple</a></li><li><a href="#fonction_2">🧠 Fonction</a></li></ul></li><li><a href="#84-lalternance-idealisationdevalorisation">🔄 8.4 L'alternance idéalisation–dévalorisation</a><ul class="sidebar-sublist"><li><a href="#definition_3">🔎 Définition</a></li><li><a href="#exemple_3">💭 Exemple</a></li><li><a href="#fonction-possible">🧠 Fonction possible</a></li></ul></li><li><a href="#85-lidentification-projective">🪞 8.5 L'identification projective</a><ul class="sidebar-sublist"><li><a href="#definition_4">🔎 Définition</a></li><li><a href="#exemple-simplifie">💭 Exemple simplifié</a></li><li><a href="#important">⚠️ Important</a></li></ul></li><li><a href="#86-la-projection">🪞 8.6 La projection</a><ul class="sidebar-sublist"><li><a href="#definition_5">🔎 Définition</a></li><li><a href="#exemple_4">💭 Exemple</a></li><li><a href="#fonction_3">🧠 Fonction</a></li></ul></li><li><a href="#87-lomnipotence">👑 8.7 L'omnipotence</a><ul class="sidebar-sublist"><li><a href="#definition_6">🔎 Définition</a></li><li><a href="#exemple_5">💭 Exemple</a></li><li><a href="#fonction_4">🧠 Fonction</a></li></ul></li><li><a href="#88-le-controle-omnipotent">🛡️ 8.8 Le contrôle omnipotent</a><ul class="sidebar-sublist"><li><a href="#definition_7">🔎 Définition</a></li><li><a href="#exemple_6">💭 Exemple</a></li><li><a href="#fonction_5">🧠 Fonction</a></li></ul></li><li><a href="#89-le-deni-psychotique">🧱 8.9 Le déni psychotique</a><ul class="sidebar-sublist"><li><a href="#definition_8">🔎 Définition</a></li><li><a href="#important_1">⚠️ Important</a></li></ul></li><li><a href="#810-la-dissociation">🌫️ 8.10 La dissociation</a><ul class="sidebar-sublist"><li><a href="#definition_9">🔎 Définition</a></li><li><a href="#exemple_7">💭 Exemple</a></li><li><a href="#important_2">⚠️ Important</a></li></ul></li><li><a href="#811-la-compartimentation">🧠 8.11 La compartimentation</a><ul class="sidebar-sublist"><li><a href="#definition_10">🔎 Définition</a></li><li><a href="#exemple_8">💭 Exemple</a></li><li><a href="#fonction_6">🧠 Fonction</a></li></ul></li><li><a href="#812-la-formation-reactionnelle">🎭 8.12 La formation réactionnelle</a><ul class="sidebar-sublist"><li><a href="#definition_11">🔎 Définition</a></li><li><a href="#exemple_9">💭 Exemple</a></li><li><a href="#fonction_7">🧠 Fonction</a></li></ul></li><li><a href="#813-lannulation-retroactive">🔄 8.13 L'annulation rétroactive</a><ul class="sidebar-sublist"><li><a href="#definition_12">🔎 Définition</a></li><li><a href="#exemple_10">💭 Exemple</a></li><li><a href="#fonction_8">🧠 Fonction</a></li></ul></li><li><a href="#814-lintrojection">🪞 8.14 L'introjection</a><ul class="sidebar-sublist"><li><a href="#definition_13">🔎 Définition</a></li><li><a href="#exemple_11">💭 Exemple</a></li><li><a href="#fonction_9">🧠 Fonction</a></li></ul></li><li><a href="#815-lidentification">👤 8.15 L'identification</a><ul class="sidebar-sublist"><li><a href="#definition_14">🔎 Définition</a></li><li><a href="#exemple_12">💭 Exemple</a></li><li><a href="#fonction_10">🧠 Fonction</a></li></ul></li><li><a href="#816-lidentification-a-lagresseur">🧩 8.16 L'identification à l'agresseur</a><ul class="sidebar-sublist"><li><a href="#definition_15">🔎 Définition</a></li><li><a href="#exemple_13">💭 Exemple</a></li><li><a href="#fonction-possible_1">🧠 Fonction possible</a></li></ul></li><li><a href="#817-le-retrait-narcissique">🧊 8.17 Le retrait narcissique</a><ul class="sidebar-sublist"><li><a href="#definition_16">🔎 Définition</a></li><li><a href="#exemple_14">💭 Exemple</a></li><li><a href="#fonction_11">🧠 Fonction</a></li></ul></li><li><a href="#818-le-faux-self">🪞 8.18 Le faux self</a><ul class="sidebar-sublist"><li><a href="#definition_17">🔎 Définition</a></li><li><a href="#exemple_15">💭 Exemple</a></li><li><a href="#important_3">⚠️ Important</a></li></ul></li><li><a href="#819-la-suradaptation">🧱 8.19 La suradaptation</a><ul class="sidebar-sublist"><li><a href="#definition_18">🔎 Définition</a></li><li><a href="#exemple_16">💭 Exemple</a></li><li><a href="#fonction_12">🧠 Fonction</a></li></ul></li><li><a href="#820-le-passage-a-lacte">🧠 8.20 Le passage à l'acte</a><ul class="sidebar-sublist"><li><a href="#definition_19">🔎 Définition</a></li><li><a href="#exemple_17">💭 Exemple</a></li><li><a href="#important_4">⚠️ Important</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#81-le-clivage">8.1 Le clivage</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#fonction">Fonction</a></li></ul></li><li><a href="#82-lidealisation">8.2 L'idéalisation</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#exemple_1">Exemple</a></li><li><a href="#fonction_1">Fonction</a></li><li><a href="#limite">Limite</a></li></ul></li><li><a href="#83-la-devalorisation">8.3 La dévalorisation</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#exemple_2">Exemple</a></li><li><a href="#fonction_2">Fonction</a></li></ul></li><li><a href="#84-lalternance-idealisationdevalorisation">8.4 L'alternance idéalisation–dévalorisation</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#exemple_3">Exemple</a></li><li><a href="#fonction-possible">Fonction possible</a></li></ul></li><li><a href="#85-lidentification-projective">8.5 L'identification projective</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#exemple-simplifie">Exemple simplifié</a></li><li><a href="#important">Important</a></li></ul></li><li><a href="#86-la-projection">8.6 La projection</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#exemple_4">Exemple</a></li><li><a href="#fonction_3">Fonction</a></li></ul></li><li><a href="#87-lomnipotence">8.7 L'omnipotence</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#exemple_5">Exemple</a></li><li><a href="#fonction_4">Fonction</a></li></ul></li><li><a href="#88-le-controle-omnipotent">8.8 Le contrôle omnipotent</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#exemple_6">Exemple</a></li><li><a href="#fonction_5">Fonction</a></li></ul></li><li><a href="#89-le-deni-psychotique">8.9 Le déni psychotique</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#important_1">Important</a></li></ul></li><li><a href="#810-la-dissociation">8.10 La dissociation</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#exemple_7">Exemple</a></li><li><a href="#important_2">Important</a></li></ul></li><li><a href="#811-la-compartimentation">8.11 La compartimentation</a><ul class="sidebar-sublist"><li><a href="#definition_10">Définition</a></li><li><a href="#exemple_8">Exemple</a></li><li><a href="#fonction_6">Fonction</a></li></ul></li><li><a href="#812-la-formation-reactionnelle">8.12 La formation réactionnelle</a><ul class="sidebar-sublist"><li><a href="#definition_11">Définition</a></li><li><a href="#exemple_9">Exemple</a></li><li><a href="#fonction_7">Fonction</a></li></ul></li><li><a href="#813-lannulation-retroactive">8.13 L'annulation rétroactive</a><ul class="sidebar-sublist"><li><a href="#definition_12">Définition</a></li><li><a href="#exemple_10">Exemple</a></li><li><a href="#fonction_8">Fonction</a></li></ul></li><li><a href="#814-lintrojection">8.14 L'introjection</a><ul class="sidebar-sublist"><li><a href="#definition_13">Définition</a></li><li><a href="#exemple_11">Exemple</a></li><li><a href="#fonction_9">Fonction</a></li></ul></li><li><a href="#815-lidentification">8.15 L'identification</a><ul class="sidebar-sublist"><li><a href="#definition_14">Définition</a></li><li><a href="#exemple_12">Exemple</a></li><li><a href="#fonction_10">Fonction</a></li></ul></li><li><a href="#816-lidentification-a-lagresseur">8.16 L'identification à l'agresseur</a><ul class="sidebar-sublist"><li><a href="#definition_15">Définition</a></li><li><a href="#exemple_13">Exemple</a></li><li><a href="#fonction-possible_1">Fonction possible</a></li></ul></li><li><a href="#817-le-retrait-narcissique">8.17 Le retrait narcissique</a><ul class="sidebar-sublist"><li><a href="#definition_16">Définition</a></li><li><a href="#exemple_14">Exemple</a></li><li><a href="#fonction_11">Fonction</a></li></ul></li><li><a href="#818-le-faux-self">8.18 Le faux self</a><ul class="sidebar-sublist"><li><a href="#definition_17">Définition</a></li><li><a href="#exemple_15">Exemple</a></li><li><a href="#important_3">Important</a></li></ul></li><li><a href="#819-la-suradaptation">8.19 La suradaptation</a><ul class="sidebar-sublist"><li><a href="#definition_18">Définition</a></li><li><a href="#exemple_16">Exemple</a></li><li><a href="#fonction_12">Fonction</a></li></ul></li><li><a href="#820-le-passage-a-lacte">8.20 Le passage à l'acte</a><ul class="sidebar-sublist"><li><a href="#definition_19">Définition</a></li><li><a href="#exemple_17">Exemple</a></li><li><a href="#important_4">Important</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les mécanismes de défense avancés',
         category: 'Mécanismes de défense',
-        icon: '🧩'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/mecanismes/">🧩 Mécanismes de défense</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/mecanismes/">Mécanismes de défense</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les mécanismes de défense avancés</h1>
     </div>
     <div id="resume-banner"></div>
@@ -96,17 +111,17 @@
     </div>
     <div class="article-body">
       <blockquote>
-<p>🧠 Cette partie présente des mécanismes psychologiques plus complexes, principalement issus des théories psychodynamiques.</p>
+<p>Cette partie présente des mécanismes psychologiques plus complexes, principalement issus des théories psychodynamiques.</p>
 <p>Ils concernent notamment la manière dont une personne peut gérer des émotions contradictoires, préserver son image d'elle-même, percevoir les autres ou faire face à une forte insécurité psychologique.</p>
-<p>⚠️ Ces concepts sont souvent complexes et leur interprétation dépend du contexte. Un comportement isolé ne permet jamais de conclure à un trouble psychologique.
+<p>Ces concepts sont souvent complexes et leur interprétation dépend du contexte. Un comportement isolé ne permet jamais de conclure à un trouble psychologique.
 </p>
 </blockquote>
 <hr />
-<h2 id="81-le-clivage" class="entry-title hc-1">🧩 8.1 Le clivage</h2>
-<h3 id="definition">🔎 Définition</h3>
+<h2 id="81-le-clivage" class="entry-title hc-1">8.1 Le clivage</h2>
+<h3 id="definition">Définition</h3>
 <p>Le <strong>clivage</strong> consiste à maintenir séparées des représentations contradictoires d'une même personne, de soi-même ou d'une situation.</p>
 <p>La personne peut avoir des difficultés à intégrer simultanément les aspects positifs et négatifs.</p>
-<h3 id="exemple">💭 Exemple</h3>
+<h3 id="exemple">Exemple</h3>
 <blockquote>
 <p>« Cette personne est parfaite, elle me comprend mieux que tout le monde. »
 </p>
@@ -116,39 +131,39 @@
 <p>« C'est une personne horrible, elle n'a jamais rien fait de bien. »
 </p>
 </blockquote>
-<h3 id="fonction">🧠 Fonction</h3>
+<h3 id="fonction">Fonction</h3>
 <p>Le clivage peut réduire temporairement la complexité émotionnelle et éviter la coexistence difficile de sentiments contradictoires.</p>
 <hr />
-<h2 id="82-lidealisation" class="entry-title hc-2">🌟 8.2 L'idéalisation</h2>
-<h3 id="definition_1">🔎 Définition</h3>
+<h2 id="82-lidealisation" class="entry-title hc-2">8.2 L'idéalisation</h2>
+<h3 id="definition_1">Définition</h3>
 <p>L'<strong>idéalisation</strong> consiste à attribuer à une personne, à soi-même ou à une situation des qualités extrêmement positives tout en minimisant certains défauts ou limites.</p>
-<h3 id="exemple_1">💭 Exemple</h3>
+<h3 id="exemple_1">Exemple</h3>
 <blockquote>
 <p>« Il est incapable de faire quelque chose de mal. »
 </p>
 </blockquote>
-<h3 id="fonction_1">🧠 Fonction</h3>
+<h3 id="fonction_1">Fonction</h3>
 <p>Elle peut permettre de maintenir une image rassurante d'une personne importante ou d'une relation.</p>
-<h3 id="limite">⚠️ Limite</h3>
+<h3 id="limite">Limite</h3>
 <p>L'idéalisation peut rendre plus difficile la reconnaissance des aspects négatifs ou des limites réelles.</p>
 <hr />
-<h2 id="83-la-devalorisation" class="entry-title hc-3">🔽 8.3 La dévalorisation</h2>
-<h3 id="definition_2">🔎 Définition</h3>
+<h2 id="83-la-devalorisation" class="entry-title hc-3">8.3 La dévalorisation</h2>
+<h3 id="definition_2">Définition</h3>
 <p>La <strong>dévalorisation</strong> consiste à diminuer fortement la valeur attribuée à une personne, à soi-même ou à une situation.</p>
 <p>Elle peut apparaître après une déception ou lorsqu'une représentation positive devient difficile à maintenir.</p>
-<h3 id="exemple_2">💭 Exemple</h3>
+<h3 id="exemple_2">Exemple</h3>
 <p>Après une rupture :</p>
 <blockquote>
 <p>« Finalement, cette personne n'avait aucune qualité. »
 </p>
 </blockquote>
-<h3 id="fonction_2">🧠 Fonction</h3>
+<h3 id="fonction_2">Fonction</h3>
 <p>Elle peut réduire la douleur liée à une perte ou protéger l'estime de soi.</p>
 <hr />
-<h2 id="84-lalternance-idealisationdevalorisation" class="entry-title hc-4">🔄 8.4 L'alternance idéalisation–dévalorisation</h2>
-<h3 id="definition_3">🔎 Définition</h3>
+<h2 id="84-lalternance-idealisationdevalorisation" class="entry-title hc-4">8.4 L'alternance idéalisation–dévalorisation</h2>
+<h3 id="definition_3">Définition</h3>
 <p>Certaines représentations peuvent passer rapidement d'un extrême positif à un extrême négatif.</p>
-<h3 id="exemple_3">💭 Exemple</h3>
+<h3 id="exemple_3">Exemple</h3>
 <p><strong>Avant une dispute :</strong></p>
 <blockquote>
 <p>« C'est la meilleure personne du monde. »
@@ -159,61 +174,61 @@
 <p>« C'est la pire personne que je connaisse. »
 </p>
 </blockquote>
-<h3 id="fonction-possible">🧠 Fonction possible</h3>
+<h3 id="fonction-possible">Fonction possible</h3>
 <p>Cette alternance peut permettre de gérer des émotions relationnelles très intenses lorsque les représentations contradictoires sont difficiles à intégrer.</p>
 <hr />
-<h2 id="85-lidentification-projective" class="entry-title hc-5">🪞 8.5 L'identification projective</h2>
-<h3 id="definition_4">🔎 Définition</h3>
+<h2 id="85-lidentification-projective" class="entry-title hc-5">8.5 L'identification projective</h2>
+<h3 id="definition_4">Définition</h3>
 <p>L'<strong>identification projective</strong> est un concept complexe issu de la psychologie psychanalytique.</p>
 <p>Il décrit un processus dans lequel une personne attribue certains éléments psychiques à une autre personne tout en pouvant influencer la relation d'une manière qui renforce cette dynamique.</p>
-<h3 id="exemple-simplifie">💭 Exemple simplifié</h3>
+<h3 id="exemple-simplifie">Exemple simplifié</h3>
 <p>Une personne est persuadée que quelqu'un est hostile envers elle.</p>
 <p>Elle adopte alors une attitude froide et agressive avec cette personne, qui finit par réagir négativement.</p>
 <p>La personne peut ensuite considérer cette réaction comme une confirmation de son idée initiale.</p>
-<h3 id="important">⚠️ Important</h3>
+<h3 id="important">Important</h3>
 <p>L'identification projective ne doit pas être confondue avec une simple projection.</p>
 <hr />
-<h2 id="86-la-projection" class="entry-title hc-1">🪞 8.6 La projection</h2>
-<h3 id="definition_5">🔎 Définition</h3>
+<h2 id="86-la-projection" class="entry-title hc-1">8.6 La projection</h2>
+<h3 id="definition_5">Définition</h3>
 <p>La <strong>projection</strong> consiste à attribuer à une autre personne des pensées, émotions ou intentions qui appartiennent principalement à soi-même.</p>
-<h3 id="exemple_4">💭 Exemple</h3>
+<h3 id="exemple_4">Exemple</h3>
 <p>Une personne ressent une forte jalousie mais est persuadée que l'autre est jaloux.</p>
-<h3 id="fonction_3">🧠 Fonction</h3>
+<h3 id="fonction_3">Fonction</h3>
 <p>La projection peut permettre de mettre à distance certains éléments difficiles à reconnaître chez soi.</p>
 <hr />
-<h2 id="87-lomnipotence" class="entry-title hc-2">👑 8.7 L'omnipotence</h2>
-<h3 id="definition_6">🔎 Définition</h3>
+<h2 id="87-lomnipotence" class="entry-title hc-2">8.7 L'omnipotence</h2>
+<h3 id="definition_6">Définition</h3>
 <p>L'<strong>omnipotence</strong> correspond à une impression exagérée de pouvoir, de contrôle ou de capacité à maîtriser les événements.</p>
 <p>Dans certains modèles psychodynamiques, elle peut protéger contre un sentiment profond d'impuissance ou de vulnérabilité.</p>
-<h3 id="exemple_5">💭 Exemple</h3>
+<h3 id="exemple_5">Exemple</h3>
 <blockquote>
 <p>« Je peux tout gérer seul, je n'ai besoin de personne. »
 </p>
 </blockquote>
-<h3 id="fonction_4">🧠 Fonction</h3>
+<h3 id="fonction_4">Fonction</h3>
 <p>Elle peut préserver temporairement une impression de puissance et de sécurité.</p>
 <hr />
-<h2 id="88-le-controle-omnipotent" class="entry-title hc-3">🛡️ 8.8 Le contrôle omnipotent</h2>
-<h3 id="definition_7">🔎 Définition</h3>
+<h2 id="88-le-controle-omnipotent" class="entry-title hc-3">8.8 Le contrôle omnipotent</h2>
+<h3 id="definition_7">Définition</h3>
 <p>Le <strong>contrôle omnipotent</strong> correspond à une tentative de maintenir une impression de maîtrise très importante sur les événements ou les autres.</p>
-<h3 id="exemple_6">💭 Exemple</h3>
+<h3 id="exemple_6">Exemple</h3>
 <p>Une personne peut ressentir une forte anxiété lorsqu'une situation ne se déroule pas exactement comme prévu et tenter de contrôler chaque détail.</p>
-<h3 id="fonction_5">🧠 Fonction</h3>
+<h3 id="fonction_5">Fonction</h3>
 <p>Le contrôle peut temporairement diminuer le sentiment d'incertitude.</p>
 <hr />
-<h2 id="89-le-deni-psychotique" class="entry-title hc-4">🧱 8.9 Le déni psychotique</h2>
-<h3 id="definition_8">🔎 Définition</h3>
+<h2 id="89-le-deni-psychotique" class="entry-title hc-4">8.9 Le déni psychotique</h2>
+<h3 id="definition_8">Définition</h3>
 <p>Le terme <strong>déni psychotique</strong> est parfois utilisé dans certaines approches cliniques pour décrire une négation extrêmement importante d'une réalité.</p>
-<h3 id="important_1">⚠️ Important</h3>
+<h3 id="important_1">Important</h3>
 <p>Il ne s'agit pas simplement de « ne pas vouloir croire quelque chose ».</p>
 <p>Les troubles psychotiques impliquent des phénomènes complexes qui nécessitent une évaluation clinique.</p>
 <blockquote>
-<p>🧠 Ce terme ne doit jamais être utilisé pour diagnostiquer une personne à partir d'un simple comportement.
+<p>Ce terme ne doit jamais être utilisé pour diagnostiquer une personne à partir d'un simple comportement.
 </p>
 </blockquote>
 <hr />
-<h2 id="810-la-dissociation" class="entry-title hc-5">🌫️ 8.10 La dissociation</h2>
-<h3 id="definition_9">🔎 Définition</h3>
+<h2 id="810-la-dissociation" class="entry-title hc-5">8.10 La dissociation</h2>
+<h3 id="definition_9">Définition</h3>
 <p>La <strong>dissociation</strong> correspond à une perturbation de l'intégration habituelle de certains éléments de l'expérience.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -223,94 +238,94 @@
 <li>la perception du corps ;</li>
 <li>la perception de l'environnement.</li>
 </ul>
-<h3 id="exemple_7">💭 Exemple</h3>
+<h3 id="exemple_7">Exemple</h3>
 <p>Une personne confrontée à une situation très intense peut ressentir une impression de détachement ou avoir l'impression que la situation n'est pas totalement réelle.</p>
-<h3 id="important_2">⚠️ Important</h3>
+<h3 id="important_2">Important</h3>
 <p>Les expériences dissociatives peuvent varier considérablement en intensité.</p>
 <hr />
-<h2 id="811-la-compartimentation" class="entry-title hc-1">🧠 8.11 La compartimentation</h2>
-<h3 id="definition_10">🔎 Définition</h3>
+<h2 id="811-la-compartimentation" class="entry-title hc-1">8.11 La compartimentation</h2>
+<h3 id="definition_10">Définition</h3>
 <p>La <strong>compartimentation</strong> consiste à maintenir séparées différentes croyances, expériences ou représentations afin qu'elles ne créent pas directement un conflit psychologique.</p>
-<h3 id="exemple_8">💭 Exemple</h3>
+<h3 id="exemple_8">Exemple</h3>
 <p>Une personne peut défendre une valeur très importante dans un contexte tout en adoptant un comportement contraire dans un autre contexte sans confronter immédiatement cette contradiction.</p>
-<h3 id="fonction_6">🧠 Fonction</h3>
+<h3 id="fonction_6">Fonction</h3>
 <p>Elle peut réduire temporairement la dissonance psychologique.</p>
 <hr />
-<h2 id="812-la-formation-reactionnelle" class="entry-title hc-2">🎭 8.12 La formation réactionnelle</h2>
-<h3 id="definition_11">🔎 Définition</h3>
+<h2 id="812-la-formation-reactionnelle" class="entry-title hc-2">8.12 La formation réactionnelle</h2>
+<h3 id="definition_11">Définition</h3>
 <p>La <strong>formation réactionnelle</strong> consiste à adopter une attitude opposée à une pensée, une émotion ou une impulsion vécue comme difficilement acceptable.</p>
-<h3 id="exemple_9">💭 Exemple</h3>
+<h3 id="exemple_9">Exemple</h3>
 <p>Une personne ressent une forte hostilité envers quelqu'un mais adopte une attitude excessivement chaleureuse.</p>
-<h3 id="fonction_7">🧠 Fonction</h3>
+<h3 id="fonction_7">Fonction</h3>
 <p>Elle permet de maintenir à distance certains contenus psychologiques inconfortables.</p>
 <hr />
-<h2 id="813-lannulation-retroactive" class="entry-title hc-3">🔄 8.13 L'annulation rétroactive</h2>
-<h3 id="definition_12">🔎 Définition</h3>
+<h2 id="813-lannulation-retroactive" class="entry-title hc-3">8.13 L'annulation rétroactive</h2>
+<h3 id="definition_12">Définition</h3>
 <p>L'<strong>annulation rétroactive</strong> consiste à tenter de neutraliser psychologiquement une pensée ou un comportement jugé inacceptable par une autre action.</p>
-<h3 id="exemple_10">💭 Exemple</h3>
+<h3 id="exemple_10">Exemple</h3>
 <p>Après avoir blessé quelqu'un verbalement, une personne peut devenir immédiatement extrêmement gentille dans l'espoir de « réparer » ou d'annuler symboliquement ce qu'elle vient de faire.</p>
-<h3 id="fonction_8">🧠 Fonction</h3>
+<h3 id="fonction_8">Fonction</h3>
 <p>Elle peut réduire la culpabilité ou l'anxiété.</p>
 <hr />
-<h2 id="814-lintrojection" class="entry-title hc-4">🪞 8.14 L'introjection</h2>
-<h3 id="definition_13">🔎 Définition</h3>
+<h2 id="814-lintrojection" class="entry-title hc-4">8.14 L'introjection</h2>
+<h3 id="definition_13">Définition</h3>
 <p>L'<strong>introjection</strong> consiste à intégrer dans son monde psychique certaines représentations, valeurs ou attitudes provenant d'autres personnes.</p>
-<h3 id="exemple_11">💭 Exemple</h3>
+<h3 id="exemple_11">Exemple</h3>
 <p>Une personne ayant été régulièrement critiquée peut finir par développer une voix intérieure très critique.</p>
-<h3 id="fonction_9">🧠 Fonction</h3>
+<h3 id="fonction_9">Fonction</h3>
 <p>L'introjection participe notamment à la construction de l'identité et à l'intériorisation des expériences relationnelles.</p>
 <hr />
-<h2 id="815-lidentification" class="entry-title hc-5">👤 8.15 L'identification</h2>
-<h3 id="definition_14">🔎 Définition</h3>
+<h2 id="815-lidentification" class="entry-title hc-5">8.15 L'identification</h2>
+<h3 id="definition_14">Définition</h3>
 <p>L'<strong>identification</strong> consiste à intégrer certains traits ou caractéristiques d'une autre personne dans sa propre identité.</p>
-<h3 id="exemple_12">💭 Exemple</h3>
+<h3 id="exemple_12">Exemple</h3>
 <p>Un enfant peut progressivement adopter certaines attitudes ou valeurs d'un parent qu'il admire.</p>
-<h3 id="fonction_10">🧠 Fonction</h3>
+<h3 id="fonction_10">Fonction</h3>
 <p>L'identification participe au développement de la personnalité et du sentiment d'appartenance.</p>
 <hr />
-<h2 id="816-lidentification-a-lagresseur" class="entry-title hc-1">🧩 8.16 L'identification à l'agresseur</h2>
-<h3 id="definition_15">🔎 Définition</h3>
+<h2 id="816-lidentification-a-lagresseur" class="entry-title hc-1">8.16 L'identification à l'agresseur</h2>
+<h3 id="definition_15">Définition</h3>
 <p>L'<strong>identification à l'agresseur</strong> désigne un processus dans lequel une personne confrontée à une figure menaçante peut intégrer certains comportements ou caractéristiques de cette figure.</p>
-<h3 id="exemple_13">💭 Exemple</h3>
+<h3 id="exemple_13">Exemple</h3>
 <p>Une personne ayant subi une autorité très dure peut ensuite reproduire elle-même une attitude particulièrement autoritaire dans certaines relations.</p>
-<h3 id="fonction-possible_1">🧠 Fonction possible</h3>
+<h3 id="fonction-possible_1">Fonction possible</h3>
 <p>Cette identification peut parfois donner une impression de contrôle face à une expérience antérieure d'impuissance.</p>
 <hr />
-<h2 id="817-le-retrait-narcissique" class="entry-title hc-2">🧊 8.17 Le retrait narcissique</h2>
-<h3 id="definition_16">🔎 Définition</h3>
+<h2 id="817-le-retrait-narcissique" class="entry-title hc-2">8.17 Le retrait narcissique</h2>
+<h3 id="definition_16">Définition</h3>
 <p>Le <strong>retrait narcissique</strong> correspond à une prise de distance relationnelle ou psychologique lorsqu'une situation menace fortement l'estime de soi.</p>
-<h3 id="exemple_14">💭 Exemple</h3>
+<h3 id="exemple_14">Exemple</h3>
 <p>Après avoir reçu une critique, une personne peut se couper des autres afin de ne plus être confrontée à une nouvelle blessure.</p>
-<h3 id="fonction_11">🧠 Fonction</h3>
+<h3 id="fonction_11">Fonction</h3>
 <p>Il peut temporairement protéger l'image de soi.</p>
 <hr />
-<h2 id="818-le-faux-self" class="entry-title hc-3">🪞 8.18 Le faux self</h2>
-<h3 id="definition_17">🔎 Définition</h3>
+<h2 id="818-le-faux-self" class="entry-title hc-3">8.18 Le faux self</h2>
+<h3 id="definition_17">Définition</h3>
 <p>Le concept de <strong>faux self</strong>, notamment développé par Donald Winnicott, décrit une organisation dans laquelle une personne s'adapte fortement aux attentes de son environnement.</p>
 <p>Cette adaptation peut parfois limiter l'expression spontanée des besoins personnels.</p>
-<h3 id="exemple_15">💭 Exemple</h3>
+<h3 id="exemple_15">Exemple</h3>
 <p>Une personne peut constamment chercher à être exactement ce que les autres attendent d'elle.</p>
-<h3 id="important_3">⚠️ Important</h3>
+<h3 id="important_3">Important</h3>
 <p>Le faux self n'est pas synonyme de mensonge ou de « fausse personnalité ».</p>
 <p>Il s'agit d'un concept théorique concernant l'adaptation et l'identité.</p>
 <hr />
-<h2 id="819-la-suradaptation" class="entry-title hc-4">🧱 8.19 La suradaptation</h2>
-<h3 id="definition_18">🔎 Définition</h3>
+<h2 id="819-la-suradaptation" class="entry-title hc-4">8.19 La suradaptation</h2>
+<h3 id="definition_18">Définition</h3>
 <p>La <strong>suradaptation</strong> consiste à modifier fortement son comportement afin de répondre aux attentes de l'environnement, parfois au détriment de ses propres besoins.</p>
-<h3 id="exemple_16">💭 Exemple</h3>
+<h3 id="exemple_16">Exemple</h3>
 <p>Une personne accepte constamment les demandes des autres sans exprimer ses propres limites.</p>
-<h3 id="fonction_12">🧠 Fonction</h3>
+<h3 id="fonction_12">Fonction</h3>
 <p>Elle peut permettre d'éviter le conflit ou le rejet.</p>
 <hr />
-<h2 id="820-le-passage-a-lacte" class="entry-title hc-5">🧠 8.20 Le passage à l'acte</h2>
-<h3 id="definition_19">🔎 Définition</h3>
+<h2 id="820-le-passage-a-lacte" class="entry-title hc-5">8.20 Le passage à l'acte</h2>
+<h3 id="definition_19">Définition</h3>
 <p>Le <strong>passage à l'acte</strong> consiste à exprimer une tension psychique principalement à travers un comportement plutôt que par la réflexion ou la verbalisation.</p>
-<h3 id="exemple_17">💭 Exemple</h3>
+<h3 id="exemple_17">Exemple</h3>
 <p>Une personne confrontée à une émotion très intense agit impulsivement au lieu d'identifier ou d'exprimer clairement ce qu'elle ressent.</p>
-<h3 id="important_4">⚠️ Important</h3>
+<h3 id="important_4">Important</h3>
 <p>Le passage à l'acte est une notion clinique complexe et tout comportement impulsif ne correspond pas automatiquement à ce processus.</p>
 <hr />
-<h1 id="tableau-recapitulatif">📊 TABLEAU RÉCAPITULATIF</h1>
+<h1 id="tableau-recapitulatif">TABLEAU RÉCAPITULATIF</h1>
 <table>
 <thead>
 <tr>
@@ -320,98 +335,98 @@
 </thead>
 <tbody>
 <tr>
-<td>🧩 Clivage</td>
+<td>Clivage</td>
 <td>Séparer des représentations contradictoires</td>
 </tr>
 <tr>
-<td>🌟 Idéalisation</td>
+<td>Idéalisation</td>
 <td>Maintenir une représentation très positive</td>
 </tr>
 <tr>
-<td>🔽 Dévalorisation</td>
+<td>Dévalorisation</td>
 <td>Réduire la valeur attribuée à quelqu'un ou quelque chose</td>
 </tr>
 <tr>
-<td>🔄 Idéalisation–dévalorisation</td>
+<td>Idéalisation–dévalorisation</td>
 <td>Alterner entre deux représentations extrêmes</td>
 </tr>
 <tr>
-<td>🪞 Identification projective</td>
+<td>Identification projective</td>
 <td>Influencer une relation à partir d'éléments projetés</td>
 </tr>
 <tr>
-<td>🪞 Projection</td>
+<td>Projection</td>
 <td>Attribuer à autrui certains éléments internes</td>
 </tr>
 <tr>
-<td>👑 Omnipotence</td>
+<td>Omnipotence</td>
 <td>Maintenir une impression de puissance</td>
 </tr>
 <tr>
-<td>🛡️ Contrôle omnipotent</td>
+<td>Contrôle omnipotent</td>
 <td>Réduire l'incertitude par un contrôle important</td>
 </tr>
 <tr>
-<td>🌫️ Dissociation</td>
+<td>Dissociation</td>
 <td>Séparer certains éléments de l'expérience</td>
 </tr>
 <tr>
-<td>🧠 Compartimentation</td>
+<td>Compartimentation</td>
 <td>Maintenir séparés différents éléments psychiques</td>
 </tr>
 <tr>
-<td>🎭 Formation réactionnelle</td>
+<td>Formation réactionnelle</td>
 <td>Exprimer l'opposé d'une tendance interne</td>
 </tr>
 <tr>
-<td>🔄 Annulation rétroactive</td>
+<td>Annulation rétroactive</td>
 <td>Neutraliser symboliquement une pensée ou action</td>
 </tr>
 <tr>
-<td>🪞 Introjection</td>
+<td>Introjection</td>
 <td>Intégrer des représentations extérieures</td>
 </tr>
 <tr>
-<td>👤 Identification</td>
+<td>Identification</td>
 <td>Intégrer certains traits d'autrui</td>
 </tr>
 <tr>
-<td>🧩 Identification à l'agresseur</td>
+<td>Identification à l'agresseur</td>
 <td>Intégrer certains traits d'une figure menaçante</td>
 </tr>
 <tr>
-<td>🧊 Retrait narcissique</td>
+<td>Retrait narcissique</td>
 <td>Protéger l'estime de soi</td>
 </tr>
 <tr>
-<td>🎭 Faux self</td>
+<td>Faux self</td>
 <td>S'adapter fortement aux attentes extérieures</td>
 </tr>
 <tr>
-<td>🧱 Suradaptation</td>
+<td>Suradaptation</td>
 <td>Préserver l'acceptation ou éviter le conflit</td>
 </tr>
 <tr>
-<td>⚡ Passage à l'acte</td>
+<td>Passage à l'acte</td>
 <td>Exprimer une tension par l'action</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h1 id="821-pourquoi-parle-t-on-de-mecanismes-avances">🔎 8.21 Pourquoi parle-t-on de mécanismes « avancés » ?</h1>
+<h1 id="821-pourquoi-parle-t-on-de-mecanismes-avances">8.21 Pourquoi parle-t-on de mécanismes « avancés » ?</h1>
 <p>Ces mécanismes sont considérés comme plus complexes car ils peuvent concerner simultanément :</p>
 <ul>
-<li>🧠 la perception de soi ;</li>
-<li>👤 l'identité ;</li>
-<li>❤️ les relations ;</li>
-<li>🪞 la perception des autres ;</li>
-<li>⚖️ les contradictions internes ;</li>
-<li>🌫️ la conscience ;</li>
-<li>🛡️ la régulation de l'estime de soi.</li>
+<li>la perception de soi ;</li>
+<li>l'identité ;</li>
+<li>les relations ;</li>
+<li>la perception des autres ;</li>
+<li>les contradictions internes ;</li>
+<li>la conscience ;</li>
+<li>la régulation de l'estime de soi.</li>
 </ul>
 <p>Ils ne correspondent donc pas uniquement à une simple réaction émotionnelle.</p>
 <hr />
-<h1 id="822-peut-on-reconnaitre-un-mecanisme-chez-quelquun">⚠️ 8.22 Peut-on reconnaître un mécanisme chez quelqu'un ?</h1>
+<h1 id="822-peut-on-reconnaitre-un-mecanisme-chez-quelquun">8.22 Peut-on reconnaître un mécanisme chez quelqu'un ?</h1>
 <p>Il est généralement impossible d'identifier avec certitude un mécanisme de défense à partir d'un seul comportement.</p>
 <p>Le même comportement peut avoir plusieurs explications.</p>
 <p>Par exemple, une personne qui s'isole peut :</p>
@@ -423,10 +438,10 @@
 <li>ressentir de l'anxiété ;</li>
 <li>simplement préférer être seule.</li>
 </ul>
-<p>🧠 L'interprétation psychologique dépend donc du <strong>contexte</strong>, de la <strong>fréquence</strong>, de la <strong>fonction du comportement</strong> et de l'expérience subjective de la personne.</p>
+<p>L'interprétation psychologique dépend donc du <strong>contexte</strong>, de la <strong>fréquence</strong>, de la <strong>fonction du comportement</strong> et de l'expérience subjective de la personne.</p>
 <hr />
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🧬 Les mécanismes complexes peuvent modifier profondément :</p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p>Les mécanismes complexes peuvent modifier profondément :</p>
 <ul>
 <li>la perception de soi ;</li>
 <li>la perception des autres ;</li>
@@ -434,18 +449,27 @@
 <li>la gestion des contradictions ;</li>
 <li>l'expression des émotions.</li>
 </ul>
-<p>🛡️ Ils peuvent protéger temporairement contre une forte souffrance psychologique.</p>
-<p>⚠️ Lorsqu'un mécanisme devient très rigide ou systématique, il peut parfois créer de nouvelles difficultés.</p>
-<p>🌱 Comprendre ces mécanismes ne doit jamais servir à étiqueter une personne.</p>
+<p>Ils peuvent protéger temporairement contre une forte souffrance psychologique.</p>
+<p>Lorsqu'un mécanisme devient très rigide ou systématique, il peut parfois créer de nouvelles difficultés.</p>
+<p>Comprendre ces mécanismes ne doit jamais servir à étiqueter une personne.</p>
 <blockquote>
-<p>🧠 <strong>Un mécanisme de défense décrit avant tout une fonction psychologique possible : il cherche généralement à protéger le psychisme face à une tension, une émotion ou une expérience difficile.</strong>
+<p><strong>Un mécanisme de défense décrit avant tout une fonction psychologique possible : il cherche généralement à protéger le psychisme face à une tension, une émotion ou une expérience difficile.</strong>
 </p>
 </blockquote>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Mécanismes de défense »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-en-psychopathologie/"><span class="similar-icon">🧩</span>Les mécanismes de défense en psychopathologie</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-dans-la-vie-quotidienne/"><span class="similar-icon">🧩</span>Les mécanismes de défense dans la vie quotidienne</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-en-psychologie-clinique/"><span class="similar-icon">🧩</span>Les mécanismes de défense en psychologie clinique</a></div>
+      <h2>Autres chapitres de « Mécanismes de défense »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-en-psychopathologie/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Les mécanismes de défense en psychopathologie</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-dans-la-vie-quotidienne/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Les mécanismes de défense dans la vie quotidienne</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-en-psychologie-clinique/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Les mécanismes de défense en psychologie clinique</a></div>
     </div>
     <a class="back-link" href="/categorie/mecanismes/">← Retour à « Mécanismes de défense »</a>
   </div>
@@ -531,23 +555,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -565,7 +591,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -745,9 +771,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -756,10 +784,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -866,7 +894,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -906,8 +934,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -938,7 +966,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -993,7 +1021,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1017,17 +1045,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1069,7 +1097,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

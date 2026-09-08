@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#91-le-trouble-dissociatif-de-lidentite">🧠 9.1 Le trouble dissociatif de l'identité</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#dissociation">Dissociation</a></li><li><a href="#a-distinguer">À distinguer</a></li><li><a href="#comment-aider-un-proche">🤝 Comment aider un proche</a></li><li><a href="#prise-en-charge">🛠️ Prise en charge</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#92-lamnesie-dissociative">🧠 9.2 L'amnésie dissociative</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#formes-particulieres">Formes particulières</a></li><li><a href="#comment-aider-un-proche_1">🤝 Comment aider un proche</a></li><li><a href="#prise-en-charge_1">🛠️ Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#93-le-trouble-de-depersonnalisationderealisation">🧠 9.3 Le trouble de dépersonnalisation/déréalisation</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#depersonnalisation">Dépersonnalisation</a></li><li><a href="#derealisation">Déréalisation</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#comment-aider-un-proche_2">🤝 Comment aider un proche</a></li><li><a href="#prise-en-charge_2">🛠️ Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#94-la-dissociation">🧠 9.4 La dissociation</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#dissociation-normale">Dissociation normale</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#95-la-fugue-dissociative">🧠 9.5 La fugue dissociative</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#particularite_2">Particularité</a></li><li><a href="#que-faire-face-a-une-fugue-dissociative">🤝 Que faire face à une fugue dissociative</a></li><li><a href="#prise-en-charge_3">🛠️ Prise en charge</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#96-la-derealisation">🧠 9.6 La déréalisation</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#particularite_3">Particularité</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#97-la-depersonnalisation">🧠 9.7 La dépersonnalisation</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#particularite_4">Particularité</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#98-autre-trouble-dissociatif-specifie">🧠 9.8 Autre trouble dissociatif spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#particularite_5">Particularité</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#99-trouble-dissociatif-non-specifie">🧠 9.9 Trouble dissociatif non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#91-le-trouble-dissociatif-de-lidentite">9.1 Le trouble dissociatif de l'identité</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#dissociation">Dissociation</a></li><li><a href="#a-distinguer">À distinguer</a></li><li><a href="#comment-aider-un-proche">Comment aider un proche</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#92-lamnesie-dissociative">9.2 L'amnésie dissociative</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#particularite">Particularité</a></li><li><a href="#formes-particulieres">Formes particulières</a></li><li><a href="#comment-aider-un-proche_1">Comment aider un proche</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#93-le-trouble-de-depersonnalisationderealisation">9.3 Le trouble de dépersonnalisation/déréalisation</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#depersonnalisation">Dépersonnalisation</a></li><li><a href="#derealisation">Déréalisation</a></li><li><a href="#particularite_1">Particularité</a></li><li><a href="#comment-aider-un-proche_2">Comment aider un proche</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#94-la-dissociation">9.4 La dissociation</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#exemple">Exemple</a></li><li><a href="#dissociation-normale">Dissociation normale</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#95-la-fugue-dissociative">9.5 La fugue dissociative</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#particularite_2">Particularité</a></li><li><a href="#que-faire-face-a-une-fugue-dissociative">Que faire face à une fugue dissociative</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#96-la-derealisation">9.6 La déréalisation</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#particularite_3">Particularité</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#97-la-depersonnalisation">9.7 La dépersonnalisation</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#particularite_4">Particularité</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#98-autre-trouble-dissociatif-specifie">9.8 Autre trouble dissociatif spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#particularite_5">Particularité</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#99-trouble-dissociatif-non-specifie">9.9 Trouble dissociatif non spécifié</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Partie 9 — Troubles dissociatifs',
         category: 'Troubles psychologiques',
-        icon: '🩺'
+        icon: 'P'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/troubles/">🩺 Troubles psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/troubles/">Troubles psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Partie 9 — Troubles dissociatifs</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,7 +113,7 @@
     </svg>
     </div>
     <div class="article-body">
-      <h1 id="91-le-trouble-dissociatif-de-lidentite" class="entry-title hc-1">🧠 9.1  Le trouble dissociatif de l'identité</h1>
+      <h1 id="91-le-trouble-dissociatif-de-lidentite" class="entry-title hc-1">9.1  Le trouble dissociatif de l'identité</h1>
 <h2 id="definition">Définition</h2>
 <p>Le <strong>trouble dissociatif de l'identité (TDI)</strong> est caractérisé par une perturbation de l'identité impliquant plusieurs états de personnalité ou expériences de soi distinctes.</p>
 <p>Il s'accompagne généralement de périodes de discontinuité dans le sentiment de soi et de difficultés importantes concernant la mémoire.</p>
@@ -122,18 +137,18 @@
 </ul>
 <h2 id="a-distinguer">À distinguer</h2>
 <p>Le TDI ne correspond pas simplement à des changements d'humeur ou à plusieurs facettes normales de la personnalité.</p>
-<h2 id="comment-aider-un-proche">🤝 Comment aider un proche</h2>
+<h2 id="comment-aider-un-proche">Comment aider un proche</h2>
 <ul>
 <li><strong>Ne pas dramatiser ni minimiser les changements observés.</strong> Rester stable et rassurant aide davantage qu'une réaction de choc ou d'incrédulité.</li>
 <li><strong>Éviter de forcer la personne à « se souvenir »</strong> de ce qui a pu se passer pendant un épisode dissociatif — cela peut être source de détresse plutôt que d'aide.</li>
 <li><strong>Encourager une prise en charge spécialisée</strong>, idéalement par un professionnel formé aux troubles dissociatifs, ce trouble étant généralement lié à des expériences difficiles vécues antérieurement.</li>
 <li><strong>Rester patient face à un processus long.</strong> Le travail thérapeutique sur ce type de trouble se fait généralement sur une durée importante.</li>
 </ul>
-<h2 id="prise-en-charge">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge">Prise en charge</h2>
 <p>La prise en charge repose principalement sur une psychothérapie spécialisée, souvent centrée sur la stabilisation, la compréhension du fonctionnement dissociatif et, à terme, le travail sur les expériences à l'origine du trouble, à un rythme adapté à la personne.</p>
 <h2 id="a-retenir">À retenir</h2>
 <p>Le TDI est un trouble dissociatif complexe caractérisé par des perturbations importantes de l'identité et de la mémoire.</p>
-<h1 id="92-lamnesie-dissociative" class="entry-title hc-2">🧠 9.2 L'amnésie dissociative</h1>
+<h1 id="92-lamnesie-dissociative" class="entry-title hc-2">9.2 L'amnésie dissociative</h1>
 <h2 id="definition_1">Définition</h2>
 <p>L'<strong>amnésie dissociative</strong> correspond à une incapacité à se rappeler des informations autobiographiques importantes, généralement associées à des événements traumatiques ou fortement stressants.</p>
 <h2 id="manifestations_1">Manifestations</h2>
@@ -148,17 +163,17 @@
 <p>La perte de mémoire est suffisamment importante pour provoquer une gêne ou une souffrance.</p>
 <h2 id="formes-particulieres">Formes particulières</h2>
 <p>Dans certaines situations, une <strong>fugue dissociative</strong> peut être observée : la personne peut voyager ou se déplacer de manière inattendue tout en présentant une confusion concernant son identité ou certains éléments de son passé.</p>
-<h2 id="comment-aider-un-proche_1">🤝 Comment aider un proche</h2>
+<h2 id="comment-aider-un-proche_1">Comment aider un proche</h2>
 <ul>
 <li><strong>Ne pas insister pour « retrouver » les souvenirs manquants.</strong> Cette démarche doit se faire, si elle a lieu, avec un professionnel formé, jamais en forçant la mémoire.</li>
 <li><strong>Rassurer sans minimiser</strong> : ces trous de mémoire sont réels et reconnus, pas juste « dans la tête ».</li>
 <li><strong>Encourager une consultation</strong>, en particulier si l'amnésie est récente, étendue ou source de détresse importante.</li>
 </ul>
-<h2 id="prise-en-charge_1">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge_1">Prise en charge</h2>
 <p>Une évaluation professionnelle permet d'abord d'écarter d'autres causes possibles. La prise en charge psychologique vise ensuite à accompagner la personne, en toute sécurité, sans jamais forcer la récupération des souvenirs.</p>
 <h2 id="a-retenir_1">À retenir</h2>
 <p>L'amnésie dissociative concerne principalement des souvenirs autobiographiques importants qui deviennent temporairement ou durablement difficiles à récupérer.</p>
-<h1 id="93-le-trouble-de-depersonnalisationderealisation" class="entry-title hc-3">🧠 9.3  Le trouble de dépersonnalisation/déréalisation</h1>
+<h1 id="93-le-trouble-de-depersonnalisationderealisation" class="entry-title hc-3">9.3  Le trouble de dépersonnalisation/déréalisation</h1>
 <h2 id="definition_2">Définition</h2>
 <p>Ce trouble se caractérise par des expériences persistantes ou répétées de <strong>dépersonnalisation</strong>, de <strong>déréalisation</strong>, ou des deux.</p>
 <h2 id="depersonnalisation">Dépersonnalisation</h2>
@@ -180,17 +195,17 @@
 <h2 id="particularite_1">Particularité</h2>
 <p>La personne conserve généralement la capacité de comprendre que cette sensation est une expérience subjective.</p>
 <p>Elle ne croit donc pas nécessairement que le monde est réellement devenu irréel.</p>
-<h2 id="comment-aider-un-proche_2">🤝 Comment aider un proche</h2>
+<h2 id="comment-aider-un-proche_2">Comment aider un proche</h2>
 <ul>
 <li><strong>Prendre au sérieux ce ressenti</strong>, même s'il est difficile à décrire ou à comprendre de l'extérieur — l'expérience est souvent très déstabilisante pour la personne qui la vit.</li>
 <li><strong>Éviter de dire que « ça n'existe pas »</strong> ou que la personne « invente » : ce sont des sensations reconnues, pas un signe d'irrationalité.</li>
 <li><strong>Encourager un avis professionnel</strong>, surtout si les épisodes sont fréquents ou durables, pour écarter d'autres causes et proposer un accompagnement adapté.</li>
 </ul>
-<h2 id="prise-en-charge_2">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge_2">Prise en charge</h2>
 <p>Une psychothérapie, notamment centrée sur la gestion de l'anxiété souvent associée à ces expériences, constitue une approche fréquemment utilisée.</p>
 <h2 id="a-retenir_2">À retenir</h2>
 <p>La dépersonnalisation concerne surtout le sentiment d'être détaché de soi-même, tandis que la déréalisation concerne le sentiment d'irréalité du monde extérieur.</p>
-<h1 id="94-la-dissociation" class="entry-title hc-4">🧠 9.4 La dissociation</h1>
+<h1 id="94-la-dissociation" class="entry-title hc-4">9.4 La dissociation</h1>
 <h2 id="definition_3">Définition</h2>
 <p>La <strong>dissociation</strong> désigne une perturbation de l'intégration habituelle de certains processus psychologiques.</p>
 <p>Elle peut concerner :</p>
@@ -214,7 +229,7 @@
 <p>Par exemple, être tellement absorbé dans une activité que l'on remarque à peine ce qui se passe autour de soi.</p>
 <h2 id="a-retenir_3">À retenir</h2>
 <p>La dissociation existe sur un continuum. Elle devient clinique lorsqu'elle est suffisamment importante pour provoquer une souffrance ou une gêne significative.</p>
-<h1 id="95-la-fugue-dissociative" class="entry-title hc-5">🧠 9.5  La fugue dissociative</h1>
+<h1 id="95-la-fugue-dissociative" class="entry-title hc-5">9.5  La fugue dissociative</h1>
 <h2 id="definition_4">Définition</h2>
 <p>La <strong>fugue dissociative</strong> est une forme particulière d'amnésie dissociative dans laquelle une personne peut effectuer un déplacement ou un voyage inattendu accompagné d'une perte de mémoire concernant son identité ou certains éléments autobiographiques.</p>
 <h2 id="manifestations_2">Manifestations</h2>
@@ -228,18 +243,18 @@
 <h2 id="particularite_2">Particularité</h2>
 <p>La fugue dissociative est rare.</p>
 <p>Elle doit être distinguée d'un simple déplacement volontaire ou d'un oubli ordinaire.</p>
-<h2 id="que-faire-face-a-une-fugue-dissociative">🤝 Que faire face à une fugue dissociative</h2>
+<h2 id="que-faire-face-a-une-fugue-dissociative">Que faire face à une fugue dissociative</h2>
 <ul>
 <li><strong>Prendre la situation au sérieux</strong>, en particulier si la personne est portée disparue ou semble désorientée sur son identité.</li>
 <li><strong>Contacter les secours ou la police si la personne est introuvable</strong>, comme pour toute disparition inquiétante.</li>
 <li><strong>À son retour, éviter de la brusquer</strong> avec des questions insistantes sur ce qui s'est passé — la confusion ressentie est réelle et peut être source d'angoisse.</li>
 <li><strong>Orienter vers une évaluation médicale et psychologique</strong> dès que possible après l'épisode.</li>
 </ul>
-<h2 id="prise-en-charge_3">🛠️ Prise en charge</h2>
+<h2 id="prise-en-charge_3">Prise en charge</h2>
 <p>Une évaluation médicale est généralement réalisée en priorité pour écarter d'autres causes, suivie d'un accompagnement psychologique adapté, en lien avec les facteurs ayant pu déclencher l'épisode.</p>
 <h2 id="a-retenir_4">À retenir</h2>
 <p>La fugue dissociative associe principalement une perturbation de la mémoire autobiographique à un déplacement inattendu.</p>
-<h1 id="96-la-derealisation" class="entry-title hc-1">🧠 9.6  La déréalisation</h1>
+<h1 id="96-la-derealisation" class="entry-title hc-1">9.6  La déréalisation</h1>
 <h2 id="definition_5">Définition</h2>
 <p>La <strong>déréalisation</strong> est une expérience durant laquelle l'environnement semble irréel, étrange, artificiel ou comme séparé de la personne.</p>
 <h2 id="manifestations_3">Manifestations</h2>
@@ -255,7 +270,7 @@
 <p>La personne peut généralement savoir intellectuellement que le monde est réel malgré cette sensation.</p>
 <h2 id="a-retenir_5">À retenir</h2>
 <p>La déréalisation concerne principalement la perception subjective du monde extérieur.</p>
-<h1 id="97-la-depersonnalisation" class="entry-title hc-2">🧠 9.7  La dépersonnalisation</h1>
+<h1 id="97-la-depersonnalisation" class="entry-title hc-2">9.7  La dépersonnalisation</h1>
 <h2 id="definition_6">Définition</h2>
 <p>La <strong>dépersonnalisation</strong> est une expérience de détachement ou d'éloignement par rapport à soi-même.</p>
 <h2 id="manifestations_4">Manifestations</h2>
@@ -271,14 +286,14 @@
 <p>Cependant, la personne conserve généralement une certaine capacité à reconnaître qu'il s'agit d'une sensation et non d'une transformation réelle de son corps ou de son identité.</p>
 <h2 id="a-retenir_6">À retenir</h2>
 <p>La dépersonnalisation concerne principalement le rapport subjectif que la personne entretient avec elle-même.</p>
-<h1 id="98-autre-trouble-dissociatif-specifie" class="entry-title hc-3">🧠 9.8  Autre trouble dissociatif spécifié</h1>
+<h1 id="98-autre-trouble-dissociatif-specifie" class="entry-title hc-3">9.8  Autre trouble dissociatif spécifié</h1>
 <h2 id="definition_7">Définition</h2>
 <p>Cette catégorie est utilisée lorsque des symptômes dissociatifs provoquent une souffrance ou une gêne importante mais ne correspondent pas complètement aux critères d'un trouble dissociatif précis.</p>
 <h2 id="particularite_5">Particularité</h2>
 <p>Le professionnel peut préciser pourquoi la présentation ne correspond pas entièrement aux autres diagnostics.</p>
 <h2 id="a-retenir_7">À retenir</h2>
 <p>« Spécifié » permet de décrire une présentation dissociative particulière sans la classer dans une catégorie qui ne lui correspond pas complètement.</p>
-<h1 id="99-trouble-dissociatif-non-specifie" class="entry-title hc-4">🧠 9.9 Trouble dissociatif non spécifié</h1>
+<h1 id="99-trouble-dissociatif-non-specifie" class="entry-title hc-4">9.9 Trouble dissociatif non spécifié</h1>
 <h2 id="definition_8">Définition</h2>
 <p>Cette catégorie est utilisée lorsque des symptômes dissociatifs provoquent une souffrance ou une gêne importante, mais que les informations disponibles ne permettent pas de déterminer précisément le trouble.</p>
 <h2 id="manifestations_5">Manifestations</h2>
@@ -295,8 +310,26 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Troubles psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-10-troubles-lies-aux-traumatismes-et-au-stress/"><span class="similar-icon">🩺</span>Partie 10 — Troubles liés aux traumatismes et au stress</a><a class="similar-item" href="/chapitre/troubles-partie-11-troubles-a-symptomatologie-somatique/"><span class="similar-icon">🩺</span>Partie 11 — Troubles à symptomatologie somatique</a><a class="similar-item" href="/chapitre/troubles-partie-12-troubles-du-sommeil/"><span class="similar-icon">🩺</span>Partie 12 — Troubles du sommeil</a></div>
+      <h2>Autres chapitres de « Troubles psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/troubles-partie-10-troubles-lies-aux-traumatismes-et-au-stress/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 10 — Troubles liés aux traumatismes et au stress</a><a class="similar-item" href="/chapitre/troubles-partie-11-troubles-a-symptomatologie-somatique/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 11 — Troubles à symptomatologie somatique</a><a class="similar-item" href="/chapitre/troubles-partie-12-troubles-du-sommeil/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 16 C32 16 20 36 24 54 C15 61 15 76 25 83
+                 C26 95 42 101 53 96 C59 103 71 103 77 96
+                 C90 99 101 87 98 75 C108 67 106 51 96 45
+                 C97 29 82 15 60 16 Z"/>
+        <path d="M60 20 C57 38 63 58 58 78 C56 88 60 96 60 98"/>
+    </svg></span>Partie 12 — Troubles du sommeil</a></div>
     </div>
     <a class="back-link" href="/categorie/troubles/">← Retour à « Troubles psychologiques »</a>
   </div>
@@ -382,23 +415,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -416,7 +451,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -596,9 +631,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -607,10 +644,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -717,7 +754,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -757,8 +794,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -789,7 +826,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -844,7 +881,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -868,17 +905,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -920,7 +957,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#101-la-prise-de-decision">🧩 10.1 La prise de décision</a></li><li><a href="#102-le-jugement">⚖️ 10.2 Le jugement</a></li><li><a href="#103-le-raisonnement">🧠 10.3 Le raisonnement</a></li><li><a href="#104-le-raisonnement-deductif">🔍 10.4 Le raisonnement déductif</a></li><li><a href="#105-le-raisonnement-inductif">🌱 10.5 Le raisonnement inductif</a></li><li><a href="#106-le-raisonnement-heuristique">🔄 10.6 Le raisonnement heuristique</a></li><li><a href="#107-la-decision-intuitive">⚡ 10.7 La décision intuitive</a></li><li><a href="#108-la-decision-deliberee">🐢 10.8 La décision délibérée</a></li><li><a href="#109-le-biais-dancrage">⚓ 10.9 Le biais d'ancrage</a></li><li><a href="#1010-le-biais-de-confirmation">🧠 10.10 Le biais de confirmation</a></li><li><a href="#1011-le-biais-retrospectif">🪞 10.11 Le biais rétrospectif</a></li><li><a href="#1012-le-biais-de-disponibilite">📊 10.12 Le biais de disponibilité</a></li><li><a href="#1013-leffet-de-halo">👑 10.13 L'effet de halo</a></li><li><a href="#1014-leffet-de-cadrage">🎯 10.14 L'effet de cadrage</a></li><li><a href="#1015-laversion-aux-pertes">💰 10.15 L'aversion aux pertes</a></li><li><a href="#1016-la-perception-du-risque">🎲 10.16 La perception du risque</a></li><li><a href="#1017-la-perception-de-la-probabilite">📈 10.17 La perception de la probabilité</a></li><li><a href="#1018-lestimation-subjective">🔮 10.18 L'estimation subjective</a></li><li><a href="#1019-le-calcul-mental-approximatif">🧮 10.19 Le calcul mental approximatif</a></li><li><a href="#1020-leffet-de-cout-irrecuperable">🪤 10.20 L'effet de coût irrécupérable</a></li><li><a href="#1021-le-statu-quo">🔁 10.21 Le statu quo</a></li><li><a href="#1022-le-biais-domission">🚪 10.22 Le biais d'omission</a></li><li><a href="#1023-limpulsivite-decisionnelle">⚡ 10.23 L'impulsivité décisionnelle</a></li><li><a href="#1024-la-gratification-differee">🧠 10.24 La gratification différée</a></li><li><a href="#1025-lescompte-temporel">⏳ 10.25 L'escompte temporel</a></li><li><a href="#1026-la-recherche-de-recompense">🏆 10.26 La recherche de récompense</a></li><li><a href="#1027-la-recherche-de-sensations">⚠️ 10.27 La recherche de sensations</a></li><li><a href="#1028-linfluence-des-emotions-sur-la-decision">🎭 10.28 L'influence des émotions sur la décision</a></li><li><a href="#1029-linfluence-de-la-memoire-sur-les-decisions">🧠 10.29 L'influence de la mémoire sur les décisions</a></li><li><a href="#1030-la-decision-collective">👥 10.30 La décision collective</a></li><li><a href="#1031-la-polarisation-de-groupe">🧩 10.31 La polarisation de groupe</a></li><li><a href="#1032-la-pensee-de-groupe">🧠 10.32 La pensée de groupe</a></li><li><a href="#1033-leffet-de-cadrage-social">👀 10.33 L'effet de cadrage social</a></li><li><a href="#1034-la-confiance-excessive">🔐 10.34 La confiance excessive</a></li><li><a href="#1035-leffet-dunning-kruger">🎯 10.35 L'effet Dunning-Kruger</a></li><li><a href="#1036-la-dissonance-cognitive-dans-la-decision">🔄 10.36 La dissonance cognitive dans la décision</a></li><li><a href="#1037-le-regret-decisionnel">🧠 10.37 Le regret décisionnel</a></li><li><a href="#1038-la-pensee-contrefactuelle">🔮 10.38 La pensée contrefactuelle</a></li><li><a href="#1039-la-paralysie-decisionnelle">🛑 10.39 La paralysie décisionnelle</a></li><li><a href="#1040-pourquoi-etudier-les-phenomenes-de-decision-et-de-jugement">🔬 10.40 Pourquoi étudier les phénomènes de décision et de jugement ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#101-la-prise-de-decision">10.1 La prise de décision</a></li><li><a href="#102-le-jugement">10.2 Le jugement</a></li><li><a href="#103-le-raisonnement">10.3 Le raisonnement</a></li><li><a href="#104-le-raisonnement-deductif">10.4 Le raisonnement déductif</a></li><li><a href="#105-le-raisonnement-inductif">10.5 Le raisonnement inductif</a></li><li><a href="#106-le-raisonnement-heuristique">10.6 Le raisonnement heuristique</a></li><li><a href="#107-la-decision-intuitive">10.7 La décision intuitive</a></li><li><a href="#108-la-decision-deliberee">10.8 La décision délibérée</a></li><li><a href="#109-le-biais-dancrage">10.9 Le biais d'ancrage</a></li><li><a href="#1010-le-biais-de-confirmation">10.10 Le biais de confirmation</a></li><li><a href="#1011-le-biais-retrospectif">10.11 Le biais rétrospectif</a></li><li><a href="#1012-le-biais-de-disponibilite">10.12 Le biais de disponibilité</a></li><li><a href="#1013-leffet-de-halo">10.13 L'effet de halo</a></li><li><a href="#1014-leffet-de-cadrage">10.14 L'effet de cadrage</a></li><li><a href="#1015-laversion-aux-pertes">10.15 L'aversion aux pertes</a></li><li><a href="#1016-la-perception-du-risque">10.16 La perception du risque</a></li><li><a href="#1017-la-perception-de-la-probabilite">10.17 La perception de la probabilité</a></li><li><a href="#1018-lestimation-subjective">10.18 L'estimation subjective</a></li><li><a href="#1019-le-calcul-mental-approximatif">10.19 Le calcul mental approximatif</a></li><li><a href="#1020-leffet-de-cout-irrecuperable">10.20 L'effet de coût irrécupérable</a></li><li><a href="#1021-le-statu-quo">10.21 Le statu quo</a></li><li><a href="#1022-le-biais-domission">10.22 Le biais d'omission</a></li><li><a href="#1023-limpulsivite-decisionnelle">10.23 L'impulsivité décisionnelle</a></li><li><a href="#1024-la-gratification-differee">10.24 La gratification différée</a></li><li><a href="#1025-lescompte-temporel">10.25 L'escompte temporel</a></li><li><a href="#1026-la-recherche-de-recompense">10.26 La recherche de récompense</a></li><li><a href="#1027-la-recherche-de-sensations">10.27 La recherche de sensations</a></li><li><a href="#1028-linfluence-des-emotions-sur-la-decision">10.28 L'influence des émotions sur la décision</a></li><li><a href="#1029-linfluence-de-la-memoire-sur-les-decisions">10.29 L'influence de la mémoire sur les décisions</a></li><li><a href="#1030-la-decision-collective">10.30 La décision collective</a></li><li><a href="#1031-la-polarisation-de-groupe">10.31 La polarisation de groupe</a></li><li><a href="#1032-la-pensee-de-groupe">10.32 La pensée de groupe</a></li><li><a href="#1033-leffet-de-cadrage-social">10.33 L'effet de cadrage social</a></li><li><a href="#1034-la-confiance-excessive">10.34 La confiance excessive</a></li><li><a href="#1035-leffet-dunning-kruger">10.35 L'effet Dunning-Kruger</a></li><li><a href="#1036-la-dissonance-cognitive-dans-la-decision">10.36 La dissonance cognitive dans la décision</a></li><li><a href="#1037-le-regret-decisionnel">10.37 Le regret décisionnel</a></li><li><a href="#1038-la-pensee-contrefactuelle">10.38 La pensée contrefactuelle</a></li><li><a href="#1039-la-paralysie-decisionnelle">10.39 La paralysie décisionnelle</a></li><li><a href="#1040-pourquoi-etudier-les-phenomenes-de-decision-et-de-jugement">10.40 Pourquoi étudier les phénomènes de décision et de jugement ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les phénomènes de décision et de jugement',
         category: 'Phénomènes psychologiques',
-        icon: '🔮'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/phenomenes/">🔮 Phénomènes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/phenomenes/">Phénomènes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les phénomènes de décision et de jugement</h1>
     </div>
     <div id="resume-banner"></div>
@@ -104,7 +119,7 @@
 <p>Ces phénomènes montrent que les décisions humaines ne reposent pas uniquement sur une analyse logique. Les émotions, les expériences passées, les habitudes, le contexte, la mémoire et différents biais cognitifs peuvent également influencer les choix.
 </p>
 </blockquote>
-<h2 id="101-la-prise-de-decision" class="entry-title hc-1">🧩 10.1 La prise de décision</h2>
+<h2 id="101-la-prise-de-decision" class="entry-title hc-1">10.1 La prise de décision</h2>
 <p>La prise de décision correspond au processus permettant de sélectionner une option parmi plusieurs possibilités.</p>
 <p>Elle peut être :</p>
 <ul>
@@ -113,7 +128,7 @@
 <li>individuelle ou collective</li>
 <li>rapide ou délibérée</li>
 </ul>
-<h2 id="102-le-jugement" class="entry-title hc-2">⚖️ 10.2 Le jugement</h2>
+<h2 id="102-le-jugement" class="entry-title hc-2">10.2 Le jugement</h2>
 <p>Le jugement correspond au processus permettant d'évaluer une personne, une situation, une information ou un événement.</p>
 <p>Il peut concerner :</p>
 <ul>
@@ -123,7 +138,7 @@
 <li>la probabilité</li>
 <li>la pertinence</li>
 </ul>
-<h2 id="103-le-raisonnement" class="entry-title hc-3">🧠 10.3 Le raisonnement</h2>
+<h2 id="103-le-raisonnement" class="entry-title hc-3">10.3 Le raisonnement</h2>
 <p>Le raisonnement correspond à la manipulation mentale d'informations afin de parvenir à une conclusion.</p>
 <p>Il peut utiliser :</p>
 <ul>
@@ -133,16 +148,16 @@
 <li>des hypothèses</li>
 <li>des observations</li>
 </ul>
-<h2 id="104-le-raisonnement-deductif" class="entry-title hc-4">🔍 10.4 Le raisonnement déductif</h2>
+<h2 id="104-le-raisonnement-deductif" class="entry-title hc-4">10.4 Le raisonnement déductif</h2>
 <p>Le raisonnement déductif consiste à partir de certaines informations générales pour parvenir à une conclusion particulière.</p>
 <p>Lorsque les prémisses sont correctes et que le raisonnement est valide, la conclusion découle logiquement de celles-ci.</p>
-<h2 id="105-le-raisonnement-inductif" class="entry-title hc-5">🌱 10.5 Le raisonnement inductif</h2>
+<h2 id="105-le-raisonnement-inductif" class="entry-title hc-5">10.5 Le raisonnement inductif</h2>
 <p>Le raisonnement inductif consiste à généraliser à partir d'observations particulières.</p>
 <p>La conclusion est alors probable plutôt que nécessairement certaine.</p>
-<h2 id="106-le-raisonnement-heuristique" class="entry-title hc-1">🔄 10.6 Le raisonnement heuristique</h2>
+<h2 id="106-le-raisonnement-heuristique" class="entry-title hc-1">10.6 Le raisonnement heuristique</h2>
 <p>Une heuristique est une stratégie mentale simplifiée permettant de prendre rapidement une décision ou de résoudre un problème.</p>
 <p>Elle permet d'économiser des ressources cognitives mais peut parfois produire des erreurs.</p>
-<h2 id="107-la-decision-intuitive" class="entry-title hc-2">⚡ 10.7 La décision intuitive</h2>
+<h2 id="107-la-decision-intuitive" class="entry-title hc-2">10.7 La décision intuitive</h2>
 <p>La décision intuitive correspond à une décision produite rapidement, souvent sans analyse consciente détaillée de toutes les informations disponibles.</p>
 <p>Elle peut s'appuyer sur :</p>
 <ul>
@@ -151,7 +166,7 @@
 <li>les émotions</li>
 <li>des associations apprises</li>
 </ul>
-<h2 id="108-la-decision-deliberee" class="entry-title hc-3">🐢 10.8 La décision délibérée</h2>
+<h2 id="108-la-decision-deliberee" class="entry-title hc-3">10.8 La décision délibérée</h2>
 <p>La décision délibérée implique davantage d'analyse consciente.</p>
 <p>Elle peut nécessiter :</p>
 <ul>
@@ -160,25 +175,25 @@
 <li>la recherche d'informations</li>
 <li>la réflexion sur les objectifs</li>
 </ul>
-<h2 id="109-le-biais-dancrage" class="entry-title hc-4">⚓ 10.9 Le biais d'ancrage</h2>
+<h2 id="109-le-biais-dancrage" class="entry-title hc-4">10.9 Le biais d'ancrage</h2>
 <p>Le biais d'ancrage correspond à la tendance à accorder une importance excessive à une première information lorsqu'une décision est prise.</p>
 <p>Cette première information peut influencer les estimations ultérieures, même lorsqu'elle n'est pas particulièrement pertinente.</p>
-<h2 id="1010-le-biais-de-confirmation" class="entry-title hc-5">🧠 10.10 Le biais de confirmation</h2>
+<h2 id="1010-le-biais-de-confirmation" class="entry-title hc-5">10.10 Le biais de confirmation</h2>
 <p>Le biais de confirmation correspond à la tendance à rechercher, interpréter ou retenir plus facilement les informations compatibles avec une croyance déjà présente.</p>
 <p>Il peut influencer les jugements et les décisions.</p>
-<h2 id="1011-le-biais-retrospectif" class="entry-title hc-1">🪞 10.11 Le biais rétrospectif</h2>
+<h2 id="1011-le-biais-retrospectif" class="entry-title hc-1">10.11 Le biais rétrospectif</h2>
 <p>Le biais rétrospectif correspond à la tendance à percevoir un événement passé comme ayant été plus prévisible qu'il ne l'était réellement avant qu'il ne se produise.</p>
 <p>Il peut donner l'impression que le résultat était évident.</p>
-<h2 id="1012-le-biais-de-disponibilite" class="entry-title hc-2">📊 10.12 Le biais de disponibilité</h2>
+<h2 id="1012-le-biais-de-disponibilite" class="entry-title hc-2">10.12 Le biais de disponibilité</h2>
 <p>Le biais de disponibilité correspond à la tendance à estimer la fréquence ou la probabilité d'un événement selon la facilité avec laquelle des exemples viennent à l'esprit.</p>
 <p>Un événement particulièrement marquant peut ainsi sembler plus fréquent qu'il ne l'est réellement.</p>
-<h2 id="1013-leffet-de-halo" class="entry-title hc-3">👑 10.13 L'effet de halo</h2>
+<h2 id="1013-leffet-de-halo" class="entry-title hc-3">10.13 L'effet de halo</h2>
 <p>L'effet de halo correspond à la tendance à généraliser une caractéristique positive ou négative d'une personne à d'autres aspects de son jugement.</p>
 <p>Par exemple, une personne perçue comme très compétente peut être automatiquement considérée comme plus sympathique.</p>
-<h2 id="1014-leffet-de-cadrage" class="entry-title hc-4">🎯 10.14 L'effet de cadrage</h2>
+<h2 id="1014-leffet-de-cadrage" class="entry-title hc-4">10.14 L'effet de cadrage</h2>
 <p>L'effet de cadrage correspond au fait qu'une même information peut produire des décisions différentes selon la manière dont elle est présentée.</p>
 <p>La formulation d'un choix peut donc influencer la décision.</p>
-<h2 id="1015-laversion-aux-pertes" class="entry-title hc-5">💰 10.15 L'aversion aux pertes</h2>
+<h2 id="1015-laversion-aux-pertes" class="entry-title hc-5">10.15 L'aversion aux pertes</h2>
 <p>L'aversion aux pertes désigne la tendance à ressentir une perte comme psychologiquement plus importante qu'un gain de valeur comparable.</p>
 <p>Elle peut influencer :</p>
 <ul>
@@ -187,10 +202,10 @@
 <li>les négociations</li>
 <li>les prises de risque</li>
 </ul>
-<h2 id="1016-la-perception-du-risque" class="entry-title hc-1">🎲 10.16 La perception du risque</h2>
+<h2 id="1016-la-perception-du-risque" class="entry-title hc-1">10.16 La perception du risque</h2>
 <p>La perception du risque correspond à la manière dont une personne évalue subjectivement la possibilité qu'un événement négatif se produise.</p>
 <p>Elle peut différer du risque statistiquement mesuré.</p>
-<h2 id="1017-la-perception-de-la-probabilite" class="entry-title hc-2">📈 10.17 La perception de la probabilité</h2>
+<h2 id="1017-la-perception-de-la-probabilite" class="entry-title hc-2">10.17 La perception de la probabilité</h2>
 <p>La perception subjective de la probabilité correspond à l'estimation mentale de la chance qu'un événement se produise.</p>
 <p>Cette estimation peut être influencée par :</p>
 <ul>
@@ -200,22 +215,22 @@
 <li>les informations disponibles</li>
 <li>les biais cognitifs</li>
 </ul>
-<h2 id="1018-lestimation-subjective" class="entry-title hc-3">🔮 10.18 L'estimation subjective</h2>
+<h2 id="1018-lestimation-subjective" class="entry-title hc-3">10.18 L'estimation subjective</h2>
 <p>L'estimation subjective correspond à une évaluation personnelle d'une quantité ou d'une probabilité lorsque celle-ci n'est pas directement connue.</p>
 <p>Elle peut être influencée par les connaissances et les informations disponibles.</p>
-<h2 id="1019-le-calcul-mental-approximatif" class="entry-title hc-4">🧮 10.19 Le calcul mental approximatif</h2>
+<h2 id="1019-le-calcul-mental-approximatif" class="entry-title hc-4">10.19 Le calcul mental approximatif</h2>
 <p>Lorsqu'une personne doit rapidement évaluer une quantité, elle utilise souvent des approximations plutôt qu'un calcul exhaustif.</p>
 <p>Ces approximations permettent de gagner du temps mais peuvent introduire des erreurs.</p>
-<h2 id="1020-leffet-de-cout-irrecuperable" class="entry-title hc-5">🪤 10.20 L'effet de coût irrécupérable</h2>
+<h2 id="1020-leffet-de-cout-irrecuperable" class="entry-title hc-5">10.20 L'effet de coût irrécupérable</h2>
 <p>L'effet de coût irrécupérable correspond à la tendance à continuer une activité ou un investissement parce que des ressources ont déjà été consacrées, même lorsque continuer n'est plus avantageux.</p>
 <p>Les ressources déjà perdues ne peuvent pourtant pas être récupérées par le simple fait de continuer.</p>
-<h2 id="1021-le-statu-quo" class="entry-title hc-1">🔁 10.21 Le statu quo</h2>
+<h2 id="1021-le-statu-quo" class="entry-title hc-1">10.21 Le statu quo</h2>
 <p>Le biais du statu quo correspond à une préférence pour maintenir la situation actuelle plutôt que de modifier quelque chose.</p>
 <p>Le changement peut être perçu comme plus coûteux ou plus risqué que le maintien de la situation existante.</p>
-<h2 id="1022-le-biais-domission" class="entry-title hc-2">🚪 10.22 Le biais d'omission</h2>
+<h2 id="1022-le-biais-domission" class="entry-title hc-2">10.22 Le biais d'omission</h2>
 <p>Le biais d'omission correspond à la tendance à considérer qu'une action négative est parfois plus grave qu'une absence d'action produisant pourtant un résultat similaire.</p>
 <p>Cela peut influencer certaines décisions morales.</p>
-<h2 id="1023-limpulsivite-decisionnelle" class="entry-title hc-3">⚡ 10.23 L'impulsivité décisionnelle</h2>
+<h2 id="1023-limpulsivite-decisionnelle" class="entry-title hc-3">10.23 L'impulsivité décisionnelle</h2>
 <p>L'impulsivité décisionnelle correspond à une tendance à prendre rapidement une décision sans évaluer suffisamment ses conséquences.</p>
 <p>Elle peut être influencée par :</p>
 <ul>
@@ -224,25 +239,25 @@
 <li>la recherche de récompense</li>
 <li>la difficulté à attendre</li>
 </ul>
-<h2 id="1024-la-gratification-differee" class="entry-title hc-4">🧠 10.24 La gratification différée</h2>
+<h2 id="1024-la-gratification-differee" class="entry-title hc-4">10.24 La gratification différée</h2>
 <p>La gratification différée correspond à la capacité à attendre une récompense future plutôt que de choisir immédiatement une récompense disponible.</p>
 <p>Elle implique notamment la capacité à prendre en compte les conséquences futures.</p>
-<h2 id="1025-lescompte-temporel" class="entry-title hc-5">⏳ 10.25 L'escompte temporel</h2>
+<h2 id="1025-lescompte-temporel" class="entry-title hc-5">10.25 L'escompte temporel</h2>
 <p>L'escompte temporel correspond au fait qu'une récompense ou une conséquence future peut être perçue comme moins importante qu'une conséquence immédiate.</p>
 <p>Plus une récompense est éloignée dans le temps, plus sa valeur subjective peut diminuer.</p>
-<h2 id="1026-la-recherche-de-recompense" class="entry-title hc-1">🏆 10.26 La recherche de récompense</h2>
+<h2 id="1026-la-recherche-de-recompense" class="entry-title hc-1">10.26 La recherche de récompense</h2>
 <p>La recherche de récompense correspond à la tendance à orienter les comportements vers des résultats perçus comme agréables ou avantageux.</p>
 <p>Elle participe à de nombreuses décisions quotidiennes.</p>
-<h2 id="1027-la-recherche-de-sensations" class="entry-title hc-2">⚠️ 10.27 La recherche de sensations</h2>
+<h2 id="1027-la-recherche-de-sensations" class="entry-title hc-2">10.27 La recherche de sensations</h2>
 <p>La recherche de sensations correspond à une tendance à rechercher des expériences nouvelles, stimulantes ou intenses.</p>
 <p>Elle peut influencer certains comportements de prise de risque.</p>
-<h2 id="1028-linfluence-des-emotions-sur-la-decision" class="entry-title hc-3">🎭 10.28 L'influence des émotions sur la décision</h2>
+<h2 id="1028-linfluence-des-emotions-sur-la-decision" class="entry-title hc-3">10.28 L'influence des émotions sur la décision</h2>
 <p>Les émotions peuvent modifier la manière dont les options sont évaluées.</p>
 <p>La peur peut par exemple augmenter la perception d'un danger, tandis qu'une émotion positive peut modifier l'évaluation de certaines possibilités.</p>
-<h2 id="1029-linfluence-de-la-memoire-sur-les-decisions" class="entry-title hc-4">🧠 10.29 L'influence de la mémoire sur les décisions</h2>
+<h2 id="1029-linfluence-de-la-memoire-sur-les-decisions" class="entry-title hc-4">10.29 L'influence de la mémoire sur les décisions</h2>
 <p>Les expériences passées fournissent des informations utilisées pour évaluer les situations présentes.</p>
 <p>Cependant, les souvenirs étant reconstructifs, les décisions peuvent être influencées par des souvenirs incomplets ou modifiés.</p>
-<h2 id="1030-la-decision-collective" class="entry-title hc-5">👥 10.30 La décision collective</h2>
+<h2 id="1030-la-decision-collective" class="entry-title hc-5">10.30 La décision collective</h2>
 <p>Une décision collective est prise par plusieurs personnes.</p>
 <p>Elle peut bénéficier :</p>
 <ul>
@@ -251,9 +266,9 @@
 <li>de compétences différentes</li>
 </ul>
 <p>Mais elle peut également être influencée par la pression sociale ou la recherche de consensus.</p>
-<h2 id="1031-la-polarisation-de-groupe" class="entry-title hc-1">🧩 10.31 La polarisation de groupe</h2>
+<h2 id="1031-la-polarisation-de-groupe" class="entry-title hc-1">10.31 La polarisation de groupe</h2>
 <p>La polarisation de groupe correspond à la tendance d'un groupe à adopter, après discussion, une position plus extrême dans la direction déjà dominante parmi ses membres.</p>
-<h2 id="1032-la-pensee-de-groupe" class="entry-title hc-2">🧠 10.32 La pensée de groupe</h2>
+<h2 id="1032-la-pensee-de-groupe" class="entry-title hc-2">10.32 La pensée de groupe</h2>
 <p>La pensée de groupe correspond à une dynamique dans laquelle la recherche d'un accord collectif peut réduire l'examen critique des alternatives.</p>
 <p>Elle peut favoriser :</p>
 <ul>
@@ -261,29 +276,29 @@
 <li>la sous-estimation des risques</li>
 <li>la pression à l'unanimité</li>
 </ul>
-<h2 id="1033-leffet-de-cadrage-social" class="entry-title hc-3">👀 10.33 L'effet de cadrage social</h2>
+<h2 id="1033-leffet-de-cadrage-social" class="entry-title hc-3">10.33 L'effet de cadrage social</h2>
 <p>La manière dont une décision est présentée par d'autres personnes peut influencer la manière dont elle est évaluée.</p>
 <p>Les normes sociales et les opinions du groupe peuvent ainsi modifier certains choix.</p>
-<h2 id="1034-la-confiance-excessive" class="entry-title hc-4">🔐 10.34 La confiance excessive</h2>
+<h2 id="1034-la-confiance-excessive" class="entry-title hc-4">10.34 La confiance excessive</h2>
 <p>La confiance excessive correspond à une tendance à surestimer la précision de ses connaissances, de ses capacités ou de ses prédictions.</p>
 <p>Elle peut conduire à sous-estimer l'incertitude.</p>
-<h2 id="1035-leffet-dunning-kruger" class="entry-title hc-5">🎯 10.35 L'effet Dunning-Kruger</h2>
+<h2 id="1035-leffet-dunning-kruger" class="entry-title hc-5">10.35 L'effet Dunning-Kruger</h2>
 <p>L'effet Dunning-Kruger désigne un phénomène étudié dans lequel certaines personnes ayant peu de connaissances ou de compétences dans un domaine peuvent avoir davantage de difficultés à évaluer correctement leurs propres performances.</p>
 <p>Le phénomène concerne surtout la métacognition et ne signifie pas que toute personne inexpérimentée surestime systématiquement ses capacités.</p>
-<h2 id="1036-la-dissonance-cognitive-dans-la-decision" class="entry-title hc-1">🔄 10.36 La dissonance cognitive dans la décision</h2>
+<h2 id="1036-la-dissonance-cognitive-dans-la-decision" class="entry-title hc-1">10.36 La dissonance cognitive dans la décision</h2>
 <p>La dissonance cognitive correspond à un état de tension pouvant apparaître lorsque des croyances, valeurs ou comportements sont incompatibles.</p>
 <p>Après une décision, une personne peut parfois modifier son interprétation afin de rendre son choix plus cohérent avec ses croyances.</p>
-<h2 id="1037-le-regret-decisionnel" class="entry-title hc-2">🧠 10.37 Le regret décisionnel</h2>
+<h2 id="1037-le-regret-decisionnel" class="entry-title hc-2">10.37 Le regret décisionnel</h2>
 <p>Le regret correspond à une émotion associée à la comparaison entre une décision prise et une alternative qui aurait pu produire un résultat différent.</p>
 <p>Il peut influencer les décisions futures.</p>
-<h2 id="1038-la-pensee-contrefactuelle" class="entry-title hc-3">🔮 10.38 La pensée contrefactuelle</h2>
+<h2 id="1038-la-pensee-contrefactuelle" class="entry-title hc-3">10.38 La pensée contrefactuelle</h2>
 <p>La pensée contrefactuelle consiste à imaginer ce qui aurait pu se produire si certains éléments d'une situation avaient été différents.</p>
 <p>Elle peut prendre deux formes principales :</p>
 <ul>
 <li>imaginer une situation meilleure</li>
 <li>imaginer une situation pire</li>
 </ul>
-<h2 id="1039-la-paralysie-decisionnelle" class="entry-title hc-4">🛑 10.39 La paralysie décisionnelle</h2>
+<h2 id="1039-la-paralysie-decisionnelle" class="entry-title hc-4">10.39 La paralysie décisionnelle</h2>
 <p>La paralysie décisionnelle correspond à une difficulté à choisir lorsqu'un trop grand nombre d'informations, d'options ou de conséquences possibles rendent la décision particulièrement complexe.</p>
 <p>Elle peut être favorisée par :</p>
 <ul>
@@ -292,7 +307,7 @@
 <li>un grand nombre d'options</li>
 <li>une forte pression</li>
 </ul>
-<h2 id="1040-pourquoi-etudier-les-phenomenes-de-decision-et-de-jugement" class="entry-title hc-5">🔬 10.40 Pourquoi étudier les phénomènes de décision et de jugement ?</h2>
+<h2 id="1040-pourquoi-etudier-les-phenomenes-de-decision-et-de-jugement" class="entry-title hc-5">10.40 Pourquoi étudier les phénomènes de décision et de jugement ?</h2>
 <p>L'étude de ces phénomènes permet de comprendre pourquoi les décisions humaines ne sont pas toujours uniquement basées sur une analyse logique.</p>
 <p>Elle permet notamment d'étudier :</p>
 <ul>
@@ -308,19 +323,40 @@
 </ul>
 <p>Ces phénomènes sont étudiés en psychologie cognitive, sociale, expérimentale, clinique et dans les domaines liés à la prise de décision.</p>
 <hr />
-<h1 id="a-retenir">📌 À RETENIR</h1>
-<p>🧠 <strong>Décider ne consiste pas uniquement à être logique.</strong> Les émotions, la mémoire, les habitudes, le contexte et les informations disponibles peuvent modifier les choix.</p>
-<p>⚡ <strong>Les heuristiques permettent de décider rapidement</strong>, mais certaines peuvent également produire des biais.</p>
-<p>🎯 <strong>Les biais cognitifs ne signifient pas qu'une personne est irrationnelle en permanence.</strong> Ils correspondent à des tendances de traitement de l'information qui peuvent apparaître dans certaines situations.</p>
-<p>💰 <strong>L'aversion aux pertes et le coût irrécupérable montrent que les décisions peuvent être influencées par la manière dont les gains et les pertes sont représentés.</strong></p>
-<p>👥 <strong>Les autres personnes influencent également les décisions</strong>, notamment dans les situations de groupe.</p>
-<p>🔮 <strong>Les décisions sont souvent tournées vers le futur</strong>, ce qui explique l'importance de la perception des conséquences, de la gratification différée et de la pensée contrefactuelle.</p>
-<p>🔬 <strong>L'étude de la décision et du jugement permet de mieux comprendre comment les individus évaluent l'information, prennent des risques, choisissent entre différentes possibilités et interprètent leurs propres décisions.</strong></p>
+<h1 id="a-retenir">À RETENIR</h1>
+<p><strong>Décider ne consiste pas uniquement à être logique.</strong> Les émotions, la mémoire, les habitudes, le contexte et les informations disponibles peuvent modifier les choix.</p>
+<p><strong>Les heuristiques permettent de décider rapidement</strong>, mais certaines peuvent également produire des biais.</p>
+<p><strong>Les biais cognitifs ne signifient pas qu'une personne est irrationnelle en permanence.</strong> Ils correspondent à des tendances de traitement de l'information qui peuvent apparaître dans certaines situations.</p>
+<p><strong>L'aversion aux pertes et le coût irrécupérable montrent que les décisions peuvent être influencées par la manière dont les gains et les pertes sont représentés.</strong></p>
+<p><strong>Les autres personnes influencent également les décisions</strong>, notamment dans les situations de groupe.</p>
+<p><strong>Les décisions sont souvent tournées vers le futur</strong>, ce qui explique l'importance de la perception des conséquences, de la gratification différée et de la pensée contrefactuelle.</p>
+<p><strong>L'étude de la décision et du jugement permet de mieux comprendre comment les individus évaluent l'information, prennent des risques, choisissent entre différentes possibilités et interprètent leurs propres décisions.</strong></p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Phénomènes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-temps/"><span class="similar-icon">🔮</span>Les phénomènes liés au temps</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-sommeil-et-aux-reves/"><span class="similar-icon">🔮</span>Les phénomènes liés au sommeil et aux rêves</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-stress/"><span class="similar-icon">🔮</span>Les phénomènes liés au stress</a></div>
+      <h2>Autres chapitres de « Phénomènes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-temps/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes liés au temps</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-sommeil-et-aux-reves/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes liés au sommeil et aux rêves</a><a class="similar-item" href="/chapitre/phenomenes-les-phenomenes-lies-au-stress/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 60 C30 30 90 30 107 60 C90 90 30 90 13 60 Z"/>
+        <circle cx="60" cy="60" r="15"/>
+        <line x1="60" y1="12" x2="60" y2="23"/>
+        <line x1="60" y1="97" x2="60" y2="108"/>
+        <line x1="15" y1="60" x2="4" y2="60"/>
+        <line x1="116" y1="60" x2="105" y2="60"/>
+    </svg></span>Les phénomènes liés au stress</a></div>
     </div>
     <a class="back-link" href="/categorie/phenomenes/">← Retour à « Phénomènes psychologiques »</a>
   </div>
@@ -406,23 +442,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -440,7 +478,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -620,9 +658,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -631,10 +671,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -741,7 +781,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -781,8 +821,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -813,7 +853,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -868,7 +908,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -892,17 +932,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -944,7 +984,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

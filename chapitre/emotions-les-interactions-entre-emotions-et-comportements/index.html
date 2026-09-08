@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#201-emotions-et-comportements">❤️ 20.1 Émotions et comportements</a></li><li><a href="#202-le-comportement-comme-consequence-dune-emotion">🧠 20.2 Le comportement comme conséquence d'une émotion</a></li><li><a href="#203-le-comportement-modifie-les-emotions">🔄 20.3 Le comportement modifie les émotions</a></li><li><a href="#204-la-boucle-emotionnelle-et-comportementale">🧩 20.4 La boucle émotionnelle et comportementale</a></li><li><a href="#205-le-role-des-pensees">🧠 20.5 Le rôle des pensées</a></li><li><a href="#206-le-role-de-la-perception">👁️ 20.6 Le rôle de la perception</a></li><li><a href="#207-le-role-des-sensations-corporelles">🫀 20.7 Le rôle des sensations corporelles</a></li><li><a href="#208-le-role-de-la-memoire">🧠 20.8 Le rôle de la mémoire</a></li><li><a href="#209-le-role-des-objectifs">🎯 20.9 Le rôle des objectifs</a></li><li><a href="#2010-le-role-de-la-motivation">⚡ 20.10 Le rôle de la motivation</a></li><li><a href="#2011-les-recompenses">🏆 20.11 Les récompenses</a></li><li><a href="#2012-le-soulagement">⚠️ 20.12 Le soulagement</a></li><li><a href="#2013-le-renforcement">🔄 20.13 Le renforcement</a></li><li><a href="#2014-les-habitudes">🧠 20.14 Les habitudes</a></li><li><a href="#2015-les-comportements-automatiques">🔁 20.15 Les comportements automatiques</a></li><li><a href="#2016-le-controle-comportemental">🛑 20.16 Le contrôle comportemental</a></li><li><a href="#2017-limpulsivite">⚡ 20.17 L'impulsivité</a></li><li><a href="#2018-la-regulation-emotionnelle">🧠 20.18 La régulation émotionnelle</a></li><li><a href="#2019-la-regulation-comportementale">🔄 20.19 La régulation comportementale</a></li><li><a href="#2020-peur-et-evitement">😨 20.20 Peur et évitement</a></li><li><a href="#2021-colere-et-confrontation">😡 20.21 Colère et confrontation</a></li><li><a href="#2022-tristesse-et-retrait">😢 20.22 Tristesse et retrait</a></li><li><a href="#2023-joie-et-exploration">😄 20.23 Joie et exploration</a></li><li><a href="#2024-honte-et-evitement-social">😳 20.24 Honte et évitement social</a></li><li><a href="#2025-attachement-et-comportements-relationnels">❤️ 20.25 Attachement et comportements relationnels</a></li><li><a href="#2026-les-emotions-des-autres">🧑‍🤝‍🧑 20.26 Les émotions des autres</a></li><li><a href="#2027-la-contagion-emotionnelle">🔊 20.27 La contagion émotionnelle</a></li><li><a href="#2028-la-communication-emotionnelle">🗣️ 20.28 La communication émotionnelle</a></li><li><a href="#2029-linfluence-sociale">👥 20.29 L'influence sociale</a></li><li><a href="#2030-les-regles-sociales">⚖️ 20.30 Les règles sociales</a></li><li><a href="#2031-lapprentissage-social">🧠 20.31 L'apprentissage social</a></li><li><a href="#2032-les-experiences-passees">🔄 20.32 Les expériences passées</a></li><li><a href="#2033-ladaptation-comportementale">🧩 20.33 L'adaptation comportementale</a></li><li><a href="#2034-le-contexte">🌍 20.34 Le contexte</a></li><li><a href="#2035-les-differences-individuelles">🧠 20.35 Les différences individuelles</a></li><li><a href="#2036-les-comportements-peuvent-modifier-les-croyances">🔄 20.36 Les comportements peuvent modifier les croyances</a></li><li><a href="#2037-les-comportements-peuvent-modifier-letat-emotionnel">❤️ 20.37 Les comportements peuvent modifier l'état émotionnel</a></li><li><a href="#2038-le-fonctionnement-en-systeme">🧠 20.38 Le fonctionnement en système</a></li><li><a href="#2039-le-caractere-multifactoriel-du-comportement-humain">🔬 20.39 Le caractère multifactoriel du comportement humain</a></li><li><a href="#2040-pourquoi-etudier-les-interactions-entre-emotions-et-comportements">🌟 20.40 Pourquoi étudier les interactions entre émotions et comportements ?</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#201-emotions-et-comportements">20.1 Émotions et comportements</a></li><li><a href="#202-le-comportement-comme-consequence-dune-emotion">20.2 Le comportement comme conséquence d'une émotion</a></li><li><a href="#203-le-comportement-modifie-les-emotions">20.3 Le comportement modifie les émotions</a></li><li><a href="#204-la-boucle-emotionnelle-et-comportementale">20.4 La boucle émotionnelle et comportementale</a></li><li><a href="#205-le-role-des-pensees">20.5 Le rôle des pensées</a></li><li><a href="#206-le-role-de-la-perception">20.6 Le rôle de la perception</a></li><li><a href="#207-le-role-des-sensations-corporelles">20.7 Le rôle des sensations corporelles</a></li><li><a href="#208-le-role-de-la-memoire">20.8 Le rôle de la mémoire</a></li><li><a href="#209-le-role-des-objectifs">20.9 Le rôle des objectifs</a></li><li><a href="#2010-le-role-de-la-motivation">20.10 Le rôle de la motivation</a></li><li><a href="#2011-les-recompenses">20.11 Les récompenses</a></li><li><a href="#2012-le-soulagement">20.12 Le soulagement</a></li><li><a href="#2013-le-renforcement">20.13 Le renforcement</a></li><li><a href="#2014-les-habitudes">20.14 Les habitudes</a></li><li><a href="#2015-les-comportements-automatiques">20.15 Les comportements automatiques</a></li><li><a href="#2016-le-controle-comportemental">20.16 Le contrôle comportemental</a></li><li><a href="#2017-limpulsivite">20.17 L'impulsivité</a></li><li><a href="#2018-la-regulation-emotionnelle">20.18 La régulation émotionnelle</a></li><li><a href="#2019-la-regulation-comportementale">20.19 La régulation comportementale</a></li><li><a href="#2020-peur-et-evitement">20.20 Peur et évitement</a></li><li><a href="#2021-colere-et-confrontation">20.21 Colère et confrontation</a></li><li><a href="#2022-tristesse-et-retrait">20.22 Tristesse et retrait</a></li><li><a href="#2023-joie-et-exploration">20.23 Joie et exploration</a></li><li><a href="#2024-honte-et-evitement-social">20.24 Honte et évitement social</a></li><li><a href="#2025-attachement-et-comportements-relationnels">20.25 Attachement et comportements relationnels</a></li><li><a href="#2026-les-emotions-des-autres">‍‍ 20.26 Les émotions des autres</a></li><li><a href="#2027-la-contagion-emotionnelle">20.27 La contagion émotionnelle</a></li><li><a href="#2028-la-communication-emotionnelle">20.28 La communication émotionnelle</a></li><li><a href="#2029-linfluence-sociale">20.29 L'influence sociale</a></li><li><a href="#2030-les-regles-sociales">20.30 Les règles sociales</a></li><li><a href="#2031-lapprentissage-social">20.31 L'apprentissage social</a></li><li><a href="#2032-les-experiences-passees">20.32 Les expériences passées</a></li><li><a href="#2033-ladaptation-comportementale">20.33 L'adaptation comportementale</a></li><li><a href="#2034-le-contexte">20.34 Le contexte</a></li><li><a href="#2035-les-differences-individuelles">20.35 Les différences individuelles</a></li><li><a href="#2036-les-comportements-peuvent-modifier-les-croyances">20.36 Les comportements peuvent modifier les croyances</a></li><li><a href="#2037-les-comportements-peuvent-modifier-letat-emotionnel">20.37 Les comportements peuvent modifier l'état émotionnel</a></li><li><a href="#2038-le-fonctionnement-en-systeme">20.38 Le fonctionnement en système</a></li><li><a href="#2039-le-caractere-multifactoriel-du-comportement-humain">20.39 Le caractère multifactoriel du comportement humain</a></li><li><a href="#2040-pourquoi-etudier-les-interactions-entre-emotions-et-comportements">20.40 Pourquoi étudier les interactions entre émotions et comportements ?</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les interactions entre émotions et comportements',
         category: 'Émotions et comportements humains',
-        icon: '❤️'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/emotions/">❤️ Émotions et comportements humains</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/emotions/">Émotions et comportements humains</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les interactions entre émotions et comportements</h1>
     </div>
     <div id="resume-banner"></div>
@@ -98,140 +113,152 @@
     <div class="article-body">
       <p>Les émotions et les comportements entretiennent une relation permanente. Une émotion peut modifier la manière d'agir, tandis qu'un comportement peut à son tour modifier l'état émotionnel.</p>
 <p>Cette interaction ne fonctionne pas de manière isolée. Les pensées, les souvenirs, les sensations corporelles, les objectifs, les habitudes et l'environnement social participent également au processus.</p>
-<h2 id="201-emotions-et-comportements" class="entry-title hc-1">❤️ 20.1 Émotions et comportements</h2>
+<h2 id="201-emotions-et-comportements" class="entry-title hc-1">20.1 Émotions et comportements</h2>
 <p>Une émotion peut influencer la tendance à agir d'une certaine manière.</p>
 <p>La peur peut favoriser l'évitement, la colère peut favoriser l'approche ou la confrontation, tandis que la joie peut favoriser l'exploration et les interactions sociales.</p>
-<h2 id="202-le-comportement-comme-consequence-dune-emotion" class="entry-title hc-2">🧠 20.2 Le comportement comme conséquence d'une émotion</h2>
+<h2 id="202-le-comportement-comme-consequence-dune-emotion" class="entry-title hc-2">20.2 Le comportement comme conséquence d'une émotion</h2>
 <p>Un comportement peut constituer une réponse à une émotion.</p>
 <p>Cette réponse dépend cependant du contexte, des objectifs, des habitudes et du niveau de contrôle comportemental.</p>
-<h2 id="203-le-comportement-modifie-les-emotions" class="entry-title hc-3">🔄 20.3 Le comportement modifie les émotions</h2>
+<h2 id="203-le-comportement-modifie-les-emotions" class="entry-title hc-3">20.3 Le comportement modifie les émotions</h2>
 <p>Les conséquences d'un comportement peuvent modifier l'état émotionnel.</p>
 <p>Une action peut produire du soulagement, du plaisir, de la frustration, de la culpabilité ou une nouvelle émotion.</p>
-<h2 id="204-la-boucle-emotionnelle-et-comportementale" class="entry-title hc-4">🧩 20.4 La boucle émotionnelle et comportementale</h2>
+<h2 id="204-la-boucle-emotionnelle-et-comportementale" class="entry-title hc-4">20.4 La boucle émotionnelle et comportementale</h2>
 <p>Une boucle peut être représentée ainsi :</p>
-<p><strong>❤️ émotion → 💭 pensée → 🧍 comportement → 🌍 conséquence → ❤️ nouvelle émotion</strong></p>
+<p>** émotion   pensée   comportement   conséquence   nouvelle émotion**</p>
 <p>Cette boucle peut se répéter et influencer progressivement les comportements futurs.</p>
-<h2 id="205-le-role-des-pensees" class="entry-title hc-5">🧠 20.5 Le rôle des pensées</h2>
+<h2 id="205-le-role-des-pensees" class="entry-title hc-5">20.5 Le rôle des pensées</h2>
 <p>Les pensées participent à l'interprétation des événements.</p>
 <p>Cette interprétation influence ensuite les émotions et les comportements.</p>
-<h2 id="206-le-role-de-la-perception" class="entry-title hc-1">👁️ 20.6 Le rôle de la perception</h2>
+<h2 id="206-le-role-de-la-perception" class="entry-title hc-1">20.6 Le rôle de la perception</h2>
 <p>La manière dont une situation est perçue peut modifier la réaction émotionnelle.</p>
 <p>Deux situations objectivement similaires peuvent donc provoquer des comportements différents selon leur interprétation.</p>
-<h2 id="207-le-role-des-sensations-corporelles" class="entry-title hc-2">🫀 20.7 Le rôle des sensations corporelles</h2>
+<h2 id="207-le-role-des-sensations-corporelles" class="entry-title hc-2">20.7 Le rôle des sensations corporelles</h2>
 <p>Les émotions s'accompagnent souvent de modifications corporelles.</p>
 <p>Ces sensations peuvent à leur tour influencer l'interprétation de la situation et le comportement.</p>
-<h2 id="208-le-role-de-la-memoire" class="entry-title hc-3">🧠 20.8 Le rôle de la mémoire</h2>
+<h2 id="208-le-role-de-la-memoire" class="entry-title hc-3">20.8 Le rôle de la mémoire</h2>
 <p>Les expériences passées peuvent influencer les réactions présentes.</p>
 <p>Un souvenir associé à une conséquence positive ou négative peut modifier la manière dont une situation actuelle est abordée.</p>
-<h2 id="209-le-role-des-objectifs" class="entry-title hc-4">🎯 20.9 Le rôle des objectifs</h2>
+<h2 id="209-le-role-des-objectifs" class="entry-title hc-4">20.9 Le rôle des objectifs</h2>
 <p>Les objectifs orientent les comportements.</p>
 <p>Une émotion peut modifier la priorité accordée à un objectif, tandis qu'un objectif peut influencer la manière dont une émotion est interprétée.</p>
-<h2 id="2010-le-role-de-la-motivation" class="entry-title hc-5">⚡ 20.10 Le rôle de la motivation</h2>
+<h2 id="2010-le-role-de-la-motivation" class="entry-title hc-5">20.10 Le rôle de la motivation</h2>
 <p>La motivation influence l'énergie consacrée à une action.</p>
 <p>Elle peut être modifiée par les émotions, les récompenses attendues et la valeur accordée à l'objectif.</p>
-<h2 id="2011-les-recompenses" class="entry-title hc-1">🏆 20.11 Les récompenses</h2>
+<h2 id="2011-les-recompenses" class="entry-title hc-1">20.11 Les récompenses</h2>
 <p>Une conséquence agréable peut renforcer certains comportements.</p>
 <p>La valeur de cette récompense dépend notamment de son importance subjective et du contexte.</p>
-<h2 id="2012-le-soulagement" class="entry-title hc-2">⚠️ 20.12 Le soulagement</h2>
+<h2 id="2012-le-soulagement" class="entry-title hc-2">20.12 Le soulagement</h2>
 <p>La diminution d'une émotion désagréable peut constituer une conséquence particulièrement importante.</p>
 <p>Lorsqu'un comportement produit rapidement un soulagement, il peut devenir plus susceptible d'être reproduit.</p>
-<h2 id="2013-le-renforcement" class="entry-title hc-3">🔄 20.13 Le renforcement</h2>
+<h2 id="2013-le-renforcement" class="entry-title hc-3">20.13 Le renforcement</h2>
 <p>Les conséquences d'un comportement peuvent modifier sa probabilité d'apparition future.</p>
 <p>Le renforcement peut donc participer à la formation et au maintien de certains comportements.</p>
-<h2 id="2014-les-habitudes" class="entry-title hc-4">🧠 20.14 Les habitudes</h2>
+<h2 id="2014-les-habitudes" class="entry-title hc-4">20.14 Les habitudes</h2>
 <p>La répétition d'un comportement dans un contexte similaire peut favoriser son automatisation.</p>
 <p>Une émotion ou une situation particulière peut alors devenir associée à une réponse comportementale habituelle.</p>
-<h2 id="2015-les-comportements-automatiques" class="entry-title hc-5">🔁 20.15 Les comportements automatiques</h2>
+<h2 id="2015-les-comportements-automatiques" class="entry-title hc-5">20.15 Les comportements automatiques</h2>
 <p>Certains comportements sont réalisés avec peu de réflexion consciente.</p>
 <p>Ils peuvent être influencés par les habitudes, les apprentissages et les associations précédentes.</p>
-<h2 id="2016-le-controle-comportemental" class="entry-title hc-1">🛑 20.16 Le contrôle comportemental</h2>
+<h2 id="2016-le-controle-comportemental" class="entry-title hc-1">20.16 Le contrôle comportemental</h2>
 <p>Le contrôle comportemental permet notamment de modifier ou d'inhiber certaines réponses.</p>
 <p>Il peut être particulièrement important lorsqu'une réaction immédiate entre en conflit avec un objectif à plus long terme.</p>
-<h2 id="2017-limpulsivite" class="entry-title hc-2">⚡ 20.17 L'impulsivité</h2>
+<h2 id="2017-limpulsivite" class="entry-title hc-2">20.17 L'impulsivité</h2>
 <p>L'impulsivité correspond notamment à une tendance à agir rapidement.</p>
 <p>Elle peut être influencée par l'intensité émotionnelle, les récompenses immédiates et le contexte.</p>
-<h2 id="2018-la-regulation-emotionnelle" class="entry-title hc-3">🧠 20.18 La régulation émotionnelle</h2>
+<h2 id="2018-la-regulation-emotionnelle" class="entry-title hc-3">20.18 La régulation émotionnelle</h2>
 <p>La régulation émotionnelle regroupe les processus permettant de modifier l'intensité, la durée ou l'expression d'une émotion.</p>
 <p>Elle peut également influencer les comportements associés à cette émotion.</p>
-<h2 id="2019-la-regulation-comportementale" class="entry-title hc-4">🔄 20.19 La régulation comportementale</h2>
+<h2 id="2019-la-regulation-comportementale" class="entry-title hc-4">20.19 La régulation comportementale</h2>
 <p>La régulation comportementale correspond à la capacité à ajuster les actions en fonction des objectifs et du contexte.</p>
 <p>Elle permet notamment de ne pas répondre automatiquement à toutes les émotions.</p>
-<h2 id="2020-peur-et-evitement" class="entry-title hc-5">😨 20.20 Peur et évitement</h2>
+<h2 id="2020-peur-et-evitement" class="entry-title hc-5">20.20 Peur et évitement</h2>
 <p>La peur peut favoriser l'évitement d'une situation considérée comme menaçante.</p>
 <p>Lorsque l'évitement produit un soulagement immédiat, il peut renforcer la tendance à éviter des situations similaires.</p>
-<h2 id="2021-colere-et-confrontation" class="entry-title hc-1">😡 20.21 Colère et confrontation</h2>
+<h2 id="2021-colere-et-confrontation" class="entry-title hc-1">20.21 Colère et confrontation</h2>
 <p>La colère peut favoriser certains comportements d'approche ou de confrontation.</p>
 <p>La réaction dépend notamment de l'interprétation de la situation, des objectifs et du contrôle comportemental.</p>
-<h2 id="2022-tristesse-et-retrait" class="entry-title hc-2">😢 20.22 Tristesse et retrait</h2>
+<h2 id="2022-tristesse-et-retrait" class="entry-title hc-2">20.22 Tristesse et retrait</h2>
 <p>La tristesse peut favoriser temporairement une diminution des activités ou des interactions.</p>
 <p>Elle peut également augmenter la recherche de soutien social.</p>
-<h2 id="2023-joie-et-exploration" class="entry-title hc-3">😄 20.23 Joie et exploration</h2>
+<h2 id="2023-joie-et-exploration" class="entry-title hc-3">20.23 Joie et exploration</h2>
 <p>La joie peut favoriser l'approche, l'exploration et certaines interactions sociales.</p>
 <p>Les émotions positives peuvent notamment modifier la manière dont les possibilités de l'environnement sont évaluées.</p>
-<h2 id="2024-honte-et-evitement-social" class="entry-title hc-4">😳 20.24 Honte et évitement social</h2>
+<h2 id="2024-honte-et-evitement-social" class="entry-title hc-4">20.24 Honte et évitement social</h2>
 <p>La honte peut augmenter l'attention portée à l'image de soi et au regard des autres.</p>
 <p>Elle peut favoriser le retrait ou l'évitement dans certaines situations.</p>
-<h2 id="2025-attachement-et-comportements-relationnels" class="entry-title hc-5">❤️ 20.25 Attachement et comportements relationnels</h2>
+<h2 id="2025-attachement-et-comportements-relationnels" class="entry-title hc-5">20.25 Attachement et comportements relationnels</h2>
 <p>Les émotions liées aux relations peuvent influencer la recherche de proximité, le soutien social et les comportements d'approche.</p>
 <p>Les expériences relationnelles passées peuvent également modifier ces réponses.</p>
-<h2 id="2026-les-emotions-des-autres" class="entry-title hc-1">🧑‍🤝‍🧑 20.26 Les émotions des autres</h2>
+<h2 id="2026-les-emotions-des-autres" class="entry-title hc-1">‍‍ 20.26 Les émotions des autres</h2>
 <p>Les émotions ne sont pas uniquement individuelles.</p>
 <p>Les expressions émotionnelles des autres peuvent modifier les émotions et les comportements d'une personne.</p>
-<h2 id="2027-la-contagion-emotionnelle" class="entry-title hc-2">🔊 20.27 La contagion émotionnelle</h2>
+<h2 id="2027-la-contagion-emotionnelle" class="entry-title hc-2">20.27 La contagion émotionnelle</h2>
 <p>La contagion émotionnelle correspond au phénomène par lequel l'état émotionnel d'une personne peut influencer celui d'autres individus.</p>
 <p>Elle peut ensuite modifier les comportements au sein d'un groupe.</p>
-<h2 id="2028-la-communication-emotionnelle" class="entry-title hc-3">🗣️ 20.28 La communication émotionnelle</h2>
+<h2 id="2028-la-communication-emotionnelle" class="entry-title hc-3">20.28 La communication émotionnelle</h2>
 <p>Les comportements permettent de communiquer certaines informations émotionnelles.</p>
 <p>La parole, le ton, les expressions faciales et les gestes peuvent transmettre des informations sur l'état interne.</p>
-<h2 id="2029-linfluence-sociale" class="entry-title hc-4">👥 20.29 L'influence sociale</h2>
+<h2 id="2029-linfluence-sociale" class="entry-title hc-4">20.29 L'influence sociale</h2>
 <p>Les normes sociales, les attentes et les réactions des autres peuvent modifier les comportements émotionnels.</p>
 <p>Une même émotion peut donc être exprimée différemment selon le contexte social.</p>
-<h2 id="2030-les-regles-sociales" class="entry-title hc-5">⚖️ 20.30 Les règles sociales</h2>
+<h2 id="2030-les-regles-sociales" class="entry-title hc-5">20.30 Les règles sociales</h2>
 <p>Les règles sociales influencent notamment la manière dont certaines émotions sont exprimées.</p>
 <p>Une émotion peut être ressentie fortement tout en étant peu exprimée extérieurement.</p>
-<h2 id="2031-lapprentissage-social" class="entry-title hc-1">🧠 20.31 L'apprentissage social</h2>
+<h2 id="2031-lapprentissage-social" class="entry-title hc-1">20.31 L'apprentissage social</h2>
 <p>Les comportements émotionnels peuvent être appris en observant d'autres personnes.</p>
 <p>L'imitation et les conséquences observées peuvent notamment participer à cet apprentissage.</p>
-<h2 id="2032-les-experiences-passees" class="entry-title hc-2">🔄 20.32 Les expériences passées</h2>
+<h2 id="2032-les-experiences-passees" class="entry-title hc-2">20.32 Les expériences passées</h2>
 <p>Les expériences précédentes modifient les réactions futures.</p>
 <p>Un comportement ayant produit une conséquence importante peut devenir plus ou moins probable lorsqu'une situation similaire apparaît.</p>
-<h2 id="2033-ladaptation-comportementale" class="entry-title hc-3">🧩 20.33 L'adaptation comportementale</h2>
+<h2 id="2033-ladaptation-comportementale" class="entry-title hc-3">20.33 L'adaptation comportementale</h2>
 <p>Les individus peuvent modifier leurs comportements en fonction des conséquences observées.</p>
 <p>Cette adaptation permet notamment d'ajuster les réponses aux changements de l'environnement.</p>
-<h2 id="2034-le-contexte" class="entry-title hc-4">🌍 20.34 Le contexte</h2>
+<h2 id="2034-le-contexte" class="entry-title hc-4">20.34 Le contexte</h2>
 <p>Un même comportement peut avoir une signification différente selon la situation.</p>
 <p>Le contexte social, culturel, physique et temporel influence notamment l'interprétation des comportements.</p>
-<h2 id="2035-les-differences-individuelles" class="entry-title hc-5">🧠 20.35 Les différences individuelles</h2>
+<h2 id="2035-les-differences-individuelles" class="entry-title hc-5">20.35 Les différences individuelles</h2>
 <p>Les individus ne réagissent pas tous de la même manière à une émotion.</p>
 <p>Les expériences passées, les habitudes, les objectifs, les caractéristiques personnelles et le contexte peuvent modifier les réactions.</p>
-<h2 id="2036-les-comportements-peuvent-modifier-les-croyances" class="entry-title hc-1">🔄 20.36 Les comportements peuvent modifier les croyances</h2>
+<h2 id="2036-les-comportements-peuvent-modifier-les-croyances" class="entry-title hc-1">20.36 Les comportements peuvent modifier les croyances</h2>
 <p>Les actions réalisées peuvent parfois influencer les interprétations et les croyances futures.</p>
 <p>L'expérience comportementale peut donc participer à la modification des représentations mentales.</p>
-<h2 id="2037-les-comportements-peuvent-modifier-letat-emotionnel" class="entry-title hc-2">❤️ 20.37 Les comportements peuvent modifier l'état émotionnel</h2>
+<h2 id="2037-les-comportements-peuvent-modifier-letat-emotionnel" class="entry-title hc-2">20.37 Les comportements peuvent modifier l'état émotionnel</h2>
 <p>Une action peut modifier l'environnement ou fournir de nouvelles informations.</p>
 <p>Ces changements peuvent ensuite provoquer une nouvelle expérience émotionnelle.</p>
-<h2 id="2038-le-fonctionnement-en-systeme" class="entry-title hc-3">🧠 20.38 Le fonctionnement en système</h2>
+<h2 id="2038-le-fonctionnement-en-systeme" class="entry-title hc-3">20.38 Le fonctionnement en système</h2>
 <p>Les émotions et les comportements ne fonctionnent pas comme deux systèmes indépendants.</p>
 <p>Ils interagissent avec :</p>
-<p><strong>🧠 pensées👁️ perception🫀 sensations corporelles🧠 mémoire🎯 objectifs🏆 récompenses👥 relations sociales🌍 environnement</strong></p>
-<h2 id="2039-le-caractere-multifactoriel-du-comportement-humain" class="entry-title hc-4">🔬 20.39 Le caractère multifactoriel du comportement humain</h2>
+<p>** pensées perception sensations corporelles mémoire objectifs récompenses relations sociales environnement**</p>
+<h2 id="2039-le-caractere-multifactoriel-du-comportement-humain" class="entry-title hc-4">20.39 Le caractère multifactoriel du comportement humain</h2>
 <p>Un comportement complexe possède rarement une seule cause.</p>
 <p>Il résulte généralement de l'interaction entre plusieurs facteurs psychologiques, biologiques, sociaux et environnementaux.</p>
-<h2 id="2040-pourquoi-etudier-les-interactions-entre-emotions-et-comportements" class="entry-title hc-5">🌟 20.40 Pourquoi étudier les interactions entre émotions et comportements ?</h2>
+<h2 id="2040-pourquoi-etudier-les-interactions-entre-emotions-et-comportements" class="entry-title hc-5">20.40 Pourquoi étudier les interactions entre émotions et comportements ?</h2>
 <p>L'ensemble de la catégorie peut être résumé par une dynamique circulaire :</p>
-<p><strong>❤️ émotion → 🫀 sensations → 💭 pensées → 👁️ perception → 🎯 motivation → 🧍 comportement → 🌍 conséquence → 🧠 apprentissage → ❤️ nouvelle émotion</strong></p>
+<p>** émotion   sensations   pensées   perception   motivation   comportement   conséquence   apprentissage   nouvelle émotion**</p>
 <p>Cette dynamique montre que les émotions ne sont pas simplement des réactions isolées. Elles participent continuellement à l'organisation du comportement, tandis que les comportements et leurs conséquences peuvent modifier les émotions futures.</p>
-<h1 id="a-retenir">📌 À RETENIR</h1>
+<h1 id="a-retenir">À RETENIR</h1>
 <p>Le comportement humain résulte rarement d'un seul facteur.</p>
 <p>Il dépend notamment de l'interaction entre :</p>
-<p><strong>❤️ émotions + 🧠 pensées + 👁️ perception + 🧠 mémoire + 🎯 objectifs + 🏆 récompenses + 👥 relations + 🌍 environnement</strong></p>
+<p>** émotions +  pensées +  perception +  mémoire +  objectifs +  récompenses +  relations +  environnement**</p>
 <p>Une émotion peut provoquer un comportement, mais ce comportement peut ensuite modifier l'émotion.</p>
 <p><strong>Émotions et comportements forment donc un système dynamique et réciproque.</strong></p>
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Émotions et comportements humains »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-comprendre-les-emotions/"><span class="similar-icon">❤️</span>Comprendre les émotions</a><a class="similar-item" href="/chapitre/emotions-emotions-et-cerveau/"><span class="similar-icon">❤️</span>Émotions et cerveau</a><a class="similar-item" href="/chapitre/emotions-emotions-et-corps/"><span class="similar-icon">❤️</span>Émotions et corps</a></div>
+      <h2>Autres chapitres de « Émotions et comportements humains »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/emotions-comprendre-les-emotions/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg></span>Comprendre les émotions</a><a class="similar-item" href="/chapitre/emotions-emotions-et-cerveau/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg></span>Émotions et cerveau</a><a class="similar-item" href="/chapitre/emotions-emotions-et-corps/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 101 C18 72 10 44 29 27 C44 14 59 23 60 36
+                 C61 23 76 14 91 27 C110 44 102 72 60 101 Z"/>
+        <polyline points="30,58 46,58 53,42 64,74 71,58 90,58"/>
+    </svg></span>Émotions et corps</a></div>
     </div>
     <a class="back-link" href="/categorie/emotions/">← Retour à « Émotions et comportements humains »</a>
   </div>
@@ -317,23 +344,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -351,7 +380,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -531,9 +560,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -542,10 +573,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -652,7 +683,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -692,8 +723,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -724,7 +755,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -779,7 +810,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -803,17 +834,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -855,7 +886,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

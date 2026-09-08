@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#111-la-place-des-mecanismes-de-defense-en-clinique">🩺 11.1 La place des mécanismes de défense en clinique</a></li><li><a href="#112-lobservation-clinique">🧠 11.2 L'observation clinique</a></li><li><a href="#113-les-mecanismes-de-defense-dans-lentretien-clinique">💬 11.3 Les mécanismes de défense dans l'entretien clinique</a></li><li><a href="#114-le-deni-en-clinique">🔎 11.4 Le déni en clinique</a></li><li><a href="#115-la-projection-en-clinique">🪞 11.5 La projection en clinique</a></li><li><a href="#116-le-clivage-en-clinique">🧩 11.6 Le clivage en clinique</a></li><li><a href="#117-lidealisation-en-clinique">🌟 11.7 L'idéalisation en clinique</a></li><li><a href="#118-la-devalorisation-en-clinique">⬇️ 11.8 La dévalorisation en clinique</a></li><li><a href="#119-lintellectualisation-en-clinique">🧠 11.9 L'intellectualisation en clinique</a></li><li><a href="#1110-le-refoulement-en-clinique">🔒 11.10 Le refoulement en clinique</a></li><li><a href="#1111-la-regression-en-clinique">🔄 11.11 La régression en clinique</a></li><li><a href="#1112-le-passage-a-lacte-en-clinique">⚡ 11.12 Le passage à l'acte en clinique</a></li><li><a href="#1113-la-dissociation-en-clinique">🌫️ 11.13 La dissociation en clinique</a></li><li><a href="#1114-les-defenses-et-les-traumatismes">❤️ 11.14 Les défenses et les traumatismes</a></li><li><a href="#1115-les-defenses-et-lhistoire-personnelle">🧬 11.15 Les défenses et l'histoire personnelle</a></li><li><a href="#1116-les-defenses-et-limage-de-soi">👤 11.16 Les défenses et l'image de soi</a></li><li><a href="#1117-les-defenses-et-les-relations">❤️ 11.17 Les défenses et les relations</a></li><li><a href="#1118-les-defenses-dans-la-communication">🗣️ 11.18 Les défenses dans la communication</a></li><li><a href="#1119-plusieurs-defenses-peuvent-fonctionner-ensemble">🧩 11.19 Plusieurs défenses peuvent fonctionner ensemble</a></li><li><a href="#1120-limportance-de-la-flexibilite">📊 11.20 L'importance de la flexibilité</a></li><li><a href="#1121-les-niveaux-dadaptation">🧠 11.21 Les niveaux d'adaptation</a><ul class="sidebar-sublist"><li><a href="#defenses-generalement-considerees-comme-plus-matures">Défenses généralement considérées comme plus matures</a></li><li><a href="#defenses-intermediaires">Défenses intermédiaires</a></li><li><a href="#defenses-generalement-considerees-comme-moins-matures">Défenses généralement considérées comme moins matures</a></li><li><a href="#defenses-plus-primitives-dans-certains-modeles">Défenses plus primitives dans certains modèles</a></li></ul></li><li><a href="#1122-les-mecanismes-de-defense-dans-levaluation-clinique">🧪 11.22 Les mécanismes de défense dans l'évaluation clinique</a></li><li><a href="#1123-les-limites-de-linterpretation">⚠️ 11.23 Les limites de l'interprétation</a></li><li><a href="#1124-les-differents-modeles-psychologiques">🔬 11.24 Les différents modèles psychologiques</a></li><li><a href="#1125-defense-et-diagnostic">📚 11.25 Défense et diagnostic</a></li></ul>
+      <ul class="sidebar-list"><li><a href="#111-la-place-des-mecanismes-de-defense-en-clinique">11.1 La place des mécanismes de défense en clinique</a></li><li><a href="#112-lobservation-clinique">11.2 L'observation clinique</a></li><li><a href="#113-les-mecanismes-de-defense-dans-lentretien-clinique">11.3 Les mécanismes de défense dans l'entretien clinique</a></li><li><a href="#114-le-deni-en-clinique">11.4 Le déni en clinique</a></li><li><a href="#115-la-projection-en-clinique">11.5 La projection en clinique</a></li><li><a href="#116-le-clivage-en-clinique">11.6 Le clivage en clinique</a></li><li><a href="#117-lidealisation-en-clinique">11.7 L'idéalisation en clinique</a></li><li><a href="#118-la-devalorisation-en-clinique">11.8 La dévalorisation en clinique</a></li><li><a href="#119-lintellectualisation-en-clinique">11.9 L'intellectualisation en clinique</a></li><li><a href="#1110-le-refoulement-en-clinique">11.10 Le refoulement en clinique</a></li><li><a href="#1111-la-regression-en-clinique">11.11 La régression en clinique</a></li><li><a href="#1112-le-passage-a-lacte-en-clinique">11.12 Le passage à l'acte en clinique</a></li><li><a href="#1113-la-dissociation-en-clinique">11.13 La dissociation en clinique</a></li><li><a href="#1114-les-defenses-et-les-traumatismes">11.14 Les défenses et les traumatismes</a></li><li><a href="#1115-les-defenses-et-lhistoire-personnelle">11.15 Les défenses et l'histoire personnelle</a></li><li><a href="#1116-les-defenses-et-limage-de-soi">11.16 Les défenses et l'image de soi</a></li><li><a href="#1117-les-defenses-et-les-relations">11.17 Les défenses et les relations</a></li><li><a href="#1118-les-defenses-dans-la-communication">11.18 Les défenses dans la communication</a></li><li><a href="#1119-plusieurs-defenses-peuvent-fonctionner-ensemble">11.19 Plusieurs défenses peuvent fonctionner ensemble</a></li><li><a href="#1120-limportance-de-la-flexibilite">11.20 L'importance de la flexibilité</a></li><li><a href="#1121-les-niveaux-dadaptation">11.21 Les niveaux d'adaptation</a><ul class="sidebar-sublist"><li><a href="#defenses-generalement-considerees-comme-plus-matures">Défenses généralement considérées comme plus matures</a></li><li><a href="#defenses-intermediaires">Défenses intermédiaires</a></li><li><a href="#defenses-generalement-considerees-comme-moins-matures">Défenses généralement considérées comme moins matures</a></li><li><a href="#defenses-plus-primitives-dans-certains-modeles">Défenses plus primitives dans certains modèles</a></li></ul></li><li><a href="#1122-les-mecanismes-de-defense-dans-levaluation-clinique">11.22 Les mécanismes de défense dans l'évaluation clinique</a></li><li><a href="#1123-les-limites-de-linterpretation">11.23 Les limites de l'interprétation</a></li><li><a href="#1124-les-differents-modeles-psychologiques">11.24 Les différents modèles psychologiques</a></li><li><a href="#1125-defense-et-diagnostic">11.25 Défense et diagnostic</a></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Les mécanismes de défense en psychologie clinique',
         category: 'Mécanismes de défense',
-        icon: '🧩'
+        icon: 'L'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/mecanismes/">🧩 Mécanismes de défense</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/mecanismes/">Mécanismes de défense</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Les mécanismes de défense en psychologie clinique</h1>
     </div>
     <div id="resume-banner"></div>
@@ -102,7 +117,7 @@
 </p>
 </blockquote>
 <hr />
-<h2 id="111-la-place-des-mecanismes-de-defense-en-clinique" class="entry-title hc-1">🩺 11.1 La place des mécanismes de défense en clinique</h2>
+<h2 id="111-la-place-des-mecanismes-de-defense-en-clinique" class="entry-title hc-1">11.1 La place des mécanismes de défense en clinique</h2>
 <p>Dans certaines approches psychodynamiques, les mécanismes de défense permettent d'étudier la manière dont une personne protège son équilibre psychique.</p>
 <p>L'observation peut notamment porter sur :</p>
 <ul>
@@ -116,7 +131,7 @@
 <li>leur relation avec les émotions et les conflits internes</li>
 </ul>
 <hr />
-<h2 id="112-lobservation-clinique" class="entry-title hc-2">🧠 11.2 L'observation clinique</h2>
+<h2 id="112-lobservation-clinique" class="entry-title hc-2">11.2 L'observation clinique</h2>
 <p>Les mécanismes de défense ne sont généralement pas observés directement.</p>
 <p>Le clinicien peut plutôt s'intéresser à différents éléments :</p>
 <ul>
@@ -131,7 +146,7 @@
 </ul>
 <p>L'interprétation doit rester prudente, car un même comportement peut avoir plusieurs significations.</p>
 <hr />
-<h2 id="113-les-mecanismes-de-defense-dans-lentretien-clinique" class="entry-title hc-3">💬 11.3 Les mécanismes de défense dans l'entretien clinique</h2>
+<h2 id="113-les-mecanismes-de-defense-dans-lentretien-clinique" class="entry-title hc-3">11.3 Les mécanismes de défense dans l'entretien clinique</h2>
 <p>Pendant un entretien, certaines réactions peuvent être observées lorsqu'un sujet aborde un événement difficile.</p>
 <p>Par exemple :</p>
 <p>Une personne peut changer rapidement de sujet lorsqu'une émotion devient trop importante.</p>
@@ -139,7 +154,7 @@
 <p>Une personne peut également analyser très précisément une situation sans parler de ce qu'elle ressent.</p>
 <p>Cela peut évoquer une forme d'intellectualisation, sans que cette interprétation soit automatiquement certaine.</p>
 <hr />
-<h2 id="114-le-deni-en-clinique" class="entry-title hc-4">🔎 11.4 Le déni en clinique</h2>
+<h2 id="114-le-deni-en-clinique" class="entry-title hc-4">11.4 Le déni en clinique</h2>
 <p>Le déni peut concerner différents aspects d'une situation :</p>
 <ul>
 <li>existence d'un problème</li>
@@ -151,7 +166,7 @@
 <p>Le déni peut être temporaire et avoir une fonction protectrice.</p>
 <p>Il peut devenir plus problématique lorsqu'il empêche durablement de reconnaître une réalité importante.</p>
 <hr />
-<h2 id="115-la-projection-en-clinique" class="entry-title hc-5">🪞 11.5 La projection en clinique</h2>
+<h2 id="115-la-projection-en-clinique" class="entry-title hc-5">11.5 La projection en clinique</h2>
 <p>La projection consiste, dans les modèles psychodynamiques, à attribuer à l'extérieur des éléments psychiques difficiles à reconnaître comme appartenant à soi.</p>
 <p>Elle peut concerner :</p>
 <ul>
@@ -164,7 +179,7 @@
 <p>Une personne qui pense qu'une autre personne lui en veut peut réellement être confrontée à de l'hostilité.</p>
 <p>La projection ne signifie donc pas que toute interprétation d'autrui est fausse.</p>
 <hr />
-<h2 id="116-le-clivage-en-clinique" class="entry-title hc-1">🧩 11.6 Le clivage en clinique</h2>
+<h2 id="116-le-clivage-en-clinique" class="entry-title hc-1">11.6 Le clivage en clinique</h2>
 <p>Le clivage désigne un mode de fonctionnement dans lequel certains éléments sont maintenus séparés et vécus de manière très polarisée.</p>
 <p>Par exemple :</p>
 <ul>
@@ -176,7 +191,7 @@
 <p>Ce mécanisme peut concerner l'image de soi ou la représentation des autres.</p>
 <p>Il est particulièrement étudié dans certaines formulations psychodynamiques des fonctionnements de personnalité.</p>
 <hr />
-<h2 id="117-lidealisation-en-clinique" class="entry-title hc-2">🌟 11.7 L'idéalisation en clinique</h2>
+<h2 id="117-lidealisation-en-clinique" class="entry-title hc-2">11.7 L'idéalisation en clinique</h2>
 <p>L'idéalisation consiste à attribuer à une personne ou à soi-même des qualités extrêmement positives.</p>
 <p>Elle peut contribuer à :</p>
 <ul>
@@ -187,7 +202,7 @@
 </ul>
 <p>Elle peut parfois fonctionner avec son opposé, la dévalorisation.</p>
 <hr />
-<h2 id="118-la-devalorisation-en-clinique" class="entry-title hc-3">⬇️ 11.8 La dévalorisation en clinique</h2>
+<h2 id="118-la-devalorisation-en-clinique" class="entry-title hc-3">11.8 La dévalorisation en clinique</h2>
 <p>La dévalorisation consiste à diminuer fortement la valeur attribuée à soi-même ou à quelqu'un d'autre.</p>
 <p>Elle peut apparaître après :</p>
 <ul>
@@ -200,7 +215,7 @@
 </ul>
 <p>Dans certaines configurations, elle peut fonctionner avec l'idéalisation.</p>
 <hr />
-<h2 id="119-lintellectualisation-en-clinique" class="entry-title hc-4">🧠 11.9 L'intellectualisation en clinique</h2>
+<h2 id="119-lintellectualisation-en-clinique" class="entry-title hc-4">11.9 L'intellectualisation en clinique</h2>
 <p>L'intellectualisation consiste à utiliser principalement l'analyse et le raisonnement pour prendre de la distance avec une expérience émotionnelle.</p>
 <p>Exemple :</p>
 <blockquote>
@@ -209,12 +224,12 @@
 </blockquote>
 <p>L'intellectualisation n'est pas nécessairement négative. Elle peut permettre de réfléchir efficacement à une situation.</p>
 <hr />
-<h2 id="1110-le-refoulement-en-clinique" class="entry-title hc-5">🔒 11.10 Le refoulement en clinique</h2>
+<h2 id="1110-le-refoulement-en-clinique" class="entry-title hc-5">11.10 Le refoulement en clinique</h2>
 <p>Dans la théorie psychanalytique et certains modèles psychodynamiques, le refoulement désigne un processus par lequel certaines représentations ou certains contenus psychiques sont maintenus hors de la conscience.</p>
 <p>Le concept est historiquement important en psychologie dynamique.</p>
 <p>Cependant, les différentes écoles de psychologie ne lui attribuent pas toutes la même définition ni la même place.</p>
 <hr />
-<h2 id="1111-la-regression-en-clinique" class="entry-title hc-1">🔄 11.11 La régression en clinique</h2>
+<h2 id="1111-la-regression-en-clinique" class="entry-title hc-1">11.11 La régression en clinique</h2>
 <p>La régression désigne, dans certains modèles psychodynamiques, un retour temporaire vers des modes de fonctionnement associés à des périodes antérieures du développement.</p>
 <p>Elle peut apparaître lors :</p>
 <ul>
@@ -226,7 +241,7 @@
 </ul>
 <p>Elle n'est pas automatiquement pathologique.</p>
 <hr />
-<h2 id="1112-le-passage-a-lacte-en-clinique" class="entry-title hc-2">⚡ 11.12 Le passage à l'acte en clinique</h2>
+<h2 id="1112-le-passage-a-lacte-en-clinique" class="entry-title hc-2">11.12 Le passage à l'acte en clinique</h2>
 <p>Le passage à l'acte peut désigner l'expression d'une tension psychique principalement par le comportement plutôt que par la verbalisation ou la réflexion.</p>
 <p>Dans certains modèles cliniques, il peut être considéré comme un mécanisme de défense.</p>
 <p>Il est important de distinguer :</p>
@@ -239,7 +254,7 @@
 </ul>
 <p>Ces notions ne sont pas synonymes.</p>
 <hr />
-<h2 id="1113-la-dissociation-en-clinique" class="entry-title hc-3">🌫️ 11.13 La dissociation en clinique</h2>
+<h2 id="1113-la-dissociation-en-clinique" class="entry-title hc-3">11.13 La dissociation en clinique</h2>
 <p>La dissociation peut concerner différents aspects de l'expérience :</p>
 <ul>
 <li>mémoire</li>
@@ -252,7 +267,7 @@
 <p>Des phénomènes dissociatifs peuvent être présents dans différentes situations sans constituer nécessairement un trouble dissociatif.</p>
 <p>La dissociation devient particulièrement importante dans certaines évaluations cliniques lorsqu'elle est fréquente, intense ou associée à une souffrance importante.</p>
 <hr />
-<h2 id="1114-les-defenses-et-les-traumatismes" class="entry-title hc-4">❤️ 11.14 Les défenses et les traumatismes</h2>
+<h2 id="1114-les-defenses-et-les-traumatismes" class="entry-title hc-4">11.14 Les défenses et les traumatismes</h2>
 <p>Certaines réactions peuvent apparaître après des expériences traumatiques.</p>
 <p>Parmi les processus pouvant être observés :</p>
 <ul>
@@ -266,7 +281,7 @@
 </ul>
 <p>Ces réactions ne sont cependant pas spécifiques aux traumatismes et ne permettent pas, seules, d'établir un diagnostic.</p>
 <hr />
-<h2 id="1115-les-defenses-et-lhistoire-personnelle" class="entry-title hc-5">🧬 11.15 Les défenses et l'histoire personnelle</h2>
+<h2 id="1115-les-defenses-et-lhistoire-personnelle" class="entry-title hc-5">11.15 Les défenses et l'histoire personnelle</h2>
 <p>Les mécanismes de défense peuvent être influencés par :</p>
 <ul>
 <li>expériences antérieures</li>
@@ -280,7 +295,7 @@
 </ul>
 <p>Une même personne peut également utiliser des mécanismes différents selon les situations.</p>
 <hr />
-<h2 id="1116-les-defenses-et-limage-de-soi" class="entry-title hc-1">👤 11.16 Les défenses et l'image de soi</h2>
+<h2 id="1116-les-defenses-et-limage-de-soi" class="entry-title hc-1">11.16 Les défenses et l'image de soi</h2>
 <p>L'image de soi peut être protégée par différents mécanismes.</p>
 <p>Exemples :</p>
 <ul>
@@ -294,7 +309,7 @@
 </ul>
 <p>Ces mécanismes peuvent temporairement protéger l'estime de soi lorsqu'une situation menace l'image personnelle.</p>
 <hr />
-<h2 id="1117-les-defenses-et-les-relations" class="entry-title hc-2">❤️ 11.17 Les défenses et les relations</h2>
+<h2 id="1117-les-defenses-et-les-relations" class="entry-title hc-2">11.17 Les défenses et les relations</h2>
 <p>Les relations interpersonnelles constituent un contexte important pour l'observation des mécanismes de défense.</p>
 <p>Certaines situations peuvent provoquer :</p>
 <ul>
@@ -308,7 +323,7 @@
 </ul>
 <p>Les défenses peuvent alors modifier la manière dont une personne perçoit elle-même, les autres et la relation.</p>
 <hr />
-<h2 id="1118-les-defenses-dans-la-communication" class="entry-title hc-3">🗣️ 11.18 Les défenses dans la communication</h2>
+<h2 id="1118-les-defenses-dans-la-communication" class="entry-title hc-3">11.18 Les défenses dans la communication</h2>
 <p>Certaines défenses peuvent influencer la communication.</p>
 <p>Par exemple :</p>
 <p><strong>Projection</strong></p>
@@ -333,7 +348,7 @@
 </blockquote>
 <p>Ces phrases ne permettent toutefois pas, à elles seules, d'identifier avec certitude un mécanisme.</p>
 <hr />
-<h2 id="1119-plusieurs-defenses-peuvent-fonctionner-ensemble" class="entry-title hc-4">🧩 11.19 Plusieurs défenses peuvent fonctionner ensemble</h2>
+<h2 id="1119-plusieurs-defenses-peuvent-fonctionner-ensemble" class="entry-title hc-4">11.19 Plusieurs défenses peuvent fonctionner ensemble</h2>
 <p>Les mécanismes de défense peuvent se combiner.</p>
 <p>Exemple :</p>
 <p>Une personne reçoit une critique.</p>
@@ -347,7 +362,7 @@
 </ol>
 <p>Il ne s'agit pas d'une règle universelle, mais d'un exemple de fonctionnement possible.</p>
 <hr />
-<h2 id="1120-limportance-de-la-flexibilite" class="entry-title hc-5">📊 11.20 L'importance de la flexibilité</h2>
+<h2 id="1120-limportance-de-la-flexibilite" class="entry-title hc-5">11.20 L'importance de la flexibilité</h2>
 <p>En clinique, le simple fait d'utiliser une défense n'est généralement pas suffisant pour considérer qu'elle est problématique.</p>
 <p>La question porte davantage sur son fonctionnement.</p>
 <p>Une défense peut être relativement adaptée lorsqu'elle est :</p>
@@ -368,7 +383,7 @@
 <li>source de souffrance ou de conflits</li>
 </ul>
 <hr />
-<h2 id="1121-les-niveaux-dadaptation" class="entry-title hc-1">🧠 11.21 Les niveaux d'adaptation</h2>
+<h2 id="1121-les-niveaux-dadaptation" class="entry-title hc-1">11.21 Les niveaux d'adaptation</h2>
 <p>Certains modèles psychodynamiques organisent les défenses selon différents niveaux d'adaptation.</p>
 <h3 id="defenses-generalement-considerees-comme-plus-matures">Défenses généralement considérées comme plus matures</h3>
 <ul>
@@ -402,7 +417,7 @@
 </ul>
 <p>Les classifications varient selon les modèles théoriques et ne constituent pas une échelle permettant de juger une personne.</p>
 <hr />
-<h2 id="1122-les-mecanismes-de-defense-dans-levaluation-clinique" class="entry-title hc-2">🧪 11.22 Les mécanismes de défense dans l'évaluation clinique</h2>
+<h2 id="1122-les-mecanismes-de-defense-dans-levaluation-clinique" class="entry-title hc-2">11.22 Les mécanismes de défense dans l'évaluation clinique</h2>
 <p>Une évaluation clinique peut prendre en compte de nombreux éléments :</p>
 <ul>
 <li>symptômes</li>
@@ -417,7 +432,7 @@
 </ul>
 <p>Les mécanismes de défense représentent donc seulement une partie possible de l'évaluation.</p>
 <hr />
-<h2 id="1123-les-limites-de-linterpretation" class="entry-title hc-3">⚠️ 11.23 Les limites de l'interprétation</h2>
+<h2 id="1123-les-limites-de-linterpretation" class="entry-title hc-3">11.23 Les limites de l'interprétation</h2>
 <p>Identifier un mécanisme de défense chez quelqu'un à partir d'un seul comportement comporte un risque d'erreur.</p>
 <p>Par exemple :</p>
 <blockquote>
@@ -426,7 +441,7 @@
 </blockquote>
 <p>Le contexte est donc essentiel.</p>
 <hr />
-<h2 id="1124-les-differents-modeles-psychologiques" class="entry-title hc-4">🔬 11.24 Les différents modèles psychologiques</h2>
+<h2 id="1124-les-differents-modeles-psychologiques" class="entry-title hc-4">11.24 Les différents modèles psychologiques</h2>
 <p>Les mécanismes de défense sont particulièrement développés dans les approches psychodynamiques.</p>
 <p>D'autres approches psychologiques utilisent davantage d'autres concepts pour expliquer les comportements et les difficultés :</p>
 <ul>
@@ -443,7 +458,7 @@
 </ul>
 <p>Aucun modèle unique ne permet d'expliquer l'ensemble du fonctionnement psychologique.</p>
 <hr />
-<h2 id="1125-defense-et-diagnostic" class="entry-title hc-5">📚 11.25 Défense et diagnostic</h2>
+<h2 id="1125-defense-et-diagnostic" class="entry-title hc-5">11.25 Défense et diagnostic</h2>
 <p>Un mécanisme de défense ne constitue pas un diagnostic.</p>
 <p>Par exemple :</p>
 <ul>
@@ -456,7 +471,7 @@
 </ul>
 <p>Le diagnostic repose sur un ensemble beaucoup plus large de critères et d'informations.</p>
 <hr />
-<h1 id="a-retenir">🧠 À RETENIR</h1>
+<h1 id="a-retenir">À RETENIR</h1>
 <blockquote>
 <p>Les mécanismes de défense constituent un outil conceptuel particulièrement important dans certaines approches de la psychologie clinique.
 </p>
@@ -475,8 +490,17 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Mécanismes de défense »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/mecanismes-classification-et-niveaux-des-mecanismes-de-defense/"><span class="similar-icon">🧩</span>Classification et niveaux des mécanismes de défense</a><a class="similar-item" href="/chapitre/mecanismes-comprendre-les-mecanismes-de-defense/"><span class="similar-icon">🧩</span>Comprendre les mécanismes de défense</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-fondamentaux/"><span class="similar-icon">🧩</span>Les mécanismes de défense fondamentaux</a></div>
+      <h2>Autres chapitres de « Mécanismes de défense »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/mecanismes-classification-et-niveaux-des-mecanismes-de-defense/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Classification et niveaux des mécanismes de défense</a><a class="similar-item" href="/chapitre/mecanismes-comprendre-les-mecanismes-de-defense/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Comprendre les mécanismes de défense</a><a class="similar-item" href="/chapitre/mecanismes-les-mecanismes-de-defense-fondamentaux/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 13 L98 27 V56 C98 83 81 98 60 107 C39 98 22 83 22 56 V27 Z"/>
+        <path d="M45 59 L55 69 L76 46"/>
+    </svg></span>Les mécanismes de défense fondamentaux</a></div>
     </div>
     <a class="back-link" href="/categorie/mecanismes/">← Retour à « Mécanismes de défense »</a>
   </div>
@@ -562,23 +586,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -596,7 +622,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -776,9 +802,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -787,10 +815,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -897,7 +925,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -937,8 +965,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -969,7 +997,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -1024,7 +1052,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1048,17 +1076,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1100,7 +1128,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);

@@ -10,27 +10,36 @@
 <script defer src="https://stats.monesprit.fr/script.js" data-website-id="40195ed7-fe8a-4f1d-bed1-30e08bdadb74"></script>
 </head>
 <body>
-<div class="test-banner">🧪 Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
+<div class="test-banner">Nouvelle interface en cours de test — des ajustements sont encore possibles</div>
 <div class="update-banner" id="update-banner" hidden data-count="39" data-titles='["Petites corrections", "Un assistant pour discuter avec le site", "Un nouveau logo", "Nouvelle identité visuelle", "Une recherche plus fine"]'>
   <a href="/nouveautes/">
-    <span>🆕</span>
     <span class="update-banner-text" id="update-banner-text">Petites corrections</span>
     <span class="update-banner-arrow">→</span>
   </a>
-  <button type="button" id="update-banner-close" aria-label="Fermer">✕</button>
+  <button type="button" id="update-banner-close" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
 </div>
 <div class="toast-container" id="toast-container" aria-live="polite"></div>
 <div class="floating-nav" id="floating-nav">
-  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">←</button>
-  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">🏠</a>
+  <button type="button" id="nav-back" class="floating-nav-btn" title="Page précédente" aria-label="Page précédente">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+  </button>
+  <a href="/" class="floating-nav-btn" title="Accueil" aria-label="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+  </a>
 </div>
 
-<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">💬</button>
+<button type="button" id="chat-toggle" class="chat-toggle" title="Poser une question à l'assistant" aria-label="Ouvrir l'assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
 
 <div class="chat-window" id="chat-window" hidden>
   <div class="chat-header">
-    <span>💬 Assistant Mon Esprit</span>
-    <button type="button" id="chat-close" aria-label="Fermer">✕</button>
+    <span>Assistant Mon Esprit</span>
+    <button type="button" id="chat-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
   </div>
   <div class="chat-disclaimer">Je réponds uniquement à partir du contenu du site. Je ne remplace pas un professionnel de santé.</div>
   <div class="chat-messages" id="chat-messages">
@@ -38,7 +47,9 @@
   </div>
   <form class="chat-input-row" id="chat-form">
     <input type="text" id="chat-input" placeholder="Écris ta question…" autocomplete="off" required>
-    <button type="submit" id="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" id="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
   </form>
 </div>
 
@@ -52,15 +63,19 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">☕</a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">🌙</button>
+      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </a>
+      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
       <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
     </nav>
     <div class="site-search">
       <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
       <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>🧠 Essayer la recherche intelligente</button>
+      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
     </div>
   </div>
 </header>
@@ -70,7 +85,7 @@
   <aside class="chapter-sidebar">
     <details open>
       <summary class="sidebar-title">Dans ce chapitre</summary>
-      <ul class="sidebar-list"><li><a href="#21-le-syndrome-dalice-au-pays-des-merveilles">👁️ 2.1 Le syndrome d'Alice au pays des merveilles</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#22-la-depersonnalisation">👤 2.2 La dépersonnalisation</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#23-la-derealisation">🌍 2.3 La déréalisation</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#24-le-syndrome-de-la-main-etrangere">✋ 2.4 Le syndrome de la main étrangère</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#causes-possibles_3">Causes possibles</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#25-le-deja-vu">🔄 2.5 Le déjà-vu</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#causes-possibles_4">Causes possibles</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#26-le-jamais-vu">🔄 2.6 Le jamais-vu</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#causes-possibles_5">Causes possibles</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#27-le-presque-vu">🔎 2.7 Le presque-vu</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#causes-possibles_6">Causes possibles</a></li><li><a href="#diagnostic_6">Diagnostic</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#28-la-synesthesie">🌈 2.8 La synesthésie</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#causes-possibles_7">Causes possibles</a></li><li><a href="#diagnostic_7">Diagnostic</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#29-les-illusions-perceptives">👁️ 2.9 Les illusions perceptives</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#causes-possibles_8">Causes possibles</a></li><li><a href="#diagnostic_8">Diagnostic</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#210-les-hallucinations">🔊 2.10 Les hallucinations</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#causes-possibles_9">Causes possibles</a></li><li><a href="#diagnostic_9">Diagnostic</a></li><li><a href="#prise-en-charge_9">Prise en charge</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li></ul>
+      <ul class="sidebar-list"><li><a href="#21-le-syndrome-dalice-au-pays-des-merveilles">2.1 Le syndrome d'Alice au pays des merveilles</a><ul class="sidebar-sublist"><li><a href="#definition">Définition</a></li><li><a href="#manifestations">Manifestations</a></li><li><a href="#causes-possibles">Causes possibles</a></li><li><a href="#diagnostic">Diagnostic</a></li><li><a href="#prise-en-charge">Prise en charge</a></li><li><a href="#a-retenir">À retenir</a></li></ul></li><li><a href="#22-la-depersonnalisation">2.2 La dépersonnalisation</a><ul class="sidebar-sublist"><li><a href="#definition_1">Définition</a></li><li><a href="#manifestations_1">Manifestations</a></li><li><a href="#causes-possibles_1">Causes possibles</a></li><li><a href="#diagnostic_1">Diagnostic</a></li><li><a href="#prise-en-charge_1">Prise en charge</a></li><li><a href="#a-retenir_1">À retenir</a></li></ul></li><li><a href="#23-la-derealisation">2.3 La déréalisation</a><ul class="sidebar-sublist"><li><a href="#definition_2">Définition</a></li><li><a href="#manifestations_2">Manifestations</a></li><li><a href="#causes-possibles_2">Causes possibles</a></li><li><a href="#diagnostic_2">Diagnostic</a></li><li><a href="#prise-en-charge_2">Prise en charge</a></li><li><a href="#a-retenir_2">À retenir</a></li></ul></li><li><a href="#24-le-syndrome-de-la-main-etrangere">2.4 Le syndrome de la main étrangère</a><ul class="sidebar-sublist"><li><a href="#definition_3">Définition</a></li><li><a href="#manifestations_3">Manifestations</a></li><li><a href="#causes-possibles_3">Causes possibles</a></li><li><a href="#diagnostic_3">Diagnostic</a></li><li><a href="#prise-en-charge_3">Prise en charge</a></li><li><a href="#a-retenir_3">À retenir</a></li></ul></li><li><a href="#25-le-deja-vu">2.5 Le déjà-vu</a><ul class="sidebar-sublist"><li><a href="#definition_4">Définition</a></li><li><a href="#manifestations_4">Manifestations</a></li><li><a href="#causes-possibles_4">Causes possibles</a></li><li><a href="#diagnostic_4">Diagnostic</a></li><li><a href="#prise-en-charge_4">Prise en charge</a></li><li><a href="#a-retenir_4">À retenir</a></li></ul></li><li><a href="#26-le-jamais-vu">2.6 Le jamais-vu</a><ul class="sidebar-sublist"><li><a href="#definition_5">Définition</a></li><li><a href="#manifestations_5">Manifestations</a></li><li><a href="#causes-possibles_5">Causes possibles</a></li><li><a href="#diagnostic_5">Diagnostic</a></li><li><a href="#prise-en-charge_5">Prise en charge</a></li><li><a href="#a-retenir_5">À retenir</a></li></ul></li><li><a href="#27-le-presque-vu">2.7 Le presque-vu</a><ul class="sidebar-sublist"><li><a href="#definition_6">Définition</a></li><li><a href="#manifestations_6">Manifestations</a></li><li><a href="#causes-possibles_6">Causes possibles</a></li><li><a href="#diagnostic_6">Diagnostic</a></li><li><a href="#prise-en-charge_6">Prise en charge</a></li><li><a href="#a-retenir_6">À retenir</a></li></ul></li><li><a href="#28-la-synesthesie">2.8 La synesthésie</a><ul class="sidebar-sublist"><li><a href="#definition_7">Définition</a></li><li><a href="#manifestations_7">Manifestations</a></li><li><a href="#causes-possibles_7">Causes possibles</a></li><li><a href="#diagnostic_7">Diagnostic</a></li><li><a href="#prise-en-charge_7">Prise en charge</a></li><li><a href="#a-retenir_7">À retenir</a></li></ul></li><li><a href="#29-les-illusions-perceptives">2.9 Les illusions perceptives</a><ul class="sidebar-sublist"><li><a href="#definition_8">Définition</a></li><li><a href="#manifestations_8">Manifestations</a></li><li><a href="#causes-possibles_8">Causes possibles</a></li><li><a href="#diagnostic_8">Diagnostic</a></li><li><a href="#prise-en-charge_8">Prise en charge</a></li><li><a href="#a-retenir_8">À retenir</a></li></ul></li><li><a href="#210-les-hallucinations">2.10 Les hallucinations</a><ul class="sidebar-sublist"><li><a href="#definition_9">Définition</a></li><li><a href="#manifestations_9">Manifestations</a></li><li><a href="#causes-possibles_9">Causes possibles</a></li><li><a href="#diagnostic_9">Diagnostic</a></li><li><a href="#prise-en-charge_9">Prise en charge</a></li><li><a href="#a-retenir_9">À retenir</a></li></ul></li></ul>
     </details>
   </aside>
   <div class="prose prose-wide">
@@ -78,12 +93,12 @@
       window.__chapterMeta = {
         title: 'Syndromes liés à la perception',
         category: 'Syndromes psychologiques',
-        icon: '🧬'
+        icon: 'S'
       };
     </script>
     <div class="article-header">
-      <span class="category"><a href="/categorie/syndromes/">🧬 Syndromes psychologiques</a></span>
-      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris">☆</button>
+      <span class="category"><a href="/categorie/syndromes/">Syndromes psychologiques</a></span>
+      <button type="button" class="favorite-btn" id="favorite-btn" title="Ajouter aux favoris" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></button>
       <h1>Syndromes liés à la perception</h1>
     </div>
     <div id="resume-banner"></div>
@@ -99,7 +114,7 @@
     </svg>
     </div>
     <div class="article-body">
-      <h1 id="21-le-syndrome-dalice-au-pays-des-merveilles" class="entry-title hc-1">👁️ 2.1 Le syndrome d'Alice au pays des merveilles</h1>
+      <h1 id="21-le-syndrome-dalice-au-pays-des-merveilles" class="entry-title hc-1">2.1 Le syndrome d'Alice au pays des merveilles</h1>
 <h2 id="definition">Définition</h2>
 <p>Le <strong>syndrome d'Alice au pays des merveilles</strong> est un phénomène neurologique et perceptif caractérisé par des modifications temporaires de la perception du corps, des objets, de l'espace ou du temps.</p>
 <p>Le nom fait référence aux transformations vécues par Alice dans le roman <em>Alice au pays des merveilles</em>.</p>
@@ -133,7 +148,7 @@
 <p>La prise en charge consiste principalement à identifier et traiter la cause lorsqu'elle est connue.</p>
 <h2 id="a-retenir">À retenir</h2>
 <p>Le syndrome d'Alice au pays des merveilles entraîne des modifications inhabituelles de la perception de la taille, de la distance, du temps ou du corps.</p>
-<h1 id="22-la-depersonnalisation" class="entry-title hc-2">👤 2.2 La dépersonnalisation</h1>
+<h1 id="22-la-depersonnalisation" class="entry-title hc-2">2.2 La dépersonnalisation</h1>
 <h2 id="definition_1">Définition</h2>
 <p>La <strong>dépersonnalisation</strong> correspond à une sensation de détachement ou d'étrangeté vis-à-vis de soi-même.</p>
 <p>Une personne peut avoir l'impression d'observer son propre corps ou ses pensées comme si elle était extérieure à elle-même.</p>
@@ -178,7 +193,7 @@
 </ul>
 <h2 id="a-retenir_1">À retenir</h2>
 <p>La dépersonnalisation correspond principalement à une sensation d'éloignement ou d'irréalité vis-à-vis de soi-même.</p>
-<h1 id="23-la-derealisation" class="entry-title hc-3">🌍 2.3 La déréalisation</h1>
+<h1 id="23-la-derealisation" class="entry-title hc-3">2.3 La déréalisation</h1>
 <h2 id="definition_2">Définition</h2>
 <p>La <strong>déréalisation</strong> correspond à une sensation d'étrangeté ou d'irréalité concernant l'environnement.</p>
 <p>Le monde peut sembler artificiel, lointain, brumeux ou comme observé derrière une vitre.</p>
@@ -218,7 +233,7 @@
 </ul>
 <h2 id="a-retenir_2">À retenir</h2>
 <p>La déréalisation correspond à une impression d'irréalité ou d'étrangeté du monde extérieur.</p>
-<h1 id="24-le-syndrome-de-la-main-etrangere" class="entry-title hc-4">✋ 2.4 Le syndrome de la main étrangère</h1>
+<h1 id="24-le-syndrome-de-la-main-etrangere" class="entry-title hc-4">2.4 Le syndrome de la main étrangère</h1>
 <h2 id="definition_3">Définition</h2>
 <p>Le <strong>syndrome de la main étrangère</strong> est un trouble neurologique rare dans lequel une main peut effectuer des mouvements involontaires donnant l'impression qu'elle agit indépendamment de la volonté consciente.</p>
 <p>La personne peut avoir la sensation que sa main ne lui obéit pas ou qu'elle possède une certaine autonomie.</p>
@@ -253,7 +268,7 @@
 </ul>
 <h2 id="a-retenir_3">À retenir</h2>
 <p>Le syndrome de la main étrangère est un phénomène neurologique dans lequel une main semble effectuer des actions indépendamment du contrôle volontaire.</p>
-<h1 id="25-le-deja-vu" class="entry-title hc-5">🔄 2.5 Le déjà-vu</h1>
+<h1 id="25-le-deja-vu" class="entry-title hc-5">2.5 Le déjà-vu</h1>
 <h2 id="definition_4">Définition</h2>
 <p>Le <strong>déjà-vu</strong> est l'impression soudaine qu'une situation actuelle a déjà été vécue auparavant, alors qu'elle est objectivement nouvelle.</p>
 <p>Il s'agit d'un phénomène fréquent dans la population générale.</p>
@@ -282,7 +297,7 @@
 <p>Aucune prise en charge spécifique n'est généralement nécessaire pour un déjà-vu occasionnel.</p>
 <h2 id="a-retenir_4">À retenir</h2>
 <p>Le déjà-vu est une sensation de familiarité avec une situation pourtant nouvelle.</p>
-<h1 id="26-le-jamais-vu" class="entry-title hc-1">🔄 2.6 Le jamais-vu</h1>
+<h1 id="26-le-jamais-vu" class="entry-title hc-1">2.6 Le jamais-vu</h1>
 <h2 id="definition_5">Définition</h2>
 <p>Le <strong>jamais-vu</strong> est l'expérience inverse du déjà-vu.</p>
 <p>Une situation, une personne ou un lieu pourtant familier semble soudainement complètement inconnu ou étranger.</p>
@@ -309,7 +324,7 @@
 <p>Elle dépend de la cause lorsqu'une cause particulière est identifiée.</p>
 <h2 id="a-retenir_5">À retenir</h2>
 <p>Le jamais-vu correspond à une perte temporaire de familiarité envers quelque chose qui est normalement connu.</p>
-<h1 id="27-le-presque-vu" class="entry-title hc-2">🔎 2.7 Le presque-vu</h1>
+<h1 id="27-le-presque-vu" class="entry-title hc-2">2.7 Le presque-vu</h1>
 <h2 id="definition_6">Définition</h2>
 <p>Le <strong>presque-vu</strong>, parfois appelé phénomène du « mot sur le bout de la langue », correspond à la sensation de connaître une information sans parvenir momentanément à la retrouver.</p>
 <p>La personne peut avoir l'impression que la réponse est sur le point de revenir.</p>
@@ -336,7 +351,7 @@
 <p>Aucune prise en charge spécifique n'est généralement nécessaire lorsqu'il reste occasionnel.</p>
 <h2 id="a-retenir_6">À retenir</h2>
 <p>Le presque-vu correspond à l'impression qu'une information connue est momentanément inaccessible.</p>
-<h1 id="28-la-synesthesie" class="entry-title hc-3">🌈 2.8 La synesthésie</h1>
+<h1 id="28-la-synesthesie" class="entry-title hc-3">2.8 La synesthésie</h1>
 <h2 id="definition_7">Définition</h2>
 <p>La <strong>synesthésie</strong> est un phénomène perceptif dans lequel la stimulation d'un sens ou d'une fonction cognitive entraîne automatiquement une expérience supplémentaire dans un autre domaine perceptif.</p>
 <p>Par exemple, certaines personnes peuvent associer automatiquement certaines lettres ou certains nombres à des couleurs.</p>
@@ -360,7 +375,7 @@
 <p>La synesthésie n'est généralement pas considérée comme une maladie et ne nécessite pas de traitement.</p>
 <h2 id="a-retenir_7">À retenir</h2>
 <p>La synesthésie correspond à des associations perceptives automatiques entre différentes modalités sensorielles ou cognitives.</p>
-<h1 id="29-les-illusions-perceptives" class="entry-title hc-4">👁️ 2.9 Les illusions perceptives</h1>
+<h1 id="29-les-illusions-perceptives" class="entry-title hc-4">2.9 Les illusions perceptives</h1>
 <h2 id="definition_8">Définition</h2>
 <p>Une <strong>illusion perceptive</strong> correspond à une interprétation erronée d'un stimulus réellement présent.</p>
 <p>Elle se distingue d'une hallucination : dans une illusion, il existe un élément réel qui est mal interprété.</p>
@@ -390,7 +405,7 @@
 <p>La prise en charge dépend de la cause lorsqu'une cause médicale ou psychologique est identifiée.</p>
 <h2 id="a-retenir_8">À retenir</h2>
 <p>Une illusion perceptive correspond à une mauvaise interprétation d'un élément réellement présent dans l'environnement.</p>
-<h1 id="210-les-hallucinations" class="entry-title hc-5">🔊 2.10 Les hallucinations</h1>
+<h1 id="210-les-hallucinations" class="entry-title hc-5">2.10 Les hallucinations</h1>
 <h2 id="definition_9">Définition</h2>
 <p>Une <strong>hallucination</strong> est une expérience perceptive qui se produit en l'absence d'un stimulus externe correspondant.</p>
 <p>Elle peut concerner différents sens.</p>
@@ -441,8 +456,29 @@
     </div>
     
     <div class="similar-block">
-      <h2>📎 Autres chapitres de « Syndromes psychologiques »</h2>
-      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-delirants-particuliers/"><span class="similar-icon">🧬</span>Syndromes délirants particuliers</a><a class="similar-item" href="/chapitre/syndromes-syndromes-neuropsychologiques/"><span class="similar-icon">🧬</span>Syndromes neuropsychologiques</a><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-au-stress-et-aux-traumatismes/"><span class="similar-icon">🧬</span>Syndromes liés au stress et aux traumatismes</a></div>
+      <h2>Autres chapitres de « Syndromes psychologiques »</h2>
+      <div class="similar-list"><a class="similar-item" href="/chapitre/syndromes-syndromes-delirants-particuliers/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes délirants particuliers</a><a class="similar-item" href="/chapitre/syndromes-syndromes-neuropsychologiques/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes neuropsychologiques</a><a class="similar-item" href="/chapitre/syndromes-syndromes-lies-au-stress-et-aux-traumatismes/"><span class="similar-icon"><svg class="similar-icon-svg" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 14 C58 30 58 30 32 46 C6 62 6 62 32 78 C58 94 58 94 32 108"/>
+        <path d="M88 14 C62 30 62 30 88 46 C114 62 114 62 88 78 C62 94 62 94 88 108"/>
+        <line x1="37" y1="22" x2="83" y2="22"/>
+        <line x1="32" y1="46" x2="88" y2="46"/>
+        <line x1="32" y1="78" x2="88" y2="78"/>
+        <line x1="37" y1="100" x2="83" y2="100"/>
+    </svg></span>Syndromes liés au stress et aux traumatismes</a></div>
     </div>
     <a class="back-link" href="/categorie/syndromes/">← Retour à « Syndromes psychologiques »</a>
   </div>
@@ -528,23 +564,25 @@ function showToast(msg) {
   var root = document.documentElement;
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
+  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
   var saved = localStorage.getItem('mon-esprit-theme');
   if (saved === 'light') {
     root.setAttribute('data-theme', 'light');
-    btn.textContent = '☀️';
+    btn.innerHTML = ICON_SUN;
   }
   btn.addEventListener('click', function () {
     var isLight = root.getAttribute('data-theme') === 'light';
     if (isLight) {
       root.removeAttribute('data-theme');
       localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.textContent = '🌙';
-      showToast('🌙 Thème sombre activé');
+      btn.innerHTML = ICON_MOON;
+      showToast('Thème sombre activé');
     } else {
       root.setAttribute('data-theme', 'light');
       localStorage.setItem('mon-esprit-theme', 'light');
-      btn.textContent = '☀️';
-      showToast('☀️ Thème clair activé');
+      btn.innerHTML = ICON_SUN;
+      showToast('Thème clair activé');
     }
   });
 })();
@@ -562,7 +600,7 @@ function showToast(msg) {
     var on = root.classList.toggle('dyslexia-font');
     btn.classList.toggle('active', on);
     localStorage.setItem('mon-esprit-dyslexia', on ? '1' : '0');
-    showToast(on ? '✅ Mode dyslexie activé' : '❌ Mode dyslexie désactivé');
+    showToast(on ? 'Mode dyslexie activé' : 'Mode dyslexie désactivé');
   });
 })();
 </script>
@@ -742,9 +780,11 @@ function showToast(msg) {
   if (favBtn && window.__chapterMeta) {
     var path = window.location.pathname;
     var meta = window.__chapterMeta;
+    var STAR_OUTLINE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+    var STAR_FILLED = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
     function refreshBtn() {
       var isFav = loadFavorites().some(function (f) { return f.url === path; });
-      favBtn.textContent = isFav ? '★' : '☆';
+      favBtn.innerHTML = isFav ? STAR_FILLED : STAR_OUTLINE;
       favBtn.classList.toggle('is-favorite', isFav);
       favBtn.title = isFav ? 'Retirer des favoris' : 'Ajouter aux favoris';
     }
@@ -753,10 +793,10 @@ function showToast(msg) {
       var idx = favorites.findIndex(function (f) { return f.url === path; });
       if (idx === -1) {
         favorites.unshift({ url: path, title: meta.title, category: meta.category, icon: meta.icon });
-        showToast('⭐ Ajouté aux favoris');
+        showToast('Ajouté aux favoris');
       } else {
         favorites.splice(idx, 1);
-        showToast('⭐ Retiré des favoris');
+        showToast('Retiré des favoris');
       }
       saveFavorites(favorites);
       refreshBtn();
@@ -863,7 +903,7 @@ function showToast(msg) {
   function render(results, query) {
     lastQuery = query;
     if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">🔍 Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
       box.hidden = false;
       if (smartBtn) smartBtn.hidden = false;
       return;
@@ -903,8 +943,8 @@ function showToast(msg) {
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
-      smartBtn.textContent = '🧠 Recherche en cours...';
-      box.innerHTML = '<div class="search-no-results">🧠 Réflexion en cours...</div>';
+      smartBtn.textContent = 'Recherche en cours...';
+      box.innerHTML = '<div class="search-no-results">Réflexion en cours...</div>';
       box.hidden = false;
 
       fetch('https://api.monesprit.fr/search', {
@@ -935,7 +975,7 @@ function showToast(msg) {
         })
         .finally(function () {
           smartBtn.disabled = false;
-          smartBtn.textContent = '🧠 Essayer la recherche intelligente';
+          smartBtn.textContent = 'Essayer la recherche intelligente';
         });
     });
   }
@@ -990,7 +1030,7 @@ function showToast(msg) {
     if (left > 0) {
       var minutes = Math.ceil(left / 60000);
       button.disabled = true;
-      status.textContent = '⏳ Tu pourras renvoyer un message dans ' + minutes + ' min.';
+      status.textContent = 'Tu pourras renvoyer un message dans ' + minutes + ' min.';
       status.className = 'form-status form-status-wait';
       status.hidden = false;
       setTimeout(applyCooldownState, 15000);
@@ -1014,17 +1054,17 @@ function showToast(msg) {
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       if (response.ok) {
-        status.textContent = '✅ Message envoyé, merci ! Tu auras une réponse par email.';
+        status.textContent = 'Message envoyé, merci ! Tu auras une réponse par email.';
         status.className = 'form-status form-status-ok';
         form.reset();
         try { localStorage.setItem(COOLDOWN_KEY, String(Date.now())); } catch (e) {}
       } else {
-        status.textContent = '❌ L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
+        status.textContent = 'L\'envoi a échoué. Réessaie dans un instant, ou écris directement par email.';
         status.className = 'form-status form-status-error';
       }
       status.hidden = false;
     }).catch(function () {
-      status.textContent = '❌ L\'envoi a échoué (connexion). Réessaie dans un instant.';
+      status.textContent = 'L\'envoi a échoué (connexion). Réessaie dans un instant.';
       status.className = 'form-status form-status-error';
       status.hidden = false;
     }).finally(function () {
@@ -1066,7 +1106,7 @@ function showToast(msg) {
       if (!s.url) return;
       var a = document.createElement('a');
       a.href = s.url;
-      a.textContent = '📎 ' + (s.title || 'Voir la source');
+      a.textContent = s.title || 'Voir la source';
       wrap.appendChild(a);
     });
     messages.appendChild(wrap);
