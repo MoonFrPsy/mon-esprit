@@ -63,22 +63,37 @@
       <a href="/#categories">Catégories</a>
       <a href="/#a-propos">À propos</a>
       <a href="/a-propos-de-moi/">À propos de moi</a>
-      <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener" class="kofi-nav-link" title="Soutenir le site">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-      </a>
-      <button type="button" class="icon-toggle" id="theme-toggle" title="Changer de thème" aria-label="Changer de thème">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <button type="button" class="search-btn" id="search-open" aria-label="Rechercher">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </button>
-      <button type="button" class="icon-toggle" id="dyslexia-toggle" title="Police adaptée dyslexie" aria-label="Police adaptée dyslexie">Aa</button>
-      <button type="button" class="lang-toggle" id="lang-toggle">EN</button>
+      <div class="theme-toggle" id="theme-toggle-group">
+        <span id="opt-light" role="button" tabindex="0">Clair</span>
+        <span id="opt-dark" role="button" tabindex="0">Sombre</span>
+      </div>
+      <div class="more-menu">
+        <button type="button" class="icon-toggle" id="more-toggle" aria-label="Plus d'options" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="5" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="12" cy="19" r="1.4"/></svg>
+        </button>
+        <div class="more-menu-panel" id="more-menu-panel" hidden>
+          <a href="https://ko-fi.com/monespritfr" target="_blank" rel="noopener">Soutenir le site</a>
+          <button type="button" id="dyslexia-toggle">Police adaptée dyslexie</button>
+          <button type="button" id="lang-toggle">English version</button>
+        </div>
+      </div>
     </nav>
-    <div class="site-search">
-      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
-      <div class="search-results" id="search-results" hidden></div>
-      <button type="button" class="smart-search-btn" id="smart-search-btn" hidden>Essayer la recherche intelligente</button>
-    </div>
   </div>
 </header>
+
+<div class="search-panel" id="search-panel">
+  <div class="search-panel-inner">
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="site-search-input" placeholder="Rechercher un trouble, un mot, une notion..." autocomplete="off">
+      <button type="button" class="search-close" id="search-close">Échap</button>
+    </div>
+    <div class="search-results" id="search-results" hidden></div>
+  </div>
+</div>
 <div id="google_translate_element" style="display:none;"></div>
 
 <main class="container chapter-layout">
@@ -580,27 +595,52 @@ function showToast(msg) {
 (function () {
   // Thème clair/sombre, mémorisé pour les prochaines visites.
   var root = document.documentElement;
-  var btn = document.getElementById('theme-toggle');
-  if (!btn) return;
-  var ICON_MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-  var ICON_SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
-  var saved = localStorage.getItem('mon-esprit-theme');
-  if (saved === 'light') {
-    root.setAttribute('data-theme', 'light');
-    btn.innerHTML = ICON_SUN;
-  }
-  btn.addEventListener('click', function () {
-    var isLight = root.getAttribute('data-theme') === 'light';
-    if (isLight) {
-      root.removeAttribute('data-theme');
-      localStorage.setItem('mon-esprit-theme', 'dark');
-      btn.innerHTML = ICON_MOON;
-      showToast('Thème sombre activé');
-    } else {
+  var optLight = document.getElementById('opt-light');
+  var optDark = document.getElementById('opt-dark');
+  if (!optLight || !optDark) return;
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
       root.setAttribute('data-theme', 'light');
-      localStorage.setItem('mon-esprit-theme', 'light');
-      btn.innerHTML = ICON_SUN;
-      showToast('Thème clair activé');
+      optLight.classList.add('active');
+      optDark.classList.remove('active');
+    } else {
+      root.removeAttribute('data-theme');
+      optDark.classList.add('active');
+      optLight.classList.remove('active');
+    }
+  }
+
+  var saved = localStorage.getItem('mon-esprit-theme');
+  applyTheme(saved === 'light' ? 'light' : 'dark');
+
+  optLight.addEventListener('click', function () {
+    localStorage.setItem('mon-esprit-theme', 'light');
+    applyTheme('light');
+    showToast('Thème clair activé');
+  });
+  optDark.addEventListener('click', function () {
+    localStorage.setItem('mon-esprit-theme', 'dark');
+    applyTheme('dark');
+    showToast('Thème sombre activé');
+  });
+})();
+
+(function () {
+  // Menu "Plus" : soutien, police dyslexie, langue — regroupés pour
+  // garder un en-tête épuré.
+  var toggle = document.getElementById('more-toggle');
+  var panel = document.getElementById('more-menu-panel');
+  if (!toggle || !panel) return;
+  toggle.addEventListener('click', function () {
+    var open = panel.hidden;
+    panel.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', function (e) {
+    if (!panel.hidden && e.target !== toggle && !panel.contains(e.target) && !toggle.contains(e.target)) {
+      panel.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
     }
   });
 })();
@@ -651,7 +691,7 @@ function showToast(msg) {
 
   var current = getCookie('googtrans');
   var isEnglish = current === '/fr/en';
-  btn.textContent = isEnglish ? 'FR' : 'EN';
+  btn.textContent = isEnglish ? 'Version française' : 'English version';
 
   btn.addEventListener('click', function () {
     if (isEnglish) {
@@ -869,9 +909,27 @@ function showToast(msg) {
 // généré au moment de la création du site.
 // ---------------------------------------------------------------
 (function () {
+  var openBtn = document.getElementById('search-open');
+  var panel = document.getElementById('search-panel');
+  var closeBtn = document.getElementById('search-close');
   var input = document.getElementById('site-search-input');
   var box = document.getElementById('search-results');
-  if (!input || !box) return;
+  if (!openBtn || !panel || !input || !box) return;
+
+  function openSearch() { panel.classList.add('is-open'); input.focus(); }
+  function closeSearch() { panel.classList.remove('is-open'); input.value = ''; box.hidden = true; box.innerHTML = ''; }
+
+  openBtn.addEventListener('click', openSearch);
+  if (closeBtn) closeBtn.addEventListener('click', closeSearch);
+  panel.addEventListener('click', function (e) { if (e.target === panel) closeSearch(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && panel.classList.contains('is-open')) closeSearch();
+    if (e.key === '/' && document.activeElement !== input && !panel.classList.contains('is-open')) {
+      e.preventDefault();
+      openSearch();
+    }
+  });
+
   var index = null;
   var indexPromise = null;
 
@@ -915,49 +973,11 @@ function showToast(msg) {
     });
   }
 
-  var smartBtn = document.getElementById('smart-search-btn');
   var lastQuery = '';
 
-  function render(results, query) {
-    lastQuery = query;
-    if (results.length === 0) {
-      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>';
-      box.hidden = false;
-      if (smartBtn) smartBtn.hidden = false;
-      return;
-    }
-    box.innerHTML = results.map(function (item) {
-      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
-      var accent = item.accent || 'var(--clay)';
-      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
-        '<span class="search-result-icon">' + item.icon + '</span>' +
-        '<span class="search-result-body">' +
-          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
-          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
-          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
-        '</span>' +
-      '</a>';
-    }).join('');
-    box.hidden = false;
-    if (smartBtn) smartBtn.hidden = results.length >= 3;
-  }
-
-  input.addEventListener('focus', loadIndex);
-  input.addEventListener('input', function () {
-    var query = input.value.trim();
-    if (smartBtn) smartBtn.hidden = true;
-    if (query.length < 2) { box.hidden = true; return; }
-    loadIndex().then(function () { render(runSearch(query), query); });
-  });
-  input.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { box.hidden = true; input.blur(); }
-  });
-  document.addEventListener('click', function (e) {
-    if (e.target !== input && !box.contains(e.target) && e.target !== smartBtn) box.hidden = true;
-  });
-
-  // --- Recherche intelligente (IA), en complément de la recherche rapide ---
-  if (smartBtn) {
+  function bindSmartButton() {
+    var smartBtn = document.getElementById('smart-search-btn');
+    if (!smartBtn) return;
     smartBtn.addEventListener('click', function () {
       if (!lastQuery) return;
       smartBtn.disabled = true;
@@ -989,14 +1009,45 @@ function showToast(msg) {
           }).join('');
         })
         .catch(function () {
-          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou utilise la recherche classique ci-dessus.</div>';
-        })
-        .finally(function () {
-          smartBtn.disabled = false;
-          smartBtn.textContent = 'Essayer la recherche intelligente';
+          box.innerHTML = '<div class="smart-search-error">La recherche intelligente est momentanément indisponible. Réessaie plus tard, ou reformule ta recherche classique.</div>';
         });
     });
   }
+
+  function render(results, query) {
+    lastQuery = query;
+    if (results.length === 0) {
+      box.innerHTML = '<div class="search-no-results">Aucun résultat pour « ' + escapeHtml(query) + ' ».</div>' +
+        '<button type="button" class="smart-search-btn" id="smart-search-btn">Essayer la recherche intelligente</button>';
+      box.hidden = false;
+      bindSmartButton();
+      return;
+    }
+    var html = results.map(function (item) {
+      var meta = [item.category, item.chapter].filter(Boolean).join(' · ');
+      var accent = item.accent || 'var(--clay)';
+      return '<a class="search-result-item" style="--result-accent:' + accent + '" href="' + item.url + '">' +
+        '<span class="search-result-icon">' + item.icon + '</span>' +
+        '<span class="search-result-body">' +
+          '<span class="search-result-title">' + escapeHtml(item.title) + '</span>' +
+          (meta ? '<span class="search-result-meta">' + escapeHtml(meta) + '</span>' : '') +
+          (item.snippet ? '<span class="search-result-snippet">' + escapeHtml(item.snippet) + '…</span>' : '') +
+        '</span>' +
+      '</a>';
+    }).join('');
+    if (results.length < 3) {
+      html += '<button type="button" class="smart-search-btn" id="smart-search-btn">Essayer la recherche intelligente</button>';
+    }
+    box.innerHTML = html;
+    box.hidden = false;
+    bindSmartButton();
+  }
+
+  input.addEventListener('input', function () {
+    var query = input.value.trim();
+    if (query.length < 2) { box.hidden = true; box.innerHTML = ''; return; }
+    loadIndex().then(function () { render(runSearch(query), query); });
+  });
 })();
 
 // ---------------------------------------------------------------
