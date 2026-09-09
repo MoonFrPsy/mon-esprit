@@ -868,16 +868,6 @@ h1, h2, h3 {
   }
 }
 
-/* ---------- Texte d'introduction long (page de catégorie) ---------- */
-
-.cat-long-intro {
-  color: var(--ink-soft);
-  font-size: 1.02rem;
-  line-height: 1.75;
-  max-width: 70ch;
-  margin: 0 0 2.5rem;
-}
-
 /* ---------- Chapter list (category page) ---------- */
 
 .chapter-list {
